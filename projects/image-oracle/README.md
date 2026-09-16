@@ -1,56 +1,42 @@
-# Image Oracle
+# Image Oracle：图像答案之书
 
-A camera-driven answer book: capture an image, apply a fixed algorithm, and
-display an answer from a local collection. A lava lamp is the default scene;
-other subjects can also provide the image.
+用摄像头拍摄图像，通过固定算法从本地答案库中选取并显示答案。默认拍摄熔岩灯，也可以拍摄其他对象。
 
-## Current state
+## 当前状态
 
-- An ESP32-S3-CAM bundle and experimental components were discussed and selected.
-  The bundle was reported purchased; actual hardware and quantities still need
-  checking against the shipment.
-- No firmware, verified wiring, enclosure model, or hardware test exists in this
-  project yet.
+- 2026-09-16，用户确认此前购买的鹿小班硬件已经全部到货，计划当晚开始实验。具体型号、数量和完好情况仍待验货。
+- 本项目尚无固件、已验证接线、外壳模型或实机测试结果。
 
-## Design decisions to preserve
+## 已确定的设计原则
 
-- The image is the only changing input to answer selection. With the same
-  algorithm, processing rules, and answer collection, the same image produces
-  the same answer.
-- Do not add random seeds, timestamps, or counters to vary the result. A new
-  draw means taking a new picture; repeated answers are allowed.
-- The intended core hardware is a camera, screen, and five-way button module.
-  Other purchased modules are available for experiments, not required features.
-- Start with USB power and breadboard experiments. Decide on wiring and an
-  enclosure after the functional prototype works and dimensions are measured.
-- Keep the lava lamp's original mains supply separate. This project develops
-  only the low-voltage electronics.
-- AI Passport currently has no documented camera and is a separate project.
+- 图像是答案选择中唯一变化的输入；算法、处理规则和答案库相同时，同一份图像应得到同一个答案。
+- 不额外加入随机种子、时间戳或计数器来改变结果。重新抽取意味着重新拍摄，允许答案重复。
+- 计划中的核心硬件是摄像头、屏幕和五向按键模块；其他已购模块用于实验，不作为必需功能。
+- 先用 USB 供电和面包板验证，功能原型跑通并测量尺寸后，再确定正式接线和外壳。
+- 熔岩灯保留原装市电供电并独立放置；本项目仅开发弱电电子部分。
+- AI Passport 当前公开配置没有摄像头，作为独立项目探索。
 
-## Directory ownership
+## 目录用途
 
-- `firmware/`: the complete firmware project and reproducible build configuration.
-- `hardware/`: the verified BOM, pin assignments, wiring, and any future PCB.
-- `enclosure/`: editable mechanical designs and fabrication exports when needed.
-- `docs/`: component references, experiments, measurements, and design decisions.
+- `firmware/`：完整固件工程和可复现的构建配置。
+- `hardware/`：已核对的 BOM、引脚分配、接线和未来可能设计的 PCB。
+- `enclosure/`：可编辑的结构设计，以及按需导出的加工文件。
+- `docs/`：器件资料、实验、测量结果和设计决策。
 
-## Next session after delivery
+## 首次实验
 
-1. Identify the exact development board, camera, display, memory, and included
-   modules; resolve the SHT30/DHT11 ordering discrepancy.
-2. Obtain the matching vendor example and verify its wiring before importing
-   source into `firmware/`.
-3. Record a working macOS setup and build workflow. ESP-IDF is the preference;
-   if the useful vendor example uses Arduino or PlatformIO, reproduce it first.
-4. Test the screen, camera, and button functions incrementally, then implement
-   the capture-to-answer flow and verify repeatability for a fixed image.
+1. 拍摄开发板和屏幕的正反面，记录丝印，整理套装附带的商家资料链接或二维码。确认摄像头、存储和随附模块，核对 SHT30／DHT11 的订单差异。
+2. 获取匹配的商家例程并核对接线，再将源码导入 `firmware/`。
+3. 记录可用的 macOS 环境和构建流程。优先考虑 ESP-IDF；如果合适的商家例程使用 Arduino 或 PlatformIO，先复现它。
+4. 逐个测试屏幕、摄像头和按键，再实现拍摄到显示答案的完整流程，并验证固定图像的结果可复现。
 
-## Commands
+首次实验先确认硬件型号、跑通商家例程，再争取让屏幕显示摄像头画面。之后加入按键交互，额外传感器和最终外壳可以稍后处理。
 
-Not established yet. Add verified build, flash, and serial-log commands after
-the board and firmware are identified.
+## 常用命令
 
-## References
+尚未建立。确认板卡和固件后，再添加经过验证的构建、烧录和串口日志命令。
 
-- [Original discussion, purchasing notes, and startup plan](../../../CyberMnema/timeline/2026/09/W38/熔岩灯交互装置.20260914.md)
-- [Shared inventory](../../docs/inventory.md)
+## 参考资料
+
+- [原始讨论、采购记录与启动计划](../../../CyberMnema/timeline/2026/09/W38/熔岩灯交互装置.20260914.md)
+- [共享器件清单](../../docs/inventory.md)

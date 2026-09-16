@@ -1,22 +1,18 @@
-# Shared Inventory
+# 共享器件清单
 
-This is the starting inventory, based on the user's discussion rather than a
-physical inspection. Update it when items arrive. Keep a device's actual BOM
-and wiring in that project's `hardware/` or `docs/` directory.
+本清单区分用户确认到货与实物验货结果，随收货和检查进展更新。具体装置的实际 BOM 和接线放在所属项目的 `hardware/` 或 `docs/` 目录。
 
-| Item | Quantity | Recorded state | Notes |
+| 物品 | 数量 | 已记录状态 | 备注 |
 | --- | --- | --- | --- |
-| FoloToy AI Passport | Not recorded | User confirmed ordered on 2026-09-16; delivery pending | Confirm batch and supplied accessories on arrival |
-| ESP32-S3-CAM / N16R8 / 1.54-inch display bundle | 1 bundle | Previously reported purchased; not inspected | Confirm board, camera, display, and included modules against the actual shipment |
-| Extra buttons, sensors, jumper wires, LEDs, and resistors | See purchasing notes | Selection recorded; received quantities not checked | Treat as shared experimental stock until assigned to a device |
+| FoloToy AI Passport | 未记录 | 2026-09-16 用户确认已下单，等待到货 | 到货后核对批次和配件 |
+| ESP32-S3-CAM / N16R8 / 1.54 寸屏幕套装 | 1 套 | 2026-09-16 用户确认鹿小班硬件全部到货，尚未验货 | 按实物核对开发板、摄像头、屏幕和随附模块 |
+| 额外按键、传感器、杜邦线、LED 和电阻 | 见采购记录 | 包含在 2026-09-16 用户确认到货的鹿小班配件中，具体型号和数量未核对 | 分配给具体装置前，作为共享实验配件 |
 
-Purchasing references:
+采购参考：
 
-- [AI Passport purchase and follow-up notes](../../CyberMnema/timeline/2026/09/W38/AI_Passport.20260916.md)
-- [Image Oracle discussion and component list](../../CyberMnema/timeline/2026/09/W38/熔岩灯交互装置.20260914.md)
+- [AI Passport 购买与后续计划](../../CyberMnema/timeline/2026/09/W38/AI_Passport.20260916.md)
+- [Image Oracle 讨论与配件清单](../../CyberMnema/timeline/2026/09/W38/熔岩灯交互装置.20260914.md)
 
-The temperature sensor order has a known discrepancy: the discussion preferred
-SHT30, while the last shopping screenshot still showed DHT11. Verify the
-shipment instead of assuming which module was purchased.
+温湿度传感器存在已知差异：讨论结论倾向 SHT30，但最后的购物截图仍显示 DHT11。需要核对实物，不能直接认定最终购买了哪一款。
 
-Add tools and storage locations after checking what is actually available.
+确认实际拥有的工具后，再补充工具清单和收纳位置。

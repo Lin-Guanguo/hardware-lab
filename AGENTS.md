@@ -1,54 +1,42 @@
-# Agent Instructions
+# Agent 工作指引
 
-## Scope and context
+## 范围与上下文
 
-- This is one repository containing independent projects under `projects/`.
-- Read the root README and the target project's README before making changes.
-  Follow any more specific `AGENTS.md` inside that project.
-- Work within the requested project. Change shared files only when the task
-  requires it, and preserve unrelated work.
-- Root documentation is navigation and common guidance. Keep implementation
-  details, working commands, and next steps with the project that owns them.
+- 本仓库在 `projects/` 下管理多个独立项目。
+- 修改前先阅读根目录 README 和目标项目的 README；项目内如有更具体的 `AGENTS.md`，也需遵循。
+- 围绕当前任务修改目标项目，仅在需要时调整共享文件，保留无关的已有工作。
+- 根文档负责导航和通用约定；实现细节、可用命令及下一步放在所属项目中。
 
-## Development
+## 语言约定
 
-- Prefer a simple, working implementation and shell-driven workflows on macOS.
-- Reuse the project's examples and board support code before inventing drivers
-  or introducing another framework.
-- Keep each firmware project independently buildable. Pin the toolchain and
-  dependencies needed to reproduce it; do not force unrelated projects to
-  share versions.
-- Do not extract shared components or scripts until multiple projects need
-  them. Create directories when there is content to put in them.
-- Preserve upstream licenses. Document imported source URLs and revisions;
-  never copy a nested `.git` directory into this repository.
-- Prefer English for code, comments, commit messages, and repository guidance.
-  Use Chinese for user-facing discussion or experiment notes when appropriate.
-- Use `lgg/` for working branch names. Do not push or publish unless requested.
+- 后续新增或修改的文档默认使用中文，包括 README、AGENTS.md、使用说明、器件清单、设计文档和实验记录，方便用户阅读。
+- 代码、标识符、代码注释和 docstring 使用英文；脚本和配置文件中的注释也保持英文。
+- 专有名词、产品名、技术名词保留英文原文，例如 ESP32-S3、ESP-IDF、GPIO、SPI、BSP 和 LVGL；必要时补充中文解释。
+- 文件名、目录名、命令、API 名称和配置键保持原样，不为翻译文档而改名。
+- Git commit message 继续使用英文。
+- 上游许可证和直接引用的原始资料保留原文；本仓库撰写的说明使用中文。
 
-## Hardware facts and verification
+## 开发方式
 
-- Distinguish advertised specifications, user-reported purchases, received
-  components, and measured behavior. Do not turn assumptions into pinouts or
-  claim that an untested device feature works.
-- Check the exact board revision, voltage requirements, and pin ownership
-  before proposing wiring or changing hardware configuration.
-- Keep firmware builds separate from flashing. Only flash when the current
-  task authorizes device programming, after identifying the target device
-  and the applicable recovery path.
-- Stay within low-voltage electronics. The lava lamp keeps its original mains
-  supply and is physically separate from the experimental electronics.
-- Run checks relevant to the change. Report commands and results, and state
-  explicitly when validation was build-only or hardware was unavailable.
-- After substantive work, update the project README's current state and next
-  step. Store wiring, measurements, and detailed findings in project docs.
+- 优先采用简单可运行的实现，以及在 macOS 上可通过 shell 操作的工作流。
+- 编写新驱动或引入其他框架前，先复用项目已有例程和 BSP。
+- 每个固件工程应能独立构建，固定复现所需的工具链和依赖版本，不强求无关项目使用相同版本。
+- 多个项目确实需要时再提取共享组件或脚本；有实际内容时再创建目录。
+- 保留上游许可证，记录导入源码的 URL 和 revision；不要将嵌套的 `.git` 目录复制进本仓库。
+- 工作分支使用 `lgg/` 前缀；只有用户要求时才 push 或发布。
 
-## Files and credentials
+## 硬件事实与验证
 
-- Track sources and reproducible configuration, not generated build trees,
-  caches, temporary firmware, or serial logs.
-- Keep credentials and local connection settings out of Git; provide examples
-  with placeholders when configuration is required.
-- Remove `.gitkeep` when a directory gains real tracked content.
-- Keep long discussion archives in CyberMnema and link to the relevant note.
-  Do not copy shopping screenshots into this repository.
+- 区分宣传规格、用户自述购买、实物到货和实测结果；不要把假设写成引脚表，也不要将未经测试的功能标为可用。
+- 提出接线方案或修改硬件配置前，确认具体板卡版本、电压要求和引脚占用。
+- 区分固件构建与烧录。仅在当前任务授权设备烧录、且已确认目标设备和恢复方式后烧录。
+- 开发范围限于弱电部分。熔岩灯保留原装市电供电，与实验电子模块分开放置。
+- 执行与改动相关的检查，报告命令和结果；如果只完成构建验证或缺少实物，需明确说明。
+- 有实质进展后，更新项目 README 的当前状态和下一步；接线、测量数据及详细发现放入项目文档。
+
+## 文件与凭据
+
+- Git 保存源码和可复现配置；构建产物、缓存、临时固件和串口日志不入库。
+- 凭据和本地连接配置不入库；需要配置示例时使用占位值。
+- 目录已有实际跟踪内容后，删除对应的 `.gitkeep`。
+- 长篇讨论留在 CyberMnema，通过链接关联；不将购物截图复制进本仓库。

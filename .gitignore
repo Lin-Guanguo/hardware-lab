@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+
+# Generated firmware builds and downloaded dependencies
+build/
+.pio/
+managed_components/
+**/firmware/sdkconfig
+sdkconfig.old
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.cache/
+
+# Local configuration
+.env
+.env.*
+!.env.example
+
+# Temporary outputs; keep reusable source assets outside these directories
+artifacts/
+downloads/
+logs/
+*.log

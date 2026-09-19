@@ -1,0 +1,56 @@
+[
+  {
+    "file": "downloads/raytac_mdbt42v_rev_l.pdf",
+    "source_url": "https://www.raytac.com/upload/download_files/03056be9fb6b807f9344a27b3bbc0e02.pdf",
+    "resolved_url": "https://www.raytac.com/upload/download_files/03056be9fb6b807f9344a27b3bbc0e02.pdf",
+    "accessed": "2026-09-17",
+    "bytes": 3866483,
+    "sha256": "4d2a91c3d45ba7476f18922a9270cbbc27c180afbc1d750fc3c427bb183ea098",
+    "status": "downloaded"
+  },
+  {
+    "file": "downloads/raytac_mdbt50q_rev_l.pdf",
+    "source_url": "https://www.raytac.com/tw/download/index.php?index_id=24",
+    "resolved_url": "https://www.raytac.com/tw/download/index.php?index_id=24",
+    "accessed": "2026-09-17",
+    "bytes": 5639973,
+    "sha256": "61fec8c0c9f8c33175be2237a8ebba73c6cfc0a3572fe3835fd341079c103d03",
+    "status": "downloaded"
+  },
+  {
+    "file": "downloads/gdey0154d67.pdf",
+    "source_url": "https://static-cdn.m5stack.com/resource/docs/products/core/AirQ/GDEY0154D67%281%29.pdf",
+    "resolved_url": "https://static-cdn.m5stack.com/resource/docs/products/core/AirQ/GDEY0154D67%281%29.pdf",
+    "accessed": "2026-09-17",
+    "bytes": 9684264,
+    "sha256": "eee071d46913e566ebb0a2f51206fea9bb00b1024b32396ad498553149c5f308",
+    "status": "downloaded"
+  },
+  {
+    "file": "downloads/js1300.pdf",
+    "source_url": "https://www.e-switch.com/wp-content/uploads/2022/06/JS1300.pdf",
+    "resolved_url": "https://www.e-switch.com/wp-content/uploads/2022/06/JS1300.pdf",
+    "accessed": "2026-09-17",
+    "bytes": 149559,
+    "sha256": "76713db3708960339e08afbba6be51e9bce6c94d6e1afdeb943a4bd4bdda4b41",
+    "status": "downloaded"
+  },
+  {
+    "file": "downloads/bq25186.pdf",
+    "source_url": "https://www.ti.com/lit/ds/symlink/bq25186.pdf",
+    "resolved_url": "https://www.ti.com/lit/ds/symlink/bq25186.pdf",
+    "accessed": "2026-09-17",
+    "bytes": 2093032,
+    "sha256": "96834a4566939677cf084cef87d88f1534b9369ae80171ee004a7ac6572791c9",
+    "status": "downloaded"
+  },
+  {
+    "file": "downloads/tps7a02.pdf",
+    "source_url": "https://www.ti.com/lit/ds/symlink/tps7a02.pdf",
+    "resolved_url": "https://www.ti.com/lit/ds/symlink/tps7a02.pdf",
+    "accessed": "2026-09-17",
+    "bytes": 3405603,
+    "sha256": "ed213c153f1db84762558fcac2ff9752e322151a1d44672cf554988b860cebc8",
+    "status": "downloaded"
+  }
+]

@@ -1,0 +1,92 @@
+<div id="breadboard-connections-lgg">
+  <style>
+    #breadboard-connections-lgg .bb-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+    #breadboard-connections-lgg .bb-heading h3 { margin: 0; }
+    #breadboard-connections-lgg .bb-figure { width: 100%; }
+    #breadboard-connections-lgg .bb-figure svg { display: block; width: 100%; }
+    #breadboard-connections-lgg .bb-label { fill: var(--foreground); font-size: 12px; }
+    #breadboard-connections-lgg .bb-metal { stroke: var(--border); stroke-width: 1; }
+    #breadboard-connections-lgg .bb-metal.active { stroke: var(--viz-series-1); stroke-width: 2; }
+    #breadboard-connections-lgg .bb-hole { fill: var(--muted); stroke: var(--border); stroke-width: 1; }
+    #breadboard-connections-lgg .bb-hole.active { fill: var(--viz-series-1); stroke: none; }
+    #breadboard-connections-lgg .bb-pick { fill: none; stroke: var(--foreground); stroke-width: 1.5; }
+    #breadboard-connections-lgg .bb-trench { fill: var(--muted); }
+  </style>
+  <div class="bb-heading">
+    <h3>面包板内部连接</h3>
+    <label class="form-label">选择孔位
+      <select class="form-select" aria-label="选择一个孔位，查看内部相通的五个孔"></select>
+    </label>
+  </div>
+  <div class="bb-figure"></div>
+  <div class="tabular-nums" aria-live="polite" data-detail></div>
+  <div class="text-small text-muted">接线区局部示意 · 不含两侧电源轨</div>
+  <script>
+    (() => {
+      const root = document.getElementById('breadboard-connections-lgg');
+      const selector = root.querySelector('select');
+      const figure = root.querySelector('.bb-figure');
+      const detail = root.querySelector('[data-detail]');
+      const letters = 'abcdefghij';
+      const initial = window.openai?.widgetState?.modelContent?.hole;
+      let selected = /^[a-j][1-6]$/.test(initial || '') ? initial : 'b3';
+      for (let row = 1; row <= 6; row++) {
+        for (const column of letters) {
+          const option = document.createElement('option');
+          option.value = column + row;
+          option.textContent = column + row;
+          selector.appendChild(option);
+        }
+      }
+      function draw() {
+        const width = figure.getBoundingClientRect().width;
+        if (width <= 0) return;
+        const gap = 36;
+        const pitch = (width - 44 - gap) / 10;
+        const x = index => 28 + pitch * (index + 0.5) + (index >= 5 ? gap : 0);
+        const y = row => 54 + (row - 1) * 34;
+        const selectedColumn = letters.indexOf(selected[0]);
+        const selectedRow = Number(selected[1]);
+        const side = selectedColumn < 5 ? 0 : 1;
+        const members = letters.slice(side * 5, side * 5 + 5).split('').map(c => c + selectedRow);
+        selector.value = selected;
+        detail.textContent = selected + ' ↔ ' + members.filter(h => h !== selected).join('、') + '：内部相通';
+        let markup = '<svg viewBox="0 0 ' + width + ' 284" role="img" aria-label="' + members.join('、') + ' 内部相通；中间沟两侧和上下相邻排不相通">';
+        markup += '<title>面包板五孔连接示意</title>';
+        markup += '<rect class="bb-trench" x="' + (28 + pitch * 5 + 9) + '" y="36" width="18" height="204" rx="4"/>';
+        for (let column = 0; column < 10; column++) {
+          markup += '<text class="bb-label" x="' + x(column) + '" y="23" text-anchor="middle">' + letters[column] + '</text>';
+        }
+        for (let row = 1; row <= 6; row++) {
+          markup += '<text class="bb-label" x="12" y="' + (y(row) + 4) + '" text-anchor="middle">' + row + '</text>';
+          for (let group = 0; group < 2; group++) {
+            const active = group === side && row === selectedRow;
+            markup += '<line class="bb-metal' + (active ? ' active' : '') + '" x1="' + x(group * 5) + '" x2="' + x(group * 5 + 4) + '" y1="' + y(row) + '" y2="' + y(row) + '"/>';
+            for (let column = group * 5; column < group * 5 + 5; column++) {
+              markup += '<circle class="bb-hole' + (active ? ' active' : '') + '" cx="' + x(column) + '" cy="' + y(row) + '" r="' + Math.min(7, pitch * 0.26) + '"/>';
+            }
+          }
+        }
+        markup += '<circle class="bb-pick" cx="' + x(selectedColumn) + '" cy="' + y(selectedRow) + '" r="' + (Math.min(7, pitch * 0.26) + 3) + '"/>';
+        markup += '<text class="bb-label" x="' + (28 + pitch * 5 + gap / 2) + '" y="268" text-anchor="middle">中间沟：左右隔离</text></svg>';
+        figure.innerHTML = markup;
+      }
+      selector.addEventListener('change', () => {
+        selected = selector.value;
+        draw();
+        if (window.openai?.setWidgetState) {
+          window.openai.setWidgetState({ modelContent: { hole: selected }, privateContent: null }).catch(() => {});
+        }
+      });
+      window.addEventListener('openai:set_globals', event => {
+        const hole = event.detail?.globals?.widgetState?.modelContent?.hole;
+        if (/^[a-j][1-6]$/.test(hole || '')) {
+          selected = hole;
+          draw();
+        }
+      });
+      new ResizeObserver(draw).observe(figure);
+      draw();
+    })();
+  </script>
+</div>

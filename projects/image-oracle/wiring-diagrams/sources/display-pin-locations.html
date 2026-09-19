@@ -1,0 +1,150 @@
+<div id="display-pin-locations-lgg">
+  <style>
+    #display-pin-locations-lgg .board-view { display: block; width: 100%; }
+    #display-pin-locations-lgg .board-view text { fill: var(--foreground); font-size: 12px; font-weight: 400; }
+    #display-pin-locations-lgg .board-view .board-label { font-weight: 500; }
+    #display-pin-locations-lgg .board-view .board-surface { fill: var(--muted); stroke: var(--border); stroke-width: 1; }
+    #display-pin-locations-lgg .board-view .component { fill: var(--background); stroke: var(--border); stroke-width: 1; }
+    #display-pin-locations-lgg .board-view .unused-pin { fill: var(--background); stroke: var(--border); stroke-width: 1; }
+    #display-pin-locations-lgg .board-view .used-pin { fill: var(--viz-series-1); stroke: var(--viz-series-1); stroke-width: 1; }
+    #display-pin-locations-lgg .board-view .connection { stroke: var(--viz-series-1); stroke-width: 2; fill: none; }
+    #display-pin-locations-lgg .board-view .selected-ring { fill: none; stroke: var(--viz-series-1); stroke-width: 2; }
+    #display-pin-locations-lgg .board-view .other-connection { opacity: 0.35; }
+    #display-pin-locations-lgg .selected-detail { margin-top: 8px; }
+    #display-pin-locations-lgg .screen-pin-order { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); max-width: 420px; margin: 8px auto 16px; text-align: center; }
+    #display-pin-locations-lgg .screen-pin-order .selected-screen-pin { font-weight: 500; text-decoration: underline; text-underline-offset: 4px; }
+  </style>
+  <div class="text-small">屏幕排针顺序：从 GND 端到 BL 端</div>
+  <div class="screen-pin-order text-small" aria-label="屏幕排针顺序，从 GND 端起编号 1 到 8">
+    <div data-screen-pin="GND">①<br>GND</div>
+    <div data-screen-pin="VCC">②<br>VCC</div>
+    <div data-screen-pin="SCL">③<br>SCL</div>
+    <div data-screen-pin="SDA">④<br>SDA</div>
+    <div data-screen-pin="RST">⑤<br>RST</div>
+    <div data-screen-pin="DC">⑥<br>DC</div>
+    <div data-screen-pin="CS">⑦<br>CS</div>
+    <div data-screen-pin="BL">⑧<br>BL</div>
+  </div>
+  <div class="viz-controls">
+    <label class="form-label" for="screen-pin-select-lgg">定位屏幕引脚
+      <select class="form-select" id="screen-pin-select-lgg">
+        <option value="all">全部 8 根线</option>
+        <option value="GND">① GND → GND</option>
+        <option value="VCC">② VCC → 3V3</option>
+        <option value="SCL">③ SCL → 40</option>
+        <option value="SDA">④ SDA → 41</option>
+        <option value="RST">⑤ RST → 21</option>
+        <option value="DC">⑥ DC → 47</option>
+        <option value="CS">⑦ CS → 42</option>
+        <option value="BL">⑧ BL → 38</option>
+      </select>
+    </label>
+  </div>
+  <svg class="board-view" role="img" aria-labelledby="board-title-lgg board-desc-lgg"></svg>
+  <div class="selected-detail" aria-live="polite"></div>
+  <script>
+    (() => {
+      const root = document.getElementById('display-pin-locations-lgg');
+      const svg = root.querySelector('.board-view');
+      const select = root.querySelector('select');
+      const detail = root.querySelector('.selected-detail');
+      const ns = 'http://www.w3.org/2000/svg';
+      const left = ['3V3', 'EN', '4', '5', '6', '7', '15', '16', '17', '18', '8', '3', '46', '9', '10', '11', '12', '13', '14', '5V'];
+      const right = ['TX', 'RX', '1', '2', '42', '41', '40', '39', '38', '37', '36', '35', '0', '45', '48', '47', '21', '20', '19', 'GND'];
+      const connections = [
+        { signal: 'GND', pin: 'GND', side: 'right', position: 19 },
+        { signal: 'VCC', pin: '3V3', side: 'left', position: 0 },
+        { signal: 'SCL', pin: '40', side: 'right', position: 6 },
+        { signal: 'SDA', pin: '41', side: 'right', position: 5 },
+        { signal: 'RST', pin: '21', side: 'right', position: 16 },
+        { signal: 'DC', pin: '47', side: 'right', position: 15 },
+        { signal: 'CS', pin: '42', side: 'right', position: 4 },
+        { signal: 'BL', pin: '38', side: 'right', position: 8 }
+      ].map((connection, index) => ({ ...connection, badge: '①②③④⑤⑥⑦⑧'[index] }));
+      let selected = 'all';
+      const valid = value => value === 'all' || connections.some(item => item.signal === value);
+      function add(tag, attributes = {}, value) {
+        const node = document.createElementNS(ns, tag);
+        Object.entries(attributes).forEach(([key, entry]) => node.setAttribute(key, entry));
+        if (value !== undefined) node.textContent = value;
+        svg.appendChild(node);
+        return node;
+      }
+      function label(x, y, value, anchor = 'middle', className = '') {
+        return add('text', { x, y, 'text-anchor': anchor, 'dominant-baseline': 'middle', class: className }, value);
+      }
+      function draw() {
+        const width = Math.max(280, Math.round(root.getBoundingClientRect().width));
+        const cx = width / 2;
+        const half = Math.min(108, (width - 160) / 2);
+        const leftX = cx - half;
+        const rightX = cx + half;
+        const height = 655;
+        svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+        svg.setAttribute('height', height);
+        svg.replaceChildren();
+        add('title', { id: 'board-title-lgg' }, 'ESP32-S3-CAM 屏幕接线位置：元件正面，天线上、USB 下');
+        add('desc', { id: 'board-desc-lgg' }, '按用户开发板照片旋转绘制，非背面。圈号是屏幕从 GND 端开始的排针顺序，不是主板针脚序号。① GND 接右排最下方 GND；② VCC 接左排最上方 3V3；③ SCL 接右排 40；④ SDA 接右排 41；⑤ RST 接右排 21；⑥ DC 接右排 47；⑦ CS 接右排 42；⑧ BL 接右排 38。');
+        label(cx, 18, '元件正面 · 天线上 / USB 下', 'middle', 'board-label');
+        add('rect', { x: cx - 38, y: 38, width: 76, height: 57, rx: 2, class: 'board-surface' });
+        label(cx, 63, '天线');
+        add('rect', { x: leftX - 10, y: 87, width: half * 2 + 20, height: 504, rx: 5, class: 'board-surface' });
+        add('rect', { x: cx - 35, y: 110, width: 70, height: 155, rx: 3, class: 'component' });
+        label(cx, 168, '金属盖');
+        label(cx, 190, 'ESP32-S3');
+        label(cx, 212, 'N16R8');
+        add('rect', { x: cx - 37, y: 324, width: 74, height: 18, rx: 2, class: 'component' });
+        label(cx, 363, '摄像头座');
+        add('rect', { x: cx - 46, y: 512, width: 18, height: 18, rx: 2, class: 'component' });
+        add('rect', { x: cx + 28, y: 512, width: 18, height: 18, rx: 2, class: 'component' });
+        label(cx - 33, 548, 'EN/RST');
+        label(cx + 33, 548, 'BOOT');
+        add('rect', { x: cx - 56, y: 568, width: 45, height: 49, rx: 3, class: 'component' });
+        add('rect', { x: cx + 11, y: 568, width: 45, height: 49, rx: 3, class: 'component' });
+        label(cx - 33, 591, 'USB-C');
+        label(cx + 33, 591, 'USB-C');
+        label(cx - 33, 635, '原生 USB');
+        label(cx + 33, 635, 'USB 串口');
+        for (const [side, pins] of [['left', left], ['right', right]]) {
+          const x = side === 'left' ? leftX : rightX;
+          const direction = side === 'left' ? -1 : 1;
+          pins.forEach((pin, index) => {
+            const y = 104 + index * 24;
+            const connection = connections.find(item => item.side === side && item.position === index);
+            const active = connection && (selected === 'all' || selected === connection.signal);
+            add('circle', { cx: x, cy: y, r: 4.5, class: connection ? `used-pin${active ? '' : ' other-connection'}` : 'unused-pin', 'data-board-pin': pin, 'data-side': side });
+            label(x - direction * 12, y, pin, side === 'left' ? 'start' : 'end', connection ? 'board-label' : '');
+            if (connection) {
+              add('line', { x1: x + direction * 7, y1: y, x2: x + direction * 29, y2: y, class: `connection${active ? '' : ' other-connection'}` });
+              label(x + direction * 35, y, `${connection.badge} ${connection.signal}`, side === 'left' ? 'end' : 'start', 'board-label');
+              if (selected === connection.signal) add('circle', { cx: x, cy: y, r: 9, class: 'selected-ring' });
+            }
+          });
+        }
+        const item = connections.find(entry => entry.signal === selected);
+        detail.textContent = item ? `屏幕 ${item.badge} ${item.signal} → 开发板 ${item.pin}（${item.side === 'left' ? '左' : '右'}排）` : '圈号 ①～⑧：屏幕顺序；圆点旁文字：主板丝印。';
+        root.querySelectorAll('[data-screen-pin]').forEach(node => {
+          node.classList.toggle('selected-screen-pin', node.getAttribute('data-screen-pin') === selected);
+        });
+      }
+      function restore(state) {
+        const saved = state?.modelContent?.screenPin;
+        selected = valid(saved) ? saved : 'all';
+        select.value = selected;
+        draw();
+      }
+      select.addEventListener('change', () => {
+        selected = select.value;
+        draw();
+        if (window.openai?.setWidgetState) {
+          window.openai.setWidgetState({ modelContent: { screenPin: selected }, privateContent: null }).catch(() => {});
+        }
+      });
+      window.addEventListener('openai:set_globals', event => {
+        if (event.detail?.globals && Object.prototype.hasOwnProperty.call(event.detail.globals, 'widgetState')) restore(event.detail.globals.widgetState);
+      });
+      new ResizeObserver(draw).observe(root);
+      restore(window.openai?.widgetState);
+    })();
+  </script>
+</div>

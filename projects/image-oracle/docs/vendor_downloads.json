@@ -1,0 +1,136 @@
+{
+  "description": "Image Oracle 商家资料本地下载清单；file 相对 hardware-lab 仓库根目录，downloads/ 被 Git 忽略。",
+  "last_updated": "2026-09-16",
+  "files": [
+    {
+      "file": "projects/image-oracle/downloads/xinlucity/camera_TEST_V1_1.zip",
+      "original_name": "camera_TEST_V1_1.zip",
+      "url": "https://testxinlu.oss-cn-beijing.aliyuncs.com/static/upload/file/warehouse/2026/07/30/1785404353371499.zip",
+      "source_page": "https://www.xinlucity.com/?s=resourcedetail/index/id/555.html",
+      "downloaded_on": "2026-09-16",
+      "bytes": 1439,
+      "sha256": "9f0c232f1793610ced4ff316ed82cdaf40cd7f2e9606204c560c641e47707531",
+      "notes": "原始 Arduino 源码；已检查 ZIP 和阅读源码，未编译或烧录。"
+    },
+    {
+      "file": "projects/image-oracle/downloads/xinlucity/display_test_code.rar",
+      "original_name": "【1】测试代码.rar",
+      "url": "https://testxinlu.oss-cn-beijing.aliyuncs.com/static/upload/file/warehouse/2026/05/09/1778320175790827.rar",
+      "source_page": "https://www.xinlucity.com/?s=resourcedetail/index/id/168.html",
+      "downloaded_on": "2026-09-16",
+      "bytes": 31580146,
+      "sha256": "9ec0c28100a82dc50a3a398967cfacde6a791d3b61e6cac8a3b1a4dde885d8c6",
+      "notes": "候选屏幕资料：6 个 STM32 工程，无 ESP32 或 Arduino sketch，不能直接构建给本板。"
+    },
+    {
+      "file": "projects/image-oracle/downloads/xinlucity/display_schematic_dimensions.rar",
+      "original_name": "【2】原理图尺寸图.rar",
+      "url": "https://testxinlu.oss-cn-beijing.aliyuncs.com/static/upload/file/warehouse/2026/05/09/1778320194889774.rar",
+      "source_page": "https://www.xinlucity.com/?s=resourcedetail/index/id/168.html",
+      "downloaded_on": "2026-09-16",
+      "bytes": 48119,
+      "sha256": "cb60b8afff33af7f1e304b3d272ae069b96a185b9452bddc3cf9b6883e755b65",
+      "notes": "不同屏幕版本参考：PDF 为 31.62×45.95 mm，排针与套装 Ver:1.1 参数图不符；不得据此按排针序号接线或开模。"
+    },
+    {
+      "file": "projects/image-oracle/downloads/xinlucity/display_specification.rar",
+      "original_name": "【3】屏幕规格书.rar",
+      "url": "https://testxinlu.oss-cn-beijing.aliyuncs.com/static/upload/file/warehouse/2026/05/09/1778320203577269.rar",
+      "source_page": "https://www.xinlucity.com/?s=resourcedetail/index/id/168.html",
+      "downloaded_on": "2026-09-16",
+      "bytes": 2751902,
+      "sha256": "7641ce02e8a40beea122faac4eb301af95107a261166d70d1e75f76f6f3cc6e9",
+      "notes": "包内为 ST7789VW Version 1.0 (2017/09) 数据手册；具体屏幕芯片后缀未实物确认。"
+    },
+    {
+      "file": "projects/image-oracle/downloads/xinlucity/kit_display_parameters.png",
+      "original_name": "套装屏幕参数图",
+      "url": "https://testxinlu.oss-cn-beijing.aliyuncs.com/static/upload/images/warehouse/2026/08/05/1785898640511322.png",
+      "source_page": "https://www.xinlucity.com/?s=resourcedetail/index/id/590.html",
+      "downloaded_on": "2026-09-16",
+      "bytes": 436151,
+      "sha256": "879bbbed9a6a4c6ad5a97db6a675500820dede504d2e57c998e13a003516d896"
+    },
+    {
+      "file": "projects/image-oracle/downloads/xinlucity/board_pinout.png",
+      "original_name": "1785228625549337.png",
+      "url": "https://testxinlu.oss-cn-beijing.aliyuncs.com/static/upload/images/warehouse/2026/07/28/1785228625549337.png",
+      "source_page": "https://www.xinlucity.com/?s=resourcedetail/index/id/555.html",
+      "downloaded_on": "2026-09-16",
+      "bytes": 171697,
+      "sha256": "77bc6eaa2544a41935074a354a1aaa319313aa67fa841740dbf4c29152d5507b",
+      "notes": "芯片模组示意图标为 N8R8；套装标为 N16R8，不能据此确认实物容量，也不是开发板排针物理顺序图。"
+    },
+    {
+      "file": "projects/image-oracle/downloads/xinlucity/camera_pinout.png",
+      "original_name": "1785226838364959.png",
+      "url": "https://testxinlu.oss-cn-beijing.aliyuncs.com/static/upload/images/warehouse/2026/07/28/1785226838364959.png",
+      "source_page": "https://www.xinlucity.com/?s=resourcedetail/index/id/555.html",
+      "downloaded_on": "2026-09-16",
+      "bytes": 301288,
+      "sha256": "06fa21b292dea055f34345eb81c25f4c94a559e29d2139ba3a99193e50d462b3"
+    },
+    {
+      "file": "projects/image-oracle/downloads/xinlucity/sd_pinout.png",
+      "original_name": "1785228659641318.png",
+      "url": "https://testxinlu.oss-cn-beijing.aliyuncs.com/static/upload/images/warehouse/2026/07/28/1785228659641318.png",
+      "source_page": "https://www.xinlucity.com/?s=resourcedetail/index/id/555.html",
+      "downloaded_on": "2026-09-16",
+      "bytes": 63711,
+      "sha256": "0b9d9e45989dbb04a2e641472f1f9211afe16f505c16144d42c4afc0a22eab92"
+    },
+    {
+      "file": "projects/image-oracle/downloads/xinlucity/usb_ports.png",
+      "original_name": "1785229478597118.png",
+      "url": "https://testxinlu.oss-cn-beijing.aliyuncs.com/static/upload/images/warehouse/2026/07/28/1785229478597118.png",
+      "source_page": "https://www.xinlucity.com/?s=resourcedetail/index/id/555.html",
+      "downloaded_on": "2026-09-16",
+      "bytes": 645093,
+      "sha256": "8872409de9076cb433c9027a50f9dc96956b262105ed669c6b27410aab350606"
+    },
+    {
+      "file": "projects/image-oracle/downloads/xinlucity/v2.2.6-bread-compact-wifi-s3cam-3660.bin",
+      "downloaded_on": "2026-09-16",
+      "bytes": 9604767,
+      "sha256": "626e26941ec55336992175b1c98421d7c80cf349d695dcfe2e2d72cd26622baa",
+      "original_name": "v2.2.6-bread-compact-wifi-s3cam-3660.bin",
+      "file_token": "GdWTb9wohoPL7cxCbMmcCOGtngg",
+      "source_page": "https://my.feishu.cn/wiki/HDWdwcVGUi3b3dk0IoycXR6pnOc",
+      "notes": "教程在获取时标为最新版本；用于 OV3660 的小智成品固件，未检查烧录布局，未烧录。"
+    },
+    {
+      "file": "projects/image-oracle/downloads/xinlucity/kit_wiring_upstream.md",
+      "downloaded_on": "2026-09-16",
+      "bytes": 7273,
+      "sha256": "b342dc11e1a3b5a1fb6ea94cc29d31a6a03903be6600cfd9c0d3bf0371b3342c",
+      "source_page": "https://my.feishu.cn/wiki/HDWdwcVGUi3b3dk0IoycXR6pnOc",
+      "document_id": "XmewdwEQroT3buxKN9GcpEm5nng",
+      "revision_id": 819,
+      "notes": "通过 lark-cli 导出的原文 Markdown；图片和其他文档引用仍为在线链接，非完整离线镜像。"
+    },
+    {
+      "file": "projects/image-oracle/downloads/xinlucity/extracted/camera_TEST_V1_1/camera_TEST_V1_1.ino",
+      "extracted_on": "2026-09-16",
+      "extracted_from": "projects/image-oracle/downloads/xinlucity/camera_TEST_V1_1.zip",
+      "archive_member": "camera_TEST_V1_1.ino",
+      "bytes": 3013,
+      "sha256": "178fca0ff71e0094fac157865b438effe3ce17d72e70fbbe09836b2c98bc5459"
+    },
+    {
+      "file": "projects/image-oracle/downloads/xinlucity/extracted/display/display_schematic.pdf",
+      "extracted_on": "2026-09-16",
+      "extracted_from": "projects/image-oracle/downloads/xinlucity/display_schematic_dimensions.rar",
+      "archive_member": "【2】原理图尺寸图/1.54寸SPITFT液晶屏.pdf",
+      "bytes": 81192,
+      "sha256": "fb6c1e814808189f623d4effbd562d5d844d3b7f7e6cdc6c4d0bd6abb48f297e"
+    },
+    {
+      "file": "projects/image-oracle/downloads/xinlucity/extracted/display/ST7789_datasheet.pdf",
+      "extracted_on": "2026-09-16",
+      "extracted_from": "projects/image-oracle/downloads/xinlucity/display_specification.rar",
+      "archive_member": "【3】屏幕规格书/ST7789数据手册.pdf",
+      "bytes": 3135599,
+      "sha256": "1f9e956057e3909c0714bdab9e682205e03cf52adefd5b4a01093fa3167d398b"
+    }
+  ]
+}

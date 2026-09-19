@@ -7,7 +7,8 @@
 | 项目 | 用途 | 最近记录的状态 |
 | --- | --- | --- |
 | [AI Passport](projects/ai-passport/README.md) | 探索紧凑的可编程胸牌、屏幕按键交互与 NFC 链接 | 2026-09-16 确认已下单，等待到货 |
-| [Image Oracle](projects/image-oracle/README.md) | 用固定算法将摄像头图像映射为答案，默认拍摄熔岩灯 | 2026-09-16 确认鹿小班硬件全部到货，待验货和首次实验 |
+| [Image Oracle](projects/image-oracle/README.md) | 用固定算法将摄像头图像映射为答案，默认拍摄熔岩灯 | 2026-09-19 拼接原型完成并验收；后续探索更多传感器，或焊接、定制 PCB 与 3D 打印的紧凑装置 |
+| [Programmable NFC Business Card](projects/nfc-business-card/README.md) | 按键切换身份的薄型 NFC 墨水屏名片 | 2026-09-17 加入 USB 编程要求，主路线调整为 nRF52840；待选择现成板样机与软件工具 |
 
 ## 目录结构
 
@@ -17,27 +18,28 @@ hardware-lab/
 ├── AGENTS.md
 ├── .gitignore
 ├── docs/
-│   └── inventory.md
+│   ├── inventory.md
+│   └── wiring-diagrams.md
 └── projects/
     ├── ai-passport/
+    │   └── README.md
+    ├── image-oracle/
     │   ├── README.md
     │   ├── firmware/
+    │   ├── hardware/
+    │   ├── scripts/
+    │   ├── wiring-diagrams/
     │   └── docs/
-    └── image-oracle/
+    └── nfc-business-card/
         ├── README.md
-        ├── firmware/
         ├── hardware/
         ├── enclosure/
         └── docs/
 ```
 
-- `firmware/`：完整且可独立构建的固件工程。
-- `docs/`：项目专属的参考资料、测量结果和实验记录。
-- `hardware/`：实际 BOM（元件清单）、接线、原理图和 PCB 源文件。
-- `enclosure/`：可编辑的外壳模型和用于加工的文件。
-- 根目录 `docs/`：跨项目共享的信息，目前包括器件清单。
+目录用途与命名约定见 [AGENTS.md](AGENTS.md)。所有目录均在首次有实际内容时创建；新项目可以只有 README，不使用占位文件预建目录。根目录 `docs/` 保存跨项目信息，包括器件清单和[接线图制作与归档方法](docs/wiring-diagrams.md)。
 
-空目录通过 `.gitkeep` 保留在 Git 中，有实际文件后删除占位文件。其他目录按需添加；目前没有共享框架或根目录构建系统。
+现有接线图见 [Image Oracle 图册](projects/image-oracle/wiring-diagrams/README.md)。后续默认使用带主板外形、完整丝印和模块排针数字序号的接线图；各项目使用相同目录名。
 
 ## 开始工作
 
@@ -47,7 +49,7 @@ hardware-lab/
 4. 先复现已知可用的例程，再修改应用功能。
 5. 记录完成了哪些构建、哪些实机测试，以及仍未确认的事项。
 
-目前尚未建立构建、烧录或测试命令，首次提交仅搭建工作区。后续在本地 Mac 上使用编辑器、shell 工具和 AI 辅助开发。
+各项目在自己的 README 记录已验证的构建、烧录与测试命令；在本地 Mac 上使用编辑器、shell 工具和 AI 辅助开发。
 
 ## 仓库约定
 

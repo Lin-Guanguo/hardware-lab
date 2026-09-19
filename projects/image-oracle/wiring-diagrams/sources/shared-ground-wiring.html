@@ -1,0 +1,84 @@
+<div id="shared-ground-wiring">
+  <div class="text-small">3 根母对公杜邦线，共用一个五孔组</div>
+  <svg class="ground-diagram" role="img" aria-labelledby="ground-title ground-desc"></svg>
+  <div class="text-small">按键 MID ── 母对母杜邦线 ── 主板 GPIO14</div>
+</div>
+<style>
+  #shared-ground-wiring { color: var(--foreground); }
+  #shared-ground-wiring .ground-diagram { display: block; width: 100%; }
+  #shared-ground-wiring .ground-diagram text { fill: var(--foreground); font-size: 12px; font-weight: 400; }
+  #shared-ground-wiring .device { fill: var(--muted); stroke: var(--border); stroke-width: 1; }
+  #shared-ground-wiring .wire { fill: none; stroke: var(--viz-series-1); stroke-width: 3; }
+  #shared-ground-wiring .hole { fill: var(--background); stroke: var(--muted-foreground); stroke-width: 1; }
+  #shared-ground-wiring .contact { stroke: var(--border); stroke-width: 10; stroke-linecap: round; }
+  #shared-ground-wiring .shared-contact { stroke: var(--viz-series-1); stroke-opacity: .25; }
+  #shared-ground-wiring .plug { fill: var(--viz-series-1); }
+  #shared-ground-wiring .breadboard { fill: var(--muted); fill-opacity: .35; stroke: var(--border); stroke-width: 1; }
+  #shared-ground-wiring .trench { fill: var(--background); stroke: var(--border); stroke-width: 1; }
+  #shared-ground-wiring .text-small { margin-top: 8px; text-align: center; }
+</style>
+<script>
+(() => {
+  const root = document.getElementById('shared-ground-wiring');
+  const svg = root.querySelector('.ground-diagram');
+  const ns = 'http://www.w3.org/2000/svg';
+  function element(tag, attributes, content) {
+    const node = document.createElementNS(ns, tag);
+    for (const [key, value] of Object.entries(attributes)) node.setAttribute(key, value);
+    if (content !== undefined) node.textContent = content;
+    svg.appendChild(node);
+    return node;
+  }
+  function label(x, y, content, anchor = 'middle') {
+    element('text', {x, y, 'text-anchor': anchor}, content);
+  }
+  function draw() {
+    const width = root.getBoundingClientRect().width;
+    if (width <= 0) return;
+    svg.replaceChildren();
+    svg.setAttribute('viewBox', `0 0 ${width} 421`);
+    svg.setAttribute('height', '421');
+    element('title', {id: 'ground-title'}, '用面包板将主板 GND、屏幕 GND 和按键 COM 接在一起');
+    element('desc', {id: 'ground-desc'}, '典型面包板局部俯视示意。三根母对公杜邦线的母头分别套住主板 GND、屏幕 GND、按键 COM；公头分别插入 a5、b5、c5。a5 到 e5 内部有同一片金属连接片，跨沟的 f5 到 j5 以及第 6、7 排均独立。按键 MID 另用母对母线接主板 GPIO14。');
+    const pitch = Math.min(46, (width - 64) / 11);
+    const left = (width - pitch * 10) / 2;
+    const xAt = column => left + (column < 5 ? column : column + 1) * pitch;
+    const boardX = left - 17;
+    const boardWidth = pitch * 10 + 34;
+    element('rect', {class: 'breadboard', x: boardX, y: 214, width: boardWidth, height: 177, rx: 5});
+    element('rect', {class: 'trench', x: xAt(4) + pitch * .62, y: 214, width: pitch * .76, height: 177});
+    const rows = [{number: 5, y: 250}, {number: 6, y: 325}, {number: 7, y: 363}];
+    for (const row of rows) {
+      label(boardX - 9, row.y + 4, row.number);
+      for (let side = 0; side < 2; side++) {
+        element('line', {class: `contact${row.number === 5 && side === 0 ? ' shared-contact' : ''}`, x1: xAt(side * 5), x2: xAt(side * 5 + 4), y1: row.y, y2: row.y});
+      }
+      for (let column = 0; column < 10; column++) {
+        element('rect', {class: 'hole', x: xAt(column) - 5, y: row.y - 5, width: 10, height: 10, rx: 1, 'data-hole': `${'abcdefghij'[column]}${row.number}`});
+      }
+    }
+    const devices = [
+      {x: width / 6, name: 'ESP32 主板', pin: 'GND', target: 'a5'},
+      {x: width / 2, name: '屏幕', pin: 'GND', target: 'b5'},
+      {x: width * 5 / 6, name: '按键模块', pin: 'COM', target: 'c5'}
+    ];
+    devices.forEach((device, index) => {
+      element('rect', {class: 'device', x: device.x - 44, y: 7, width: 88, height: 63, rx: 4});
+      label(device.x, 29, device.name);
+      label(device.x, 53, `${index + 1}  ${device.pin}`);
+      element('path', {class: 'wire', d: `M ${device.x} 74 C ${device.x} 151 ${xAt(index)} 157 ${xAt(index)} 250`, 'data-wire': device.target});
+      element('rect', {class: 'plug', x: device.x - 5, y: 64, width: 10, height: 18, rx: 2});
+      element('rect', {class: 'plug', x: xAt(index) - 4, y: 238, width: 8, height: 15, rx: 1});
+      label(device.x + 12, 101, '母头', 'start');
+    });
+    for (let column = 0; column < 10; column++) {
+      label(xAt(column), 279, `${'abcdefghij'[column]}5`);
+    }
+    label((xAt(0) + xAt(4)) / 2, 303, '同一金属片 · 共地');
+    label((xAt(5) + xAt(9)) / 2, 303, '另一组 · 不相通');
+    label(width / 2, 414, '面包板局部俯视示意 · 中间沟两侧不相通');
+  }
+  new ResizeObserver(draw).observe(root);
+  draw();
+})();
+</script>

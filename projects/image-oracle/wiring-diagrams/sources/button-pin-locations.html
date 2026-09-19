@@ -1,0 +1,141 @@
+<div id="button-pin-locations-lgg">
+  <style>
+    #button-pin-locations-lgg .board-view { display: block; width: 100%; }
+    #button-pin-locations-lgg .board-view text { fill: var(--foreground); font-size: 12px; font-weight: 400; }
+    #button-pin-locations-lgg .board-view .board-label { font-weight: 500; }
+    #button-pin-locations-lgg .board-surface { fill: var(--muted); stroke: var(--border); stroke-width: 1; }
+    #button-pin-locations-lgg .component, #button-pin-locations-lgg .unused-pin { fill: var(--background); stroke: var(--border); stroke-width: 1; }
+    #button-pin-locations-lgg .used-pin { fill: var(--viz-series-1); stroke: var(--viz-series-1); stroke-width: 1; }
+    #button-pin-locations-lgg .connection { stroke: var(--viz-series-1); stroke-width: 2; fill: none; }
+    #button-pin-locations-lgg .selected-ring { fill: none; stroke: var(--viz-series-1); stroke-width: 2; }
+    #button-pin-locations-lgg .other-connection { opacity: .35; }
+    #button-pin-locations-lgg .selected-detail { margin-top: 8px; }
+    #button-pin-locations-lgg .pin-order { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); max-width: 440px; margin: 8px auto 16px; text-align: center; }
+    #button-pin-locations-lgg .pin-order .unused { color: var(--muted-foreground); }
+    #button-pin-locations-lgg .pin-order .selected-module-pin { font-weight: 500; text-decoration: underline; text-underline-offset: 4px; }
+  </style>
+  <div class="text-small">按键排针顺序：照片从上到下，COM → RST</div>
+  <div class="pin-order text-small" aria-label="按键模块排针从 COM 端起编号，当前仅接第一针 COM 和第六针 MID">
+    <div data-module-pin="COM">①<br>COM<br>接地</div>
+    <div class="unused" data-module-pin="UP">②<br>UP<br>不接</div>
+    <div class="unused" data-module-pin="DWN">③<br>DWN<br>不接</div>
+    <div class="unused" data-module-pin="LFT">④<br>LFT<br>不接</div>
+    <div class="unused" data-module-pin="RHT">⑤<br>RHT<br>不接</div>
+    <div data-module-pin="MID">⑥<br>MID<br>接 14</div>
+    <div class="unused" data-module-pin="SET">⑦<br>SET<br>不接</div>
+    <div class="unused" data-module-pin="RST">⑧<br>RST<br>不接</div>
+  </div>
+  <div class="viz-controls">
+    <label class="form-label" for="button-pin-select-lgg">定位按键引脚
+      <select class="form-select" id="button-pin-select-lgg">
+        <option value="all">本次连接：COM 和 MID</option>
+        <option value="COM">① COM → 面包板共地点 → GND</option>
+        <option value="MID">⑥ MID → GPIO14（中心按下）</option>
+      </select>
+    </label>
+  </div>
+  <svg class="board-view" role="img" aria-labelledby="button-board-title-lgg button-board-desc-lgg"></svg>
+  <div class="selected-detail" aria-live="polite"></div>
+  <script>
+    (() => {
+      const root = document.getElementById('button-pin-locations-lgg');
+      const svg = root.querySelector('.board-view');
+      const select = root.querySelector('select');
+      const detail = root.querySelector('.selected-detail');
+      const ns = 'http://www.w3.org/2000/svg';
+      const left = ['3V3', 'EN', '4', '5', '6', '7', '15', '16', '17', '18', '8', '3', '46', '9', '10', '11', '12', '13', '14', '5V'];
+      const right = ['TX', 'RX', '1', '2', '42', '41', '40', '39', '38', '37', '36', '35', '0', '45', '48', '47', '21', '20', '19', 'GND'];
+      const connections = [
+        {signal: 'COM', pin: 'GND', side: 'right', position: 19, badge: '①'},
+        {signal: 'MID', pin: '14', side: 'left', position: 18, badge: '⑥'}
+      ];
+      let selected = 'all';
+      const valid = value => value === 'all' || connections.some(item => item.signal === value);
+      function add(tag, attributes = {}, value) {
+        const node = document.createElementNS(ns, tag);
+        Object.entries(attributes).forEach(([key, entry]) => node.setAttribute(key, entry));
+        if (value !== undefined) node.textContent = value;
+        svg.appendChild(node);
+        return node;
+      }
+      function label(x, y, value, anchor = 'middle', className = '') {
+        return add('text', {x, y, 'text-anchor': anchor, 'dominant-baseline': 'middle', class: className}, value);
+      }
+      function draw() {
+        const width = Math.round(root.getBoundingClientRect().width);
+        if (width <= 0) return;
+        const cx = width / 2;
+        const half = Math.min(108, (width - 160) / 2);
+        const leftX = cx - half;
+        const rightX = cx + half;
+        svg.setAttribute('viewBox', `0 0 ${width} 655`);
+        svg.setAttribute('height', 655);
+        svg.replaceChildren();
+        add('title', {id: 'button-board-title-lgg'}, 'ESP32-S3-CAM 中心按键接线位置');
+        add('desc', {id: 'button-board-desc-lgg'}, '开发板按金属盖朝前、天线上、USB 下摆放。按键模块第一针 COM 通过面包板与屏幕 GND、主板右排最下方 GND 共地；第六针 MID 直接接主板左排倒数第二针 14。下方紧邻 14 的 5V 不接。其余六个按键脚不接。圈号表示按键模块排针顺序，圆点旁是主板丝印。屏幕接线未在此图展开。');
+        label(cx, 18, '元件正面 · 天线上 / USB 下', 'middle', 'board-label');
+        add('rect', {x: cx - 38, y: 38, width: 76, height: 57, rx: 2, class: 'board-surface'});
+        label(cx, 63, '天线');
+        add('rect', {x: leftX - 10, y: 87, width: half * 2 + 20, height: 504, rx: 5, class: 'board-surface'});
+        add('rect', {x: cx - 35, y: 110, width: 70, height: 155, rx: 3, class: 'component'});
+        label(cx, 168, '金属盖');
+        label(cx, 190, 'ESP32-S3');
+        label(cx, 212, 'N16R8');
+        add('rect', {x: cx - 37, y: 324, width: 74, height: 18, rx: 2, class: 'component'});
+        label(cx, 363, '摄像头座');
+        add('rect', {x: cx - 46, y: 512, width: 18, height: 18, rx: 2, class: 'component'});
+        add('rect', {x: cx + 28, y: 512, width: 18, height: 18, rx: 2, class: 'component'});
+        label(cx - 33, 548, 'EN/RST');
+        label(cx + 33, 548, 'BOOT');
+        add('rect', {x: cx - 56, y: 568, width: 45, height: 49, rx: 3, class: 'component'});
+        add('rect', {x: cx + 11, y: 568, width: 45, height: 49, rx: 3, class: 'component'});
+        label(cx - 33, 591, 'USB-C');
+        label(cx + 33, 591, 'USB-C');
+        label(cx - 33, 635, '原生 USB');
+        label(cx + 33, 635, 'USB 串口');
+        for (const [side, pins] of [['left', left], ['right', right]]) {
+          const x = side === 'left' ? leftX : rightX;
+          const direction = side === 'left' ? -1 : 1;
+          pins.forEach((pin, index) => {
+            const y = 104 + index * 24;
+            const connection = connections.find(item => item.side === side && item.position === index);
+            const active = connection && (selected === 'all' || selected === connection.signal);
+            add('circle', {cx: x, cy: y, r: 4.5, class: connection ? `used-pin${active ? '' : ' other-connection'}` : 'unused-pin', 'data-board-pin': pin, 'data-side': side});
+            label(x - direction * 12, y, pin, side === 'left' ? 'start' : 'end', connection ? 'board-label' : '');
+            if (connection) {
+              add('line', {x1: x + direction * 7, y1: y, x2: x + direction * 29, y2: y, class: `connection${active ? '' : ' other-connection'}`, 'data-signal': connection.signal});
+              label(x + direction * 35, y, `${connection.badge} ${connection.signal}`, side === 'left' ? 'end' : 'start', 'board-label');
+              if (selected === connection.signal) add('circle', {cx: x, cy: y, r: 9, class: 'selected-ring'});
+            }
+          });
+        }
+        detail.textContent = selected === 'COM'
+          ? '① COM → 面包板 c5；主板 GND → a5；屏幕 GND → b5。同一五孔组共地。'
+          : selected === 'MID'
+            ? '⑥ MID → 主板 14：左排倒数第二针，用母对母线直连。'
+            : '圈号是按键排针顺序：① COM 经面包板共地；⑥ MID 直连 GPIO14。其余按键脚暂不接。';
+        root.querySelectorAll('[data-module-pin]').forEach(node => {
+          node.classList.toggle('selected-module-pin', node.getAttribute('data-module-pin') === selected);
+        });
+      }
+      function restore(state) {
+        const saved = state?.modelContent?.buttonPin;
+        selected = valid(saved) ? saved : 'all';
+        select.value = selected;
+        draw();
+      }
+      select.addEventListener('change', () => {
+        selected = valid(select.value) ? select.value : 'all';
+        draw();
+        if (window.openai?.setWidgetState) {
+          window.openai.setWidgetState({modelContent: {buttonPin: selected}, privateContent: null}).catch(() => {});
+        }
+      });
+      window.addEventListener('openai:set_globals', event => {
+        if (event.detail?.globals && Object.prototype.hasOwnProperty.call(event.detail.globals, 'widgetState')) restore(event.detail.globals.widgetState);
+      });
+      new ResizeObserver(draw).observe(root);
+      restore(window.openai?.widgetState);
+    })();
+  </script>
+</div>

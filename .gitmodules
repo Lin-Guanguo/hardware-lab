@@ -1,0 +1,4 @@
+[submodule "easyeda-api-skill"]
+	path = upstreams/easyeda-api-skill
+	url = https://github.com/easyeda/easyeda-api-skill.git
+	ignore = untracked

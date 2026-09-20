@@ -1,0 +1,143 @@
+"""Build an editable envelope study; this is not a manufacturing model."""
+
+from pathlib import Path
+import json
+
+import FreeCAD as App
+import Part
+
+
+OUTPUT = Path(__file__).resolve().parent
+MODEL_PATH = OUTPUT / "layout-study.FCStd"
+DOCUMENT_NAME = "NfcCardLayoutStudy"
+
+if any(
+    opened.Name == DOCUMENT_NAME or opened.FileName == str(MODEL_PATH)
+    for opened in App.listDocuments().values()
+):
+    raise RuntimeError("Close the existing layout study before regenerating it.")
+
+doc = App.newDocument(DOCUMENT_NAME)
+doc.Label = "NFC 名片 · 包络研究（非制造图）"
+doc.Comment = "未验证装配；驱动板、FPC、USB 插头、固定和线材包络尚未建模。"
+
+spec = doc.addObject("App::FeaturePython", "StudyParameters")
+spec.Label = "设计目标与未验证项"
+for name, value in (
+    ("CardWidth", 86.0), ("CardHeight", 54.0), ("CardThickness", 5.0),
+    ("FrontWall", 0.8), ("BackWall", 0.8), ("SideWall", 0.8),
+):
+    spec.addProperty("App::PropertyLength", name, "Envelope")
+    setattr(spec, name, value)
+spec.addProperty("App::PropertyString", "Status", "Evidence")
+spec.Status = "空间研究；全部器件位置为设计假设，不能判定整机可装配。"
+spec.addProperty("App::PropertyStringList", "MissingGeometry", "Evidence")
+spec.MissingGeometry = [
+    "屏幕驱动板和 FPC", "USB 插头、焊点和线材", "电池完整保护包与出线",
+    "按键支撑、键帽和行程", "固定件、绝缘与装配公差", "实际 NFC 天线和匹配网络",
+]
+
+
+def box(name, label, size, position, color, evidence, notes):
+    obj = doc.addObject("Part::Box", name)
+    obj.Label = label
+    obj.Length, obj.Width, obj.Height = size
+    obj.Placement.Base = App.Vector(*position)
+    obj.addProperty("App::PropertyString", "DimensionEvidence", "Evidence")
+    obj.DimensionEvidence = evidence
+    obj.addProperty("App::PropertyString", "Limitations", "Evidence")
+    obj.Limitations = notes
+    if App.GuiUp:
+        obj.ViewObject.ShapeColor = color
+        obj.ViewObject.LineColor = (0.20, 0.24, 0.30)
+    return obj
+
+
+base = box("BackPlane", "背壁试算 0.8 mm", (86, 54, 0.8), (0, 0, 0),
+           (0.78, 0.82, 0.87), "设计目标，未进行打印试样", "平板基准，不含固定结构。")
+base.setExpression("Length", "StudyParameters.CardWidth")
+base.setExpression("Width", "StudyParameters.CardHeight")
+base.setExpression("Height", "StudyParameters.BackWall")
+
+front = box("FrontPlane", "前壁试算 0.8 mm（默认隐藏）", (86, 54, 0.8), (0, 0, 4.2),
+            (0.78, 0.82, 0.87), "设计目标，未进行打印试样", "没有屏幕窗口或按钮孔，不能用于加工。")
+front.setExpression("Length", "StudyParameters.CardWidth")
+front.setExpression("Width", "StudyParameters.CardHeight")
+front.setExpression("Height", "StudyParameters.FrontWall")
+front.setExpression("Placement.Base.z", "StudyParameters.CardThickness - StudyParameters.FrontWall")
+
+limit = box("OuterEnvelope", "86 × 54 × 5 mm 外形目标", (86, 54, 5), (0, 0, 0),
+            (0.30, 0.38, 0.49), "用户目标，非实测", "包括所有突出物；外壳实际公差待确认。")
+limit.setExpression("Length", "StudyParameters.CardWidth")
+limit.setExpression("Width", "StudyParameters.CardHeight")
+limit.setExpression("Height", "StudyParameters.CardThickness")
+
+board = box("BoardCandidate", "主控候选 · 商家标称 34.1 × 18 × 3.2", (34.1, 18, 3.2),
+            (49.5, 4, 0.9), (0.27, 0.58, 0.48), "商家截图；hardware/component-options.md",
+            "NFC 引出、板卡版本、最高点与 USB 插头空间未确认；没有分解板上器件。")
+board.setExpression("Placement.Base.z", "StudyParameters.BackWall + 0.1 mm")
+
+screen = box("ScreenGlass", "墨水屏玻璃 · 图纸尺寸上界", (32.0, 37.52, 1.1),
+             (3, 13, 3.0), (0.86, 0.89, 0.91), "GDEY0154D67 图纸：31.8±0.2 × 37.32±0.2 × 1.0±0.1 mm",
+             "仅玻璃；未建模 FPC、连接器、驱动板、支撑或可视区准确位置。")
+screen.setExpression("Placement.Base.z", "StudyParameters.CardThickness - StudyParameters.FrontWall - 0.1 mm - ScreenGlass.Height")
+
+battery = box("BatteryNominal", "电池 · 目录标称（非完整包体上界）", (10, 30, 2),
+              (39, 21, 1.0), (0.87, 0.60, 0.31), "GM201030-PCB 目录标称 2 × 10 × 30 mm",
+              "保护包、焊线和满充尺寸未确认，不能据此冻结内腔。")
+battery.setExpression("Placement.Base.z", "StudyParameters.BackWall + 0.2 mm")
+
+antenna = box("AntennaReserve", "NFC 空间分配 · 非天线设计", (23, 25, 0.2),
+              (58, 26, 1.0), (0.38, 0.64, 0.82), "旧概念图 23 × 25 mm 预留；0.2 mm 为显示用假设",
+              "不是实际天线尺寸，没有线圈、调谐或 RF 验证。")
+antenna.setExpression("Placement.Base.z", "StudyParameters.BackWall + 0.2 mm")
+
+buttons = []
+for index, x in enumerate((5, 15, 25), 1):
+    button = box(f"Button{index}", f"按键 {index} · 仅主体", (5.2, 5.2, 1.5),
+                 (x, 3, 2.6), (0.72, 0.48, 0.40), "SKQGABE010 标称主体尺寸；hardware/component-options.md",
+                 "未包含支撑 PCB、焊盘、焊料、键帽和按压行程。")
+    button.setExpression("Placement.Base.z", f"StudyParameters.CardThickness - StudyParameters.FrontWall - 0.1 mm - Button{index}.Height")
+    buttons.append(button)
+
+doc.recompute()
+components = [board, screen, battery, antenna, *buttons]
+collisions = []
+for index, first in enumerate(components):
+    if not first.Shape.isValid():
+        raise RuntimeError(f"Invalid solid: {first.Name}")
+    for second in components[index + 1:]:
+        if first.Shape.common(second.Shape).Volume > 1e-6:
+            collisions.append([first.Name, second.Name])
+
+inner = Part.makeBox(
+    spec.CardWidth.Value - 2 * spec.SideWall.Value,
+    spec.CardHeight.Value - 2 * spec.SideWall.Value,
+    spec.CardThickness.Value - spec.BackWall.Value - spec.FrontWall.Value,
+    App.Vector(spec.SideWall.Value, spec.SideWall.Value, spec.BackWall.Value),
+)
+outside = [obj.Name for obj in components if obj.Shape.cut(inner).Volume > 1e-6]
+report = {
+    "status": "INCOMPLETE_SPACE_STUDY_NOT_MANUFACTURING_READY",
+    "freecad_version": App.Version()[:3],
+    "card_mm": [spec.CardWidth.Value, spec.CardHeight.Value, spec.CardThickness.Value],
+    "board_total_allowance_mm": round(spec.CardThickness.Value - spec.BackWall.Value - spec.FrontWall.Value - board.Height.Value, 3),
+    "modeled_component_collisions": collisions,
+    "modeled_components_outside_assumed_cavity": outside,
+    "missing_geometry": list(spec.MissingGeometry),
+    "interpretation": "无碰撞只针对这些简化盒子，不证明实际装配、功能或制造可行。",
+}
+
+if App.GuiUp:
+    import FreeCADGui as Gui
+
+    front.ViewObject.Visibility = False
+    limit.ViewObject.DisplayMode = "Wireframe"
+    antenna.ViewObject.Transparency = 55
+    Gui.activeDocument().activeView().viewAxonometric()
+    Gui.activeDocument().activeView().fitAll()
+
+doc.recompute()
+doc.saveAs(str(MODEL_PATH))
+(OUTPUT / "layout-study-report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n")
+print(json.dumps(report, ensure_ascii=False, indent=2))

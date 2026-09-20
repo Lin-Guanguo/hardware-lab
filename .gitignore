@@ -26,3 +26,9 @@ artifacts/
 downloads/
 logs/
 *.log
+
+# Local EDA smoke test and transient SQLite files
+/eda/AI-API-Smoke-Test.eprj2
+/eda/*.eprj2-journal
+/eda/*.eprj2-wal
+/eda/*.eprj2-shm

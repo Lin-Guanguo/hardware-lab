@@ -52,5 +52,15 @@
     "bytes": 3405603,
     "sha256": "ed213c153f1db84762558fcac2ff9752e322151a1d44672cf554988b860cebc8",
     "status": "downloaded"
+  },
+  {
+    "file": "downloads/xiao-nrf52840-sense-3d.zip",
+    "source_url": "https://wiki.seeedstudio.com/XIAO_BLE/#resources",
+    "resolved_url": "https://files.seeedstudio.com/wiki/XIAO-BLE/seeed-studio-xiao-nrf52840-3d-model.zip",
+    "accessed": "2026-09-19",
+    "bytes": 8849412,
+    "sha256": "0ee799787103e54f382a784abd425e841401934356d4e083308cb0f083bf63a8",
+    "status": "downloaded",
+    "note": "官方资源区列于 Sense 下，版本和完整高度待比对，不直接代表普通版/Plus。"
   }
 ]

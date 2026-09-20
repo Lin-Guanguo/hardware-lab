@@ -1,0 +1,25 @@
+{
+  "status": "INCOMPLETE_SPACE_STUDY_NOT_MANUFACTURING_READY",
+  "freecad_version": [
+    "1",
+    "1",
+    "3"
+  ],
+  "card_mm": [
+    86.0,
+    54.0,
+    5.0
+  ],
+  "board_total_allowance_mm": 0.2,
+  "modeled_component_collisions": [],
+  "modeled_components_outside_assumed_cavity": [],
+  "missing_geometry": [
+    "屏幕驱动板和 FPC",
+    "USB 插头、焊点和线材",
+    "电池完整保护包与出线",
+    "按键支撑、键帽和行程",
+    "固定件、绝缘与装配公差",
+    "实际 NFC 天线和匹配网络"
+  ],
+  "interpretation": "无碰撞只针对这些简化盒子，不证明实际装配、功能或制造可行。"
+}

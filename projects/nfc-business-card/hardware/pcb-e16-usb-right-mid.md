@@ -8,6 +8,7 @@
 - 方案数据：[e16-right-mid-plan.json](e16-right-mid-plan.json)
 - 审查图：[pcba-e16-right-mid.svg](../enclosure/pcba-e16-right-mid.svg)（L 形板框、两键、禁布区与显示包络）
 - E16 实时快照：[e16-right-mid-snapshot.json](e16-right-mid-snapshot.json)
+- 外壳剖视图：[nfc-card-e16-v5-stack-section.svg](../enclosure/nfc-card-e16-v5-stack-section.svg)（4.5 mm 叠层：电池袋 / 按键列 / 屏幕 FPC）
 - 外壳样件：[nfc-card-e16-enclosure-v5.FCStd](../enclosure/nfc-card-e16-enclosure-v5.FCStd) · [几何报告](../enclosure/nfc-card-e16-enclosure-v5-report.json) · [脚本](../enclosure/e16-enclosure-right-mid-usb-v5.py) · 预览图 `artifacts/e16-cad-preview/e16-enclosure-v5-{iso,top}.png`
 - 校验脚本：[plan-e16-right-mid.py](../scripts/plan-e16-right-mid.py)
 - 绘图脚本：[generate-e16-right-mid-svg.py](../scripts/generate-e16-right-mid-svg.py)

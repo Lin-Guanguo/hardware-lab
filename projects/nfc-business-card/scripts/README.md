@@ -23,6 +23,12 @@ node projects/nfc-business-card/scripts/eda-exec-wait.mjs \
 python3 projects/nfc-business-card/scripts/check-netlist-consistency.py --sch /tmp/sch-netlist.enet --pcb /tmp/pcb-pins.json
 ```
 
+外壳叠层剖视图由 [generate-e16-v5-section-svg.py](generate-e16-v5-section-svg.py) 从几何报告生成（三张切片 + 图例，数字随报告更新）：
+
+```sh
+python3 projects/nfc-business-card/scripts/generate-e16-v5-section-svg.py
+```
+
 外壳样件的着色等轴测图与正视顶视图由 [render-stl-iso.py](render-stl-iso.py) 直接从 STL 生成（不需要 FreeCAD GUI），输出到被忽略的 `artifacts/e16-cad-preview/`：
 
 ```sh

@@ -4,7 +4,7 @@
   "checked_on": "2026-09-22",
   "source": {
     "eda_project": "../../../eda/NFC-Business-Card-84x52-E14-Battery-Layout.eprj2",
-    "eda_project_sha256": "8f22a225e6037b14c5a548ab010587b07655199a3028f8a2835e3f347ae282fe",
+    "eda_project_sha256": "f28da33654895111dfc779ef4b349a008b1edefc43d4ddabd1a00f7354df301b",
     "eda_snapshot": "pcb-e14-battery-layout.json",
     "cad_snapshot": "../enclosure/pcba-e14-battery-layout-report.json"
   },

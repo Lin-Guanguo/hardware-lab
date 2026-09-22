@@ -33,12 +33,13 @@
    "id": "battery-delivery-envelope",
    "status": "BLOCKED_INPUT",
    "purpose": "Freeze a safe battery keepout and thickness budget.",
-   "current_assumption": "E16 battery bite is 33.5 x 15 mm with a 3.6 mm pocket (0.4 mm plate to the 4.0 mm ceiling) and is at its hard limits: east 33.80 mm (SW pads start at 34.10 with the 0.3 mm copper-to-edge rule), north ~15.02 mm (bottom-layer KEY_PREV_N hugs the bite at y=15.40), height 3.6 mm. A cell up to 32.5 x 14 x 3.4 mm still leaves 0.5-1 mm margins. BP (BAT_PACK_TBD, d1.5 at 49.5/23.55), BN (GND, d1.5 at 47.7/23.70) and NTC (BAT_NTC_TBD, d1.2 at 45.60/23.70) pads are in place.",
+   "current_assumption": "E16 battery bite is 33.5 x 15 mm with a 3.6 mm pocket (0.4 mm plate to the 4.0 mm ceiling) and is at its hard limits: east 33.80 mm (SW pads start at 34.10 with the 0.3 mm copper-to-edge rule), north ~15.02 mm (bottom-layer KEY_PREV_N hugs the bite at y=15.40), height 3.6 mm. A cell up to 32.5 x 14 x 3.4 mm still leaves 0.5-1 mm margins. BP (BAT_PACK_TBD, d1.5 at 49.5/23.55), BN (GND, d1.5 at 47.7/23.70) and NTC (BAT_NTC_TBD, d1.2 at 45.60/23.70) pads are in place. Envelope rule measured from the current layout (see the decision table in the E16 record): inside the present bite the cell may be up to 33.5 x 15 mm and 3.6 mm thick; a cell deeper than y 15 mm needs R10/R11/R12 moved plus a new enclosure; a cell deeper than y 18.3 mm runs under the screen and is then limited to 2.65 mm (screen underside z 3.05 minus the 0.4 plate). The 2026-09-20 sample (302030, 32 x 20 x 3) fails both ways, which is why the layout targets a 301230-class cell instead.",
    "required_evidence": [
     "supplier maximum body dimensions including protection board and adhesive",
     "lead exit direction and bend radius",
     "allowed charge/discharge current and NTC requirement",
-    "swelling and assembly compression allowance"
+    "swelling and assembly compression allowance",
+    "confirm which cell was actually ordered/received (301230-class vs the 32 x 20 x 3 sample) and measure its full body"
    ],
    "next_action": "Measure the received cell or take the supplier drawing and compare it with the limit table. Wider than 33.8 mm or taller than 15.02 mm forces the key column to move (about 8 traces) plus a new enclosure version; thicker than 3.6 mm breaks the 4.5 mm stack.",
    "design_state": "BLOCKED_INPUT"

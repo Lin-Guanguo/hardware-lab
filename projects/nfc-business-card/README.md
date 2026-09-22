@@ -12,7 +12,7 @@ status: pcb_and_cad_closed_awaiting_external_inputs
 
 - 按键交互：键 1 轮换一级栏目，键 2 轮换当前栏目的二级选项，选到即自动应用，不设必需的确认键。硬件为**三键**（SW1/SW3 一列 + 三角第三点 SW2，第三颗用原本空置的带上拉输入）；外壳 V7 配三个齐平键帽，行程 0.25 mm。详细规则见[交互架构](docs/architecture.md)。
 - 功能路线：nRF52840 内置 NFCT，按键切换名片；USB-C 用于编程和供电/充电，不要求断电仍可读取 NFC。
-- 取样选择：GDEH0154E01 六色屏、DESPI-E01 桌面转接板和 301230 类电池尺寸目标；付款、到货及实测尚未确认。302030 / 150 mAh 仅保留为历史取样对照，DESPI-E01 不装入最终成品。
+- 取样选择：GDEH0154E01 六色屏、DESPI-E01 桌面转接板和 301230 类电池尺寸目标；付款、到货及实测尚未确认。**302030 / 150 mAh（32 × 20 × 3）装不进当前架构**——深向超过 18.3 mm 的电芯必须 ≤2.65 mm 厚（屏幕背面 z=3.05 减底板 0.4），所以它只保留为历史取样对照，理由与边界见[电芯包络决策表](hardware/pcb-e16-usb-right-mid.md#电芯包络决策表2026-09-23)；DESPI-E01 不装入最终成品。
 - 最新 CAD 研究：[pcba-e14-battery-layout.FCStd](enclosure/pcba-e14-battery-layout.FCStd)、[E14 新电池尺寸布局记录](hardware/pcb-e14-battery-layout.md)和[按 EDA 实际坐标重绘的平面图](enclosure/pcba-e14-battery-layout.svg)。这是空间验证包络，不是可打印外壳；旧的意图示意另存为 `pcba-e14-battery-layout-intended.svg`，旧版 `pcba-e6-84x52-detail.FCStd` 保留作历史对照。
 - 当前 EDA：[NFC-Business-Card-84x52-E14-Battery-Layout.eprj2](../../eda/NFC-Business-Card-84x52-E14-Battery-Layout.eprj2) 内的 **`Board1_2` / E16 Right-Mid USB Study**（2026-09-23 用 `dmt_Board.createBoard` 与 `Schematic1` 关联）：**56 个元件、242 个焊盘、781 段铜线、162 个过孔、两层 GND 覆铜**；L 形板框（84 × 52，左下 33.5 × 15 mm 电池挖空 + 右边缘 USB 缺口）。原生 DRC 保存/关闭/重开后 **连接 0**，只剩 24 项 `Board Outline to SMD Pad`：12 个 J1 信号焊盘离板边 0.2007 mm（板厂允许 ≥0.2 mm），板框侧与封装槽线侧各判一次。原理图与 PCB **逐引脚 234 项、0 处网名差异**。[E15 底边 USB 版](hardware/pcb-e15-clean-layout.md)与 `Board1/E6` 保留作回退。
 - USB 位置试探：[E8 USB 左移评审](hardware/pcb-e8-usb-left.md)。E8 证明现有板框缺口不允许只把 J1 横向移动；换边需要连板框和外壳一起重做，因此当前不替换 E7 的 USB 位置。
@@ -44,7 +44,7 @@ USB [工艺版本复核](hardware/usb4500-clearance-review.md)发现国内更新
 
 现有原理图以 **nRF52840 + 可编程 USB-C + 1.54 英寸黑白墨水屏 + 三个按键 + 约 40–60 mAh 薄电池**起步。用户新增 USB 编程要求后，原 nRF52832 + 日常 SWD 方案退为备选。NFC 使用主控内置的 NFC-A Type 2 标签功能，按键修改 NDEF 内容。2026-09-20 用户进一步强调紧凑化，成品路线改为优先评估薄模块与定制 PCB/PCBA，现成开发板保留作桌面功能验证；具体器件与制造方案尚未冻结。
 
-**最新取样选择：GDEH0154E01 六色屏 + DESPI-E01 转接板 1 套，以及 302030 / 150 mAh 电池 1 只。** 用户已在[硬件 配件购买](codex://threads/01a0be87-5f3b-7b23-8fdc-68312f9cc88e)决定取样，并提供对应购物车；尚未确认付款、到货或实测。黑白屏/窄电池组合保留为旧草案和备选，DESPI-E01 只作桌面测试。
+**最新取样选择：GDEH0154E01 六色屏 + DESPI-E01 转接板 1 套，以及 302030 / 150 mAh 电池 1 只。**（这一只 32 × 20 × 3 的包体**装不进**当前 33.5 × 15 mm 的电池挖空——见[电芯包络决策表](hardware/pcb-e16-usb-right-mid.md#电芯包络决策表2026-09-23)，窄电芯目标为 301230/301225 类。） 用户已在[硬件 配件购买](codex://threads/01a0be87-5f3b-7b23-8fdc-68312f9cc88e)决定取样，并提供对应购物车；尚未确认付款、到货或实测。黑白屏/窄电池组合保留为旧草案和备选，DESPI-E01 只作桌面测试。
 
 **此前 EDA 独立方案：[电池靠右、USB 下长边](hardware/pcb-bottom-usb.md)。** 已新增 [EDA 工程](../../eda/NFC-Business-Card-Bottom-USB.eprj2)和 [FreeCAD 模型](enclosure/pcba-e6-bottom-usb.FCStd)，旧版工程与模型未覆盖。电池横放靠右下、三键位于电池左侧，取消原来右侧窄 PCB 支臂；用户认可竖持时三键成为中段横排的使用姿态。机械几何、实际封装和保存重开检查通过，视觉已检查。新版尚未布线，DRC 为 122 条（98 未连接、24 USB 槽边距）；旧版 41 条 DRC 的试布线保留作对照。以下为此前版本的进展。
 

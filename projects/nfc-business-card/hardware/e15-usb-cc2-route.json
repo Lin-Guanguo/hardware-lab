@@ -1,0 +1,54 @@
+{
+  "date": "2026-09-22",
+  "document": {
+    "uuid": "4991220fd7f692a5",
+    "board": "Board1_1",
+    "schematic": "Schematic1"
+  },
+  "purpose": "First reversible USB CC2 routing segment",
+  "baseline": {
+    "components": 56,
+    "pads": 242,
+    "lines": 0,
+    "vias": 0,
+    "drc": {
+      "clearance": 8,
+      "same_footprint_clearance": 12,
+      "connection": 200,
+      "total": 220
+    }
+  },
+  "current": {
+    "components": 56,
+    "pads": 242,
+    "lines": 4,
+    "vias": 2,
+    "drc": {
+      "clearance": 8,
+      "same_footprint_clearance": 12,
+      "connection": 197,
+      "total": 217
+    }
+  },
+  "route": {
+    "net": "USB_CC2",
+    "line_width_mil": 6,
+    "vias": [
+      {"x": 1750, "y": 413.8, "hole_diameter_mil": 12, "diameter_mil": 24},
+      {"x": 2020.3, "y": 470, "hole_diameter_mil": 12, "diameter_mil": 24}
+    ],
+    "segments": [
+      {"layer": 1, "start": [2018.9, 316.4], "end": [2020.3, 430]},
+      {"layer": 1, "start": [1819.7, 413.8], "end": [1750, 413.8]},
+      {"layer": 2, "start": [1750, 413.8], "end": [2020.3, 470]},
+      {"layer": 1, "start": [2020.3, 470], "end": [2020.3, 430]}
+    ]
+  },
+  "verification": {
+    "sqlite_quick_check": "ok",
+    "close_reopen": true,
+    "reopened_parent_board": "Board1_1",
+    "new_clearance_errors": 0,
+    "note": "USB_CC1 remains blocked by the existing J1/R1 board-edge geometry; do not route it before the board outline decision."
+  }
+}

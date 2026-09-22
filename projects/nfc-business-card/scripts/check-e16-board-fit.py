@@ -36,6 +36,10 @@ PCB_Z0 = 0.7
 CEILING_Z = 4.0
 RIBS = [(34.5, 16.4, 47.0, 17.2), (42.6, 0.5, 43.4, 15.5), (1.0, 7.1, 33.0, 7.9)]
 BOARD = (0.0, 0.0, 84.0, 52.0)
+# The GDEH0154E01 tail leaves the module edge (x 39.32, z 3.05) and has to reach
+# J2's mouth at x 48.0 while dropping to the board side; everything under that
+# corridor must stay below the tail.
+FPC_CORRIDOR = (39.5, 25.0, 48.0, 40.0)
 
 
 def parse_args():
@@ -155,6 +159,22 @@ def main() -> int:
         })
         if len(seen) >= 8:
             break
+
+    fx0, fy0, fx1, fy1 = FPC_CORRIDOR
+    corridor = []
+    for solid in placed:
+        box = solid.BoundBox
+        if box.XMax < fx0 or box.XMin > fx1 or box.YMax < fy0 or box.YMin > fy1:
+            continue
+        corridor.append((round(box.ZMax, 3), [round(v, 2) for v in (box.XMin, box.YMin, box.ZMin, box.XMax, box.YMax, box.ZMax)]))
+    corridor.sort(reverse=True)
+    report["fpc_corridor"] = {
+        "box": list(FPC_CORRIDOR),
+        "highest_z_mm": corridor[0][0] if corridor else None,
+        "highest_bbox": corridor[0][1] if corridor else None,
+        "free_above_mm": round(CEILING_Z - corridor[0][0], 3) if corridor else None,
+        "solids": len(corridor),
+    }
 
     real = [c for c in report["shell_collisions"] if not c["slab"]]
     report["real_shell_collisions"] = len(real)

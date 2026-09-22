@@ -28,6 +28,19 @@ last_updated: 2026-09-22
 
 仍未验证：电芯最大外形/胶带/鼓胀/出线折弯、键帽与行程、屏幕贴合、台阶粘接方式、插头应力与壁厚公差，都需要实物样件。
 
+**E16 右侧中部 USB 样件 V3（当前）：** [nfc-card-e16-enclosure-v3.FCStd](nfc-card-e16-enclosure-v3.FCStd) 跟随板框改成 L 形后的版本——外壳外缘仍是 84 × 52 mm，但**左下角 33.5 × 15 mm 的电池挖空处没有板**，电芯直接坐在下壳底板上（不再压在 PCB 上），整机厚度从 5.0 降到 **4.5 mm**：
+
+| 层 | 厚度 |
+| --- | ---: |
+| 下壳底板 | 0.4 |
+| 板下间隙 | 0.3 |
+| PCB（连接器要求 0.8） | 0.8 |
+| 顶腔（屏幕区：最高元件 1.51 + 屏幕 0.85 + 余量） | 2.5 |
+| 上盖 | 0.5 |
+| **合计** | **4.5** |
+
+挖空处不保留台阶（电池袋里是空的），上下壳其他位置仍按 1.0 mm 内缩台阶贴合板边；屏窗、三键孔、USB 让位沿用 V2。配套 [STEP](nfc-card-e16-enclosure-v3.step)、[下壳 STL](nfc-card-e16-bottom-v3.stl)、[上壳 STL](nfc-card-e16-top-v3.stl)、[几何报告](nfc-card-e16-enclosure-v3-report.json)、渲染图 `artifacts/e16-cad-preview/e16-enclosure-v3-iso.png` 和脚本 [e16-enclosure-right-mid-usb-v3.py](e16-enclosure-right-mid-usb-v3.py)。几何检查：上下壳各一实体、无壳体相交、无参考件相交、连接器零接触。
+
 **视觉检查（2026-09-22）**：E16 样件已用纯 Python 从 STL 渲染出着色等轴测图（[nfc-card-e16-enclosure-v1-review.png](nfc-card-e16-enclosure-v1-review.png)，脚本 [render-stl-iso.py](../scripts/render-stl-iso.py)，不依赖 FreeCAD GUI）。图中确认：下壳是单一容腔实体、右端可见 USB 壁开口；上壳的屏窗、三个 Ø4 mm 键孔（一列）和 USB 壁开口位置与设计一致，没有多余缺口或悬空面。几何检查与视觉检查现已分别完成。
 
 **5 mm 叠层账（2026-09-22，按 E16 样件实测）**：GCT USB4500-03-0-A 要求 **0.80 mm** 板厚，PCB 不能减薄。整机 5.0 mm 减去 0.8 mm PCB，上下壳只剩 4.2 mm；壳壁 0.8+0.8 时留给元件的净高是 **2.6 mm**，而 301230 电池标称厚 **3.0 mm**，在顶盖上压出 54 mm³ 重叠。定量结论：**3 mm 电池 + 0.8 mm PCB + 可打印上下壳装不进 5.0 mm**。出路只有三条：(a) 换 ≤2.6 mm 薄电池；(b) 整机放宽到约 5.4 mm；(c) 电池区局部沉台/开窗。需要按实际到货电池的最大包络选定后 CAD 再定案。

@@ -155,6 +155,19 @@ bottom = add_feature(doc, "BottomShell", "下壳 · 电池挖空 + 右边缘 USB
 # --- top shell --------------------------------------------------------------
 top_shape = outline_prism(TOP_PLATE_Z0, PLATE_T)
 top_shape = top_shape.fuse(frame_prism(W, SPLIT_Z, CAV_T)).removeSplitter()
+
+# ribs so the 0.5 mm top plate never bridges an open span unsupported.
+# they run under the plate at z 3.6-4.0, above every part (tallest 3.01) and
+# clear of the panel (y >= 18.3), the FPC (x 47.5-55.5) and U1 (x 59.75-70.25).
+RIBS = [
+    (34.5, 16.4, 47.0, 17.2),   # band between the battery bite and the screen
+    (42.6, 0.5, 43.4, 15.5),    # strip east of the keys
+    (1.0, 7.1, 33.0, 7.9),      # across the battery pocket ceiling
+]
+for (x0, y0, x1, y1) in RIBS:
+    top_shape = top_shape.fuse(Part.makeBox(x1-x0, y1-y0, TOP_PLATE_Z0 - 3.6,
+                                            App.Vector(x0, y0, 3.6)))
+top_shape = top_shape.removeSplitter()
 # the connector shell clamps over the board flange, so the ledge stops beside it
 top_shape = top_shape.cut(Part.makeBox(8.5, USB_SLOT_Y[1] - USB_SLOT_Y[0] + 0.2, CAV_T + 0.4,
                                        App.Vector(76.0, USB_SLOT_Y[0] - 0.1, SPLIT_Z - 0.2))).removeSplitter()
@@ -227,6 +240,7 @@ report = {
     "usb": {"connector_body_x_mm": [USB_BODY_BACK_X, USB_FRONT_X], "y_mm": list(USB_SLOT_Y),
             "z_mm": [round(USB_BODY_Z[0], 3), round(USB_BODY_Z[1], 3)],
             "note": "connector sits in the board notch; the shells follow the notch so no wall slot is cut"},
+    "top_shell_ribs_mm": RIBS,
     "screen": {
         "module_mm": [SCREEN[2], SCREEN[3], SCREEN_T],
         "module_origin_mm": [SCREEN[0], SCREEN[1], SCREEN_Z0],

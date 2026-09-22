@@ -52,6 +52,26 @@
     ],
     "note": "connector sits in the board notch; the shells follow the notch so no wall slot is cut"
   },
+  "top_shell_ribs_mm": [
+    [
+      34.5,
+      16.4,
+      47.0,
+      17.2
+    ],
+    [
+      42.6,
+      0.5,
+      43.4,
+      15.5
+    ],
+    [
+      1.0,
+      7.1,
+      33.0,
+      7.9
+    ]
+  ],
   "screen": {
     "module_mm": [
       37.32,
@@ -86,7 +106,7 @@
     "invalid_shapes": [],
     "shell_solids": {
       "BottomShell": 1,
-      "TopShell": 1
+      "TopShell": 2
     },
     "shell_intersections": [],
     "shell_reference_intersections": [],

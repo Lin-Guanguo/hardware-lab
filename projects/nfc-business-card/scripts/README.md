@@ -15,6 +15,12 @@ python3 -c "import json,pathlib;d=json.load(open('/tmp/snap.json'))['result'];p=
 python3 projects/nfc-business-card/scripts/generate-e16-right-mid-svg.py
 ```
 
+铜箔连通性单独核查：[check-e16-copper-connectivity.py](check-e16-copper-connectivity.py) 按真实铜箔宽度判断"两块铜是否搭上"，检查每个网络的焊盘/过孔是否在同一铜簇、以及有没有悬空铜端。**E16 的原生 DRC 即使断网也报"连接 0"，所以动铜箔后必须跑这个脚本**（当前：48 个网络全部连通、死铜端 0）：
+
+```sh
+python3 projects/nfc-business-card/scripts/check-e16-copper-connectivity.py
+```
+
 原理图与 PCB 的一致性用逐引脚比对核实：[eda-export-pcb-pins.js](eda-export-pcb-pins.js) 导出 PCB 焊盘网络，[check-netlist-consistency.py](check-netlist-consistency.py) 与原理图导出的 netlist 做双向差集（当前 56 位号 / 234 引脚 / 0 处差异）：
 
 ```sh

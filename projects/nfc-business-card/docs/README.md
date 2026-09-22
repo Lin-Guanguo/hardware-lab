@@ -6,7 +6,7 @@
 
 交互以两键为基本能力：一级栏目轮换、二级选项轮换，二级选到即自动应用。硬件为**三颗按键**（SW1 (38.1, 3.30)、SW3 (38.1, 15.10) 一列 + 三角第三点 SW2 (46.3, 8.80)，外壳 V7 开三个键孔），第三颗接在原本空置的带上拉输入 `KEY_NEXT_N` 上，功能待定。完整规则见[架构](architecture.md)。
 
-当前设计入口为 [E16 右侧中部 USB 布局](../hardware/pcb-e16-usb-right-mid.md) 及 [最新 EDA](../../../eda/NFC-Business-Card-84x52-E14-Battery-Layout.eprj2) 内的 `Board1_2`：56 个元件、242 个焊盘、783 段铜线、162 个过孔、两层 GND 覆铜，原生 DRC 连接 0（只剩 24 项 `Board Outline to SMD Pad`，即 J1 焊盘离板边 0.2007 mm 的固有几何），逐引脚网表 234 项 0 差异。RF 性能、供电余量与实物装配仍未验证。
+当前设计入口为 [E16 右侧中部 USB 布局](../hardware/pcb-e16-usb-right-mid.md) 及 [最新 EDA](../../../eda/NFC-Business-Card-84x52-E14-Battery-Layout.eprj2) 内的 `Board1_2`：56 个元件、242 个焊盘、781 段铜线、162 个过孔、两层 GND 覆铜，原生 DRC 连接 0（只剩 24 项 `Board Outline to SMD Pad`，即 J1 焊盘离板边 0.2007 mm 的固有几何），逐引脚网表 234 项 0 差异。RF 性能、供电余量与实物装配仍未验证。
 
 当前外壳为 [E16 V7](../enclosure/nfc-card-e16-enclosure-v7.FCStd)（L 形板框、电池袋封闭、三个齐平键帽、三条加强筋、4.5 mm 叠层），对导出的真实元件 STEP 0 干涉；0.4/0.5 mm 薄壁与键帽行程仍需实物样件验证。历史 CAD 研究（[pcba-e14-battery-layout.FCStd](../enclosure/pcba-e14-battery-layout.FCStd) 等）保留作对照。屏幕规格差异、BUSY、刷新时间和峰值电流的依据与待测项见[接口评估](gdeh0154e01-evaluation.md#接口与参考电路复核2026-09-21)。
 

@@ -38,6 +38,9 @@ return {
     net: p.net,
     layer: p.layer,
     pad: p.pad,
+    // Pad extents are stored in the footprint's local frame, so consumers need
+    // the rotation to draw or measure the copper a pad actually covers.
+    rotation: p.rotation,
     hole: p.hole,
   })),
   polylines: polylines.map((p) => ({

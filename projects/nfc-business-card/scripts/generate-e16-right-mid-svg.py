@@ -169,6 +169,9 @@ for pad in cur["pads"]:
     shape = raw[0] if raw else "RECT"
     w = float(raw[1]) if len(raw) > 1 and isinstance(raw[1], (int, float)) else 6.0
     h = float(raw[2]) if len(raw) > 2 and isinstance(raw[2], (int, float)) else w
+    # Pad extents are stored in the footprint's local frame.
+    if abs(pad.get("rotation", 0)) % 180 == 90:
+        w, h = h, w
     x, y = dx(pad["x"] / MIL), dy(pad["y"] / MIL)
     pw, ph = w / MIL * SCALE, h / MIL * SCALE
     if shape == "ELLIPSE":

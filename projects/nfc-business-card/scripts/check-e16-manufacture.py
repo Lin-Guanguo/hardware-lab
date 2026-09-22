@@ -47,8 +47,11 @@ REQUIRED_LAYERS = {
 # Outline vertices the current board must have (x, y) in mm.
 OUTLINE_MUST_HAVE = [
     (33.5, 0.0), (33.5, 15.0), (0.0, 15.0), (0.0, 52.0), (84.0, 52.0),
-    (84.0, 20.62), (77.5, 20.62), (77.5, 11.38), (84.0, 11.38), (84.0, 0.0),
+    (84.0, 20.62), (76.704165, 20.62), (76.704165, 11.38), (84.0, 11.38), (84.0, 0.0),
 ]
+# The USB notch edge used to be drawn at x = 77.5 mm; the J1 footprint's board-edge
+# line (76.704165) supersedes it, so the old edge must not come back.
+OUTLINE_MUST_BE_ABSENT = [(77.5, 20.62), (77.5, 11.38)]
 
 
 def sha256(path: Path) -> str:
@@ -130,6 +133,12 @@ def main() -> int:
             ]
             if missing_vertices:
                 problem(f"outline is missing vertices {missing_vertices}")
+            stale_vertices = [
+                vertex for vertex in OUTLINE_MUST_BE_ABSENT
+                if any(abs(px - vertex[0]) < 0.01 and abs(py - vertex[1]) < 0.01 for px, py in points)
+            ]
+            if stale_vertices:
+                problem(f"outline still carries superseded vertices {stale_vertices}")
         via_drill = next((n for n in names if "Via" in n and n.endswith(".DRL")), None)
         if via_drill:
             hits = re.findall(r"^X[-\d.]+Y[-\d.]+", archive.read(via_drill).decode("utf-8", "ignore"), flags=re.M)

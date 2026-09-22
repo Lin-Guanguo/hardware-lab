@@ -90,7 +90,7 @@ E14 生产化门槛记录见 [pcb-e14-manufacturing-gates.json](../hardware/pcb-
   projects/nfc-business-card/scripts/check-e16-board-clearance.py
 ```
 
-当前**不通过**：J1 的模型与板子相交合计约 11 mm³，全部落在 x 76.70–77.50 这段 0.80 mm 条带里；封装自带的板边线在 76.704、原厂图纸推荐布局指向 76.504，而我们的缺口内缘画在 77.50。结论与待确认项见 [E16 记录的下标基准复核](../hardware/pcb-e16-usb-right-mid.md#j1-与板框基准复核2026-09-23待实物确认)。
+这个脚本在 2026-09-23 抓出了真问题：J1 模型与板子相交约 11 mm³，全部落在 x 76.70–77.50 这段 0.80 mm 条带里，而封装自带的板边线在 76.704——说明缺口内缘画浅了。改到 76.704 后当前**通过**（`real_intrusions: 0`）：报告里仍会列出四颗壳脚焊盘被封装画成穿板方块的碎片和 4 µm 贴面接触，两类都按 `surface_contact` / 面积体积阈值标成非真实。结论与复验见 [E16 记录的下标基准复核](../hardware/pcb-e16-usb-right-mid.md#j1-与板框基准复核2026-09-23已修正并复验)。
 
 插头侧复核：[check-e16-usb-plug.py](check-e16-usb-plug.py) 按 GCT mating view 的 8.34 × 2.56 mm 插头截面，在 V7 报告量到的 J1 包络上对中插到底，检查插头与注塑头是否撞壳：
 

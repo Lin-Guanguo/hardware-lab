@@ -11,6 +11,7 @@
 - 外壳剖视图：[nfc-card-e16-v5-stack-section.svg](../enclosure/nfc-card-e16-v5-stack-section.svg)（4.5 mm 叠层：电池袋 / 按键列 / 屏幕 FPC）
 - 外壳样件：[nfc-card-e16-enclosure-v5.FCStd](../enclosure/nfc-card-e16-enclosure-v5.FCStd) · [几何报告](../enclosure/nfc-card-e16-enclosure-v5-report.json) · [脚本](../enclosure/e16-enclosure-right-mid-usb-v5.py) · 预览图 `artifacts/e16-cad-preview/e16-enclosure-v5-{iso,top}.png`
 - 校验脚本：[plan-e16-right-mid.py](../scripts/plan-e16-right-mid.py)
+- 外壳与插头校验：[check-e16-board-fit.py](../scripts/check-e16-board-fit.py) · [check-e16-usb-plug.py](../scripts/check-e16-usb-plug.py)
 - 绘图脚本：[generate-e16-right-mid-svg.py](../scripts/generate-e16-right-mid-svg.py)
 - 快照导出：[eda-export-e16-snapshot.js](../scripts/eda-export-e16-snapshot.js) · 网表核对：[eda-export-pcb-pins.js](../scripts/eda-export-pcb-pins.js) + [check-netlist-consistency.py](../scripts/check-netlist-consistency.py)
 - 上游基线：[E15 清理版 PCB 开工记录](pcb-e15-clean-layout.md) · 早期试放：[e16-usb-right-mid-study.json](e16-usb-right-mid-study.json)
@@ -673,7 +674,16 @@ cp ~/Downloads/.cn.lceda.pro.XXXXXX /tmp/e16-board.step
 
 **嘉立创工艺核对**（[能力表](https://jlcpcb.com/capabilities/pcb-capabilities) 2026-09-23 查）：Outline → Routed 支持锣边与锣槽，铜到锣边/槽边 **≥0.2 mm**，普通公差 **±0.2 mm**；非金属化内槽最小宽度 **1.0 mm**，槽轮廓画在机械层 GM1/GKO。L 形外形和 33.5 × 15 的缺口都远在能力范围内。
 
-**插头侧复核**：GCT 图纸的 mating view 给出插头横截面 **8.34 / 2.56 mm**（USB-C 标准插头 8.25 × 2.4 的同类数值），对 9.24 mm 的缺口单边留 **0.45 mm**；插头本体高度 2.56 mm 远低于缺口高度，插入路径没有遮挡。需要留意的是**线缆注塑头**（各家宽度不一）：宽度超过 9.24 mm 的头会顶到上盖边缘，样件阶段用实际线缆试插一次。
+**插头侧复核（2026-09-23，[check-e16-usb-plug.py](../scripts/check-e16-usb-plug.py)）**：GCT 图纸的 mating view 给出插头横截面 **8.34 / 2.56 mm**（USB-C 标准插头 8.25 × 2.4 的同类数值）。把插头实体按 V7 报告量到的 J1 包络（x 76.7–83.2、y 10.22–21.77、z 0.7–3.87）在 y、z 两个方向对中后插到底，结果如下。
+
+| 检查 | 结果 |
+| --- | --- |
+| 金属壳 vs 上壳 / 下壳 | **0 / 0 mm³**，插入路径无遮挡（缺口 9.24 mm 对插头 8.34 mm，单边 0.45 mm） |
+| 能插到接插面的最大注塑头宽度 | **9.20 mm**（= 缺口 9.24 减去内侧台阶与圆角 0.04），6 mm 高时验证 |
+| 宽 10.5 × 6 mm 注塑头推到接插面 | 会顶到上壳 / 下壳（0.30 / 0.71 mm³），即**过宽的头插不到底** |
+| 宽 11 mm 注塑头停在卡边 x=84 | 与壳体 **0 干涉**，代价是插入量少 **0.8 mm** |
+
+结论：接插面在卡边内侧 0.8 mm（原厂封装推荐布局与板框的差值），因此**注塑头 ≤9.2 mm 可插到底；更宽的头会停在卡边、少插 0.8 mm**。J1 本体长 6.5 mm，少 0.8 mm 后仍有约 5.7 mm 插合量，是否影响可靠识别需在样件阶段用实际线缆试插一次确认。
 
 **缺口宽度的上限来自按键**：三键焊盘最左缘在 x=34.1，所以缺口右边界最多到约 33.8（留 0.3 mm 铜边距）。把三键右移理论上能再放宽约 2–3 mm，但那一带已有三键、SWDIO/SWDCLK、NRESET、VBUS 竖段和 C8 共约 8 条走线，属于连锁改动；**按键数量（2 个还是 3 个）本身不影响这个上限**，因为三个开关用的是同一列 x 坐标。当前 1.5–1.75 mm 的余量已能吸收 PCB ±0.2 mm 的外形公差与电芯自身公差，故先不动。
 

@@ -44,8 +44,11 @@ python3 projects/nfc-business-card/scripts/render-stl-iso.py
 NFC 线圈估算：`estimate-nfc-coil.py` 按改良 Wheeler 公式给出螺旋电感、直流电阻、13.56 MHz 谐振电容与 Q，用来判断某块面积能不能做到 1–2 µH：
 
 ```sh
-python3 projects/nfc-business-card/scripts/estimate-nfc-coil.py --outer 17,21 --turns 4 5 6 8 --width 0.25
+# 外圈尺寸按实测可用区填（E16 现在是 10.4 x 21.3 mm，不是早先估的 17 x 21）
+python3 projects/nfc-business-card/scripts/estimate-nfc-coil.py --outer 10.7,21.5 --turns 4 5 6 7 8 --width 0.25
 ```
+
+E16 的实际可用区（扣掉 5 mm 金属净空与 0.5 mm 边缘余量）是 **x 60.60–71.00、y 27.60–48.90**：6 圈 / 0.25 mm 线宽得 **1.12 µH、Q 139、谐振电容 123 pF**，匹配电容起点 100 pF + 15 pF；完整几何与离线校验见 [E16 记录](../hardware/pcb-e16-usb-right-mid.md#线圈候选设计已算好并离线校验等实验拍板)。
 
 空铜区查询：`report-free-space.py` 把快照按 0.1 mm 网格栅格化，给指定区域/层打印占用图并列出最大空矩形（带设计规则余量）。放电池引线走廊、NFC 落点、临时测试点之前先用它量一遍，别凭眼看：
 
@@ -59,6 +62,13 @@ python3 projects/nfc-business-card/scripts/report-free-space.py --region 54,2,72
 ```sh
 node projects/nfc-business-card/scripts/eda-exec-wait.mjs projects/nfc-business-card/scripts/eda-export-e16-manufacture.js 120000
 python3 projects/nfc-business-card/scripts/check-e16-manufacture.py
+```
+
+打印件（STL）的网格体检：[check-e16-print-meshes.py](check-e16-print-meshes.py) 直接打开三个 V7 STL，报告是否封闭实体、自相交、非流形边、退化面/重复点，并核对 84 × 52 外框与 4.5 mm 顶面。几何报告查的是 FreeCAD 实体，切片软件只看 STL，所以两个检查都要跑：
+
+```sh
+/Applications/FreeCAD.app/Contents/Resources/bin/freecadcmd \
+  projects/nfc-business-card/scripts/check-e16-print-meshes.py
 ```
 
 外壳与**真实元件模型**的干涉检查（不只简化参考盒）：先用 [eda-export-e16-3d.js](eda-export-e16-3d.js) 从 E16 图页导出带元件模型的 STEP，等 `~/Downloads/.cn.lceda.pro.*` 的字节数稳定后复制到 `/tmp/e16-board.step`，再用 [check-e16-board-fit.py](check-e16-board-fit.py) 在 FreeCAD 里把板抬到 z=0.7 与 V7 上下壳求交：

@@ -4,7 +4,7 @@
  "checked_on": "2026-09-23",
  "source": {
   "eda_project": "../../../eda/NFC-Business-Card-84x52-E14-Battery-Layout.eprj2",
-  "eda_project_sha256": "2e8f0e342e48cd80f1a12cc2d7b86f9ca1679065e54be811302b79770a434deb",
+  "eda_project_sha256": "d47063db4409fe5fe7a23057a5752f9f5bc52e857887b86c4bc851e04fd1a53b",
   "eda_snapshot": "pcb-e14-battery-layout.json",
   "cad_snapshot": "../enclosure/pcba-e14-battery-layout-report.json"
  },
@@ -26,7 +26,7 @@
   "drc_board_edge_results": 24,
   "smd_to_smd_overlaps": 0,
   "sqlite_quick_check": "ok",
-  "note": "live values for Board1_2 / E16 after the 2026-09-23 documentation tidy and the NFC feed landing: 244 pads (two 1.5 x 1.5 mm square landing pads on the bottom layer join NFC1_TBD / NFC2_TBD), 800 copper segments and 168 vias (19 feed segments and 6 vias added). Both GND pours were rebuilt after the feed and report success (118 / 22 fill blocks). The native DRC and the Gerber re-export could not be read back at that moment: the client timed out on pcb_Drc.check() and on the manufacture export (>30 s) while light API calls stayed fast, and the Mac was locked with a modal dialog likely open - this is the one open verification item. All 24 DRC leaves before the feed were 'Board Outline to SMD Pad' at 7.9 mil = 0.2007 mm.",
+  "note": "live values for Board1_2 / E16 after the 2026-09-23 documentation tidy and the NFC feed landing: 244 pads (two 1.5 x 1.5 mm square landing pads on the bottom layer join NFC1_TBD / NFC2_TBD), 800 copper segments and 168 vias (19 feed segments and 6 vias added). Both GND pours were rebuilt after the feed and report success (118 / 22 fill blocks). The native DRC and the Gerber re-export could not be read back at that moment: the client timed out on pcb_Drc.check() and on the manufacture export (>30 s) while light API calls stayed fast, and the Mac was locked with a modal dialog likely open - this is the one open verification item. All 24 DRC leaves before the feed were 'Board Outline to SMD Pad' at 7.9 mil = 0.2007 mm. The project file was re-saved while probing the pour behaviour (test pads created and deleted, pours rebuilt); the live snapshot still matches the committed one field by field, so only the project hash and the shelved pours moved.",
   "pad_count": 244
  },
  "gates": [

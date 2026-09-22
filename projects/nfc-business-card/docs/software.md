@@ -44,6 +44,16 @@ curl --fail --silent http://127.0.0.1:49620/eda-windows
 
 已验证：`npm ci`、`node --check scripts/bridge-server.mjs`、`npm ls --omit=dev --depth=0` 通过；真实编辑器连接后 `/health` 返回 `edaConnected: true`。本轮桥接由手动后台进程运行，日志与 PID 留在被忽略的 `projects/nfc-business-card/logs/`；没有配置登录启动。后续终端启动的桥接可用 Ctrl-C 停止。
 
+### 桥接稳定性（2026-09-22 诊断）
+
+现场日志确认三件事：**bridge 现在没问题**（launchd 托管、单实例、只监听 127.0.0.1:49620，连续运行 30 分钟无重启）；**问题在扩展侧的连接行为**——30 分钟内 116 次连接 / 114 次注册 / 114 次断开，约每 16 秒重连一次，断开码 112 次是 1005；**每次重连都注册一个新的 windowId**，而服务端既不主动心跳也不清理死连接，于是出现"注册 2 个窗口但只开着 1 个 EasyEDA"的僵尸注册。当活动窗口指向刚断开的 socket 时，请求要么返回 `No EDA window connected`，要么（半死连接）30 秒超时。
+
+按性价比的处理顺序：
+
+1. 调用侧加固（已落地）：执行前先 `GET /eda-windows` 并 `POST /eda-windows/select` 选一个真实在线窗口，失败重选重试一次。仅此一项不足以解决半死连接的超时。
+2. 服务端心跳与清理（待做）：每 ~15 秒向所有 EDA 连接 ping，超时未 pong 就关闭并摘除注册。注意 `bridge-server.mjs` 位于 `.agents/skills/easyeda-api/`（符号链接到 `upstreams/easyeda-api-skill` 子模块），按仓库约定**不改上游**，要在仓库内放一份打了补丁的本地副本或包装脚本来跑。
+3. 客户端收敛（需用户操作）：只保留一个编辑器窗口/标签页。若同时开着两个图页标签，扩展很可能各注册一次连接，这正是 `count: 2` 的来源，也会让活动窗口频繁切换。
+
 ### 客户端与启动命令
 
 封装只读核对可使用 `sys_FileManager.getFootprintFileByFootprintUuid(uuid, libraryUuid, 'elibz2')` 导出库文件，解包后读取 `.elibu` 源数据；本机已验证 FPC-05FB-24PH20。系统库 `lib_Footprint.openInEditor()` 返回空值时可用此路径，无需为读焊盘反复新建测试工程。库导出不等于封装已通过制造审核；单位按 PCB 的 mil 换算，接口签名仍以当前 Skill 为准。

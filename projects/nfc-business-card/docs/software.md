@@ -54,6 +54,16 @@ curl --fail --silent http://127.0.0.1:49620/eda-windows
 2. 服务端心跳与清理（待做）：每 ~15 秒向所有 EDA 连接 ping，超时未 pong 就关闭并摘除注册。注意 `bridge-server.mjs` 位于 `.agents/skills/easyeda-api/`（符号链接到 `upstreams/easyeda-api-skill` 子模块），按仓库约定**不改上游**，要在仓库内放一份打了补丁的本地副本或包装脚本来跑。
 3. 客户端收敛（需用户操作）：只保留一个编辑器窗口/标签页。若同时开着两个图页标签，扩展很可能各注册一次连接，这正是 `count: 2` 的来源，也会让活动窗口频繁切换。
 
+### 通道恢复 runbook
+
+现象与判据（按顺序核对，避免把调用侧误判成扩展故障）：
+
+1. `curl -s http://127.0.0.1:49620/health`：桥接是否在跑（`service: easyeda-bridge`）、`edaConnected` 是否为 true。桥接由 launchd 托管：`launchctl list | grep easyeda-bridge`；重启用 `launchctl remove easyeda-bridge` 再 `launchctl submit -l easyeda-bridge -o /tmp/easyeda-bridge.out -e /tmp/easyeda-bridge.err -- /bin/zsh -lc "cd <skill dir> && exec node scripts/bridge-server.mjs"`。
+2. `curl -s http://127.0.0.1:49620/eda-windows`：窗口列表。**health 为 true 但列表为空**说明扩展刚断、注册已过期——这是最常见的假在线状态。
+3. `node projects/nfc-business-card/scripts/eda-exec-wait.mjs <code.js> 90000`：等待式执行器会轮询到有真实窗口再发请求；如果它报 `no live window`，就是扩展侧没在连，不用再试调用姿势。
+4. 扩展侧恢复：EasyEDA 里 **高级 → 扩展管理器 → Run API Gateway 先禁用再启用**（只重启应用有时不够），并确认"允许外部交互"仍是勾选状态；同时**只保留一个编辑器窗口/标签页**，两个图页标签会各注册一次连接。
+5. 探针命令：`node scripts/eda-exec-wait.mjs /tmp/eda-ping.js 60000`，其中 ping 脚本内容为 `return { ok: true };`。拿到 `"ok":true` 才算通道可用。
+
 ### 客户端与启动命令
 
 封装只读核对可使用 `sys_FileManager.getFootprintFileByFootprintUuid(uuid, libraryUuid, 'elibz2')` 导出库文件，解包后读取 `.elibu` 源数据；本机已验证 FPC-05FB-24PH20。系统库 `lib_Footprint.openInEditor()` 返回空值时可用此路径，无需为读焊盘反复新建测试工程。库导出不等于封装已通过制造审核；单位按 PCB 的 mil 换算，接口签名仍以当前 Skill 为准。

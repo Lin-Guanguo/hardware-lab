@@ -125,7 +125,7 @@
     "note": "设计工作已从 E14/E15 图页迁移到 E16 Right-Mid USB Study；下面的 E14 门槛与快照继续描述旧图页，仅作对照。",
     "eda_page": "E16 Right-Mid USB Study",
     "eda_page_uuid": "2fe84861daa4cba5",
-    "readiness_table": "../hardware/pcb-e16-usb-right-mid.md#制造放行门槛核对20260922e16-图页",
+    "readiness_table": "pcb-e16-usb-right-mid.md",
     "status_by_gate": {
       "battery-delivery-envelope": "BLOCKED_INPUT",
       "board-outline-and-usb-opening": "CLOSED",

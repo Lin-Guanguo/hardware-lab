@@ -8,13 +8,13 @@ status: pcb_routed_drc_clean_cad_sample_v2
 
 ## 当前确定方案
 
-更新于 **2026-09-23**。当前开工入口是 E14 工程内的 **E16 Right-Mid USB Study** 图页（独立 PCB 文档；E15 Clean Layout - New Battery 保留作底边 USB 回退）：沿 **84 × 52 mm（含外壳边缘）的定制 PCB/PCBA** 继续，屏幕位于左上，长条电池先按名义 **30 × 12 × 3 mm** 包体放在左下，NFC 净空移到右上，USB/充电/主控集中到右侧，USB 右侧中部作为首选研究方向，底边中部保留作回退。优先薄度和装配余量，≤5 mm 是目标，尚未实物验证；电池保护板、出线、胶带和鼓胀余量仍待确认。按键已按"两键"收敛：删掉中间那颗（三颗中心距只有 5.9 mm、本体只剩 0.7 mm 缝），保留上下两颗、中心距 11.8 mm；交互仍按"键一换一级栏目、键二换二级选项"。
+更新于 **2026-09-23**。当前开工入口是 E14 工程内的 **`Board1_2` / E16 Right-Mid USB Study**（已与 `Schematic1` 关联；`Board1_1` 的 E15 Clean Layout 与 `Board1` 的 E6 保留作回退）：沿 **84 × 52 mm（含外壳边缘）的定制 PCB/PCBA** 继续，屏幕位于左上，长条电池先按名义 **30 × 12 × 3 mm** 包体放在左下，NFC 净空移到右上，USB/充电/主控集中到右侧，USB 右侧中部作为首选研究方向，底边中部保留作回退。优先薄度和装配余量，≤5 mm 是目标，尚未实物验证；电池保护板、出线、胶带和鼓胀余量仍待确认。按键已按"两键"收敛：删掉中间那颗（三颗中心距只有 5.9 mm、本体只剩 0.7 mm 缝），保留上下两颗、中心距 11.8 mm；交互仍按"键一换一级栏目、键二换二级选项"。
 
 - 按键交互：键 1 轮换一级栏目，键 2 轮换当前栏目的二级选项，选到即自动应用，不设必需的确认键。硬件已收敛为**两键**（原第三键取消，主控上保留一个带上拉的备用输入）；外壳 V5 配两个齐平键帽，行程 0.25 mm。详细规则见[交互架构](docs/architecture.md)。
 - 功能路线：nRF52840 内置 NFCT，按键切换名片；USB-C 用于编程和供电/充电，不要求断电仍可读取 NFC。
 - 取样选择：GDEH0154E01 六色屏、DESPI-E01 桌面转接板和 301230 类电池尺寸目标；付款、到货及实测尚未确认。302030 / 150 mAh 仅保留为历史取样对照，DESPI-E01 不装入最终成品。
 - 最新 CAD 研究：[pcba-e14-battery-layout.FCStd](enclosure/pcba-e14-battery-layout.FCStd)、[E14 新电池尺寸布局记录](hardware/pcb-e14-battery-layout.md)和[按 EDA 实际坐标重绘的平面图](enclosure/pcba-e14-battery-layout.svg)。这是空间验证包络，不是可打印外壳；旧的意图示意另存为 `pcba-e14-battery-layout-intended.svg`，旧版 `pcba-e6-84x52-detail.FCStd` 保留作历史对照。
-- 当前 EDA：[NFC-Business-Card-84x52-E14-Battery-Layout.eprj2](../../eda/NFC-Business-Card-84x52-E14-Battery-Layout.eprj2) 内的 **E16 Right-Mid USB Study** 图页（独立 PCB 文档，尚未并入 `Board1_1`）：**55 个元件、238 个焊盘、778 段铜线、162 个过孔、两层 GND 覆铜**；L 形板框（84 × 52，左下 33.5 × 15 mm 电池挖空 + 右边缘 USB 缺口）。原生 DRC 保存/关闭/重开后 **普通间距 0、连接 0**，只剩 12 项 J1 沉板槽边告警（0.20 mm，板厂下限允许）。原理图与 PCB **逐引脚 230 项、0 处网名差异**。[E15 底边 USB 版](hardware/pcb-e15-clean-layout.md)与 `Board1/E6` 保留作回退。
+- 当前 EDA：[NFC-Business-Card-84x52-E14-Battery-Layout.eprj2](../../eda/NFC-Business-Card-84x52-E14-Battery-Layout.eprj2) 内的 **`Board1_2` / E16 Right-Mid USB Study**（2026-09-23 用 `dmt_Board.createBoard` 与 `Schematic1` 关联）：**55 个元件、238 个焊盘、778 段铜线、162 个过孔、两层 GND 覆铜**；L 形板框（84 × 52，左下 33.5 × 15 mm 电池挖空 + 右边缘 USB 缺口）。原生 DRC 保存/关闭/重开后 **普通间距 0、连接 0**，只剩 12 项 J1 沉板槽边告警（0.20 mm，板厂下限允许）。原理图与 PCB **逐引脚 230 项、0 处网名差异**。[E15 底边 USB 版](hardware/pcb-e15-clean-layout.md)与 `Board1/E6` 保留作回退。
 - USB 位置试探：[E8 USB 左移评审](hardware/pcb-e8-usb-left.md)。E8 证明现有板框缺口不允许只把 J1 横向移动；换边需要连板框和外壳一起重做，因此当前不替换 E7 的 USB 位置。
 - 右侧中部方案：[E16 右侧中部 USB 布局](hardware/pcb-e16-usb-right-mid.md)。E16 图页已落盘并通过多次关闭重开验证：右边缘中部 9.24 × 6.5 mm 缺口、J1 插口朝右、U1 转 180° 天线朝下板边、屏窗上移 1.30 mm、**两键中心距 11.80 mm（本体间隙 6.60 mm）**；USB 小元件群集中到 J1 左侧。
 - **USB 接口已全部布通（2026-09-22）：**图页规则切到 `JLCPCB Capability(Multiple Layers Board)`（过孔 ≥0.3 / 孔径 ≥0.2 mm）。用 0.3/0.2 mm 小孔完成 J1 数据扇出（DM 错列到 ESD 焊盘行之间、DP 在焊盘行上、CC2 换到底层腾出顶层通道），随后依次布通 **DP/DM 完整通路**（连接器 → U5 ESD → 串阻 R3/R4 → 主控 U1）和 **USB_VBUS**（换层孔全部在连接器本体之外，底层主横线走 y=8.2，C8/C1 与主控 VBUS 脚各自用焊盘内过孔汇入）。
@@ -25,7 +25,7 @@ status: pcb_routed_drc_clean_cad_sample_v2
 - 机械边界：外壳当前版本是 [V5](enclosure/nfc-card-e16-enclosure-v5.FCStd)（L 形板框、电池袋封闭、两个齐平键帽、三条加强筋），与导出的真实元件 STEP 做过干涉检查：壳体/加强筋/键帽 **0 干涉**，最高件 J1 顶面到上盖内表面余量 0.13 mm。屏窗按 GDEH0154E01 图纸压在有效区上，屏幕背面 1.5 mm 泡棉顶到凸台；装配顺序见[外壳说明](enclosure/README.md)。E14 V1/V2 样件保留作历史对照。
 - 烧录与总装：优先委托工厂首烧，后续 USB-C 升级，SWD 焊盘保留；设计基本定稿后、下单前确认工厂支持与费用。到手接屏、接电池与装壳的目标和待确认项见[烧录与装配交接](docs/usb-and-prototyping.md#工厂烧录与装配交接)。
 - 保存与同步已复核：17 条过期说明已删除或替换，保存重开未恢复；27 个 SCH/PCB 关联 ID 已对齐，原生网表告警消失。最新副本 112 项关联/封装检查通过；原版保留，本轮在副本调整 11 个小器件。
-- 下一步（2026-09-23 更新，全部需要实物或拍板）：① 电芯实物最大包络与出线方向（决定 33.5 × 15 电池袋、引线走廊与按键列是否右移）；② PN532 桌面实验结论决定 NFC 天线形式，再按[馈线预研](hardware/pcb-e16-usb-right-mid.md#nfc-馈线预研2026-09-23)补两条约 19 mm 的馈线、落点与匹配网络；③ 在客户端把 E16 并入 `Board1_1/Schematic1`（API 只能新建 PCB）；④ 打印 V5 四件验键帽行程/屏幕贴合/薄壁公差，并确认树脂工艺能否接受 0.4–0.5 mm 打印板。制造包已能一键导出并自动核对（`check-e16-manufacture.py`），但按门槛要求仍未放行下单。
+- 下一步（2026-09-23 更新，全部需要实物或拍板）：① 电芯实物最大包络与出线方向（决定 33.5 × 15 电池袋、引线走廊与按键列是否右移）；② PN532 桌面实验结论决定 NFC 天线形式，再按[馈线预研](hardware/pcb-e16-usb-right-mid.md#nfc-馈线预研2026-09-23)补两条约 19 mm 的馈线、落点与匹配网络；③ ~~E16 转正~~ 已完成（`Board1_2` 关联 `Schematic1`）；④ 打印 V5 四件验键帽行程/屏幕贴合/薄壁公差，并确认树脂工艺能否接受 0.4–0.5 mm 打印板。制造包已能一键导出并自动核对（`check-e16-manufacture.py`），但按门槛要求仍未放行下单。
 
 目录入口：[硬件](hardware/README.md) · [外壳与模型](enclosure/README.md) · [设计资料](docs/README.md) · [脚本](scripts/README.md)。83 × 51、旧 84 × 52 和其他版本保留比较；“最新”以上述文件为准。
 

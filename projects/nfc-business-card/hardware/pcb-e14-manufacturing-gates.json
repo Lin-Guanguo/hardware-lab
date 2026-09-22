@@ -4,7 +4,7 @@
  "checked_on": "2026-09-23",
  "source": {
   "eda_project": "../../../eda/NFC-Business-Card-84x52-E14-Battery-Layout.eprj2",
-  "eda_project_sha256": "2cce9c560c7ef62f8253f727ee4204249bd841a8f7755274265a675b19e1a4fb",
+  "eda_project_sha256": "73e8d2b6eb18908015919da1a5f1eed1b0d6fba6cb44bf796fe44a41d43c29d9",
   "eda_snapshot": "pcb-e14-battery-layout.json",
   "cad_snapshot": "../enclosure/pcba-e14-battery-layout-report.json"
  },
@@ -153,7 +153,8 @@
    "battery_interface": "free pads BP (BAT_PACK_TBD, d1.5, 49.5/23.55), BN (GND, d1.5, 47.7/23.70) and NTC (BAT_NTC_TBD, d1.2, 45.60/23.70); recommended lead corridor x 35.6-45.8, y 6.1-11.1 measured free of tracks; BQ25186 TS can be disabled via TS_EN (datasheet 6.3.15.1) if the cell has no thermistor, otherwise solder the NTC leads to the NTC/BN pads",
    "manufacture_check": "check-e16-manufacture.py on the 2026-09-23 export: 16 gerber members with all required layers, outline parsed vertex-by-vertex (bbox 0/0/84/52 plus the 10 L-shape and USB-notch vertices), 162 via drill hits matching the snapshot, BOM 25 rows / 55 designators, CPL 55 designators with 0.0005 mm worst placement delta, assembly PDF 792 kB; sha256 recorded in artifacts/e16-manufacture/manifest.json",
    "enclosure_printability": "JLC 3DP 8001 resin page (2026-09-23): recommended wall > 0.8 mm, tolerance +/-0.2 mm or 0.3%, min part 5x5x5 mm. V5 uses 0.4 mm bottom plate, 0.5 mm top plate and a 0.5 mm key-cap disc, all below the recommendation; meeting 0.8 mm walls would grow the stack from 4.5 to 5.2 mm, so the sample needs a thinner-capable process or the hybrid thin-sheet cover route. Key-cap radial fit is 0.2 mm, the same order as the printing tolerance.",
-   "nfc_feed": "NFC1_TBD/NFC2_TBD have 0 copper segments on the board; U1 pin 52/54 sit at (61.25, 4.05)/(61.25, 3.25) as 0.6 x 0.4 mm top pads. Measured with scripts/report-free-space.py: landing-pad candidate area is the free copper patch south of the keep-out on the bottom layer (x 61.8-71.9, y 21.7-25.9, 42.4 mm2, pads must stay below y=24), feed corridors x 58.4-61.1/y 16.8-18.1 and x 58.8-60.5/y 23.8-25.9, about 19 mm per feed. Pad size/pitch and the matching network depend on the antenna form, which awaits the PN532 bench test."
+   "nfc_feed": "NFC1_TBD/NFC2_TBD have 0 copper segments on the board; U1 pin 52/54 sit at (61.25, 4.05)/(61.25, 3.25) as 0.6 x 0.4 mm top pads. Measured with scripts/report-free-space.py: landing-pad candidate area is the free copper patch south of the keep-out on the bottom layer (x 61.8-71.9, y 21.7-25.9, 42.4 mm2, pads must stay below y=24), feed corridors x 58.4-61.1/y 16.8-18.1 and x 58.8-60.5/y 23.8-25.9, about 19 mm per feed. Pad size/pitch and the matching network depend on the antenna form, which awaits the PN532 bench test.",
+   "board_link": "E16 is Board1_2, created with dmt_Board.createBoard('9ae79bee58c7d4fd','2fe84861daa4cba5') on 2026-09-23 and linked to Schematic1 (4 pages); Board1 still holds the E6 PCB and Board1_1 the E15 sheet as fallbacks. Element counts unchanged after linking (55 components / 238 pads / 778 segments / 162 vias); project backed up as .before-board-link-20260923.eprj2"
   },
   "enclosure_candidate": "../enclosure/nfc-card-e16-enclosure-v5.FCStd",
   "enclosure_status": "E16_ENCLOSURE_V5_SAMPLE_NOT_PRODUCTION_RELEASE"

@@ -15,6 +15,16 @@ last_updated: 2026-09-22
 
 **E16 右侧中部 USB 样件 V1：** [nfc-card-e16-enclosure-v1.FCStd](nfc-card-e16-enclosure-v1.FCStd) 按 E16 落盘坐标生成：右壁 USB 开口（y 10.38–21.62、贯穿壁厚，另加下壳底面让位槽）、屏窗上移到 y 17.5、三键孔改为等距 y 3.30/9.20/15.10。配套 [STEP](nfc-card-e16-enclosure-v1.step)、[下壳 STL](nfc-card-e16-bottom-v1.stl)、[上壳 STL](nfc-card-e16-top-v1.stl)和[几何报告](nfc-card-e16-enclosure-v1-report.json)，脚本 [e16-enclosure-right-mid-usb.py](e16-enclosure-right-mid-usb.py)。几何检查：上下壳各为单一实体、无壳体相交、**连接器本体与两壳接触体积均为 0**。报告同时记录两条待解约束：3 mm 电池与 5 mm 高度的顶盖重叠 54 mm³（高度预算不足），以及 84 × 52 板框与 81.6 × 49.6 内腔的尺寸基准矛盾。
 
+**E16 右侧中部 USB 样件 V2（当前）：** [nfc-card-e16-enclosure-v2.FCStd](nfc-card-e16-enclosure-v2.FCStd) 解决 V1 报告里的两条待解约束：
+
+- **尺寸基准确定**：不再用"外壳外缘 84 × 52 + 内腔 81.6 × 49.6"的托盘结构（PCB 84 × 52 放不进 81.6 × 49.6 的内腔）。改成**叠层式**——PCB 板框就是整机外缘，两块壳各带 **1.0 mm 内缩台阶**贴在 PCB 正反面，PCB 侧边外露。这样整机外缘 = 板框 = 84 × 52 mm，不再有内外矛盾。
+- **连接器前缘按原厂图纸修正**：V1 假设连接器本体伸到 x = 88.45 mm（板外 4.45 mm），实测 GCT 图纸（[usb4500-drawing.pdf](../downloads/usb4500-drawing.pdf) 的推荐布局与 Section A-A）只外伸 **约 1.2–1.3 mm**，取 **x = 85.3 mm**。整机长度 85.3 mm，落在名片标准 85.6 mm 之内。连接器坐在板框缺口里，两块壳都按缺口裁剪，因此**不需要在外壳壁上开 USB 槽**。
+- **5.0 mm 高度预算成立**：把 301230 电芯放在 PCB 顶面（板子左下 x 3–33、y 1.5–13.5 无元件、只有三键的两条走线穿过），叠层为 0.4 底盖 + 0.3 板下间隙 + 0.8 PCB + 3.0 顶腔 + 0.5 顶盖 = **5.0 mm**。代价是两块盖板只有 0.4 / 0.5 mm 厚，厚一点或电芯大一点就会超过 5 mm。
+
+配套 [STEP](nfc-card-e16-enclosure-v2.step)、[下壳 STL](nfc-card-e16-bottom-v2.stl)、[上壳 STL](nfc-card-e16-top-v2.stl)、[几何报告](nfc-card-e16-enclosure-v2-report.json)、渲染审查图 `artifacts/e16-cad-preview/e16-enclosure-v2-iso.png` 和脚本 [e16-enclosure-right-mid-usb-v2.py](e16-enclosure-right-mid-usb-v2.py)。几何检查：上下壳各为单一实体、无壳体相交、无参考件相交、**连接器与两壳接触体积 0**。为避让 U1 天线端和第一颗按键，上壳台阶在对应位置开了局部缺口。
+
+仍未验证：电芯最大外形/胶带/鼓胀/出线折弯、键帽与行程、屏幕贴合、台阶粘接方式、插头应力与壁厚公差，都需要实物样件。
+
 **视觉检查（2026-09-22）**：E16 样件已用纯 Python 从 STL 渲染出着色等轴测图（[nfc-card-e16-enclosure-v1-review.png](nfc-card-e16-enclosure-v1-review.png)，脚本 [render-stl-iso.py](../scripts/render-stl-iso.py)，不依赖 FreeCAD GUI）。图中确认：下壳是单一容腔实体、右端可见 USB 壁开口；上壳的屏窗、三个 Ø4 mm 键孔（一列）和 USB 壁开口位置与设计一致，没有多余缺口或悬空面。几何检查与视觉检查现已分别完成。
 
 **5 mm 叠层账（2026-09-22，按 E16 样件实测）**：GCT USB4500-03-0-A 要求 **0.80 mm** 板厚，PCB 不能减薄。整机 5.0 mm 减去 0.8 mm PCB，上下壳只剩 4.2 mm；壳壁 0.8+0.8 时留给元件的净高是 **2.6 mm**，而 301230 电池标称厚 **3.0 mm**，在顶盖上压出 54 mm³ 重叠。定量结论：**3 mm 电池 + 0.8 mm PCB + 可打印上下壳装不进 5.0 mm**。出路只有三条：(a) 换 ≤2.6 mm 薄电池；(b) 整机放宽到约 5.4 mm；(c) 电池区局部沉台/开窗。需要按实际到货电池的最大包络选定后 CAD 再定案。

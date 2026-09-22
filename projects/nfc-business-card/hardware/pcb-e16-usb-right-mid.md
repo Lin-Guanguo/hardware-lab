@@ -464,6 +464,29 @@ U1 是 MDBT50Q 模块，它自带的 PCB 天线必须朝板边、周围不能有
 
 为避开键帽的按压行程，**加强筋 #1 的西端从 x=34.5 收到 x=41.0**（y 16.4–17.2 不变），与键帽外缘留 0.8 mm；数据与检查见下节。
 
+### 制造包自动核对（2026-09-23）
+
+之前的制造数据核对是人工数文件。现在有 `eda-export-e16-manufacture.js`（一次导出 Gerber/BOM/CPL/装配 PDF）和 `check-e16-manufacture.py`（自动比对当前快照并写 `manifest.json`）：
+
+```sh
+node projects/nfc-business-card/scripts/eda-exec-wait.mjs projects/nfc-business-card/scripts/eda-export-e16-manufacture.js 120000
+# 把 ~/Downloads 里最新的 4 个隐藏临时文件按扩展名拷成 NFC-E16-{gerber.zip,bom.xlsx,cpl.xlsx,board-pdf.pdf}
+python3 projects/nfc-business-card/scripts/check-e16-manufacture.py
+```
+
+本轮结果（脚本 `ok=true`、`problems` 为空）：
+
+| 检查 | 结果 |
+| --- | --- |
+| Gerber 包 | 16 个文件，GTL/GBL/GTS/GBS/GTO/GKO/GTP/DRL 齐全 |
+| 板框 GKO | 逐点解析后 bbox = 0/0/84/52 mm，且 **10 个 L 形 + USB 缺口顶点全部命中**（33.5/0、33.5/15、0/15、0/52、84/52、84/20.62、77.5/20.62、77.5/11.38、84/11.38、84/0） |
+| 过孔钻孔文件 | **162 孔**，与快照的 162 个过孔一致（另加 J1 四个锚脚，PTH 文件 166 孔） |
+| BOM | 25 行、**55 个位号**，与快照位号集合完全一致 |
+| 贴装坐标 | **55 个位号**，与快照逐件比对最大偏差 **0.0005 mm**（J1） |
+| 装配 PDF | 792 KB，未截断 |
+| 文件哈希（SHA-256） | Gerber `79838a16…`、BOM `fd689c3c…`、CPL `5b8976df…`、PDF `73b168a1…`（完整值见 `artifacts/e16-manufacture/manifest.json`） |
+
+```
 ### 电池接口与 NTC（2026-09-23 核对）
 
 板上已经有三个独立焊盘作为电池落点（自由焊盘，不属于任何元件封装）：

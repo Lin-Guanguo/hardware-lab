@@ -29,6 +29,13 @@ python3 projects/nfc-business-card/scripts/check-netlist-consistency.py --sch /t
 python3 projects/nfc-business-card/scripts/render-stl-iso.py
 ```
 
+制造包核对：`eda-export-e16-manufacture.js` 一次导出 Gerber/BOM/CPL/装配 PDF，`check-e16-manufacture.py` 把结果与当前快照逐点比对（板框顶点、钻孔孔数、位号集合、贴装坐标偏差）并写 `artifacts/e16-manufacture/manifest.json`：
+
+```sh
+node projects/nfc-business-card/scripts/eda-exec-wait.mjs projects/nfc-business-card/scripts/eda-export-e16-manufacture.js 120000
+python3 projects/nfc-business-card/scripts/check-e16-manufacture.py
+```
+
 外壳与**真实元件模型**的干涉检查（不只简化参考盒）：先用 [eda-export-e16-3d.js](eda-export-e16-3d.js) 从 E16 图页导出带元件模型的 STEP，等 `~/Downloads/.cn.lceda.pro.*` 的字节数稳定后复制到 `/tmp/e16-board.step`，再用 [check-e16-board-fit.py](check-e16-board-fit.py) 在 FreeCAD 里把板抬到 z=0.7 与 V4 上下壳求交：
 
 ```sh

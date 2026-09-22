@@ -18,7 +18,7 @@ last_updated: 2026-09-22
 **E16 右侧中部 USB 样件 V2（当前）：** [nfc-card-e16-enclosure-v2.FCStd](nfc-card-e16-enclosure-v2.FCStd) 解决 V1 报告里的两条待解约束：
 
 - **尺寸基准确定**：不再用"外壳外缘 84 × 52 + 内腔 81.6 × 49.6"的托盘结构（PCB 84 × 52 放不进 81.6 × 49.6 的内腔）。改成**叠层式**——PCB 板框就是整机外缘，两块壳各带 **1.0 mm 内缩台阶**贴在 PCB 正反面，PCB 侧边外露。这样整机外缘 = 板框 = 84 × 52 mm，不再有内外矛盾。
-- **连接器前缘按原厂图纸修正**：V1 假设连接器本体伸到 x = 88.45 mm（板外 4.45 mm），实测 GCT 图纸（[usb4500-drawing.pdf](../downloads/usb4500-drawing.pdf) 的推荐布局与 Section A-A）只外伸 **约 1.2–1.3 mm**，取 **x = 85.3 mm**。整机长度 85.3 mm，落在名片标准 85.6 mm 之内。连接器坐在板框缺口里，两块壳都按缺口裁剪，因此**不需要在外壳壁上开 USB 槽**。
+- **连接器包络改成实测**：V1 假设本体伸到 x = 88.45 mm（板外 4.45 mm）。用 `pcb_ManufactureData.get3DFile()` 从已保存的板导出 STEP 装配体后直接量到 **x 76.7 → 83.2 mm（本体长 6.5 mm，与 GCT 目录一致）、y 10.22 → 21.77 mm、z 高出板面 0–3.17 mm**，也就是说**接插面在板边内侧 0.8 mm，根本不外伸**，整机长度就是 **84 mm**。连接器坐在板框缺口里，两块壳按缺口裁剪，因此**不需要在外壳壁上开 USB 槽**。（导出方法：`get3DFile('name','step',['Component Model'],'Outfit',true)` 后 `sys_FileSystem.saveFile()`；文件会以隐藏临时名落在 `~/Downloads`。）
 - **5.0 mm 高度预算成立**：把 301230 电芯放在 PCB 顶面（板子左下 x 3–33、y 1.5–13.5 无元件、只有三键的两条走线穿过），叠层为 0.4 底盖 + 0.3 板下间隙 + 0.8 PCB + 3.0 顶腔 + 0.5 顶盖 = **5.0 mm**。代价是两块盖板只有 0.4 / 0.5 mm 厚，厚一点或电芯大一点就会超过 5 mm。
 
 配套 [STEP](nfc-card-e16-enclosure-v2.step)、[下壳 STL](nfc-card-e16-bottom-v2.stl)、[上壳 STL](nfc-card-e16-top-v2.stl)、[几何报告](nfc-card-e16-enclosure-v2-report.json)、渲染审查图 `artifacts/e16-cad-preview/e16-enclosure-v2-iso.png` 和脚本 [e16-enclosure-right-mid-usb-v2.py](e16-enclosure-right-mid-usb-v2.py)。几何检查：上下壳各为单一实体、无壳体相交、无参考件相交、**连接器与两壳接触体积 0**。为避让 U1 天线端和第一颗按键，上壳台阶在对应位置开了局部缺口。

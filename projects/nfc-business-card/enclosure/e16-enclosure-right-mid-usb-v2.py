@@ -2,10 +2,11 @@
 
 V2 fixes two problems recorded in the V1 report:
 
-* the connector body reaches x = 85.3 mm, not 88.45 mm.  The GCT drawing
-  (downloads/usb4500-drawing.pdf, recommended PCB layout and Section A-A)
-  puts the shell front about 1.2-1.3 mm past the PCB edge, so the card's
-  overall length is about 85.3 mm, inside the 85.6 mm business-card length.
+* the connector body reaches only x = 83.2 mm, not 88.45 mm and not the
+  85.3 mm a first reading of the drawing suggested.  The exporter's STEP
+  model of J1 measures 76.7 -> 83.2 mm in x (6.5 mm body length, matching
+  the GCT catalogue) and 10.22 -> 21.77 mm in y, so the mating face sits
+  0.8 mm *inside* the board edge and the card stays 84 mm long.
 * the size basis is resolved as a laminate shell: the PCB keeps its 84 x 52
   outline and is the card body, and both shells sit inside that outline with
   a 1.0 mm inboard ledge, so the card's outer size equals the PCB outline.
@@ -49,10 +50,10 @@ ROUND = 2.0
 
 BOARD_OUTLINE = [(0, 0), (0, 52), (84, 52), (84, 20.62), (77.5, 20.62),
                  (77.5, 11.38), (84, 11.38), (84, 0)]
-USB_SLOT_Y = (10.38, 21.62)
-USB_FRONT_X = 85.3                # connector body front, from the GCT drawing
-USB_BODY_BACK_X = 76.42
-USB_BODY_Z = (PCB_Z0 - 1.55, PCB_Z0 + 1.61)   # 3.16 mm tall, mid-mount offset
+USB_SLOT_Y = (10.22, 21.77)       # connector body width, measured from the exported STEP
+USB_FRONT_X = 83.2                # body front: 0.8 mm inside the board edge (STEP measurement)
+USB_BODY_BACK_X = 76.7            # body back edge (6.5 mm body length, matches the GCT catalogue)
+USB_BODY_Z = (PCB_Z0, PCB_Z0 + 3.17)
 BATTERY = (3.0, 1.5, 30.0, 12.0, 3.0)
 
 
@@ -101,8 +102,8 @@ for name, value in (("CardWidth", W), ("CardHeight", H), ("OuterHeight", OUTER_H
 params.addProperty("App::PropertyString", "Status", "Evidence")
 params.Status = "E16_ENCLOSURE_V2_SAMPLE_NOT_PRODUCTION_RELEASE"
 params.addProperty("App::PropertyString", "Source", "Evidence")
-params.Source = ("e16-right-mid-snapshot.json; GCT USB4500 drawing "
-                 "(downloads/usb4500-drawing.pdf); battery target 30 x 12 x 3 mm")
+params.Source = ("e16-right-mid-snapshot.json; J1 envelope measured from the "
+                 "pcb_ManufactureData.get3DFile STEP export; battery target 30 x 12 x 3 mm")
 
 # --- references -------------------------------------------------------------
 references = {
@@ -220,7 +221,7 @@ report = {
         "Coordination sample only; not a production enclosure.",
         "Battery is placed on the PCB top face as a 30 x 12 x 3 mm nominal target; supplier maximum, adhesive, swelling and lead bend are unverified.",
         "The 5.0 mm stack needs 0.4/0.5 mm printed plates; a thicker plate or a bigger cell pushes the card past 5.0 mm.",
-        "Connector front at x = 85.3 mm comes from the GCT drawing (approximately 1.2-1.3 mm past the PCB edge); confirm with the part in hand.",
+        "Connector envelope (x 76.7-83.2, y 10.22-21.77, z 0-3.17 over the board) is measured from the STEP export of the saved board, so the mating face sits 0.8 mm inside the board edge; confirm against the part in hand.",
         "Key caps, screen bonding, USB plug strain relief, ledge bonding and wall tolerances need physical samples.",
     ],
 }

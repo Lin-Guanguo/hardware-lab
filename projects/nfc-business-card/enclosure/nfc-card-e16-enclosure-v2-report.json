@@ -15,9 +15,9 @@
       84.0,
       52.0
     ],
-    "connector_front_x_mm": 85.3,
-    "connector_overhang_past_card_mm": 1.3,
-    "overall_length_with_connector_mm": 85.3,
+    "connector_front_x_mm": 83.2,
+    "connector_overhang_past_card_mm": -0.8,
+    "overall_length_with_connector_mm": 83.2,
     "business_card_reference_mm": [
       85.6,
       54.0
@@ -33,16 +33,16 @@
   },
   "usb": {
     "connector_body_x_mm": [
-      76.42,
-      85.3
+      76.7,
+      83.2
     ],
     "y_mm": [
-      10.38,
-      21.62
+      10.22,
+      21.77
     ],
     "z_mm": [
-      -0.85,
-      2.31
+      0.7,
+      3.87
     ],
     "note": "connector sits in the board notch; the shells follow the notch so no wall slot is cut"
   },
@@ -76,7 +76,7 @@
     "Coordination sample only; not a production enclosure.",
     "Battery is placed on the PCB top face as a 30 x 12 x 3 mm nominal target; supplier maximum, adhesive, swelling and lead bend are unverified.",
     "The 5.0 mm stack needs 0.4/0.5 mm printed plates; a thicker plate or a bigger cell pushes the card past 5.0 mm.",
-    "Connector front at x = 85.3 mm comes from the GCT drawing (approximately 1.2-1.3 mm past the PCB edge); confirm with the part in hand.",
+    "Connector envelope (x 76.7-83.2, y 10.22-21.77, z 0-3.17 over the board) is measured from the STEP export of the saved board, so the mating face sits 0.8 mm inside the board edge; confirm against the part in hand.",
     "Key caps, screen bonding, USB plug strain relief, ledge bonding and wall tolerances need physical samples."
   ]
 }

@@ -115,6 +115,16 @@ Raytac MDBT50Q Rev L（[本地 PDF](../downloads/raytac_mdbt50q_rev_l.pdf) 第 8
 - 结果：`USB_DP_CONN / USB_DM_CONN / USB_DP_MCU / USB_DM_MCU` **全部连通**，连接错误 200 → 184；普通间距错误仍是 1 项（既有 BAT_PACK 测试点冲突），无新增。当前板上有 39 段线、13 个 0.3/0.2 mm 过孔。
 - 仍待处理：`USB_CC2` 还有 2 项连接错误（R2/U6 侧的接触需要再核一次），以及 `USB_VBUS` 的 6 项（VBUS 与地回流尚未布线）。
 
+## 铺铜 API 未通过（2026-09-22）
+
+下一步计划是铺地一次性解决 GND 的 54 项未连接，但 `EDA.pcb_PrimitivePour.create()` 三次都被拒（返回"无法创建覆铜边框图元，可能是传入的参数不正确"）：
+
+1. `create("GND", 1, createPolygon(板框), undefined, false, "GND_TOP", 1, 6, false)` —— 完整 84×52 带缺口板框；
+2. `create("GND", 1, createPolygon(内缩矩形), 0, false, "GND_TOP", 1, 6, false)` 以及最简 `create("GND", 1, polygon)`；
+3. `create("GND", 1, createComplexPolygon(内缩矩形), 0, ...)`。
+
+说明这个 beta 接口在本机 3.2.203 上不是文档里的入参形态（也可能需要网络对象/不同坐标基准）。**三次尝试都没有改动工程**——DRC 仍是 1（既有）+ 12 + 176，GND 54 项未连接不变。下一轮先查 `references/classes/PCB_PrimitivePour.md` 的参数细节或改用客户端 GUI 铺铜（GUI 里设置一次即可，随后仍可用 API 复核 DRC）。
+
 ## USB 接口全部布通（2026-09-22）
 
 用连通分量脚本定位到 VBUS 最后一处断点：B4A9 那支的底层竖线停在 **(75.6, 8.2)**，而主横线只到 **(75.1, 8.2)**——差 0.5 mm 没接上。补一段 0.5 mm 的连线后：

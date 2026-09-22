@@ -120,5 +120,27 @@
     "cpl": false,
     "production_step": false,
     "printable_stl": false
+  },
+  "current_design": {
+    "note": "设计工作已从 E14/E15 图页迁移到 E16 Right-Mid USB Study；下面的 E14 门槛与快照继续描述旧图页，仅作对照。",
+    "eda_page": "E16 Right-Mid USB Study",
+    "eda_page_uuid": "2fe84861daa4cba5",
+    "readiness_table": "../hardware/pcb-e16-usb-right-mid.md#制造放行门槛核对20260922e16-图页",
+    "status_by_gate": {
+      "battery-delivery-envelope": "BLOCKED_INPUT",
+      "board-outline-and-usb-opening": "CLOSED",
+      "netlist-and-power-routing": "DONE",
+      "nfc-rf-and-metal-clearance": "AREA_VERIFIED_ANTENNA_DEFERRED",
+      "cad-printable-enclosure": "SAMPLE_DONE_PHYSICAL_VERIFICATION_PENDING",
+      "vendor-manufacturing-package": "NOT_RELEASED"
+    },
+    "evidence": {
+      "drc": "native DRC after save/close/reopen: clearance 0, connection 0, 12 same-footprint J1 slot warnings",
+      "copper": "755 segments, 160 vias, 2 GND pours",
+      "schematic": "4 pages, 56 designators, matches the PCB 56 designators exactly; 0 schematic DRC items",
+      "exports": "Gerber zip (16 files) + 2 drill files + BOM (26 rows / 56 parts) + pick-and-place (56 designators) verified in artifacts/e16-manufacture/",
+      "board_thickness_mm": 0.8,
+      "nfc_area": "x 60-82, y 24-50 measured copper-free on both layers; usable coil area about 17 x 21 mm after the USB shield keep-away"
+    }
   }
 }

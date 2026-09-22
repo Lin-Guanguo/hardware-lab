@@ -1,0 +1,49 @@
+{
+  "date": "2026-09-22",
+  "purpose": "Evaluate moving the USB group to the right-middle edge without changing the production E15 layout",
+  "source": {
+    "pcb_uuid": "4991220fd7f692a5",
+    "name": "E15 Clean Layout - New Battery",
+    "board": "Board1_1",
+    "schematic": "Schematic1"
+  },
+  "candidate": {
+    "pcb_uuid": "2fe84861daa4cba5",
+    "name": "E16 Right-Mid USB Study",
+    "associated_board": null,
+    "components": 56,
+    "pads": 242,
+    "lines": 0,
+    "vias": 0,
+    "positions_raw": {
+      "J1": {"x": 3092, "y": 700, "rotation": 270},
+      "R1": {"x": 3057, "y": 800, "rotation": 0},
+      "R2": {"x": 2877, "y": 800, "rotation": 0},
+      "U5": {"x": 2857, "y": 600, "rotation": 180},
+      "U6": {"x": 2907, "y": 550, "rotation": 270},
+      "U1": {"x": 3000, "y": 500, "rotation": 0}
+    }
+  },
+  "constraints": {
+    "board_size_mm": [84, 52],
+    "nfc_prohibited_region_mm": {"x": [60, 82], "y": [24, 50]},
+    "usb_center_mm": [78.5368, 17.78]
+  },
+  "drc": {
+    "clearance": 30,
+    "same_footprint_clearance": 12,
+    "connection": 200,
+    "total": 242,
+    "key_findings": [
+      "J1 overlaps the NFC prohibited region",
+      "USB and U1 pads overlap or violate spacing",
+      "USB/U1 pads are too close to the right board edge"
+    ]
+  },
+  "verification": {
+    "saved": true,
+    "close_reopen": true,
+    "original_e15_restored": true,
+    "note": "This is a layout study only. Keep E15 as the production routing baseline until a full right-side mechanical and RF re-layout is reviewed."
+  }
+}

@@ -437,6 +437,7 @@ U1 是 MDBT50Q 模块，它自带的 PCB 天线必须朝板边、周围不能有
 - 外壳重新生成，只开 y=3.30 / 15.10 两个孔；当时落盘的 V3 后来发现电池袋上下都没有板（见「电池挖空与 L 形板框」的 V4 修正），现以 V4 为准。
 - DRC：保存、关闭、重开后仍是既有的 12 项 J1 槽边告警，普通间距 0、连接 0。
 - 网表核对（2026-09-23）：原理图导出的 netlist 与 PCB 逐引脚对照，**55 位号 / 230 引脚 / 0 处网名差异**，双向差集为空（`eda-export-pcb-pins.js` + `check-netlist-consistency.py`）。
+- 原理图 DRC 复验（2026-09-23）：`sch_Drc.check(true, false, true)` 逐页跑四页（01 USB and Power / 02 MCU and Controls / 03 GDEH0154E01 / 04 USB ESD and assembly），四页返回的都是 1 个空分组、**0 项问题**。
 
 两颗键当前的电气落点：SW1 → U1 pin 3（P1.10）`KEY_PREV_N`，SW3 → U1 pin 5（P1.12）`KEY_OK_N`，中间那颗原有的 U1 pin 4（P1.11）`KEY_NEXT_N` 保留为带上拉的备用输入，暂无开关。按键功能是固件层定义，硬件上三根引脚都具备上拉 + 开关（或空闲）状态，若要改成“上一项/下一项”只需改固件语义，不必改板。
 

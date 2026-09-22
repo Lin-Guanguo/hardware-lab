@@ -137,7 +137,7 @@
   "evidence": {
    "drc": "native DRC after save/close/reopen (2026-09-23): clearance 0, connection 0, 12 same-footprint J1 slot-edge warnings",
    "copper": "778 segments, 162 vias, 2 GND pours (live snapshot 2026-09-23)",
-   "schematic": "4 pages, 55 designators; pin-level diff against the PCB pin map: 55 refs / 230 pins / 0 net mismatches (eda-export-pcb-pins.js + check-netlist-consistency.py); 0 schematic DRC items",
+   "schematic": "4 pages, 55 designators; pin-level diff against the PCB pin map: 55 refs / 230 pins / 0 net mismatches (eda-export-pcb-pins.js + check-netlist-consistency.py); sch_Drc.check over all four pages returns 0 items",
    "exports": "Gerber zip (16 files) + 2 drill files + BOM (26 rows / 55 parts) + pick-and-place (55 designators) re-exported after the two-key change into artifacts/e16-manufacture/",
    "board_thickness_mm": 0.8,
    "nfc_area": "x 60-82, y 24-50 measured copper-free on both layers; usable coil area about 17 x 21 mm after the USB shield keep-away; U1 antenna keep-out added as region d49ece88915402a1 (x 59.7-70.3, y 0.2-2.5, no fills/no pours) with both GND pours rebuilt - sampled 0/1681 points with copper on each layer",

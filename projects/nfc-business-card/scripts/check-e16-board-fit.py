@@ -7,7 +7,7 @@ Run with FreeCAD's command line tool:
         projects/nfc-business-card/scripts/check-e16-board-fit.py
 
 Inputs:
-  * enclosure model: enclosure/nfc-card-e16-enclosure-v5.FCStd (override with
+  * enclosure model: enclosure/nfc-card-e16-enclosure-v7.FCStd (override with
     --enclosure=...)
   * board + component STEP exported from EasyEDA
     (pcb_ManufactureData.get3DFile('name', 'step', ['Component Model'], 'Outfit', true)
@@ -30,7 +30,7 @@ import Import
 import Part
 
 REPO = Path(__file__).resolve().parents[3]
-DEFAULT_ENCLOSURE = REPO / "projects/nfc-business-card/enclosure/nfc-card-e16-enclosure-v5.FCStd"
+DEFAULT_ENCLOSURE = REPO / "projects/nfc-business-card/enclosure/nfc-card-e16-enclosure-v7.FCStd"
 DEFAULT_STEP = Path("/tmp/e16-board.step")
 PCB_Z0 = 0.7
 CEILING_Z = 4.0

@@ -4,7 +4,7 @@
  "checked_on": "2026-09-23",
  "source": {
   "eda_project": "../../../eda/NFC-Business-Card-84x52-E14-Battery-Layout.eprj2",
-  "eda_project_sha256": "73e8d2b6eb18908015919da1a5f1eed1b0d6fba6cb44bf796fe44a41d43c29d9",
+  "eda_project_sha256": "eaecf229865f7436561a63130025b3a8f84111b8ac3beb80e2e1517b6b16afe6",
   "eda_snapshot": "pcb-e14-battery-layout.json",
   "cad_snapshot": "../enclosure/pcba-e14-battery-layout-report.json"
  },
@@ -136,15 +136,15 @@
   },
   "evidence": {
    "drc": "native DRC after save/close/reopen (2026-09-23): clearance 0, connection 0, 12 same-footprint J1 slot-edge warnings",
-   "copper": "778 segments, 162 vias, 2 GND pours (live snapshot 2026-09-23)",
-   "schematic": "4 pages, 55 designators; pin-level diff against the PCB pin map: 55 refs / 230 pins / 0 net mismatches (eda-export-pcb-pins.js + check-netlist-consistency.py); sch_Drc.check over all four pages returns 0 items",
+   "copper": "780 segments, 162 vias, 2 GND pours (live board after the third key, 2026-09-23)",
+   "schematic": "4 pages, 56 designators; pin-level diff against the PCB pin map: 56 refs / 234 pins / 0 net mismatches; sch_Drc.check over all four pages returns 0 items",
    "exports": "Gerber zip (16 files) + 2 drill files + BOM (26 rows / 55 parts) + pick-and-place (55 designators) re-exported after the two-key change into artifacts/e16-manufacture/",
    "board_thickness_mm": 0.8,
    "nfc_area": "x 60-82, y 24-50 measured copper-free on both layers; usable coil area about 17 x 21 mm after the USB shield keep-away; U1 antenna keep-out added as region d49ece88915402a1 (x 59.7-70.3, y 0.2-2.5, no fills/no pours) with both GND pours rebuilt - sampled 0/1681 points with copper on each layer",
    "board_outline": "L-shape: 84 x 52 with the right-edge USB notch and a 33.5 x 15 mm battery bite at the lower-left (drawn on layer 11)",
    "thickness_target_mm": 4.5,
-   "keys": "two switches (SW1 y=3.30 -> U1 pin 3 KEY_PREV_N, SW3 y=15.10 -> U1 pin 5 KEY_OK_N, 11.8 mm pitch, 6.6 mm body gap); SW2 removed from PCB and schematic, U1 pin 4 KEY_NEXT_N stays as a pulled-up spare input; key column envelopes and the stale SW2 keep-out polyline cleaned up on layer 9; mapping frozen: SW1 (y=3.30) -> U1 pin 3 P1.10 = key 1 (top-level category), SW3 (y=15.10) -> U1 pin 5 P1.12 = key 2 (second-level option), U1 pin 4 P1.11 stays a pulled-up spare",
-   "component_count": 55,
+   "keys": "three switches: SW1 (38.1,3.30) and SW3 (38.1,15.10) unchanged, SW2 added at (46.3,8.80) (uniqueId gge28) = KEY_NEXT_N on pads 1/2 and GND on 3/4; schematic page 02 edited through sys_FileManager.setDocumentSource (the create/placeComponentWithMouse APIs time out in 3.2.203) then saved, four-page DRC 0; board updated via pcb_Document.importChanges (asynchronous) + modify + two 0.2 mm KEY_NEXT_N traces; DRC after the change: clearance 0, connection 0, no physical errors, 12 known J1 slot warnings",
+   "component_count": 56,
    "ecad_scripts": "eda-export-e16-snapshot.js (review snapshot), eda-export-pcb-pins.js + check-netlist-consistency.py (netlist diff), generate-e16-right-mid-svg.py (review drawing)",
    "enclosure": "V5 sample: single solid per shell, no shell/reference intersections, USB connector contact 0 mm3, battery pocket closed with a 201 mm3 floor and 251.25 mm3 ceiling, plus two flush key caps (4.2 mm puck in the 4.6 mm hole, 1.45 mm tall) that clear the shells, each other and the real component models at rest and at the 0.25 mm SKQGABE010 travel; rib 1 trimmed to x>=41.0 mm to clear them",
    "dfm": "project DRC ruleset is the built-in 'JLCPCB Capability(Multiple Layers Board)' 1 oz preset (track-track 0.102, pad/via-track 0.152, copper-to-outline 0.300, hole-to-hole 0.176 mm); native DRC under it reports 0 clearance violations plus the 12 known J1 slot-edge items (0.20 mm vs the 0.30 mm preset, allowed by JLCPCB's published 0.2 mm copper-to-routed-edge limit). Vendor page checked 2026-09-23: min track/space 0.10 mm (1-2 layer), min via hole/diameter 0.15/0.25 mm, via hole-to-track 0.20 mm, via hole-to-hole 0.20 mm, NPTH slot >=1.0 mm, thickness >=0.6 mm. Cost note: 121 vias at 0.30/0.198 mm fall in JLCPCB's paid '0.2 mm hole with diameter <0.45 mm' class; the other 41 are standard 0.61/0.305 mm.",
@@ -161,7 +161,7 @@
    "supply_value_review": "component values checked against vendor references (2026-09-23): U1 VDD/VDDH has C5 2.2uF + C6 10uF + C7 100nF versus the 10 uF in the Raytac MDBT50Q Rev L reference circuit 8.1; no external 32.768 kHz crystal (internal RC, as the same note allows); DCCH left open for LDO mode so the 10 uH Reg0 inductor is not needed; VBUS carries C1 2.2uF + C8 4.7uF = 6.9 uF nominal, below the USB 2.0 10 uF inrush ceiling and close to the reference value; BQ25186 IN/SYS/BAT = 4.7/10/2.2 uF versus the 1/10/1 uF in its typical application (page 42); TPS7A02 CIN/COUT = 2.2/2.2 uF within 1 uF / 1-22 uF; USB-C CC pull-downs 5.1k +/-1% versus the spec's 5.1k +/-5%; DP/DM series 27 ohm inside the usual 0-33 ohm range; I2C pull-ups 10k within the datasheet's 1-20k",
    "three_key_plan": "3-key triangle evaluated against the live snapshot (2026-09-23): keys at (38.1,3.20) (38.1,9.50) (46.3,6.35); only the new key's lower-left pad conflicts with the existing KEY_PREV_N diagonal (-0.127 mm, needs ~0.3 mm reroute); SW3's new pads are clear; the two pad columns sit 0.200 mm apart at x=46.3 (passes the 0.152 mm rule, suggests x=46.55 for 0.45 mm); SW2 lands on the existing KEY_NEXT_N stubs on schematic page 02. Blocked on one GUI action: sch_PrimitiveComponent.create and placeComponentWithMouse both time out after 30 s in client 3.2.203. Enclosure V6 (3 holes + 3 caps, geometry valid) is prepared but the board still matches V5 until the schematic symbol exists."
   },
-  "enclosure_candidate": "../enclosure/nfc-card-e16-enclosure-v5.FCStd",
-  "enclosure_status": "E16_ENCLOSURE_V5_SAMPLE_NOT_PRODUCTION_RELEASE"
+  "enclosure_candidate": "../enclosure/nfc-card-e16-enclosure-v7.FCStd",
+  "enclosure_status": "E16_ENCLOSURE_V7_SAMPLE_NOT_PRODUCTION_RELEASE"
  }
 }

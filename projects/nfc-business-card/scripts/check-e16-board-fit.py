@@ -7,7 +7,8 @@ Run with FreeCAD's command line tool:
         projects/nfc-business-card/scripts/check-e16-board-fit.py
 
 Inputs:
-  * enclosure model: enclosure/nfc-card-e16-enclosure-v4.FCStd
+  * enclosure model: enclosure/nfc-card-e16-enclosure-v5.FCStd (override with
+    --enclosure=...)
   * board + component STEP exported from EasyEDA
     (pcb_ManufactureData.get3DFile('name', 'step', ['Component Model'], 'Outfit', true)
      then sys_FileSystem.saveFile(); the file lands in ~/Downloads under a
@@ -29,7 +30,7 @@ import Import
 import Part
 
 REPO = Path(__file__).resolve().parents[3]
-DEFAULT_ENCLOSURE = REPO / "projects/nfc-business-card/enclosure/nfc-card-e16-enclosure-v4.FCStd"
+DEFAULT_ENCLOSURE = REPO / "projects/nfc-business-card/enclosure/nfc-card-e16-enclosure-v5.FCStd"
 DEFAULT_STEP = Path("/tmp/e16-board.step")
 PCB_Z0 = 0.7
 CEILING_Z = 4.0
@@ -56,6 +57,7 @@ def main() -> int:
 
     doc = App.openDocument(str(args["enclosure"]))
     shells = {name: doc.getObject(name).Shape for name in ("BottomShell", "TopShell")}
+    caps = {name: doc.getObject(name).Shape for name in ("KeyCap1", "KeyCap2") if doc.getObject(name)}
 
     imported = App.newDocument("BoardFitCheck")
     Import.insert(str(args["step"]), imported.Name)
@@ -96,6 +98,7 @@ def main() -> int:
         "ceiling_z_mm": CEILING_Z,
         "shell_collisions": [],
         "rib_collisions": [],
+        "cap_collisions": [],
         "highest_parts": [],
     }
 
@@ -126,6 +129,18 @@ def main() -> int:
                     "bbox": [round(v, 2) for v in (bb.XMin, bb.YMin, bb.ZMin, bb.XMax, bb.YMax, bb.ZMax)],
                 })
 
+    for cap_name, cap in caps.items():
+        for solid in placed:
+            volume = intersect(cap, solid)
+            if volume <= 0.001:
+                continue
+            box = solid.BoundBox
+            report["cap_collisions"].append({
+                "cap": cap_name,
+                "volume_mm3": round(volume, 4),
+                "bbox": [round(v, 2) for v in (box.XMin, box.YMin, box.ZMin, box.XMax, box.YMax, box.ZMax)],
+            })
+
     seen = set()
     for solid in sorted(placed, key=lambda s: -s.BoundBox.ZMax):
         box = solid.BoundBox
@@ -143,7 +158,7 @@ def main() -> int:
 
     real = [c for c in report["shell_collisions"] if not c["slab"]]
     report["real_shell_collisions"] = len(real)
-    report["ok"] = not real and not report["rib_collisions"]
+    report["ok"] = not real and not report["rib_collisions"] and not report["cap_collisions"]
     # freecadcmd drops unflushed stdout when the script exits.
     print(json.dumps(report, ensure_ascii=False, indent=1), flush=True)
     return 0 if report["ok"] else 1

@@ -37,7 +37,7 @@ cp ~/Downloads/.cn.lceda.pro.XXXXXX /tmp/e16-board.step
 /Applications/FreeCAD.app/Contents/Resources/bin/freecadcmd projects/nfc-business-card/scripts/check-e16-board-fit.py
 ```
 
-脚本会过滤导出文件里堆在原点、没有放置的库模型，输出壳体干涉、三条加强筋带（z 3.6–4.0）干涉和最高元件到上盖内表面的余量；有真实干涉时退出码为 1。当前结果：462 个放置实体、0 干涉、最高件 J1 余量 0.13 mm。
+脚本会过滤导出文件里堆在原点、没有放置的库模型，输出壳体干涉、三条加强筋带（z 3.6–4.0）干涉、两个键帽与实物元件的干涉，以及最高元件到上盖内表面的余量；有真实干涉时退出码为 1。默认读 V5 模型，可用 `--enclosure=...` 换版本。当前结果：462 个放置实体、壳体/加强筋/键帽 0 干涉、最高件 J1 余量 0.13 mm。
 
 [pcb-maze-router.py](pcb-maze-router.py) 是补线阶段用的离线两层迷宫布线器。输入一份几何快照（`pcb_PrimitiveLine` / `pcb_PrimitiveVia` / `pcb_PrimitivePad` 的坐标，单位 mil）和任务表（`[网络, 起点, [目标...]]`，单位 mm），按实际设计规则做障碍扩张后用矢量桶队列 Dijkstra 求路径，输出线段与过孔清单；`--rip` 可先剔除挡路的既有线段，`--pen` 控制拥塞代价让多条线并行挤同一走廊，`--width` 调整线宽。它只写 JSON，改工程由单独的 EasyEDA 脚本完成：
 

@@ -8,7 +8,7 @@
 - 方案数据：[e16-right-mid-plan.json](e16-right-mid-plan.json)
 - 审查图：[pcba-e16-right-mid.svg](../enclosure/pcba-e16-right-mid.svg)（L 形板框、两键、禁布区与显示包络）
 - E16 实时快照：[e16-right-mid-snapshot.json](e16-right-mid-snapshot.json)
-- 外壳样件：[nfc-card-e16-enclosure-v4.FCStd](../enclosure/nfc-card-e16-enclosure-v4.FCStd) · [几何报告](../enclosure/nfc-card-e16-enclosure-v4-report.json) · [脚本](../enclosure/e16-enclosure-right-mid-usb-v4.py) · 预览图 `artifacts/e16-cad-preview/e16-enclosure-v4-{iso,top}.png`
+- 外壳样件：[nfc-card-e16-enclosure-v5.FCStd](../enclosure/nfc-card-e16-enclosure-v5.FCStd) · [几何报告](../enclosure/nfc-card-e16-enclosure-v5-report.json) · [脚本](../enclosure/e16-enclosure-right-mid-usb-v5.py) · 预览图 `artifacts/e16-cad-preview/e16-enclosure-v5-{iso,top}.png`
 - 校验脚本：[plan-e16-right-mid.py](../scripts/plan-e16-right-mid.py)
 - 绘图脚本：[generate-e16-right-mid-svg.py](../scripts/generate-e16-right-mid-svg.py)
 - 快照导出：[eda-export-e16-snapshot.js](../scripts/eda-export-e16-snapshot.js) · 网表核对：[eda-export-pcb-pins.js](../scripts/eda-export-pcb-pins.js) + [check-netlist-consistency.py](../scripts/check-netlist-consistency.py)
@@ -459,9 +459,13 @@ U1 是 MDBT50Q 模块，它自带的 PCB 天线必须朝板边、周围不能有
 
 **V4 修正（2026-09-23）**：V3 把两块打印板也按 L 形板框生成，电池袋上下都没有板（33.5 × 15 mm 通孔），跨在电池袋上的加强筋因而悬空——上壳实为 2 个实体。V4 让打印板按**整卡轮廓减 USB 缺口**生成、只让 1.0 mm 台阶跟随 L 形板框，电池袋重新封闭：底板 201 mm³ 托住电芯、上盖 251.25 mm³ 封口，几何报告把这两项体积写成回归检查，上壳恢复单一实体。
 
+**V5 按键帽（2026-09-23）**：SKQGABE010 按原厂图纸（Drawing No.1）本体 5.2 × 5.2 × **1.5 mm**、行程 **0.25 mm**、操作力 1.57 N，所以自由状态下按键顶面在 z≈3.0 mm，距 0.5 mm 上盖的下表面还有 **1.0 mm**——手指够不到键帽柱。V5 增加两个**齐平键帽**（Ø4.2 × 0.5 圆片骑在 Ø4.6 孔里、下接 Ø3.2 × 0.95 的行程柱，总高 1.45 mm）：不按下时顶面与上盖齐平（z=4.5），按下 0.25 mm 刚好走完开关行程。之所以不做常见的下翻法兰：法兰（半径 ≥2.6）会撞上 y 16.4–17.2 的加强筋；改用孔定位后键帽不需要机械卡扣，装配时从壳内放入即可。
+
+为避开键帽的按压行程，**加强筋 #1 的西端从 x=34.5 收到 x=41.0**（y 16.4–17.2 不变），与键帽外缘留 0.8 mm；数据与检查见下节。
+
 ### 外壳与实物元件干涉检查（2026-09-23）
 
-之前的 V3/V4 几何报告只用简化参考盒（屏幕、连接器、FPC、按键、电芯）检查干涉。这一轮改用**从 EDA 导出的真实元件 3D 模型**：
+之前的几何报告只用简化参考盒（屏幕、连接器、FPC、按键、电芯）检查干涉。这一轮改用**从 EDA 导出的真实元件 3D 模型**，并对 V5 的键帽一起做干涉检查：
 
 ```sh
 node projects/nfc-business-card/scripts/eda-exec-wait.mjs projects/nfc-business-card/scripts/eda-export-e16-3d.js 120000
@@ -476,10 +480,11 @@ cp ~/Downloads/.cn.lceda.pro.XXXXXX /tmp/e16-board.step
 | --- | --- |
 | 导出实体 | 894 个（含未放置的库模型），其中 **462 个落在板上** |
 | 上/下壳与实物元件干涉 | **0**（唯一相交是 PCB 侧面搭在 1.0 mm 台阶上的面接触，0.0048 mm³，属接触面数值噪声） |
-| 三条加强筋（z 3.6–4.0）与元件 | **0 干涉**，键帽、屏幕 FPC 座、U1 都在筋带以下 |
+| 三条加强筋（z 3.6–4.0）与元件 | **0 干涉**，屏幕 FPC 座、U1 都在筋带以下 |
+| 两个键帽与实物元件 / 壳体 | **0 干涉**（含按下 0.25 mm 后的位置）；键帽彼此 0 干涉 |
 | 最高元件（上盖内表面 z=4.0） | **J1 顶面 3.87 → 余量 0.13 mm**；U1 3.53（0.47）；J2 3.51（0.49） |
 
-结论：上盖 2.5 mm 腔高对**真实元件包络**成立。最紧的是 J1 上方的 0.13 mm，但那一条正好在右边缘缺口里、上盖在该处已被裁掉，实际装配余量更大；按压键（SKQGABE010，本体高 1.5 mm）顶面在 z≈3.0，距加强筋下沿还有 0.6 mm。
+结论：上盖 2.5 mm 腔高与 V5 键帽对**真实元件包络**成立。最紧的是 J1 上方的 0.13 mm，但那一条正好在右边缘缺口里、上盖在该处已被裁掉，实际装配余量更大；按压键（SKQGABE010，本体高 1.5 mm）顶面在 z≈3.0，由 V5 齐平键帽传递行程；加强筋 #1 已收到键帽东侧 0.8 mm 外。
 
 **嘉立创工艺核对**（[能力表](https://jlcpcb.com/capabilities/pcb-capabilities) 2026-09-23 查）：Outline → Routed 支持锣边与锣槽，铜到锣边/槽边 **≥0.2 mm**，普通公差 **±0.2 mm**；非金属化内槽最小宽度 **1.0 mm**，槽轮廓画在机械层 GM1/GKO。L 形外形和 33.5 × 15 的缺口都远在能力范围内。
 
@@ -497,7 +502,7 @@ cp ~/Downloads/.cn.lceda.pro.XXXXXX /tmp/e16-board.step
 | 板框与 USB 开口 | **已闭合** | 84 × 52 板框 + 右边缘缺口 9.24 × 6.5；导出的 STEP 量到板体厚 **0.8 mm**（满足 GCT 要求的 0.80 mm 板厚）、连接器本体 x 76.7–83.2、y 10.22–21.77、高出板面 0–3.17，接插面在板边内侧 0.8 mm；外壳两块壳按缺口裁剪，不需要壁槽 |
 | 网表与电源布线 | **已完成** | 原理图四页 55 位号 = PCB 55 位号，**逐引脚比对 230 个引脚 0 处网名差异**（双向差集为空），四页 DRC 0；PCB 原生 DRC 间距 0 + 连接 0（仅 12 项同封装槽边告警）；电源网络最细 0.15 mm ≈ 600 mA @10 °C 温升 |
 | NFC RF 与铜箔净空 | **预留区已验证，天线待定** | 22 × 26 mm 预留区（x 60–82、y 24–50）实测**双面零铜**（无走线、无过孔、无焊盘，铺铜被禁布区裁掉），符合线圈下方不留金属的约束；线圈形式等 PN532 桌面实验结论 |
-| CAD 可打印外壳 | **样件完成，待实物** | [外壳 V4](../enclosure/nfc-card-e16-enclosure-v4.FCStd) 几何检查通过（上下壳各一实体、无相交、连接器零接触、电池袋底板/上盖体积符合预期），总高 4.5 mm，只开两个键孔；屏幕窗口按 GDEH0154E01 图纸压在有效区上；屏幕需架空 1.51 mm 并用垫片压紧；壁厚、粘接、键帽、公差待样件 |
+| CAD 可打印外壳 | **样件完成，待实物** | [外壳 V5](../enclosure/nfc-card-e16-enclosure-v5.FCStd) 几何检查通过（上下壳各一实体、无相交、连接器零接触、电池袋底板/上盖体积符合预期、两个齐平键帽 0 干涉且按下 0.25 mm 不越行程），总高 4.5 mm；屏幕窗口按 GDEH0154E01 图纸压在有效区上；屏幕需架空 1.51 mm 并用垫片压紧；壁厚、粘接、公差待样件 |
 | 供应商制造包 | **未放行** | Gerber/钻孔/BOM/贴装坐标已能干净导出并逐项核对（见上节），但按门槛要求，电池与外壳确认前只做验证导出，不作为下单文件 |
 
 ## 2026-09-22 复核结论（保留作记录）
@@ -533,5 +538,5 @@ cp ~/Downloads/.cn.lceda.pro.XXXXXX /tmp/e16-board.step
 2. **两键功能命名。** 硬件已定（U1 pin 3 / pin 5 带开关，pin 4 备用上拉）；「键一换一级栏目、键二换二级选项」是否需要改名或改语义由固件决定，不需要改板。
 3. **NFC 天线形式。** 板上 PCB 线圈 or 外接 FPC/贴纸天线，等 PN532 桌面实验结论；可用线圈区约 17 × 21 mm（x 60–71.7、y 29–50）。
 4. **E16 转正。** 在客户端把 E16 并入 `Board1_1/Schematic1`（或另建 Board）后再做正式生产导出。
-5. **样件验证。** 打印外壳验证键帽手感、屏幕贴合、壁厚与公差；同时复核电芯装入电池袋后的实际间隙。
+5. **样件验证。** 打印 V5（下壳、上壳、两个键帽）验证键帽行程与手感、屏幕贴合、壁厚与打印公差；同时复核电芯装入电池袋后的实际间隙。键帽目前靠孔定位 + 键帽柱压在开关上，没有机械卡扣，样件阶段若松动可加一滴胶。
 6. **制造包放行。** 上述确认后导出 Gerber/BOM/CPL 作为下单文件；当前导出只作验证，`ordered_next_actions` 见[门槛文件](../hardware/pcb-e14-manufacturing-gates.json)。

@@ -4,7 +4,7 @@
   "checked_on": "2026-09-22",
   "source": {
     "eda_project": "../../../eda/NFC-Business-Card-84x52-E14-Battery-Layout.eprj2",
-    "eda_project_sha256": "a175b03abd6325b24cfae14bb9b599a46bba6e4a22472240fd3417ef760bb840",
+    "eda_project_sha256": "7508adbc3479a1ebd2e3faeafeac653976e18b58e9b4c7f54b5c3d9c0b8a3bf4",
     "eda_snapshot": "pcb-e14-battery-layout.json",
     "cad_snapshot": "../enclosure/pcba-e14-battery-layout-report.json"
   },
@@ -140,7 +140,9 @@
       "schematic": "4 pages, 56 designators, matches the PCB 56 designators exactly; 0 schematic DRC items",
       "exports": "Gerber zip (16 files) + 2 drill files + BOM (26 rows / 56 parts) + pick-and-place (56 designators) verified in artifacts/e16-manufacture/",
       "board_thickness_mm": 0.8,
-      "nfc_area": "x 60-82, y 24-50 measured copper-free on both layers; usable coil area about 17 x 21 mm after the USB shield keep-away; U1 antenna keep-out added as region d49ece88915402a1 (x 59.7-70.3, y 0.2-2.5, no fills/no pours) with both GND pours rebuilt - sampled 0/49 points with copper on each layer"
+      "nfc_area": "x 60-82, y 24-50 measured copper-free on both layers; usable coil area about 17 x 21 mm after the USB shield keep-away; U1 antenna keep-out added as region d49ece88915402a1 (x 59.7-70.3, y 0.2-2.5, no fills/no pours) with both GND pours rebuilt - sampled 0/49 points with copper on each layer",
+      "board_outline": "L-shape: 84 x 52 with the right-edge USB notch and a 33.5 x 15 mm battery bite at the lower-left (drawn on layer 11)",
+      "thickness_target_mm": 4.5
     }
   }
 }

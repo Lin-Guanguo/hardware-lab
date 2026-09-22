@@ -24,8 +24,8 @@ MM = 1.0 / MIL
 # Notch depth 6.5 mm and height 13 mm reproduce the verified bottom-edge
 # geometry that measured 0.20 mm copper-to-rout clearance.
 OUTLINE_MM = [
-    (0.0, 0.0), (0.0, 52.0), (84.0, 52.0), (84.0, 22.5),
-    (77.5, 22.5), (77.5, 9.5), (84.0, 9.5), (84.0, 0.0),
+    (0.0, 0.0), (0.0, 52.0), (84.0, 52.0), (84.0, 20.62),
+    (77.5, 20.62), (77.5, 11.38), (84.0, 11.38), (84.0, 0.0),
 ]
 USB_CENTER_Y_MM = 16.0
 
@@ -233,12 +233,12 @@ plan_json = {
     "purpose": "Right-mid USB layout plan for E16, derived from saved E15 geometry",
     "outline_mm": outline,
     "outline_area_mm2": round(outline_area(outline), 1),
-    "usb_notch": {"edge": "right", "x_mm": [77.5, 84.0], "y_mm": [9.5, 22.5], "depth_mm": 6.5, "height_mm": 13.0},
+    "usb_notch": {"edge": "right", "x_mm": [77.5, 84.0], "y_mm": [11.38, 20.62], "depth_mm": 6.5, "height_mm": 9.24},
     "usb_datum": {
         "pcb_edge_to_origin_mm": 1.025,
         "origin_mm": [78.525, USB_CENTER_Y_MM],
         "opening": "+x",
-        "note": "reuses the bottom-edge relationship: notch inner edge 1.025 mm in front of the footprint origin",
+        "note": "notch inner edge 1.025 mm in front of the footprint origin; height 9.24 mm follows the GCT recommended-layout solder-area width so the anchor pads stay on the board flanges",
     },
     "moved_components": {ref: {"x_mm": p["x"], "y_mm": p["y"], "rotation_deg": p["rotation"]} for ref, p in placed.items() if p["moved"]},
     "antenna_keepout_mm": [round(v, 2) for v in antenna_keepout(placed["U1"])],
@@ -256,7 +256,7 @@ plan_json = {
     "verification": {
         "source": "saved E15 EasyEDA snapshot plus E14 pin table",
         "method": "pad-centre and body rectangles vs candidate outline, NFC reserve and antenna keepout",
-        "live_client": "not applied; rotation sign and native DRC must be confirmed in EasyEDA",
+        "live_client": "applied to E16 on 2026-09-22 and verified by close/reopen; see e16-right-mid-applied.json",
     },
 }
 OUT_JSON.write_text(json.dumps(plan_json, ensure_ascii=False, indent=2) + "\n")

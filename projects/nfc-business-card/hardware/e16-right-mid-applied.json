@@ -1,0 +1,415 @@
+{
+  "date": "2026-09-22",
+  "document": {
+    "uuid": "2fe84861daa4cba5",
+    "name": "E16 Right-Mid USB Study",
+    "board": null,
+    "schematic": null
+  },
+  "applied": {
+    "outline_mm": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        52
+      ],
+      [
+        84,
+        52
+      ],
+      [
+        84,
+        20.62
+      ],
+      [
+        77.5,
+        20.62
+      ],
+      [
+        77.5,
+        11.38
+      ],
+      [
+        84,
+        11.38
+      ],
+      [
+        84,
+        0
+      ]
+    ],
+    "usb_notch": {
+      "edge": "right",
+      "x_mm": [
+        77.5,
+        84
+      ],
+      "y_mm": [
+        11.38,
+        20.62
+      ],
+      "depth_mm": 6.5,
+      "height_mm": 9.24
+    },
+    "moved_components": [
+      {
+        "ref": "C1",
+        "x_mil": 2897.6,
+        "y_mil": 496.1,
+        "x_mm": 73.599,
+        "y_mm": 12.601,
+        "rotation_deg": 0
+      },
+      {
+        "ref": "C3",
+        "x_mil": 2830.7,
+        "y_mil": 811,
+        "x_mm": 71.9,
+        "y_mm": 20.599,
+        "rotation_deg": 0
+      },
+      {
+        "ref": "C5",
+        "x_mil": 2401.6,
+        "y_mil": 677.2,
+        "x_mm": 61.001,
+        "y_mm": 17.201,
+        "rotation_deg": 0
+      },
+      {
+        "ref": "C6",
+        "x_mil": 2496.1,
+        "y_mil": 677.2,
+        "x_mm": 63.401,
+        "y_mm": 17.201,
+        "rotation_deg": 0
+      },
+      {
+        "ref": "C7",
+        "x_mil": 2590.6,
+        "y_mil": 677.2,
+        "x_mm": 65.801,
+        "y_mm": 17.201,
+        "rotation_deg": 0
+      },
+      {
+        "ref": "J1",
+        "x_mil": 3091.7,
+        "y_mil": 629.9,
+        "x_mm": 78.529,
+        "y_mm": 15.999,
+        "rotation_deg": 90
+      },
+      {
+        "ref": "R1",
+        "x_mil": 2830.7,
+        "y_mil": 580.7,
+        "x_mm": 71.9,
+        "y_mm": 14.75,
+        "rotation_deg": 0
+      },
+      {
+        "ref": "R2",
+        "x_mil": 2830.7,
+        "y_mil": 698.8,
+        "x_mm": 71.9,
+        "y_mm": 17.75,
+        "rotation_deg": 0
+      },
+      {
+        "ref": "U1",
+        "x_mil": 2559.1,
+        "y_mil": 315,
+        "x_mm": 65.001,
+        "y_mm": 8.001,
+        "rotation_deg": 180
+      },
+      {
+        "ref": "U5",
+        "x_mil": 2897.6,
+        "y_mil": 653.5,
+        "x_mm": 73.599,
+        "y_mm": 16.599,
+        "rotation_deg": 0
+      },
+      {
+        "ref": "U6",
+        "x_mil": 2897.6,
+        "y_mil": 586.6,
+        "x_mm": 73.599,
+        "y_mm": 14.9,
+        "rotation_deg": 0
+      }
+    ],
+    "component_count": 56,
+    "pad_count": 242,
+    "lines": 0,
+    "vias": 0
+  },
+  "drc": {
+    "baseline_e15": {
+      "clearance": 8,
+      "same_footprint_clearance": 12,
+      "connection": 200,
+      "total": 220
+    },
+    "after_right_mid_move": {
+      "clearance": 1,
+      "same_footprint_clearance": 12,
+      "connection": 200,
+      "breakdown": [
+        {
+          "name": "Clearance Error",
+          "total": 1,
+          "sub": [
+            {
+              "name": "SMD Pad to SMD Test Point",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "name": "Clearance Error in the same footprint",
+          "total": 12,
+          "sub": [
+            {
+              "name": "Board Outline to SMD Pad",
+              "count": 12
+            }
+          ]
+        },
+        {
+          "name": "Connection Error",
+          "total": 200,
+          "sub": [
+            {
+              "name": "GND",
+              "count": 54
+            },
+            {
+              "name": "VDD_3V3",
+              "count": 17
+            },
+            {
+              "name": "SWDCLK",
+              "count": 2
+            },
+            {
+              "name": "SWDIO",
+              "count": 2
+            },
+            {
+              "name": "NRESET",
+              "count": 2
+            },
+            {
+              "name": "BAT_PACK_TBD",
+              "count": 3
+            },
+            {
+              "name": "BAT_NTC_TBD",
+              "count": 2
+            },
+            {
+              "name": "USB_VBUS",
+              "count": 6
+            },
+            {
+              "name": "SYS",
+              "count": 5
+            },
+            {
+              "name": "USB_CC1",
+              "count": 3
+            },
+            {
+              "name": "USB_DM_CONN",
+              "count": 4
+            },
+            {
+              "name": "USB_DP_CONN",
+              "count": 4
+            },
+            {
+              "name": "USB_CC2",
+              "count": 3
+            },
+            {
+              "name": "USB_DP_MCU",
+              "count": 2
+            },
+            {
+              "name": "USB_DM_MCU",
+              "count": 2
+            },
+            {
+              "name": "CHG_SDA",
+              "count": 3
+            },
+            {
+              "name": "CHG_SCL",
+              "count": 3
+            },
+            {
+              "name": "CHG_CE_N",
+              "count": 3
+            },
+            {
+              "name": "CHG_INT_N",
+              "count": 3
+            },
+            {
+              "name": "CHG_PG_N",
+              "count": 3
+            },
+            {
+              "name": "KEY_PREV_N",
+              "count": 4
+            },
+            {
+              "name": "KEY_NEXT_N",
+              "count": 4
+            },
+            {
+              "name": "KEY_OK_N",
+              "count": 4
+            },
+            {
+              "name": "EPD_BUSY_TBD",
+              "count": 3
+            },
+            {
+              "name": "EPD_EN_TBD",
+              "count": 3
+            },
+            {
+              "name": "EPD_SCK_TBD",
+              "count": 2
+            },
+            {
+              "name": "EPD_MOSI_TBD",
+              "count": 2
+            },
+            {
+              "name": "EPD_CS_N_TBD",
+              "count": 2
+            },
+            {
+              "name": "EPD_DC_TBD",
+              "count": 2
+            },
+            {
+              "name": "EPD_RESET_N_TBD",
+              "count": 2
+            },
+            {
+              "name": "EPD_VCOM",
+              "count": 2
+            },
+            {
+              "name": "EPD_VGL",
+              "count": 4
+            },
+            {
+              "name": "EPD_VSNH",
+              "count": 2
+            },
+            {
+              "name": "EPD_VGH",
+              "count": 2
+            },
+            {
+              "name": "EPD_VSPH",
+              "count": 2
+            },
+            {
+              "name": "EPD_VSNL2",
+              "count": 2
+            },
+            {
+              "name": "EPD_VSNL1",
+              "count": 2
+            },
+            {
+              "name": "EPD_VSPL2",
+              "count": 2
+            },
+            {
+              "name": "EPD_VDD",
+              "count": 6
+            },
+            {
+              "name": "EPD_BS0",
+              "count": 2
+            },
+            {
+              "name": "EPD_VSPL1",
+              "count": 2
+            },
+            {
+              "name": "EPD_VDDL",
+              "count": 2
+            },
+            {
+              "name": "EPD_RESE",
+              "count": 3
+            },
+            {
+              "name": "EPD_GDR",
+              "count": 3
+            },
+            {
+              "name": "EPD_SW",
+              "count": 4
+            },
+            {
+              "name": "EPD_VPH",
+              "count": 3
+            },
+            {
+              "name": "EPD_PUMP",
+              "count": 3
+            }
+          ]
+        }
+      ]
+    },
+    "cleared": [
+      "Board Outline to SMD Pad at R1 (2)",
+      "Board Outline to TH Pad at J1 anchors (2)",
+      "Board Outline to Hole at J1 anchors (2)",
+      "SMD Pad to SMD Test Point at C3 (1)"
+    ],
+    "remaining": [
+      "SMD Pad to SMD Test Point: BAT_PACK_TBD test point vs R6_2 (pre-existing)",
+      "Board Outline to SMD Pad inside the J1 footprint: 12 items at the 0.20 mm slot rule, accepted per the JLCPCB >=0.20 mm process note"
+    ]
+  },
+  "experiments": {
+    "wide_notch_13mm": {
+      "clearance": 5,
+      "note": "connector front anchor row lands inside a 13 mm tall cut-out"
+    },
+    "narrow_notch_924mm": {
+      "clearance": 1,
+      "adopted": true,
+      "note": "9.24 mm matches the GCT recommended-layout solder-area width; anchors stay on the board flanges"
+    }
+  },
+  "verification": {
+    "saved": true,
+    "close_reopen": true,
+    "rotation_convention": "counter-clockwise positive, confirmed live: C0603 pad at +x moved to +y after rotation 90",
+    "j1_orientation": "opening toward +x, signal pads at x=75.95 mm, anchors at 77.1 and 81.1 mm",
+    "u1_orientation": "antenna end toward the bottom edge, keep-out x 59.75-70.25, y 0.25-2.55 mm"
+  },
+  "open_items": [
+    "connector shell sides over the board flanges next to the 9.24 mm cut-out: confirm against the GCT 3D/section",
+    "footprint internal slot line sits 1.825 mm in front of the origin while the cut-out inner edge is 1.025 mm: mechanical datum still needs the connector section",
+    "enclosure right wall opening and plug envelope",
+    "NFC feed route from U1 to the top-right coil"
+  ]
+}

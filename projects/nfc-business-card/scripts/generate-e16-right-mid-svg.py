@@ -23,7 +23,7 @@ SCALE = 10.0
 OX, OY = 90.0, 72.0
 OUTER_W, OUTER_H = 84.0, 52.0
 
-NEW_OUTLINE = [(0, 0), (0, 52), (84, 52), (84, 22.5), (77.5, 22.5), (77.5, 9.5), (84, 9.5), (84, 0)]
+NEW_OUTLINE = [(0, 0), (0, 52), (84, 52), (84, 20.62), (77.5, 20.62), (77.5, 11.38), (84, 11.38), (84, 0)]
 OLD_OUTLINE = [(0, 0), (0, 52), (84, 52), (84, 0), (56, 0), (56, 6.5), (43, 6.5), (43, 0)]
 
 snapshot = json.loads(SNAPSHOT.read_text())
@@ -98,7 +98,7 @@ parts = [
     '<svg xmlns="http://www.w3.org/2000/svg" width="1420" height="860" viewBox="0 0 1420 860">',
     '<rect width="1420" height="860" fill="#F7F9FC"/>',
     '<style>text{font-family:Arial,"PingFang SC",sans-serif;fill:#172B41}.small{font-size:12px}.muted{fill:#52657B}.tiny{font-size:9px}</style>',
-    '<text x="36" y="32" font-size="24" font-weight="bold">E16 · USB 右侧中部布局方案</text>',
+    '<text x="36" y="32" font-size="24" font-weight="bold">E16 · USB 右侧中部布局（已落盘）</text>',
     '<text x="36" y="53" class="muted">来源：E15 保存快照 + 已校验的布局方案；1 mm = 10 px，Y 轴向上为板面正视</text>',
     '<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="7 5"/>' % (dx(0), dy(52), OUTER_W * SCALE, OUTER_H * SCALE),
     '<path d="%s" fill="none" stroke="#94A3B8" stroke-width="1.6" stroke-dasharray="6 4"/>' % path(OLD_OUTLINE),
@@ -186,7 +186,7 @@ parts.extend([
     '<text x="90" y="672" class="muted">蓝色实心 = 本次移动的元件，灰色小圆 = 保留原位；灰色虚圈 = 移动前位置</text>',
     '<text x="982" y="90" font-size="17" font-weight="bold">方案要点</text>',
     '<text x="982" y="116" class="small">USB：右边缘中部，插口朝 +x</text>',
-    '<text x="982" y="138" class="small">缺口：13 × 6.5 mm，内缘距连接器原点 1.025 mm</text>',
+    '<text x="982" y="138" class="small">缺口：9.24 × 6.5 mm，内缘距连接器原点 1.025 mm</text>',
     '<text x="982" y="160" class="small">U1：下移并转 180°，天线朝下板边</text>',
     '<text x="982" y="182" class="small">天线净空：x 59.75–70.25, y 0.25–2.55 mm</text>',
     '<text x="982" y="204" class="small">USB ESD / CC / VBUS 群集中到 J1 左侧</text>',
@@ -196,7 +196,8 @@ parts.extend([
     '<text x="982" y="310" class="small">沿用项：J2 与 C16/C17 贴近（原布局已有）</text>',
     '<text x="982" y="332" class="small">顺带解决：R1 原来压在底边缺口上</text>',
     '<text x="982" y="354" class="small">连接器前锚脚仍落在缺口内（两版一致）</text>',
-    '<text x="982" y="376" class="small">尚未在 EasyEDA 应用：旋转方向与原生 DRC 待确认</text>',
+    '<text x="982" y="376" class="small">已在 E16 落盘并通过关闭重开验证</text>',
+    '<text x="982" y="700" class="small" font-weight="bold" fill="#1D4ED8">原生 DRC：220 → 213，间距 8 → 1，无新增</text>',
     '<text x="982" y="412" font-size="15" font-weight="bold">移动清单（原 → 新，mm）</text>',
     '<text x="982" y="438" class="small">J1  (49.5, 5.5) → (78.5, 16.0)，转 90°</text>',
     '<text x="982" y="460" class="small">U1  (76.2, 12.7) → (65.0, 8.0)，转 180°</text>',
@@ -205,11 +206,11 @@ parts.extend([
     '<text x="982" y="526" class="small">R1/R2 → (71.9, 14.75) / (71.9, 17.75)</text>',
     '<text x="982" y="548" class="small">C1/C3 → (73.6, 12.6) / (71.9, 20.6)</text>',
     '<text x="982" y="584" font-size="15" font-weight="bold">下一步</text>',
-    '<text x="982" y="610" class="small">1. 重连 EDA 扩展后在 E16 应用本方案</text>',
-    '<text x="982" y="632" class="small">2. 原生 DRC 复核锚脚 / 缺口 / 槽边距</text>',
-    '<text x="982" y="654" class="small">3. 按 CC → DP/DM → VBUS → GND 布线</text>',
+    '<text x="982" y="610" class="small">1. 已在 E16 落盘，关闭重开保持</text>',
+    '<text x="982" y="632" class="small">2. 间距 8 → 1，锚脚冲突清零</text>',
+    '<text x="982" y="654" class="small">3. 下一步：按 CC → DP/DM → VBUS → GND 布线</text>',
     '<text x="982" y="676" class="small">4. 再同步外壳开孔与外伸包络</text>',
-    '<text x="90" y="712" class="muted">E16 right-mid USB plan · review only · not a manufacturing export</text>',
+    '<text x="90" y="712" class="muted">E16 right-mid USB · applied to the E16 sheet · review only · not a manufacturing export</text>',
     '</svg>',
 ])
 

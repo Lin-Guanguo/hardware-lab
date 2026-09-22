@@ -145,7 +145,10 @@
    "thickness_target_mm": 4.5,
    "keys": "two switches (SW1 y=3.30 -> U1 pin 3 KEY_PREV_N, SW3 y=15.10 -> U1 pin 5 KEY_OK_N, 11.8 mm pitch, 6.6 mm body gap); SW2 removed from PCB and schematic, U1 pin 4 KEY_NEXT_N stays as a pulled-up spare input; key column envelopes and the stale SW2 keep-out polyline cleaned up on layer 9",
    "component_count": 55,
-   "ecad_scripts": "eda-export-e16-snapshot.js (review snapshot), eda-export-pcb-pins.js + check-netlist-consistency.py (netlist diff), generate-e16-right-mid-svg.py (review drawing)"
-  }
+   "ecad_scripts": "eda-export-e16-snapshot.js (review snapshot), eda-export-pcb-pins.js + check-netlist-consistency.py (netlist diff), generate-e16-right-mid-svg.py (review drawing)",
+   "enclosure": "V4 sample: single solid per shell, no shell/reference intersections, USB connector contact 0 mm3, battery pocket closed with a 201 mm3 printed floor and a 251.25 mm3 ceiling (V3 had neither, so the cell sat in a through-opening and the pocket rib floated), total height 4.5 mm with two key holes at y 3.30/15.10"
+  },
+  "enclosure_candidate": "../enclosure/nfc-card-e16-enclosure-v4.FCStd",
+  "enclosure_status": "E16_ENCLOSURE_V4_SAMPLE_NOT_PRODUCTION_RELEASE"
  }
 }

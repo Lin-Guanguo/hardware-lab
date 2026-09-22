@@ -23,6 +23,12 @@ node projects/nfc-business-card/scripts/eda-exec-wait.mjs \
 python3 projects/nfc-business-card/scripts/check-netlist-consistency.py --sch /tmp/sch-netlist.enet --pcb /tmp/pcb-pins.json
 ```
 
+外壳样件的着色等轴测图与正视顶视图由 [render-stl-iso.py](render-stl-iso.py) 直接从 STL 生成（不需要 FreeCAD GUI），输出到被忽略的 `artifacts/e16-cad-preview/`：
+
+```sh
+python3 projects/nfc-business-card/scripts/render-stl-iso.py
+```
+
 [pcb-maze-router.py](pcb-maze-router.py) 是补线阶段用的离线两层迷宫布线器。输入一份几何快照（`pcb_PrimitiveLine` / `pcb_PrimitiveVia` / `pcb_PrimitivePad` 的坐标，单位 mil）和任务表（`[网络, 起点, [目标...]]`，单位 mm），按实际设计规则做障碍扩张后用矢量桶队列 Dijkstra 求路径，输出线段与过孔清单；`--rip` 可先剔除挡路的既有线段，`--pen` 控制拥塞代价让多条线并行挤同一走廊，`--width` 调整线宽。它只写 JSON，改工程由单独的 EasyEDA 脚本完成：
 
 ```sh

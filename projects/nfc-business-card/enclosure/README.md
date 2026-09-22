@@ -15,7 +15,7 @@ last_updated: 2026-09-22
 
 **E16 右侧中部 USB 样件 V1：** [nfc-card-e16-enclosure-v1.FCStd](nfc-card-e16-enclosure-v1.FCStd) 按 E16 落盘坐标生成：右壁 USB 开口（y 10.38–21.62、贯穿壁厚，另加下壳底面让位槽）、屏窗上移到 y 17.5、三键孔改为等距 y 3.30/9.20/15.10。配套 [STEP](nfc-card-e16-enclosure-v1.step)、[下壳 STL](nfc-card-e16-bottom-v1.stl)、[上壳 STL](nfc-card-e16-top-v1.stl)和[几何报告](nfc-card-e16-enclosure-v1-report.json)，脚本 [e16-enclosure-right-mid-usb.py](e16-enclosure-right-mid-usb.py)。几何检查：上下壳各为单一实体、无壳体相交、**连接器本体与两壳接触体积均为 0**。报告同时记录两条待解约束：3 mm 电池与 5 mm 高度的顶盖重叠 54 mm³（高度预算不足），以及 84 × 52 板框与 81.6 × 49.6 内腔的尺寸基准矛盾。
 
-**E16 右侧中部 USB 样件 V2（当前）：** [nfc-card-e16-enclosure-v2.FCStd](nfc-card-e16-enclosure-v2.FCStd) 解决 V1 报告里的两条待解约束：
+**E16 右侧中部 USB 样件 V2（已被 V4 取代）：** [nfc-card-e16-enclosure-v2.FCStd](nfc-card-e16-enclosure-v2.FCStd) 解决 V1 报告里的两条待解约束：
 
 - **尺寸基准确定**：不再用"外壳外缘 84 × 52 + 内腔 81.6 × 49.6"的托盘结构（PCB 84 × 52 放不进 81.6 × 49.6 的内腔）。改成**叠层式**——PCB 板框就是整机外缘，两块壳各带 **1.0 mm 内缩台阶**贴在 PCB 正反面，PCB 侧边外露。这样整机外缘 = 板框 = 84 × 52 mm，不再有内外矛盾。
 - **连接器包络改成实测**：V1 假设本体伸到 x = 88.45 mm（板外 4.45 mm）。用 `pcb_ManufactureData.get3DFile()` 从已保存的板导出 STEP 装配体后直接量到 **x 76.7 → 83.2 mm（本体长 6.5 mm，与 GCT 目录一致）、y 10.22 → 21.77 mm、z 高出板面 0–3.17 mm**，也就是说**接插面在板边内侧 0.8 mm，根本不外伸**，整机长度就是 **84 mm**。连接器坐在板框缺口里，两块壳按缺口裁剪，因此**不需要在外壳壁上开 USB 槽**。（导出方法：`get3DFile('name','step',['Component Model'],'Outfit',true)` 后 `sys_FileSystem.saveFile()`；文件会以隐藏临时名落在 `~/Downloads`。）
@@ -28,7 +28,7 @@ last_updated: 2026-09-22
 
 仍未验证：电芯最大外形/胶带/鼓胀/出线折弯、键帽与行程、屏幕贴合、台阶粘接方式、插头应力与壁厚公差，都需要实物样件。
 
-**E16 右侧中部 USB 样件 V3（当前）：** [nfc-card-e16-enclosure-v3.FCStd](nfc-card-e16-enclosure-v3.FCStd) 跟随板框改成 L 形后的版本——外壳外缘仍是 84 × 52 mm，但**左下角 33.5 × 15 mm 的电池挖空处没有板**，电芯直接坐在下壳底板上（不再压在 PCB 上），整机厚度从 5.0 降到 **4.5 mm**：
+**E16 右侧中部 USB 样件 V4（当前）：** [nfc-card-e16-enclosure-v4.FCStd](nfc-card-e16-enclosure-v4.FCStd) 是 V3 的修正版。V3 把两块 3D 打印板也按 L 形板框生成，结果是电池袋**上下都没有板**（33.5 × 15 mm 的通孔，电芯无处安放），同时那条跨在电池袋上的加强筋悬在空中，上壳其实是 2 个实体。V4 把打印板改成**整卡轮廓减 USB 缺口**，只有 1.0 mm 台阶继续跟随 L 形板框，电池袋因此重新封闭：底部 0.4 mm 底板托住电芯、顶部 0.5 mm 上盖封口，几何报告把底板/上盖的体积（201 / 251.25 mm³）作为回归检查写进去。外壳外缘仍是 84 × 52 mm，电芯不再压在 PCB 上，整机厚度 **4.5 mm**：
 
 | 层 | 厚度 |
 | --- | ---: |
@@ -39,9 +39,9 @@ last_updated: 2026-09-22
 | 上盖 | 0.5 |
 | **合计** | **4.5** |
 
-挖空处不保留台阶（电池袋里是空的），上下壳其他位置仍按 1.0 mm 内缩台阶贴合板边；屏窗、**两键孔**（y 3.30 / 15.10，孔距 11.8 mm）、USB 让位沿用 V2。上盖 0.5 mm 薄板跨在电池袋和空腔上会塌，所以加了三条 0.4 mm 高的加强筋（y 16.4–17.2 / x 42.6–43.4 / 电池袋顶面 y 7.1–7.9），高度都在元件最高点（板面以上 1.51 mm）与上盖之间，几何检查确认不碰屏幕、FPC、按键、U1 和电芯。配套 [STEP](nfc-card-e16-enclosure-v3.step)、[下壳 STL](nfc-card-e16-bottom-v3.stl)、[上壳 STL](nfc-card-e16-top-v3.stl)、[几何报告](nfc-card-e16-enclosure-v3-report.json)、渲染图 `artifacts/e16-cad-preview/e16-enclosure-v3-iso.png` 和脚本 [e16-enclosure-right-mid-usb-v3.py](e16-enclosure-right-mid-usb-v3.py)。几何检查：上下壳各一实体、无壳体相交、无参考件相交、连接器零接触。
+挖空处不保留台阶（电池袋里不放台阶），上下壳其他位置仍按 1.0 mm 内缩台阶贴合板边；屏窗、**两键孔**（y 3.30 / 15.10，孔距 11.8 mm）、USB 让位沿用 V2。上盖 0.5 mm 薄板跨在电池袋和空腔上会塌，所以保留了三条 0.4 mm 高的加强筋（y 16.4–17.2 / x 42.6–43.4 / 电池袋顶面 y 7.1–7.9），高度都在元件最高点（板面以上 1.51 mm）与上盖之间，电池袋那一条现在与上盖连成一体，几何检查确认不碰屏幕、FPC、按键、U1 和电芯。配套 [STEP](nfc-card-e16-enclosure-v4.step)、[下壳 STL](nfc-card-e16-bottom-v4.stl)、[上壳 STL](nfc-card-e16-top-v4.stl)、[几何报告](nfc-card-e16-enclosure-v4-report.json)、渲染图 `artifacts/e16-cad-preview/e16-enclosure-v4-{iso,top}.png` 和脚本 [e16-enclosure-right-mid-usb-v4.py](e16-enclosure-right-mid-usb-v4.py)。几何检查：上下壳各一实体、无壳体相交、无参考件相交、连接器零接触、电池袋底板 201 mm³ + 上盖 251.25 mm³（回归项）。
 
-**视觉检查（2026-09-22）**：E16 样件已用纯 Python 从 STL 渲染出着色等轴测图（[nfc-card-e16-enclosure-v1-review.png](nfc-card-e16-enclosure-v1-review.png)，脚本 [render-stl-iso.py](../scripts/render-stl-iso.py)，不依赖 FreeCAD GUI）。图中确认：下壳是单一容腔实体、右端可见 USB 壁开口；上壳的屏窗、三个 Ø4 mm 键孔（一列）和 USB 壁开口位置与设计一致，没有多余缺口或悬空面。几何检查与视觉检查现已分别完成。
+**视觉检查（2026-09-23）**：E16 样件用纯 Python 从 STL 渲染出着色等轴测图和正视顶视图（`artifacts/e16-cad-preview/e16-enclosure-v4-{iso,top}.png`，脚本 [render-stl-iso.py](../scripts/render-stl-iso.py)，不依赖 FreeCAD GUI）。V4 图中确认：下壳是整片底板 + L 形台阶，上壳正面完整覆盖电池袋（不再是通孔），屏窗、两个 Ø4.6 mm 键孔和右边缘 USB 缺口位置与设计一致，上壳是单一实体、没有悬空面。几何检查与视觉检查现已分别完成。
 
 **5 mm 叠层账（2026-09-22，按 E16 样件实测）**：GCT USB4500-03-0-A 要求 **0.80 mm** 板厚，PCB 不能减薄。整机 5.0 mm 减去 0.8 mm PCB，上下壳只剩 4.2 mm；壳壁 0.8+0.8 时留给元件的净高是 **2.6 mm**，而 301230 电池标称厚 **3.0 mm**，在顶盖上压出 54 mm³ 重叠。定量结论：**3 mm 电池 + 0.8 mm PCB + 可打印上下壳装不进 5.0 mm**。出路只有三条：(a) 换 ≤2.6 mm 薄电池；(b) 整机放宽到约 5.4 mm；(c) 电池区局部沉台/开窗。需要按实际到货电池的最大包络选定后 CAD 再定案。
 
@@ -55,7 +55,7 @@ last_updated: 2026-09-22
 
 当前采用 **84 × 52 mm**，不为再缩小 1 mm 压缩装配余量。已另存 [实际封装细化模型](pcba-e6-84x52-detail.FCStd)与[平面图](pcba-e6-84x52-detail.svg)：电池保持平铺，J2 排线座向屏幕靠近，并加入 U4/U5 候选和 SWD/电池/NTC 平面焊盘。36 个简化形体检查通过，等轴测、顶视与平面图已查看；5 mm 厚度、真实排线和引线、公差仍未确认。J2 接触长度与库焊脚存在待解决差异，翻盖需在装前盖前操作。新版 [EDA 检查记录](../hardware/pcb-84x52.md)给出范围与限制。
 
-**按键约束：至少两颗即可完成二级菜单操作；空间允许时保留第三颗，功能待定。** 当前模型仍保留三个位置，最终数量结合键帽、弹片和装配余量决定。三边开槽、一边连接的连体弹片作为待比较的结构方向，尚未建成或验证，不能仅凭开关本体放得下就认定外壳按键也可用。
+**按键约束：两颗即可完成二级菜单操作。** 2026-09-23 起硬件收敛为两颗（E16：SW1/SW3，中心距 11.8 mm），外壳只开两个键孔；更早的 E14/E6 模型仍保留三个位置，只作历史对照。三边开槽、一边连接的连体弹片作为待比较的结构方向，尚未建成或验证，不能仅凭开关本体放得下就认定外壳按键也可用。
 
 此前 [84 × 52 紧凑模型](pcba-e6-84x52.FCStd)与 83 × 51 比较保留，详见[紧凑排布记录](compact-layout.md)。标准卡套适配不作为硬要求。
 

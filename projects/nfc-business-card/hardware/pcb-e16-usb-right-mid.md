@@ -8,7 +8,7 @@
 - 方案数据：[e16-right-mid-plan.json](e16-right-mid-plan.json)
 - 审查图：[pcba-e16-right-mid.svg](../enclosure/pcba-e16-right-mid.svg)（L 形板框、两键、禁布区与显示包络）
 - E16 实时快照：[e16-right-mid-snapshot.json](e16-right-mid-snapshot.json)
-- 外壳样件：[nfc-card-e16-enclosure-v3.FCStd](../enclosure/nfc-card-e16-enclosure-v3.FCStd) · [几何报告](../enclosure/nfc-card-e16-enclosure-v3-report.json) · [脚本](../enclosure/e16-enclosure-right-mid-usb-v3.py) · 预览图 `artifacts/e16-cad-preview/e16-enclosure-v3-{iso,top}.png`
+- 外壳样件：[nfc-card-e16-enclosure-v4.FCStd](../enclosure/nfc-card-e16-enclosure-v4.FCStd) · [几何报告](../enclosure/nfc-card-e16-enclosure-v4-report.json) · [脚本](../enclosure/e16-enclosure-right-mid-usb-v4.py) · 预览图 `artifacts/e16-cad-preview/e16-enclosure-v4-{iso,top}.png`
 - 校验脚本：[plan-e16-right-mid.py](../scripts/plan-e16-right-mid.py)
 - 绘图脚本：[generate-e16-right-mid-svg.py](../scripts/generate-e16-right-mid-svg.py)
 - 快照导出：[eda-export-e16-snapshot.js](../scripts/eda-export-e16-snapshot.js) · 网表核对：[eda-export-pcb-pins.js](../scripts/eda-export-pcb-pins.js) + [check-netlist-consistency.py](../scripts/check-netlist-consistency.py)
@@ -434,7 +434,7 @@ U1 是 MDBT50Q 模块，它自带的 PCB 天线必须朝板边、周围不能有
 - 板面：删除 SW2，`KEY_NEXT_N` 原来只服务 SW2 的 9 段铜线一并拆掉，重新把 R11（10 kΩ 上拉，21.5/19.5）接到主控 U1 的 **pin 4（P1.11）**，18 段新线走缺口上方 y≈16 的带子；SW1、SW3 的位置和走线完全不动。
 - 原理图：`Schematic1` 第 02 页删除 SW2，元件数 56 → **55**，四页 DRC 仍为 0 项。
 - 制造数据重导核对：贴装坐标 **55 个位号**、BOM **55 件**、板框仍是 L 形（缺口 x 0–33.5 / y 0–15 在 Gerber 里可见）。
-- 外壳 V3 重新生成，只开 y=3.30 / 15.10 两个孔，几何检查仍全绿。
+- 外壳重新生成，只开 y=3.30 / 15.10 两个孔；当时落盘的 V3 后来发现电池袋上下都没有板（见「电池挖空与 L 形板框」的 V4 修正），现以 V4 为准。
 - DRC：保存、关闭、重开后仍是既有的 12 项 J1 槽边告警，普通间距 0、连接 0。
 - 网表核对（2026-09-23）：原理图导出的 netlist 与 PCB 逐引脚对照，**55 位号 / 230 引脚 / 0 处网名差异**，双向差集为空（`eda-export-pcb-pins.js` + `check-netlist-consistency.py`）。
 
@@ -455,7 +455,9 @@ U1 是 MDBT50Q 模块，它自带的 PCB 天线必须朝板边、周围不能有
 | 穿过该区的铜 | 只有 5 段：`KEY_PREV_N`、`KEY_NEXT_N`（顶层）和 `NRESET`（底层一条长对角线） |
 | 处理 | 拆掉这 5 段，用布线器绕缺口重布：三键走 y≈15.4 的窄带，NRESET 折到 x=43.9 再斜下，末端经 TP5 |
 | DRC | 保存、关闭、重开后仍只有既有 12 项 J1 槽边告警；普通间距 0、连接 0 |
-| 收益 | 电芯改坐外壳底板（不再压在 PCB 上），整机 5.0 → **4.5 mm**；[外壳 V3](../enclosure/nfc-card-e16-enclosure-v3.FCStd) 已按 L 形板框更新并通过几何检查 |
+| 收益 | 电芯改坐外壳底板（不再压在 PCB 上），整机 5.0 → **4.5 mm**；[外壳 V4](../enclosure/nfc-card-e16-enclosure-v4.FCStd) 按 L 形板框更新并通过几何检查 |
+
+**V4 修正（2026-09-23）**：V3 把两块打印板也按 L 形板框生成，电池袋上下都没有板（33.5 × 15 mm 通孔），跨在电池袋上的加强筋因而悬空——上壳实为 2 个实体。V4 让打印板按**整卡轮廓减 USB 缺口**生成、只让 1.0 mm 台阶跟随 L 形板框，电池袋重新封闭：底板 201 mm³ 托住电芯、上盖 251.25 mm³ 封口，几何报告把这两项体积写成回归检查，上壳恢复单一实体。
 
 **嘉立创工艺核对**（[能力表](https://jlcpcb.com/capabilities/pcb-capabilities) 2026-09-23 查）：Outline → Routed 支持锣边与锣槽，铜到锣边/槽边 **≥0.2 mm**，普通公差 **±0.2 mm**；非金属化内槽最小宽度 **1.0 mm**，槽轮廓画在机械层 GM1/GKO。L 形外形和 33.5 × 15 的缺口都远在能力范围内。
 
@@ -469,11 +471,11 @@ U1 是 MDBT50Q 模块，它自带的 PCB 天线必须朝板边、周围不能有
 
 | 门槛 | E16 状态 | 证据 |
 | --- | --- | --- |
-| 电池交付包络 | **待输入** | 需要电芯实物最大外形、保护板、出线折弯、胶带与鼓胀余量；V3 外壳把电芯放在下壳底板（不压板），挖空 33.5 × 15 mm 对 30 × 12 mm 电芯留 3.5 × 3 mm 余量 |
+| 电池交付包络 | **待输入** | 需要电芯实物最大外形、保护板、出线折弯、胶带与鼓胀余量；V4 外壳把电芯放在封闭电池袋的底板上（不压板），挖空 33.5 × 15 mm 对 30 × 12 mm 电芯留 3.5 × 3 mm 余量 |
 | 板框与 USB 开口 | **已闭合** | 84 × 52 板框 + 右边缘缺口 9.24 × 6.5；导出的 STEP 量到板体厚 **0.8 mm**（满足 GCT 要求的 0.80 mm 板厚）、连接器本体 x 76.7–83.2、y 10.22–21.77、高出板面 0–3.17，接插面在板边内侧 0.8 mm；外壳两块壳按缺口裁剪，不需要壁槽 |
 | 网表与电源布线 | **已完成** | 原理图四页 55 位号 = PCB 55 位号，**逐引脚比对 230 个引脚 0 处网名差异**（双向差集为空），四页 DRC 0；PCB 原生 DRC 间距 0 + 连接 0（仅 12 项同封装槽边告警）；电源网络最细 0.15 mm ≈ 600 mA @10 °C 温升 |
 | NFC RF 与铜箔净空 | **预留区已验证，天线待定** | 22 × 26 mm 预留区（x 60–82、y 24–50）实测**双面零铜**（无走线、无过孔、无焊盘，铺铜被禁布区裁掉），符合线圈下方不留金属的约束；线圈形式等 PN532 桌面实验结论 |
-| CAD 可打印外壳 | **样件完成，待实物** | [外壳 V3](../enclosure/nfc-card-e16-enclosure-v3.FCStd) 几何检查通过（上下壳各一实体、无相交、连接器零接触），总高 4.5 mm，只开两个键孔；屏幕窗口按 GDEH0154E01 图纸压在有效区上；屏幕需架空 1.51 mm 并用垫片压紧；壁厚、粘接、键帽、公差待样件 |
+| CAD 可打印外壳 | **样件完成，待实物** | [外壳 V4](../enclosure/nfc-card-e16-enclosure-v4.FCStd) 几何检查通过（上下壳各一实体、无相交、连接器零接触、电池袋底板/上盖体积符合预期），总高 4.5 mm，只开两个键孔；屏幕窗口按 GDEH0154E01 图纸压在有效区上；屏幕需架空 1.51 mm 并用垫片压紧；壁厚、粘接、键帽、公差待样件 |
 | 供应商制造包 | **未放行** | Gerber/钻孔/BOM/贴装坐标已能干净导出并逐项核对（见上节），但按门槛要求，电池与外壳确认前只做验证导出，不作为下单文件 |
 
 ## 2026-09-22 复核结论（保留作记录）
@@ -484,7 +486,7 @@ U1 是 MDBT50Q 模块，它自带的 PCB 天线必须朝板边、周围不能有
 4. **NFC 馈线（预留下方已确认无铜，可用面积已量化）。** U1 的 NFC1/NFC2 到右上保留区约 25 mm，需与匹配网络一起规划。保留区 x 60–82、y 24–50（22 × 26 mm）实测双面零铜；但 J1 的金属壳体（x 76.7–83.2、y 10.22–21.77、高 3.17）就在保留区右下角外约 2.2 mm，按线圈外缘离大块金属 ≥5 mm 的经验余量，真正可用的线圈区约 **x 60–71.7、y 29–50（约 17 × 21 mm）**，比名义 22 × 26 小。天线形式与匹配网络等 PN532 桌面实验后再定；届时把这个缩小的可用区作为约束。
 5. **网表关联。** E16 仍是未关联副本；正式布线前需要与 `Board1_1/Schematic1` 关联或另建 Board。**仍未完成**：API 只能新建 PCB，不能把已有 PCB 挂到 `Board1_1` 下，需要在客户端用 GUI 合并。
 
-其中第 1–3 项已在 2026-09-22/23 完成（布线收口、外壳 V3、USB 缺口与壳体核对），第 4 项等 PN532 桌面实验，第 5 项待客户端 GUI 操作。
+其中第 1–3 项已在 2026-09-22/23 完成（布线收口、外壳 V4、USB 缺口与壳体核对），第 4 项等 PN532 桌面实验，第 5 项待客户端 GUI 操作。
 
 ## 未完成项与下一步（2026-09-23）
 

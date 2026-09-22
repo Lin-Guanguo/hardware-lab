@@ -94,7 +94,8 @@
     "verified board outline and USB opening",
     "screen window, FPC bend and support",
     "button travel, wall thickness, catches and print clearances",
-    "measured battery thickness and strain relief"
+    "measured battery thickness and strain relief",
+    "decide whether the assembled card needs an SWD service path: the three test pads sit on the top layer inside the screen envelope (x 10/12.5/15, y 46), so a service path means bottom-layer mirrored pads plus three probe holes in the bottom shell; otherwise recovery after gluing is USB-C only"
    ],
    "next_action": "Print the four V7 parts, then verify key travel, panel bonding, FPC bend and the thin-wall tolerance; pick a thinner-capable process or the hybrid thin-sheet cover route.",
    "design_state": "SAMPLE_DONE_PHYSICAL_VERIFICATION_PENDING",

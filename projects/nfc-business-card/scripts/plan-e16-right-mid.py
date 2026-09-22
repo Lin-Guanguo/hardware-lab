@@ -239,6 +239,8 @@ plan_json = {
     "purpose": "Right-mid USB layout plan for E16, derived from saved E15 geometry",
     "outline_mm": outline,
     "outline_area_mm2": round(outline_area(outline), 1),
+    # Historical plan value: the notch inner edge was moved from 77.5 to 76.704165
+    # on 2026-09-23 to match J1's own board-edge line (see the E16 record).
     "usb_notch": {"edge": "right", "x_mm": [77.5, 84.0], "y_mm": [11.38, 20.62], "depth_mm": 6.5, "height_mm": 9.24},
     "usb_datum": {
         "pcb_edge_to_origin_mm": 1.025,

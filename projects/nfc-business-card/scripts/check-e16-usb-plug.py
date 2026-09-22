@@ -2,7 +2,7 @@
 """Check whether a USB-C plug and its overmold clear the printed shells.
 
 The GCT USB4500 mating view gives the plug cross-section as 8.34 mm wide by
-2.56 mm tall. The connector body sits in the right-edge notch (x 77.5-84,
+2.56 mm tall. The connector body sits in the right-edge notch (x 76.704-84,
 y 11.38-20.62 mm), so a plug enters through that 9.24 mm window and its plastic
 overmold has to live outside the card. The plug is centred on the connector
 envelope measured in the V7 report, both in y and in z, so a clean result means

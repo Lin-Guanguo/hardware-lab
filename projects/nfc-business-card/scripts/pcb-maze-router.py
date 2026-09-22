@@ -48,7 +48,7 @@ CL_TT, CL_PT, CL_VT, CL_VP, CL_EDGE = 0.102, 0.152, 0.152, 0.152, 0.300
 VIA_OD, VIA_DR = 0.30, 0.20
 HW_VIA = VIA_OD/2
 HOLE_CLEARANCE = 0.30        # hole-to-hole; applies to every net, including the one being routed
-OUTLINE = [(34,0),(34,15),(0,15),(0,52),(84,52),(84,20.62),(77.5,20.62),(77.5,11.38),(84,11.38),(84,0)]
+OUTLINE = [(34,0),(34,15),(0,15),(0,52),(84,52),(84,20.62),(76.704165,20.62),(76.704165,11.38),(84,11.38),(84,0)]
 # prohibited region (keepout) x 60.0-82.0, y 24.0-50.0 mm, all layers
 KEEPOUT = [(60.0, 24.0, 82.0, 50.0)]
 

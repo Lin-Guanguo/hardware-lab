@@ -9,9 +9,9 @@
 - 审查图：[pcba-e16-right-mid.svg](../enclosure/pcba-e16-right-mid.svg)（L 形板框、三键、禁布区与显示包络）
 - E16 实时快照：[e16-right-mid-snapshot.json](e16-right-mid-snapshot.json)
 - 外壳剖视图：[nfc-card-e16-v5-stack-section.svg](../enclosure/nfc-card-e16-v5-stack-section.svg)（4.5 mm 叠层：电池袋 / 按键列 / 屏幕 FPC）
-- 外壳样件：[nfc-card-e16-enclosure-v5.FCStd](../enclosure/nfc-card-e16-enclosure-v5.FCStd) · [几何报告](../enclosure/nfc-card-e16-enclosure-v5-report.json) · [脚本](../enclosure/e16-enclosure-right-mid-usb-v5.py) · 预览图 `artifacts/e16-cad-preview/e16-enclosure-v5-{iso,top}.png`
+- 外壳样件：[nfc-card-e16-enclosure-v7.FCStd](../enclosure/nfc-card-e16-enclosure-v7.FCStd) · [几何报告](../enclosure/nfc-card-e16-enclosure-v7-report.json) · [脚本](../enclosure/e16-enclosure-right-mid-usb-v7.py) · 预览图 `artifacts/e16-cad-preview/e16-enclosure-v7-{iso,top}.png`（V5/V6 见[外壳说明](../enclosure/README.md)）
 - 校验脚本：[plan-e16-right-mid.py](../scripts/plan-e16-right-mid.py)
-- 外壳与插头校验：[check-e16-board-fit.py](../scripts/check-e16-board-fit.py) · [check-e16-usb-plug.py](../scripts/check-e16-usb-plug.py)
+- 外壳与板级校验：[check-e16-board-fit.py](../scripts/check-e16-board-fit.py) · [check-e16-board-clearance.py](../scripts/check-e16-board-clearance.py) · [check-e16-usb-plug.py](../scripts/check-e16-usb-plug.py)
 - 绘图脚本：[generate-e16-right-mid-svg.py](../scripts/generate-e16-right-mid-svg.py)
 - 快照导出：[eda-export-e16-snapshot.js](../scripts/eda-export-e16-snapshot.js) · 网表核对：[eda-export-pcb-pins.js](../scripts/eda-export-pcb-pins.js) + [check-netlist-consistency.py](../scripts/check-netlist-consistency.py)
 - 上游基线：[E15 清理版 PCB 开工记录](pcb-e15-clean-layout.md) · 早期试放：[e16-usb-right-mid-study.json](e16-usb-right-mid-study.json)
@@ -51,6 +51,8 @@ USB 七网布通后剩 176 项连接错误。自动布线处理了其中 29 条�
 连通性交叉复核：用按实际铜宽判重叠的离线检查，**除 GND 外的 45 条网络全部为单一连通体**（含 USB 七网、EPD 十一网、充电五网、三键、SWD、NFC 预留脚）。
 
 ![E16 布线审查图](pcb-e16-routing.svg)
+
+> 上面这张是 **2026-09-22 布线完成时**的手绘审查图（当时缺口内缘还是 77.5 mm）；板框基准修正后的当前视图见 [pcba-e16-right-mid.svg](../enclosure/pcba-e16-right-mid.svg)，它由 `generate-e16-right-mid-svg.py` 从快照直接生成。
 
 ### 线宽与载流核对（2026-09-22）
 

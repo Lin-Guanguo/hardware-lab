@@ -5,7 +5,7 @@
 <text x="36" y="57" class="m">来源：E16 图页实时快照（e16-right-mid-snapshot.json）；1 mm = 10 px，Y 轴向上为板面正视</text>
 <path d="M 96.0 616.0 L 96.0 96.0 L 936.0 96.0 L 936.0 616.0 L 96.0 616.0 Z" fill="none" stroke="#94A3B8" stroke-width="1.4" stroke-dasharray="6 4"/>
 <text x="100" y="660" class="xs m">灰色虚线 = 84 × 52 参考板框（当前板框是 L 形）</text>
-<path d="M 431.0 616.0 L 431.0 466.0 L 96.0 466.0 L 96.0 96.0 L 936.0 96.0 L 936.0 409.8 L 871.0 409.8 L 871.0 502.2 L 936.0 502.2 L 936.0 616.0 L 431.0 616.0 Z" fill="#E8EDF3" stroke="#334155" stroke-width="2.4"/>
+<path d="M 431.0 616.0 L 431.0 466.0 L 96.0 466.0 L 96.0 96.0 L 936.0 96.0 L 936.0 409.8 L 863.0 409.8 L 863.0 502.2 L 936.0 502.2 L 936.0 616.0 L 431.0 616.0 Z" fill="#E8EDF3" stroke="#334155" stroke-width="2.4"/>
 <rect x="126.0" y="481.0" width="300.0" height="120.0" fill="#64748B" fill-opacity="0.10" stroke="#64748B" stroke-width="1.1" stroke-dasharray="3 3"/>
 <text x="276.0" y="541.0" text-anchor="middle" class="xs" fill="#64748B">301230 电池 · 30×12</text>
 <rect x="696.0" y="116.0" width="220.0" height="260.0" fill="#16806B" fill-opacity="0.10" stroke="#16806B" stroke-width="1.1" stroke-dasharray="3 3"/>

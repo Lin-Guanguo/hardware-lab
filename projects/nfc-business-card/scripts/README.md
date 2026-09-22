@@ -35,6 +35,12 @@ python3 projects/nfc-business-card/scripts/generate-e16-v5-section-svg.py
 python3 projects/nfc-business-card/scripts/render-stl-iso.py
 ```
 
+NFC 线圈估算：`estimate-nfc-coil.py` 按改良 Wheeler 公式给出螺旋电感、直流电阻、13.56 MHz 谐振电容与 Q，用来判断某块面积能不能做到 1–2 µH：
+
+```sh
+python3 projects/nfc-business-card/scripts/estimate-nfc-coil.py --outer 17,21 --turns 4 5 6 8 --width 0.25
+```
+
 空铜区查询：`report-free-space.py` 把快照按 0.1 mm 网格栅格化，给指定区域/层打印占用图并列出最大空矩形（带设计规则余量）。放电池引线走廊、NFC 落点、临时测试点之前先用它量一遍，别凭眼看：
 
 ```sh

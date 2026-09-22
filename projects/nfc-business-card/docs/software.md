@@ -58,7 +58,7 @@ curl --fail --silent http://127.0.0.1:49620/eda-windows
 
 现象与判据（按顺序核对，避免把调用侧误判成扩展故障）：
 
-1. `curl -s http://127.0.0.1:49620/health`：桥接是否在跑（`service: easyeda-bridge`）、`edaConnected` 是否为 true。桥接由 launchd 托管：`launchctl list | grep easyeda-bridge`；重启用 `launchctl remove easyeda-bridge` 再 `launchctl submit -l easyeda-bridge -o /tmp/easyeda-bridge.out -e /tmp/easyeda-bridge.err -- /bin/zsh -lc "cd <skill dir> && exec node scripts/bridge-server.mjs"`。
+1. `curl -s http://127.0.0.1:49620/health`：桥接是否在跑（`service: easyeda-bridge`）、`edaConnected` 是否为 true。桥接由 **LaunchAgent 自愈托管**：plist 在 ~/Library/LaunchAgents/com.hardwarelab.easyeda-bridge.plist（RunAtLoad + KeepAlive，日志 /tmp/easyeda-bridge.out|.err）。查看 `launchctl list | grep easyeda`；重装用 `launchctl bootout` 后 `launchctl bootstrap` 同一 plist。此前的一次性 launchctl submit 作业没有 KeepAlive，进程崩掉不会自启，这就是"桥接忽然消失"的原因。
 2. `curl -s http://127.0.0.1:49620/eda-windows`：窗口列表。**health 为 true 但列表为空**说明扩展刚断、注册已过期——这是最常见的假在线状态。
 3. `node projects/nfc-business-card/scripts/eda-exec-wait.mjs <code.js> 90000`：等待式执行器会轮询到有真实窗口再发请求；如果它报 `no live window`，就是扩展侧没在连，不用再试调用姿势。
 4. 扩展侧恢复：EasyEDA 里 **高级 → 扩展管理器 → Run API Gateway 先禁用再启用**（只重启应用有时不够），并确认"允许外部交互"仍是勾选状态；同时**只保留一个编辑器窗口/标签页**，两个图页标签会各注册一次连接。

@@ -83,6 +83,15 @@ E14 模型可直接复现：`/Applications/FreeCAD.app/Contents/Resources/bin/fr
 
 E14 生产化门槛记录见 [pcb-e14-manufacturing-gates.json](../hardware/pcb-e14-manufacturing-gates.json)。它只记录当前快照和放行条件，不生成制造文件，也不会把未确认的电池尺寸或空间包络当成供应商规格。
 
+器件与**板子材料**的干涉检查：[check-e16-board-clearance.py](check-e16-board-clearance.py) 把同一份 STEP 里每个实体与按当前板框拉出的 0.8 mm 板体求交，抓"器件插进板子里"这类外壳检查看不到的问题：
+
+```sh
+/Applications/FreeCAD.app/Contents/Resources/bin/freecadcmd \
+  projects/nfc-business-card/scripts/check-e16-board-clearance.py
+```
+
+当前**不通过**：J1 的模型与板子相交合计约 11 mm³，全部落在 x 76.70–77.50 这段 0.80 mm 条带里；封装自带的板边线在 76.704、原厂图纸推荐布局指向 76.504，而我们的缺口内缘画在 77.50。结论与待确认项见 [E16 记录的下标基准复核](../hardware/pcb-e16-usb-right-mid.md#j1-与板框基准复核2026-09-23待实物确认)。
+
 插头侧复核：[check-e16-usb-plug.py](check-e16-usb-plug.py) 按 GCT mating view 的 8.34 × 2.56 mm 插头截面，在 V7 报告量到的 J1 包络上对中插到底，检查插头与注塑头是否撞壳：
 
 ```sh

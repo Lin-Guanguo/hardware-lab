@@ -134,7 +134,7 @@ references = {
     "FpcReference": ("J2 FPC 参考", Part.makeBox(6.8, 16.5, 2.2, App.Vector(48.0, 24.25, SPLIT_Z)),
                      "#B8D4C0", False),
 }
-for index, y in enumerate((3.30, 9.20, 15.10), 1):
+for index, y in enumerate((3.30, 15.10), 1):
     references[f"Button{index}Reference"] = (
         f"SW{index} 参考 · y={y:.2f} mm",
         Part.makeBox(5.2, 5.2, 1.6, App.Vector(35.5, y - 2.6, SPLIT_Z)), "#E4B28F", False)
@@ -185,11 +185,11 @@ top_shape = top_shape.cut(Part.makeBox(SCREEN_ACTIVE[2] + 2 * WINDOW_MARGIN, SCR
                                        PLATE_T + 1.2,
                                        App.Vector(SCREEN_ACTIVE[0] - WINDOW_MARGIN, SCREEN_ACTIVE[1] - WINDOW_MARGIN,
                                                   SCREEN_Z0 + SCREEN_T - 0.2)))
-for y in (3.30, 9.20, 15.10):
+for y in (3.30, 15.10):
     top_shape = top_shape.cut(Part.makeCylinder(2.3, PLATE_T + 0.4,
                                                 App.Vector(38.1, y, TOP_PLATE_Z0 - 0.2)))
 top_shape = top_shape.removeSplitter()
-top = add_feature(doc, "TopShell", "上壳 · 屏窗 + 三键孔", top_shape, "print_candidate", "#B9C9DC")
+top = add_feature(doc, "TopShell", "上壳 · 屏窗 + 两键孔", top_shape, "print_candidate", "#B9C9DC")
 
 top_shape = top_shape.cut(bite_cut).removeSplitter()
 for name, (label, shape, color, visible) in references.items():
@@ -249,7 +249,7 @@ report = {
                       SCREEN_ACTIVE[2] + 2 * WINDOW_MARGIN, SCREEN_ACTIVE[3] + 2 * WINDOW_MARGIN],
         "source": "GDEH0154E01 mechanical drawing: 37.32 x 31.8 x 0.85, 27x27 active with 2.4 mm borders",
     },
-    "button_holes_y_mm": [3.30, 9.20, 15.10],
+    "button_holes_y_mm": [3.30, 15.10],
     "geometry_checks": {
         "invalid_shapes": invalid,
         "shell_solids": {o.Name: len(o.Shape.Solids) for o in physical},

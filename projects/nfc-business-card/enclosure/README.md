@@ -39,7 +39,7 @@ last_updated: 2026-09-22
 | 上盖 | 0.5 |
 | **合计** | **4.5** |
 
-挖空处不保留台阶（电池袋里是空的），上下壳其他位置仍按 1.0 mm 内缩台阶贴合板边；屏窗、三键孔、USB 让位沿用 V2。上盖 0.5 mm 薄板跨在电池袋和空腔上会塌，所以加了三条 0.4 mm 高的加强筋（y 16.4–17.2 / x 42.6–43.4 / 电池袋顶面 y 7.1–7.9），高度都在元件最高点（板面以上 1.51 mm）与上盖之间，几何检查确认不碰屏幕、FPC、按键、U1 和电芯。配套 [STEP](nfc-card-e16-enclosure-v3.step)、[下壳 STL](nfc-card-e16-bottom-v3.stl)、[上壳 STL](nfc-card-e16-top-v3.stl)、[几何报告](nfc-card-e16-enclosure-v3-report.json)、渲染图 `artifacts/e16-cad-preview/e16-enclosure-v3-iso.png` 和脚本 [e16-enclosure-right-mid-usb-v3.py](e16-enclosure-right-mid-usb-v3.py)。几何检查：上下壳各一实体、无壳体相交、无参考件相交、连接器零接触。
+挖空处不保留台阶（电池袋里是空的），上下壳其他位置仍按 1.0 mm 内缩台阶贴合板边；屏窗、**两键孔**（y 3.30 / 15.10，孔距 11.8 mm）、USB 让位沿用 V2。上盖 0.5 mm 薄板跨在电池袋和空腔上会塌，所以加了三条 0.4 mm 高的加强筋（y 16.4–17.2 / x 42.6–43.4 / 电池袋顶面 y 7.1–7.9），高度都在元件最高点（板面以上 1.51 mm）与上盖之间，几何检查确认不碰屏幕、FPC、按键、U1 和电芯。配套 [STEP](nfc-card-e16-enclosure-v3.step)、[下壳 STL](nfc-card-e16-bottom-v3.stl)、[上壳 STL](nfc-card-e16-top-v3.stl)、[几何报告](nfc-card-e16-enclosure-v3-report.json)、渲染图 `artifacts/e16-cad-preview/e16-enclosure-v3-iso.png` 和脚本 [e16-enclosure-right-mid-usb-v3.py](e16-enclosure-right-mid-usb-v3.py)。几何检查：上下壳各一实体、无壳体相交、无参考件相交、连接器零接触。
 
 **视觉检查（2026-09-22）**：E16 样件已用纯 Python 从 STL 渲染出着色等轴测图（[nfc-card-e16-enclosure-v1-review.png](nfc-card-e16-enclosure-v1-review.png)，脚本 [render-stl-iso.py](../scripts/render-stl-iso.py)，不依赖 FreeCAD GUI）。图中确认：下壳是单一容腔实体、右端可见 USB 壁开口；上壳的屏窗、三个 Ø4 mm 键孔（一列）和 USB 壁开口位置与设计一致，没有多余缺口或悬空面。几何检查与视觉检查现已分别完成。
 

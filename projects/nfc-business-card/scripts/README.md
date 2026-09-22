@@ -8,6 +8,14 @@
 
 右侧中部 USB 方向由 [E16 布局方案](../hardware/pcb-e16-usb-right-mid.md) 推进：[plan-e16-right-mid.py](plan-e16-right-mid.py) 用 E15 快照的真实焊盘坐标比较"原布局 / 新方案"的焊盘、模块外形、NFC 保留区和天线净空，输出 [e16-right-mid-plan.json](../hardware/e16-right-mid-plan.json)；[generate-e16-right-mid-svg.py](generate-e16-right-mid-svg.py) 由该方案生成审查图。两个脚本都只做离线校验与绘图，不修改 EasyEDA 工程。
 
+[pcb-maze-router.py](pcb-maze-router.py) 是补线阶段用的离线两层迷宫布线器。输入一份几何快照（`pcb_PrimitiveLine` / `pcb_PrimitiveVia` / `pcb_PrimitivePad` 的坐标，单位 mil）和任务表（`[网络, 起点, [目标...]]`，单位 mm），按实际设计规则做障碍扩张后用矢量桶队列 Dijkstra 求路径，输出线段与过孔清单；`--rip` 可先剔除挡路的既有线段，`--pen` 控制拥塞代价让多条线并行挤同一走廊，`--width` 调整线宽。它只写 JSON，改工程由单独的 EasyEDA 脚本完成：
+
+```sh
+python3 projects/nfc-business-card/scripts/pcb-maze-router.py --dump snapshot.json --tasks tasks.json --rip rip.json --width 0.15 --pen 40 --out routes.json
+```
+
+注意过孔必须 ≥ 7.9 mil 内径 / 11.9 mil 外径，否则既报物理错误又不会被连通性判定接受；DRC 面板是异步的，触发后等待再读，保存重开才得到真实数字。
+
 E14 实际平面图由 [generate-e14-eda-layout-svg.py](generate-e14-eda-layout-svg.py) 从 [e14-eda-snapshot.json](../hardware/e14-eda-snapshot.json) 生成；快照同时保留 [器件/焊盘坐标](../hardware/e14-eda-components-pins.json)，用于核对 EasyEDA 保存重开后的真实板框、机械图元和元件位置。该脚本不会修改 EDA 工程。
 
 外壳坐标协调样件由 [e14-enclosure-v2-eda-coordinate.py](../enclosure/e14-enclosure-v2-eda-coordinate.py) 生成；复核使用 [check-e14-enclosure-v2.py](check-e14-enclosure-v2.py)。V2 将 USB 开口放在 E14 实际 J1 所在的 y=0 边，只用于解决 PCB/外壳坐标关系。

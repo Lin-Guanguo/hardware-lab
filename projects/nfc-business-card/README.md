@@ -14,13 +14,13 @@ status: pcb_routing_in_progress
 - 功能路线：nRF52840 内置 NFCT，按键切换名片；USB-C 用于编程和供电/充电，不要求断电仍可读取 NFC。
 - 取样选择：GDEH0154E01 六色屏、DESPI-E01 桌面转接板和 301230 类电池尺寸目标；付款、到货及实测尚未确认。302030 / 150 mAh 仅保留为历史取样对照，DESPI-E01 不装入最终成品。
 - 最新 CAD 研究：[pcba-e14-battery-layout.FCStd](enclosure/pcba-e14-battery-layout.FCStd)、[E14 新电池尺寸布局记录](hardware/pcb-e14-battery-layout.md)和[按 EDA 实际坐标重绘的平面图](enclosure/pcba-e14-battery-layout.svg)。这是空间验证包络，不是可打印外壳；旧的意图示意另存为 `pcba-e14-battery-layout-intended.svg`，旧版 `pcba-e6-84x52-detail.FCStd` 保留作历史对照。
-- 当前 EDA：[NFC-Business-Card-84x52-E14-Battery-Layout.eprj2](../../eda/NFC-Business-Card-84x52-E14-Battery-Layout.eprj2) 内的 [E15 Clean Layout - New Battery 图页](hardware/pcb-e15-clean-layout.md)。E15 已清除 E14 的历史板框、文字和机械图元，保存快照为 56 个元件、242 个焊盘、0 铜线、0 过孔；E14 原布局仍作为坐标和变更证据保留，E13 自动布线副本仅作走线基线。E15 尚未关联原理图 Board，也未完成最终 PCB 板框和 USB 开口确认，因此不能生产。
+- 当前 EDA：[NFC-Business-Card-84x52-E14-Battery-Layout.eprj2](../../eda/NFC-Business-Card-84x52-E14-Battery-Layout.eprj2) 内的 [E15 Clean Layout - New Battery 图页](hardware/pcb-e15-clean-layout.md)。E15 已清除 E14 的历史板框、文字和机械图元，保存快照为 56 个元件、242 个焊盘、0 铜线、0 过孔；当前已通过新建 `Board1_1` 关联 `Schematic1`，原 `Board1/E6` 保留作回退，最终 PCB 板框和 USB 开口仍待确认，因此不能生产。
 - USB 位置试探：[E8 USB 左移评审](hardware/pcb-e8-usb-left.md)。E8 证明现有板框缺口不允许只把 J1 横向移动；换边需要连板框和外壳一起重做，因此当前不替换 E7 的 USB 位置。
 - 屏幕资料：J2 已替换为参考板同款 FPC-05FB-24PH20 / C2856831；234 个元件引脚网络按型号规格、DESPI 参考电路及器件规格核对。BUSY、外围电容差异、峰值电流和实际插合仍待验证；[接口对照](docs/gdeh0154e01-evaluation.md#接口与参考电路复核2026-09-21)。
 - 机械边界：E14 已有独立 FreeCAD 空间研究模型并通过保存重开几何检查；V1 右侧 USB 意图样件保留，另生成了按 EDA 实际 J1 坐标协调的 [V2 外壳样件](enclosure/nfc-card-e14-enclosure-v2-eda-coordinate.FCStd)，两者外包络均按 84 × 52 × 5.0 mm 目标。V2 仍需随 Layer 11 板框、J1 朝向和真实电池包体冻结，不含卡扣、螺柱、胶槽和最终公差，需实物打印验证后才能继续生产化。
 - 烧录与总装：优先委托工厂首烧，后续 USB-C 升级，SWD 焊盘保留；设计基本定稿后、下单前确认工厂支持与费用。到手接屏、接电池与装壳的目标和待确认项见[烧录与装配交接](docs/usb-and-prototyping.md#工厂烧录与装配交接)。
 - 保存与同步已复核：17 条过期说明已删除或替换，保存重开未恢复；27 个 SCH/PCB 关联 ID 已对齐，原生网表告警消失。最新副本 112 项关联/封装检查通过；原版保留，本轮在副本调整 11 个小器件。
-- 下一步按[新布局开工记录](hardware/pcb-e15-clean-layout.md)推进：先关联 E15 与原理图、明确 84 × 52 是外壳目标还是 PCB 板框，再锁定 USB 底边中部缺口和真实电池最大包络；之后按 USB 数据/CC/VBUS/地回流/主控顺序布线，最后同步 CAD 和外壳。到货后仍需验证 FPC、刷新/功耗、电池与 NTC。
+- 下一步按[新布局开工记录](hardware/pcb-e15-clean-layout.md)推进：基于已关联的 `Board1_1/Schematic1`，明确 84 × 52 是外壳目标还是 PCB 板框，再锁定 USB 底边中部缺口和真实电池最大包络；之后按 USB 数据/CC/VBUS/地回流/主控顺序布线，最后同步 CAD 和外壳。到货后仍需验证 FPC、刷新/功耗、电池与 NTC。
 
 目录入口：[硬件](hardware/README.md) · [外壳与模型](enclosure/README.md) · [设计资料](docs/README.md) · [脚本](scripts/README.md)。83 × 51、旧 84 × 52 和其他版本保留比较；“最新”以上述文件为准。
 

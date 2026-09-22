@@ -47,6 +47,21 @@ USB 七网布通后剩 176 项连接错误。自动布线处理了其中 29 条�
 
 连通性交叉复核：用按实际铜宽判重叠的离线检查，**除 GND 外的 45 条网络全部为单一连通体**（含 USB 七网、EPD 十一网、充电五网、三键、SWD、NFC 预留脚）。
 
+### 制造可交付性检查（2026-09-22）
+
+用 `pcb_ManufactureData` 把 E16 图页导出到 `artifacts/e16-manufacture/`（**验证用，不是下单文件**；这些产物按仓库约定不入库），核对结果：
+
+| 项目 | 结果 |
+| --- | --- |
+| Gerber 包 | 16 个文件：顶/底铜、顶/底阻焊、顶锡膏、顶/底丝印、板框、机械、钻孔图、装配图、两个钻孔文件、飞针测试 JSON |
+| 板框 | GKO 范围 x 0–84、y 0–52 mm，缺口在内 |
+| 钻孔 | 过孔文件 160 孔（0.2 mm + 0.305 mm 刀具）；PTH 文件 164 孔（含 J1 四个 0.6 mm 锚脚槽） |
+| 覆铜 | 顶层铜箔含 G36 区域（4 886 行），铺铜已进 Gerber |
+| BOM | 26 行、56 个器件；Comment / Designator / Supplier Part **无缺失** |
+| 贴装坐标 | 56 个位号全部有坐标，全部在顶层 |
+
+注意事项：`getNetlistFile()` 在本机返回 null，网表仍走原理图导出的 enet；导出文件由 `sys_FileSystem.saveFile()` 写到 `~/Downloads` 的隐藏临时名（`.cn.lceda.pro.*`），需要按大小认领。**放行下单仍受 [E14 制造门槛](../hardware/pcb-e14-manufacturing-gates.json) 约束**——电池最大包络和外壳公差未确认前只做验证导出。
+
 ### GND 覆铜
 
 用 API 落了两块覆盖整板的 GND 覆铜（`GND_TOP` 顶层、`GND_BOT` 底层，`solid` 填充，多边形 0.4–83.6 / 0.4–51.6 mm，板框外自动裁剪），并逐个 `rebuildCopperRegion()` 生成铺铜区域。这一步把 GND 未连接从 **54 降到 32**。

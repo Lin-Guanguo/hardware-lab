@@ -29,6 +29,13 @@ python3 projects/nfc-business-card/scripts/check-netlist-consistency.py --sch /t
 python3 projects/nfc-business-card/scripts/render-stl-iso.py
 ```
 
+空铜区查询：`report-free-space.py` 把快照按 0.1 mm 网格栅格化，给指定区域/层打印占用图并列出最大空矩形（带设计规则余量）。放电池引线走廊、NFC 落点、临时测试点之前先用它量一遍，别凭眼看：
+
+```sh
+python3 projects/nfc-business-card/scripts/report-free-space.py --region 33,0,46,19 --layer 1 --limit 3
+python3 projects/nfc-business-card/scripts/report-free-space.py --region 54,2,72,26 --layer 2 --limit 3
+```
+
 制造包核对：`eda-export-e16-manufacture.js` 一次导出 Gerber/BOM/CPL/装配 PDF，`check-e16-manufacture.py` 把结果与当前快照逐点比对（板框顶点、钻孔孔数、位号集合、贴装坐标偏差）并写 `artifacts/e16-manufacture/manifest.json`：
 
 ```sh

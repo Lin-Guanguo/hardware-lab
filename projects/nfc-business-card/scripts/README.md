@@ -6,7 +6,7 @@
 
 新的 PCB 开工入口是 [E15 清理版 PCB 开工记录](../hardware/pcb-e15-clean-layout.md)。E15 图页位于 E14 `.eprj2` 工程内；其审查快照由 [generate-e15-clean-layout-svg.py](generate-e15-clean-layout-svg.py) 从保存后的 E15 数据生成。该脚本只渲染审查图，不修改 EasyEDA 工程。
 
-右侧中部 USB 方向由 [E16 布局方案](../hardware/pcb-e16-usb-right-mid.md) 推进：[plan-e16-right-mid.py](plan-e16-right-mid.py) 用 E15 快照的真实焊盘坐标比较"原布局 / 新方案"的焊盘、模块外形、NFC 保留区和天线净空，输出 [e16-right-mid-plan.json](../hardware/e16-right-mid-plan.json)；[generate-e16-right-mid-svg.py](generate-e16-right-mid-svg.py) 直接读取 [e16-right-mid-snapshot.json](../hardware/e16-right-mid-snapshot.json) 画当前审查图（L 形板框、三键、禁布区与显示包络）。快照用 [eda-export-e16-snapshot.js](eda-export-e16-snapshot.js) 从 E16 图页重新导出，否则图会停在旧状态：
+右侧中部 USB 方向由 [E16 布局方案](../hardware/pcb-e16-usb-right-mid.md) 推进：[plan-e16-right-mid.py](plan-e16-right-mid.py) 用 E15 快照的真实焊盘坐标比较"原布局 / 新方案"的焊盘、模块外形、NFC 保留区和天线净空，输出 [e16-right-mid-plan.json](../hardware/e16-right-mid-plan.json)；[generate-e16-right-mid-svg.py](generate-e16-right-mid-svg.py) 直接读取 [e16-right-mid-snapshot.json](../hardware/e16-right-mid-snapshot.json) 画当前审查图——L 形板框、双面铜箔、焊盘与过孔实形、56 个位号、板面自带的层 13 说明文字、禁布区与显示包络，外加右侧的方案面板。禁布区矩形用的是文档记录的边界，因为层 12 的多边形不经桥接导出；其余几何都取自快照。快照用 [eda-export-e16-snapshot.js](eda-export-e16-snapshot.js) 从 E16 图页重新导出，否则图会停在旧状态：
 
 ```sh
 node projects/nfc-business-card/scripts/eda-exec-wait.mjs \

@@ -16,12 +16,14 @@ status: pcb_routing_in_progress
 - 最新 CAD 研究：[pcba-e14-battery-layout.FCStd](enclosure/pcba-e14-battery-layout.FCStd)、[E14 新电池尺寸布局记录](hardware/pcb-e14-battery-layout.md)和[按 EDA 实际坐标重绘的平面图](enclosure/pcba-e14-battery-layout.svg)。这是空间验证包络，不是可打印外壳；旧的意图示意另存为 `pcba-e14-battery-layout-intended.svg`，旧版 `pcba-e6-84x52-detail.FCStd` 保留作历史对照。
 - 当前 EDA：[NFC-Business-Card-84x52-E14-Battery-Layout.eprj2](../../eda/NFC-Business-Card-84x52-E14-Battery-Layout.eprj2) 内的 [E15 Clean Layout - New Battery 图页](hardware/pcb-e15-clean-layout.md)。E15 已清除 E14 的历史板框、文字和机械图元，起始快照为 56 个元件、242 个焊盘、0 铜线、0 过孔；当前已通过新建 `Board1_1` 关联 `Schematic1`，并完成 `USB_CC2` 首段 4 条线/2 个通孔。右侧中部 USB 已确认作为外形优先方向，E15 底边中部布局和原 `Board1/E6` 保留作回退；最终 PCB 板框和 USB 开口仍待确认，因此不能生产。
 - USB 位置试探：[E8 USB 左移评审](hardware/pcb-e8-usb-left.md)。E8 证明现有板框缺口不允许只把 J1 横向移动；换边需要连板框和外壳一起重做，因此当前不替换 E7 的 USB 位置。
-- 右侧中部方案：[E16 右侧中部 USB 布局](hardware/pcb-e16-usb-right-mid.md)。已写入 E16 图页并通过关闭重开验证：右边缘中部开 9.24 × 6.5 mm 缺口、J1 插口朝右，U1 转 180° 让模块天线朝下板边并保留各层净空，USB 小元件集中到 J1 左侧；三键改为等距 5.90 mm 一列（原 SW3 压进屏幕包络），屏幕包络上移 1.30 mm，C8 移到充电器输入侧。原生 DRC 从 220 项降到 213 项（普通间距 8 → 1，无新增）；连接器外壳与缺口法兰、外壳右壁开孔仍待三维确认。
+- 右侧中部方案：[E16 右侧中部 USB 布局](hardware/pcb-e16-usb-right-mid.md)。E16 图页已落盘并通过多次关闭重开验证：右边缘中部 9.24 × 6.5 mm 缺口、J1 插口朝右、U1 转 180° 天线朝下板边、三键等距 5.90 mm 一列、屏窗上移 1.30 mm；USB 小元件群集中到 J1 左侧。
+- **USB 布线进展（2026-09-22）：**图页规则已切到 `JLCPCB Capability(Multiple Layers Board)`（过孔 ≥0.3 / 孔径 ≥0.2 mm）。用 0.3/0.2 mm 小孔完成 J1 数据扇出（DM 错列到 ESD 焊盘行之间、DP 在焊盘行上、CC2 换到底层腾出顶层通道），随后**布通 DP/DM 完整通路**：连接器 → U5 的 ESD → 串阻 R3/R4 → 主控 U1 的 USB 引脚，四个数据网络全部连通。当前板上有 39 段铜线、13 个 0.3/0.2 mm 过孔；原生 DRC = 1 项普通间距（既有 BAT_PACK 测试点冲突）+ 12 项同封装槽边 + 184 项未布线，**没有新增间距错误**。E7/E11 时代"两层做不出 USB 数据扇出"的结论已被这套组合推翻。
+- **CAD 进展：**[E16 外壳样件 V1](enclosure/nfc-card-e16-enclosure-v1.FCStd) 已按 E16 坐标生成右壁 USB 开口（含下壳底面让位槽）、上移屏窗和等距键孔；几何检查通过（上下壳各一实体、无壳体相交、连接器与两壳零接触）。报告如实记录两条待解约束：3 mm 电池与 5 mm 高度的顶盖重叠 54 mm³，以及 84 × 52 板框与 81.6 × 49.6 内腔的尺寸基准矛盾。
 - 屏幕资料：J2 已替换为参考板同款 FPC-05FB-24PH20 / C2856831；234 个元件引脚网络按型号规格、DESPI 参考电路及器件规格核对。BUSY、外围电容差异、峰值电流和实际插合仍待验证；[接口对照](docs/gdeh0154e01-evaluation.md#接口与参考电路复核2026-09-21)。
 - 机械边界：E14 已有独立 FreeCAD 空间研究模型并通过保存重开几何检查；V1 右侧 USB 意图样件保留，另生成了按 EDA 实际 J1 坐标协调的 [V2 外壳样件](enclosure/nfc-card-e14-enclosure-v2-eda-coordinate.FCStd)，两者外包络均按 84 × 52 × 5.0 mm 目标。V2 仍需随 Layer 11 板框、J1 朝向和真实电池包体冻结，不含卡扣、螺柱、胶槽和最终公差，需实物打印验证后才能继续生产化。
 - 烧录与总装：优先委托工厂首烧，后续 USB-C 升级，SWD 焊盘保留；设计基本定稿后、下单前确认工厂支持与费用。到手接屏、接电池与装壳的目标和待确认项见[烧录与装配交接](docs/usb-and-prototyping.md#工厂烧录与装配交接)。
 - 保存与同步已复核：17 条过期说明已删除或替换，保存重开未恢复；27 个 SCH/PCB 关联 ID 已对齐，原生网表告警消失。最新副本 112 项关联/封装检查通过；原版保留，本轮在副本调整 11 个小器件。
-- 下一步按[E16 右侧中部 USB 布局](hardware/pcb-e16-usb-right-mid.md)推进：E16 的板框、USB 小组和三键已落盘并复核，**USB_CC1/CC2 已布通**（13 段线、0 过孔，无新增 DRC）。数据对按历史结论改用 0.15/0.25 mm 小孔加四层评估（12/24 mil 过孔在 0.5 mm 焊盘间距下放不下），或先把 ESD 换到底层；之后再布 VBUS、地回流。同时用连接器三维模型确认外壳与 9.24 mm 缺口法兰、右壁开孔，再同步 CAD。到货后仍需验证 FPC、刷新/功耗、电池与 NTC。
+- 下一步按[E16 右侧中部 USB 布局](hardware/pcb-e16-usb-right-mid.md)继续：复核 `USB_CC2` 剩余 2 处接触 → 布通 `USB_VBUS`（J1 两个 VBUS 焊盘到 C1/C3 与充电器 U2 输入）→ 地回流与铺铜 → 再推进 EPD 升压/SPI、三键、充电器配置与 NFC 馈线 → 最后刷新审查图并把外壳样件推进到含卡扣与公差、与冻结板框一致的版本。到货后仍需验证 FPC、刷新/功耗、电池与 NTC。
 
 目录入口：[硬件](hardware/README.md) · [外壳与模型](enclosure/README.md) · [设计资料](docs/README.md) · [脚本](scripts/README.md)。83 × 51、旧 84 × 52 和其他版本保留比较；“最新”以上述文件为准。
 

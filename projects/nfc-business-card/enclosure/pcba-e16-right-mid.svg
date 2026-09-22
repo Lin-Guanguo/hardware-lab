@@ -1,222 +1,226 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1420" height="860" viewBox="0 0 1420 860">
-<rect width="1420" height="860" fill="#F7F9FC"/>
-<style>text{font-family:Arial,"PingFang SC",sans-serif;fill:#172B41}.small{font-size:12px}.muted{fill:#52657B}.tiny{font-size:9px}</style>
-<text x="36" y="32" font-size="24" font-weight="bold">E16 · USB 右侧中部布局（已落盘）</text>
-<text x="36" y="53" class="muted">来源：E15 保存快照 + 已校验的布局方案；1 mm = 10 px，Y 轴向上为板面正视</text>
-<rect x="90.0" y="72.0" width="840.0" height="520.0" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="7 5"/>
-<path d="M 90.0 592.0 L 90.0 72.0 L 930.0 72.0 L 930.0 592.0 L 650.0 592.0 L 650.0 527.0 L 520.0 527.0 L 520.0 592.0 Z" fill="none" stroke="#94A3B8" stroke-width="1.6" stroke-dasharray="6 4"/>
-<path d="M 90.0 592.0 L 90.0 72.0 L 930.0 72.0 L 930.0 385.8 L 865.0 385.8 L 865.0 478.2 L 930.0 478.2 L 930.0 592.0 Z" fill="#E5EAF0" stroke="#334155" stroke-width="2.4"/>
-<rect x="120.0" y="457.0" width="300.0" height="120.0" fill="#64748B" fill-opacity="0.12" stroke="#64748B" stroke-width="1" stroke-dasharray="3 3"/>
-<text x="270.0" y="517.0" text-anchor="middle" class="tiny" fill="#64748B">301230 电池 · 30×12</text>
-<rect x="110.0" y="103.0" width="374.2" height="319.0" fill="#64748B" fill-opacity="0.12" stroke="#64748B" stroke-width="1" stroke-dasharray="3 3"/>
-<text x="297.1" y="262.5" text-anchor="middle" class="tiny" fill="#64748B">SCREEN / FPC</text>
-<rect x="690.0" y="92.0" width="220.0" height="260.0" fill="#16806B" fill-opacity="0.12" stroke="#16806B" stroke-width="1" stroke-dasharray="6 4"/>
-<text x="800.0" y="222.0" text-anchor="middle" class="tiny" fill="#16806B">NFC RESERVE · 22×26</text>
-<rect x="565.0" y="182.0" width="80.0" height="170.0" fill="#64748B" fill-opacity="0.12" stroke="#64748B" stroke-width="1" stroke-dasharray="3 3"/>
-<text x="605.0" y="267.0" text-anchor="middle" class="tiny" fill="#64748B">J2 FPC</text>
-<rect x="445.0" y="516.0" width="52.0" height="52.0" fill="#64748B" fill-opacity="0.12" stroke="#64748B" stroke-width="1" stroke-dasharray="3 3"/>
-<text x="471.0" y="542.0" text-anchor="middle" class="tiny" fill="#64748B">SW1</text>
-<rect x="445.0" y="453.0" width="52.0" height="52.0" fill="#64748B" fill-opacity="0.12" stroke="#64748B" stroke-width="1" stroke-dasharray="3 3"/>
-<text x="471.0" y="479.0" text-anchor="middle" class="tiny" fill="#64748B">SW2</text>
-<rect x="445.0" y="390.0" width="52.0" height="52.0" fill="#64748B" fill-opacity="0.12" stroke="#64748B" stroke-width="1" stroke-dasharray="3 3"/>
-<text x="471.0" y="416.0" text-anchor="middle" class="tiny" fill="#64748B">SW3</text>
-<rect x="805.0" y="432.0" width="95.0" height="66.0" fill="#64748B" fill-opacity="0.12" stroke="#64748B" stroke-width="1" stroke-dasharray="3 3"/>
-<text x="852.5" y="465.0" text-anchor="middle" class="tiny" fill="#64748B">U1 旧位置（E15）</text>
-<rect x="690.0" y="92.0" width="220.0" height="260.0" fill="#B8E0D7" fill-opacity="0.35" stroke="#16806B" stroke-width="1.6" stroke-dasharray="6 4"/>
-<path d="M 792.5 434.5 L 687.5 434.5 L 687.5 589.5 L 792.5 589.5 Z" fill="#356AA0" fill-opacity="0.20" stroke="#356AA0" stroke-width="2"/>
-<rect x="687.5" y="566.5" width="105.0" height="23.0" fill="#E08B4A" fill-opacity="0.30" stroke="#B45309" stroke-width="1.6" stroke-dasharray="5 3"/>
-<path d="M 740.0 566.5 V 606.0" stroke="#B45309" stroke-width="1" stroke-dasharray="3 2"/>
-<text x="740.0" y="618.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#8A4B08">U1 天线净空（各层不铺地）</text>
-<path d="M 919.8 488.2 L 919.8 375.8 L 854.3 375.8 L 854.3 488.2 Z" fill="#C47F67" fill-opacity="0.30" stroke="#A2543C" stroke-width="2"/>
-<text x="890.0" y="514.0" text-anchor="middle" font-size="12" font-weight="bold" fill="#8A3B22">J1 USB-C · 插口朝右</text>
-<circle cx="849.5" cy="449.5" r="2.1" fill="#A2543C"/>
-<circle cx="849.5" cy="444.5" r="2.1" fill="#A2543C"/>
-<circle cx="849.5" cy="439.5" r="2.1" fill="#A2543C"/>
-<circle cx="849.5" cy="434.5" r="2.1" fill="#A2543C"/>
-<circle cx="849.5" cy="429.5" r="2.1" fill="#A2543C"/>
-<circle cx="849.5" cy="424.5" r="2.1" fill="#A2543C"/>
-<circle cx="849.5" cy="419.5" r="2.1" fill="#A2543C"/>
-<circle cx="849.5" cy="414.5" r="2.1" fill="#A2543C"/>
-<circle cx="849.5" cy="408.0" r="2.1" fill="#A2543C"/>
-<circle cx="849.5" cy="400.0" r="2.1" fill="#A2543C"/>
-<circle cx="849.5" cy="456.0" r="2.1" fill="#A2543C"/>
-<circle cx="849.5" cy="464.0" r="2.1" fill="#A2543C"/>
-<circle cx="901.1" cy="375.8" r="2.1" fill="#A2543C"/>
-<circle cx="901.1" cy="488.2" r="2.1" fill="#A2543C"/>
-<circle cx="861.1" cy="375.8" r="2.1" fill="#A2543C"/>
-<circle cx="861.1" cy="488.2" r="2.1" fill="#A2543C"/>
-<rect x="786.0" y="370.0" width="76.0" height="104.0" fill="none" stroke="#1D4ED8" stroke-width="1.4" stroke-dasharray="5 3"/>
-<text x="789.0" y="364.0" class="small" font-weight="bold" fill="#1D4ED8">USB ESD / CC / VBUS 群</text>
-<path d="M 875.0 497.0 L 974.0 497.0" stroke="#A2543C" stroke-width="1.2" stroke-dasharray="4 3"/>
-<path d="M 875.0 367.0 L 974.0 367.0" stroke="#A2543C" stroke-width="1.2" stroke-dasharray="4 3"/>
-<text x="892.0" y="400.0" class="tiny" fill="#8A3B22">本体外伸约 4.45 mm</text>
-<circle cx="471.0" cy="542.0" r="2.4" fill="#94A3B8"/>
-<text x="475.0" y="539.0" class="tiny" fill="#64748B">SW1</text>
-<circle cx="875.3" cy="432.0" r="4.0" fill="#1D4ED8" stroke="#FFFFFF" stroke-width="1"/>
-<circle cx="585.3" cy="537.4" r="3.0" fill="none" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2"/>
-<line x1="585.3" y1="537.4" x2="875.3" y2="432.0" stroke="#94A3B8" stroke-width="1" stroke-dasharray="3 3"/>
-<text x="881.3" y="427.0" class="tiny" font-weight="bold">J1</text>
-<circle cx="809.0" cy="444.5" r="4.0" fill="#1D4ED8" stroke="#FFFFFF" stroke-width="1"/>
-<circle cx="610.7" cy="528.5" r="3.0" fill="none" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2"/>
-<line x1="610.7" y1="528.5" x2="809.0" y2="444.5" stroke="#94A3B8" stroke-width="1" stroke-dasharray="3 3"/>
-<circle cx="700.0" cy="420.0" r="4.0" fill="#1D4ED8" stroke="#FFFFFF" stroke-width="1"/>
-<circle cx="763.1" cy="503.1" r="3.0" fill="none" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2"/>
-<line x1="763.1" y1="503.1" x2="700.0" y2="420.0" stroke="#94A3B8" stroke-width="1" stroke-dasharray="3 3"/>
-<circle cx="826.0" cy="443.0" r="4.0" fill="#1D4ED8" stroke="#FFFFFF" stroke-width="1"/>
-<circle cx="547.2" cy="490.4" r="3.0" fill="none" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2"/>
-<line x1="547.2" y1="490.4" x2="826.0" y2="443.0" stroke="#94A3B8" stroke-width="1" stroke-dasharray="3 3"/>
-<circle cx="809.0" cy="414.5" r="4.0" fill="#1D4ED8" stroke="#FFFFFF" stroke-width="1"/>
-<circle cx="610.7" cy="482.8" r="3.0" fill="none" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2"/>
-<line x1="610.7" y1="482.8" x2="809.0" y2="414.5" stroke="#94A3B8" stroke-width="1" stroke-dasharray="3 3"/>
-<circle cx="471.0" cy="479.0" r="2.4" fill="#94A3B8"/>
-<text x="475.0" y="476.0" class="tiny" fill="#64748B">SW2</text>
-<circle cx="826.0" cy="426.0" r="4.0" fill="#1D4ED8" stroke="#FFFFFF" stroke-width="1"/>
-<circle cx="559.9" cy="477.7" r="3.0" fill="none" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2"/>
-<line x1="559.9" y1="477.7" x2="826.0" y2="426.0" stroke="#94A3B8" stroke-width="1" stroke-dasharray="3 3"/>
-<circle cx="740.0" cy="512.0" r="4.0" fill="#1D4ED8" stroke="#FFFFFF" stroke-width="1"/>
-<circle cx="852.0" cy="465.0" r="3.0" fill="none" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2"/>
-<line x1="852.0" y1="465.0" x2="740.0" y2="512.0" stroke="#94A3B8" stroke-width="1" stroke-dasharray="3 3"/>
-<text x="746.0" y="507.0" class="tiny" font-weight="bold">U1</text>
-<circle cx="623.4" cy="459.9" r="2.4" fill="#94A3B8"/>
-<text x="627.4" y="456.9" class="tiny" fill="#64748B">R3</text>
-<circle cx="826.0" cy="466.0" r="4.0" fill="#1D4ED8" stroke="#FFFFFF" stroke-width="1"/>
-<circle cx="585.3" cy="439.6" r="3.0" fill="none" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2"/>
-<line x1="585.3" y1="439.6" x2="826.0" y2="466.0" stroke="#94A3B8" stroke-width="1" stroke-dasharray="3 3"/>
-<circle cx="724.0" cy="420.0" r="4.0" fill="#1D4ED8" stroke="#FFFFFF" stroke-width="1"/>
-<circle cx="763.1" cy="439.6" r="3.0" fill="none" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2"/>
-<line x1="763.1" y1="439.6" x2="724.0" y2="420.0" stroke="#94A3B8" stroke-width="1" stroke-dasharray="3 3"/>
-<circle cx="305.0" cy="427.0" r="2.4" fill="#94A3B8"/>
-<text x="309.0" y="424.0" class="tiny" fill="#64748B">R10</text>
-<circle cx="623.4" cy="426.9" r="2.4" fill="#94A3B8"/>
-<text x="627.4" y="423.9" class="tiny" fill="#64748B">R4</text>
-<circle cx="471.0" cy="416.0" r="2.4" fill="#94A3B8"/>
-<text x="475.0" y="413.0" class="tiny" fill="#64748B">SW3</text>
-<circle cx="420.2" cy="414.2" r="2.4" fill="#94A3B8"/>
-<text x="424.2" y="411.2" class="tiny" fill="#64748B">C8</text>
-<circle cx="547.2" cy="399.0" r="2.4" fill="#94A3B8"/>
-<text x="551.2" y="396.0" class="tiny" fill="#64748B">U2</text>
-<circle cx="648.8" cy="399.0" r="2.4" fill="#94A3B8"/>
-<text x="652.8" y="396.0" class="tiny" fill="#64748B">U3</text>
-<circle cx="305.0" cy="397.0" r="2.4" fill="#94A3B8"/>
-<text x="309.0" y="394.0" class="tiny" fill="#64748B">R11</text>
-<circle cx="547.2" cy="383.7" r="2.4" fill="#94A3B8"/>
-<text x="551.2" y="380.7" class="tiny" fill="#64748B">C2</text>
-<circle cx="674.2" cy="376.1" r="2.4" fill="#94A3B8"/>
-<text x="678.2" y="373.1" class="tiny" fill="#64748B">R9</text>
-<circle cx="748.0" cy="420.0" r="4.0" fill="#1D4ED8" stroke="#FFFFFF" stroke-width="1"/>
-<circle cx="763.1" cy="376.1" r="3.0" fill="none" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2"/>
-<line x1="763.1" y1="376.1" x2="748.0" y2="420.0" stroke="#94A3B8" stroke-width="1" stroke-dasharray="3 3"/>
-<circle cx="305.0" cy="367.0" r="2.4" fill="#94A3B8"/>
-<text x="309.0" y="364.0" class="tiny" fill="#64748B">R12</text>
-<circle cx="809.0" cy="386.0" r="4.0" fill="#1D4ED8" stroke="#FFFFFF" stroke-width="1"/>
-<circle cx="585.3" cy="363.4" r="3.0" fill="none" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2"/>
-<line x1="585.3" y1="363.4" x2="809.0" y2="386.0" stroke="#94A3B8" stroke-width="1" stroke-dasharray="3 3"/>
-<circle cx="648.8" cy="363.4" r="2.4" fill="#94A3B8"/>
-<text x="652.8" y="360.4" class="tiny" fill="#64748B">C4</text>
-<circle cx="350.0" cy="354.0" r="2.4" fill="#94A3B8"/>
-<text x="354.0" y="351.0" class="tiny" fill="#64748B">C9</text>
-<circle cx="547.2" cy="343.1" r="2.4" fill="#94A3B8"/>
-<text x="551.2" y="340.1" class="tiny" fill="#64748B">R5</text>
-<circle cx="585.3" cy="343.1" r="2.4" fill="#94A3B8"/>
-<text x="589.3" y="340.1" class="tiny" fill="#64748B">R6</text>
-<circle cx="623.4" cy="343.1" r="2.4" fill="#94A3B8"/>
-<text x="627.4" y="340.1" class="tiny" fill="#64748B">R7</text>
-<circle cx="661.5" cy="343.1" r="2.4" fill="#94A3B8"/>
-<text x="665.5" y="340.1" class="tiny" fill="#64748B">R8</text>
-<circle cx="360.0" cy="332.0" r="2.4" fill="#94A3B8"/>
-<text x="364.0" y="329.0" class="tiny" fill="#64748B">U4</text>
-<circle cx="395.0" cy="332.0" r="2.4" fill="#94A3B8"/>
-<text x="399.0" y="329.0" class="tiny" fill="#64748B">C10</text>
-<circle cx="655.0" cy="322.0" r="2.4" fill="#94A3B8"/>
-<text x="659.0" y="319.0" class="tiny" fill="#64748B">C14</text>
-<circle cx="360.0" cy="312.0" r="2.4" fill="#94A3B8"/>
-<text x="364.0" y="309.0" class="tiny" fill="#64748B">R13</text>
-<circle cx="410.0" cy="312.0" r="2.4" fill="#94A3B8"/>
-<text x="414.0" y="309.0" class="tiny" fill="#64748B">R14</text>
-<circle cx="655.0" cy="299.0" r="2.4" fill="#94A3B8"/>
-<text x="659.0" y="296.0" class="tiny" fill="#64748B">C15</text>
-<circle cx="375.0" cy="282.0" r="2.4" fill="#94A3B8"/>
-<text x="379.0" y="279.0" class="tiny" fill="#64748B">L1</text>
-<circle cx="410.0" cy="282.0" r="2.4" fill="#94A3B8"/>
-<text x="414.0" y="279.0" class="tiny" fill="#64748B">Q1</text>
-<circle cx="438.0" cy="282.0" r="2.4" fill="#94A3B8"/>
-<text x="442.0" y="279.0" class="tiny" fill="#64748B">R15</text>
-<circle cx="605.3" cy="252.0" r="2.4" fill="#94A3B8"/>
-<text x="609.3" y="249.0" class="tiny" fill="#64748B">J2</text>
-<circle cx="375.0" cy="247.0" r="2.4" fill="#94A3B8"/>
-<text x="379.0" y="244.0" class="tiny" fill="#64748B">D1</text>
-<circle cx="425.0" cy="247.0" r="2.4" fill="#94A3B8"/>
-<text x="429.0" y="244.0" class="tiny" fill="#64748B">C11</text>
-<circle cx="655.0" cy="244.0" r="2.4" fill="#94A3B8"/>
-<text x="659.0" y="241.0" class="tiny" fill="#64748B">C16</text>
-<circle cx="655.0" cy="226.0" r="2.4" fill="#94A3B8"/>
-<text x="659.0" y="223.0" class="tiny" fill="#64748B">C17</text>
-<circle cx="375.0" cy="217.0" r="2.4" fill="#94A3B8"/>
-<text x="379.0" y="214.0" class="tiny" fill="#64748B">C12</text>
-<circle cx="430.0" cy="212.0" r="2.4" fill="#94A3B8"/>
-<text x="434.0" y="209.0" class="tiny" fill="#64748B">D2</text>
-<circle cx="655.0" cy="208.0" r="2.4" fill="#94A3B8"/>
-<text x="659.0" y="205.0" class="tiny" fill="#64748B">C18</text>
-<circle cx="655.0" cy="190.0" r="2.4" fill="#94A3B8"/>
-<text x="659.0" y="187.0" class="tiny" fill="#64748B">C19</text>
-<circle cx="375.0" cy="187.0" r="2.4" fill="#94A3B8"/>
-<text x="379.0" y="184.0" class="tiny" fill="#64748B">R16</text>
-<circle cx="430.0" cy="172.0" r="2.4" fill="#94A3B8"/>
-<text x="434.0" y="169.0" class="tiny" fill="#64748B">D3</text>
-<circle cx="655.0" cy="172.0" r="2.4" fill="#94A3B8"/>
-<text x="659.0" y="169.0" class="tiny" fill="#64748B">C20</text>
-<circle cx="655.0" cy="154.0" r="2.4" fill="#94A3B8"/>
-<text x="659.0" y="151.0" class="tiny" fill="#64748B">C21</text>
-<circle cx="600.0" cy="144.0" r="2.4" fill="#94A3B8"/>
-<text x="604.0" y="141.0" class="tiny" fill="#64748B">R17</text>
-<circle cx="430.0" cy="142.0" r="2.4" fill="#94A3B8"/>
-<text x="434.0" y="139.0" class="tiny" fill="#64748B">C13</text>
-<circle cx="655.0" cy="136.0" r="2.4" fill="#94A3B8"/>
-<text x="659.0" y="133.0" class="tiny" fill="#64748B">C22</text>
-<circle cx="600.0" cy="117.0" r="2.4" fill="#94A3B8"/>
-<text x="604.0" y="114.0" class="tiny" fill="#64748B">R18</text>
-<path d="M 90.0 587.0 V 592.0" stroke="#64748B"/><text x="90.0" y="582.0" text-anchor="middle" class="tiny">0</text>
-<path d="M 190.0 587.0 V 592.0" stroke="#64748B"/><text x="190.0" y="582.0" text-anchor="middle" class="tiny">10</text>
-<path d="M 290.0 587.0 V 592.0" stroke="#64748B"/><text x="290.0" y="582.0" text-anchor="middle" class="tiny">20</text>
-<path d="M 390.0 587.0 V 592.0" stroke="#64748B"/><text x="390.0" y="582.0" text-anchor="middle" class="tiny">30</text>
-<path d="M 490.0 587.0 V 592.0" stroke="#64748B"/><text x="490.0" y="582.0" text-anchor="middle" class="tiny">40</text>
-<path d="M 590.0 587.0 V 592.0" stroke="#64748B"/><text x="590.0" y="582.0" text-anchor="middle" class="tiny">50</text>
-<path d="M 690.0 587.0 V 592.0" stroke="#64748B"/><text x="690.0" y="582.0" text-anchor="middle" class="tiny">60</text>
-<path d="M 790.0 587.0 V 592.0" stroke="#64748B"/><text x="790.0" y="582.0" text-anchor="middle" class="tiny">70</text>
-<path d="M 890.0 587.0 V 592.0" stroke="#64748B"/><text x="890.0" y="582.0" text-anchor="middle" class="tiny">80</text>
-<path d="M 85.0 592.0 H 90.0" stroke="#64748B"/><text x="80.0" y="595.0" text-anchor="end" class="tiny">0</text>
-<path d="M 85.0 492.0 H 90.0" stroke="#64748B"/><text x="80.0" y="495.0" text-anchor="end" class="tiny">10</text>
-<path d="M 85.0 392.0 H 90.0" stroke="#64748B"/><text x="80.0" y="395.0" text-anchor="end" class="tiny">20</text>
-<path d="M 85.0 292.0 H 90.0" stroke="#64748B"/><text x="80.0" y="295.0" text-anchor="end" class="tiny">30</text>
-<path d="M 85.0 192.0 H 90.0" stroke="#64748B"/><text x="80.0" y="195.0" text-anchor="end" class="tiny">40</text>
-<path d="M 85.0 92.0 H 90.0" stroke="#64748B"/><text x="80.0" y="95.0" text-anchor="end" class="tiny">50</text>
-<text x="90" y="652" class="muted">浅灰虚线 = E15 原 84×52 板框（底边 USB 缺口）；深色实线 = 右侧中部 USB 新板框</text>
-<text x="90" y="672" class="muted">蓝色实心 = 本次移动的元件，灰色小圆 = 保留原位；灰色虚圈 = 移动前位置</text>
-<text x="982" y="90" font-size="17" font-weight="bold">方案要点</text>
-<text x="982" y="116" class="small">USB：右边缘中部，插口朝 +x</text>
-<text x="982" y="138" class="small">缺口：9.24 × 6.5 mm，内缘距连接器原点 1.025 mm</text>
-<text x="982" y="160" class="small">U1：下移并转 180°，天线朝下板边</text>
-<text x="982" y="182" class="small">天线净空：x 59.75–70.25, y 0.25–2.55 mm</text>
-<text x="982" y="204" class="small">USB ESD / CC / VBUS 群集中到 J1 左侧</text>
-<text x="982" y="226" class="small">去耦 C5–C7 跟随 U1 电源脚</text>
-<text x="982" y="262" font-size="15" font-weight="bold">离线校验</text>
-<text x="982" y="288" class="small">新增几何冲突：0</text>
-<text x="982" y="310" class="small">沿用项：J2 与 C16/C17 贴近（原布局已有）</text>
-<text x="982" y="332" class="small">顺带解决：R1 原来压在底边缺口上</text>
-<text x="982" y="354" class="small">连接器前锚脚仍落在缺口内（两版一致）</text>
-<text x="982" y="376" class="small">已在 E16 落盘并通过关闭重开验证</text>
-<text x="982" y="700" class="small" font-weight="bold" fill="#1D4ED8">原生 DRC：220 → 213，间距 8 → 1，无新增</text>
-<text x="982" y="412" font-size="15" font-weight="bold">移动清单（原 → 新，mm）</text>
-<text x="982" y="438" class="small">J1  (49.5, 5.5) → (78.5, 16.0)，转 90°</text>
-<text x="982" y="460" class="small">U1  (76.2, 12.7) → (65.0, 8.0)，转 180°</text>
-<text x="982" y="482" class="small">C5/C6/C7 → (61.0 / 63.4 / 65.8, 17.2)</text>
-<text x="982" y="504" class="small">U5/U6 → (73.6, 16.6) / (73.6, 14.9)</text>
-<text x="982" y="526" class="small">R1/R2 → (71.9, 14.75) / (71.9, 17.75)</text>
-<text x="982" y="548" class="small">C1/C3 → (73.6, 12.6) / (71.9, 20.6)</text>
-<text x="982" y="584" font-size="15" font-weight="bold">下一步</text>
-<text x="982" y="610" class="small">1. 已在 E16 落盘，关闭重开保持</text>
-<text x="982" y="632" class="small">2. 间距 8 → 1，锚脚冲突清零</text>
-<text x="982" y="654" class="small">3. 下一步：按 CC → DP/DM → VBUS → GND 布线</text>
-<text x="982" y="676" class="small">4. 再同步外壳开孔与外伸包络</text>
-<text x="90" y="712" class="muted">E16 right-mid USB · applied to the E16 sheet · review only · not a manufacturing export</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1460" height="900" viewBox="0 0 1460 900">
+<rect width="1460" height="900" fill="#F7F9FC"/>
+<style>text{font-family:Arial,"PingFang SC",sans-serif;fill:#172B41}.t{font-size:13px}.s{font-size:11.5px}.m{fill:#52657B}.xs{font-size:9.5px}.b{font-weight:bold}</style>
+<text x="36" y="34" font-size="25" font-weight="bold">E16 · 右侧中部 USB + 三键重排（已落盘）</text>
+<text x="36" y="57" class="m">来源：通过 EDA 桥接导出的 E16 实时快照；虚线为 E15 原位置。1 mm = 10 px，Y 轴向上为板面正视</text>
+<path d="M 96.0 616.0 L 96.0 96.0 L 936.0 96.0 L 936.0 616.0 L 656.0 616.0 L 656.0 551.0 L 526.0 551.0 L 526.0 616.0 Z" fill="none" stroke="#94A3B8" stroke-width="1.6" stroke-dasharray="6 4"/>
+<path d="M 96.0 616.0 L 96.0 96.0 L 936.0 96.0 L 936.0 409.8 L 871.0 409.8 L 871.0 502.2 L 936.0 502.2 L 936.0 616.0 Z" fill="#E8EDF3" stroke="#334155" stroke-width="2.4"/>
+<text x="96" y="88" class="xs m">浅灰虚线 = E15 原板框（底边 USB 缺口）</text>
+<rect x="126.0" y="481.0" width="300.0" height="120.0" fill="#64748B" fill-opacity="0.10" stroke="#64748B" stroke-width="1.1" stroke-dasharray="3 3"/>
+<text x="276.0" y="541.0" text-anchor="middle" class="xs" fill="#64748B">301230 电池 · 30×12</text>
+<rect x="696.0" y="116.0" width="220.0" height="260.0" fill="#16806B" fill-opacity="0.10" stroke="#16806B" stroke-width="1.1" stroke-dasharray="3 3"/>
+<text x="806.0" y="246.0" text-anchor="middle" class="xs" fill="#16806B">NFC RESERVE · 22×26</text>
+<rect x="571.0" y="206.0" width="80.0" height="170.0" fill="#0F766E" fill-opacity="0.10" stroke="#0F766E" stroke-width="1.1" stroke-dasharray="3 3"/>
+<text x="611.0" y="291.0" text-anchor="middle" class="xs" fill="#0F766E">J2 FPC · 弯折/支撑待定</text>
+<rect x="693.5" y="590.5" width="105.0" height="23.0" fill="#B45309" fill-opacity="0.10" stroke="#B45309" stroke-width="1.1" stroke-dasharray="3 3"/>
+<rect x="116.0" y="114.0" width="374.2" height="319.0" fill="#0F766E" fill-opacity="0.10" stroke="#0F766E" stroke-width="1.1" stroke-dasharray="3 3"/>
+<text x="303.1" y="273.5" text-anchor="middle" class="xs" fill="#0F766E">SCREEN / FPC · 37.42×31.9</text>
+<rect x="451.0" y="557.0" width="52.0" height="52.0" fill="#D97706" fill-opacity="0.10" stroke="#D97706" stroke-width="1.1" stroke-dasharray="3 3"/>
+<rect x="451.0" y="498.0" width="52.0" height="52.0" fill="#D97706" fill-opacity="0.10" stroke="#D97706" stroke-width="1.1" stroke-dasharray="3 3"/>
+<rect x="451.0" y="439.0" width="52.0" height="52.0" fill="#D97706" fill-opacity="0.10" stroke="#D97706" stroke-width="1.1" stroke-dasharray="3 3"/>
+<rect x="696.0" y="116.0" width="220.0" height="260.0" fill="#B8E0D7" fill-opacity="0.35" stroke="#16806B" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="806.0" y="246.0" text-anchor="middle" class="t b" fill="#0F6B59">NFC 保留区（禁布）</text>
+<path d="M 860.3 512.2 L 925.8 512.2 L 925.8 399.8 L 860.3 399.8 Z" fill="#FDE68A" fill-opacity="0.22" stroke="#C2542F" stroke-width="1.8"/>
+<path d="M 451.0 609.0 L 503.0 609.0 L 503.0 557.0 L 451.0 557.0 Z" fill="#D97706" fill-opacity="0.22" stroke="#D97706" stroke-width="1.8"/>
+<path d="M 451.0 550.0 L 503.0 550.0 L 503.0 498.0 L 451.0 498.0 Z" fill="#D97706" fill-opacity="0.22" stroke="#D97706" stroke-width="1.8"/>
+<path d="M 451.0 491.0 L 503.0 491.0 L 503.0 439.0 L 451.0 439.0 Z" fill="#D97706" fill-opacity="0.22" stroke="#D97706" stroke-width="1.8"/>
+<path d="M 693.5 613.5 L 798.5 613.5 L 798.5 458.5 L 693.5 458.5 Z" fill="#1D4ED8" fill-opacity="0.22" stroke="#1D4ED8" stroke-width="1.8"/>
+<path d="M 566.3 308.5 L 656.3 308.5 L 656.3 243.5 L 566.3 243.5 Z" fill="#0F766E" fill-opacity="0.22" stroke="#0F766E" stroke-width="1.8"/>
+<path d="M 366.0 321.0 L 396.0 321.0 L 396.0 291.0 L 366.0 291.0 Z" fill="#0F766E" fill-opacity="0.22" stroke="#0F766E" stroke-width="1.8"/>
+<path d="M 936.0 512.2 H 980.0 M 936.0 399.8 H 980.0" stroke="#C2542F" stroke-width="1.1" stroke-dasharray="4 3"/>
+<text x="939.0" y="376.0" class="xs" fill="#C2542F">板外 4.45 mm</text>
+<path d="M 746.0 613.5 V 632.0" stroke="#B45309" stroke-width="1" stroke-dasharray="3 2"/>
+<text x="746.0" y="646.0" text-anchor="middle" class="s b" fill="#B45309">U1 天线净空（各层不铺地）</text>
+<circle cx="832.0" cy="490.0" r="3.0" fill="#A855F7" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="591.3" cy="463.6" r="2.6" fill="none" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2"/>
+<line x1="591.3" y1="463.6" x2="832.0" y2="490.0" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="838.0" y="485.0" class="xs">C1</text>
+<circle cx="553.2" cy="407.7" r="3.0" fill="#A855F7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="559.2" y="402.7" class="xs">C2</text>
+<circle cx="815.0" cy="410.0" r="3.0" fill="#A855F7" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="591.3" cy="387.4" r="2.6" fill="none" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2"/>
+<line x1="591.3" y1="387.4" x2="815.0" y2="410.0" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="821.0" y="405.0" class="xs">C3</text>
+<circle cx="654.8" cy="387.4" r="3.0" fill="#A855F7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="660.8" y="382.4" class="xs">C4</text>
+<circle cx="706.0" cy="444.0" r="3.0" fill="#A855F7" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="769.1" cy="527.1" r="2.6" fill="none" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2"/>
+<line x1="769.1" y1="527.1" x2="706.0" y2="444.0" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="712.0" y="439.0" class="xs">C5</text>
+<circle cx="730.0" cy="444.0" r="3.0" fill="#A855F7" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="769.1" cy="463.6" r="2.6" fill="none" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2"/>
+<line x1="769.1" y1="463.6" x2="730.0" y2="444.0" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="736.0" y="439.0" class="xs">C6</text>
+<circle cx="754.0" cy="444.0" r="3.0" fill="#A855F7" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="769.1" cy="400.1" r="2.6" fill="none" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2"/>
+<line x1="769.1" y1="400.1" x2="754.0" y2="444.0" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="760.0" y="439.0" class="xs">C7</text>
+<circle cx="516.0" cy="411.0" r="3.0" fill="#A855F7" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="426.2" cy="438.2" r="2.6" fill="none" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2"/>
+<line x1="426.2" y1="438.2" x2="516.0" y2="411.0" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="522.0" y="406.0" class="xs">C8</text>
+<circle cx="881.3" cy="456.0" r="4.6" fill="#C2542F" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="591.3" cy="561.4" r="2.6" fill="none" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2"/>
+<line x1="591.3" y1="561.4" x2="881.3" y2="456.0" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="887.3" y="451.0" class="xs">J1</text>
+<circle cx="815.0" cy="468.5" r="3.0" fill="#C2542F" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="616.7" cy="552.5" r="2.6" fill="none" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2"/>
+<line x1="616.7" y1="552.5" x2="815.0" y2="468.5" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="821.0" y="463.5" class="xs">R1</text>
+<circle cx="815.0" cy="438.5" r="3.0" fill="#C2542F" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="616.7" cy="506.8" r="2.6" fill="none" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2"/>
+<line x1="616.7" y1="506.8" x2="815.0" y2="438.5" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="821.0" y="433.5" class="xs">R2</text>
+<circle cx="629.4" cy="483.9" r="3.0" fill="#C2542F" stroke="#FFFFFF" stroke-width="1"/>
+<text x="635.4" y="478.9" class="xs">R3</text>
+<circle cx="629.4" cy="450.9" r="3.0" fill="#C2542F" stroke="#FFFFFF" stroke-width="1"/>
+<text x="635.4" y="445.9" class="xs">R4</text>
+<circle cx="553.2" cy="367.1" r="3.0" fill="#A855F7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="559.2" y="362.1" class="xs">R5</text>
+<circle cx="591.3" cy="367.1" r="3.0" fill="#A855F7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="597.3" y="362.1" class="xs">R6</text>
+<circle cx="629.4" cy="367.1" r="3.0" fill="#A855F7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="635.4" y="362.1" class="xs">R7</text>
+<circle cx="667.5" cy="367.1" r="3.0" fill="#A855F7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="673.5" y="362.1" class="xs">R8</text>
+<circle cx="680.2" cy="400.1" r="3.0" fill="#A855F7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="686.2" y="395.1" class="xs">R9</text>
+<circle cx="311.0" cy="451.0" r="3.0" fill="#A855F7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="317.0" y="446.0" class="xs">R10</text>
+<circle cx="311.0" cy="421.0" r="3.0" fill="#A855F7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="317.0" y="416.0" class="xs">R11</text>
+<circle cx="311.0" cy="391.0" r="3.0" fill="#A855F7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="317.0" y="386.0" class="xs">R12</text>
+<circle cx="477.0" cy="583.0" r="3.0" fill="#D97706" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="477.0" cy="566.0" r="2.6" fill="none" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2"/>
+<line x1="477.0" y1="566.0" x2="477.0" y2="583.0" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="483.0" y="578.0" class="xs">SW1</text>
+<circle cx="477.0" cy="524.0" r="3.0" fill="#D97706" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="477.0" cy="503.0" r="2.6" fill="none" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2"/>
+<line x1="477.0" y1="503.0" x2="477.0" y2="524.0" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="483.0" y="519.0" class="xs">SW2</text>
+<circle cx="477.0" cy="465.0" r="3.0" fill="#D97706" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="477.0" cy="440.0" r="2.6" fill="none" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2"/>
+<line x1="477.0" y1="440.0" x2="477.0" y2="465.0" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="483.0" y="460.0" class="xs">SW3</text>
+<circle cx="746.0" cy="536.0" r="4.6" fill="#1D4ED8" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="858.0" cy="489.0" r="2.6" fill="none" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2"/>
+<line x1="858.0" y1="489.0" x2="746.0" y2="536.0" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="752.0" y="531.0" class="xs">U1</text>
+<circle cx="553.2" cy="423.0" r="3.0" fill="#A855F7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="559.2" y="418.0" class="xs">U2</text>
+<circle cx="654.8" cy="423.0" r="3.0" fill="#A855F7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="660.8" y="418.0" class="xs">U3</text>
+<circle cx="611.3" cy="276.0" r="4.6" fill="#0F766E" stroke="#FFFFFF" stroke-width="1"/>
+<text x="617.3" y="271.0" class="xs">J2</text>
+<circle cx="366.0" cy="356.0" r="3.0" fill="#0F766E" stroke="#FFFFFF" stroke-width="1"/>
+<text x="372.0" y="351.0" class="xs">U4</text>
+<circle cx="356.0" cy="378.0" r="3.0" fill="#0F766E" stroke="#FFFFFF" stroke-width="1"/>
+<text x="362.0" y="373.0" class="xs">C9</text>
+<circle cx="401.0" cy="356.0" r="3.0" fill="#0F766E" stroke="#FFFFFF" stroke-width="1"/>
+<text x="407.0" y="351.0" class="xs">C10</text>
+<circle cx="366.0" cy="336.0" r="3.0" fill="#0F766E" stroke="#FFFFFF" stroke-width="1"/>
+<text x="372.0" y="331.0" class="xs">R13</text>
+<circle cx="381.0" cy="306.0" r="3.0" fill="#0F766E" stroke="#FFFFFF" stroke-width="1"/>
+<text x="387.0" y="301.0" class="xs">L1</text>
+<circle cx="416.0" cy="306.0" r="3.0" fill="#0F766E" stroke="#FFFFFF" stroke-width="1"/>
+<text x="422.0" y="301.0" class="xs">Q1</text>
+<circle cx="416.0" cy="336.0" r="3.0" fill="#0F766E" stroke="#FFFFFF" stroke-width="1"/>
+<text x="422.0" y="331.0" class="xs">R14</text>
+<circle cx="444.0" cy="306.0" r="3.0" fill="#0F766E" stroke="#FFFFFF" stroke-width="1"/>
+<text x="450.0" y="301.0" class="xs">R15</text>
+<circle cx="381.0" cy="271.0" r="3.0" fill="#0F766E" stroke="#FFFFFF" stroke-width="1"/>
+<text x="387.0" y="266.0" class="xs">D1</text>
+<circle cx="436.0" cy="236.0" r="3.0" fill="#0F766E" stroke="#FFFFFF" stroke-width="1"/>
+<text x="442.0" y="231.0" class="xs">D2</text>
+<circle cx="436.0" cy="196.0" r="3.0" fill="#0F766E" stroke="#FFFFFF" stroke-width="1"/>
+<text x="442.0" y="191.0" class="xs">D3</text>
+<circle cx="431.0" cy="271.0" r="3.0" fill="#0F766E" stroke="#FFFFFF" stroke-width="1"/>
+<text x="437.0" y="266.0" class="xs">C11</text>
+<circle cx="381.0" cy="241.0" r="3.0" fill="#0F766E" stroke="#FFFFFF" stroke-width="1"/>
+<text x="387.0" y="236.0" class="xs">C12</text>
+<circle cx="381.0" cy="211.0" r="3.0" fill="#0F766E" stroke="#FFFFFF" stroke-width="1"/>
+<text x="387.0" y="206.0" class="xs">R16</text>
+<circle cx="436.0" cy="166.0" r="3.0" fill="#0F766E" stroke="#FFFFFF" stroke-width="1"/>
+<text x="442.0" y="161.0" class="xs">C13</text>
+<circle cx="606.0" cy="168.0" r="3.0" fill="#0F766E" stroke="#FFFFFF" stroke-width="1"/>
+<text x="612.0" y="163.0" class="xs">R17</text>
+<circle cx="606.0" cy="141.0" r="3.0" fill="#0F766E" stroke="#FFFFFF" stroke-width="1"/>
+<text x="612.0" y="136.0" class="xs">R18</text>
+<circle cx="661.0" cy="346.0" r="3.0" fill="#A855F7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="667.0" y="341.0" class="xs">C14</text>
+<circle cx="661.0" cy="323.0" r="3.0" fill="#A855F7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="667.0" y="318.0" class="xs">C15</text>
+<circle cx="661.0" cy="268.0" r="3.0" fill="#A855F7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="667.0" y="263.0" class="xs">C16</text>
+<circle cx="661.0" cy="250.0" r="3.0" fill="#A855F7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="667.0" y="245.0" class="xs">C17</text>
+<circle cx="661.0" cy="232.0" r="3.0" fill="#A855F7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="667.0" y="227.0" class="xs">C18</text>
+<circle cx="661.0" cy="214.0" r="3.0" fill="#A855F7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="667.0" y="209.0" class="xs">C19</text>
+<circle cx="661.0" cy="196.0" r="3.0" fill="#A855F7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="667.0" y="191.0" class="xs">C20</text>
+<circle cx="661.0" cy="178.0" r="3.0" fill="#A855F7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="667.0" y="173.0" class="xs">C21</text>
+<circle cx="661.0" cy="160.0" r="3.0" fill="#A855F7" stroke="#FFFFFF" stroke-width="1"/>
+<text x="667.0" y="155.0" class="xs">C22</text>
+<circle cx="832.0" cy="450.0" r="3.0" fill="#C2542F" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="565.9" cy="501.7" r="2.6" fill="none" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2"/>
+<line x1="565.9" y1="501.7" x2="832.0" y2="450.0" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="838.0" y="445.0" class="xs">U5</text>
+<circle cx="832.0" cy="467.0" r="3.0" fill="#C2542F" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="553.2" cy="514.4" r="2.6" fill="none" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2"/>
+<line x1="553.2" y1="514.4" x2="832.0" y2="467.0" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="838.0" y="462.0" class="xs">U6</text>
+<path d="M 96.0 616.0 V 621.0" stroke="#94A3B8"/><text x="96.0" y="632.0" text-anchor="middle" class="xs m">0</text>
+<path d="M 196.0 616.0 V 621.0" stroke="#94A3B8"/><text x="196.0" y="632.0" text-anchor="middle" class="xs m">10</text>
+<path d="M 296.0 616.0 V 621.0" stroke="#94A3B8"/><text x="296.0" y="632.0" text-anchor="middle" class="xs m">20</text>
+<path d="M 396.0 616.0 V 621.0" stroke="#94A3B8"/><text x="396.0" y="632.0" text-anchor="middle" class="xs m">30</text>
+<path d="M 496.0 616.0 V 621.0" stroke="#94A3B8"/><text x="496.0" y="632.0" text-anchor="middle" class="xs m">40</text>
+<path d="M 596.0 616.0 V 621.0" stroke="#94A3B8"/><text x="596.0" y="632.0" text-anchor="middle" class="xs m">50</text>
+<path d="M 696.0 616.0 V 621.0" stroke="#94A3B8"/><text x="696.0" y="632.0" text-anchor="middle" class="xs m">60</text>
+<path d="M 796.0 616.0 V 621.0" stroke="#94A3B8"/><text x="796.0" y="632.0" text-anchor="middle" class="xs m">70</text>
+<path d="M 896.0 616.0 V 621.0" stroke="#94A3B8"/><text x="896.0" y="632.0" text-anchor="middle" class="xs m">80</text>
+<path d="M 96.0 616.0 H 91.0" stroke="#94A3B8"/><text x="87.0" y="619.0" text-anchor="end" class="xs m">0</text>
+<path d="M 96.0 516.0 H 91.0" stroke="#94A3B8"/><text x="87.0" y="519.0" text-anchor="end" class="xs m">10</text>
+<path d="M 96.0 416.0 H 91.0" stroke="#94A3B8"/><text x="87.0" y="419.0" text-anchor="end" class="xs m">20</text>
+<path d="M 96.0 316.0 H 91.0" stroke="#94A3B8"/><text x="87.0" y="319.0" text-anchor="end" class="xs m">30</text>
+<path d="M 96.0 216.0 H 91.0" stroke="#94A3B8"/><text x="87.0" y="219.0" text-anchor="end" class="xs m">40</text>
+<path d="M 96.0 116.0 H 91.0" stroke="#94A3B8"/><text x="87.0" y="119.0" text-anchor="end" class="xs m">50</text>
+<text x="1010" y="108" font-size="15" font-weight="bold">方案要点</text>
+<text x="1010" y="130" class="s">USB：右边缘中部，插口朝 +x</text>
+<text x="1010" y="151" class="s">缺口 9.24 × 6.5 mm（对齐 GCT 焊接区宽度）</text>
+<text x="1010" y="172" class="s">J1 (78.5, 16.0)，信号焊盘在 x≈75.95</text>
+<text x="1010" y="193" class="s">U1 (65.0, 8.0) 转 180°，天线朝下板边</text>
+<text x="1010" y="214" class="s">天线净空 x 59.75–70.25, y 0.25–2.55</text>
+<text x="1010" y="235" class="s">USB ESD / CC / VBUS 群集中到 J1 左侧</text>
+<text x="1010" y="268" font-size="15" font-weight="bold">三键与显示</text>
+<text x="1010" y="290" class="s">三键 x=38.1，等距 5.90 mm，间隙 0.70 mm</text>
+<text x="1010" y="311" class="s">距下板边 0.70 mm；整列避开屏幕包络</text>
+<text x="1010" y="332" class="s">屏幕包络上移 1.30 mm 到 y 18.3–50.2</text>
+<text x="1010" y="353" class="s">C8 由 (33.0, 17.8) 移到 (42.0, 20.5)</text>
+<text x="1010" y="386" font-size="15" font-weight="bold">原生 DRC 对照</text>
+<text x="1010" y="408" class="s">E15 基线 220 → 现在 213</text>
+<text x="1010" y="429" class="s">普通间距 8 → 1（剩余为既有测试点冲突）</text>
+<text x="1010" y="450" class="s">同封装 12 项不变（槽边 0.20 mm 名义值）</text>
+<text x="1010" y="471" class="s">锚脚落入缺口的问题已消除，无新增错误</text>
+<text x="1010" y="504" font-size="15" font-weight="bold">下一步</text>
+<text x="1010" y="526" class="s">1. USB CC → DP/DM → VBUS → GND 布线</text>
+<text x="1010" y="547" class="s">2. 连接器三维复核外壳与缺口法兰</text>
+<text x="1010" y="568" class="s">3. 外壳右壁开孔 + NFC 馈线规划</text>
+<text x="1010" y="596" font-size="15" font-weight="bold">图例</text>
+<circle cx="1018" cy="616" r="5" fill="#C2542F"/>
+<text x="1030" y="620" class="s">USB / ESD / CC</text>
+<circle cx="1018" cy="638" r="5" fill="#A855F7"/>
+<text x="1030" y="642" class="s">充电与去耦</text>
+<circle cx="1018" cy="660" r="5" fill="#0F766E"/>
+<text x="1030" y="664" class="s">屏幕 FPC / EPD 电源</text>
+<circle cx="1018" cy="682" r="5" fill="#1D4ED8"/>
+<text x="1030" y="686" class="s">U1 主控（天线朝下）</text>
+<circle cx="1018" cy="704" r="5" fill="#D97706"/>
+<text x="1030" y="708" class="s">三键</text>
+<circle cx="1018" cy="742" r="2.6" fill="none" stroke="#94A3B8" stroke-width="1" stroke-dasharray="2 2"/>
+<text x="1030" y="746" class="s">虚线空圈 = 移动前位置</text>
+<text x="96" y="678" class="m">E16 right-mid USB + three-key respacing · applied to the E16 sheet · review only · not a manufacturing export</text>
 </svg>

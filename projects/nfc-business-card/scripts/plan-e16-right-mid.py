@@ -43,6 +43,12 @@ PLAN = {
     "R2": (71.90, 17.75, 0),
     "C1": (73.60, 12.60, 0),
     "C3": (71.90, 20.60, 0),
+    # button column: even 5.90 mm pitch, 0.70 mm gaps, 0.70 mm bottom margin
+    "SW1": (38.10, 3.30, 0),
+    "SW2": (38.10, 9.20, 0),
+    "SW3": (38.10, 15.10, 0),
+    # VBUS bulk cap moved off the button column and next to the charger input
+    "C8": (42.00, 20.50, 0),
 }
 
 NFC_KEEPOUT_MM = (60.0, 24.0, 82.0, 50.0)
@@ -238,9 +244,11 @@ plan_json = {
         "pcb_edge_to_origin_mm": 1.025,
         "origin_mm": [78.525, USB_CENTER_Y_MM],
         "opening": "+x",
+        "display_envelope_mm": [2.0, 18.3, 39.42, 50.2],
         "note": "notch inner edge 1.025 mm in front of the footprint origin; height 9.24 mm follows the GCT recommended-layout solder-area width so the anchor pads stay on the board flanges",
     },
     "moved_components": {ref: {"x_mm": p["x"], "y_mm": p["y"], "rotation_deg": p["rotation"]} for ref, p in placed.items() if p["moved"]},
+    "button_layout": {"pitch_mm": 5.9, "gap_mm": 0.7, "bottom_margin_mm": 0.7, "x_mm": 38.1},
     "antenna_keepout_mm": [round(v, 2) for v in antenna_keepout(placed["U1"])],
     "checks": {
         "new_issue_count": len(new_issues),

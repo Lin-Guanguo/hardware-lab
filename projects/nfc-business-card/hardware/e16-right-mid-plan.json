@@ -56,9 +56,20 @@
       16.0
     ],
     "opening": "+x",
+    "display_envelope_mm": [
+      2.0,
+      18.3,
+      39.42,
+      50.2
+    ],
     "note": "notch inner edge 1.025 mm in front of the footprint origin; height 9.24 mm follows the GCT recommended-layout solder-area width so the anchor pads stay on the board flanges"
   },
   "moved_components": {
+    "SW1": {
+      "x_mm": 38.1,
+      "y_mm": 3.3,
+      "rotation_deg": 0
+    },
     "J1": {
       "x_mm": 78.53,
       "y_mm": 16.0,
@@ -84,6 +95,11 @@
       "y_mm": 17.75,
       "rotation_deg": 0
     },
+    "SW2": {
+      "x_mm": 38.1,
+      "y_mm": 9.2,
+      "rotation_deg": 0
+    },
     "U5": {
       "x_mm": 73.6,
       "y_mm": 16.6,
@@ -104,6 +120,16 @@
       "y_mm": 17.2,
       "rotation_deg": 0
     },
+    "SW3": {
+      "x_mm": 38.1,
+      "y_mm": 15.1,
+      "rotation_deg": 0
+    },
+    "C8": {
+      "x_mm": 42.0,
+      "y_mm": 20.5,
+      "rotation_deg": 0
+    },
     "C7": {
       "x_mm": 65.8,
       "y_mm": 17.2,
@@ -114,6 +140,12 @@
       "y_mm": 20.6,
       "rotation_deg": 0
     }
+  },
+  "button_layout": {
+    "pitch_mm": 5.9,
+    "gap_mm": 0.7,
+    "bottom_margin_mm": 0.7,
+    "x_mm": 38.1
   },
   "antenna_keepout_mm": [
     59.75,

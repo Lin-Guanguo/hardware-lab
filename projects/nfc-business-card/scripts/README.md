@@ -6,7 +6,22 @@
 
 新的 PCB 开工入口是 [E15 清理版 PCB 开工记录](../hardware/pcb-e15-clean-layout.md)。E15 图页位于 E14 `.eprj2` 工程内；其审查快照由 [generate-e15-clean-layout-svg.py](generate-e15-clean-layout-svg.py) 从保存后的 E15 数据生成。该脚本只渲染审查图，不修改 EasyEDA 工程。
 
-右侧中部 USB 方向由 [E16 布局方案](../hardware/pcb-e16-usb-right-mid.md) 推进：[plan-e16-right-mid.py](plan-e16-right-mid.py) 用 E15 快照的真实焊盘坐标比较"原布局 / 新方案"的焊盘、模块外形、NFC 保留区和天线净空，输出 [e16-right-mid-plan.json](../hardware/e16-right-mid-plan.json)；[generate-e16-right-mid-svg.py](generate-e16-right-mid-svg.py) 由该方案生成审查图。两个脚本都只做离线校验与绘图，不修改 EasyEDA 工程。
+右侧中部 USB 方向由 [E16 布局方案](../hardware/pcb-e16-usb-right-mid.md) 推进：[plan-e16-right-mid.py](plan-e16-right-mid.py) 用 E15 快照的真实焊盘坐标比较"原布局 / 新方案"的焊盘、模块外形、NFC 保留区和天线净空，输出 [e16-right-mid-plan.json](../hardware/e16-right-mid-plan.json)；[generate-e16-right-mid-svg.py](generate-e16-right-mid-svg.py) 直接读取 [e16-right-mid-snapshot.json](../hardware/e16-right-mid-snapshot.json) 画当前审查图（L 形板框、两键、禁布区与显示包络）。快照用 [eda-export-e16-snapshot.js](eda-export-e16-snapshot.js) 从 E16 图页重新导出，否则图会停在旧状态：
+
+```sh
+node projects/nfc-business-card/scripts/eda-exec-wait.mjs \
+  projects/nfc-business-card/scripts/eda-export-e16-snapshot.js 60000 > /tmp/snap.json
+python3 -c "import json,pathlib;d=json.load(open('/tmp/snap.json'))['result'];p=pathlib.Path('projects/nfc-business-card/hardware/e16-right-mid-snapshot.json');p.write_text(json.dumps(d,indent=1,ensure_ascii=False)+chr(10))"
+python3 projects/nfc-business-card/scripts/generate-e16-right-mid-svg.py
+```
+
+原理图与 PCB 的一致性用逐引脚比对核实：[eda-export-pcb-pins.js](eda-export-pcb-pins.js) 导出 PCB 焊盘网络，[check-netlist-consistency.py](check-netlist-consistency.py) 与原理图导出的 netlist 做双向差集（当前 55 位号 / 230 引脚 / 0 处差异）：
+
+```sh
+node projects/nfc-business-card/scripts/eda-exec-wait.mjs \
+  projects/nfc-business-card/scripts/eda-export-pcb-pins.js 60000 > /tmp/pcb-pins.json
+python3 projects/nfc-business-card/scripts/check-netlist-consistency.py --sch /tmp/sch-netlist.enet --pcb /tmp/pcb-pins.json
+```
 
 [pcb-maze-router.py](pcb-maze-router.py) 是补线阶段用的离线两层迷宫布线器。输入一份几何快照（`pcb_PrimitiveLine` / `pcb_PrimitiveVia` / `pcb_PrimitivePad` 的坐标，单位 mil）和任务表（`[网络, 起点, [目标...]]`，单位 mm），按实际设计规则做障碍扩张后用矢量桶队列 Dijkstra 求路径，输出线段与过孔清单；`--rip` 可先剔除挡路的既有线段，`--pen` 控制拥塞代价让多条线并行挤同一走廊，`--width` 调整线宽。它只写 JSON，改工程由单独的 EasyEDA 脚本完成：
 
@@ -20,7 +35,7 @@ E14 实际平面图由 [generate-e14-eda-layout-svg.py](generate-e14-eda-layout-
 
 外壳坐标协调样件由 [e14-enclosure-v2-eda-coordinate.py](../enclosure/e14-enclosure-v2-eda-coordinate.py) 生成；复核使用 [check-e14-enclosure-v2.py](check-e14-enclosure-v2.py)。V2 将 USB 开口放在 E14 实际 J1 所在的 y=0 边，只用于解决 PCB/外壳坐标关系。
 
-按键至少保证两颗，空间允许时可保留第三颗；当前宏和归档模型仍生成三个按键位置，尚未调整几何或实现菜单固件。
+按键已收敛为**两颗**（SW1 y=3.30 / SW3 y=15.10，中心距 11.80 mm，本体间隙 6.60 mm），原第三颗 SW2 已从原理图与 PCB 删除，外壳 V3 只开两个键孔；菜单仍按两键（一级/二级切换）定义。
 
 E14 模型可直接复现：`/Applications/FreeCAD.app/Contents/Resources/bin/freecadcmd projects/nfc-business-card/enclosure/e14-layout-study.py`；几何检查使用 `freecad-study.py check`，视觉检查使用一次 GUI 预览。统一输出到新目录或新文件，保留已有模型；不覆盖其他窗口中的手工或未保存修改。
 

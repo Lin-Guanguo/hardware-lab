@@ -66,6 +66,54 @@ render(BASE/'nfc-card-e16-bottom-v3.stl', (120, 150, 185), d, 6.2, 400, 300)
 render(BASE/'nfc-card-e16-top-v3.stl', (150, 178, 210), d, 6.2, 1010, 300)
 d.text((40, 30), 'E16 enclosure V3 - bottom (left) and top (right), shaded isometric from STL', fill=(30, 45, 65))
 d.text((40, 55), 'outer 84 x 52 x 4.5, L-shaped PCB with the 33.5 x 15 battery bite', fill=(80, 95, 115))
-d.text((40, 78), 'top: screen window + three key holes; the bite is open so the cell rests on the bottom plate', fill=(80, 95, 115))
+d.text((40, 78), 'top: screen window + two key holes; the bite is open so the cell rests on the bottom plate', fill=(80, 95, 115))
 img.save(OUT/'e16-enclosure-v3-iso.png')
 print('saved', OUT/'e16-enclosure-v3-iso.png')
+
+
+def render_top(path, color, draw_on, scale, ox, oy):
+    """Orthographic top view: x to the right, y up the image, shaded by normal z."""
+    tris = read_stl(path)
+    shade = []
+    for t in tris:
+        (x1, y1, z1), (x2, y2, z2), (x3, y3, z3) = t
+        ux, uy, uz = x2 - x1, y2 - y1, z2 - z1
+        vx, vy, vz = x3 - x1, y3 - y1, z3 - z1
+        nx, ny, nz = uy * vz - uz * vy, uz * vx - ux * vz, ux * vy - uy * vx
+        n = math.sqrt(nx * nx + ny * ny + nz * nz) or 1
+        lum = max(0.3, min(1.0, 0.5 + 0.5 * abs(nz / n)))
+        shade.append(((z1 + z2 + z3) / 3, lum, t))
+    shade.sort(key=lambda s: s[0])
+    for _, lum, t in shade:
+        pts = [(ox + p[0] * scale, oy - p[1] * scale) for p in t]
+        draw_on.polygon(pts, fill=tuple(int(ch * lum) for ch in color))
+
+
+top = Image.new('RGB', (1500, 620), 'white')
+td = ImageDraw.Draw(top)
+SCALE, TOX, TOY = 9.6, 250, 598.0
+render_top(BASE / 'nfc-card-e16-top-v3.stl', (150, 178, 210), td, SCALE, TOX, TOY)
+
+
+def tpt(x, y):
+    return (TOX + x * SCALE, TOY - y * SCALE)
+
+
+def trect(x0, y0, x1, y1):
+    return [tpt(x0, y1), tpt(x1, y0)]
+
+
+td.rectangle(trect(0, 0, 84, 52), outline=(120, 135, 155), width=2)
+td.rectangle(trect(0, 0, 33.5, 15), outline=(150, 162, 178))
+td.text(tpt(4, 1.2), 'battery bite 33.5 x 15 (open)', fill=(110, 125, 145))
+td.rectangle(trect(4.0, 20.3, 31.8, 48.1), outline=(20, 110, 100), width=2)
+td.text(tpt(5.5, 24.0), 'screen window 27.8 x 27.8', fill=(20, 110, 100))
+for label, y in [('KEY 1', 3.3), ('KEY 2', 15.1)]:
+    cx, cy = tpt(38.1, y)
+    td.ellipse([cx - 18, cy - 18, cx + 18, cy + 18], outline=(217, 119, 6), width=2)
+    td.text((cx + 26, cy - 6), f'{label}  y={y:.1f}', fill=(180, 90, 0))
+td.text((40, 30), 'E16 enclosure V3 - top shell seen from the front face (orthographic)', fill=(30, 45, 65))
+td.text((40, 55), 'two key holes on x = 38.1 at y = 3.3 / 15.1 mm; screen window x 4.0-31.8, y 20.3-48.1', fill=(80, 95, 115))
+td.text((40, 78), 'the lower-left bite stays open so the cell sits on the bottom plate', fill=(80, 95, 115))
+top.save(OUT / 'e16-enclosure-v3-top.png')
+print('saved', OUT / 'e16-enclosure-v3-top.png')

@@ -28,7 +28,7 @@ NFC_KEEP_OUT = (60.0, 24.0, 82.0, 50.0)   # 9d23f6bb076fa2f0
 U1_ANTENNA_KEEP_OUT = (59.7, 0.2, 70.3, 2.5)  # d49ece88915402a1
 
 # Two keys, SW1 (top) and SW3 (bottom), both on x = 38.1.
-KEY_REFS = ("SW1", "SW3")
+KEY_REFS = ("SW1", "SW2", "SW3")
 
 cur = json.loads(SNAPSHOT.read_text())
 
@@ -53,7 +53,7 @@ LEGEND = [
     ("Power", "充电与去耦"),
     ("EPD/FPC", "屏幕 FPC / EPD 电源"),
     ("MCU", "U1 主控（天线朝下）"),
-    ("Buttons", "两键（SW1 / SW3）"),
+    ("Buttons", "三键（SW1 / SW2 / SW3）"),
 ]
 
 
@@ -115,13 +115,18 @@ def body(ref, cx, cy):
 
 keys = {c["ref"]: (c["x"] / MIL, c["y"] / MIL) for c in cur["components"] if c["ref"] in KEY_REFS}
 key_pitch = keys["SW3"][1] - keys["SW1"][1]
+if "SW2" in keys:
+    tri = {other: ((keys["SW2"][0] - keys[other][0]) ** 2 + (keys["SW2"][1] - keys[other][1]) ** 2) ** 0.5
+           for other in ("SW1", "SW3")}
+else:
+    tri = {}
 refs = sorted(c["ref"] for c in cur["components"])
 
 parts = [
     '<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="%d" viewBox="0 0 %d %d">' % (CANVAS_W, CANVAS_H, CANVAS_W, CANVAS_H),
     '<rect width="%d" height="%d" fill="#F7F9FC"/>' % (CANVAS_W, CANVAS_H),
     '<style>text{font-family:Arial,"PingFang SC",sans-serif;fill:#172B41}.t{font-size:13px}.s{font-size:11.5px}.m{fill:#52657B}.xs{font-size:9.5px}.b{font-weight:bold}</style>',
-    '<text x="36" y="34" font-size="25" font-weight="bold">E16 · 右侧中部 USB · L 形板框 · 两键</text>',
+    '<text x="36" y="34" font-size="25" font-weight="bold">E16 · 右侧中部 USB · L 形板框 · 三键（方案 B）</text>',
     '<text x="36" y="57" class="m">来源：E16 图页实时快照（%s）；1 mm = 10 px，Y 轴向上为板面正视</text>' % html.escape(SNAPSHOT.name),
 ]
 
@@ -229,12 +234,11 @@ if key_pitch:
             dim_x, dy(keys["SW1"][1]), dy(keys["SW3"][1]),
         )
     )
+    label = "键列中心距 %.2f mm" % key_pitch
+    if tri:
+        label += "；SW2 到 SW1/SW3 %.1f / %.1f mm" % (tri["SW1"], tri["SW3"])
     parts.append(
-        '<text x="%.1f" y="%.1f" class="s b" fill="#B45309">两键中心距 %.2f mm</text>' % (dim_x + 12, dy((keys["SW1"][1] + keys["SW3"][1]) / 2) + 4, key_pitch)
-    )
-    parts.append(
-        '<text x="%.1f" y="%.1f" class="xs" fill="#B45309">本体间隙 %.2f mm（原三键只剩 0.70 mm）</text>'
-        % (dim_x + 12, dy((keys["SW1"][1] + keys["SW3"][1]) / 2) + 20, key_pitch - 5.2)
+        '<text x="%.1f" y="%.1f" class="s b" fill="#B45309">%s</text>' % (dim_x + 12, dy((keys["SW1"][1] + keys["SW3"][1]) / 2) + 26, label)
     )
 
 # Coordinate ticks.
@@ -258,13 +262,14 @@ panel = [
     ("t", "板框：84 × 52 的 L 形，左下 33.5 × 15 mm 电池挖空"),
     ("t", "挖空对 30 × 12 电芯留 3.5 × 3 mm 余量"),
     ("t", "NFC 保留区 x 60–82 / y 24–50，双面零铜"),
-    ("h", "按键"),
-    ("t", "两颗 KEY-SMD_4P：SW1 y=3.30、SW3 y=15.10"),
-    ("t", "中心距 %.2f mm，本体间隙 %.2f mm" % (key_pitch, key_pitch - 5.2)),
-    ("t", "键列 x=38.1，落在屏幕包络 y≥18.3 之下"),
-    ("t", "外壳开孔与键列同 x，孔径沿用原设计"),
+    ("h", "按键（三颗，方案 B）"),
+    ("t", "SW1 (38.1, 3.30)、SW3 (38.1, 15.10) 原位不动"),
+    ("t", "新增 SW2 (46.3, 8.80)，到 SW1/SW3 %.1f / %.1f mm" % (tri.get("SW1", 0), tri.get("SW3", 0))),
+    ("t", "SW2 上排 1/2 脚接 KEY_NEXT_N，下排 3/4 脚接 GND"),
+    ("t", "键列纵向中心距 %.2f mm，本体间隙 %.2f mm" % (key_pitch, key_pitch - 5.2)),
+    ("t", "外壳 V7 三个 Ø4.6 孔 + 三个齐平键帽"),
     ("h", "参考数据"),
-    ("t", "%d 个位号（SW2 于 2026-09-23 删除）" % len(refs)),
+    ("t", "%d 个位号（2026-09-23 加回第三颗）" % len(refs)),
     ("t", "%d 段铜线 · %d 个过孔 · 两层 GND 覆铜" % (len(cur["lines"]), len(cur["vias"]))),
     ("t", "原生 DRC：普通间距 0、连接 0"),
     ("t", "仅 12 项既有 J1 沉板槽边告警（7.9 mil）"),
@@ -288,7 +293,7 @@ for i, (key, label) in enumerate(LEGEND):
 
 parts.extend(
     [
-        '<text x="%.0f" y="%.0f" class="m">E16 right-mid USB · L-shaped outline · two keys · review only · not a manufacturing export</text>'
+        '<text x="%.0f" y="%.0f" class="m">E16 right-mid USB · L-shaped outline · three keys (SW1/SW2/SW3) · review only · not a manufacturing export</text>'
         % (dx(0), dy(0) + 62),
         "</svg>",
     ]

@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1460" height="900" viewBox="0 0 1460 900">
 <rect width="1460" height="900" fill="#F7F9FC"/>
 <style>text{font-family:Arial,"PingFang SC",sans-serif;fill:#172B41}.t{font-size:13px}.s{font-size:11.5px}.m{fill:#52657B}.xs{font-size:9.5px}.b{font-weight:bold}</style>
-<text x="36" y="34" font-size="25" font-weight="bold">E16 · 右侧中部 USB · L 形板框 · 两键</text>
+<text x="36" y="34" font-size="25" font-weight="bold">E16 · 右侧中部 USB · L 形板框 · 三键（方案 B）</text>
 <text x="36" y="57" class="m">来源：E16 图页实时快照（e16-right-mid-snapshot.json）；1 mm = 10 px，Y 轴向上为板面正视</text>
 <path d="M 96.0 616.0 L 96.0 96.0 L 936.0 96.0 L 936.0 616.0 L 96.0 616.0 Z" fill="none" stroke="#94A3B8" stroke-width="1.4" stroke-dasharray="6 4"/>
 <text x="100" y="660" class="xs m">灰色虚线 = 84 × 52 参考板框（当前板框是 L 形）</text>
@@ -27,6 +27,7 @@
 <path d="M 693.5 613.5 L 798.5 613.5 L 798.5 458.5 L 693.5 458.5 Z" fill="#1D4ED8" fill-opacity="0.22" stroke="#1D4ED8" stroke-width="1.8"/>
 <path d="M 566.3 308.5 L 656.3 308.5 L 656.3 243.5 L 566.3 243.5 Z" fill="#0F766E" fill-opacity="0.22" stroke="#0F766E" stroke-width="1.8"/>
 <path d="M 366.0 321.0 L 396.0 321.0 L 396.0 291.0 L 366.0 291.0 Z" fill="#0F766E" fill-opacity="0.22" stroke="#0F766E" stroke-width="1.8"/>
+<path d="M 533.0 554.0 L 585.0 554.0 L 585.0 502.0 L 533.0 502.0 Z" fill="#D97706" fill-opacity="0.22" stroke="#D97706" stroke-width="1.8"/>
 <path d="M 936.0 512.2 H 980.0 M 936.0 399.8 H 980.0" stroke="#C2542F" stroke-width="1.1" stroke-dasharray="4 3"/>
 <circle cx="832.0" cy="490.0" r="3.0" fill="#A855F7" stroke="#FFFFFF" stroke-width="1"/>
 <text x="838.0" y="485.0" class="xs">C1</text>
@@ -138,9 +139,10 @@
 <text x="838.0" y="445.0" class="xs">U5</text>
 <circle cx="832.0" cy="467.0" r="3.0" fill="#C2542F" stroke="#FFFFFF" stroke-width="1"/>
 <text x="838.0" y="462.0" class="xs">U6</text>
+<circle cx="559.0" cy="528.0" r="3.0" fill="#D97706" stroke="#FFFFFF" stroke-width="1"/>
+<text x="565.0" y="523.0" class="xs">SW2</text>
 <path d="M 535.0 583.0 H 507.0 M 535.0 465.0 H 507.0 M 535.0 583.0 V 465.0" stroke="#D97706" stroke-width="1.2"/>
-<text x="547.0" y="528.0" class="s b" fill="#B45309">两键中心距 11.80 mm</text>
-<text x="547.0" y="544.0" class="xs" fill="#B45309">本体间隙 6.60 mm（原三键只剩 0.70 mm）</text>
+<text x="547.0" y="550.0" class="s b" fill="#B45309">键列中心距 11.80 mm；SW2 到 SW1/SW3 9.9 / 10.3 mm</text>
 <path d="M 96.0 616.0 V 621.0" stroke="#94A3B8"/><text x="96.0" y="632.0" text-anchor="middle" class="xs m">0</text>
 <path d="M 196.0 616.0 V 621.0" stroke="#94A3B8"/><text x="196.0" y="632.0" text-anchor="middle" class="xs m">10</text>
 <path d="M 296.0 616.0 V 621.0" stroke="#94A3B8"/><text x="296.0" y="632.0" text-anchor="middle" class="xs m">20</text>
@@ -163,16 +165,17 @@
 <text x="1010" y="193" class="s">板框：84 × 52 的 L 形，左下 33.5 × 15 mm 电池挖空</text>
 <text x="1010" y="214" class="s">挖空对 30 × 12 电芯留 3.5 × 3 mm 余量</text>
 <text x="1010" y="235" class="s">NFC 保留区 x 60–82 / y 24–50，双面零铜</text>
-<text x="1010" y="268" font-size="15" font-weight="bold">按键</text>
-<text x="1010" y="290" class="s">两颗 KEY-SMD_4P：SW1 y=3.30、SW3 y=15.10</text>
-<text x="1010" y="311" class="s">中心距 11.80 mm，本体间隙 6.60 mm</text>
-<text x="1010" y="332" class="s">键列 x=38.1，落在屏幕包络 y≥18.3 之下</text>
-<text x="1010" y="353" class="s">外壳开孔与键列同 x，孔径沿用原设计</text>
-<text x="1010" y="386" font-size="15" font-weight="bold">参考数据</text>
-<text x="1010" y="408" class="s">55 个位号（SW2 于 2026-09-23 删除）</text>
-<text x="1010" y="429" class="s">778 段铜线 · 162 个过孔 · 两层 GND 覆铜</text>
-<text x="1010" y="450" class="s">原生 DRC：普通间距 0、连接 0</text>
-<text x="1010" y="471" class="s">仅 12 项既有 J1 沉板槽边告警（7.9 mil）</text>
+<text x="1010" y="268" font-size="15" font-weight="bold">按键（三颗，方案 B）</text>
+<text x="1010" y="290" class="s">SW1 (38.1, 3.30)、SW3 (38.1, 15.10) 原位不动</text>
+<text x="1010" y="311" class="s">新增 SW2 (46.3, 8.80)，到 SW1/SW3 9.9 / 10.3 mm</text>
+<text x="1010" y="332" class="s">SW2 上排 1/2 脚接 KEY_NEXT_N，下排 3/4 脚接 GND</text>
+<text x="1010" y="353" class="s">键列纵向中心距 11.80 mm，本体间隙 6.60 mm</text>
+<text x="1010" y="374" class="s">外壳 V7 三个 Ø4.6 孔 + 三个齐平键帽</text>
+<text x="1010" y="407" font-size="15" font-weight="bold">参考数据</text>
+<text x="1010" y="429" class="s">56 个位号（2026-09-23 加回第三颗）</text>
+<text x="1010" y="450" class="s">781 段铜线 · 162 个过孔 · 两层 GND 覆铜</text>
+<text x="1010" y="471" class="s">原生 DRC：普通间距 0、连接 0</text>
+<text x="1010" y="492" class="s">仅 12 项既有 J1 沉板槽边告警（7.9 mil）</text>
 <text x="1010" y="560" font-size="15" font-weight="bold">图例</text>
 <circle cx="1018" cy="580" r="5" fill="#C2542F"/>
 <text x="1030" y="584" class="s">USB / ESD / CC</text>
@@ -183,6 +186,6 @@
 <circle cx="1018" cy="646" r="5" fill="#1D4ED8"/>
 <text x="1030" y="650" class="s">U1 主控（天线朝下）</text>
 <circle cx="1018" cy="668" r="5" fill="#D97706"/>
-<text x="1030" y="672" class="s">两键（SW1 / SW3）</text>
-<text x="96" y="678" class="m">E16 right-mid USB · L-shaped outline · two keys · review only · not a manufacturing export</text>
+<text x="1030" y="672" class="s">三键（SW1 / SW2 / SW3）</text>
+<text x="96" y="678" class="m">E16 right-mid USB · L-shaped outline · three keys (SW1/SW2/SW3) · review only · not a manufacturing export</text>
 </svg>

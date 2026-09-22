@@ -74,6 +74,16 @@ curl --fail --silent http://127.0.0.1:49620/eda-windows
 4. 扩展侧恢复：EasyEDA 里 **高级 → 扩展管理器 → Run API Gateway 先禁用再启用**（只重启应用有时不够），并确认"允许外部交互"仍是勾选状态；同时**只保留一个编辑器窗口/标签页**，两个图页标签会各注册一次连接。
 5. 探针命令：`node scripts/eda-exec-wait.mjs /tmp/eda-ping.js 60000`，其中 ping 脚本内容为 `return { ok: true };`。拿到 `"ok":true` 才算通道可用。
 
+### 重连周期的判定（2026-09-22）
+
+对桥接做了两项修复并实测：
+
+- **响应双写已消除**：全部 HTTP 响应改走 `sendJson(res, status, payload)`（检查 `headersSent`/`writableEnded`，写失败只记一行不再抛），`logs/easyeda-bridge.err` 里 `Cannot write headers after they are sent` **保持 2 条不再增长**，`ERR_HTTP_HEADERS_SENT` 崩溃计数保持 0。
+- **保活与新鲜度**：服务端每 5 秒向 EDA 连接发 ping，并记录每条连接的 `lastSeenAt`；`/eda-windows` 增加 `lastSeenMsAgo`/`stale` 字段，`/eda-windows/select` 与 `/execute` 在指定窗口超过 30 秒未回应时**自动改用最近有消息的窗口**。
+- 安装脚本：新增 `--no-login-start` 与 `--quiet`（后者注入 `EDA_BRIDGE_QUIET=1` 降噪），端口/作业冲突自检（49620 被非本作业占用时明确中止），node 路径失效时给出可读报错，日志超过 5 MB 自动轮转，`~/Library/LaunchAgents/*.bak-*` 只保留最近 2 份。连续执行两次输出一致、备份不新增。
+
+**仍未解决**：扩展侧仍以约每 6–9 秒一次、断开码 **1005**（客户端主动关、无状态码）的节奏重连；实测把服务端心跳从 5 秒一次改成 20 秒空闲阈值都没有改变这个节奏，PID、ping 可用性、单监听者都正常，说明**这不是桥接踢连接**。断开码 1005 说明是扩展自己在关闭 socket，服务端无法阻止。合理怀疑是昨天那轮"桥接崩溃循环"（102 条崩溃栈、36 次启动）把扩展的重连状态带坏了——**建议完全退出 EasyEDA 再打开一次**，只保留一个编辑器窗口，然后观察 `bridge-status.sh` 的 reconnects 计数是否停止增长。
+
 ### 客户端与启动命令
 
 封装只读核对可使用 `sys_FileManager.getFootprintFileByFootprintUuid(uuid, libraryUuid, 'elibz2')` 导出库文件，解包后读取 `.elibu` 源数据；本机已验证 FPC-05FB-24PH20。系统库 `lib_Footprint.openInEditor()` 返回空值时可用此路径，无需为读焊盘反复新建测试工程。库导出不等于封装已通过制造审核；单位按 PCB 的 mil 换算，接口签名仍以当前 Skill 为准。

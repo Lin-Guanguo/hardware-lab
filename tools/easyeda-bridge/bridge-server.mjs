@@ -32,6 +32,20 @@
 
 import { WebSocketServer } from 'ws';
 // ── local patch: never let serialization or stray errors kill the bridge ──
+const QUIET = process.env.EDA_BRIDGE_QUIET === '1';
+const logInfo = (...args) => { if (!QUIET) console.log(...args); };
+
+/** Write one JSON response. Never writes headers after they were sent. */
+function sendJson(res, status, payload) {
+  try {
+    if (res.writableEnded) return;
+    if (!res.headersSent) res.writeHead(status, { 'Content-Type': 'application/json' });
+    res.end(safeJson(payload));
+  } catch (err) {
+    logInfo('[HTTP] response already gone:', err.message);
+  }
+}
+
 function safeJson(value) {
   const seen = new WeakSet();
   try {
@@ -72,6 +86,22 @@ function formatBannerLine(label, value) {
 // ─── State ──────────────────────────────────────────────────────────
 /** @type {Map<string, import('ws').WebSocket>} EDA window ID -> WebSocket */
 const edaClients = new Map();
+const edaMeta = new Map(); // windowId -> { registeredAt, lastSeenAt, lastId }
+
+const STALE_AFTER_MS = 30000;
+
+/** Pick the freshest live EDA window (optionally ignoring one). */
+function freshestWindowId(exceptId) {
+  let best = null;
+  let bestSeen = -1;
+  for (const [windowId, ws] of edaClients) {
+    if (ws.readyState !== 1) continue;
+    if (exceptId && windowId === exceptId) continue;
+    const seen = edaMeta.get(windowId)?.lastSeenAt ?? 0;
+    if (seen > bestSeen) { bestSeen = seen; best = windowId; }
+  }
+  return best;
+}
 
 /** @type {Map<string, {resolve: Function, reject: Function, timer: NodeJS.Timeout}>} */
 const pendingRequests = new Map();
@@ -170,8 +200,7 @@ const httpServer = createServer(async (req, res) => {
 
   // Health check — includes service identifier for client handshake verification
   if (req.method === 'GET' && req.url === '/health') {
-    res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(safeJson({
+    sendJson(res, 200, {
       service: SERVICE_ID,
       status: 'ok',
       edaConnected: edaClients.size > 0,
@@ -179,26 +208,29 @@ const httpServer = createServer(async (req, res) => {
       activeWindowId: activeEdaWindowId,
       pendingRequests: pendingRequests.size,
       timestamp: Date.now(),
-    }));
+    });
     return;
   }
 
   // List all connected EDA windows
   if (req.method === 'GET' && req.url === '/eda-windows') {
-    res.writeHead(200, { 'Content-Type': 'application/json' });
     const windows = [];
     for (const [windowId, ws] of edaClients) {
+      const meta = edaMeta.get(windowId);
+      const seenAgo = meta ? Date.now() - meta.lastSeenAt : null;
       windows.push({
         windowId,
         connected: ws.readyState === 1,
         active: windowId === activeEdaWindowId,
+        lastSeenMsAgo: seenAgo,
+        stale: seenAgo === null || seenAgo > STALE_AFTER_MS,
       });
     }
-    res.end(safeJson({
+    sendJson(res, 200, {
       windows,
       activeWindowId: activeEdaWindowId,
       count: edaClients.size,
-    }));
+    });
     return;
   }
 
@@ -210,17 +242,16 @@ const httpServer = createServer(async (req, res) => {
       const payload = JSON.parse(body);
       const { windowId } = payload;
       if (!edaClients.has(windowId)) {
-        res.writeHead(404, { 'Content-Type': 'application/json' });
-        res.end(safeJson({ error: `EDA window "${windowId}" not found` }));
+        sendJson(res, 404, { error: `EDA window "${windowId}" not found` });
         return;
       }
-      activeEdaWindowId = windowId;
-      res.writeHead(200, { 'Content-Type': 'application/json' });
-      res.end(safeJson({ success: true, activeWindowId }));
+      const seen = edaMeta.get(windowId)?.lastSeenAt ?? 0;
+      const fresher = Date.now() - seen > STALE_AFTER_MS ? freshestWindowId(windowId) : null;
+      activeEdaWindowId = fresher ?? windowId;
+      sendJson(res, 200, { success: true, activeWindowId });
     }
     catch {
-      res.writeHead(400, { 'Content-Type': 'application/json' });
-      res.end(safeJson({ error: 'Invalid request body' }));
+      sendJson(res, 400, { error: 'Invalid request body' });
     }
     return;
   }
@@ -235,24 +266,20 @@ const httpServer = createServer(async (req, res) => {
       const code = payload.code;
       const windowId = payload.windowId; // optional, uses active window if not specified
       if (!code || typeof code !== 'string') {
-        res.writeHead(400, { 'Content-Type': 'application/json' });
-        res.end(safeJson({ error: 'Missing "code" field (string)' }));
+        sendJson(res, 400, { error: 'Missing "code" field (string)' });
         return;
       }
 
       const result = await executeOnEda(code, windowId);
-      res.writeHead(200, { 'Content-Type': 'application/json' });
-      res.end(safeJson({ success: true, result, windowId: windowId || activeEdaWindowId }));
+      sendJson(res, 200, { success: true, result, windowId: windowId || activeEdaWindowId });
     } catch (err) {
       const status = err.message?.includes('not connected') ? 503 : 500;
-      res.writeHead(status, { 'Content-Type': 'application/json' });
-      res.end(safeJson({ success: false, error: err.message }));
+      sendJson(res, status, { success: false, error: err.message });
     }
     return;
   }
 
-  res.writeHead(404, { 'Content-Type': 'application/json' });
-  res.end(safeJson({ error: 'Not found' }));
+  sendJson(res, 404, { error: 'Not found' });
 });
 
 // ─── WebSocket Server ───────────────────────────────────────────────
@@ -260,7 +287,7 @@ const wss = new WebSocketServer({ server: httpServer });
 
 wss.on('connection', (ws, req) => {
   const clientType = req.url === '/eda' ? 'eda' : 'agent';
-  console.log(`[WS] New ${clientType} connection from ${req.socket.remoteAddress}`);
+  logInfo(`[WS] New ${clientType} connection from ${req.socket.remoteAddress}`);
 
   // Send handshake message for client verification
   ws.send(safeJson({
@@ -276,15 +303,21 @@ wss.on('connection', (ws, req) => {
     ws.on('message', (raw) => {
       try {
         const msg = JSON.parse(raw.toString());
+        if (registeredWindowId && edaMeta.has(registeredWindowId)) {
+          const meta = edaMeta.get(registeredWindowId);
+          meta.lastSeenAt = Date.now();
+          meta.lastId = msg.id ?? meta.lastId;
+        }
         if (msg.type === 'register' && msg.windowId) {
           // EDA client registering with window ID
           registeredWindowId = msg.windowId;
           edaClients.set(registeredWindowId, ws);
+          edaMeta.set(registeredWindowId, { registeredAt: Date.now(), lastSeenAt: Date.now(), lastId: msg.id ?? null });
           // Auto-select if first window or if no active window
           if (edaClients.size === 1 || !activeEdaWindowId) {
             activeEdaWindowId = registeredWindowId;
           }
-          console.log(`[WS] EDA window registered: ${registeredWindowId}, total: ${edaClients.size}`);
+          logInfo(`[WS] EDA window registered: ${registeredWindowId}, total: ${edaClients.size}`);
           return;
         }
         // Always pass a valid windowId (use registeredWindowId if available, otherwise log warning)
@@ -296,9 +329,10 @@ wss.on('connection', (ws, req) => {
     });
 
     ws.on('close', (code, reason) => {
-      console.log(`[WS] EDA window disconnected: ${registeredWindowId} (${code} ${reason})`);
+      logInfo(`[WS] EDA window disconnected: ${registeredWindowId} (${code} ${reason})`);
       if (registeredWindowId) {
         edaClients.delete(registeredWindowId);
+        edaMeta.delete(registeredWindowId);
         if (activeEdaWindowId === registeredWindowId) {
           // Select another window if available
           activeEdaWindowId = edaClients.keys().next().value || null;
@@ -353,6 +387,23 @@ wss.on('connection', (ws, req) => {
   }
 });
 
+// ─── Keepalive ──────────────────────────────────────────────────────
+// The extension reconnects on its own cycle; a steady server-side ping keeps
+// the socket warm and refreshes lastSeenAt so /eda-windows/select can tell a
+// live window from a registration that has already gone away.
+const HEARTBEAT_MS = 5000;
+setInterval(() => {
+  const now = Date.now();
+  for (const [windowId, ws] of edaClients) {
+    if (ws.readyState !== 1) continue;
+    try {
+      ws.send(safeJson({ type: 'ping', id: `hb-${now}`, timestamp: now }));
+    } catch (err) {
+      logInfo(`[HB] ping failed for ${windowId}: ${err.message}`);
+    }
+  }
+}, HEARTBEAT_MS).unref?.();
+
 // ─── Core logic ─────────────────────────────────────────────────────
 
 /**
@@ -383,7 +434,15 @@ function sendToEda(windowId, msg) {
  */
 function executeOnEda(code, windowId) {
   return new Promise((resolve, reject) => {
-    const targetWindowId = windowId || activeEdaWindowId;
+    let targetWindowId = windowId || activeEdaWindowId;
+    if (targetWindowId) {
+      const seen = edaMeta.get(targetWindowId)?.lastSeenAt ?? 0;
+      if (Date.now() - seen > STALE_AFTER_MS) {
+        const fresher = freshestWindowId();
+        if (fresher) targetWindowId = fresher;
+      }
+    }
+    if (!targetWindowId) targetWindowId = freshestWindowId();
 
     if (!targetWindowId) {
       reject(new Error('No EDA window connected. Please connect an EDA window first.'));

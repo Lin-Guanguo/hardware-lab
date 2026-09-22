@@ -46,12 +46,31 @@
     ],
     "note": "connector sits in the board notch; the shells follow the notch so no wall slot is cut"
   },
-  "screen_window_mm": [
-    1.2,
-    17.5,
-    38.99,
-    33.6
-  ],
+  "screen": {
+    "module_mm": [
+      37.32,
+      31.8,
+      0.85
+    ],
+    "module_origin_mm": [
+      2.0,
+      18.3,
+      3.15
+    ],
+    "active_area_mm": [
+      4.4,
+      20.7,
+      27.0,
+      27.0
+    ],
+    "window_mm": [
+      4.0,
+      20.3,
+      27.8,
+      27.8
+    ],
+    "source": "GDEH0154E01 mechanical drawing: 37.32 x 31.8 x 0.85, 27x27 active with 2.4 mm borders"
+  },
   "button_holes_y_mm": [
     3.3,
     9.2,
@@ -77,6 +96,7 @@
     "Battery is placed on the PCB top face as a 30 x 12 x 3 mm nominal target; supplier maximum, adhesive, swelling and lead bend are unverified.",
     "The 5.0 mm stack needs 0.4/0.5 mm printed plates; a thicker plate or a bigger cell pushes the card past 5.0 mm.",
     "Connector envelope (x 76.7-83.2, y 10.22-21.77, z 0-3.17 over the board) is measured from the STEP export of the saved board, so the mating face sits 0.8 mm inside the board edge; confirm against the part in hand.",
-    "Key caps, screen bonding, USB plug strain relief, ledge bonding and wall tolerances need physical samples."
+    "Key caps, screen bonding, USB plug strain relief, ledge bonding and wall tolerances need physical samples.",
+    "The panel sits 1.51 mm above the PCB top (measured from the STEP export of the tallest part under the panel), so assembly needs a foam/gasket between the panel back and the components to press it against the bezel."
   ]
 }

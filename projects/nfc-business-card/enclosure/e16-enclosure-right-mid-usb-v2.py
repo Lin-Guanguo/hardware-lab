@@ -55,6 +55,13 @@ USB_FRONT_X = 83.2                # body front: 0.8 mm inside the board edge (ST
 USB_BODY_BACK_X = 76.7            # body back edge (6.5 mm body length, matches the GCT catalogue)
 USB_BODY_Z = (PCB_Z0, PCB_Z0 + 3.17)
 BATTERY = (3.0, 1.5, 30.0, 12.0, 3.0)
+# GDEH0154E01: 37.32 (W) x 31.8 (H) x 0.85 (D); active area 27 x 27 with 2.4 mm
+# borders on three sides and 7.92 mm on the FPC side (drawing page 5).
+SCREEN = (2.0, 18.3, 37.32, 31.8)      # x0, y0, w, h
+SCREEN_T = 0.85
+SCREEN_ACTIVE = (4.4, 20.7, 27.0, 27.0)  # active area, FPC exits towards +x
+SCREEN_Z0 = 3.15                        # clears the tallest part under the panel (1.51 mm)
+WINDOW_MARGIN = 0.4
 
 
 def outline_prism(z0, thickness):
@@ -114,8 +121,9 @@ references = {
                                            USB_BODY_Z[1] - USB_BODY_Z[0],
                                            App.Vector(USB_BODY_BACK_X, USB_SLOT_Y[0], USB_BODY_Z[0])),
                               "#AEB9C8", False),
-    "ScreenReference": ("屏幕机械区参考 · 37.42 × 31.90 mm",
-                        Part.makeBox(37.42, 31.90, 1.1, App.Vector(2.0, 18.3, SPLIT_Z)), "#C5D5E5", False),
+    "ScreenReference": ("GDEH0154E01 · 37.32 × 31.8 × 0.85（有效区 27×27）",
+                        Part.makeBox(SCREEN[2], SCREEN[3], SCREEN_T,
+                                     App.Vector(SCREEN[0], SCREEN[1], SCREEN_Z0)), "#C5D5E5", False),
     "BatteryReference": ("301230 目标 · 30 × 12 × 3 mm（贴在 PCB 顶面）",
                          Part.makeBox(BATTERY[2], BATTERY[3], BATTERY[4],
                                       App.Vector(BATTERY[0], BATTERY[1], SPLIT_Z)), "#E6B96E", False),
@@ -150,9 +158,14 @@ top_shape = top_shape.cut(Part.makeBox(10.9, RIM + 0.2, CAV_T,
 # the first key body reaches within 0.7 mm of the bottom edge, so relieve the ledge there
 top_shape = top_shape.cut(Part.makeBox(6.3, RIM + 0.2, CAV_T + 0.4,
                                        App.Vector(35.0, -0.1, SPLIT_Z))).removeSplitter()
-# screen window and three key holes
-top_shape = top_shape.cut(Part.makeBox(37.8, 33.6 - 17.5, PLATE_T + 0.4,
-                                       App.Vector(1.2, 17.5, TOP_PLATE_Z0 - 0.2)))
+# bezel boss over the panel border, then the window over the active area
+boss = Part.makeBox(SCREEN[2], SCREEN[3], TOP_PLATE_Z0 - (SCREEN_Z0 + SCREEN_T),
+                    App.Vector(SCREEN[0], SCREEN[1], SCREEN_Z0 + SCREEN_T))
+top_shape = top_shape.fuse(boss).removeSplitter()
+top_shape = top_shape.cut(Part.makeBox(SCREEN_ACTIVE[2] + 2 * WINDOW_MARGIN, SCREEN_ACTIVE[3] + 2 * WINDOW_MARGIN,
+                                       PLATE_T + 1.2,
+                                       App.Vector(SCREEN_ACTIVE[0] - WINDOW_MARGIN, SCREEN_ACTIVE[1] - WINDOW_MARGIN,
+                                                  SCREEN_Z0 + SCREEN_T - 0.2)))
 for y in (3.30, 9.20, 15.10):
     top_shape = top_shape.cut(Part.makeCylinder(2.3, PLATE_T + 0.4,
                                                 App.Vector(38.1, y, TOP_PLATE_Z0 - 0.2)))
@@ -206,7 +219,14 @@ report = {
     "usb": {"connector_body_x_mm": [USB_BODY_BACK_X, USB_FRONT_X], "y_mm": list(USB_SLOT_Y),
             "z_mm": [round(USB_BODY_Z[0], 3), round(USB_BODY_Z[1], 3)],
             "note": "connector sits in the board notch; the shells follow the notch so no wall slot is cut"},
-    "screen_window_mm": [1.2, 17.5, 38.99, 33.6],
+    "screen": {
+        "module_mm": [SCREEN[2], SCREEN[3], SCREEN_T],
+        "module_origin_mm": [SCREEN[0], SCREEN[1], SCREEN_Z0],
+        "active_area_mm": [SCREEN_ACTIVE[0], SCREEN_ACTIVE[1], SCREEN_ACTIVE[2], SCREEN_ACTIVE[3]],
+        "window_mm": [SCREEN_ACTIVE[0] - WINDOW_MARGIN, SCREEN_ACTIVE[1] - WINDOW_MARGIN,
+                      SCREEN_ACTIVE[2] + 2 * WINDOW_MARGIN, SCREEN_ACTIVE[3] + 2 * WINDOW_MARGIN],
+        "source": "GDEH0154E01 mechanical drawing: 37.32 x 31.8 x 0.85, 27x27 active with 2.4 mm borders",
+    },
     "button_holes_y_mm": [3.30, 9.20, 15.10],
     "geometry_checks": {
         "invalid_shapes": invalid,
@@ -223,6 +243,7 @@ report = {
         "The 5.0 mm stack needs 0.4/0.5 mm printed plates; a thicker plate or a bigger cell pushes the card past 5.0 mm.",
         "Connector envelope (x 76.7-83.2, y 10.22-21.77, z 0-3.17 over the board) is measured from the STEP export of the saved board, so the mating face sits 0.8 mm inside the board edge; confirm against the part in hand.",
         "Key caps, screen bonding, USB plug strain relief, ledge bonding and wall tolerances need physical samples.",
+        "The panel sits 1.51 mm above the PCB top (measured from the STEP export of the tallest part under the panel), so assembly needs a foam/gasket between the panel back and the components to press it against the bezel.",
     ],
 }
 assert report["geometry_checks"]["valid"], report

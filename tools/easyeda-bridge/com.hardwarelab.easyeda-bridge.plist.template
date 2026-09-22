@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.hardwarelab.easyeda-bridge</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>__NODE__</string>
+    <string>__REPO__/tools/easyeda-bridge/bridge-server.mjs</string>
+  </array>
+  <key>WorkingDirectory</key><string>__REPO__/tools/easyeda-bridge</string>
+  <key>RunAtLoad</key><true/>
+  <key>KeepAlive</key><true/>
+  <key>ThrottleInterval</key><integer>10</integer>
+  <key>StandardOutPath</key><string>__REPO__/logs/easyeda-bridge.out</string>
+  <key>StandardErrorPath</key><string>__REPO__/logs/easyeda-bridge.err</string>
+</dict>
+</plist>

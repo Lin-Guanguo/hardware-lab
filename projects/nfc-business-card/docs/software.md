@@ -54,6 +54,16 @@ curl --fail --silent http://127.0.0.1:49620/eda-windows
 2. 服务端心跳与清理（待做）：每 ~15 秒向所有 EDA 连接 ping，超时未 pong 就关闭并摘除注册。注意 `bridge-server.mjs` 位于 `.agents/skills/easyeda-api/`（符号链接到 `upstreams/easyeda-api-skill` 子模块），按仓库约定**不改上游**，要在仓库内放一份打了补丁的本地副本或包装脚本来跑。
 3. 客户端收敛（需用户操作）：只保留一个编辑器窗口/标签页。若同时开着两个图页标签，扩展很可能各注册一次连接，这正是 `count: 2` 的来源，也会让活动窗口频繁切换。
 
+**崩溃根因已定位并修复（2026-09-22 追加）。** 桥接服务端本身会**自己崩溃**，这才是"未找到 bridge 服务器"的主因：`/execute` 先 `res.writeHead(200)`，再对结果做 `JSON.stringify`；结果含循环引用、BigInt 或函数时 stringify 抛错，catch 又写一次响应头，触发 `ERR_HTTP_HEADERS_SENT`（`bridge-server.mjs:198`）并让整个进程退出。旧日志里累计 102 行该崩溃栈、36 次实际启动，每次崩溃所有 EDA 连接一起掉。上游脚本不是我们的维护对象，因此在本仓库维护补丁副本：
+
+- 工具目录：[tools/easyeda-bridge](../../../tools/easyeda-bridge/README.md)（`bridge-server.mjs` 补丁副本 + `install-agent.sh` + `bridge-status.sh` + plist 模板）
+- 补丁内容：15 处响应序列化改用 `safeJson()`（循环引用标 `[circular]`、BigInt 转字符串、函数忽略，永不抛错），另加 `uncaughtException` / `unhandledRejection` 兜底
+- 运行方式：`tools/easyeda-bridge/install-agent.sh` 幂等渲染并重载 LaunchAgent（`bootout → bootstrap → kickstart`），日志统一到仓库 `logs/easyeda-bridge.{out,err}`（已忽略），并加 `ThrottleInterval=10` 防崩溃循环；原 plist 自动备份
+- 自检：`tools/easyeda-bridge/bridge-status.sh` 输出进程/运行时长、`/health`、在线窗口数、崩溃与重连计数
+- 实测：用当初必崩的调用（循环引用 + BigInt）连打 4 次，崩溃计数 0 增长、PID 不变、连接保持
+
+残留：扩展仍按自己的节奏重连（`New eda connection → registered → disconnected (1005)`），这是扩展/窗口可见性行为，不是桥接缺陷；调用侧继续配合 `scripts/eda-exec-wait.mjs`（先选在线窗口、失败重试）即可。
+
 ### 通道恢复 runbook
 
 现象与判据（按顺序核对，避免把调用侧误判成扩展故障）：

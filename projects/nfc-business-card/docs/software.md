@@ -136,6 +136,13 @@ python3 projects/nfc-business-card/scripts/check-schematic-netlist.py projects/n
 - 本机属性对象的 `toAsync()` / `done()` 出现坐标、字号重复转换，不能直接复用为文字格式批量修改。已用文档提供的 `sch_PrimitiveAttribute.modify()` 修正：属性字号传入 `0.08` 后，原始文档字号为 `8`；与 `sch_PrimitiveText.create()` 的字号参数不同。修改后必须保存、关闭图页再重开，避免旧渲染缓存掩盖结果，并以导出 PDF 再检查。
 - 带网络名的导线会生成自己的 Name 属性；删除网络端口时可能清空该名称。当前工程用导线名称连接，改显示位置后重新导出网表核对。网络名在导出时会转大写，例如 `nRESET` 导出为 `NRESET`。
 - 原理图 DRC 的详细数组返回属于较新版本。当前客户端用 `check(true, true, false)`，等检查结束后从 DRC 面板读取结果；不要将刚开始检查时的中间计数当最终结果。
+- **区域/覆铜图元的多边形必须首尾闭合。** 文档写"不闭合会自动闭合"，实测不会：`pcb_PrimitiveRegion.create()` 与 `pcb_PrimitivePour.create()` 在不闭合时一律报"无法创建…图元，可能是传入的参数不正确"。把首点再写一遍（矩形 5 个点）后同一入参一次成功。这也解释了 2026-09-22 那次"五种入参全被拒、只能走 GUI"的误判。
+- **执行代码里要带 `eda.` 前缀**：`eda.pcb_PrimitiveRegion.create(...)`、`eda.pcb_PrimitivePour.create(...)`；直接写类名会报未定义。
+- **坐标单位不统一**：`pcb_PrimitivePour.getAll()` 的边框坐标是 mil；但 `pcb_PrimitivePoured.getState_PourFills() → path.getSource()` 里 1 单位 = 0.254 mm（10 mil）。
+- **铺铜需要重建，且改别的东西后要重铺**：创建覆铜后逐个 `rebuildCopperRegion()`；之后只要挪动焊盘或新增禁布区，都要再重建一次，否则旧填充会残留（例如挪走测试点后报 "Copper Region(Filled) to SMD Test Point"）。
+- **DRC 面板是异步的**：`pcb_Drc.check()` 读到的是上一轮结果，必须"触发 → 等待十余秒 → 再读"，并且**保存后关闭图页再重开**才是真实数字；只看一次很容易误判走线不通。
+- **本机过孔下限**：内径 ≥7.9 mil、外径 ≥11.9 mil。写 7.8/11.8 时既报 `Via Diameter` 物理错误，又**不会被连通性判定接受**（外观贴着焊盘也不算连接）。
+- **Computer Use 可用**：早前 `-10005 noWindowsAvailable` 是目标窗口不在前台导致，不是权限问题；读 AX 树、点菜单、改输入框、画布缩放、截图都成功。
 
 本轮 API 执行记录、原始资料片段、PDF 与 `.epro2` 导出留在被忽略的 `artifacts/eda-draft/`。人工或 AI 继续编辑前先核对当前工程/图页、保存状态；不要原样重跑放置脚本造成重复元件。
 

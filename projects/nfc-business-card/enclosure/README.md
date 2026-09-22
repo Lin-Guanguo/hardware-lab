@@ -218,7 +218,7 @@ last_updated: 2026-09-23
 
 ## 4. PCB 与打印可制造性
 
-JLCPCB 当前经济型 PCBA 页面列出 **0.8–1.6 mm** 板厚；0.6 mm 裸板可以制造，不代表同样可以用该贴片通道。标准型 PCBA 与拼板/工艺边可作为备选，页面列出的最小板尺寸 70 × 70 mm 也意味着这类小卡片可能需要拼板。最终以针对实际 Gerber/BOM 的 DFM 和报价为准。[贴片能力](https://jlcpcb.com/capabilities/pcb-assembly-capabilities)
+JLCPCB 当前经济型 PCBA 页面列出 **0.8–1.6 mm** 板厚；0.6 mm 裸板可以制造，不代表同样可以用该贴片通道。**经济型的单板下限是 10 × 10 mm，84 × 52 mm 可以单板下单、不需要拼板、工艺边或定位点**（70 × 70 mm 是标准型通道的下限，见[下单通道选择](../hardware/pcb-e16-usb-right-mid.md#下单通道选择2026-09-23-查嘉立创-pcba-能力页)）。最终以针对实际 Gerber/BOM 的 DFM 和报价为准。[贴片能力](https://jlcpcb.com/capabilities/pcb-assembly-capabilities)
 
 初步考虑 0.8 mm、单面器件的定制板；层数由走线与 NFC 净空决定，2 层可先评估，不强行提前冻结。0.4 mm 板更易翘曲、夹具和按键受力更难处理，不作为首版默认。
 

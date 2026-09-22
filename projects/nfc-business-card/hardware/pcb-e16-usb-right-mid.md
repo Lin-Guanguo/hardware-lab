@@ -2,11 +2,11 @@
 
 ## 当前确定方案
 
-更新于 **2026-09-23**。用户确认 USB 放到**右边缘中部**更符合卡片形态；本方案已**写入 E16 图页**并通过保存、关闭、重开验证。板框为 84 × 52 mm 的 **L 形**：右边缘中部开 **9.24 × 6.5 mm** 缺口，左下角为 **33.5 × 15 mm 电池挖空**；J1 插口朝 **+x**，U1 转 180° 让模块天线端朝下板边。按键收敛为**两颗**（y = 3.30 / 15.10，中心距 11.80 mm）。**全部网络已布通（含 GND 覆铜）**，原生 DRC 的**普通间距错误和连接错误都为 0**，只剩 12 项同封装槽边告警（详见下）；55 个位号在原理图与 PCB 之间**逐引脚网表一致**。
+更新于 **2026-09-23**。用户确认 USB 放到**右边缘中部**更符合卡片形态；本方案已**写入 E16 图页**并通过保存、关闭、重开验证。板框为 84 × 52 mm 的 **L 形**：右边缘中部开 **9.24 × 6.5 mm** 缺口，左下角为 **33.5 × 15 mm 电池挖空**；J1 插口朝 **+x**，U1 转 180° 让模块天线端朝下板边。按键为**三颗**：SW1 (38.1, 3.30)、SW3 (38.1, 15.10) 一列不动，SW2 新增在 **(46.3, 8.80)** 组成三角形（见「三键已实施」一节）。**全部网络已布通（含 GND 覆铜）**，原生 DRC 的**普通间距错误和连接错误都为 0**，只剩 12 项同封装槽边告警（详见下）；**56 个位号**在原理图与 PCB 之间**逐引脚网表一致**（234 项、0 差异）。
 
 - 落盘记录：[e16-right-mid-applied.json](e16-right-mid-applied.json)
 - 方案数据：[e16-right-mid-plan.json](e16-right-mid-plan.json)
-- 审查图：[pcba-e16-right-mid.svg](../enclosure/pcba-e16-right-mid.svg)（L 形板框、两键、禁布区与显示包络）
+- 审查图：[pcba-e16-right-mid.svg](../enclosure/pcba-e16-right-mid.svg)（L 形板框、三键、禁布区与显示包络）
 - E16 实时快照：[e16-right-mid-snapshot.json](e16-right-mid-snapshot.json)
 - 外壳剖视图：[nfc-card-e16-v5-stack-section.svg](../enclosure/nfc-card-e16-v5-stack-section.svg)（4.5 mm 叠层：电池袋 / 按键列 / 屏幕 FPC）
 - 外壳样件：[nfc-card-e16-enclosure-v5.FCStd](../enclosure/nfc-card-e16-enclosure-v5.FCStd) · [几何报告](../enclosure/nfc-card-e16-enclosure-v5-report.json) · [脚本](../enclosure/e16-enclosure-right-mid-usb-v5.py) · 预览图 `artifacts/e16-cad-preview/e16-enclosure-v5-{iso,top}.png`
@@ -440,7 +440,7 @@ U1 是 MDBT50Q 模块，它自带的 PCB 天线必须朝板边、周围不能有
 - 网表核对（2026-09-23）：原理图导出的 netlist 与 PCB 逐引脚对照，**55 位号 / 230 引脚 / 0 处网名差异**，双向差集为空（`eda-export-pcb-pins.js` + `check-netlist-consistency.py`）。
 - 原理图 DRC 复验（2026-09-23）：`sch_Drc.check(true, false, true)` 逐页跑四页（01 USB and Power / 02 MCU and Controls / 03 GDEH0154E01 / 04 USB ESD and assembly），四页返回的都是 1 个空分组、**0 项问题**。
 
-两颗键的电气落点**已冻结**：SW1（y=3.30）→ U1 pin 3（P1.10）`KEY_PREV_N` = **键 1（一级栏目轮换）**；SW3（y=15.10）→ U1 pin 5（P1.12）`KEY_OK_N` = **键 2（二级选项轮换）**；原中间键的 U1 pin 4（P1.11）`KEY_NEXT_N` 保留为带上拉的备用输入，无开关。映射写进[交互架构](../docs/architecture.md)的输入表；若以后想改成“上一项/下一项”，只需改固件语义，不必改板。
+两颗键的电气落点**已冻结**：SW1（y=3.30）→ U1 pin 3（P1.10）`KEY_PREV_N` = **键 1（一级栏目轮换）**；SW3（y=15.10）→ U1 pin 5（P1.12）`KEY_OK_N` = **键 2（二级选项轮换）**；原中间键的 U1 pin 4（P1.11）`KEY_NEXT_N` 当时保留为带上拉的备用输入；**2026-09-23 三键方案 B 又把第三颗 SW2 接回该网络**（(46.3, 8.80)，见「三键已实施」）。映射写进[交互架构](../docs/architecture.md)的输入表；若以后想改成“上一项/下一项”，只需改固件语义，不必改板。
 
 为什么不选 2×2：四个开关排成方块会向西更宽（同样受按键列 x 坐标限制），而且要把那一带 8 条走线全部重排；交互设计本身按两键定义（键一换一级栏目、键二换二级选项），第三颗原本只是待定功能。现在空出的中间位置留给后续改版更灵活。
 

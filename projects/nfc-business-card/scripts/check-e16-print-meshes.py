@@ -120,7 +120,17 @@ def run():
         report["part"] = label
         reports.append(report)
     ok = all(not r["problems"] for r in reports)
-    print(json.dumps({"ok": ok, "parts": reports}, ensure_ascii=False, indent=1), flush=True)
+    result = {"ok": ok, "parts": reports}
+    # FreeCAD's mesh routines print progress to stdout after this script finishes,
+    # so keep the machine-readable copy in a file and print a short summary here.
+    out = REPO / "projects/nfc-business-card/artifacts/e16-cad-preview/check-e16-print-meshes.json"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(result, ensure_ascii=False, indent=1) + "\n")
+    print(f"ok={ok}  report={out}")
+    for r in reports:
+        print(f"  {r['part']:12s} facets={r.get('facets')} solid={r.get('is_solid')} "
+              f"self={r.get('self_intersections')} nonmanifold={r.get('has_non_manifolds')} "
+              f"degenerate={r.get('degenerate_facets')} problems={r['problems']}", flush=True)
     return 0 if ok else 1
 
 

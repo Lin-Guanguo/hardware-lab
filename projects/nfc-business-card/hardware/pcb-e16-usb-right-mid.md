@@ -8,6 +8,7 @@
 - 方案数据：[e16-right-mid-plan.json](e16-right-mid-plan.json)
 - 审查图：[pcba-e16-right-mid.svg](../enclosure/pcba-e16-right-mid.svg)（含三键与显示包络）
 - E16 实时快照：[e16-right-mid-snapshot.json](e16-right-mid-snapshot.json)
+- 外壳样件：[nfc-card-e16-enclosure-v1.FCStd](../enclosure/nfc-card-e16-enclosure-v1.FCStd) · [几何报告](../enclosure/nfc-card-e16-enclosure-v1-report.json) · [脚本](../enclosure/e16-enclosure-right-mid-usb.py)
 - 校验脚本：[plan-e16-right-mid.py](../scripts/plan-e16-right-mid.py)
 - 绘图脚本：[generate-e16-right-mid-svg.py](../scripts/generate-e16-right-mid-svg.py)
 - 上游基线：[E15 清理版 PCB 开工记录](pcb-e15-clean-layout.md) · 早期试放：[e16-usb-right-mid-study.json](e16-usb-right-mid-study.json)
@@ -133,7 +134,7 @@ Raytac MDBT50Q Rev L（[本地 PDF](../downloads/raytac_mdbt50q_rev_l.pdf) 第 8
 
 1. **连接器外壳与缺口法兰。** 缺口宽度按焊接区 9.24 mm 后锚脚有板可焊；外壳两侧是否压到法兰仍需用 GCT 三维模型或剖面容差确认。
 2. **PCB 边与封装槽线基准。** 封装内部槽线在原点前方约 1.825 mm，而缺口内缘在原点前方 1.025 mm，两者差 0.8 mm；需要连接器剖面确认哪条是制造基准。
-3. **外壳右壁开孔。** 连接器本体向板外延伸约 4.45 mm，需确认由外壳右壁开孔容纳、整机不超 84 × 52 mm 外框。
+3. **外壳右壁开孔。** 已在 E16 外壳样件 V1 中建出右壁开口与底面让位槽，几何上连接器与两壳零接触；连接器本体仍向板外延伸到 x=88.45 mm，整机是否超 84 mm 外框需要尺寸基准决策。
 4. **NFC 馈线。** U1 的 NFC1/NFC2 位于模块左下，到右上保留区约 25 mm，需与匹配网络一起规划。
 5. **网表关联。** E16 仍是未关联副本；正式布线前需要与 `Board1_1/Schematic1` 关联或另建 Board。
 

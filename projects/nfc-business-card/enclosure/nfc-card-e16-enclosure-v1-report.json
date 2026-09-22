@@ -1,0 +1,64 @@
+{
+  "status": "E16_ENCLOSURE_V1_SAMPLE_NOT_PRODUCTION_RELEASE",
+  "outer_mm": [
+    84.0,
+    52.0,
+    5.0
+  ],
+  "usb_slot": {
+    "edge": "x=84 right wall",
+    "y_mm": [
+      10.38,
+      21.62
+    ],
+    "z_mm": [
+      0.44999999999999996,
+      3.7
+    ],
+    "through_x_mm": [
+      82.5,
+      88.45
+    ]
+  },
+  "screen_window_mm": [
+    1.2,
+    17.5,
+    39.0,
+    33.6
+  ],
+  "button_holes_y_mm": [
+    3.3,
+    9.2,
+    15.1
+  ],
+  "geometry_checks": {
+    "invalid_shapes": [],
+    "shell_solids": {
+      "BottomShell": 1,
+      "TopShell": 1
+    },
+    "shell_intersections": [],
+    "shell_reference_intersections": [
+      {
+        "shell": "TopShell",
+        "reference": "BatteryReference",
+        "volume_mm3": 54.0
+      }
+    ],
+    "connector_shell_contact_mm3": {
+      "BottomShell": 0.0,
+      "TopShell": 0.0
+    },
+    "findings": [
+      "BatteryReference intersects TopShell by 54.0 mm3 (check the height budget)"
+    ],
+    "valid": true
+  },
+  "limitations": [
+    "Coordination sample only; not a production enclosure.",
+    "Size basis unresolved: the saved board is 84 x 52 mm while the shell cavity is 81.6 x 49.6 mm.",
+    "Connector body reaches x = 88.45 mm, so the plug envelope extends past the 84 mm card length.",
+    "Battery uses a nominal target without supplier maximum envelope, leads, tape or swelling allowance.",
+    "Key caps, screen bonding, USB plug strain relief and wall tolerances need physical samples."
+  ]
+}

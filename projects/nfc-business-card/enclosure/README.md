@@ -13,6 +13,8 @@ last_updated: 2026-09-22
 
 **EDA 坐标协调样件 V2：** [nfc-card-e14-enclosure-v2-eda-coordinate.FCStd](nfc-card-e14-enclosure-v2-eda-coordinate.FCStd) 已按 E14 实际快照把 USB 开口移到 y=0 坐标边，把屏幕机械区、按键和 301230 目标放到对应坐标；配套 [STEP](nfc-card-e14-enclosure-v2-eda-coordinate.step)、[下壳 STL](nfc-card-e14-bottom-v2-eda-coordinate.stl)、[上壳 STL](nfc-card-e14-top-v2-eda-coordinate.stl)和[几何报告](nfc-card-e14-enclosure-v2-eda-coordinate-report.json)。V2 用于解决 PCB 与外壳坐标关系，壳体各一实体且无壳体相交；它仍不是生产壳，需先冻结 Layer 11 板框、J1 朝向、真实电池包体和 DFM。
 
+**E16 右侧中部 USB 样件 V1：** [nfc-card-e16-enclosure-v1.FCStd](nfc-card-e16-enclosure-v1.FCStd) 按 E16 落盘坐标生成：右壁 USB 开口（y 10.38–21.62、贯穿壁厚，另加下壳底面让位槽）、屏窗上移到 y 17.5、三键孔改为等距 y 3.30/9.20/15.10。配套 [STEP](nfc-card-e16-enclosure-v1.step)、[下壳 STL](nfc-card-e16-bottom-v1.stl)、[上壳 STL](nfc-card-e16-top-v1.stl)和[几何报告](nfc-card-e16-enclosure-v1-report.json)，脚本 [e16-enclosure-right-mid-usb.py](e16-enclosure-right-mid-usb.py)。几何检查：上下壳各为单一实体、无壳体相交、**连接器本体与两壳接触体积均为 0**。报告同时记录两条待解约束：3 mm 电池与 5 mm 高度的顶盖重叠 54 mm³（高度预算不足），以及 84 × 52 板框与 81.6 × 49.6 内腔的尺寸基准矛盾。
+
 **EDA 同步边界：** 当前 E14 快照里的 J1 中心仍在约 (49.5, 5.5) mm 的底边 USB 候选位，而本 V1 外壳按右边 USB（约 x=76 mm）空间研究生成；两者尚未冻结为同一机械方案。PCB 板框、J1 朝向/位置和 USB 开口需先在 EDA 中统一，再重新生成外壳和供应商文件。
 
 **与 E14 EDA 的关系：** CAD 用 30 × 12 × 3 mm 电池包体做空间占位，并把 PCB 电池缺口、屏幕、NFC 净空和右下功能块表达成简化实体；E14 实际坐标快照显示当前板框、屏幕机械区和电池目标尚未完全同步，USB 开口、FPC、RF、按键结构和装配公差也仍待确认。现有 `pcba-e6-84x52-detail.FCStd` 保留作历史对照，此前几何/视觉检查不能代替 E14 的实际器件、走线和装配检查。

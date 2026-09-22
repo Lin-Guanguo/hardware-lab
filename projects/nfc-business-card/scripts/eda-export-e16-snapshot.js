@@ -32,11 +32,13 @@ return {
   })),
   pads: pads.map((p) => ({
     id: p.primitiveId,
-    number: p.number,
+    number: p.padNumber,
     x: round(p.x),
     y: round(p.y),
     net: p.net,
     layer: p.layer,
+    pad: p.pad,
+    hole: p.hole,
   })),
   polylines: polylines.map((p) => ({
     id: p.primitiveId,

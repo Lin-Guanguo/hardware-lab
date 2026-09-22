@@ -1,0 +1,252 @@
+{
+  "status": "E14_CAD_SPATIAL_STUDY_NOT_PRINTABLE_SHELL",
+  "board_mm": [
+    84.0,
+    52.0,
+    0.8
+  ],
+  "battery_nominal_mm": [
+    30.0,
+    12.0,
+    3.0
+  ],
+  "components": [
+    {
+      "name": "BoardEnvelope",
+      "label": "PCB · 84 × 52 × 0.8 mm",
+      "size_mm": [
+        81.0,
+        49.0,
+        0.8
+      ],
+      "position_mm": [
+        1.5,
+        1.5,
+        0.9
+      ],
+      "role": "reference",
+      "color": "#B8D7C9",
+      "evidence": "板框和 USB 槽仍需依据 E14 PCB 真实板框重新定义。"
+    },
+    {
+      "name": "ScreenEnvelope",
+      "label": "屏幕 · GDEH0154E01 包络",
+      "size_mm": [
+        37.4,
+        32.0,
+        1.1
+      ],
+      "position_mm": [
+        3.0,
+        2.0,
+        1.8
+      ],
+      "role": "component",
+      "color": "#D9E3EE",
+      "evidence": "屏幕名义包络；FPC、玻璃保护和支撑未建模。"
+    },
+    {
+      "name": "BatteryEnvelope",
+      "label": "电池 · 301230 标称 30 × 12 × 3 mm",
+      "size_mm": [
+        30.0,
+        12.0,
+        3.0
+      ],
+      "position_mm": [
+        3.0,
+        38.0,
+        1.0
+      ],
+      "role": "component",
+      "color": "#F0C886",
+      "evidence": "301230 仅作为布局尺寸目标；完整包体、保护板、引线和鼓胀余量未确认。"
+    },
+    {
+      "name": "NfcReserve",
+      "label": "NFC 右上净空",
+      "size_mm": [
+        24.0,
+        25.0,
+        0.2
+      ],
+      "position_mm": [
+        57.0,
+        2.0,
+        1.7
+      ],
+      "role": "reserve",
+      "color": "#B8E0D7",
+      "evidence": "空间净空示意；线圈铜、匹配网络、金属距离和实测读距未设计。"
+    },
+    {
+      "name": "UsbBody",
+      "label": "USB-C · J1 主体",
+      "size_mm": [
+        8.0,
+        8.94,
+        3.2
+      ],
+      "position_mm": [
+        76.0,
+        27.5,
+        1.8
+      ],
+      "role": "component",
+      "color": "#C7D0DB",
+      "evidence": "右边板框开口、锚脚和插拔受力需在 PCB/CAD 联动后重定义。"
+    },
+    {
+      "name": "FpcEnvelope",
+      "label": "J2 · FPC 座目标",
+      "size_mm": [
+        16.5,
+        6.8,
+        2.2
+      ],
+      "position_mm": [
+        42.0,
+        31.0,
+        1.8
+      ],
+      "role": "component",
+      "color": "#B8D4C0",
+      "evidence": "16.5 × 6.8 × 2.2 mm 目标包络，实际座型、接触方向和折弯待确认。"
+    },
+    {
+      "name": "PowerEnvelope",
+      "label": "USB/充电/稳压区",
+      "size_mm": [
+        19.0,
+        11.0,
+        1.8
+      ],
+      "position_mm": [
+        45.0,
+        19.0,
+        1.8
+      ],
+      "role": "reserve",
+      "color": "#E6C9CE",
+      "evidence": "U2/U3/U5/CC 与外围的块级空间，尚未完成焊盘和走线。"
+    },
+    {
+      "name": "McuEnvelope",
+      "label": "U1 · MDBT50Q 主控",
+      "size_mm": [
+        8.5,
+        6.5,
+        2.2
+      ],
+      "position_mm": [
+        74.0,
+        37.0,
+        1.8
+      ],
+      "role": "component",
+      "color": "#B7CFE7",
+      "evidence": "右下主控方向候选；模块天线净空和完整铜布局尚未核对。"
+    },
+    {
+      "name": "Button1",
+      "label": "SW1 · 按键包络",
+      "size_mm": [
+        5.2,
+        5.2,
+        1.6
+      ],
+      "position_mm": [
+        38.0,
+        38.0,
+        1.8
+      ],
+      "role": "component",
+      "color": "#ECC2A7",
+      "evidence": "按键主体包络；键帽、孔位、行程和限位未建模。"
+    },
+    {
+      "name": "Button2",
+      "label": "SW2 · 按键包络",
+      "size_mm": [
+        5.2,
+        5.2,
+        1.6
+      ],
+      "position_mm": [
+        45.0,
+        38.0,
+        1.8
+      ],
+      "role": "component",
+      "color": "#ECC2A7",
+      "evidence": "按键主体包络；键帽、孔位、行程和限位未建模。"
+    },
+    {
+      "name": "Button3",
+      "label": "SW3 · 按键包络",
+      "size_mm": [
+        5.2,
+        5.2,
+        1.6
+      ],
+      "position_mm": [
+        52.0,
+        38.0,
+        1.8
+      ],
+      "role": "component",
+      "color": "#ECC2A7",
+      "evidence": "按键主体包络；键帽、孔位、行程和限位未建模。"
+    },
+    {
+      "name": "FrontPlane",
+      "label": "前盖窗口/按键/USB 待设计区",
+      "size_mm": [
+        82.4,
+        50.4,
+        0.2
+      ],
+      "position_mm": [
+        0.8,
+        0.8,
+        4.5
+      ],
+      "role": "reserve",
+      "color": "#CBD5E1",
+      "evidence": "仅作为 5 mm 厚度预算参考；没有窗口、卡扣、螺柱或打印公差。"
+    },
+    {
+      "name": "OuterEnvelope",
+      "label": "84 × 52 × 5 mm 目标包络",
+      "size_mm": [
+        84.0,
+        52.0,
+        5.0
+      ],
+      "position_mm": [
+        0,
+        0,
+        0
+      ],
+      "role": "reference",
+      "color": "#64748B",
+      "evidence": "外壳体积目标；未建窗口、卡扣、圆角、壁厚或打印公差。"
+    }
+  ],
+  "collisions": [],
+  "nfc_keepout_mm": [
+    24.0,
+    25.0
+  ],
+  "mechanical_checks": {
+    "board_connected": true,
+    "component_collisions": 0
+  },
+  "limitations": [
+    "This is a block-level spatial study, not a manufacturing shell.",
+    "PCB outline and USB edge cutout must be synchronized with E14 after routing.",
+    "Battery supplier maximum envelope, leads, protection board and swelling allowance are unknown.",
+    "FPC insertion, screen support, button travel, wall thickness and assembly tolerances are not verified.",
+    "No vendor Gerber, Excellon, BOM, CPL, printable STEP or STL is generated from this study."
+  ]
+}

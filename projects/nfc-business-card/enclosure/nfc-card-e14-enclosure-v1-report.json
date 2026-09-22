@@ -1,0 +1,95 @@
+{
+  "status": "E14_ENCLOSURE_V1_PRINTABLE_SAMPLE_NOT_PRODUCTION_RELEASE",
+  "model": "nfc-card-e14-enclosure-v1.FCStd",
+  "outer_mm": [
+    84.0,
+    52.0,
+    5.0
+  ],
+  "shells": {
+    "bottom": {
+      "base_mm": 0.8,
+      "top_mm": 2.4,
+      "wall_mm": 1.2
+    },
+    "top": {
+      "start_mm": 2.4,
+      "cap_bottom_mm": 4.2,
+      "cap_mm": 0.8,
+      "wall_mm": 1.2
+    }
+  },
+  "openings": {
+    "screen_window_mm": [
+      39.0,
+      33.6
+    ],
+    "button_holes": {
+      "count": 3,
+      "diameter_mm": 4.0
+    },
+    "usb_side_opening_mm": [
+      10.0,
+      12.5,
+      3.6
+    ]
+  },
+  "battery_relief_mm": [
+    32.0,
+    13.0,
+    0.45
+  ],
+  "geometry_checks": {
+    "invalid_shapes": [],
+    "shell_solids": {
+      "BottomShell": 1,
+      "TopShell": 1,
+      "ScreenLedge": 2
+    },
+    "shell_intersections": [],
+    "shell_reference_intersections": [],
+    "valid": true
+  },
+  "limitations": [
+    "This is a printable first-pass verification sample, not a production shell.",
+    "No snap-fit, screw boss, gasket, adhesive pocket, or confirmed split retention is designed.",
+    "Battery relief assumes only a 30 × 12 × 3 mm nominal body; protection board, leads, tape and swelling allowance are unknown.",
+    "Screen glass, FPC bend radius, button cap height and USB plug strain relief require physical samples.",
+    "The E14 PCB is still unrouted and has no released board outline/edge-cut file.",
+    "SLA/FDM wall strength, print shrinkage, hole compensation and finish are unverified.",
+    "STL and STEP files here are sample-print outputs; they must not be sent to production without DFM and assembly sign-off."
+  ],
+  "thickness_budget_mm": {
+    "outer_target": 5.0,
+    "bottom_floor_nominal": 0.8,
+    "battery_relief_floor": 0.45,
+    "top_cap": 0.8,
+    "mcu_to_cap_nominal": 0.2
+  },
+  "bounding_boxes_mm": {
+    "BottomShell": [
+      0.0,
+      0.0,
+      0.0,
+      84.0,
+      52.0,
+      2.4
+    ],
+    "TopShell": [
+      0.0,
+      0.0,
+      2.4,
+      84.0,
+      52.0,
+      2.6
+    ],
+    "ScreenLedge": [
+      1.3,
+      1.3,
+      3.0,
+      40.6,
+      33.5,
+      0.8
+    ]
+  }
+}

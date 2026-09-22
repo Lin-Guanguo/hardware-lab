@@ -1,0 +1,73 @@
+{
+  "status": "PARTIAL_ROUTING_LAYOUT_REVIEW_REQUIRED",
+  "components": 27,
+  "pads": 145,
+  "trace_segments": 304,
+  "vias": 45,
+  "ground_pours": 2,
+  "trace_nets": [
+    "BAT_PACK_TBD",
+    "CHG_CE_N",
+    "CHG_PG_N",
+    "CHG_SCL",
+    "CHG_SDA",
+    "GND",
+    "KEY_NEXT_N",
+    "KEY_OK_N",
+    "KEY_PREV_N",
+    "SYS",
+    "USB_VBUS",
+    "VDD_3V3"
+  ],
+  "trace_length_mm": 740.743,
+  "drc": {
+    "Clearance Error": 12,
+    "Clearance Error in the same footprint": 12,
+    "Connection Error": 17
+  },
+  "remaining_connectivity": {
+    "USB_CC1": 2,
+    "USB_DM_CONN": 3,
+    "USB_DP_CONN": 3,
+    "USB_CC2": 2,
+    "USB_DP_MCU": 2,
+    "USB_DM_MCU": 2,
+    "CHG_INT_N": 3
+  },
+  "save_reopen_engineering_changes": [],
+  "pad_net_changes_this_round": [],
+  "board_reference_geometry_changed": false,
+  "rules_changed": false,
+  "routing_geometry_violations": [],
+  "database_quick_check": "ok",
+  "netlist_sha256": "603984c23c4648b40997f4a93a21d905316409b546282f06204d263b4f171d84",
+  "placements_changed_this_round_mm_deg": {
+    "C6": [
+      2.4,
+      15.2,
+      90
+    ],
+    "C7": [
+      2.4,
+      7.1,
+      90
+    ]
+  },
+  "battery_reference": {
+    "lower_left_mm": [
+      44,
+      3
+    ],
+    "size_mm": [
+      32,
+      20
+    ],
+    "changed_this_round": false
+  },
+  "layout_review": {
+    "usb_bridge_width_mm": 2.2,
+    "battery_to_nfc_corridor_mm": 1.5,
+    "next": "Compare USB relocation and battery rotation/translation before completing USB routing."
+  },
+  "scope": "Native DRC, save/reopen comparison, pad-net comparison, sampled copper/RF checks, SQLite quick_check. Not verification of ground return quality, power integrity, RF, impedance, mechanical assembly or hardware behavior."
+}

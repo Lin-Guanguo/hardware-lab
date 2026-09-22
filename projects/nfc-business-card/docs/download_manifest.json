@@ -62,5 +62,94 @@
     "sha256": "0ee799787103e54f382a784abd425e841401934356d4e083308cb0f083bf63a8",
     "status": "downloaded",
     "note": "官方资源区列于 Sense 下，版本和完整高度待比对，不直接代表普通版/Plus。"
+  },
+  {
+    "file": "downloads/usb4500-drawing.pdf",
+    "source_url": "https://gct.co/connector/usb4500",
+    "resolved_url": "https://datasheet.lcsc.com/datasheet/pdf/d3e0ccfd370d5b8c3f9893bc8d4bf9a5.pdf?productCode=C5354966",
+    "accessed": "2026-09-20",
+    "bytes": 155793,
+    "sha256": "5bb1cce99b10718bb005201edfdf6c8a480ccbbbddf9bec69d4a5a3ed18143e9",
+    "status": "downloaded"
+  },
+  {
+    "file": "downloads/fh12-24s-drawing.pdf",
+    "source_url": "https://www.hirose.com/product/p/CL0586-0521-0-55",
+    "resolved_url": "https://www.hirose.com/medias/EDCX-150229-55-11_0000987484.pdf?context=bWFzdGVyfHByaXZhdGVfc3lzX3VwbG9hZHwxMDUwODI2fGFwcGxpY2F0aW9uL3BkZnxjM2x6TFcxaGMzUmxjaTl3Y21sMllYUmxYM041YzE5MWNHeHZZV1F2YUdOaEwyZzBaUzg1TVRrek16STRORFF6TkRJeUwwVkVRMWd0TVRVd01qSTVMVFUxTFRFeFh6QXdNREE1T0RjME9EUXVjR1JtfDZjZmI1ZmRmMWU0NmFmMGY3NWVkNWVlZWZmODQ0ZjgxYWU3YzczN2VlN2E1ZTFjNjA1MThjOTVlMWI0MWI5N2Q",
+    "accessed": "2026-09-20",
+    "bytes": 1050826,
+    "sha256": "accd5849016da76f1f2fd1ba76fad9a7a8d56c5a73960e668e38943a3fd4a95f",
+    "status": "downloaded"
+  },
+  {
+    "file": "downloads/gdeh0154e01.pdf",
+    "source_url": "https://www.good-display.cn/companyfile/1762.html",
+    "resolved_url": "https://v4.cecdn.yun300.cn/100001_1909185147/GDEH0154E01.pdf",
+    "accessed": "2026-09-20",
+    "bytes": 3763348,
+    "sha256": "a3aa45389653aff47ece0f5fce8edd99f07e2889d291b54547efef4c05ba2ebd",
+    "status": "downloaded",
+    "reverified": "2026-09-21",
+    "alternate_source_urls": ["https://www.good-display.com/companyfile/2038.html"],
+    "alternate_resolved_urls": ["https://v4.cecdn.yun300.cn/100001_1909185148/GDEH0154E01.pdf"],
+    "note": "商家指定英文产品页的下载文件与中文站缓存 SHA-256 相同。"
+  },
+  {
+    "file": "downloads/despi-e01-schematic.pdf",
+    "source_url": "https://www.good-display.cn/companyfile/1817.html",
+    "resolved_url": "https://v4.cecdn.yun300.cn/100001_1909185147/DESPI-E01%20%E7%94%B5%E8%B7%AF%E5%9B%BE.pdf",
+    "accessed": "2026-09-20",
+    "bytes": 470537,
+    "sha256": "ea74f3c87c608fc10f078ebd7748ae901dac5450912415dbdea1ba83ba3ce43a",
+    "status": "downloaded",
+    "reverified": "2026-09-21"
+  },
+  {
+    "file": "downloads/despi-e01-guide.pdf",
+    "source_url": "https://www.good-display.cn/companyfile/1816.html",
+    "resolved_url": "https://v4.cecdn.yun300.cn/100001_1909185147/DESPI-E01%E8%BD%AC%E6%8E%A5%E6%9D%BF%E8%AF%B4%E6%98%8E%E4%B9%A6.pdf",
+    "accessed": "2026-09-20",
+    "bytes": 810875,
+    "sha256": "6f3d6d9db961fa069b001cc99e074bcbaecc6890d1b6b801d67becbd1f102452",
+    "status": "downloaded",
+    "reverified": "2026-09-21"
+  },
+  {
+    "file": "downloads/e6-design-notice-cn.pdf",
+    "source_url": "https://www.good-display.cn/product/718.html",
+    "resolved_url": "https://v4.cecdn.yun300.cn/100001_1909185147/E6_design_notice-cn.pdf",
+    "accessed": "2026-09-20",
+    "bytes": 2817670,
+    "sha256": "445e04522a5e3c0b63ce3f60a6a714c48b311c25764c8f3a213f26962ff9cd8a",
+    "status": "downloaded"
+  },
+  {
+    "file": "downloads/gdeh0154e01-esp32.zip",
+    "source_url": "https://www.good-display.com/companyfile/2062.html",
+    "resolved_url": "https://v4.cecdn.yun300.cn/100001_1909185148/GDEH0154E01-ESP32.zip",
+    "accessed": "2026-09-20",
+    "bytes": 37611209,
+    "sha256": "9f862f267a249a8603ebc25532f7ba9c3b8c75fcaf2f065266bb78ebf628beda",
+    "status": "downloaded",
+    "reverified": "2026-09-21"
+  },
+  {
+    "file": "downloads/fh12a-24s-drawing.pdf",
+    "source_url": "https://www.hirose.com/en/product/document?clcode=CL0586-0555-2-55&documentid=0000906835&documenttype=2DDrawing&lang=en&productname=FH12A-24S-0.5SH%2855%29&series=FH12",
+    "resolved_url": "https://www.hirose.com/en/product/document?clcode=CL0586-0555-2-55&documentid=0000906835&documenttype=2DDrawing&lang=en&productname=FH12A-24S-0.5SH%2855%29&series=FH12",
+    "accessed": "2026-09-21",
+    "bytes": 221465,
+    "sha256": "8eb5a93ce09b22760384ad2fbf78b5555290335f4a51295b34db0c0775e87f4c",
+    "status": "downloaded"
+  },
+  {
+    "file": "downloads/fpc-05fb-24ph20.pdf",
+    "source_url": "https://www.lcsc.com/datasheet/C2856831.pdf",
+    "resolved_url": "https://datasheet.lcsc.com/datasheet/pdf/e480b0871d0881a4ae70dd94a2979182.pdf?productCode=C2856831",
+    "accessed": "2026-09-21",
+    "bytes": 318380,
+    "sha256": "915941f107846d09e6f89e3a43c45eb70bd82f0016131a04d119715cfaa50272",
+    "status": "downloaded",
+    "note": "XUNPU 系列原厂图 REV A，含 24P 型号；LCSC 提供。Poppler 报 XRef 结构警告，但首张可渲染目视核对，原始字节保留。"
   }
 ]

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+<rect width="1200" height="900" fill="#F7F9FC"/>
+<style>text{font-family:Arial,"PingFang SC","Microsoft YaHei",sans-serif;fill:#172B41}.muted{fill:#52657B}.small{font-size:14px}</style>
+<text x="44" y="52" font-size="28" font-weight="bold">电子名片 · PCBA 空间研究</text>
+<text x="44" y="82" font-size="15" class="muted">86 × 54 × 5 mm 目标 · 2026-09-20 · 候选器件与设计预留，尚不可制造</text>
+<text x="44" y="120" font-size="17" font-weight="bold">正面俯视　屏幕 FPC 朝右，USB 从右侧插入</text>
+<rect x="44" y="140" width="688" height="432" rx="15" fill="#E5EAF0" stroke="#64748B" stroke-width="2"/>
+<polygon points="720.00,442.00 720.00,152.00 56.00,152.00 56.00,560.00 64.00,560.00 64.00,452.00 344.00,452.00 344.00,560.00 720.00,560.00 720.00,518.80 676.00,518.80 676.00,442.00" fill="#C8E1D7" stroke="#8CAB9E" opacity="0.65"/>
+<rect x="364.00" y="462.40" width="125.60" height="85.60" rx="3" fill="#B6CFE7" stroke="#61738A"/>
+<text x="426.80" y="505.20" text-anchor="middle" font-size="13">U1 主控模块</text>
+<text x="426.80" y="523.20" text-anchor="middle" font-size="13">缺货待解决</text>
+<rect x="68.00" y="172.00" width="300.16" height="256.00" rx="3" fill="#E3E8EF" stroke="#61738A"/>
+<text x="218.08" y="300.00" text-anchor="middle" font-size="13">DS1 墨水屏</text>
+<text x="218.08" y="318.00" text-anchor="middle" font-size="13">玻璃 37.52 × 32.0</text>
+<rect x="68.00" y="452.00" width="272.00" height="96.00" rx="3" fill="#F2CA8B" stroke="#61738A"/>
+<text x="204.00" y="500.00" text-anchor="middle" font-size="13">BT1 完整包体目标</text>
+<text x="204.00" y="518.00" text-anchor="middle" font-size="13">34 × 12 × 2.6 · 非实测</text>
+<rect x="680.00" y="444.48" width="52.00" height="71.52" rx="3" fill="#C4CDD8" stroke="#61738A"/>
+<text x="706.00" y="480.24" text-anchor="middle" font-size="13">J1</text>
+<rect x="668.00" y="433.68" width="64.00" height="93.12" rx="3" fill="#94A3B8" stroke="#61738A" stroke-dasharray="5 4" fill-opacity="0.24"/>
+<rect x="468.00" y="232.00" width="54.40" height="132.00" rx="3" fill="#A8C6B2" stroke="#61738A"/>
+<text x="495.20" y="298.00" text-anchor="middle" font-size="13">J2</text>
+<rect x="368.16" y="232.00" width="123.84" height="132.00" rx="3" fill="#DDD0EA" stroke="#61738A" stroke-dasharray="5 4" fill-opacity="0.24"/>
+<rect x="372.00" y="372.00" width="144.00" height="64.00" rx="3" fill="#C9BAE1" stroke="#61738A" stroke-dasharray="5 4" fill-opacity="0.24"/>
+<text x="444.00" y="404.00" text-anchor="middle" font-size="13">屏幕升压预留</text>
+<rect x="532.00" y="172.00" width="184.00" height="200.00" rx="3" fill="#C1E3DE" stroke="#61738A" stroke-dasharray="5 4" fill-opacity="0.24"/>
+<text x="624.00" y="272.00" text-anchor="middle" font-size="13">NFC 专用区域</text>
+<text x="624.00" y="290.00" text-anchor="middle" font-size="13">23 × 25 · 待设计调谐</text>
+<rect x="460.00" y="452.00" width="80.00" height="108.00" rx="3" fill="#DBEAFE" stroke="#61738A" stroke-dasharray="5 4" fill-opacity="0.24"/>
+<text x="500.00" y="506.00" text-anchor="middle" font-size="13">2.4G</text>
+<rect x="548.00" y="516.00" width="17.60" height="16.00" rx="3" fill="#E6C9CE" stroke="#61738A"/>
+<rect x="580.00" y="508.00" width="24.80" height="24.00" rx="3" fill="#E6C9CE" stroke="#61738A"/>
+<rect x="620.00" y="508.00" width="24.00" height="24.00" rx="3" fill="#E6C9CE" stroke="#61738A" stroke-dasharray="5 4" fill-opacity="0.24"/>
+<rect x="540.00" y="460.00" width="120.00" height="96.00" rx="3" fill="#F5DADF" stroke="#61738A" stroke-dasharray="5 4" fill-opacity="0.24"/>
+<rect x="556.00" y="396.00" width="112.00" height="40.00" rx="3" fill="#E2E8F0" stroke="#61738A" stroke-dasharray="5 4" fill-opacity="0.24"/>
+<text x="612.00" y="416.00" text-anchor="middle" font-size="13">SWD</text>
+<rect x="376.00" y="178.40" width="41.60" height="41.60" rx="3" fill="#ECC2A7" stroke="#61738A"/>
+<text x="396.80" y="199.20" text-anchor="middle" font-size="13">←</text>
+<rect x="373.60" y="176.00" width="46.40" height="46.40" rx="3" fill="#F2DDCD" stroke="#61738A" stroke-dasharray="5 4" fill-opacity="0.24"/>
+<rect x="428.00" y="178.40" width="41.60" height="41.60" rx="3" fill="#ECC2A7" stroke="#61738A"/>
+<text x="448.80" y="199.20" text-anchor="middle" font-size="13">→</text>
+<rect x="425.60" y="176.00" width="46.40" height="46.40" rx="3" fill="#F2DDCD" stroke="#61738A" stroke-dasharray="5 4" fill-opacity="0.24"/>
+<rect x="480.00" y="178.40" width="41.60" height="41.60" rx="3" fill="#ECC2A7" stroke="#61738A"/>
+<text x="500.80" y="199.20" text-anchor="middle" font-size="13">OK</text>
+<rect x="477.60" y="176.00" width="46.40" height="46.40" rx="3" fill="#F2DDCD" stroke="#61738A" stroke-dasharray="5 4" fill-opacity="0.24"/>
+<text x="755" y="157" font-size="19" font-weight="bold">这版增加了什么</text>
+<text x="755" y="191" font-size="15">实线：器件简化包络 / 电池目标</text>
+<text x="755" y="218" font-size="15">虚线：路径、净空、操作与电路预留</text>
+<text x="755" y="260" font-size="16" font-weight="bold">J1 · 沉板 USB-C</text>
+<text x="755" y="286" font-size="14">USB4500；USB 2.0 数据 + 充电</text>
+<text x="755" y="310" font-size="14">主体高 3.16 mm；板边开槽待 DFM</text>
+<text x="755" y="352" font-size="16" font-weight="bold">J2 · 屏幕 FPC 座</text>
+<text x="755" y="378" font-size="14">FH12；底接触，方向仍须核对</text>
+<text x="755" y="402" font-size="14">紫色区表示路径，不是已折好的排线</text>
+<text x="755" y="444" font-size="16" font-weight="bold">需要继续解决</text>
+<text x="755" y="470" font-size="14">主控供货 / 屏幕新版规格 / 电池包体</text>
+<text x="755" y="494" font-size="14">NFC 铜净空与匹配 / 键帽与固定结构</text>
+<text x="755" y="536" font-size="14" class="muted">几何检查只覆盖简化实体。</text>
+<text x="44" y="618" font-size="20" font-weight="bold">厚度比较：USB 区是目前更紧的局部叠层</text>
+<text x="44" y="648" font-size="14" class="muted">规划值加入壁厚、连接器高度及间隙分配；不是供应商保证上界，也不是整机厚度测量。</text>
+<text x="44" y="701" font-size="15">全打印壳 · 名义</text>
+<rect x="245" y="680" width="644.8" height="30" rx="4" fill="#8BB8A6"/>
+<text x="1030" y="701" font-size="16">4.96 mm</text>
+<text x="44" y="755" font-size="15">全打印壳 · 公差规划</text>
+<rect x="245" y="734" width="709.8" height="30" rx="4" fill="#D9927B"/>
+<text x="1030" y="755" font-size="16">5.46 mm</text>
+<text x="44" y="809" font-size="15">薄片前盖 · 公差规划</text>
+<rect x="245" y="788" width="638.3" height="30" rx="4" fill="#94B8D5"/>
+<text x="1030" y="809" font-size="16">4.91 mm</text>
+<line x1="895" y1="668" x2="895" y2="824" stroke="#AD403D" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="881" y="849" font-size="14" fill="#AD403D">5.00 mm 目标</text>
+<text x="44" y="878" font-size="13" class="muted">下一步：取得关键器件交付资料，再做正式原理图、PCB 布局及机械公差验证。</text>
+</svg>

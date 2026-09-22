@@ -1,0 +1,599 @@
+{
+  "checked": "2026-09-21",
+  "status": "nominal_footprint_geometry_checked_not_assembly_validated",
+  "part": "FPC-05FB-24PH20",
+  "supplier_id": "C2856831",
+  "device_uuid": "d2fce604b11f4f4f8ab0aa2bb88df399",
+  "footprint_uuid": "e05153ce2e2245a3869df651705e2da7",
+  "library_uuid": "0819f05c4eef4c71ace90d822a990e87",
+  "source_method": "SYS_FileManager.getFootprintFileByFootprintUuid, elibz2",
+  "footprint_source_sha256": "e77008471beaa1121b1c5e335003f7235a93fa5f19b6fe849dbc8b068e3f1b2b",
+  "manufacturer_drawing": "https://www.lcsc.com/datasheet/C2856831.pdf",
+  "pad_count": 26,
+  "signal_pad_count": 24,
+  "anchor_pad_count": 2,
+  "body_bbox_mm": [
+    -7.750023,
+    -3.530041,
+    7.749972,
+    1.369949
+  ],
+  "copper_pad_bbox_mm": [
+    -8.30006,
+    -2.525039,
+    8.299958,
+    2.224964
+  ],
+  "pin_1_center_mm": [
+    5.750052,
+    1.624965
+  ],
+  "pin_24_center_mm": [
+    -5.750052,
+    1.624965
+  ],
+  "checks": [
+    {
+      "name": "signal_pitch_1",
+      "actual_mm": 0.500126,
+      "expected_mm": 0.5,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_pitch_2",
+      "actual_mm": 0.499872,
+      "expected_mm": 0.5,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_pitch_3",
+      "actual_mm": 0.500126,
+      "expected_mm": 0.5,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_pitch_4",
+      "actual_mm": 0.499872,
+      "expected_mm": 0.5,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_pitch_5",
+      "actual_mm": 0.500126,
+      "expected_mm": 0.5,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_pitch_6",
+      "actual_mm": 0.499872,
+      "expected_mm": 0.5,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_pitch_7",
+      "actual_mm": 0.500126,
+      "expected_mm": 0.5,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_pitch_8",
+      "actual_mm": 0.499872,
+      "expected_mm": 0.5,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_pitch_9",
+      "actual_mm": 0.500126,
+      "expected_mm": 0.5,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_pitch_10",
+      "actual_mm": 0.499872,
+      "expected_mm": 0.5,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_pitch_11",
+      "actual_mm": 0.500126,
+      "expected_mm": 0.5,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_pitch_12",
+      "actual_mm": 0.499872,
+      "expected_mm": 0.5,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_pitch_13",
+      "actual_mm": 0.500126,
+      "expected_mm": 0.5,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_pitch_14",
+      "actual_mm": 0.499872,
+      "expected_mm": 0.5,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_pitch_15",
+      "actual_mm": 0.500126,
+      "expected_mm": 0.5,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_pitch_16",
+      "actual_mm": 0.499872,
+      "expected_mm": 0.5,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_pitch_17",
+      "actual_mm": 0.500126,
+      "expected_mm": 0.5,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_pitch_18",
+      "actual_mm": 0.499872,
+      "expected_mm": 0.5,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_pitch_19",
+      "actual_mm": 0.500126,
+      "expected_mm": 0.5,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_pitch_20",
+      "actual_mm": 0.499872,
+      "expected_mm": 0.5,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_pitch_21",
+      "actual_mm": 0.500126,
+      "expected_mm": 0.5,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_pitch_22",
+      "actual_mm": 0.499872,
+      "expected_mm": 0.5,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_pitch_23",
+      "actual_mm": 0.500126,
+      "expected_mm": 0.5,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_width_1",
+      "actual_mm": 0.299999,
+      "expected_mm": 0.3,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_height_1",
+      "actual_mm": 1.199998,
+      "expected_mm": 1.2,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_width_2",
+      "actual_mm": 0.299999,
+      "expected_mm": 0.3,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_height_2",
+      "actual_mm": 1.199998,
+      "expected_mm": 1.2,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_width_3",
+      "actual_mm": 0.299999,
+      "expected_mm": 0.3,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_height_3",
+      "actual_mm": 1.199998,
+      "expected_mm": 1.2,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_width_4",
+      "actual_mm": 0.299999,
+      "expected_mm": 0.3,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_height_4",
+      "actual_mm": 1.199998,
+      "expected_mm": 1.2,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_width_5",
+      "actual_mm": 0.299999,
+      "expected_mm": 0.3,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_height_5",
+      "actual_mm": 1.199998,
+      "expected_mm": 1.2,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_width_6",
+      "actual_mm": 0.299999,
+      "expected_mm": 0.3,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_height_6",
+      "actual_mm": 1.199998,
+      "expected_mm": 1.2,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_width_7",
+      "actual_mm": 0.299999,
+      "expected_mm": 0.3,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_height_7",
+      "actual_mm": 1.199998,
+      "expected_mm": 1.2,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_width_8",
+      "actual_mm": 0.299999,
+      "expected_mm": 0.3,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_height_8",
+      "actual_mm": 1.199998,
+      "expected_mm": 1.2,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_width_9",
+      "actual_mm": 0.299999,
+      "expected_mm": 0.3,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_height_9",
+      "actual_mm": 1.199998,
+      "expected_mm": 1.2,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_width_10",
+      "actual_mm": 0.299999,
+      "expected_mm": 0.3,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_height_10",
+      "actual_mm": 1.199998,
+      "expected_mm": 1.2,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_width_11",
+      "actual_mm": 0.299999,
+      "expected_mm": 0.3,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_height_11",
+      "actual_mm": 1.199998,
+      "expected_mm": 1.2,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_width_12",
+      "actual_mm": 0.299999,
+      "expected_mm": 0.3,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_height_12",
+      "actual_mm": 1.199998,
+      "expected_mm": 1.2,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_width_13",
+      "actual_mm": 0.299999,
+      "expected_mm": 0.3,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_height_13",
+      "actual_mm": 1.199998,
+      "expected_mm": 1.2,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_width_14",
+      "actual_mm": 0.299999,
+      "expected_mm": 0.3,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_height_14",
+      "actual_mm": 1.199998,
+      "expected_mm": 1.2,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_width_15",
+      "actual_mm": 0.299999,
+      "expected_mm": 0.3,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_height_15",
+      "actual_mm": 1.199998,
+      "expected_mm": 1.2,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_width_16",
+      "actual_mm": 0.299999,
+      "expected_mm": 0.3,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_height_16",
+      "actual_mm": 1.199998,
+      "expected_mm": 1.2,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_width_17",
+      "actual_mm": 0.299999,
+      "expected_mm": 0.3,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_height_17",
+      "actual_mm": 1.199998,
+      "expected_mm": 1.2,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_width_18",
+      "actual_mm": 0.299999,
+      "expected_mm": 0.3,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_height_18",
+      "actual_mm": 1.199998,
+      "expected_mm": 1.2,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_width_19",
+      "actual_mm": 0.299999,
+      "expected_mm": 0.3,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_height_19",
+      "actual_mm": 1.199998,
+      "expected_mm": 1.2,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_width_20",
+      "actual_mm": 0.299999,
+      "expected_mm": 0.3,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_height_20",
+      "actual_mm": 1.199998,
+      "expected_mm": 1.2,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_width_21",
+      "actual_mm": 0.299999,
+      "expected_mm": 0.3,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_height_21",
+      "actual_mm": 1.199998,
+      "expected_mm": 1.2,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_width_22",
+      "actual_mm": 0.299999,
+      "expected_mm": 0.3,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_height_22",
+      "actual_mm": 1.199998,
+      "expected_mm": 1.2,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_width_23",
+      "actual_mm": 0.299999,
+      "expected_mm": 0.3,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_height_23",
+      "actual_mm": 1.199998,
+      "expected_mm": 1.2,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_width_24",
+      "actual_mm": 0.299999,
+      "expected_mm": 0.3,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_height_24",
+      "actual_mm": 1.199998,
+      "expected_mm": 1.2,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "anchor_width_25",
+      "actual_mm": 1.999996,
+      "expected_mm": 2,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "anchor_height_25",
+      "actual_mm": 1.799996,
+      "expected_mm": 1.8,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "anchor_width_26",
+      "actual_mm": 1.999996,
+      "expected_mm": 2,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "anchor_height_26",
+      "actual_mm": 1.799996,
+      "expected_mm": 1.8,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "anchor_center_span",
+      "actual_mm": 14.59992,
+      "expected_mm": 14.6,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "signal_anchor_row_spacing",
+      "actual_mm": 3.24993,
+      "expected_mm": 3.25,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "body_width",
+      "actual_mm": 15.499994,
+      "expected_mm": 15.5,
+      "tolerance_mm": 0.002,
+      "passed": true
+    },
+    {
+      "name": "body_depth",
+      "actual_mm": 4.89999,
+      "expected_mm": 4.9,
+      "tolerance_mm": 0.002,
+      "passed": true
+    }
+  ],
+  "assembly_gaps": [
+    "FPC width/thickness tolerances",
+    "Physical pin 1 and contact orientation",
+    "Insertion datum/depth and fold",
+    "Latch clearance",
+    "Mask/paste/silkscreen and manufacturer process review"
+  ],
+  "existing_eda_projects_unchanged": true,
+  "pcb_or_cad_updated": false
+}

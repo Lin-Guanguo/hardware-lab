@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="610" viewBox="0 0 1200 610">
+<rect width="1200" height="610" fill="#f8fafc"/>
+<style>text{font-family:Arial,"PingFang SC",sans-serif;fill:#172033}.title{font-size:24px;font-weight:bold}.label{font-size:17px}.small{font-size:14px}</style>
+<text x="32" y="42" class="title">USB4500：0.10 mm 可以从哪里调整？</text>
+<text x="32" y="72" class="label">单个信号焊盘局部示意 · 同比例 · 两种改法均未应用到 EDA</text>
+<rect x="24" y="100" width="378" height="420" rx="12" fill="white" stroke="#cbd5e1"/>
+<text x="39" y="135" class="label">现状</text>
+<rect x="48" y="405" width="330" height="75" fill="#e2e8f0"/>
+<line x1="48" y1="405" x2="378" y2="405" stroke="#0f766e" stroke-width="3"/>
+<line x1="48" y1="405" x2="378" y2="405" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4"/>
+<rect x="174" y="171.0" width="54" height="198.00000000000003" fill="#d99b2b" stroke="#9a6700"/>
+<line x1="254" y1="369.0" x2="254" y2="405" stroke="#172033"/>
+<text x="261" y="392.0" class="small">0.20 mm</text>
+<text x="60" y="465" class="small">开槽区域</text>
+<text x="39" y="503" class="label">铜边距槽边 0.20 mm</text>
+<rect x="416" y="100" width="378" height="420" rx="12" fill="white" stroke="#cbd5e1"/>
+<text x="431" y="135" class="label">方案 A：槽后边退 0.10 mm</text>
+<rect x="440" y="423.0" width="330" height="57.0" fill="#e2e8f0"/>
+<line x1="440" y1="423.0" x2="770" y2="423.0" stroke="#0f766e" stroke-width="3"/>
+<line x1="440" y1="405" x2="770" y2="405" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4"/>
+<rect x="566" y="171.0" width="54" height="198.00000000000003" fill="#d99b2b" stroke="#9a6700"/>
+<line x1="646" y1="369.0" x2="646" y2="423.0" stroke="#172033"/>
+<text x="653" y="401.0" class="small">0.30 mm</text>
+<text x="452" y="465" class="small">开槽区域</text>
+<text x="431" y="503" class="label">进入主体投影 0.10 mm</text>
+<rect x="808" y="100" width="378" height="420" rx="12" fill="white" stroke="#cbd5e1"/>
+<text x="823" y="135" class="label">方案 B：焊盘近端裁短 0.10 mm</text>
+<rect x="832" y="405" width="330" height="75" fill="#e2e8f0"/>
+<line x1="832" y1="405" x2="1162" y2="405" stroke="#0f766e" stroke-width="3"/>
+<line x1="832" y1="405" x2="1162" y2="405" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4"/>
+<rect x="958" y="171.0" width="54" height="180.0" fill="#d99b2b" stroke="#9a6700"/>
+<line x1="1038" y1="351.0" x2="1038" y2="405" stroke="#172033"/>
+<text x="1045" y="383.0" class="small">0.30 mm</text>
+<text x="844" y="465" class="small">开槽区域</text>
+<text x="823" y="503" class="label">焊盘长 1.10 → 1.00 mm</text>
+<text x="32" y="552" class="small">绿线：槽后边　红虚线：库中主体投影后边　金色：铜焊盘（宽 0.30 mm）</text>
+<text x="32" y="580" class="small">主体投影不等于 PCB 高度处的壳体截面；方案 A 待装配截面核对，方案 B 待焊接/钢网核对。</text>
+</svg>

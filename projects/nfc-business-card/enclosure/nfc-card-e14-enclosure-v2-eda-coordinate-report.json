@@ -1,0 +1,47 @@
+{
+  "status": "E14_ENCLOSURE_V2_EDA_COORDINATE_SAMPLE_NOT_PRODUCTION_RELEASE",
+  "outer_mm": [
+    84.0,
+    52.0,
+    5.0
+  ],
+  "usb_opening": {
+    "edge": "y=0 EDA coordinate edge",
+    "bbox_mm": [
+      43.25,
+      -0.5,
+      12.5,
+      10.5
+    ]
+  },
+  "screen_window_mm": [
+    1.2,
+    16.2,
+    39.0,
+    33.6
+  ],
+  "battery_relief_mm": [
+    2.0,
+    1.0,
+    32.0,
+    13.0,
+    0.45
+  ],
+  "geometry_checks": {
+    "invalid_shapes": [],
+    "shell_solids": {
+      "BottomShell": 1,
+      "TopShell": 1
+    },
+    "shell_intersections": [],
+    "shell_reference_intersections": [],
+    "valid": true
+  },
+  "limitations": [
+    "This is an EDA-coordinate reconciliation sample, not a production enclosure.",
+    "The E14 Layer 11 board outline and J1 opening remain a release gate.",
+    "The battery is a nominal target without supplier maximum envelope, protection board, leads, tape or swelling allowance.",
+    "Screen FPC direction, button caps, USB plug strain relief and wall tolerances require physical samples.",
+    "Do not send STEP or STL to production before EDA board outline, routing, DRC, RF and DFM are released."
+  ]
+}

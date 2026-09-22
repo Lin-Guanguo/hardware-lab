@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+<rect width="1200" height="760" fill="#F7F9FC"/>
+<style>text{font-family:Arial,"PingFang SC",sans-serif;fill:#172B41}.muted{fill:#52657B}.small{font-size:14px}.dim{fill:#315D7D;font-size:13px}</style>
+<text x="70" y="38" font-size="26" font-weight="bold">E14 外壳 V1 · 打印验证样件</text>
+<text x="70" y="62" class="muted">84 × 52 × 5.0 mm · 上下壳 · 仅用于首轮打印与装配验证</text>
+<rect x="70" y="90" width="840" height="520" rx="20" fill="#C3CCD7" stroke="#50657A" stroke-width="2"/>
+<rect x="92.0" y="102.0" width="390" height="336.0" rx="2" fill="#F7F9FC" stroke="#557089" stroke-width="2"/>
+<text x="270" y="245" text-anchor="middle" font-size="16">屏幕窗口 39 × 33.6</text>
+<circle cx="476.0" cy="496.0" r="20" fill="#F7F9FC" stroke="#557089" stroke-width="2"/>
+<text x="476.0" y="501.0" text-anchor="middle" font-size="13">SW1</text>
+<circle cx="546.0" cy="496.0" r="20" fill="#F7F9FC" stroke="#557089" stroke-width="2"/>
+<text x="546.0" y="501.0" text-anchor="middle" font-size="13">SW2</text>
+<circle cx="616.0" cy="496.0" r="20" fill="#F7F9FC" stroke="#557089" stroke-width="2"/>
+<text x="616.0" y="501.0" text-anchor="middle" font-size="13">SW3</text>
+<rect x="815.0" y="347.5" width="95.0" height="125.0" fill="#F7F9FC" stroke="#557089" stroke-width="2"/>
+<text x="1000" y="380" class="small">USB-C 侧开口</text>
+<line x1="70" y1="635" x2="910" y2="635" stroke="#315D7D"/>
+<line x1="70" y1="627" x2="70" y2="643" stroke="#315D7D"/><line x1="910" y1="627" x2="910" y2="643" stroke="#315D7D"/>
+<text x="490" y="658" class="dim" text-anchor="middle">84 mm</text>
+<line x1="955" y1="90" x2="955" y2="610" stroke="#315D7D"/>
+<line x1="947" y1="90" x2="963" y2="90" stroke="#315D7D"/><line x1="947" y1="610" x2="963" y2="610" stroke="#315D7D"/>
+<text x="975" y="360" class="dim" transform="rotate(90 975 360)">52 mm</text>
+<text x="70" y="700" font-size="18" font-weight="bold">侧剖面候选</text>
+<rect x="250" y="684" width="840" height="8" fill="#8FA9C1" stroke="#50657A"/>
+<rect x="250" y="692" width="840" height="18" fill="#E1E7ED" stroke="#50657A"/>
+<rect x="250" y="710" width="840" height="8" fill="#B9C9DC" stroke="#50657A"/>
+<text x="250" y="744" class="small">下壳底板 0.8 mm + 内腔 / 分界 2.4 mm + 上壳前盖 0.8 mm；无卡扣/螺柱/胶槽。</text>
+<text x="70" y="90" class="small" fill="#5C7185">上视 · 上壳</text>
+</svg>

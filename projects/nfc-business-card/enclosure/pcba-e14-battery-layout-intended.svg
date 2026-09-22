@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="760" viewBox="0 0 1100 760">
+<rect width="1100" height="760" fill="#F7F9FC"/>
+<style>text{font-family:Arial,"PingFang SC",sans-serif;fill:#172B41}.small{font-size:14px}.muted{fill:#52657B}</style>
+<text x="40" y="32" font-size="25" font-weight="bold">E14 新电池尺寸 · PCB/CAD 空间布局</text>
+<text x="40" y="58" class="muted">84 × 52 mm · 屏幕左上 / 301230 左下 / NFC 右上 / USB 与主控右下 · 空间验证候选</text>
+<rect x="40" y="40" width="840.0" height="520.0" rx="12" fill="#E5EAF0" stroke="#64748B" stroke-width="2"/>
+<rect x="70.0" y="60.0" width="374.0" height="320.0" rx="4" fill="#D9E3EE" stroke="#61738A"/>
+<text x="257.0" y="220.0" text-anchor="middle" font-size="13">屏幕</text>
+<rect x="70.0" y="420.0" width="300.0" height="120.0" rx="4" fill="#F0C886" stroke="#61738A"/>
+<text x="220.0" y="480.0" text-anchor="middle" font-size="13">301230 电池目标</text>
+<rect x="610.0" y="60.0" width="240.0" height="250.0" rx="4" fill="#B8E0D7" stroke="#61738A" stroke-dasharray="6 4" fill-opacity="0.34"/>
+<text x="730.0" y="185.0" text-anchor="middle" font-size="13">NFC 右上净空</text>
+<rect x="800.0" y="315.0" width="80.0" height="89.4" rx="4" fill="#C7D0DB" stroke="#61738A"/>
+<text x="840.0" y="359.7" text-anchor="middle" font-size="13">USB-C</text>
+<rect x="460.0" y="350.0" width="165.0" height="68.0" rx="4" fill="#B8D4C0" stroke="#61738A"/>
+<text x="542.5" y="384.0" text-anchor="middle" font-size="13">FPC 座</text>
+<rect x="490.0" y="230.0" width="190.0" height="110.0" rx="4" fill="#E6C9CE" stroke="#61738A" stroke-dasharray="6 4" fill-opacity="0.34"/>
+<text x="585.0" y="285.0" text-anchor="middle" font-size="13">USB/充电/稳压</text>
+<rect x="780.0" y="410.0" width="85.0" height="65.0" rx="4" fill="#B7CFE7" stroke="#61738A"/>
+<text x="822.5" y="442.5" text-anchor="middle" font-size="13">U1 主控</text>
+<rect x="420" y="420" width="52" height="52" rx="4" fill="#ECC2A7" stroke="#61738A"/>
+<text x="446" y="451" text-anchor="middle" font-size="13">SW1</text>
+<rect x="490" y="420" width="52" height="52" rx="4" fill="#ECC2A7" stroke="#61738A"/>
+<text x="516" y="451" text-anchor="middle" font-size="13">SW2</text>
+<rect x="560" y="420" width="52" height="52" rx="4" fill="#ECC2A7" stroke="#61738A"/>
+<text x="586" y="451" text-anchor="middle" font-size="13">SW3</text>
+<text x="730" y="110" font-size="18" font-weight="bold">机械待验证</text>
+<text x="730" y="145" class="small">PCB 板框 / USB 槽 / 工艺边</text>
+<text x="730" y="172" class="small">电池完整包体 / 引线 / 鼓胀</text>
+<text x="730" y="199" class="small">FPC 插合、屏幕支撑、按键孔</text>
+<text x="730" y="226" class="small">NFC 铜线、匹配与实测读距</text>
+<text x="40" y="630" class="muted">本图和 STEP 只用于空间评审；不包含可打印上下壳、孔位、卡扣或供应商制造层。</text>
+</svg>

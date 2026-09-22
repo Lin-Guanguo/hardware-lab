@@ -1,11 +1,13 @@
 ---
 description: NFC 名片技术调研的原始来源、版本与证据边界
-last_updated: 2026-09-17
+last_updated: 2026-09-21
 ---
 
 # 来源与核对记录
 
-访问日期统一为 **2026-09-17**。选型结论是结合用户需求的工程判断，不是厂商对整机的保证。动态网页的库存、版本、工艺能力在采购/安装前重核。没有把论坛猜测当作关键规格依据。
+早期条目访问于 **2026-09-17**；新增连接器图纸及 PCBA 供货快照访问于 **2026-09-20**，具体日期见下载清单与[候选 BOM](../hardware/candidate-bom.md)。选型结论是结合用户需求的工程判断，不是厂商对整机的保证。动态网页的库存、版本、工艺能力在采购/安装前重核。
+
+2026-09-21 新增 [FH12A 上接触插座原厂图纸](https://www.hirose.com/en/product/document?clcode=CL0586-0555-2-55&documentid=0000906835&documenttype=2DDrawing&lang=en&productname=FH12A-24S-0.5SH%2855%29&series=FH12)，归档 `downloads/fh12a-24s-drawing.pdf` 并核 SHA-256；两页均渲染检查，重点核本体、公差、开盖高度、插入段及推荐焊盘。与屏幕触点、库锚脚的差异见[84 × 52 排布记录](../hardware/pcb-84x52.md)。另核对 [TI TPD2EUSB30 数据手册](https://www.ti.com/lit/ds/symlink/tpd2eusb30.pdf)选择数据 ESD 空间候选，未完成电路连接或生产选型。
 
 ## 芯片与协议
 
@@ -30,6 +32,16 @@ last_updated: 2026-09-17
 | `downloads/js1300.pdf` | E-Switch JS1300 单页资料，约 0.15 MB | 高度、触点拓扑和安装外形已目视核对 |
 | `downloads/bq25186.pdf` | TI SLUSF69A，Rev A，约 2.09 MB | 电源路径、电流配置、复位值、封装尺寸 |
 | `downloads/tps7a02.pdf` | TI TPS7A02，约 3.41 MB | 输入输出范围、静态电流、DBV 最大高度 |
+| `downloads/usb4500-drawing.pdf` | GCT USB4500，A1，约 0.16 MB；LCSC 原厂图纸镜像 | 第 1 页主体高度、推荐板厚及数据触点，已目视核对 |
+| `downloads/fh12-24s-drawing.pdf` | Hirose FH12，约 1.05 MB；原厂下载 | 第 1 页底接触与高度公差，已目视核对 |
+| `downloads/gdeh0154e01.pdf` | Good Display v1.0 / 2026-03-20，约 3.76 MB | 第 5–7、9–10 页尺寸、引脚、BUSY 与 TBD 功耗，已目视核对 |
+| `downloads/despi-e01-guide.pdf` | DESPI-E01 v1.0 / 2026-05-27，约 0.81 MB | BUSY 极性及上接触/双面接触插座说明，已目视核对 |
+| `downloads/despi-e01-schematic.pdf` | DESPI-E01 官方单页电路图，约 0.47 MB | 升压外围、FPC 与屏幕规格差异，已目视核对，未完成逐网络审核 |
+| `downloads/e6-design-notice-cn.pdf` | 官方 E6 通用设计须知，约 2.82 MB | 第 3 页连续翻页间隔建议，已目视核对，不当作单次刷新耗时 |
+
+另下载 `downloads/gdeh0154e01-esp32.zip`（约 37.61 MB），通过 ZIP CRC 检查，静态读取 Arduino/ESP-IDF 驱动和说明；未执行、构建或烧录。文件校验值固定本轮读取的版本，详细发现见[六色屏评估](gdeh0154e01-evaluation.md)。
+
+本轮另复核 Raytac Rev L 第 14–17、35、40 页接口和供电、Good Display 旧图第 7/33 页机械及外围、BQ25186 默认寄存器。屏幕官网当前版下载未成功，旧图标签差异作为阻塞项保留，见[系统设计](../hardware/system-design.md)。
 
 仅用于本地研究，厂商保留原文版权；缓存目录被 Git 忽略。未来导入固件源码另记录上游许可证和具体 revision。
 

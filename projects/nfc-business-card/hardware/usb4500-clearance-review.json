@@ -1,0 +1,31 @@
+{
+  "date": "2026-09-21",
+  "units": "mm",
+  "eda_modified": false,
+  "basis": "Live PCB source matches prior saved primitives; cached J1 library footprint; GCT A1 drawing, 2023-05-31",
+  "j1_anchor_y": 5.475000479999999,
+  "board_slot_rear_y": 7.300000639999999,
+  "footprint_slot_rear_local_y": 1.8250153999999998,
+  "body_projection_rear_local_y": 1.82499,
+  "pad_near_edge_local_y": 2.0250530999999996,
+  "pad_far_edge_local_y": 3.1250509,
+  "pad_length": 1.0999978000000006,
+  "copper_to_board_edge": 0.20005294000000085,
+  "copper_to_footprint_edge": 0.20003769999999976,
+  "slot_to_body_projection_margin": 2.5399999999953238e-05,
+  "shrink_slot_0_1": {
+    "copper_clearance": 0.30003769999999974,
+    "body_projection_intrusion": 0.09997460000000014,
+    "adopted": false
+  },
+  "trim_pad_0_1": {
+    "copper_clearance": 0.30003769999999974,
+    "pad_length": 0.9999978000000006,
+    "adopted": false
+  },
+  "limitations": [
+    "Body projection is not the housing section at PCB height; projected intrusion does not prove physical collision.",
+    "Pad trimming needs solder-joint and stencil review; no manufacturer approval or physical fit test.",
+    "No new client DRC; prior count remains 58."
+  ]
+}

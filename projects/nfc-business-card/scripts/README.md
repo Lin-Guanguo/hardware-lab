@@ -1,0 +1,75 @@
+# 电子名片脚本
+
+## 当前确定方案
+
+更新于 **2026-09-22**。当前 CAD 空间研究入口为 [e14-layout-study.py](../enclosure/e14-layout-study.py)，对应 [pcba-e14-battery-layout.FCStd](../enclosure/pcba-e14-battery-layout.FCStd)。它把 301230 标称包体和 E14 分区落到 84 × 52 mm 坐标；基于该空间研究另有 [e14-enclosure-v1.py](../enclosure/e14-enclosure-v1.py) 生成上下壳打印验证样件（[FCStd](../enclosure/nfc-card-e14-enclosure-v1.FCStd)、[STEP](../enclosure/nfc-card-e14-enclosure-v1.step)、上下壳 STL），外包络 5.0 mm，但完整装配与生产公差仍待验证。
+
+新的 PCB 开工入口是 [E15 清理版 PCB 开工记录](../hardware/pcb-e15-clean-layout.md)。E15 图页位于 E14 `.eprj2` 工程内；其审查快照由 [generate-e15-clean-layout-svg.py](generate-e15-clean-layout-svg.py) 从保存后的 E15 数据生成。该脚本只渲染审查图，不修改 EasyEDA 工程。
+
+E14 实际平面图由 [generate-e14-eda-layout-svg.py](generate-e14-eda-layout-svg.py) 从 [e14-eda-snapshot.json](../hardware/e14-eda-snapshot.json) 生成；快照同时保留 [器件/焊盘坐标](../hardware/e14-eda-components-pins.json)，用于核对 EasyEDA 保存重开后的真实板框、机械图元和元件位置。该脚本不会修改 EDA 工程。
+
+外壳坐标协调样件由 [e14-enclosure-v2-eda-coordinate.py](../enclosure/e14-enclosure-v2-eda-coordinate.py) 生成；复核使用 [check-e14-enclosure-v2.py](check-e14-enclosure-v2.py)。V2 将 USB 开口放在 E14 实际 J1 所在的 y=0 边，只用于解决 PCB/外壳坐标关系。
+
+按键至少保证两颗，空间允许时可保留第三颗；当前宏和归档模型仍生成三个按键位置，尚未调整几何或实现菜单固件。
+
+E14 模型可直接复现：`/Applications/FreeCAD.app/Contents/Resources/bin/freecadcmd projects/nfc-business-card/enclosure/e14-layout-study.py`；几何检查使用 `freecad-study.py check`，视觉检查使用一次 GUI 预览。统一输出到新目录或新文件，保留已有模型；不覆盖其他窗口中的手工或未保存修改。
+
+E14 生产化门槛记录见 [pcb-e14-manufacturing-gates.json](../hardware/pcb-e14-manufacturing-gates.json)。它只记录当前快照和放行条件，不生成制造文件，也不会把未确认的电池尺寸或空间包络当成供应商规格。
+
+门槛检查：
+
+```sh
+python3 projects/nfc-business-card/scripts/check-e14-gates.py
+```
+
+EDA 最新为 [84 × 52 E6 功能块工程](../hardware/pcb-e6-84x52-blocks.md)。新增 [check-e6-netlist.py](check-e6-netlist.py)，检查 56 元件、234 项原理图引脚与 234 项 PCB 元件焊盘网络；不验证铜线连通、DRC、功耗或 RF：
+
+```sh
+python3 projects/nfc-business-card/scripts/check-e6-netlist.py projects/nfc-business-card/hardware/e6-blocks-circuit.enet --pcb projects/nfc-business-card/hardware/pcb-e6-84x52-blocks.json --pcb-netlist projects/nfc-business-card/hardware/e6-blocks-pcb.enet
+```
+
+## 常用命令
+
+从仓库根目录运行；环境为本机 FreeCAD 1.1.3 arm64，默认运行时位于 `/Applications/FreeCAD.app/Contents/Resources`。
+
+```sh
+/Applications/FreeCAD.app/Contents/Resources/bin/freecadcmd projects/nfc-business-card/enclosure/e14-layout-study.py
+/Applications/FreeCAD.app/Contents/Resources/bin/freecadcmd projects/nfc-business-card/enclosure/e14-enclosure-v1.py
+/Applications/FreeCAD.app/Contents/Resources/bin/freecadcmd projects/nfc-business-card/enclosure/e14-enclosure-v2-eda-coordinate.py
+python3 projects/nfc-business-card/scripts/freecad-study.py check projects/nfc-business-card/enclosure/pcba-e14-battery-layout.FCStd
+python3 projects/nfc-business-card/scripts/freecad-study.py preview projects/nfc-business-card/enclosure/pcba-e14-battery-layout.FCStd
+printf '%s\n' 'exec(open("projects/nfc-business-card/scripts/check-e14-enclosure-v2.py").read())' | /Applications/FreeCAD.app/Contents/Resources/bin/freecadcmd --console
+
+python3 projects/nfc-business-card/scripts/freecad-study.py generate --variant e6-84x52-detail
+python3 projects/nfc-business-card/scripts/freecad-study.py check projects/nfc-business-card/enclosure/pcba-e6-84x52-detail.FCStd
+# Optional: one temporary GUI process, then exit.
+python3 projects/nfc-business-card/scripts/freecad-study.py preview projects/nfc-business-card/enclosure/pcba-e6-84x52-detail.FCStd
+```
+
+生成命令复现宏中的参数，不会导入已保存模型里的手工修改。[freecad-worker.py](freecad-worker.py) 是内部工作脚本，不直接用系统 Python 启动。完整环境、输出与限制见[软件说明](../docs/software.md#84--52-实际封装细化)。
+
+## 其他检查与历史变体
+
+### 布线空间先行研究
+
+在修改 CAD 或 EasyEDA 之前，可先运行 [routing-space-study.py](routing-space-study.py) 比较长条电池和右下布线区。它只生成忽略的 JSON/SVG，不覆盖模型或工程：
+
+```sh
+python3 projects/nfc-business-card/scripts/routing-space-study.py \
+  --output-dir projects/nfc-business-card/artifacts/routing-space-study/<new-run>
+```
+
+研究结论与限制见[布线空间先行研究](../hardware/routing-space-study.md)。
+
+[check-schematic-netlist.py](check-schematic-netlist.py)核对原 27 元件草案的关键网络，不验证新增 J2/U4/U5、PCB 布线或可制造性：
+
+```sh
+python3 projects/nfc-business-card/scripts/check-schematic-netlist.py projects/nfc-business-card/hardware/schematic-draft.enet
+```
+
+`baseline`、`e6-302030`、`e6-bottom-usb`、`e6-84x52` 和 `e6-83x51` 保留用于复现旧比较；日常继续当前方案时选择 `e6-84x52-detail`。
+
+
+### EDA 元件关联复核
+
+`check-e6-netlist.py` 可追加 `--pcb-netlist <PCB 导出的 .enet>`，核对两侧元件集合、Unique ID、封装和引脚网络。与 `--pcb` 的焊盘网络快照检查互补；需从同一工程的正确原理图/PCB 上下文重新导出，不混用旧会话文件。本轮先检出 27 个关联 ID 差异，修正并保存重开后通过。当前功能块副本的复验输入为 `hardware/e6-blocks-circuit.enet`、`hardware/e6-blocks-pcb.enet` 和 `hardware/pcb-e6-84x52-blocks.json`；原 E6 网表与快照保留作历史比较。

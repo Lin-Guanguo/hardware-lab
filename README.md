@@ -2,13 +2,15 @@
 
 用于个人硬件实验和小装置开发的 Git 仓库。每个装置放在 `projects/` 下，独立维护固件、硬件资料、依赖和构建流程。
 
-## 项目
+## 当前确定方案
+
+以下为各项目当前采用的方向；点击项目名查看最新文件和验证边界，历史方案保留在各项目后续章节。
 
 | 项目 | 用途 | 最近记录的状态 |
 | --- | --- | --- |
 | [AI Passport](projects/ai-passport/README.md) | 探索紧凑的可编程胸牌、屏幕按键交互与 NFC 链接 | 2026-09-16 确认已下单，等待到货 |
 | [Image Oracle](projects/image-oracle/README.md) | 用固定算法将摄像头图像映射为答案，默认拍摄熔岩灯 | 2026-09-19 拼接原型完成并验收；后续探索更多传感器，或焊接、定制 PCB 与 3D 打印的紧凑装置 |
-| [Programmable NFC Business Card](projects/nfc-business-card/README.md) | 按键切换身份的薄型 NFC 墨水屏名片 | 2026-09-20 已有 FreeCAD 包络模型；EDA 官方 AI 接口已连通，独立测试电路完成保存重开、工程导出和网表核对 |
+| [Programmable NFC Business Card](projects/nfc-business-card/README.md) | 按键切换身份的薄型 NFC 墨水屏名片 | 2026-09-22 E15 清理版成为新电池布局开工入口；56 元件、242 焊盘、0 铜线；原理图关联、板框、USB 扇出、CAD 与 RF 待验证 |
 
 ## 目录结构
 
@@ -43,6 +45,7 @@ hardware-lab/
         ├── README.md
         ├── hardware/
         ├── enclosure/
+        ├── scripts/
         └── docs/
 ```
 

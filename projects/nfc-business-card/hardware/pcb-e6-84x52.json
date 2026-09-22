@@ -1,0 +1,5190 @@
+{
+  "date": "2026-09-21",
+  "project": "NFC-Business-Card-84x52-E6",
+  "manufacturing_ready": false,
+  "components": [
+    {
+      "id": "f41efe6726027056",
+      "ref": "C1",
+      "x": 1043.3071,
+      "y": 429.1339,
+      "rotation": 180,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "acc4e864cc17248a",
+        "name": "C0603"
+      },
+      "pads": [
+        {
+          "primitiveId": "e14",
+          "net": "GND",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e15",
+          "net": "USB_VBUS",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge13"
+    },
+    {
+      "id": "f8d8043bc5c19bdf",
+      "ref": "C2",
+      "x": 1204.7244,
+      "y": 429.1339,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "acc4e864cc17248a",
+        "name": "C0603"
+      },
+      "pads": [
+        {
+          "primitiveId": "e14",
+          "net": "GND",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e15",
+          "net": "SYS",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge14"
+    },
+    {
+      "id": "aeb09fd14540bf14",
+      "ref": "C3",
+      "x": 1228.3465,
+      "y": 578.7402,
+      "rotation": 90,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "acc4e864cc17248a",
+        "name": "C0603"
+      },
+      "pads": [
+        {
+          "primitiveId": "e14",
+          "net": "GND",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e15",
+          "net": "BAT_PACK_TBD",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge15"
+    },
+    {
+      "id": "c6eacb169aae3346",
+      "ref": "C4",
+      "x": 1350.3937,
+      "y": 429.1339,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "acc4e864cc17248a",
+        "name": "C0603"
+      },
+      "pads": [
+        {
+          "primitiveId": "e14",
+          "net": "GND",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e15",
+          "net": "SYS",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge16"
+    },
+    {
+      "id": "d5226715eecfb21a",
+      "ref": "C5",
+      "x": 1318.8976,
+      "y": 622.0472,
+      "rotation": 180,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "acc4e864cc17248a",
+        "name": "C0603"
+      },
+      "pads": [
+        {
+          "primitiveId": "e14",
+          "net": "GND",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e15",
+          "net": "VDD_3V3",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge17"
+    },
+    {
+      "id": "48d7af77150b10a5",
+      "ref": "C6",
+      "x": 94.4882,
+      "y": 598.4252,
+      "rotation": 90,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "acc4e864cc17248a",
+        "name": "C0603"
+      },
+      "pads": [
+        {
+          "primitiveId": "e14",
+          "net": "GND",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e15",
+          "net": "VDD_3V3",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge22"
+    },
+    {
+      "id": "004f9c0de84c5784",
+      "ref": "C7",
+      "x": 94.4882,
+      "y": 279.5276,
+      "rotation": 90,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "acc4e864cc17248a",
+        "name": "C0603"
+      },
+      "pads": [
+        {
+          "primitiveId": "e14",
+          "net": "GND",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e15",
+          "net": "VDD_3V3",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge23"
+    },
+    {
+      "id": "c8d1c85979ca70ad",
+      "ref": "C8",
+      "x": 94.4882,
+      "y": 155.5118,
+      "rotation": 90,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "acc4e864cc17248a",
+        "name": "C0603"
+      },
+      "pads": [
+        {
+          "primitiveId": "e14",
+          "net": "GND",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e15",
+          "net": "USB_VBUS",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge24"
+    },
+    {
+      "id": "80b6742a9e6db79e",
+      "ref": "J1",
+      "x": 1259.8425,
+      "y": 215.5512,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "036bf54eb3c01ad3",
+        "name": "USB-SMD_USB4500-03-0-A"
+      },
+      "pads": [
+        {
+          "primitiveId": "e26",
+          "net": "",
+          "padNumber": "B8"
+        },
+        {
+          "primitiveId": "e27",
+          "net": "USB_CC1",
+          "padNumber": "A5"
+        },
+        {
+          "primitiveId": "e28",
+          "net": "USB_DM_CONN",
+          "padNumber": "B7"
+        },
+        {
+          "primitiveId": "e29",
+          "net": "USB_DP_CONN",
+          "padNumber": "A6"
+        },
+        {
+          "primitiveId": "e30",
+          "net": "USB_DM_CONN",
+          "padNumber": "A7"
+        },
+        {
+          "primitiveId": "e31",
+          "net": "USB_DP_CONN",
+          "padNumber": "B6"
+        },
+        {
+          "primitiveId": "e32",
+          "net": "",
+          "padNumber": "A8"
+        },
+        {
+          "primitiveId": "e33",
+          "net": "USB_CC2",
+          "padNumber": "B5"
+        },
+        {
+          "primitiveId": "e34",
+          "net": "USB_VBUS",
+          "padNumber": "B4A9"
+        },
+        {
+          "primitiveId": "e35",
+          "net": "GND",
+          "padNumber": "B1A12"
+        },
+        {
+          "primitiveId": "e36",
+          "net": "USB_VBUS",
+          "padNumber": "A4B9"
+        },
+        {
+          "primitiveId": "e37",
+          "net": "GND",
+          "padNumber": "A1B12"
+        },
+        {
+          "primitiveId": "e58",
+          "net": "GND",
+          "padNumber": "20"
+        },
+        {
+          "primitiveId": "e59",
+          "net": "GND",
+          "padNumber": "19"
+        },
+        {
+          "primitiveId": "e60",
+          "net": "GND",
+          "padNumber": "18"
+        },
+        {
+          "primitiveId": "e61",
+          "net": "GND",
+          "padNumber": "17"
+        }
+      ],
+      "unique_id": "gge1"
+    },
+    {
+      "id": "2b5f0d1a05afd7f9",
+      "ref": "R1",
+      "x": 1114.1732,
+      "y": 375.9843,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "pads": [
+        {
+          "primitiveId": "e7",
+          "net": "GND",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e8",
+          "net": "USB_CC1",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge4"
+    },
+    {
+      "id": "384904d4feeb315f",
+      "ref": "R2",
+      "x": 1244.0945,
+      "y": 375.9843,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "pads": [
+        {
+          "primitiveId": "e7",
+          "net": "GND",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e8",
+          "net": "USB_CC2",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge5"
+    },
+    {
+      "id": "bc4f510a957caa44",
+      "ref": "R3",
+      "x": 196.8504,
+      "y": 94.4882,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "pads": [
+        {
+          "primitiveId": "e7",
+          "net": "USB_DP_MCU",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e8",
+          "net": "USB_DP_CONN",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge6"
+    },
+    {
+      "id": "a80c1c5ae9df8d33",
+      "ref": "R4",
+      "x": 326.7717,
+      "y": 94.4882,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "pads": [
+        {
+          "primitiveId": "e7",
+          "net": "USB_DM_MCU",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e8",
+          "net": "USB_DM_CONN",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge7"
+    },
+    {
+      "id": "8c77ec284326c24a",
+      "ref": "R5",
+      "x": 1051.1811,
+      "y": 866.1417,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "pads": [
+        {
+          "primitiveId": "e7",
+          "net": "CHG_SDA",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e8",
+          "net": "VDD_3V3",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge8"
+    },
+    {
+      "id": "e022e33fca0ba2a1",
+      "ref": "R6",
+      "x": 1181.1024,
+      "y": 866.1417,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "pads": [
+        {
+          "primitiveId": "e7",
+          "net": "CHG_SCL",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e8",
+          "net": "VDD_3V3",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge9"
+    },
+    {
+      "id": "ee62f5257cbedd7f",
+      "ref": "R7",
+      "x": 1311.0236,
+      "y": 866.1417,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "pads": [
+        {
+          "primitiveId": "e7",
+          "net": "CHG_CE_N",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e8",
+          "net": "VDD_3V3",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge10"
+    },
+    {
+      "id": "8fd4f31c11f0ec2b",
+      "ref": "R8",
+      "x": 1440.9449,
+      "y": 866.1417,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "pads": [
+        {
+          "primitiveId": "e7",
+          "net": "CHG_INT_N",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e8",
+          "net": "VDD_3V3",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge11"
+    },
+    {
+      "id": "c47382482cf66894",
+      "ref": "R9",
+      "x": 1570.8661000000002,
+      "y": 866.1417,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "pads": [
+        {
+          "primitiveId": "e7",
+          "net": "CHG_PG_N",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e8",
+          "net": "VDD_3V3",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge12"
+    },
+    {
+      "id": "afdb4daf3e938e1e",
+      "ref": "R10",
+      "x": 846.4567,
+      "y": 649.6063000000001,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "pads": [
+        {
+          "primitiveId": "e7",
+          "net": "KEY_PREV_N",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e8",
+          "net": "VDD_3V3",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge25"
+    },
+    {
+      "id": "fb7d177d18393457",
+      "ref": "R11",
+      "x": 846.4567,
+      "y": 767.7165,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "pads": [
+        {
+          "primitiveId": "e7",
+          "net": "KEY_NEXT_N",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e8",
+          "net": "VDD_3V3",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge26"
+    },
+    {
+      "id": "8700c566e756eaa0",
+      "ref": "R12",
+      "x": 846.4567,
+      "y": 885.8268,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "pads": [
+        {
+          "primitiveId": "e7",
+          "net": "KEY_OK_N",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e8",
+          "net": "VDD_3V3",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge27"
+    },
+    {
+      "id": "f005d66b5a5dba5c",
+      "ref": "SW1",
+      "x": 1751.9685,
+      "y": 196.8504,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "96a14c01eb7a7f87",
+        "name": "KEY-SMD_4P-L5.2-W5.2-P3.70-LS6.4"
+      },
+      "pads": [
+        {
+          "primitiveId": "e11",
+          "net": "KEY_PREV_N",
+          "padNumber": "1"
+        },
+        {
+          "primitiveId": "e12",
+          "net": "GND",
+          "padNumber": "3"
+        },
+        {
+          "primitiveId": "e13",
+          "net": "KEY_PREV_N",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e14",
+          "net": "GND",
+          "padNumber": "4"
+        }
+      ],
+      "unique_id": "gge19"
+    },
+    {
+      "id": "ae3f26eb9594d4ce",
+      "ref": "SW2",
+      "x": 1751.9685,
+      "y": 444.8819,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "96a14c01eb7a7f87",
+        "name": "KEY-SMD_4P-L5.2-W5.2-P3.70-LS6.4"
+      },
+      "pads": [
+        {
+          "primitiveId": "e11",
+          "net": "KEY_NEXT_N",
+          "padNumber": "1"
+        },
+        {
+          "primitiveId": "e12",
+          "net": "GND",
+          "padNumber": "3"
+        },
+        {
+          "primitiveId": "e13",
+          "net": "KEY_NEXT_N",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e14",
+          "net": "GND",
+          "padNumber": "4"
+        }
+      ],
+      "unique_id": "gge20"
+    },
+    {
+      "id": "d80b5f9a2ffbbb3e",
+      "ref": "SW3",
+      "x": 1751.9685,
+      "y": 692.9134,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "96a14c01eb7a7f87",
+        "name": "KEY-SMD_4P-L5.2-W5.2-P3.70-LS6.4"
+      },
+      "pads": [
+        {
+          "primitiveId": "e11",
+          "net": "KEY_OK_N",
+          "padNumber": "1"
+        },
+        {
+          "primitiveId": "e12",
+          "net": "GND",
+          "padNumber": "3"
+        },
+        {
+          "primitiveId": "e13",
+          "net": "KEY_OK_N",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e14",
+          "net": "GND",
+          "padNumber": "4"
+        }
+      ],
+      "unique_id": "gge21"
+    },
+    {
+      "id": "97c6fc7236300ad5",
+      "ref": "U1",
+      "x": 360.2362,
+      "y": 328.7402,
+      "rotation": -90,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "9465fd428647471c",
+        "name": "COMM-SMD_MDBT50Q-1MV2"
+      },
+      "pads": [
+        {
+          "primitiveId": "e65",
+          "net": "GND",
+          "padNumber": "1"
+        },
+        {
+          "primitiveId": "e66",
+          "net": "GND",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e67",
+          "net": "KEY_PREV_N",
+          "padNumber": "3"
+        },
+        {
+          "primitiveId": "e68",
+          "net": "KEY_NEXT_N",
+          "padNumber": "4"
+        },
+        {
+          "primitiveId": "e69",
+          "net": "KEY_OK_N",
+          "padNumber": "5"
+        },
+        {
+          "primitiveId": "e70",
+          "net": "",
+          "padNumber": "6"
+        },
+        {
+          "primitiveId": "e71",
+          "net": "",
+          "padNumber": "7"
+        },
+        {
+          "primitiveId": "e72",
+          "net": "",
+          "padNumber": "8"
+        },
+        {
+          "primitiveId": "e73",
+          "net": "",
+          "padNumber": "9"
+        },
+        {
+          "primitiveId": "e74",
+          "net": "",
+          "padNumber": "10"
+        },
+        {
+          "primitiveId": "e75",
+          "net": "",
+          "padNumber": "11"
+        },
+        {
+          "primitiveId": "e76",
+          "net": "",
+          "padNumber": "12"
+        },
+        {
+          "primitiveId": "e77",
+          "net": "",
+          "padNumber": "13"
+        },
+        {
+          "primitiveId": "e78",
+          "net": "",
+          "padNumber": "14"
+        },
+        {
+          "primitiveId": "e79",
+          "net": "GND",
+          "padNumber": "15"
+        },
+        {
+          "primitiveId": "e80",
+          "net": "CHG_SCL",
+          "padNumber": "16"
+        },
+        {
+          "primitiveId": "e81",
+          "net": "",
+          "padNumber": "17"
+        },
+        {
+          "primitiveId": "e82",
+          "net": "",
+          "padNumber": "18"
+        },
+        {
+          "primitiveId": "e83",
+          "net": "CHG_SDA",
+          "padNumber": "19"
+        },
+        {
+          "primitiveId": "e84",
+          "net": "CHG_INT_N",
+          "padNumber": "20"
+        },
+        {
+          "primitiveId": "e85",
+          "net": "CHG_PG_N",
+          "padNumber": "21"
+        },
+        {
+          "primitiveId": "e86",
+          "net": "CHG_CE_N",
+          "padNumber": "22"
+        },
+        {
+          "primitiveId": "e87",
+          "net": "",
+          "padNumber": "23"
+        },
+        {
+          "primitiveId": "e88",
+          "net": "EPD_BUSY_TBD",
+          "padNumber": "24"
+        },
+        {
+          "primitiveId": "e89",
+          "net": "",
+          "padNumber": "25"
+        },
+        {
+          "primitiveId": "e90",
+          "net": "",
+          "padNumber": "26"
+        },
+        {
+          "primitiveId": "e91",
+          "net": "EPD_EN_TBD",
+          "padNumber": "27"
+        },
+        {
+          "primitiveId": "e92",
+          "net": "VDD_3V3",
+          "padNumber": "28"
+        },
+        {
+          "primitiveId": "e93",
+          "net": "",
+          "padNumber": "29"
+        },
+        {
+          "primitiveId": "e94",
+          "net": "VDD_3V3",
+          "padNumber": "30"
+        },
+        {
+          "primitiveId": "e95",
+          "net": "",
+          "padNumber": "31"
+        },
+        {
+          "primitiveId": "e96",
+          "net": "USB_VBUS",
+          "padNumber": "32"
+        },
+        {
+          "primitiveId": "e97",
+          "net": "GND",
+          "padNumber": "33"
+        },
+        {
+          "primitiveId": "e98",
+          "net": "USB_DM_MCU",
+          "padNumber": "34"
+        },
+        {
+          "primitiveId": "e99",
+          "net": "USB_DP_MCU",
+          "padNumber": "35"
+        },
+        {
+          "primitiveId": "e100",
+          "net": "EPD_SCK_TBD",
+          "padNumber": "36"
+        },
+        {
+          "primitiveId": "e101",
+          "net": "EPD_MOSI_TBD",
+          "padNumber": "37"
+        },
+        {
+          "primitiveId": "e102",
+          "net": "EPD_CS_N_TBD",
+          "padNumber": "38"
+        },
+        {
+          "primitiveId": "e103",
+          "net": "EPD_DC_TBD",
+          "padNumber": "39"
+        },
+        {
+          "primitiveId": "e104",
+          "net": "NRESET",
+          "padNumber": "40"
+        },
+        {
+          "primitiveId": "e105",
+          "net": "EPD_RESET_N_TBD",
+          "padNumber": "41"
+        },
+        {
+          "primitiveId": "e106",
+          "net": "",
+          "padNumber": "42"
+        },
+        {
+          "primitiveId": "e107",
+          "net": "",
+          "padNumber": "43"
+        },
+        {
+          "primitiveId": "e108",
+          "net": "",
+          "padNumber": "44"
+        },
+        {
+          "primitiveId": "e109",
+          "net": "",
+          "padNumber": "45"
+        },
+        {
+          "primitiveId": "e110",
+          "net": "",
+          "padNumber": "46"
+        },
+        {
+          "primitiveId": "e111",
+          "net": "",
+          "padNumber": "47"
+        },
+        {
+          "primitiveId": "e112",
+          "net": "",
+          "padNumber": "48"
+        },
+        {
+          "primitiveId": "e113",
+          "net": "",
+          "padNumber": "49"
+        },
+        {
+          "primitiveId": "e114",
+          "net": "",
+          "padNumber": "50"
+        },
+        {
+          "primitiveId": "e115",
+          "net": "SWDIO",
+          "padNumber": "51"
+        },
+        {
+          "primitiveId": "e116",
+          "net": "NFC1_TBD",
+          "padNumber": "52"
+        },
+        {
+          "primitiveId": "e117",
+          "net": "SWDCLK",
+          "padNumber": "53"
+        },
+        {
+          "primitiveId": "e118",
+          "net": "NFC2_TBD",
+          "padNumber": "54"
+        },
+        {
+          "primitiveId": "e119",
+          "net": "GND",
+          "padNumber": "55"
+        },
+        {
+          "primitiveId": "e120",
+          "net": "",
+          "padNumber": "56"
+        },
+        {
+          "primitiveId": "e121",
+          "net": "",
+          "padNumber": "57"
+        },
+        {
+          "primitiveId": "e122",
+          "net": "",
+          "padNumber": "58"
+        },
+        {
+          "primitiveId": "e123",
+          "net": "",
+          "padNumber": "59"
+        },
+        {
+          "primitiveId": "e124",
+          "net": "",
+          "padNumber": "60"
+        },
+        {
+          "primitiveId": "e125",
+          "net": "",
+          "padNumber": "61"
+        }
+      ],
+      "unique_id": "gge18"
+    },
+    {
+      "id": "712fd95907922ca7",
+      "ref": "U2",
+      "x": 1106.2992,
+      "y": 511.81100000000004,
+      "rotation": 90,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "0e268bb17193806d",
+        "name": "WSON-10_L2.2-W2.0-P0.40-BL-EP_TI_DLH0010A"
+      },
+      "pads": [
+        {
+          "primitiveId": "e21",
+          "net": "SYS",
+          "padNumber": "1"
+        },
+        {
+          "primitiveId": "e22",
+          "net": "BAT_PACK_TBD",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e23",
+          "net": "CHG_PG_N",
+          "padNumber": "3"
+        },
+        {
+          "primitiveId": "e24",
+          "net": "CHG_CE_N",
+          "padNumber": "4"
+        },
+        {
+          "primitiveId": "e25",
+          "net": "GND",
+          "padNumber": "5"
+        },
+        {
+          "primitiveId": "e26",
+          "net": "BAT_NTC_TBD",
+          "padNumber": "6"
+        },
+        {
+          "primitiveId": "e27",
+          "net": "CHG_SDA",
+          "padNumber": "7"
+        },
+        {
+          "primitiveId": "e28",
+          "net": "CHG_SCL",
+          "padNumber": "8"
+        },
+        {
+          "primitiveId": "e29",
+          "net": "CHG_INT_N",
+          "padNumber": "9"
+        },
+        {
+          "primitiveId": "e30",
+          "net": "USB_VBUS",
+          "padNumber": "10"
+        },
+        {
+          "primitiveId": "e31",
+          "net": "GND",
+          "padNumber": "11"
+        }
+      ],
+      "unique_id": "gge2"
+    },
+    {
+      "id": "2b2b782584d87e6e",
+      "ref": "U3",
+      "x": 1377.9528,
+      "y": 511.81100000000004,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "8f6403c782c9c3de",
+        "name": "SOT-23-5_L2.9-W1.6-P0.95-LS2.8-BL"
+      },
+      "pads": [
+        {
+          "primitiveId": "e7",
+          "net": "VDD_3V3",
+          "padNumber": "5"
+        },
+        {
+          "primitiveId": "e8",
+          "net": "",
+          "padNumber": "4"
+        },
+        {
+          "primitiveId": "e9",
+          "net": "SYS",
+          "padNumber": "1"
+        },
+        {
+          "primitiveId": "e10",
+          "net": "SYS",
+          "padNumber": "3"
+        },
+        {
+          "primitiveId": "e11",
+          "net": "GND",
+          "padNumber": "2"
+        }
+      ],
+      "unique_id": "gge3"
+    },
+    {
+      "id": "1c9b89195dc744ce",
+      "ref": "J2",
+      "x": 2028.7402,
+      "y": 1338.5827,
+      "rotation": -90.00000000000001,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "b111b0cbb2c32396",
+        "name": "FPC-SMD_24P-P0.50_FPC-05FB-24PH20"
+      },
+      "pads": [
+        {
+          "primitiveId": "e30",
+          "net": "EPD_VCOM",
+          "padNumber": "24"
+        },
+        {
+          "primitiveId": "e31",
+          "net": "EPD_VGL",
+          "padNumber": "23"
+        },
+        {
+          "primitiveId": "e32",
+          "net": "EPD_VSNH",
+          "padNumber": "22"
+        },
+        {
+          "primitiveId": "e33",
+          "net": "EPD_VGH",
+          "padNumber": "21"
+        },
+        {
+          "primitiveId": "e34",
+          "net": "EPD_VSPH",
+          "padNumber": "20"
+        },
+        {
+          "primitiveId": "e35",
+          "net": "EPD_VSNL2",
+          "padNumber": "19"
+        },
+        {
+          "primitiveId": "e36",
+          "net": "EPD_VSNL1",
+          "padNumber": "18"
+        },
+        {
+          "primitiveId": "e37",
+          "net": "GND",
+          "padNumber": "17"
+        },
+        {
+          "primitiveId": "e38",
+          "net": "EPD_VSPL2",
+          "padNumber": "16"
+        },
+        {
+          "primitiveId": "e39",
+          "net": "EPD_VDD",
+          "padNumber": "15"
+        },
+        {
+          "primitiveId": "e40",
+          "net": "EPD_MOSI_TBD",
+          "padNumber": "14"
+        },
+        {
+          "primitiveId": "e41",
+          "net": "EPD_SCK_TBD",
+          "padNumber": "13"
+        },
+        {
+          "primitiveId": "e42",
+          "net": "EPD_CS_N_TBD",
+          "padNumber": "12"
+        },
+        {
+          "primitiveId": "e43",
+          "net": "EPD_DC_TBD",
+          "padNumber": "11"
+        },
+        {
+          "primitiveId": "e44",
+          "net": "EPD_RESET_N_TBD",
+          "padNumber": "10"
+        },
+        {
+          "primitiveId": "e45",
+          "net": "EPD_BUSY_TBD",
+          "padNumber": "9"
+        },
+        {
+          "primitiveId": "e46",
+          "net": "EPD_BS0",
+          "padNumber": "8"
+        },
+        {
+          "primitiveId": "e47",
+          "net": "",
+          "padNumber": "7"
+        },
+        {
+          "primitiveId": "e48",
+          "net": "",
+          "padNumber": "6"
+        },
+        {
+          "primitiveId": "e49",
+          "net": "EPD_VSPL1",
+          "padNumber": "5"
+        },
+        {
+          "primitiveId": "e50",
+          "net": "EPD_VDDL",
+          "padNumber": "4"
+        },
+        {
+          "primitiveId": "e51",
+          "net": "EPD_RESE",
+          "padNumber": "3"
+        },
+        {
+          "primitiveId": "e52",
+          "net": "EPD_GDR",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e53",
+          "net": "",
+          "padNumber": "1"
+        },
+        {
+          "primitiveId": "e54",
+          "net": "",
+          "padNumber": "25"
+        },
+        {
+          "primitiveId": "e55",
+          "net": "",
+          "padNumber": "26"
+        }
+      ],
+      "unique_id": "gge57"
+    },
+    {
+      "id": "15e08cd34920a892",
+      "ref": "U4",
+      "x": 1062.9921,
+      "y": 1023.6220000000001,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "33c82847e2c8a4c7",
+        "name": "SC-70-6_L2.0-W1.3-P0.65-LS2.1-BR"
+      },
+      "pads": [
+        {
+          "primitiveId": "e3",
+          "net": "EPD_VDD",
+          "padNumber": "6"
+        },
+        {
+          "primitiveId": "e4",
+          "net": "EPD_VDD",
+          "padNumber": "5"
+        },
+        {
+          "primitiveId": "e5",
+          "net": "",
+          "padNumber": "4"
+        },
+        {
+          "primitiveId": "e6",
+          "net": "EPD_EN_TBD",
+          "padNumber": "3"
+        },
+        {
+          "primitiveId": "e7",
+          "net": "GND",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e8",
+          "net": "VDD_3V3",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge58"
+    },
+    {
+      "id": "7f00cdb9414ac083",
+      "ref": "C9",
+      "x": 1023.6220000000001,
+      "y": 937.0079,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "809b963e37e9d9fb",
+        "name": "C0805"
+      },
+      "pads": [
+        {
+          "primitiveId": "e15",
+          "net": "GND",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e16",
+          "net": "VDD_3V3",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge59"
+    },
+    {
+      "id": "37bc6256c702f593",
+      "ref": "C10",
+      "x": 1200.7874,
+      "y": 1023.6220000000001,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "809b963e37e9d9fb",
+        "name": "C0805"
+      },
+      "pads": [
+        {
+          "primitiveId": "e15",
+          "net": "GND",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e16",
+          "net": "EPD_VDD",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge60"
+    },
+    {
+      "id": "ef5722fb9675246e",
+      "ref": "R13",
+      "x": 1062.9921,
+      "y": 1102.3622,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "pads": [
+        {
+          "primitiveId": "e7",
+          "net": "GND",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e8",
+          "net": "EPD_EN_TBD",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge61"
+    },
+    {
+      "id": "082440fc4d0d2c9a",
+      "ref": "L1",
+      "x": 1122.0472,
+      "y": 1220.4724,
+      "rotation": 180,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "04ef13d8e654b316",
+        "name": "IND-SMD_L3.0-W3.0"
+      },
+      "pads": [
+        {
+          "primitiveId": "e10",
+          "net": "EPD_VDD",
+          "padNumber": "1"
+        },
+        {
+          "primitiveId": "e11",
+          "net": "EPD_SW",
+          "padNumber": "2"
+        }
+      ],
+      "unique_id": "gge62"
+    },
+    {
+      "id": "a120f4d878f28638",
+      "ref": "Q1",
+      "x": 1259.8425,
+      "y": 1220.4724,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "c6f52782355eeb03",
+        "name": "SOT-323_L2.0-W1.3-P1.30-LS2.1-BR"
+      },
+      "pads": [
+        {
+          "primitiveId": "e11",
+          "net": "EPD_SW",
+          "padNumber": "3"
+        },
+        {
+          "primitiveId": "e12",
+          "net": "EPD_RESE",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e13",
+          "net": "EPD_GDR",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge63"
+    },
+    {
+      "id": "561c894eaf1c2e04",
+      "ref": "R14",
+      "x": 1259.8425,
+      "y": 1102.3622,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "pads": [
+        {
+          "primitiveId": "e7",
+          "net": "GND",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e8",
+          "net": "EPD_GDR",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge64"
+    },
+    {
+      "id": "e3a664d5d5a8e388",
+      "ref": "R15",
+      "x": 1370.0787,
+      "y": 1220.4724,
+      "rotation": 90,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "pads": [
+        {
+          "primitiveId": "e7",
+          "net": "GND",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e8",
+          "net": "EPD_RESE",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge65"
+    },
+    {
+      "id": "571f19b3cc3b32de",
+      "ref": "D1",
+      "x": 1122.0472,
+      "y": 1358.2677,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "d5209bca1018aa8a",
+        "name": "SOD-123_L2.7-W1.6-LS3.7-RD-1"
+      },
+      "pads": [
+        {
+          "primitiveId": "e24",
+          "net": "EPD_SW",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e25",
+          "net": "EPD_VPH",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge66"
+    },
+    {
+      "id": "44f2ebe1b37bb6ec",
+      "ref": "D2",
+      "x": 1338.5827,
+      "y": 1496.063,
+      "rotation": 180,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "d5209bca1018aa8a",
+        "name": "SOD-123_L2.7-W1.6-LS3.7-RD-1"
+      },
+      "pads": [
+        {
+          "primitiveId": "e24",
+          "net": "EPD_PUMP",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e25",
+          "net": "GND",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge67"
+    },
+    {
+      "id": "64f2cff8b86060ab",
+      "ref": "D3",
+      "x": 1338.5827,
+      "y": 1653.5433,
+      "rotation": 180,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "d5209bca1018aa8a",
+        "name": "SOD-123_L2.7-W1.6-LS3.7-RD-1"
+      },
+      "pads": [
+        {
+          "primitiveId": "e24",
+          "net": "EPD_VGL",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e25",
+          "net": "EPD_PUMP",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge68"
+    },
+    {
+      "id": "03f9390dbfddeabb",
+      "ref": "C11",
+      "x": 1318.8976,
+      "y": 1358.2677,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "809b963e37e9d9fb",
+        "name": "C0805"
+      },
+      "pads": [
+        {
+          "primitiveId": "e15",
+          "net": "EPD_PUMP",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e16",
+          "net": "EPD_SW",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge69"
+    },
+    {
+      "id": "f5a4194ff3544678",
+      "ref": "C12",
+      "x": 1122.0472,
+      "y": 1476.378,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "809b963e37e9d9fb",
+        "name": "C0805"
+      },
+      "pads": [
+        {
+          "primitiveId": "e15",
+          "net": "GND",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e16",
+          "net": "EPD_VPH",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge70"
+    },
+    {
+      "id": "1eb73378a3b03936",
+      "ref": "R16",
+      "x": 1122.0472,
+      "y": 1594.4882000000002,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "pads": [
+        {
+          "primitiveId": "e7",
+          "net": "EPD_VGH",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e8",
+          "net": "EPD_VPH",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge71"
+    },
+    {
+      "id": "ed3313061648d06c",
+      "ref": "C13",
+      "x": 1338.5827,
+      "y": 1771.6535,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "809b963e37e9d9fb",
+        "name": "C0805"
+      },
+      "pads": [
+        {
+          "primitiveId": "e15",
+          "net": "GND",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e16",
+          "net": "EPD_VGL",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge72"
+    },
+    {
+      "id": "41d4985966309477",
+      "ref": "R17",
+      "x": 2007.8739999999998,
+      "y": 1763.7795,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "pads": [
+        {
+          "primitiveId": "e7",
+          "net": "GND",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e8",
+          "net": "EPD_BS0",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge73"
+    },
+    {
+      "id": "4daafd24bc573353",
+      "ref": "R18",
+      "x": 2007.8739999999998,
+      "y": 1870.0787,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "pads": [
+        {
+          "primitiveId": "e7",
+          "net": "EPD_BUSY_TBD",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e8",
+          "net": "EPD_VDD",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge74"
+    },
+    {
+      "id": "300fa1fc6a29f9d4",
+      "ref": "C14",
+      "x": 2224.4094,
+      "y": 1062.9921,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "809b963e37e9d9fb",
+        "name": "C0805"
+      },
+      "pads": [
+        {
+          "primitiveId": "e15",
+          "net": "GND",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e16",
+          "net": "EPD_VDDL",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge75"
+    },
+    {
+      "id": "9667a05a6f04c17a",
+      "ref": "C15",
+      "x": 2224.4094,
+      "y": 1153.5433,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "809b963e37e9d9fb",
+        "name": "C0805"
+      },
+      "pads": [
+        {
+          "primitiveId": "e15",
+          "net": "GND",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e16",
+          "net": "EPD_VSPL1",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge76"
+    },
+    {
+      "id": "6b61270eda6b277e",
+      "ref": "C16",
+      "x": 2224.4094,
+      "y": 1244.0945,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "809b963e37e9d9fb",
+        "name": "C0805"
+      },
+      "pads": [
+        {
+          "primitiveId": "e15",
+          "net": "GND",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e16",
+          "net": "EPD_VSPL2",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge77"
+    },
+    {
+      "id": "415f7d640d9b690f",
+      "ref": "C17",
+      "x": 2224.4094,
+      "y": 1334.6457,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "809b963e37e9d9fb",
+        "name": "C0805"
+      },
+      "pads": [
+        {
+          "primitiveId": "e15",
+          "net": "GND",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e16",
+          "net": "EPD_VSNL1",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge78"
+    },
+    {
+      "id": "db73bf39c99e775d",
+      "ref": "C18",
+      "x": 2224.4094,
+      "y": 1425.1969,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "809b963e37e9d9fb",
+        "name": "C0805"
+      },
+      "pads": [
+        {
+          "primitiveId": "e15",
+          "net": "GND",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e16",
+          "net": "EPD_VSNL2",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge79"
+    },
+    {
+      "id": "21cd2b2b79576a82",
+      "ref": "C19",
+      "x": 2224.4094,
+      "y": 1515.748,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "809b963e37e9d9fb",
+        "name": "C0805"
+      },
+      "pads": [
+        {
+          "primitiveId": "e15",
+          "net": "GND",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e16",
+          "net": "EPD_VSPH",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge80"
+    },
+    {
+      "id": "06213dc17a07118e",
+      "ref": "C20",
+      "x": 2224.4094,
+      "y": 1606.2992,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "809b963e37e9d9fb",
+        "name": "C0805"
+      },
+      "pads": [
+        {
+          "primitiveId": "e15",
+          "net": "GND",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e16",
+          "net": "EPD_VSNH",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge81"
+    },
+    {
+      "id": "755e581c5f6e7c56",
+      "ref": "C21",
+      "x": 2224.4094,
+      "y": 1696.8504000000003,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "809b963e37e9d9fb",
+        "name": "C0805"
+      },
+      "pads": [
+        {
+          "primitiveId": "e15",
+          "net": "GND",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e16",
+          "net": "EPD_VGL",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge82"
+    },
+    {
+      "id": "8ff0422537e1892d",
+      "ref": "C22",
+      "x": 2224.4094,
+      "y": 1787.4016000000001,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "809b963e37e9d9fb",
+        "name": "C0805"
+      },
+      "pads": [
+        {
+          "primitiveId": "e15",
+          "net": "GND",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e16",
+          "net": "EPD_VCOM",
+          "padNumber": "1"
+        }
+      ],
+      "unique_id": "gge83"
+    },
+    {
+      "id": "1bb9d193d7911ec2",
+      "ref": "U5",
+      "x": 1330.7087,
+      "y": 370.0787,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "584cfbf37115f7ea",
+        "name": "SOT-9X3-3_L1.0-W0.8-P0.35-LS1.0-BR"
+      },
+      "pads": [
+        {
+          "primitiveId": "e6",
+          "net": "USB_DP_CONN",
+          "padNumber": "1"
+        },
+        {
+          "primitiveId": "e7",
+          "net": "USB_DM_CONN",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e8",
+          "net": "GND",
+          "padNumber": "3"
+        }
+      ],
+      "unique_id": "gge55"
+    },
+    {
+      "id": "5592d83122350a94",
+      "ref": "U6",
+      "x": 1200.7874,
+      "y": 500,
+      "rotation": 0,
+      "footprint": {
+        "libraryUuid": "e7cb407d46f4ed02ae67b022739e5ad4c24e9c6d9b0b72a5bfe683ce78b462d2",
+        "uuid": "584cfbf37115f7ea",
+        "name": "SOT-9X3-3_L1.0-W0.8-P0.35-LS1.0-BR"
+      },
+      "pads": [
+        {
+          "primitiveId": "e6",
+          "net": "USB_CC1",
+          "padNumber": "1"
+        },
+        {
+          "primitiveId": "e7",
+          "net": "USB_CC2",
+          "padNumber": "2"
+        },
+        {
+          "primitiveId": "e8",
+          "net": "GND",
+          "padNumber": "3"
+        }
+      ],
+      "unique_id": "gge56"
+    }
+  ],
+  "units": "EDA coordinates in mil; geometry bounds in mm",
+  "geometry": {
+    "components": 56,
+    "pads": 242,
+    "pad_overlaps": [],
+    "body_overlaps": [],
+    "outside": [],
+    "nfc_hits": [],
+    "flex_body_hits": []
+  },
+  "copper_tracks": 648,
+  "vias": 107,
+  "pours": 2,
+  "schematic_drc": [
+    {
+      "type": "warn",
+      "count": 7
+    }
+  ],
+  "pcb_drc_count": 67,
+  "pcb_drc_by_type": {
+    "Clearance Error": 12,
+    "Clearance Error in the same footprint": 12,
+    "Connection Error": 43
+  },
+  "disconnected_by_net": {
+    "GND": 11,
+    "SYS": 2,
+    "USB_VBUS": 5,
+    "VDD_3V3": 5,
+    "EPD_VDD": 2,
+    "USB_CC2": 2,
+    "USB_DP_CONN": 3,
+    "BAT_NTC_TBD": 2,
+    "USB_CC1": 3,
+    "USB_DM_CONN": 4,
+    "USB_DM_MCU": 2,
+    "EPD_DC_TBD": 2
+  },
+  "pcb_drc": [
+    {
+      "name": "Clearance Error",
+      "list": [
+        {
+          "name": "Board Outline to SMD Pad",
+          "list": [
+            {
+              "visible": true,
+              "errorType": "Clearance Error",
+              "errorObjType": "Board Outline to SMD Pad",
+              "ruleName": "copperThickness1oz",
+              "ruleTypeName": "Safe Spacing",
+              "obj1": {
+                "typeName": "Board Outline",
+                "suffix": ": e0"
+              },
+              "obj2": {
+                "typeName": "SMD Pad",
+                "suffix": "(GND): J1_A1B12"
+              },
+              "layer": "Top Layer",
+              "explanation": {
+                "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+                "param": {
+                  "minDistance": "7.9mil",
+                  "shouldBe": ">= 11.8mil",
+                  "obj1": "Object 1",
+                  "obj2": "object 2",
+                  "type": "ClearanceError"
+                },
+                "errData": {
+                  "globalIndex": "err771",
+                  "position": {
+                    "x": 112.20515,
+                    "y": 29.133964999999996
+                  },
+                  "name": "copperThickness1oz",
+                  "obj1": "bf8e94ab51b048cf",
+                  "obj1Type": "Board Outline",
+                  "obj2": "80b6742a9e6db79ee37",
+                  "obj2Type": "SMD Pad",
+                  "minDistance": 0.7876100000000044,
+                  "clearance": 1.1800000000000002,
+                  "errorType": "Safe Spacing",
+                  "layerIds": [
+                    1
+                  ],
+                  "obj1Suffix": ": e0",
+                  "obj2Suffix": "(GND): J1_A1B12"
+                }
+              },
+              "objs": [
+                "bf8e94ab51b048cf",
+                "80b6742a9e6db79ee37"
+              ],
+              "globalIndex": "err771",
+              "pos": {
+                "x": 112.20515,
+                "y": 29.133964999999996
+              },
+              "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Board Outline to SMD Pad"
+            },
+            {
+              "visible": true,
+              "errorType": "Clearance Error",
+              "errorObjType": "Board Outline to SMD Pad",
+              "ruleName": "copperThickness1oz",
+              "ruleTypeName": "Safe Spacing",
+              "obj1": {
+                "typeName": "Board Outline",
+                "suffix": ": e0"
+              },
+              "obj2": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_DP_CONN): J1_B6"
+              },
+              "layer": "Top Layer",
+              "explanation": {
+                "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+                "param": {
+                  "minDistance": "7.9mil",
+                  "shouldBe": ">= 11.8mil",
+                  "obj1": "Object 1",
+                  "obj2": "object 2",
+                  "type": "ClearanceError"
+                },
+                "errData": {
+                  "globalIndex": "err772",
+                  "position": {
+                    "x": 128.3467,
+                    "y": 29.133964999999996
+                  },
+                  "name": "copperThickness1oz",
+                  "obj1": "bf8e94ab51b048cf",
+                  "obj1Type": "Board Outline",
+                  "obj2": "80b6742a9e6db79ee31",
+                  "obj2Type": "SMD Pad",
+                  "minDistance": 0.7876100000000044,
+                  "clearance": 1.1800000000000002,
+                  "errorType": "Safe Spacing",
+                  "layerIds": [
+                    1
+                  ],
+                  "obj1Suffix": ": e0",
+                  "obj2Suffix": "(USB_DP_CONN): J1_B6"
+                }
+              },
+              "objs": [
+                "bf8e94ab51b048cf",
+                "80b6742a9e6db79ee31"
+              ],
+              "globalIndex": "err772",
+              "pos": {
+                "x": 128.3467,
+                "y": 29.133964999999996
+              },
+              "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Board Outline to SMD Pad"
+            },
+            {
+              "visible": true,
+              "errorType": "Clearance Error",
+              "errorObjType": "Board Outline to SMD Pad",
+              "ruleName": "copperThickness1oz",
+              "ruleTypeName": "Safe Spacing",
+              "obj1": {
+                "typeName": "Board Outline",
+                "suffix": ": e0"
+              },
+              "obj2": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_VBUS): J1_B4A9"
+              },
+              "layer": "Top Layer",
+              "explanation": {
+                "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+                "param": {
+                  "minDistance": "7.9mil",
+                  "shouldBe": ">= 11.8mil",
+                  "obj1": "Object 1",
+                  "obj2": "object 2",
+                  "type": "ClearanceError"
+                },
+                "errData": {
+                  "globalIndex": "err773",
+                  "position": {
+                    "x": 134.25215000000003,
+                    "y": 29.133964999999996
+                  },
+                  "name": "copperThickness1oz",
+                  "obj1": "bf8e94ab51b048cf",
+                  "obj1Type": "Board Outline",
+                  "obj2": "80b6742a9e6db79ee34",
+                  "obj2Type": "SMD Pad",
+                  "minDistance": 0.7876100000000044,
+                  "clearance": 1.1800000000000002,
+                  "errorType": "Safe Spacing",
+                  "layerIds": [
+                    1
+                  ],
+                  "obj1Suffix": ": e0",
+                  "obj2Suffix": "(USB_VBUS): J1_B4A9"
+                }
+              },
+              "objs": [
+                "bf8e94ab51b048cf",
+                "80b6742a9e6db79ee34"
+              ],
+              "globalIndex": "err773",
+              "pos": {
+                "x": 134.25215000000003,
+                "y": 29.133964999999996
+              },
+              "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Board Outline to SMD Pad"
+            },
+            {
+              "visible": true,
+              "errorType": "Clearance Error",
+              "errorObjType": "Board Outline to SMD Pad",
+              "ruleName": "copperThickness1oz",
+              "ruleTypeName": "Safe Spacing",
+              "obj1": {
+                "typeName": "Board Outline",
+                "suffix": ": e0"
+              },
+              "obj2": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_VBUS): J1_A4B9"
+              },
+              "layer": "Top Layer",
+              "explanation": {
+                "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+                "param": {
+                  "minDistance": "7.9mil",
+                  "shouldBe": ">= 11.8mil",
+                  "obj1": "Object 1",
+                  "obj2": "object 2",
+                  "type": "ClearanceError"
+                },
+                "errData": {
+                  "globalIndex": "err774",
+                  "position": {
+                    "x": 115.35515,
+                    "y": 29.133964999999996
+                  },
+                  "name": "copperThickness1oz",
+                  "obj1": "bf8e94ab51b048cf",
+                  "obj1Type": "Board Outline",
+                  "obj2": "80b6742a9e6db79ee36",
+                  "obj2Type": "SMD Pad",
+                  "minDistance": 0.7876100000000044,
+                  "clearance": 1.1800000000000002,
+                  "errorType": "Safe Spacing",
+                  "layerIds": [
+                    1
+                  ],
+                  "obj1Suffix": ": e0",
+                  "obj2Suffix": "(USB_VBUS): J1_A4B9"
+                }
+              },
+              "objs": [
+                "bf8e94ab51b048cf",
+                "80b6742a9e6db79ee36"
+              ],
+              "globalIndex": "err774",
+              "pos": {
+                "x": 115.35515,
+                "y": 29.133964999999996
+              },
+              "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Board Outline to SMD Pad"
+            },
+            {
+              "visible": true,
+              "errorType": "Clearance Error",
+              "errorObjType": "Board Outline to SMD Pad",
+              "ruleName": "copperThickness1oz",
+              "ruleTypeName": "Safe Spacing",
+              "obj1": {
+                "typeName": "Board Outline",
+                "suffix": ": e0"
+              },
+              "obj2": {
+                "typeName": "SMD Pad",
+                "suffix": ": J1_A8"
+              },
+              "layer": "Top Layer",
+              "explanation": {
+                "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+                "param": {
+                  "minDistance": "7.9mil",
+                  "shouldBe": ">= 11.8mil",
+                  "obj1": "Object 1",
+                  "obj2": "object 2",
+                  "type": "ClearanceError"
+                },
+                "errData": {
+                  "globalIndex": "err775",
+                  "position": {
+                    "x": 130.3157,
+                    "y": 29.133964999999996
+                  },
+                  "name": "copperThickness1oz",
+                  "obj1": "bf8e94ab51b048cf",
+                  "obj1Type": "Board Outline",
+                  "obj2": "80b6742a9e6db79ee32",
+                  "obj2Type": "SMD Pad",
+                  "minDistance": 0.7876100000000044,
+                  "clearance": 1.1800000000000002,
+                  "errorType": "Safe Spacing",
+                  "layerIds": [
+                    1
+                  ],
+                  "obj1Suffix": ": e0",
+                  "obj2Suffix": ": J1_A8"
+                }
+              },
+              "objs": [
+                "bf8e94ab51b048cf",
+                "80b6742a9e6db79ee32"
+              ],
+              "globalIndex": "err775",
+              "pos": {
+                "x": 130.3157,
+                "y": 29.133964999999996
+              },
+              "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Board Outline to SMD Pad"
+            },
+            {
+              "visible": true,
+              "errorType": "Clearance Error",
+              "errorObjType": "Board Outline to SMD Pad",
+              "ruleName": "copperThickness1oz",
+              "ruleTypeName": "Safe Spacing",
+              "obj1": {
+                "typeName": "Board Outline",
+                "suffix": ": e0"
+              },
+              "obj2": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_DM_CONN): J1_B7"
+              },
+              "layer": "Top Layer",
+              "explanation": {
+                "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+                "param": {
+                  "minDistance": "7.9mil",
+                  "shouldBe": ">= 11.8mil",
+                  "obj1": "Object 1",
+                  "obj2": "object 2",
+                  "type": "ClearanceError"
+                },
+                "errData": {
+                  "globalIndex": "err776",
+                  "position": {
+                    "x": 122.44170000000001,
+                    "y": 29.133964999999996
+                  },
+                  "name": "copperThickness1oz",
+                  "obj1": "bf8e94ab51b048cf",
+                  "obj1Type": "Board Outline",
+                  "obj2": "80b6742a9e6db79ee28",
+                  "obj2Type": "SMD Pad",
+                  "minDistance": 0.7876100000000044,
+                  "clearance": 1.1800000000000002,
+                  "errorType": "Safe Spacing",
+                  "layerIds": [
+                    1
+                  ],
+                  "obj1Suffix": ": e0",
+                  "obj2Suffix": "(USB_DM_CONN): J1_B7"
+                }
+              },
+              "objs": [
+                "bf8e94ab51b048cf",
+                "80b6742a9e6db79ee28"
+              ],
+              "globalIndex": "err776",
+              "pos": {
+                "x": 122.44170000000001,
+                "y": 29.133964999999996
+              },
+              "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Board Outline to SMD Pad"
+            },
+            {
+              "visible": true,
+              "errorType": "Clearance Error",
+              "errorObjType": "Board Outline to SMD Pad",
+              "ruleName": "copperThickness1oz",
+              "ruleTypeName": "Safe Spacing",
+              "obj1": {
+                "typeName": "Board Outline",
+                "suffix": ": e0"
+              },
+              "obj2": {
+                "typeName": "SMD Pad",
+                "suffix": "(GND): J1_B1A12"
+              },
+              "layer": "Top Layer",
+              "explanation": {
+                "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+                "param": {
+                  "minDistance": "7.9mil",
+                  "shouldBe": ">= 11.8mil",
+                  "obj1": "Object 1",
+                  "obj2": "object 2",
+                  "type": "ClearanceError"
+                },
+                "errData": {
+                  "globalIndex": "err777",
+                  "position": {
+                    "x": 137.40215,
+                    "y": 29.133964999999996
+                  },
+                  "name": "copperThickness1oz",
+                  "obj1": "bf8e94ab51b048cf",
+                  "obj1Type": "Board Outline",
+                  "obj2": "80b6742a9e6db79ee35",
+                  "obj2Type": "SMD Pad",
+                  "minDistance": 0.7876100000000044,
+                  "clearance": 1.1800000000000002,
+                  "errorType": "Safe Spacing",
+                  "layerIds": [
+                    1
+                  ],
+                  "obj1Suffix": ": e0",
+                  "obj2Suffix": "(GND): J1_B1A12"
+                }
+              },
+              "objs": [
+                "bf8e94ab51b048cf",
+                "80b6742a9e6db79ee35"
+              ],
+              "globalIndex": "err777",
+              "pos": {
+                "x": 137.40215,
+                "y": 29.133964999999996
+              },
+              "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Board Outline to SMD Pad"
+            },
+            {
+              "visible": true,
+              "errorType": "Clearance Error",
+              "errorObjType": "Board Outline to SMD Pad",
+              "ruleName": "copperThickness1oz",
+              "ruleTypeName": "Safe Spacing",
+              "obj1": {
+                "typeName": "Board Outline",
+                "suffix": ": e0"
+              },
+              "obj2": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_DM_CONN): J1_A7"
+              },
+              "layer": "Top Layer",
+              "explanation": {
+                "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+                "param": {
+                  "minDistance": "7.9mil",
+                  "shouldBe": ">= 11.8mil",
+                  "obj1": "Object 1",
+                  "obj2": "object 2",
+                  "type": "ClearanceError"
+                },
+                "errData": {
+                  "globalIndex": "err778",
+                  "position": {
+                    "x": 126.37870000000001,
+                    "y": 29.133964999999996
+                  },
+                  "name": "copperThickness1oz",
+                  "obj1": "bf8e94ab51b048cf",
+                  "obj1Type": "Board Outline",
+                  "obj2": "80b6742a9e6db79ee30",
+                  "obj2Type": "SMD Pad",
+                  "minDistance": 0.7876100000000044,
+                  "clearance": 1.1800000000000002,
+                  "errorType": "Safe Spacing",
+                  "layerIds": [
+                    1
+                  ],
+                  "obj1Suffix": ": e0",
+                  "obj2Suffix": "(USB_DM_CONN): J1_A7"
+                }
+              },
+              "objs": [
+                "bf8e94ab51b048cf",
+                "80b6742a9e6db79ee30"
+              ],
+              "globalIndex": "err778",
+              "pos": {
+                "x": 126.37870000000001,
+                "y": 29.133964999999996
+              },
+              "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Board Outline to SMD Pad"
+            },
+            {
+              "visible": true,
+              "errorType": "Clearance Error",
+              "errorObjType": "Board Outline to SMD Pad",
+              "ruleName": "copperThickness1oz",
+              "ruleTypeName": "Safe Spacing",
+              "obj1": {
+                "typeName": "Board Outline",
+                "suffix": ": e0"
+              },
+              "obj2": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_CC2): J1_B5"
+              },
+              "layer": "Top Layer",
+              "explanation": {
+                "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+                "param": {
+                  "minDistance": "7.9mil",
+                  "shouldBe": ">= 11.8mil",
+                  "obj1": "Object 1",
+                  "obj2": "object 2",
+                  "type": "ClearanceError"
+                },
+                "errData": {
+                  "globalIndex": "err779",
+                  "position": {
+                    "x": 132.2837,
+                    "y": 29.133964999999996
+                  },
+                  "name": "copperThickness1oz",
+                  "obj1": "bf8e94ab51b048cf",
+                  "obj1Type": "Board Outline",
+                  "obj2": "80b6742a9e6db79ee33",
+                  "obj2Type": "SMD Pad",
+                  "minDistance": 0.7876100000000044,
+                  "clearance": 1.1800000000000002,
+                  "errorType": "Safe Spacing",
+                  "layerIds": [
+                    1
+                  ],
+                  "obj1Suffix": ": e0",
+                  "obj2Suffix": "(USB_CC2): J1_B5"
+                }
+              },
+              "objs": [
+                "bf8e94ab51b048cf",
+                "80b6742a9e6db79ee33"
+              ],
+              "globalIndex": "err779",
+              "pos": {
+                "x": 132.2837,
+                "y": 29.133964999999996
+              },
+              "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Board Outline to SMD Pad"
+            },
+            {
+              "visible": true,
+              "errorType": "Clearance Error",
+              "errorObjType": "Board Outline to SMD Pad",
+              "ruleName": "copperThickness1oz",
+              "ruleTypeName": "Safe Spacing",
+              "obj1": {
+                "typeName": "Board Outline",
+                "suffix": ": e0"
+              },
+              "obj2": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_DP_CONN): J1_A6"
+              },
+              "layer": "Top Layer",
+              "explanation": {
+                "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+                "param": {
+                  "minDistance": "7.9mil",
+                  "shouldBe": ">= 11.8mil",
+                  "obj1": "Object 1",
+                  "obj2": "object 2",
+                  "type": "ClearanceError"
+                },
+                "errData": {
+                  "globalIndex": "err780",
+                  "position": {
+                    "x": 124.40970000000002,
+                    "y": 29.133964999999996
+                  },
+                  "name": "copperThickness1oz",
+                  "obj1": "bf8e94ab51b048cf",
+                  "obj1Type": "Board Outline",
+                  "obj2": "80b6742a9e6db79ee29",
+                  "obj2Type": "SMD Pad",
+                  "minDistance": 0.7876100000000044,
+                  "clearance": 1.1800000000000002,
+                  "errorType": "Safe Spacing",
+                  "layerIds": [
+                    1
+                  ],
+                  "obj1Suffix": ": e0",
+                  "obj2Suffix": "(USB_DP_CONN): J1_A6"
+                }
+              },
+              "objs": [
+                "bf8e94ab51b048cf",
+                "80b6742a9e6db79ee29"
+              ],
+              "globalIndex": "err780",
+              "pos": {
+                "x": 124.40970000000002,
+                "y": 29.133964999999996
+              },
+              "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Board Outline to SMD Pad"
+            },
+            {
+              "visible": true,
+              "errorType": "Clearance Error",
+              "errorObjType": "Board Outline to SMD Pad",
+              "ruleName": "copperThickness1oz",
+              "ruleTypeName": "Safe Spacing",
+              "obj1": {
+                "typeName": "Board Outline",
+                "suffix": ": e0"
+              },
+              "obj2": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_CC1): J1_A5"
+              },
+              "layer": "Top Layer",
+              "explanation": {
+                "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+                "param": {
+                  "minDistance": "7.9mil",
+                  "shouldBe": ">= 11.8mil",
+                  "obj1": "Object 1",
+                  "obj2": "object 2",
+                  "type": "ClearanceError"
+                },
+                "errData": {
+                  "globalIndex": "err781",
+                  "position": {
+                    "x": 120.4727,
+                    "y": 29.133964999999996
+                  },
+                  "name": "copperThickness1oz",
+                  "obj1": "bf8e94ab51b048cf",
+                  "obj1Type": "Board Outline",
+                  "obj2": "80b6742a9e6db79ee27",
+                  "obj2Type": "SMD Pad",
+                  "minDistance": 0.7876100000000044,
+                  "clearance": 1.1800000000000002,
+                  "errorType": "Safe Spacing",
+                  "layerIds": [
+                    1
+                  ],
+                  "obj1Suffix": ": e0",
+                  "obj2Suffix": "(USB_CC1): J1_A5"
+                }
+              },
+              "objs": [
+                "bf8e94ab51b048cf",
+                "80b6742a9e6db79ee27"
+              ],
+              "globalIndex": "err781",
+              "pos": {
+                "x": 120.4727,
+                "y": 29.133964999999996
+              },
+              "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Board Outline to SMD Pad"
+            },
+            {
+              "visible": true,
+              "errorType": "Clearance Error",
+              "errorObjType": "Board Outline to SMD Pad",
+              "ruleName": "copperThickness1oz",
+              "ruleTypeName": "Safe Spacing",
+              "obj1": {
+                "typeName": "Board Outline",
+                "suffix": ": e0"
+              },
+              "obj2": {
+                "typeName": "SMD Pad",
+                "suffix": ": J1_B8"
+              },
+              "layer": "Top Layer",
+              "explanation": {
+                "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+                "param": {
+                  "minDistance": "7.9mil",
+                  "shouldBe": ">= 11.8mil",
+                  "obj1": "Object 1",
+                  "obj2": "object 2",
+                  "type": "ClearanceError"
+                },
+                "errData": {
+                  "globalIndex": "err782",
+                  "position": {
+                    "x": 118.50470000000001,
+                    "y": 29.133964999999996
+                  },
+                  "name": "copperThickness1oz",
+                  "obj1": "bf8e94ab51b048cf",
+                  "obj1Type": "Board Outline",
+                  "obj2": "80b6742a9e6db79ee26",
+                  "obj2Type": "SMD Pad",
+                  "minDistance": 0.7876100000000044,
+                  "clearance": 1.1800000000000002,
+                  "errorType": "Safe Spacing",
+                  "layerIds": [
+                    1
+                  ],
+                  "obj1Suffix": ": e0",
+                  "obj2Suffix": ": J1_B8"
+                }
+              },
+              "objs": [
+                "bf8e94ab51b048cf",
+                "80b6742a9e6db79ee26"
+              ],
+              "globalIndex": "err782",
+              "pos": {
+                "x": 118.50470000000001,
+                "y": 29.133964999999996
+              },
+              "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Board Outline to SMD Pad"
+            }
+          ],
+          "count": 12,
+          "title": [
+            "Board Outline",
+            "to",
+            "SMD Pad",
+            "(12)"
+          ],
+          "visible": true
+        }
+      ],
+      "visible": true,
+      "count": 12,
+      "title": [
+        "Clearance Error",
+        "(12)"
+      ]
+    },
+    {
+      "name": "Clearance Error in the same footprint",
+      "list": [
+        {
+          "name": "Board Outline to SMD Pad",
+          "list": [
+            {
+              "visible": true,
+              "errorType": "Clearance Error in the same footprint",
+              "errorObjType": "Board Outline to SMD Pad",
+              "ruleName": "copperThickness1oz",
+              "ruleTypeName": "Safe Spacing",
+              "obj1": {
+                "typeName": "Board Outline",
+                "suffix": ": e62"
+              },
+              "obj2": {
+                "typeName": "SMD Pad",
+                "suffix": "(GND): J1_A1B12"
+              },
+              "layer": "Top Layer",
+              "explanation": {
+                "str": "{obj1} to {obj2} in the same footprint distance is {minDistance}, should be {shouldBe}",
+                "param": {
+                  "minDistance": "7.9mil",
+                  "shouldBe": ">= 11.8mil",
+                  "obj1": "Object 1",
+                  "obj2": "object 2",
+                  "type": "ClearanceError"
+                },
+                "errData": {
+                  "globalIndex": "err783",
+                  "position": {
+                    "x": 112.20515,
+                    "y": 29.133995
+                  },
+                  "name": "copperThickness1oz",
+                  "obj1": "80b6742a9e6db79ee62",
+                  "obj1Type": "Board Outline",
+                  "obj2": "80b6742a9e6db79ee37",
+                  "obj2Type": "SMD Pad",
+                  "minDistance": 0.7875499999999995,
+                  "clearance": 1.1800000000000002,
+                  "errorType": "Safe Spacing",
+                  "layerIds": [
+                    1
+                  ],
+                  "obj1Suffix": ": e62",
+                  "obj2Suffix": "(GND): J1_A1B12"
+                }
+              },
+              "objs": [
+                "80b6742a9e6db79ee62",
+                "80b6742a9e6db79ee37"
+              ],
+              "globalIndex": "err783",
+              "pos": {
+                "x": 112.20515,
+                "y": 29.133995
+              },
+              "parentId": "DRCTab|_|Errors|_|Clearance Error in the same footprint|_|Board Outline to SMD Pad"
+            },
+            {
+              "visible": true,
+              "errorType": "Clearance Error in the same footprint",
+              "errorObjType": "Board Outline to SMD Pad",
+              "ruleName": "copperThickness1oz",
+              "ruleTypeName": "Safe Spacing",
+              "obj1": {
+                "typeName": "Board Outline",
+                "suffix": ": e62"
+              },
+              "obj2": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_DP_CONN): J1_B6"
+              },
+              "layer": "Top Layer",
+              "explanation": {
+                "str": "{obj1} to {obj2} in the same footprint distance is {minDistance}, should be {shouldBe}",
+                "param": {
+                  "minDistance": "7.9mil",
+                  "shouldBe": ">= 11.8mil",
+                  "obj1": "Object 1",
+                  "obj2": "object 2",
+                  "type": "ClearanceError"
+                },
+                "errData": {
+                  "globalIndex": "err784",
+                  "position": {
+                    "x": 128.3467,
+                    "y": 29.133995
+                  },
+                  "name": "copperThickness1oz",
+                  "obj1": "80b6742a9e6db79ee62",
+                  "obj1Type": "Board Outline",
+                  "obj2": "80b6742a9e6db79ee31",
+                  "obj2Type": "SMD Pad",
+                  "minDistance": 0.7875499999999995,
+                  "clearance": 1.1800000000000002,
+                  "errorType": "Safe Spacing",
+                  "layerIds": [
+                    1
+                  ],
+                  "obj1Suffix": ": e62",
+                  "obj2Suffix": "(USB_DP_CONN): J1_B6"
+                }
+              },
+              "objs": [
+                "80b6742a9e6db79ee62",
+                "80b6742a9e6db79ee31"
+              ],
+              "globalIndex": "err784",
+              "pos": {
+                "x": 128.3467,
+                "y": 29.133995
+              },
+              "parentId": "DRCTab|_|Errors|_|Clearance Error in the same footprint|_|Board Outline to SMD Pad"
+            },
+            {
+              "visible": true,
+              "errorType": "Clearance Error in the same footprint",
+              "errorObjType": "Board Outline to SMD Pad",
+              "ruleName": "copperThickness1oz",
+              "ruleTypeName": "Safe Spacing",
+              "obj1": {
+                "typeName": "Board Outline",
+                "suffix": ": e62"
+              },
+              "obj2": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_VBUS): J1_B4A9"
+              },
+              "layer": "Top Layer",
+              "explanation": {
+                "str": "{obj1} to {obj2} in the same footprint distance is {minDistance}, should be {shouldBe}",
+                "param": {
+                  "minDistance": "7.9mil",
+                  "shouldBe": ">= 11.8mil",
+                  "obj1": "Object 1",
+                  "obj2": "object 2",
+                  "type": "ClearanceError"
+                },
+                "errData": {
+                  "globalIndex": "err785",
+                  "position": {
+                    "x": 134.25215000000003,
+                    "y": 29.133995
+                  },
+                  "name": "copperThickness1oz",
+                  "obj1": "80b6742a9e6db79ee62",
+                  "obj1Type": "Board Outline",
+                  "obj2": "80b6742a9e6db79ee34",
+                  "obj2Type": "SMD Pad",
+                  "minDistance": 0.7875499999999995,
+                  "clearance": 1.1800000000000002,
+                  "errorType": "Safe Spacing",
+                  "layerIds": [
+                    1
+                  ],
+                  "obj1Suffix": ": e62",
+                  "obj2Suffix": "(USB_VBUS): J1_B4A9"
+                }
+              },
+              "objs": [
+                "80b6742a9e6db79ee62",
+                "80b6742a9e6db79ee34"
+              ],
+              "globalIndex": "err785",
+              "pos": {
+                "x": 134.25215000000003,
+                "y": 29.133995
+              },
+              "parentId": "DRCTab|_|Errors|_|Clearance Error in the same footprint|_|Board Outline to SMD Pad"
+            },
+            {
+              "visible": true,
+              "errorType": "Clearance Error in the same footprint",
+              "errorObjType": "Board Outline to SMD Pad",
+              "ruleName": "copperThickness1oz",
+              "ruleTypeName": "Safe Spacing",
+              "obj1": {
+                "typeName": "Board Outline",
+                "suffix": ": e62"
+              },
+              "obj2": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_VBUS): J1_A4B9"
+              },
+              "layer": "Top Layer",
+              "explanation": {
+                "str": "{obj1} to {obj2} in the same footprint distance is {minDistance}, should be {shouldBe}",
+                "param": {
+                  "minDistance": "7.9mil",
+                  "shouldBe": ">= 11.8mil",
+                  "obj1": "Object 1",
+                  "obj2": "object 2",
+                  "type": "ClearanceError"
+                },
+                "errData": {
+                  "globalIndex": "err786",
+                  "position": {
+                    "x": 115.35515,
+                    "y": 29.133995
+                  },
+                  "name": "copperThickness1oz",
+                  "obj1": "80b6742a9e6db79ee62",
+                  "obj1Type": "Board Outline",
+                  "obj2": "80b6742a9e6db79ee36",
+                  "obj2Type": "SMD Pad",
+                  "minDistance": 0.7875499999999995,
+                  "clearance": 1.1800000000000002,
+                  "errorType": "Safe Spacing",
+                  "layerIds": [
+                    1
+                  ],
+                  "obj1Suffix": ": e62",
+                  "obj2Suffix": "(USB_VBUS): J1_A4B9"
+                }
+              },
+              "objs": [
+                "80b6742a9e6db79ee62",
+                "80b6742a9e6db79ee36"
+              ],
+              "globalIndex": "err786",
+              "pos": {
+                "x": 115.35515,
+                "y": 29.133995
+              },
+              "parentId": "DRCTab|_|Errors|_|Clearance Error in the same footprint|_|Board Outline to SMD Pad"
+            },
+            {
+              "visible": true,
+              "errorType": "Clearance Error in the same footprint",
+              "errorObjType": "Board Outline to SMD Pad",
+              "ruleName": "copperThickness1oz",
+              "ruleTypeName": "Safe Spacing",
+              "obj1": {
+                "typeName": "Board Outline",
+                "suffix": ": e62"
+              },
+              "obj2": {
+                "typeName": "SMD Pad",
+                "suffix": ": J1_A8"
+              },
+              "layer": "Top Layer",
+              "explanation": {
+                "str": "{obj1} to {obj2} in the same footprint distance is {minDistance}, should be {shouldBe}",
+                "param": {
+                  "minDistance": "7.9mil",
+                  "shouldBe": ">= 11.8mil",
+                  "obj1": "Object 1",
+                  "obj2": "object 2",
+                  "type": "ClearanceError"
+                },
+                "errData": {
+                  "globalIndex": "err787",
+                  "position": {
+                    "x": 130.3157,
+                    "y": 29.133995
+                  },
+                  "name": "copperThickness1oz",
+                  "obj1": "80b6742a9e6db79ee62",
+                  "obj1Type": "Board Outline",
+                  "obj2": "80b6742a9e6db79ee32",
+                  "obj2Type": "SMD Pad",
+                  "minDistance": 0.7875499999999995,
+                  "clearance": 1.1800000000000002,
+                  "errorType": "Safe Spacing",
+                  "layerIds": [
+                    1
+                  ],
+                  "obj1Suffix": ": e62",
+                  "obj2Suffix": ": J1_A8"
+                }
+              },
+              "objs": [
+                "80b6742a9e6db79ee62",
+                "80b6742a9e6db79ee32"
+              ],
+              "globalIndex": "err787",
+              "pos": {
+                "x": 130.3157,
+                "y": 29.133995
+              },
+              "parentId": "DRCTab|_|Errors|_|Clearance Error in the same footprint|_|Board Outline to SMD Pad"
+            },
+            {
+              "visible": true,
+              "errorType": "Clearance Error in the same footprint",
+              "errorObjType": "Board Outline to SMD Pad",
+              "ruleName": "copperThickness1oz",
+              "ruleTypeName": "Safe Spacing",
+              "obj1": {
+                "typeName": "Board Outline",
+                "suffix": ": e62"
+              },
+              "obj2": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_DM_CONN): J1_B7"
+              },
+              "layer": "Top Layer",
+              "explanation": {
+                "str": "{obj1} to {obj2} in the same footprint distance is {minDistance}, should be {shouldBe}",
+                "param": {
+                  "minDistance": "7.9mil",
+                  "shouldBe": ">= 11.8mil",
+                  "obj1": "Object 1",
+                  "obj2": "object 2",
+                  "type": "ClearanceError"
+                },
+                "errData": {
+                  "globalIndex": "err788",
+                  "position": {
+                    "x": 122.44170000000001,
+                    "y": 29.133995
+                  },
+                  "name": "copperThickness1oz",
+                  "obj1": "80b6742a9e6db79ee62",
+                  "obj1Type": "Board Outline",
+                  "obj2": "80b6742a9e6db79ee28",
+                  "obj2Type": "SMD Pad",
+                  "minDistance": 0.7875499999999995,
+                  "clearance": 1.1800000000000002,
+                  "errorType": "Safe Spacing",
+                  "layerIds": [
+                    1
+                  ],
+                  "obj1Suffix": ": e62",
+                  "obj2Suffix": "(USB_DM_CONN): J1_B7"
+                }
+              },
+              "objs": [
+                "80b6742a9e6db79ee62",
+                "80b6742a9e6db79ee28"
+              ],
+              "globalIndex": "err788",
+              "pos": {
+                "x": 122.44170000000001,
+                "y": 29.133995
+              },
+              "parentId": "DRCTab|_|Errors|_|Clearance Error in the same footprint|_|Board Outline to SMD Pad"
+            },
+            {
+              "visible": true,
+              "errorType": "Clearance Error in the same footprint",
+              "errorObjType": "Board Outline to SMD Pad",
+              "ruleName": "copperThickness1oz",
+              "ruleTypeName": "Safe Spacing",
+              "obj1": {
+                "typeName": "Board Outline",
+                "suffix": ": e62"
+              },
+              "obj2": {
+                "typeName": "SMD Pad",
+                "suffix": "(GND): J1_B1A12"
+              },
+              "layer": "Top Layer",
+              "explanation": {
+                "str": "{obj1} to {obj2} in the same footprint distance is {minDistance}, should be {shouldBe}",
+                "param": {
+                  "minDistance": "7.9mil",
+                  "shouldBe": ">= 11.8mil",
+                  "obj1": "Object 1",
+                  "obj2": "object 2",
+                  "type": "ClearanceError"
+                },
+                "errData": {
+                  "globalIndex": "err789",
+                  "position": {
+                    "x": 137.40215,
+                    "y": 29.133995
+                  },
+                  "name": "copperThickness1oz",
+                  "obj1": "80b6742a9e6db79ee62",
+                  "obj1Type": "Board Outline",
+                  "obj2": "80b6742a9e6db79ee35",
+                  "obj2Type": "SMD Pad",
+                  "minDistance": 0.7875499999999995,
+                  "clearance": 1.1800000000000002,
+                  "errorType": "Safe Spacing",
+                  "layerIds": [
+                    1
+                  ],
+                  "obj1Suffix": ": e62",
+                  "obj2Suffix": "(GND): J1_B1A12"
+                }
+              },
+              "objs": [
+                "80b6742a9e6db79ee62",
+                "80b6742a9e6db79ee35"
+              ],
+              "globalIndex": "err789",
+              "pos": {
+                "x": 137.40215,
+                "y": 29.133995
+              },
+              "parentId": "DRCTab|_|Errors|_|Clearance Error in the same footprint|_|Board Outline to SMD Pad"
+            },
+            {
+              "visible": true,
+              "errorType": "Clearance Error in the same footprint",
+              "errorObjType": "Board Outline to SMD Pad",
+              "ruleName": "copperThickness1oz",
+              "ruleTypeName": "Safe Spacing",
+              "obj1": {
+                "typeName": "Board Outline",
+                "suffix": ": e62"
+              },
+              "obj2": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_DM_CONN): J1_A7"
+              },
+              "layer": "Top Layer",
+              "explanation": {
+                "str": "{obj1} to {obj2} in the same footprint distance is {minDistance}, should be {shouldBe}",
+                "param": {
+                  "minDistance": "7.9mil",
+                  "shouldBe": ">= 11.8mil",
+                  "obj1": "Object 1",
+                  "obj2": "object 2",
+                  "type": "ClearanceError"
+                },
+                "errData": {
+                  "globalIndex": "err790",
+                  "position": {
+                    "x": 126.37870000000001,
+                    "y": 29.133995
+                  },
+                  "name": "copperThickness1oz",
+                  "obj1": "80b6742a9e6db79ee62",
+                  "obj1Type": "Board Outline",
+                  "obj2": "80b6742a9e6db79ee30",
+                  "obj2Type": "SMD Pad",
+                  "minDistance": 0.7875499999999995,
+                  "clearance": 1.1800000000000002,
+                  "errorType": "Safe Spacing",
+                  "layerIds": [
+                    1
+                  ],
+                  "obj1Suffix": ": e62",
+                  "obj2Suffix": "(USB_DM_CONN): J1_A7"
+                }
+              },
+              "objs": [
+                "80b6742a9e6db79ee62",
+                "80b6742a9e6db79ee30"
+              ],
+              "globalIndex": "err790",
+              "pos": {
+                "x": 126.37870000000001,
+                "y": 29.133995
+              },
+              "parentId": "DRCTab|_|Errors|_|Clearance Error in the same footprint|_|Board Outline to SMD Pad"
+            },
+            {
+              "visible": true,
+              "errorType": "Clearance Error in the same footprint",
+              "errorObjType": "Board Outline to SMD Pad",
+              "ruleName": "copperThickness1oz",
+              "ruleTypeName": "Safe Spacing",
+              "obj1": {
+                "typeName": "Board Outline",
+                "suffix": ": e62"
+              },
+              "obj2": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_CC2): J1_B5"
+              },
+              "layer": "Top Layer",
+              "explanation": {
+                "str": "{obj1} to {obj2} in the same footprint distance is {minDistance}, should be {shouldBe}",
+                "param": {
+                  "minDistance": "7.9mil",
+                  "shouldBe": ">= 11.8mil",
+                  "obj1": "Object 1",
+                  "obj2": "object 2",
+                  "type": "ClearanceError"
+                },
+                "errData": {
+                  "globalIndex": "err791",
+                  "position": {
+                    "x": 132.2837,
+                    "y": 29.133995
+                  },
+                  "name": "copperThickness1oz",
+                  "obj1": "80b6742a9e6db79ee62",
+                  "obj1Type": "Board Outline",
+                  "obj2": "80b6742a9e6db79ee33",
+                  "obj2Type": "SMD Pad",
+                  "minDistance": 0.7875499999999995,
+                  "clearance": 1.1800000000000002,
+                  "errorType": "Safe Spacing",
+                  "layerIds": [
+                    1
+                  ],
+                  "obj1Suffix": ": e62",
+                  "obj2Suffix": "(USB_CC2): J1_B5"
+                }
+              },
+              "objs": [
+                "80b6742a9e6db79ee62",
+                "80b6742a9e6db79ee33"
+              ],
+              "globalIndex": "err791",
+              "pos": {
+                "x": 132.2837,
+                "y": 29.133995
+              },
+              "parentId": "DRCTab|_|Errors|_|Clearance Error in the same footprint|_|Board Outline to SMD Pad"
+            },
+            {
+              "visible": true,
+              "errorType": "Clearance Error in the same footprint",
+              "errorObjType": "Board Outline to SMD Pad",
+              "ruleName": "copperThickness1oz",
+              "ruleTypeName": "Safe Spacing",
+              "obj1": {
+                "typeName": "Board Outline",
+                "suffix": ": e62"
+              },
+              "obj2": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_DP_CONN): J1_A6"
+              },
+              "layer": "Top Layer",
+              "explanation": {
+                "str": "{obj1} to {obj2} in the same footprint distance is {minDistance}, should be {shouldBe}",
+                "param": {
+                  "minDistance": "7.9mil",
+                  "shouldBe": ">= 11.8mil",
+                  "obj1": "Object 1",
+                  "obj2": "object 2",
+                  "type": "ClearanceError"
+                },
+                "errData": {
+                  "globalIndex": "err792",
+                  "position": {
+                    "x": 124.40970000000002,
+                    "y": 29.133995
+                  },
+                  "name": "copperThickness1oz",
+                  "obj1": "80b6742a9e6db79ee62",
+                  "obj1Type": "Board Outline",
+                  "obj2": "80b6742a9e6db79ee29",
+                  "obj2Type": "SMD Pad",
+                  "minDistance": 0.7875499999999995,
+                  "clearance": 1.1800000000000002,
+                  "errorType": "Safe Spacing",
+                  "layerIds": [
+                    1
+                  ],
+                  "obj1Suffix": ": e62",
+                  "obj2Suffix": "(USB_DP_CONN): J1_A6"
+                }
+              },
+              "objs": [
+                "80b6742a9e6db79ee62",
+                "80b6742a9e6db79ee29"
+              ],
+              "globalIndex": "err792",
+              "pos": {
+                "x": 124.40970000000002,
+                "y": 29.133995
+              },
+              "parentId": "DRCTab|_|Errors|_|Clearance Error in the same footprint|_|Board Outline to SMD Pad"
+            },
+            {
+              "visible": true,
+              "errorType": "Clearance Error in the same footprint",
+              "errorObjType": "Board Outline to SMD Pad",
+              "ruleName": "copperThickness1oz",
+              "ruleTypeName": "Safe Spacing",
+              "obj1": {
+                "typeName": "Board Outline",
+                "suffix": ": e62"
+              },
+              "obj2": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_CC1): J1_A5"
+              },
+              "layer": "Top Layer",
+              "explanation": {
+                "str": "{obj1} to {obj2} in the same footprint distance is {minDistance}, should be {shouldBe}",
+                "param": {
+                  "minDistance": "7.9mil",
+                  "shouldBe": ">= 11.8mil",
+                  "obj1": "Object 1",
+                  "obj2": "object 2",
+                  "type": "ClearanceError"
+                },
+                "errData": {
+                  "globalIndex": "err793",
+                  "position": {
+                    "x": 120.4727,
+                    "y": 29.133995
+                  },
+                  "name": "copperThickness1oz",
+                  "obj1": "80b6742a9e6db79ee62",
+                  "obj1Type": "Board Outline",
+                  "obj2": "80b6742a9e6db79ee27",
+                  "obj2Type": "SMD Pad",
+                  "minDistance": 0.7875499999999995,
+                  "clearance": 1.1800000000000002,
+                  "errorType": "Safe Spacing",
+                  "layerIds": [
+                    1
+                  ],
+                  "obj1Suffix": ": e62",
+                  "obj2Suffix": "(USB_CC1): J1_A5"
+                }
+              },
+              "objs": [
+                "80b6742a9e6db79ee62",
+                "80b6742a9e6db79ee27"
+              ],
+              "globalIndex": "err793",
+              "pos": {
+                "x": 120.4727,
+                "y": 29.133995
+              },
+              "parentId": "DRCTab|_|Errors|_|Clearance Error in the same footprint|_|Board Outline to SMD Pad"
+            },
+            {
+              "visible": true,
+              "errorType": "Clearance Error in the same footprint",
+              "errorObjType": "Board Outline to SMD Pad",
+              "ruleName": "copperThickness1oz",
+              "ruleTypeName": "Safe Spacing",
+              "obj1": {
+                "typeName": "Board Outline",
+                "suffix": ": e62"
+              },
+              "obj2": {
+                "typeName": "SMD Pad",
+                "suffix": ": J1_B8"
+              },
+              "layer": "Top Layer",
+              "explanation": {
+                "str": "{obj1} to {obj2} in the same footprint distance is {minDistance}, should be {shouldBe}",
+                "param": {
+                  "minDistance": "7.9mil",
+                  "shouldBe": ">= 11.8mil",
+                  "obj1": "Object 1",
+                  "obj2": "object 2",
+                  "type": "ClearanceError"
+                },
+                "errData": {
+                  "globalIndex": "err794",
+                  "position": {
+                    "x": 118.50470000000001,
+                    "y": 29.133995
+                  },
+                  "name": "copperThickness1oz",
+                  "obj1": "80b6742a9e6db79ee62",
+                  "obj1Type": "Board Outline",
+                  "obj2": "80b6742a9e6db79ee26",
+                  "obj2Type": "SMD Pad",
+                  "minDistance": 0.7875499999999995,
+                  "clearance": 1.1800000000000002,
+                  "errorType": "Safe Spacing",
+                  "layerIds": [
+                    1
+                  ],
+                  "obj1Suffix": ": e62",
+                  "obj2Suffix": ": J1_B8"
+                }
+              },
+              "objs": [
+                "80b6742a9e6db79ee62",
+                "80b6742a9e6db79ee26"
+              ],
+              "globalIndex": "err794",
+              "pos": {
+                "x": 118.50470000000001,
+                "y": 29.133995
+              },
+              "parentId": "DRCTab|_|Errors|_|Clearance Error in the same footprint|_|Board Outline to SMD Pad"
+            }
+          ],
+          "count": 12,
+          "title": [
+            "Board Outline",
+            "to",
+            "SMD Pad",
+            "(12)"
+          ],
+          "visible": true
+        }
+      ],
+      "visible": true,
+      "count": 12,
+      "title": [
+        "Clearance Error in the same footprint",
+        "(12)"
+      ]
+    },
+    {
+      "name": "Connection Error",
+      "list": [
+        {
+          "name": "GND",
+          "list": [
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(GND): U2_5"
+              },
+              "isFree": false,
+              "net": "GND",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err795",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "712fd95907922ca7e25",
+                  "obj1Type": "SMD Pad",
+                  "net": "GND",
+                  "obj1Suffix": "(GND): U2_5"
+                }
+              },
+              "objs": [
+                "712fd95907922ca7e25"
+              ],
+              "globalIndex": "err795",
+              "pos": {
+                "x": 114.76292,
+                "y": 54.330600000000004
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|GND"
+            },
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(GND): U6_3"
+              },
+              "isFree": false,
+              "net": "GND",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err796",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "5592d83122350a94e8",
+                  "obj1Type": "SMD Pad",
+                  "net": "GND",
+                  "obj1Suffix": "(GND): U6_3"
+                }
+              },
+              "objs": [
+                "5592d83122350a94e8"
+              ],
+              "globalIndex": "err796",
+              "pos": {
+                "x": 118.11023999999998,
+                "y": 50
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|GND"
+            },
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(GND): U4_2"
+              },
+              "isFree": false,
+              "net": "GND",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err797",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "15e08cd34920a892e7",
+                  "obj1Type": "SMD Pad",
+                  "net": "GND",
+                  "obj1Suffix": "(GND): U4_2"
+                }
+              },
+              "objs": [
+                "15e08cd34920a892e7"
+              ],
+              "globalIndex": "err797",
+              "pos": {
+                "x": 110.03921,
+                "y": 102.3622
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|GND"
+            },
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(GND): R13_2"
+              },
+              "isFree": false,
+              "net": "GND",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err798",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "ef5722fb9675246ee7",
+                  "obj1Type": "SMD Pad",
+                  "net": "GND",
+                  "obj1Suffix": "(GND): R13_2"
+                }
+              },
+              "objs": [
+                "ef5722fb9675246ee7"
+              ],
+              "globalIndex": "err798",
+              "pos": {
+                "x": 109.26520999999998,
+                "y": 110.23622
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|GND"
+            },
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(GND): C9_2"
+              },
+              "isFree": false,
+              "net": "GND",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err799",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "7f00cdb9414ac083e15",
+                  "obj1Type": "SMD Pad",
+                  "net": "GND",
+                  "obj1Suffix": "(GND): C9_2"
+                }
+              },
+              "objs": [
+                "7f00cdb9414ac083e15"
+              ],
+              "globalIndex": "err799",
+              "pos": {
+                "x": 106.2992,
+                "y": 93.70079
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|GND"
+            },
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(GND): C18_2"
+              },
+              "isFree": false,
+              "net": "GND",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err800",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "db73bf39c99e775de15",
+                  "obj1Type": "SMD Pad",
+                  "net": "GND",
+                  "obj1Suffix": "(GND): C18_2"
+                }
+              },
+              "objs": [
+                "db73bf39c99e775de15"
+              ],
+              "globalIndex": "err800",
+              "pos": {
+                "x": 226.37794000000002,
+                "y": 142.51969
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|GND"
+            },
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(GND): J2_17"
+              },
+              "isFree": false,
+              "net": "GND",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err801",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "1c9b89195dc744cee37",
+                  "obj1Type": "SMD Pad",
+                  "net": "GND",
+                  "obj1Suffix": "(GND): J2_17"
+                }
+              },
+              "objs": [
+                "1c9b89195dc744cee37"
+              ],
+              "globalIndex": "err801",
+              "pos": {
+                "x": 209.27152,
+                "y": 142.71627
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|GND"
+            },
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(GND): U1_15"
+              },
+              "isFree": false,
+              "net": "GND",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err802",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "97c6fc7236300ad5e79",
+                  "obj1Type": "SMD Pad",
+                  "net": "GND",
+                  "obj1Suffix": "(GND): U1_15"
+                }
+              },
+              "objs": [
+                "97c6fc7236300ad5e79"
+              ],
+              "globalIndex": "err802",
+              "pos": {
+                "x": 14.56662,
+                "y": 51.77152
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|GND"
+            },
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "Via",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "Via",
+                "suffix": "(GND): e96"
+              },
+              "isFree": false,
+              "net": "GND",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err803",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "bfaf356de247703a",
+                  "obj1Type": "Via",
+                  "net": "GND",
+                  "obj1Suffix": "(GND): e96"
+                }
+              },
+              "objs": [
+                "bfaf356de247703a"
+              ],
+              "globalIndex": "err803",
+              "pos": {
+                "x": 9.4488,
+                "y": 33.70859
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|GND"
+            },
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "Track",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "Track",
+                "suffix": "(GND): e591"
+              },
+              "isFree": false,
+              "net": "GND",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err804",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "d02c83d8dca32ac9",
+                  "obj1Type": "Track",
+                  "net": "GND",
+                  "obj1Suffix": "(GND): e591"
+                }
+              },
+              "objs": [
+                "d02c83d8dca32ac9"
+              ],
+              "globalIndex": "err804",
+              "pos": {
+                "x": 22.265700000000002,
+                "y": 68.73648
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|GND"
+            },
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(GND): U1_2"
+              },
+              "isFree": false,
+              "net": "GND",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err805",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "97c6fc7236300ad5e66",
+                  "obj1Type": "SMD Pad",
+                  "net": "GND",
+                  "obj1Suffix": "(GND): U1_2"
+                }
+              },
+              "objs": [
+                "97c6fc7236300ad5e66"
+              ],
+              "globalIndex": "err805",
+              "pos": {
+                "x": 53.14962,
+                "y": 51.18052
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|GND"
+            }
+          ],
+          "doNotTranslate": true,
+          "count": 11,
+          "title": "GND (11)",
+          "visible": true
+        },
+        {
+          "name": "SYS",
+          "list": [
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(SYS): C2_1"
+              },
+              "isFree": false,
+              "net": "SYS",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err806",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "f8d8043bc5c19bdfe15",
+                  "obj1Type": "SMD Pad",
+                  "net": "SYS",
+                  "obj1Suffix": "(SYS): C2_1"
+                }
+              },
+              "objs": [
+                "f8d8043bc5c19bdfe15"
+              ],
+              "globalIndex": "err806",
+              "pos": {
+                "x": 117.71644,
+                "y": 42.91339
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|SYS"
+            },
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(SYS): U2_1"
+              },
+              "isFree": false,
+              "net": "SYS",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err807",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "712fd95907922ca7e21",
+                  "obj1Type": "SMD Pad",
+                  "net": "SYS",
+                  "obj1Suffix": "(SYS): U2_1"
+                }
+              },
+              "objs": [
+                "712fd95907922ca7e21"
+              ],
+              "globalIndex": "err807",
+              "pos": {
+                "x": 114.76392,
+                "y": 48.0316
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|SYS"
+            }
+          ],
+          "doNotTranslate": true,
+          "count": 2,
+          "title": "SYS (2)",
+          "visible": true
+        },
+        {
+          "name": "USB_VBUS",
+          "list": [
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_VBUS): U2_10"
+              },
+              "isFree": false,
+              "net": "USB_VBUS",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err808",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "712fd95907922ca7e30",
+                  "obj1Type": "SMD Pad",
+                  "net": "USB_VBUS",
+                  "obj1Suffix": "(USB_VBUS): U2_10"
+                }
+              },
+              "objs": [
+                "712fd95907922ca7e30"
+              ],
+              "globalIndex": "err808",
+              "pos": {
+                "x": 106.49592,
+                "y": 48.0316
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|USB_VBUS"
+            },
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_VBUS): C1_1"
+              },
+              "isFree": false,
+              "net": "USB_VBUS",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err809",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "f41efe6726027056e15",
+                  "obj1Type": "SMD Pad",
+                  "net": "USB_VBUS",
+                  "obj1Suffix": "(USB_VBUS): C1_1"
+                }
+              },
+              "objs": [
+                "f41efe6726027056e15"
+              ],
+              "globalIndex": "err809",
+              "pos": {
+                "x": 107.08671,
+                "y": 42.91339
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|USB_VBUS"
+            },
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_VBUS): J1_A4B9"
+              },
+              "isFree": false,
+              "net": "USB_VBUS",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err810",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "80b6742a9e6db79ee36",
+                  "obj1Type": "SMD Pad",
+                  "net": "USB_VBUS",
+                  "obj1Suffix": "(USB_VBUS): J1_A4B9"
+                }
+              },
+              "objs": [
+                "80b6742a9e6db79ee36"
+              ],
+              "globalIndex": "err810",
+              "pos": {
+                "x": 116.53625,
+                "y": 31.69312
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|USB_VBUS"
+            },
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_VBUS): J1_B4A9"
+              },
+              "isFree": false,
+              "net": "USB_VBUS",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err811",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "80b6742a9e6db79ee34",
+                  "obj1Type": "SMD Pad",
+                  "net": "USB_VBUS",
+                  "obj1Suffix": "(USB_VBUS): J1_B4A9"
+                }
+              },
+              "objs": [
+                "80b6742a9e6db79ee34"
+              ],
+              "globalIndex": "err811",
+              "pos": {
+                "x": 135.43325000000002,
+                "y": 31.69312
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|USB_VBUS"
+            },
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_VBUS): U1_32"
+              },
+              "isFree": false,
+              "net": "USB_VBUS",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err812",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "97c6fc7236300ad5e96",
+                  "obj1Type": "SMD Pad",
+                  "net": "USB_VBUS",
+                  "obj1Suffix": "(USB_VBUS): U1_32"
+                }
+              },
+              "objs": [
+                "97c6fc7236300ad5e96"
+              ],
+              "globalIndex": "err812",
+              "pos": {
+                "x": 14.566619999999999,
+                "y": 17.125519999999995
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|USB_VBUS"
+            }
+          ],
+          "doNotTranslate": true,
+          "count": 5,
+          "title": "USB_VBUS (5)",
+          "visible": true
+        },
+        {
+          "name": "VDD_3V3",
+          "list": [
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "Track",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "Track",
+                "suffix": "(VDD_3V3): e334"
+              },
+              "isFree": false,
+              "net": "VDD_3V3",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err813",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "161dd825afb76aa5",
+                  "obj1Type": "Track",
+                  "net": "VDD_3V3",
+                  "obj1Suffix": "(VDD_3V3): e334"
+                }
+              },
+              "objs": [
+                "161dd825afb76aa5"
+              ],
+              "globalIndex": "err813",
+              "pos": {
+                "x": 141.64578,
+                "y": 90.48013
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|VDD_3V3"
+            },
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(VDD_3V3): R8_1"
+              },
+              "isFree": false,
+              "net": "VDD_3V3",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err814",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "8fd4f31c11f0ec2be8",
+                  "obj1Type": "SMD Pad",
+                  "net": "VDD_3V3",
+                  "obj1Suffix": "(VDD_3V3): R8_1"
+                }
+              },
+              "objs": [
+                "8fd4f31c11f0ec2be8"
+              ],
+              "globalIndex": "err814",
+              "pos": {
+                "x": 141.12849,
+                "y": 86.61417
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|VDD_3V3"
+            },
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(VDD_3V3): C9_1"
+              },
+              "isFree": false,
+              "net": "VDD_3V3",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err815",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "7f00cdb9414ac083e16",
+                  "obj1Type": "SMD Pad",
+                  "net": "VDD_3V3",
+                  "obj1Suffix": "(VDD_3V3): C9_1"
+                }
+              },
+              "objs": [
+                "7f00cdb9414ac083e16"
+              ],
+              "globalIndex": "err815",
+              "pos": {
+                "x": 98.4252,
+                "y": 93.70079
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|VDD_3V3"
+            },
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(VDD_3V3): R5_1"
+              },
+              "isFree": false,
+              "net": "VDD_3V3",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err816",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "8c77ec284326c24ae8",
+                  "obj1Type": "SMD Pad",
+                  "net": "VDD_3V3",
+                  "obj1Suffix": "(VDD_3V3): R5_1"
+                }
+              },
+              "objs": [
+                "8c77ec284326c24ae8"
+              ],
+              "globalIndex": "err816",
+              "pos": {
+                "x": 102.15211000000001,
+                "y": 86.61417
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|VDD_3V3"
+            },
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(VDD_3V3): R7_1"
+              },
+              "isFree": false,
+              "net": "VDD_3V3",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err817",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "ee62f5257cbedd7fe8",
+                  "obj1Type": "SMD Pad",
+                  "net": "VDD_3V3",
+                  "obj1Suffix": "(VDD_3V3): R7_1"
+                }
+              },
+              "objs": [
+                "ee62f5257cbedd7fe8"
+              ],
+              "globalIndex": "err817",
+              "pos": {
+                "x": 128.13636,
+                "y": 86.61417
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|VDD_3V3"
+            }
+          ],
+          "doNotTranslate": true,
+          "count": 5,
+          "title": "VDD_3V3 (5)",
+          "visible": true
+        },
+        {
+          "name": "EPD_VDD",
+          "list": [
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "Via",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "Via",
+                "suffix": "(EPD_VDD): e71"
+              },
+              "isFree": false,
+              "net": "EPD_VDD",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err818",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "38168ce0c3d90aa6",
+                  "obj1Type": "Via",
+                  "net": "EPD_VDD",
+                  "obj1Suffix": "(EPD_VDD): e71"
+                }
+              },
+              "objs": [
+                "38168ce0c3d90aa6"
+              ],
+              "globalIndex": "err818",
+              "pos": {
+                "x": 180.82129,
+                "y": 167.00793000000002
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|EPD_VDD"
+            },
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(EPD_VDD): J2_15"
+              },
+              "isFree": false,
+              "net": "EPD_VDD",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err819",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "1c9b89195dc744cee39",
+                  "obj1Type": "SMD Pad",
+                  "net": "EPD_VDD",
+                  "obj1Suffix": "(EPD_VDD): J2_15"
+                }
+              },
+              "objs": [
+                "1c9b89195dc744cee39"
+              ],
+              "globalIndex": "err819",
+              "pos": {
+                "x": 209.27152,
+                "y": 138.77927
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|EPD_VDD"
+            }
+          ],
+          "doNotTranslate": true,
+          "count": 2,
+          "title": "EPD_VDD (2)",
+          "visible": true
+        },
+        {
+          "name": "USB_CC2",
+          "list": [
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_CC2): R2_1"
+              },
+              "isFree": false,
+              "net": "USB_CC2",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err820",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "384904d4feeb315fe8",
+                  "obj1Type": "SMD Pad",
+                  "net": "USB_CC2",
+                  "obj1Suffix": "(USB_CC2): R2_1"
+                }
+              },
+              "objs": [
+                "384904d4feeb315fe8"
+              ],
+              "globalIndex": "err820",
+              "pos": {
+                "x": 121.44345,
+                "y": 37.59843
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|USB_CC2"
+            },
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_CC2): J1_B5"
+              },
+              "isFree": false,
+              "net": "USB_CC2",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err821",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "80b6742a9e6db79ee33",
+                  "obj1Type": "SMD Pad",
+                  "net": "USB_CC2",
+                  "obj1Suffix": "(USB_CC2): J1_B5"
+                }
+              },
+              "objs": [
+                "80b6742a9e6db79ee33"
+              ],
+              "globalIndex": "err821",
+              "pos": {
+                "x": 132.87425000000002,
+                "y": 31.69312
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|USB_CC2"
+            }
+          ],
+          "doNotTranslate": true,
+          "count": 2,
+          "title": "USB_CC2 (2)",
+          "visible": true
+        },
+        {
+          "name": "USB_DP_CONN",
+          "list": [
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_DP_CONN): J1_A6"
+              },
+              "isFree": false,
+              "net": "USB_DP_CONN",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err822",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "80b6742a9e6db79ee29",
+                  "obj1Type": "SMD Pad",
+                  "net": "USB_DP_CONN",
+                  "obj1Suffix": "(USB_DP_CONN): J1_A6"
+                }
+              },
+              "objs": [
+                "80b6742a9e6db79ee29"
+              ],
+              "globalIndex": "err822",
+              "pos": {
+                "x": 125.00025000000001,
+                "y": 31.69312
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|USB_DP_CONN"
+            },
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_DP_CONN): J1_B6"
+              },
+              "isFree": false,
+              "net": "USB_DP_CONN",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err823",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "80b6742a9e6db79ee31",
+                  "obj1Type": "SMD Pad",
+                  "net": "USB_DP_CONN",
+                  "obj1Suffix": "(USB_DP_CONN): J1_B6"
+                }
+              },
+              "objs": [
+                "80b6742a9e6db79ee31"
+              ],
+              "globalIndex": "err823",
+              "pos": {
+                "x": 128.93725,
+                "y": 31.69312
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|USB_DP_CONN"
+            },
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_DP_CONN): R3_1"
+              },
+              "isFree": false,
+              "net": "USB_DP_CONN",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err824",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "bc4f510a957caa44e8",
+                  "obj1Type": "SMD Pad",
+                  "net": "USB_DP_CONN",
+                  "obj1Suffix": "(USB_DP_CONN): R3_1"
+                }
+              },
+              "objs": [
+                "bc4f510a957caa44e8"
+              ],
+              "globalIndex": "err824",
+              "pos": {
+                "x": 16.71904,
+                "y": 9.448820000000001
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|USB_DP_CONN"
+            }
+          ],
+          "doNotTranslate": true,
+          "count": 3,
+          "title": "USB_DP_CONN (3)",
+          "visible": true
+        },
+        {
+          "name": "BAT_NTC_TBD",
+          "list": [
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(BAT_NTC_TBD): U2_6"
+              },
+              "isFree": false,
+              "net": "BAT_NTC_TBD",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err825",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "712fd95907922ca7e26",
+                  "obj1Type": "SMD Pad",
+                  "net": "BAT_NTC_TBD",
+                  "obj1Suffix": "(BAT_NTC_TBD): U2_6"
+                }
+              },
+              "objs": [
+                "712fd95907922ca7e26"
+              ],
+              "globalIndex": "err825",
+              "pos": {
+                "x": 106.49592,
+                "y": 54.330600000000004
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|BAT_NTC_TBD"
+            },
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Test Point",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Test Point",
+                "suffix": "(BAT_NTC_TBD): e7"
+              },
+              "isFree": false,
+              "net": "BAT_NTC_TBD",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err826",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "a2d51dd7038c685e",
+                  "obj1Type": "SMD Test Point",
+                  "net": "BAT_NTC_TBD",
+                  "obj1Suffix": "(BAT_NTC_TBD): e7"
+                }
+              },
+              "objs": [
+                "a2d51dd7038c685e"
+              ],
+              "globalIndex": "err826",
+              "pos": {
+                "x": 179.52756,
+                "y": 93.30709
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|BAT_NTC_TBD"
+            }
+          ],
+          "doNotTranslate": true,
+          "count": 2,
+          "title": "BAT_NTC_TBD (2)",
+          "visible": true
+        },
+        {
+          "name": "USB_CC1",
+          "list": [
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_CC1): R1_1"
+              },
+              "isFree": false,
+              "net": "USB_CC1",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err827",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "2b5f0d1a05afd7f9e8",
+                  "obj1Type": "SMD Pad",
+                  "net": "USB_CC1",
+                  "obj1Suffix": "(USB_CC1): R1_1"
+                }
+              },
+              "objs": [
+                "2b5f0d1a05afd7f9e8"
+              ],
+              "globalIndex": "err827",
+              "pos": {
+                "x": 108.45132,
+                "y": 37.59843
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|USB_CC1"
+            },
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_CC1): J1_A5"
+              },
+              "isFree": false,
+              "net": "USB_CC1",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err828",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "80b6742a9e6db79ee27",
+                  "obj1Type": "SMD Pad",
+                  "net": "USB_CC1",
+                  "obj1Suffix": "(USB_CC1): J1_A5"
+                }
+              },
+              "objs": [
+                "80b6742a9e6db79ee27"
+              ],
+              "globalIndex": "err828",
+              "pos": {
+                "x": 121.06325,
+                "y": 31.69312
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|USB_CC1"
+            },
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_CC1): U6_1"
+              },
+              "isFree": false,
+              "net": "USB_CC1",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err829",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "5592d83122350a94e6",
+                  "obj1Type": "SMD Pad",
+                  "net": "USB_CC1",
+                  "obj1Suffix": "(USB_CC1): U6_1"
+                }
+              },
+              "objs": [
+                "5592d83122350a94e6"
+              ],
+              "globalIndex": "err829",
+              "pos": {
+                "x": 122.04724000000002,
+                "y": 48.622
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|USB_CC1"
+            }
+          ],
+          "doNotTranslate": true,
+          "count": 3,
+          "title": "USB_CC1 (3)",
+          "visible": true
+        },
+        {
+          "name": "USB_DM_CONN",
+          "list": [
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_DM_CONN): J1_B7"
+              },
+              "isFree": false,
+              "net": "USB_DM_CONN",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err830",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "80b6742a9e6db79ee28",
+                  "obj1Type": "SMD Pad",
+                  "net": "USB_DM_CONN",
+                  "obj1Suffix": "(USB_DM_CONN): J1_B7"
+                }
+              },
+              "objs": [
+                "80b6742a9e6db79ee28"
+              ],
+              "globalIndex": "err830",
+              "pos": {
+                "x": 123.03225,
+                "y": 31.69312
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|USB_DM_CONN"
+            },
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_DM_CONN): J1_A7"
+              },
+              "isFree": false,
+              "net": "USB_DM_CONN",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err831",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "80b6742a9e6db79ee30",
+                  "obj1Type": "SMD Pad",
+                  "net": "USB_DM_CONN",
+                  "obj1Suffix": "(USB_DM_CONN): J1_A7"
+                }
+              },
+              "objs": [
+                "80b6742a9e6db79ee30"
+              ],
+              "globalIndex": "err831",
+              "pos": {
+                "x": 126.96925,
+                "y": 31.69312
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|USB_DM_CONN"
+            },
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_DM_CONN): U5_2"
+              },
+              "isFree": false,
+              "net": "USB_DM_CONN",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err832",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "1bb9d193d7911ec2e7",
+                  "obj1Type": "SMD Pad",
+                  "net": "USB_DM_CONN",
+                  "obj1Suffix": "(USB_DM_CONN): U5_2"
+                }
+              },
+              "objs": [
+                "1bb9d193d7911ec2e7"
+              ],
+              "globalIndex": "err832",
+              "pos": {
+                "x": 135.03936999999996,
+                "y": 38.38587000000001
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|USB_DM_CONN"
+            },
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_DM_CONN): R4_1"
+              },
+              "isFree": false,
+              "net": "USB_DM_CONN",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err833",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "a80c1c5ae9df8d33e8",
+                  "obj1Type": "SMD Pad",
+                  "net": "USB_DM_CONN",
+                  "obj1Suffix": "(USB_DM_CONN): R4_1"
+                }
+              },
+              "objs": [
+                "a80c1c5ae9df8d33e8"
+              ],
+              "globalIndex": "err833",
+              "pos": {
+                "x": 29.711170000000003,
+                "y": 9.448820000000001
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|USB_DM_CONN"
+            }
+          ],
+          "doNotTranslate": true,
+          "count": 4,
+          "title": "USB_DM_CONN (4)",
+          "visible": true
+        },
+        {
+          "name": "USB_DM_MCU",
+          "list": [
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_DM_MCU): U1_34"
+              },
+              "isFree": false,
+              "net": "USB_DM_MCU",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err834",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "97c6fc7236300ad5e98",
+                  "obj1Type": "SMD Pad",
+                  "net": "USB_DM_MCU",
+                  "obj1Suffix": "(USB_DM_MCU): U1_34"
+                }
+              },
+              "objs": [
+                "97c6fc7236300ad5e98"
+              ],
+              "globalIndex": "err834",
+              "pos": {
+                "x": 18.50362,
+                "y": 14.566520000000008
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|USB_DM_MCU"
+            },
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(USB_DM_MCU): R4_2"
+              },
+              "isFree": false,
+              "net": "USB_DM_MCU",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err835",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "a80c1c5ae9df8d33e7",
+                  "obj1Type": "SMD Pad",
+                  "net": "USB_DM_MCU",
+                  "obj1Suffix": "(USB_DM_MCU): R4_2"
+                }
+              },
+              "objs": [
+                "a80c1c5ae9df8d33e7"
+              ],
+              "globalIndex": "err835",
+              "pos": {
+                "x": 35.643170000000005,
+                "y": 9.448820000000001
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|USB_DM_MCU"
+            }
+          ],
+          "doNotTranslate": true,
+          "count": 2,
+          "title": "USB_DM_MCU (2)",
+          "visible": true
+        },
+        {
+          "name": "EPD_DC_TBD",
+          "list": [
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(EPD_DC_TBD): U1_39"
+              },
+              "isFree": false,
+              "net": "EPD_DC_TBD",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err836",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "97c6fc7236300ad5e103",
+                  "obj1Type": "SMD Pad",
+                  "net": "EPD_DC_TBD",
+                  "obj1Suffix": "(EPD_DC_TBD): U1_39"
+                }
+              },
+              "objs": [
+                "97c6fc7236300ad5e103"
+              ],
+              "globalIndex": "err836",
+              "pos": {
+                "x": 27.952620000000003,
+                "y": 14.566520000000004
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|EPD_DC_TBD"
+            },
+            {
+              "visible": true,
+              "errorType": "Connection Error",
+              "errorObjType": "SMD Pad",
+              "ruleName": "Common",
+              "obj1": {
+                "typeName": "SMD Pad",
+                "suffix": "(EPD_DC_TBD): J2_11"
+              },
+              "isFree": false,
+              "net": "EPD_DC_TBD",
+              "explanation": {
+                "str": "{obj1} is disconnected from other objects of the same network",
+                "param": {
+                  "obj1": "Object 1",
+                  "type": "ConnectError"
+                },
+                "errData": {
+                  "globalIndex": "err837",
+                  "errorType": "No Connection",
+                  "name": "Common",
+                  "obj1": "1c9b89195dc744cee43",
+                  "obj1Type": "SMD Pad",
+                  "net": "EPD_DC_TBD",
+                  "obj1Suffix": "(EPD_DC_TBD): J2_11"
+                }
+              },
+              "objs": [
+                "1c9b89195dc744cee43"
+              ],
+              "globalIndex": "err837",
+              "pos": {
+                "x": 209.27152,
+                "y": 130.90527000000003
+              },
+              "parentId": "DRCTab|_|Errors|_|Connection Error|_|EPD_DC_TBD"
+            }
+          ],
+          "doNotTranslate": true,
+          "count": 2,
+          "title": "EPD_DC_TBD (2)",
+          "visible": true
+        }
+      ],
+      "visible": true,
+      "count": 43,
+      "title": [
+        "Connection Error",
+        "(43)"
+      ]
+    }
+  ],
+  "verification_limits": [
+    "Obsolete schematic text was removed via native menu and verified after reopening; manufacturing PDF has not been revalidated.",
+    "Connectivity checks compare assigned nets, not routed copper.",
+    "CAD, RF, USB impedance, power/thermal and sample fit are not validated."
+  ],
+  "association_verification": {
+    "repaired_components": 27,
+    "property_checks": 112,
+    "passed": true,
+    "positions_unchanged": true,
+    "netlist": "e6-pcb.enet"
+  },
+  "routing_verification": {
+    "date": "2026-09-21",
+    "connected_nets": [
+      "EPD_VSNL1",
+      "EPD_VSNH",
+      "EPD_VCOM"
+    ],
+    "rerouted_net": "EPD_BUSY_TBD",
+    "removed_tracks": 4,
+    "added_tracks": 20,
+    "added_vias": 4,
+    "new_track_width_mil": 8,
+    "saved_reopened": true,
+    "placements_unchanged": true,
+    "rules_relaxed": false,
+    "pcb_drc_before": 73,
+    "pcb_drc_after": 67
+  }
+}

@@ -1,0 +1,289 @@
+{
+  "components": 27,
+  "pads": 145,
+  "save_reopen_changes": [],
+  "client_normalizations": [],
+  "pad_net_mismatches_vs_schematic": [],
+  "placement_errors": [],
+  "pad_corners_outside_board": [],
+  "inter_component_pad_bbox_overlaps": [],
+  "component_body_bbox_overlaps": [],
+  "pad_overlaps_nfc_reserve": [],
+  "layer_stack_mm": 0.8000238,
+  "database_quick_check": "ok",
+  "scope": "Axis-aligned footprint/body and pad bounds for current rotations. Does not verify trace routing, true courtyard, solder-mask, slot clearance, 3D fit, material strength, RF or manufacturing readiness. USB body intentionally overhangs; pads must stay on PCB.",
+  "status": "INDEPENDENT_UNROUTED_LAYOUT_STUDY",
+  "plan": {
+    "project_uuid": "07f4a6566072528b6a87a4f8be49c9fd0c0c75836c553b43e4663915770faca8",
+    "pcb_uuid": "13f7744be10c4bb4",
+    "board_outline_mm": [
+      [
+        1.5,
+        1.5
+      ],
+      [
+        27.38,
+        1.5
+      ],
+      [
+        27.38,
+        7.3
+      ],
+      [
+        36.62,
+        7.3
+      ],
+      [
+        36.62,
+        1.5
+      ],
+      [
+        51.5,
+        1.5
+      ],
+      [
+        51.5,
+        22.5
+      ],
+      [
+        84.5,
+        22.5
+      ],
+      [
+        84.5,
+        52.5
+      ],
+      [
+        1.5,
+        52.5
+      ]
+    ],
+    "changed_placements_mm_deg": {
+      "J1": [
+        32,
+        5.475,
+        0
+      ],
+      "SW1": [
+        46.5,
+        5,
+        0
+      ],
+      "SW2": [
+        46.5,
+        11.3,
+        0
+      ],
+      "SW3": [
+        46.5,
+        17.6,
+        0
+      ],
+      "R1": [
+        28.3,
+        9.55,
+        0
+      ],
+      "R2": [
+        31.6,
+        9.55,
+        0
+      ]
+    },
+    "battery_mm": [
+      52,
+      2,
+      32,
+      20
+    ],
+    "usb_slot_mm": [
+      27.38,
+      1.5,
+      9.24,
+      5.8
+    ],
+    "nfc_reserve_mm": [
+      61,
+      25,
+      23,
+      25
+    ],
+    "rf_reserve_mm": [
+      15,
+      1.5,
+      10,
+      13.5
+    ],
+    "placements": {
+      "C1": [
+        26.50000034,
+        10.90000106,
+        180
+      ],
+      "C2": [
+        30.59999976,
+        10.90000106,
+        0
+      ],
+      "C3": [
+        31.2000011,
+        14.700001079999998,
+        90
+      ],
+      "C4": [
+        34.29999998,
+        10.90000106,
+        0
+      ],
+      "C5": [
+        33.49999904,
+        15.799998879999999,
+        180
+      ],
+      "C6": [
+        2.40000028,
+        15.20000008,
+        90
+      ],
+      "C7": [
+        2.40000028,
+        7.1000010399999995,
+        90
+      ],
+      "C8": [
+        2.40000028,
+        3.9499997199999997,
+        90
+      ],
+      "J1": [
+        32,
+        5.475,
+        0
+      ],
+      "R1": [
+        28.3,
+        9.55,
+        0
+      ],
+      "R2": [
+        31.6,
+        9.55,
+        0
+      ],
+      "R3": [
+        5.00000016,
+        2.40000028,
+        0
+      ],
+      "R4": [
+        8.30000118,
+        2.40000028,
+        0
+      ],
+      "R5": [
+        26.699999939999998,
+        21.99999918,
+        0
+      ],
+      "R6": [
+        30.000000959999998,
+        21.99999918,
+        0
+      ],
+      "R7": [
+        33.29999944,
+        21.99999918,
+        0
+      ],
+      "R8": [
+        36.60000046,
+        21.99999918,
+        0
+      ],
+      "R9": [
+        39.89999894,
+        21.99999918,
+        0
+      ],
+      "R10": [
+        21.500000179999997,
+        16.50000002,
+        0
+      ],
+      "R11": [
+        21.500000179999997,
+        19.4999991,
+        0
+      ],
+      "R12": [
+        21.500000179999997,
+        22.50000072,
+        0
+      ],
+      "SW1": [
+        46.5,
+        5,
+        0
+      ],
+      "SW2": [
+        46.5,
+        11.3,
+        0
+      ],
+      "SW3": [
+        46.5,
+        17.6,
+        0
+      ],
+      "U1": [
+        9.14999948,
+        8.35000108,
+        -90.00000000000001
+      ],
+      "U2": [
+        28.099999679999996,
+        12.9999994,
+        90
+      ],
+      "U3": [
+        35.00000112,
+        12.9999994,
+        0
+      ]
+    }
+  },
+  "drc": {
+    "Clearance Error": 12,
+    "Clearance Error in the same footprint": 12,
+    "Connection Error": 98
+  },
+  "copper": {
+    "LINE": 0,
+    "VIA": 0,
+    "POUR": 0
+  },
+  "netlist_unchanged_vs_clone": true,
+  "freecad_geometry": {
+    "valid": true,
+    "shape_count": 27,
+    "invalid_shapes": [],
+    "physical_collisions": [],
+    "outside_cavity_excluding_usb": [],
+    "components_over_nfc": [],
+    "board_connected_solids": 1,
+    "reserved_space_conflicts": [],
+    "limits": "PCBA envelope study only; fixed 0.8 mm side-wall assumption; no routing, RF, FPC or DFM validation."
+  },
+  "visual_review": {
+    "cad_isometric": "checked",
+    "cad_top": "checked",
+    "plan_svg": "checked",
+    "eda_canvas": "checked"
+  },
+  "original_files_unchanged": {
+    "eda/NFC-Business-Card.eprj2": true,
+    "projects/nfc-business-card/enclosure/layout-study.FCStd": true,
+    "projects/nfc-business-card/enclosure/pcba-e6-302030.FCStd": true,
+    "projects/nfc-business-card/enclosure/pcba-layout.FCStd": true
+  }
+}

@@ -1,0 +1,533 @@
+"""Generate a PCBA envelope study and a matching annotated plan view."""
+
+from pathlib import Path
+from html import escape
+import json
+import os
+
+import FreeCAD as App
+import Part
+
+
+OUTPUT = Path(os.environ.get("NFC_CARD_LAYOUT_OUTPUT", Path(__file__).resolve().parent)).resolve()
+VARIANT = os.environ.get("NFC_CARD_LAYOUT_VARIANT", "baseline")
+if VARIANT not in ("baseline", "e6-302030", "e6-bottom-usb", "e6-84x52", "e6-83x51", "e6-84x52-detail"):
+    raise ValueError(f"Unknown layout variant: {VARIANT}")
+SAMPLE_LAYOUT = VARIANT != "baseline"
+COMPACT_DELTA = {"e6-84x52": 2, "e6-83x51": 3, "e6-84x52-detail": 2}.get(VARIANT, 0)
+DETAILED_LAYOUT = VARIANT == "e6-84x52-detail"
+CARD_WIDTH, CARD_HEIGHT = 86 - COMPACT_DELTA, 54 - COMPACT_DELTA
+BOTTOM_USB = VARIANT == "e6-bottom-usb" or bool(COMPACT_DELTA)
+MODEL_PATH = OUTPUT / "pcba-layout.FCStd"
+DOCUMENT_NAME = "NfcCardE6SampleStudy" if SAMPLE_LAYOUT else "NfcCardPcbaStudy"
+if BOTTOM_USB:
+    DOCUMENT_NAME = "NfcCardBottomUsbStudy"
+if COMPACT_DELTA:
+    DOCUMENT_NAME = f"NfcCardCompact{CARD_WIDTH}Study"
+if any(d.Name == DOCUMENT_NAME or d.FileName == str(MODEL_PATH)
+       for d in App.listDocuments().values()):
+    raise RuntimeError("Close the existing PCBA study before regenerating it.")
+if any((OUTPUT / name).exists() for name in
+       ("pcba-layout.FCStd", "pcba-layout-report.json", "pcba-layout.svg")):
+    raise FileExistsError("Use a new output directory; existing study files are never overwritten.")
+OUTPUT.mkdir(parents=True, exist_ok=True)
+
+doc = App.newDocument(DOCUMENT_NAME)
+doc.Label = "NFC 名片 · PCBA 空间研究"
+doc.Comment = "候选器件包络和设计预留；不是布线、外壳或加工文件。"
+if SAMPLE_LAYOUT:
+    doc.Label = "NFC 名片 · 六色屏与 302030 样品排布"
+if BOTTOM_USB:
+    doc.Label = "NFC 名片 · 电池靠右 / USB 下长边"
+if COMPACT_DELTA:
+    doc.Label = f"NFC 名片 · {CARD_WIDTH} × {CARD_HEIGHT} 紧凑排布研究"
+
+spec = doc.addObject("App::FeaturePython", "StudyParameters")
+spec.Label = "设计参数与边界"
+for name, value in (("CardWidth", CARD_WIDTH), ("CardHeight", CARD_HEIGHT),
+                    ("CardThickness", 5.0), ("BackWall", 0.8),
+                    ("FrontWall", 0.8), ("BoardThickness", 0.8),
+                    ("BoardGap", 0.1), ("SolderAllowance", 0.1)):
+    spec.addProperty("App::PropertyLength", name, "Envelope")
+    setattr(spec, name, value)
+spec.addProperty("App::PropertyString", "Status", "Evidence")
+spec.Status = "未完成：供货、电池、FPC、高度公差及 NFC 待验证"
+spec.addProperty("App::PropertyString", "LayoutVariant", "Evidence")
+spec.LayoutVariant = VARIANT
+if SAMPLE_LAYOUT:
+    spec.FrontWall = 0.3
+    spec.Status = "六色屏 + 302030 标称包体；薄片前盖比较方案，样品、公差及 RF 未验证"
+
+rows = []
+objects = {}
+
+
+def box(name, label, size, position, color, role, evidence):
+    obj = doc.addObject("Part::Box", name)
+    obj.Label = label
+    obj.Length, obj.Width, obj.Height = size
+    obj.Placement.Base = App.Vector(*position)
+    obj.addProperty("App::PropertyString", "Role", "Evidence")
+    obj.Role = role
+    obj.addProperty("App::PropertyString", "SourceAndLimits", "Evidence")
+    obj.SourceAndLimits = evidence
+    obj.addProperty("App::PropertyColor", "StudyColor", "Appearance")
+    obj.StudyColor = tuple(int(color[i:i + 2], 16) / 255 for i in (1, 3, 5))
+    if App.GuiUp:
+        obj.ViewObject.ShapeColor = obj.StudyColor
+        if role == "reserve":
+            obj.ViewObject.Transparency = 65
+    objects[name] = obj
+    rows.append({"name": name, "label": label, "size_mm": list(size),
+                 "position_mm": list(position), "color": color,
+                 "role": role, "evidence": evidence})
+    return obj
+
+
+base = box("BackPlane", "背壁预算面", (86, 54, 0.8), (0, 0, 0), "#CBD5E1", "reference",
+           "0.8 mm 是设计值，尚未验证打印与整件公差。")
+front = box("FrontPlane", "前壁预算面（隐藏）", (86, 54, 0.8), (0, 0, 4.2), "#CBD5E1", "reference",
+            "未开显示窗口/按钮孔；不是可制造前壳。")
+outer = box("OuterEnvelope", "86 × 54 × 5 mm", (86, 54, 5), (0, 0, 0), "#64748B", "reference",
+            "外形目标；所有坐标为设计分配。")
+for obj in (base, front, outer):
+    obj.setExpression("Length", "StudyParameters.CardWidth")
+    obj.setExpression("Width", "StudyParameters.CardHeight")
+base.setExpression("Height", "StudyParameters.BackWall")
+front.setExpression("Height", "StudyParameters.FrontWall")
+front.setExpression("Placement.Base.z", "StudyParameters.CardThickness - StudyParameters.FrontWall")
+outer.setExpression("Height", "StudyParameters.CardThickness")
+
+board_z = 0.9
+board_top = 1.7
+component_z = 1.8
+pcb = doc.addObject("Part::Feature", "BoardEnvelope")
+pcb.Label = "0.8 mm PCB · 电池缺口 / USB 槽假设"
+board_shape = Part.makeBox(CARD_WIDTH - 3, CARD_HEIGHT - 3, 0.8, App.Vector(1.5, 1.5, board_z))
+battery_cut = Part.makeBox(35, 15, 1.2, App.Vector(2.5, 0, 0.7))
+if SAMPLE_LAYOUT:
+    battery_cut = Part.makeBox(33, 23.5, 1.2, App.Vector(43.5, 0, 0.7))
+usb_cut = Part.makeBox(8, 9.6, 1.2, App.Vector(79, 6.65, 0.7))
+if BOTTOM_USB:
+    battery_cut = Part.makeBox(35, 22.5, 1.2, App.Vector(51.5 - COMPACT_DELTA, 0, 0.7))
+    usb_cut = Part.makeBox(9.24, 7.3, 1.2, App.Vector(27.38, 0, 0.7))
+pcb.Shape = board_shape.cut(battery_cut).cut(usb_cut)
+pcb.addProperty("App::PropertyString", "SourceAndLimits", "Evidence")
+pcb.SourceAndLimits = "轮廓为结构假设；USB 焊盘/锚孔、圆角、工艺边与板厂 DFM 尚未完成。"
+objects[pcb.Name] = pcb
+pcb.addProperty("App::PropertyColor", "StudyColor", "Appearance")
+pcb.StudyColor = (0.69, 0.84, 0.79)
+if App.GuiUp:
+    pcb.ViewObject.ShapeColor = pcb.StudyColor
+
+box("Module", "U1 · MDBT50Q-P1MV2", (15.7, 10.7, 2.2), (40, 3, component_z), "#B6CFE7", "component",
+    "Raytac Rev L；采用三个方向 +0.20 mm 图纸上界；不含焊接抬高。当前商城缺货。")
+box("Display", "DS1 · GDEY0154D67 玻璃", (37.52, 32, 1.1), (3, 18, 2.9), "#E3E8EF", "component",
+    "旧版图纸第 7 页尺寸上界；平面旋转使尾部朝右，支撑、前窗及 FPC 未定型。")
+box("BatteryTarget", "BT1 · 完整包体采购目标", (34, 12, 2.6), (3, 3, 1.0), "#F2CA8B", "component",
+    "设计占位 34 × 12 × 2.6 mm，不是 GM201030-PCB 的交付尺寸；不含未知引线和鼓胀量。")
+box("UsbBody", "J1 · USB4500 主体", (6.5, 8.94, 3.16), (79.5, 7, 0.9), "#C4CDD8", "component",
+    "GCT A1 第 1 页名义主体；0.8 mm 沉板，主体上方距 PCB 顶面约 2.36 mm。侧翼/焊脚另作预留。")
+box("UsbAssemblyReserve", "USB 焊脚与装配区", (8, 11.64, 3.56), (78, 5.65, 0.7), "#94A3B8", "reserve",
+    "设计预留；锚脚、焊料、开口和厚度公差需要详细机械核对。")
+box("FpcConnector", "J2 · FH12-24S", (6.8, 16.5, 2.2), (53, 26, component_z), "#A8C6B2", "component",
+    "高度按图纸 2.0±0.2；XY 放大网页名义包络作设计预留，不代替完整焊盘图。")
+box("FpcRouteReserve", "屏幕 FPC 路径与插入预留", (15.48, 16.5, 1.8), (40.52, 26, 2.2), "#DDD0EA", "reserve",
+    "尾部延伸 14.30±0.30 mm；这里只分配路径，重叠连接器为插入意图，不代表已完成折弯。")
+box("EpdCircuitReserve", "屏幕升压器件区", (18, 8, 1.8), (41, 17, component_z), "#C9BAE1", "reserve",
+    "18 × 8 mm 面积及 1.8 mm 高度为分配值；电感、MOS、二极管和电容完整布局待定。")
+box("NfcReserve", "NFC 专用区域", (23, 25, 0.2), (61, 25, board_top), "#C1E3DE", "reserve",
+    "PCB 基材允许存在；区域内不布其他金属/地平面，线圈匝数、引出与匹配未设计。")
+box("BleReserve", "模块 2.4 GHz 天线预留", (10, 13.5, 0.2), (52, 1.5, board_top), "#DBEAFE", "reserve",
+    "随模块旋转到朝右边；示意区并非完整原厂铜净空，具体位置和范围需对照封装图。")
+box("Charger", "U2 · BQ25186", (2.2, 2, 0.8), (63, 5, component_z), "#E6C9CE", "component",
+    "TI WSON 外形；散热焊盘和去耦未建模。")
+box("Regulator", "U3 · TPS7A0233", (3.1, 3, 1.45), (67, 5, component_z), "#E6C9CE", "component",
+    "SOT-23-5 高度上界；XY 为含引脚包络预留，非焊盘。")
+box("LoadSwitchReserve", "U4 · TPS22919 预留", (3, 3, 1.2), (72, 5, component_z), "#E6C9CE", "reserve",
+    "SC70 候选；包络为设计分配，尚未导入精确封装。")
+box("PowerReserve", "电源与保护外围区", (15, 12, 0.2), (62, 2, board_top), "#F5DADF", "reserve",
+    "包含 U2/U3/U4 及未建模阻容/保护器件；面积待 PCB 布局复核。")
+box("SwdReserve", "SWD 探针操作区", (14, 5, 0.2), (64, 17, board_top), "#E2E8F0", "reserve",
+    "五个测试点和探针入口的面积分配，未固定间距或治具。")
+for index, x in enumerate((41.5, 48, 54.5), 1):
+    box(f"Button{index}", f"SW{index} · SKQGABE010", (5.2, 5.2, 1.5), (x, 44, component_z),
+        "#ECC2A7", "component", "原厂名义主体；不包含焊盘或键帽。")
+    box(f"ButtonTravel{index}", f"按键 {index} 键帽与行程预留", (5.8, 5.8, 1.65), (x - 0.3, 43.7, 3.3),
+        "#F2DDCD", "reserve", "最高点 4.95 mm 是设计目标；需开孔、限位及机械行程核对。")
+
+if SAMPLE_LAYOUT:
+    # Reuse the study objects while preserving the baseline output files.
+    changes = {
+        "FrontPlane": ((86, 54, 0.3), (0, 0, 4.7), "0.3 mm 薄片前盖（隐藏）",
+                       "比较方案；材料、粘接台阶、按键孔和强度未验证。"),
+        "Module": (None, (3, 3, component_z), None, None),
+        "Display": ((37.42, 31.9, 1.0), (3, 20.5, 3.6), "DS1 · GDEH0154E01 六色屏",
+                    "原厂 v1.0 第 5 页尺寸上界；尾部朝右；不含保护膜、固定和未知装配偏差。"),
+        "BatteryTarget": ((32, 20, 3), (44, 3, 1.0), "BT1 · 302030 / 150 mAh 标称",
+                          "商家标称包体，非实测或最大尺寸；另需保护板/胶带/焊点公差和尺寸增长预留。"),
+        "FpcConnector": (None, (53, 28.2, component_z), "J2 · 上接触 FPC 座待选",
+                         "6.8 × 16.5 × 2.2 mm 是采购/装配目标，非已选连接器；24 pin / 0.5 mm，方向待核对。"),
+        "FpcRouteReserve": (None, (40.42, 28.2, 2.2), None,
+                            "与六色屏尾部中心对齐的路径目标；14.3±0.3 mm 尾长，Z 向折弯与插入尚未设计。"),
+        "EpdCircuitReserve": ((19.5, 7.5, 1.8), (41, 45, component_z), "六色屏升压器件区",
+                              "146.25 mm² 面积分配，未证明 DESPI-E01 所需外围及走线全部放得下。"),
+        "BleReserve": (None, (15, 1.5, board_top), None, None),
+        "Charger": (None, (27, 11, component_z), None, None),
+        "Regulator": (None, (31, 11, component_z), None, None),
+        "LoadSwitchReserve": (None, (36, 11, component_z), None, None),
+        "PowerReserve": (None, (25.5, 8.2, board_top), None, None),
+        "SwdReserve": (None, (4, 15, board_top), None, None),
+    }
+    for index, x in enumerate((25.5, 31.7, 37.9), 1):
+        changes[f"Button{index}"] = (None, (x, 2, component_z), None, None)
+        changes[f"ButtonTravel{index}"] = (None, (x - 0.3, 1.7, 3.3), None, None)
+    if BOTTOM_USB:
+        changes.update({
+            "BatteryTarget": ((32, 20, 3), (52, 2, 1.0), "BT1 · 302030 靠右横放",
+                              "标称包体；与 0.8 mm 假设右壁/底壁各留 1.2 mm，不是紧压软包或已确认增长余量。"),
+            "UsbBody": ((8.94, 6.5, 3.16), (27.53, 0.8, 0.9), "J1 · USB4500 下长边",
+                        "沿用沉板候选，旋转使插口朝下、信号焊盘朝板内；端面内缩 0.8 mm，插头/壁孔未验证。"),
+            "UsbAssemblyReserve": ((11.64, 8, 3.56), (26.18, 0.8, 0.7), None,
+                                   "旋转后的焊脚与装配预算；尚未包含真实插头包胶外形。"),
+            "Charger": (None, (27, 12, component_z), None, None),
+            "Regulator": (None, (33.45, 11.5, component_z), None, None),
+            "LoadSwitchReserve": (None, (38, 12, component_z), None, None),
+            "PowerReserve": ((16, 12, 0.2), (25.5, 9.5, board_top), None, None),
+        })
+        for index, y in enumerate((5, 11.3, 17.6), 1):
+            changes[f"Button{index}"] = (None, (43.9, y - 2.6, component_z), None,
+                                        "竖排按键；EDA 封装拟为 0°，约 8 × 5.8 mm 焊盘包络需另核。")
+            changes[f"ButtonTravel{index}"] = (None, (43.6, y - 2.9, 3.3), None, None)
+    if COMPACT_DELTA:
+        changes.update({
+            "BackPlane": ((CARD_WIDTH, CARD_HEIGHT, 0.8), (0, 0, 0), None, None),
+            "FrontPlane": ((CARD_WIDTH, CARD_HEIGHT, 0.3), (0, 0, 4.7), None, None),
+            "OuterEnvelope": ((CARD_WIDTH, CARD_HEIGHT, 5), (0, 0, 0),
+                              f"{CARD_WIDTH} × {CARD_HEIGHT} × 5 mm · 含外壳边缘", None),
+            "NfcReserve": ((24 - COMPACT_DELTA, 28 - COMPACT_DELTA, 0.2), (60, 24, board_top),
+                           "NFC 可调轮廓预留", "尺寸只用于排布比较；不是最小天线面积，尚未设计铜线、匹配或验证 RF。"),
+        })
+        for name, position in {
+            "Display": (2, 20.5 - COMPACT_DELTA, 3.6),
+            "FpcConnector": (52, 28.2 - COMPACT_DELTA, component_z),
+            "FpcRouteReserve": (39.42, 28.2 - COMPACT_DELTA, 2.2),
+            "EpdCircuitReserve": (40, 45 - COMPACT_DELTA, component_z),
+            "BatteryTarget": (52 - COMPACT_DELTA, 2, 1.0),
+        }.items():
+            size, _, label, evidence = changes[name]
+            changes[name] = (size, position, label, evidence)
+        if COMPACT_DELTA == 3:
+            changes["PowerReserve"] = ((15, 12, 0.2), (25.5, 9.5, board_top), None,
+                                       "比下长边版本少 12 mm²；完整电源外围与布线尚未放入。")
+            changes["LoadSwitchReserve"] = (None, (37, 12, component_z), None, None)
+        for index, y in enumerate((5, 11.3, 17.6), 1):
+            changes[f"Button{index}"] = (None, (43.9 - COMPACT_DELTA, y - 2.6, component_z), None, None)
+            changes[f"ButtonTravel{index}"] = (None, (43.6 - COMPACT_DELTA, y - 2.9, 3.3), None, None)
+    if DETAILED_LAYOUT:
+        changes.update({
+            "FpcConnector": ((6.4, 16.7, 2.2), (48, 25.65, component_z), "J2 · FH12A 上接触候选",
+                             "原厂本体尺寸上界；EDA 原点 (53.24, 34)，-90°。插入深度约 5 mm，尾部接触长与封装焊脚仍待复核。"),
+            "FpcRouteReserve": ((14.48, 16.5, 1.8), (39.42, 26.2, 2.2), None,
+                                "向左靠近插座以预留插入长度；屏幕尾长 14.3±0.3，Z 向折弯、触点及余长尚未验证。"),
+            "EpdCircuitReserve": ((19.5, 7.2, 1.8), (40, 43.3, component_z), None,
+                                  "为 FPC 锚脚让出 0.3 mm；140.4 mm² 仍只是待放置完整外围的空间分配。"),
+            "LoadSwitchReserve": ((2.5, 2.2, 1.2), (37.75, 12.4, component_z), "U4 · TPS22919 候选",
+                                  "XY 覆盖库焊脚；1.2 mm 是高度预算，需继续核对原厂封装与完整外围。"),
+        })
+    for row in rows:
+        if row["name"] not in changes:
+            continue
+        obj = objects[row["name"]]
+        size, position, label, evidence = changes[row["name"]]
+        if size is not None:
+            obj.Length, obj.Width, obj.Height = size
+            row["size_mm"] = list(size)
+        obj.Placement.Base = App.Vector(*position)
+        row["position_mm"] = list(position)
+        if label is not None:
+            obj.Label = row["label"] = label
+        if evidence is not None:
+            obj.SourceAndLimits = row["evidence"] = evidence
+    box("BatteryLeadReserve", "电池出线/接点预留",
+        (3.3, 3, 1.2) if BOTTOM_USB else (3.3, 7, 1.2),
+        (48.7 - COMPACT_DELTA, 21, 1.8) if BOTTOM_USB else (40.7, 9, 1.8),
+        "#EDC88D", "reserve",
+        "假设引线可从左侧绕至左上接点；完整出线位置、线长、弯曲与固定待实物确认。" if BOTTOM_USB else
+        "假设从电池左短边引出，完整出线图未取得；引线在 PCB 上方经过。")
+    if BOTTOM_USB:
+        box("UsbCircuitReserve", "CC 与 USB ESD 预留", (14, 2.4, 0.2), (25.5, 8.8, board_top),
+            "#F5DADF", "reserve", "USB 焊盘后方连续板材上的初步分配；器件、布线与地回流尚未完成。")
+    for name, allowed in {
+        "FpcRouteReserve": ["FpcConnector"], "EpdCircuitReserve": [],
+        "BatteryLeadReserve": ["BatteryTarget"], "SwdReserve": [],
+        "BleReserve": ["Module"], "PowerReserve": ["Charger", "Regulator"],
+    }.items():
+        obj = objects[name]
+        obj.addProperty("App::PropertyBool", "CheckPhysicalClearance", "Evidence")
+        obj.CheckPhysicalClearance = True
+        obj.addProperty("App::PropertyStringList", "AllowedComponents", "Evidence")
+        obj.AllowedComponents = allowed
+        obj.addProperty("App::PropertyBool", "KeepOutsideNfc", "Evidence")
+        obj.KeepOutsideNfc = True
+    if BOTTOM_USB:
+        for name, allowed in {"UsbAssemblyReserve": ["UsbBody"], "UsbCircuitReserve": []}.items():
+            obj = objects[name]
+            obj.addProperty("App::PropertyBool", "CheckPhysicalClearance", "Evidence")
+            obj.CheckPhysicalClearance = True
+            obj.addProperty("App::PropertyStringList", "AllowedComponents", "Evidence")
+            obj.AllowedComponents = allowed
+            obj.addProperty("App::PropertyBool", "KeepOutsideNfc", "Evidence")
+            obj.KeepOutsideNfc = True
+
+if DETAILED_LAYOUT:
+    for row in rows:
+        if row["name"] == "LoadSwitchReserve":
+            row["role"] = objects[row["name"]].Role = "component"
+        if row["name"] == "BatteryLeadReserve":
+            row["size_mm"], row["position_mm"] = [5.8, 3.6, 1.2], [44.8, 21, 1.8]
+            obj = objects[row["name"]]
+            obj.Length, obj.Width, obj.Height = row["size_mm"]
+            obj.Placement.Base = App.Vector(*row["position_mm"])
+    box("UsbEsd", "U5 · TPD2EUSB30 候选", (1.3, 1, 0.6), (33.15, 8.9, component_z),
+        "#E6C9CE", "component", "XY 覆盖库焊盘；高度为 0.6 mm 预算。只评估 USB 数据线保护，未连接原理图。")
+    swd_names = []
+    for index, net in enumerate(("GND", "VTref", "SWDCLK", "SWDIO", "NRESET"), 1):
+        name = f"SwdPad{index}"
+        swd_names.append(name)
+        box(name, f"TP{index} · {net}", (1.2, 1.2, 0.04), (4.4 + 2.54 * (index - 1), 16.2, board_top),
+            "#D8AD57", "component", "EDA 圆形裸焊盘的方形包络；2.54 mm 间距，不增加排针高度；探针治具未设计。")
+    battery_names = []
+    for name, label, x, diameter in (("BatteryPositivePad", "BP", 49.8, 1.5),
+                                    ("BatteryNegativePad", "BN", 47.7, 1.5), ("NtcPad", "NTC", 45.6, 1.2)):
+        battery_names.append(name)
+        box(name, label, (diameter, diameter, 0.04), (x - diameter / 2, 23.7 - diameter / 2, board_top),
+            "#D8AD57", "component", "圆焊盘的方形包络；手焊引线、应力释放及贴近电池的温度传感器尚未建模。")
+    objects["SwdReserve"].AllowedComponents = swd_names
+    objects["BatteryLeadReserve"].AllowedComponents = ["BatteryTarget"] + battery_names
+    objects["PowerReserve"].AllowedComponents = ["Charger", "Regulator", "LoadSwitchReserve", "UsbEsd"]
+    objects["UsbCircuitReserve"].AllowedComponents = ["UsbEsd"]
+
+doc.recompute()
+physical = [objects[r["name"]] for r in rows if r["role"] == "component"] + [pcb]
+assert len(pcb.Shape.Solids) == 1, "The assumed board outline must stay connected."
+collisions = []
+for i, first in enumerate(physical):
+    assert first.Shape.isValid(), first.Name
+    for second in physical[i + 1:]:
+        volume = first.Shape.common(second.Shape).Volume
+        if volume > 1e-6:
+            collisions.append({"objects": [first.Name, second.Name], "volume_mm3": round(volume, 6)})
+inner = Part.makeBox(CARD_WIDTH - 1.6, CARD_HEIGHT - 1.6, float(spec.CardThickness - spec.BackWall - spec.FrontWall),
+                     App.Vector(0.8, 0.8, 0.8))
+outside = [obj.Name for obj in physical if obj.Name != "UsbBody" and obj.Shape.cut(inner).Volume > 1e-6]
+nfc_conflicts = []
+for obj in physical:
+    if obj.Name == "BoardEnvelope":
+        continue
+    a, b = obj.Shape.BoundBox, objects["NfcReserve"].Shape.BoundBox
+    if min(a.XMax, b.XMax) > max(a.XMin, b.XMin) and min(a.YMax, b.YMax) > max(a.YMin, b.YMin):
+        nfc_conflicts.append(obj.Name)
+
+stack_inputs = {
+    "module_full_print_nominal": [0.8, 0.1, 0.8, 0.1, 2.0, 0.1, 0.8],
+    "module_full_print_planning": [0.9, 0.15, 0.9, 0.1, 2.2, 0.15, 0.9],
+    "usb_full_print_nominal": [0.8, 0.1, 3.16, 0.1, 0.8],
+    "usb_full_print_planning": [0.9, 0.15, 3.36, 0.15, 0.9],
+}
+stacks = {key: round(sum(values), 3) for key, values in stack_inputs.items()}
+for part in ("module", "usb"):
+    stacks[f"{part}_thin_cover_nominal"] = round(stacks[f"{part}_full_print_nominal"] - 0.8 + 0.3, 3)
+    stacks[f"{part}_thin_cover_planning"] = round(stacks[f"{part}_full_print_planning"] - 0.9 + 0.35, 3)
+if SAMPLE_LAYOUT:
+    stack_inputs["battery_full_print_nominal"] = [0.8, 0.2, 3.0, 0.1, 0.8]
+    stack_inputs["battery_thin_cover_nominal"] = [0.8, 0.2, 3.0, 0.1, 0.3]
+    stack_inputs["battery_thin_cover_planning_3p4"] = [0.9, 0.15, 3.4, 0.15, 0.35]
+    for key in ("battery_full_print_nominal", "battery_thin_cover_nominal", "battery_thin_cover_planning_3p4"):
+        stacks[key] = round(sum(stack_inputs[key]), 3)
+report = {
+    "status": "CANDIDATE_LAYOUT_NOT_MANUFACTURING_READY",
+    "freecad_version": App.Version()[:3], "card_mm": [CARD_WIDTH, CARD_HEIGHT, 5],
+    "layout_variant": VARIANT,
+    "board_connected_solids": len(pcb.Shape.Solids),
+    "modeled_physical_collisions": collisions,
+    "outside_assumed_cavity_excluding_usb_side_opening": outside,
+    "physical_components_over_nfc_reserve": nfc_conflicts,
+    "stack_inputs_mm": stack_inputs, "stack_totals_mm": stacks,
+    "components": rows,
+    "limitations": [
+        "公差规划是工程假设，不是供应商交付上界；没有完成统计公差分析。",
+        "全打印 USB 名义叠层 4.96 mm，公差规划 5.46 mm；薄片方案仍待公差和强度验证。",
+        "无盒体碰撞不等于完成焊盘、布线、FPC 折弯、RF、固定件或实际装配检查。",
+        ("USB 插口朝下长边，端面 y=0.8 mm；外壳需开孔，未验证实际插头插入深度。" if BOTTOM_USB else
+         "USB 从侧壁开口伸出到 x=86；该处预算侧壁应开孔，尚未建模可制造外壳。"),
+        "电池、键帽、线路区域为设计目标，尚无完整实物尺寸。",
+        "PCB 与多数器件坐标为生成时固定值；改参数后需重排与重新核查。",
+    ],
+}
+if SAMPLE_LAYOUT:
+    report["battery_thickness_sensitivity_mm"] = [
+        {"complete_pack": t, "thin_cover_stack": round(1.55 + t, 3)} for t in (3.0, 3.2, 3.4, 3.5, 4.0)]
+    report["battery_pack_thickness_limit_under_planning_mm"] = 3.45
+    report["board_web_between_battery_and_usb_cut_mm"] = 14.88 - COMPACT_DELTA if BOTTOM_USB else 2.5
+    if BOTTOM_USB:
+        report["layout_review"] = {
+            "usb_eda_origin_mm_deg": [32, 5.475, 0],
+            "button_eda_origins_mm_deg": [[46.5 - COMPACT_DELTA, y, 0] for y in (5, 11.3, 17.6)],
+            "battery_to_assumed_inner_wall_mm": {"right": 1.2, "bottom": 1.2},
+            "battery_to_pcb_cut_mm": {"left": 0.5, "top": 0.5},
+            "battery_cut_to_nfc_reserve_mm": 1.5 if COMPACT_DELTA else 2.5,
+            "notch_to_notch_spacing_is_not_free_routing_width": True,
+            "eda_status": ("Offline placement proposal only; EDA projects unchanged." if COMPACT_DELTA else
+                           "Independent unrouted Bottom-USB project; existing routed PCB remains unchanged."),
+        }
+    report["limitations"] += [
+        "薄片前盖是结构比较方案；3.4 mm 电池厚度是敏感性假设，非卖家公差或鼓胀保证。",
+        (f"USB 槽与电池缺口之间相距 {14.88 - COMPACT_DELTA:.2f} mm，其中还需放置按键与外围，不能全算作自由布线宽度。" if BOTTOM_USB else
+         "电池与 USB 槽间 PCB 最窄名义桥宽 2.5 mm；锚孔、焊盘、布线及插拔承力未验证。"),
+        "六色屏上边缘距 0.8 mm 假设侧壁 0.8 mm；FPC 座仍为目标包络。",
+        "预留区在保存重开后另做几何检查；通过不代表已经放入实际器件与导线。",
+    ]
+if COMPACT_DELTA:
+    report["card_envelope_comparison"] = {
+        "bank_card_nominal_xy_mm": [85.60, 53.98],
+        "inset_per_side_mm": [round((85.60 - CARD_WIDTH) / 2, 2), round((53.98 - CARD_HEIGHT) / 2, 2)],
+        "nfc_reserve_area_mm2": (24 - COMPACT_DELTA) * (28 - COMPACT_DELTA),
+        "nfc_area_is_not_rf_equivalence": True,
+        "side_wall_assumption_mm": 0.8,
+        "thickness_reduced": False,
+    }
+    report["limitations"] += [
+        "外形含假设壳壁；矩形包络未包含真实圆角、侧缘倒角、粘接、卡扣和打印偏差。",
+        "紧凑版只生成机械比较与离线封装建议，未改动 EDA 工程。",
+    ]
+if DETAILED_LAYOUT:
+    report["layout_review"]["eda_status"] = "Independent 84x52 PCB placement; J2/U4/U5 remain PCB-only candidates, not wired."
+    report["limitations"] = [item for item in report["limitations"] if "未改动 EDA" not in item]
+    report["limitations"] += [
+        "FH12A 翻盖打开高度约 3.6 mm，叠加 PCB/焊接后约 5.4 mm；需在装前盖前插接排线。",
+        "FPC 库锚脚外跨约 17.6 mm，原厂推荐约 17.1 mm；尚未批准该封装用于制造。",
+        "屏幕触点长 3.2±0.2 mm 与插座推荐最小 3.3 mm 存在规格差异，需确认兼容性或换座。",
+        "新增焊盘不代表 NTC 传感器、完整六色屏外围、走线或手焊线材空间已经完成。",
+    ]
+assert not collisions and not outside and not nfc_conflicts, json.dumps(report, ensure_ascii=False)
+
+if App.GuiUp:
+    import FreeCADGui as Gui
+    front.ViewObject.Visibility = False
+    outer.ViewObject.DisplayMode = "Wireframe"
+    Gui.activeDocument().activeView().viewAxonometric()
+    Gui.activeDocument().activeView().fitAll()
+doc.saveAs(str(MODEL_PATH))
+(OUTPUT / "pcba-layout-report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n")
+
+# The plan view is generated from the same dimensions used by FreeCAD.
+board_top_face = next(face for face in pcb.Shape.Faces
+                      if abs(face.CenterOfMass.z - board_top) < 1e-6
+                      and face.normalAt(0, 0).z > 0.99)
+board_points = " ".join(f"{44 + v.Point.x * 8:.2f},{140 + (CARD_HEIGHT - v.Point.y) * 8:.2f}"
+                        for v in board_top_face.OuterWire.OrderedVertexes)
+svg_height = 1000 if SAMPLE_LAYOUT else 900
+title = "电子名片 · 六色屏 + 302030 样品排布" if SAMPLE_LAYOUT else "电子名片 · PCBA 空间研究"
+if BOTTOM_USB:
+    title = "电子名片 · 电池靠右 / USB 下长边"
+if COMPACT_DELTA:
+    title = f"电子名片 · {CARD_WIDTH} × {CARD_HEIGHT} 紧凑排布研究"
+view_label = "正面俯视　屏幕 FPC 朝右，USB 从下方长边插入" if BOTTOM_USB else "正面俯视　屏幕 FPC 朝右，USB 从右侧插入"
+svg = [f'<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="{svg_height}" viewBox="0 0 1200 {svg_height}">',
+       f'<rect width="1200" height="{svg_height}" fill="#F7F9FC"/>',
+       '<style>text{font-family:Arial,"PingFang SC","Microsoft YaHei",sans-serif;fill:#172B41}.muted{fill:#52657B}.small{font-size:14px}</style>',
+       f'<text x="44" y="52" font-size="28" font-weight="bold">{title}</text>',
+       f'<text x="44" y="82" font-size="15" class="muted">{CARD_WIDTH} × {CARD_HEIGHT} × 5 mm 目标 · {"2026-09-21" if DETAILED_LAYOUT else "2026-09-20"} · 候选器件与设计预留，尚不可制造</text>',
+       f'<text x="44" y="120" font-size="17" font-weight="bold">{view_label}</text>',
+       f'<rect x="44" y="140" width="{CARD_WIDTH * 8}" height="{CARD_HEIGHT * 8}" rx="15" fill="#E5EAF0" stroke="#64748B" stroke-width="2"/>',
+       f'<polygon points="{board_points}" fill="#C8E1D7" stroke="#8CAB9E" opacity="0.65"/>']
+labels = {"Module": ["U1 主控模块", "缺货待解决"], "Display": ["DS1 墨水屏", "玻璃 37.52 × 32.0"],
+          "BatteryTarget": ["BT1 完整包体目标", "34 × 12 × 2.6 · 非实测"], "UsbBody": ["J1"],
+          "FpcConnector": ["J2"], "EpdCircuitReserve": ["屏幕升压预留"], "NfcReserve": ["NFC 专用区域", "23 × 25 · 待设计调谐"],
+          "SwdReserve": ["SWD"], "BleReserve": ["2.4G"], "Button1": ["←"], "Button2": ["→"], "Button3": ["OK"]}
+if SAMPLE_LAYOUT:
+    labels.update(Display=["GDEH0154E01 · 六色", "屏体上界 37.42 × 31.90"],
+                  BatteryTarget=["302030 · 150 mAh", "32 × 20 × 3 · 商家标称"],
+                  EpdCircuitReserve=["六色屏升压预留"])
+if COMPACT_DELTA:
+    labels["NfcReserve"] = ["NFC 轮廓预留", f"{24 - COMPACT_DELTA} × {28 - COMPACT_DELTA} · 待调谐"]
+for row in rows:
+    if row["role"] == "reference":
+        continue
+    x, y, z = row["position_mm"]
+    w, h, depth = row["size_mm"]
+    px, py = 44 + x * 8, 140 + (CARD_HEIGHT - y - h) * 8
+    dash = ' stroke-dasharray="5 4" fill-opacity="0.24"' if row["role"] == "reserve" else ''
+    svg.append(f'<rect x="{px:.2f}" y="{py:.2f}" width="{w*8:.2f}" height="{h*8:.2f}" rx="3" fill="{row["color"]}" stroke="#61738A"{dash}/>')
+    for i, line in enumerate(labels.get(row["name"], [])):
+        svg.append(f'<text x="{px+w*4:.2f}" y="{py+h*4+i*18:.2f}" text-anchor="middle" font-size="13">{escape(line)}</text>')
+if BOTTOM_USB:
+    usb_arrow_y = 146 + CARD_HEIGHT * 8
+    svg.extend([f'<path d="M300 {usb_arrow_y + 22}V{usb_arrow_y}m-5 6 5-6 5 6" fill="none" stroke="#315F85" stroke-width="2"/>',
+                f'<text x="318" y="{usb_arrow_y + 16}" font-size="14">USB 插入方向</text>'])
+side_lines = [
+    "实线：器件 / 电池标称 / 插座目标", "虚线：路径、净空、操作与电路预留",
+    "J1 · 沉板 USB-C", "USB4500；USB 2.0 数据 + 充电", "主体高 3.16 mm；板边开槽待 DFM",
+    "J2 · 上接触 FPC 座待选", "6.8 × 16.5 × 2.2 mm 为目标包络", "紫色区是路径预留，尚未设计折弯",
+    "电池位于 PCB 缺口中", "移到右下；出线方向待实物确认", "与 USB 槽间桥宽 2.5 mm，待 DFM",
+] if SAMPLE_LAYOUT else [
+    "实线：器件简化包络 / 电池目标", "虚线：路径、净空、操作与电路预留",
+    "J1 · 沉板 USB-C", "USB4500；USB 2.0 数据 + 充电", "主体高 3.16 mm；板边开槽待 DFM",
+    "J2 · 屏幕 FPC 座", "FH12；底接触，方向仍须核对", "紫色区表示路径，不是已折好的排线",
+    "需要继续解决", "主控供货 / 屏幕新版规格 / 电池包体", "NFC 铜净空与匹配 / 键帽与固定结构",
+]
+if BOTTOM_USB:
+    side_lines = [
+        "实线：器件包络；虚线：设计预留", "独立 EDA 预布局，旧版试布线保留",
+        "USB 从下长边插入", "槽后方为连续板材，靠近主控/充电器", "取消原来电池右侧的 2.2 mm 窄支臂",
+        "电池横放，靠右但留间隙", "距假设右壁/底壁各 1.2 mm", "厚度、公差与引线仍待样品确认",
+        "三个按键移到电池左侧竖排", "屏幕 / FPC / NFC 大位置保留", "先核真实焊盘，再重新布 USB 和控制线",
+    ]
+if COMPACT_DELTA:
+    side_lines = [
+        "外形含 0.8 mm 假设侧壁", "CAD 与离线封装建议；EDA 尚未迁移",
+        "屏幕与 FPC 整组内移", "保持相对位置和路径包络", "实际排线折弯、插接和支撑仍待确认",
+        "电池与三键一起左移", "电池距假设右壁/底壁各 1.2 mm", "保持平铺与 PCB 缺口，不增加叠层",
+        "NFC 预留区改成长方形", "区域面积不等于 RF 性能", "线圈、匹配和完整装机调谐待完成",
+    ]
+if DETAILED_LAYOUT:
+    side_lines = [
+        "外形含假设侧壁，优先保持薄度", "独立 EDA 预布局；旧模型和工程保留",
+        "J2 上接触座向屏幕靠近", "本体上界 6.4 × 16.7 × 2.2 mm", "插入、接触长度及库锚脚仍须复核",
+        "先插排线，再装前盖", "翻盖打开后的局部高度约 5.4 mm", "闭合与打开空间分开检查",
+        "已加入 U4/U5 候选与平面焊盘", "SWD 5 点；电池正负与 NTC 3 点", "完整屏幕外围、RF 与布线仍未完成",
+    ]
+for line, y in zip(side_lines, (191, 218, 260, 286, 310, 352, 378, 402, 444, 470, 494)):
+    svg.append(f'<text x="755" y="{y}" font-size="14">{escape(line)}</text>')
+svg.extend([
+    '<text x="755" y="157" font-size="19" font-weight="bold">这版增加了什么</text>',
+    '<text x="755" y="536" font-size="14" class="muted">几何检查只覆盖简化实体。</text>',
+    '<text x="44" y="618" font-size="20" font-weight="bold">局部厚度比较 · 5 mm 仍是待验证目标</text>',
+    '<text x="44" y="648" font-size="14" class="muted">规划值加入壁厚、连接器高度及间隙分配；不是供应商保证上界，也不是整机厚度测量。</text>',
+])
+bars = [
+    ("全打印壳 · 名义", stacks["usb_full_print_nominal"], "#8BB8A6"),
+    ("全打印壳 · 公差规划", stacks["usb_full_print_planning"], "#D9927B"),
+    ("薄片前盖 · 公差规划", stacks["usb_thin_cover_planning"], "#94B8D5"),
+]
+if SAMPLE_LAYOUT:
+    bars = [
+        ("USB · 全打印规划", stacks["usb_full_print_planning"], "#D9927B"),
+        ("USB · 薄片前盖规划", stacks["usb_thin_cover_planning"], "#94B8D5"),
+        ("3 mm 电池 · 薄片名义", stacks["battery_thin_cover_nominal"], "#8BB8A6"),
+        ("3.4 mm 电池 · 假设规划", stacks["battery_thin_cover_planning_3p4"], "#D7B77C"),
+    ]
+for i, (label, value, color) in enumerate(bars):
+    y = 680 + i * 54
+    svg.append(f'<text x="44" y="{y+21}" font-size="15">{label}</text>')
+    svg.append(f'<rect x="245" y="{y}" width="{value*130:.1f}" height="30" rx="4" fill="{color}"/>')
+    svg.append(f'<text x="1030" y="{y+21}" font-size="16">{value:.2f} mm</text>')
+bar_bottom = 680 + len(bars) * 54
+svg.extend([f'<line x1="895" y1="668" x2="895" y2="{bar_bottom}" stroke="#AD403D" stroke-width="2" stroke-dasharray="6 5"/>',
+            f'<text x="881" y="{bar_bottom+25}" font-size="14" fill="#AD403D">5.00 mm 目标</text>',
+            f'<text x="44" y="{svg_height-22}" font-size="13" class="muted">下一步：量电池完整尺寸与增长预留、验证屏幕；再做焊盘、布线、FPC 和机械公差设计。</text>', '</svg>'])
+(OUTPUT / "pcba-layout.svg").write_text("\n".join(svg) + "\n")
+print(json.dumps({"model": str(MODEL_PATH), "collisions": collisions,
+                  "outside": outside, "nfc_conflicts": nfc_conflicts,
+                  "stack_totals_mm": stacks}, ensure_ascii=False, indent=2))

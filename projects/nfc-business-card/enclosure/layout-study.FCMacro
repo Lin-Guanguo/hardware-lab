@@ -2,12 +2,13 @@
 
 from pathlib import Path
 import json
+import os
 
 import FreeCAD as App
 import Part
 
 
-OUTPUT = Path(__file__).resolve().parent
+OUTPUT = Path(os.environ.get("NFC_CARD_LAYOUT_OUTPUT", Path(__file__).resolve().parent)).resolve()
 MODEL_PATH = OUTPUT / "layout-study.FCStd"
 DOCUMENT_NAME = "NfcCardLayoutStudy"
 
@@ -16,6 +17,9 @@ if any(
     for opened in App.listDocuments().values()
 ):
     raise RuntimeError("Close the existing layout study before regenerating it.")
+if any((OUTPUT / name).exists() for name in ("layout-study.FCStd", "layout-study-report.json")):
+    raise FileExistsError("Use a new output directory; existing study files are never overwritten.")
+OUTPUT.mkdir(parents=True, exist_ok=True)
 
 doc = App.newDocument(DOCUMENT_NAME)
 doc.Label = "NFC 名片 · 包络研究（非制造图）"

@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-21",
+  "source": "https://member.jlc.com/portal/server_guide_4110.html",
+  "source_updated": "2026-08-15 16:12",
+  "minimum_cnc_copper_clearance_mm": 0.2,
+  "native_drc_total": 58,
+  "j1_outline_alerts": 24,
+  "j1_min_clearance_mm": 0.20003769999999987,
+  "j1_max_clearance_mm": 0.20005294000000112,
+  "j1_meets_published_nominal_minimum": true,
+  "configuration_write_succeeded": false,
+  "configuration_unchanged_verified": true,
+  "manufacturing_ready": false
+}

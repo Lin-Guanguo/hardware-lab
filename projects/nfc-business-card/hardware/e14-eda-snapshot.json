@@ -1,0 +1,1014 @@
+{
+  "components": [
+    {
+      "ref": "C1",
+      "name": "2.2uF 16V",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "acc4e864cc17248a",
+        "name": "C0603"
+      },
+      "x": 1950,
+      "y": 600,
+      "rotation": 0
+    },
+    {
+      "ref": "C2",
+      "name": "10uF 10V",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "acc4e864cc17248a",
+        "name": "C0603"
+      },
+      "x": 1800,
+      "y": 820,
+      "rotation": 0
+    },
+    {
+      "ref": "C3",
+      "name": "2.2uF 16V",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "acc4e864cc17248a",
+        "name": "C0603"
+      },
+      "x": 1950,
+      "y": 900,
+      "rotation": 90
+    },
+    {
+      "ref": "C4",
+      "name": "2.2uF 16V",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "acc4e864cc17248a",
+        "name": "C0603"
+      },
+      "x": 2200,
+      "y": 900,
+      "rotation": 0
+    },
+    {
+      "ref": "C5",
+      "name": "2.2uF 16V",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "acc4e864cc17248a",
+        "name": "C0603"
+      },
+      "x": 2650,
+      "y": 1200,
+      "rotation": 0
+    },
+    {
+      "ref": "C6",
+      "name": "10uF 10V",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "acc4e864cc17248a",
+        "name": "C0603"
+      },
+      "x": 2650,
+      "y": 1450,
+      "rotation": 90
+    },
+    {
+      "ref": "C7",
+      "name": "100nF 50V",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "acc4e864cc17248a",
+        "name": "C0603"
+      },
+      "x": 2650,
+      "y": 1700,
+      "rotation": 90
+    },
+    {
+      "ref": "C8",
+      "name": "4.7uF 16V",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "acc4e864cc17248a",
+        "name": "C0603"
+      },
+      "x": 1300,
+      "y": 700,
+      "rotation": 0
+    },
+    {
+      "ref": "J1",
+      "name": "={Manufacturer Part}",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "036bf54eb3c01ad3",
+        "name": "USB-SMD_USB4500-03-0-A"
+      },
+      "x": 1950,
+      "y": 215,
+      "rotation": 0
+    },
+    {
+      "ref": "R1",
+      "name": "5.1k 1%",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "x": 2050,
+      "y": 250,
+      "rotation": 0
+    },
+    {
+      "ref": "R2",
+      "name": "5.1k 1%",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "x": 2050,
+      "y": 430,
+      "rotation": 0
+    },
+    {
+      "ref": "R3",
+      "name": "27R 1%",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "x": 2100,
+      "y": 520,
+      "rotation": 0
+    },
+    {
+      "ref": "R4",
+      "name": "27R 1%",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "x": 2100,
+      "y": 650,
+      "rotation": 0
+    },
+    {
+      "ref": "R5",
+      "name": "10k 1%",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "x": 1800,
+      "y": 980,
+      "rotation": 0
+    },
+    {
+      "ref": "R6",
+      "name": "10k 1%",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "x": 1950,
+      "y": 980,
+      "rotation": 0
+    },
+    {
+      "ref": "R7",
+      "name": "10k 1%",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "x": 2100,
+      "y": 980,
+      "rotation": 0
+    },
+    {
+      "ref": "R8",
+      "name": "10k 1%",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "x": 2250,
+      "y": 980,
+      "rotation": 0
+    },
+    {
+      "ref": "R9",
+      "name": "10k 1%",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "x": 2300,
+      "y": 850,
+      "rotation": 0
+    },
+    {
+      "ref": "R10",
+      "name": "10k 1%",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "x": 846.4567,
+      "y": 649.6063000000001,
+      "rotation": 0
+    },
+    {
+      "ref": "R11",
+      "name": "10k 1%",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "x": 846.4567,
+      "y": 767.7165,
+      "rotation": 0
+    },
+    {
+      "ref": "R12",
+      "name": "10k 1%",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "x": 846.4567,
+      "y": 885.8268,
+      "rotation": 0
+    },
+    {
+      "ref": "SW1",
+      "name": "={Manufacturer Part}",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "96a14c01eb7a7f87",
+        "name": "KEY-SMD_4P-L5.2-W5.2-P3.70-LS6.4"
+      },
+      "x": 1500,
+      "y": 197,
+      "rotation": 0
+    },
+    {
+      "ref": "SW2",
+      "name": "={Manufacturer Part}",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "96a14c01eb7a7f87",
+        "name": "KEY-SMD_4P-L5.2-W5.2-P3.70-LS6.4"
+      },
+      "x": 1500,
+      "y": 445,
+      "rotation": 0
+    },
+    {
+      "ref": "SW3",
+      "name": "={Manufacturer Part}",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "96a14c01eb7a7f87",
+        "name": "KEY-SMD_4P-L5.2-W5.2-P3.70-LS6.4"
+      },
+      "x": 1500,
+      "y": 693,
+      "rotation": 0
+    },
+    {
+      "ref": "U1",
+      "name": "={Manufacturer Part}",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "9465fd428647471c",
+        "name": "COMM-SMD_MDBT50Q-1MV2"
+      },
+      "x": 3000,
+      "y": 1500,
+      "rotation": 0
+    },
+    {
+      "ref": "U2",
+      "name": "={Manufacturer Part}",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "0e268bb17193806d",
+        "name": "WSON-10_L2.2-W2.0-P0.40-BL-EP_TI_DLH0010A"
+      },
+      "x": 1800,
+      "y": 760,
+      "rotation": 90
+    },
+    {
+      "ref": "U3",
+      "name": "={Manufacturer Part}",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "8f6403c782c9c3de",
+        "name": "SOT-23-5_L2.9-W1.6-P0.95-LS2.8-BL"
+      },
+      "x": 2200,
+      "y": 760,
+      "rotation": 0
+    },
+    {
+      "ref": "J2",
+      "name": "FPC-05FB-24PH20",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "b111b0cbb2c32396",
+        "name": "FPC-SMD_24P-P0.50_FPC-05FB-24PH20"
+      },
+      "x": 2028.7402,
+      "y": 1338.5827,
+      "rotation": -90
+    },
+    {
+      "ref": "U4",
+      "name": "TPS22919DCKT",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "33c82847e2c8a4c7",
+        "name": "SC-70-6_L2.0-W1.3-P0.65-LS2.1-BR"
+      },
+      "x": 1062.9921,
+      "y": 1023.6220000000001,
+      "rotation": 0
+    },
+    {
+      "ref": "C9",
+      "name": "1uF",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "809b963e37e9d9fb",
+        "name": "C0805"
+      },
+      "x": 1023.6220000000001,
+      "y": 937.0079,
+      "rotation": 0
+    },
+    {
+      "ref": "C10",
+      "name": "1uF",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "809b963e37e9d9fb",
+        "name": "C0805"
+      },
+      "x": 1200.7874,
+      "y": 1023.6220000000001,
+      "rotation": 0
+    },
+    {
+      "ref": "R13",
+      "name": "100kΩ",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "x": 1062.9921,
+      "y": 1102.3622,
+      "rotation": 0
+    },
+    {
+      "ref": "L1",
+      "name": "47uH",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "04ef13d8e654b316",
+        "name": "IND-SMD_L3.0-W3.0"
+      },
+      "x": 1122.0472,
+      "y": 1220.4724,
+      "rotation": 180
+    },
+    {
+      "ref": "Q1",
+      "name": "SI1308EDL-T1-GE3",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "c6f52782355eeb03",
+        "name": "SOT-323_L2.0-W1.3-P1.30-LS2.1-BR"
+      },
+      "x": 1259.8425,
+      "y": 1220.4724,
+      "rotation": 0
+    },
+    {
+      "ref": "R14",
+      "name": "10kΩ",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "x": 1259.8425,
+      "y": 1102.3622,
+      "rotation": 0
+    },
+    {
+      "ref": "R15",
+      "name": "2.2Ω",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "x": 1370.0787,
+      "y": 1220.4724,
+      "rotation": 90
+    },
+    {
+      "ref": "D1",
+      "name": "MBR0530T1G",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "d5209bca1018aa8a",
+        "name": "SOD-123_L2.7-W1.6-LS3.7-RD-1"
+      },
+      "x": 1122.0472,
+      "y": 1358.2677,
+      "rotation": 0
+    },
+    {
+      "ref": "D2",
+      "name": "MBR0530T1G",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "d5209bca1018aa8a",
+        "name": "SOD-123_L2.7-W1.6-LS3.7-RD-1"
+      },
+      "x": 1338.5827,
+      "y": 1496.063,
+      "rotation": 180
+    },
+    {
+      "ref": "D3",
+      "name": "MBR0530T1G",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "d5209bca1018aa8a",
+        "name": "SOD-123_L2.7-W1.6-LS3.7-RD-1"
+      },
+      "x": 1338.5827,
+      "y": 1653.5433,
+      "rotation": 180
+    },
+    {
+      "ref": "C11",
+      "name": "1uF",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "809b963e37e9d9fb",
+        "name": "C0805"
+      },
+      "x": 1318.8976,
+      "y": 1358.2677,
+      "rotation": 0
+    },
+    {
+      "ref": "C12",
+      "name": "1uF",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "809b963e37e9d9fb",
+        "name": "C0805"
+      },
+      "x": 1122.0472,
+      "y": 1476.378,
+      "rotation": 0
+    },
+    {
+      "ref": "R16",
+      "name": "0Ω",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "x": 1122.0472,
+      "y": 1594.4882000000002,
+      "rotation": 0
+    },
+    {
+      "ref": "C13",
+      "name": "1uF",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "809b963e37e9d9fb",
+        "name": "C0805"
+      },
+      "x": 1338.5827,
+      "y": 1771.6535,
+      "rotation": 0
+    },
+    {
+      "ref": "R17",
+      "name": "3Ω",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "x": 2007.8739999999998,
+      "y": 1763.7795,
+      "rotation": 0
+    },
+    {
+      "ref": "R18",
+      "name": "10kΩ",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "f745b970915859cd",
+        "name": "R0603"
+      },
+      "x": 2007.8739999999998,
+      "y": 1870.0787,
+      "rotation": 0
+    },
+    {
+      "ref": "C14",
+      "name": "4.7uF",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "809b963e37e9d9fb",
+        "name": "C0805"
+      },
+      "x": 2224.4094,
+      "y": 1062.9921,
+      "rotation": 0
+    },
+    {
+      "ref": "C15",
+      "name": "4.7uF",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "809b963e37e9d9fb",
+        "name": "C0805"
+      },
+      "x": 2224.4094,
+      "y": 1153.5433,
+      "rotation": 0
+    },
+    {
+      "ref": "C16",
+      "name": "1uF",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "809b963e37e9d9fb",
+        "name": "C0805"
+      },
+      "x": 2224.4094,
+      "y": 1370.0787,
+      "rotation": 0
+    },
+    {
+      "ref": "C17",
+      "name": "1uF",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "809b963e37e9d9fb",
+        "name": "C0805"
+      },
+      "x": 2224.4094,
+      "y": 1440.9449,
+      "rotation": 0
+    },
+    {
+      "ref": "C18",
+      "name": "1uF",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "809b963e37e9d9fb",
+        "name": "C0805"
+      },
+      "x": 2224.4094,
+      "y": 1511.811,
+      "rotation": 0
+    },
+    {
+      "ref": "C19",
+      "name": "4.7uF",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "809b963e37e9d9fb",
+        "name": "C0805"
+      },
+      "x": 2224.4094,
+      "y": 1582.6772,
+      "rotation": 0
+    },
+    {
+      "ref": "C20",
+      "name": "1uF",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "809b963e37e9d9fb",
+        "name": "C0805"
+      },
+      "x": 2224.4094,
+      "y": 1653.5433,
+      "rotation": 0
+    },
+    {
+      "ref": "C21",
+      "name": "1uF",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "809b963e37e9d9fb",
+        "name": "C0805"
+      },
+      "x": 2224.4094,
+      "y": 1724.4094,
+      "rotation": 0
+    },
+    {
+      "ref": "C22",
+      "name": "1uF",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "809b963e37e9d9fb",
+        "name": "C0805"
+      },
+      "x": 2224.4094,
+      "y": 1795.2756,
+      "rotation": 0
+    },
+    {
+      "ref": "U5",
+      "name": "TPD2EUSB30DRTR",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "584cfbf37115f7ea",
+        "name": "SOT-9X3-3_L1.0-W0.8-P0.35-LS1.0-BR"
+      },
+      "x": 1850,
+      "y": 450,
+      "rotation": -90.00000000000001
+    },
+    {
+      "ref": "U6",
+      "name": "TPD2EUSB30DRTR",
+      "footprint": {
+        "libraryUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+        "uuid": "584cfbf37115f7ea",
+        "name": "SOT-9X3-3_L1.0-W0.8-P0.35-LS1.0-BR"
+      },
+      "x": 1800,
+      "y": 400,
+      "rotation": 0
+    }
+  ],
+  "polylines": [
+    {
+      "id": "bf8e94ab51b048cf",
+      "polygon": {
+        "polygon": [
+          59.0551,
+          59.0551,
+          "L",
+          59.0551,
+          1988.189,
+          3248.0315,
+          1988.189,
+          3248.0315,
+          885.8268,
+          1948.8189,
+          885.8268,
+          1948.8189,
+          59.0551,
+          1441.7323,
+          59.0551,
+          1441.7323,
+          287.4016,
+          1077.9528,
+          287.4016,
+          1077.9528,
+          59.0551,
+          59.0551,
+          59.0551
+        ]
+      },
+      "layer": 11,
+      "net": null,
+      "lineWidth": 5.9055
+    },
+    {
+      "id": "0b3fe8f9b48c6981",
+      "polygon": {
+        "polygon": [
+          0,
+          0,
+          "L",
+          0,
+          2047.2441,
+          3307.0866,
+          2047.2441,
+          3307.0866,
+          0,
+          0,
+          0
+        ]
+      },
+      "layer": 14,
+      "net": null,
+      "lineWidth": 4.7244
+    },
+    {
+      "id": "0df0fd14140f6851",
+      "polygon": {
+        "polygon": [
+          78.7402,
+          728.3465,
+          "L",
+          78.7402,
+          1984.252,
+          1551.9685,
+          1984.252,
+          1551.9685,
+          728.3465,
+          78.7402,
+          728.3465
+        ]
+      },
+      "layer": 9,
+      "net": null,
+      "lineWidth": 4.7244
+    },
+    {
+      "id": "a280cbd83fdff1b3",
+      "polygon": {
+        "polygon": [
+          1968.5039,
+          78.7402,
+          "L",
+          1968.5039,
+          866.1417,
+          3228.3465,
+          866.1417,
+          3228.3465,
+          78.7402,
+          1968.5039,
+          78.7402
+        ]
+      },
+      "layer": 14,
+      "net": null,
+      "lineWidth": 4.7244
+    },
+    {
+      "id": "1a200e9366ec720b",
+      "polygon": {
+        "polygon": [
+          1889.7638,
+          1033.4646,
+          "L",
+          1889.7638,
+          1643.7008,
+          2082.6772,
+          1643.7008,
+          2082.6772,
+          1033.4646,
+          1889.7638,
+          1033.4646
+        ]
+      },
+      "layer": 9,
+      "net": null,
+      "lineWidth": 4.7244
+    },
+    {
+      "id": "7565147b43ec7697",
+      "polygon": {
+        "polygon": [
+          1551.9685,
+          1031.4961,
+          "L",
+          1551.9685,
+          1681.1024,
+          2122.0472,
+          1681.1024,
+          2122.0472,
+          1031.4961,
+          1551.9685,
+          1031.4961
+        ]
+      },
+      "layer": 9,
+      "net": null,
+      "lineWidth": 4.7244
+    },
+    {
+      "id": "63794523d4083616",
+      "polygon": {
+        "polygon": [
+          1574.8031,
+          1704.7244,
+          "L",
+          1574.8031,
+          1988.189,
+          2342.5197,
+          1988.189,
+          2342.5197,
+          1704.7244,
+          1574.8031,
+          1704.7244
+        ]
+      },
+      "layer": 9,
+      "net": null,
+      "lineWidth": 4.7244
+    },
+    {
+      "id": "be5a8ef32ca73c6f",
+      "polygon": {
+        "polygon": [
+          2362.2047,
+          944.8819,
+          "L",
+          2362.2047,
+          1968.5039,
+          3228.3465,
+          1968.5039,
+          3228.3465,
+          944.8819,
+          2362.2047,
+          944.8819
+        ]
+      },
+      "layer": 9,
+      "net": null,
+      "lineWidth": 4.7244
+    },
+    {
+      "id": "1042217a6f9c60fb",
+      "polygon": {
+        "polygon": [
+          590.5512,
+          59.0551,
+          "L",
+          590.5512,
+          590.5512,
+          984.252,
+          590.5512,
+          984.252,
+          59.0551,
+          590.5512,
+          59.0551
+        ]
+      },
+      "layer": 9,
+      "net": null,
+      "lineWidth": 4.7244
+    },
+    {
+      "id": "be0d60f2cfc81bb4",
+      "polygon": {
+        "polygon": [
+          1496.063,
+          472.4409,
+          "L",
+          1496.063,
+          590.5512,
+          1614.1732,
+          590.5512,
+          1614.1732,
+          472.4409,
+          1496.063,
+          472.4409
+        ]
+      },
+      "layer": 9,
+      "net": null,
+      "lineWidth": 4.7244
+    },
+    {
+      "id": "d8a8f21d7e00ac4d",
+      "polygon": {
+        "polygon": [
+          157.4803,
+          590.5512,
+          "L",
+          157.4803,
+          787.4016,
+          708.6614,
+          787.4016,
+          708.6614,
+          590.5512,
+          157.4803,
+          590.5512
+        ]
+      },
+      "layer": 9,
+      "net": null,
+      "lineWidth": 4.7244
+    },
+    {
+      "id": "8835ddd0d7644b70",
+      "polygon": {
+        "polygon": [
+          1763.7795,
+          826.7717,
+          "L",
+          1763.7795,
+          968.5039,
+          1992.126,
+          968.5039,
+          1992.126,
+          826.7717,
+          1763.7795,
+          826.7717
+        ]
+      },
+      "layer": 9,
+      "net": null,
+      "lineWidth": 4.7244
+    },
+    {
+      "id": "5d528618eb291156",
+      "polygon": {
+        "polygon": [
+          1003.937,
+          346.4567,
+          "L",
+          1003.937,
+          440.9449,
+          1555.1181,
+          440.9449,
+          1555.1181,
+          346.4567,
+          1003.937,
+          346.4567
+        ]
+      },
+      "layer": 9,
+      "net": null,
+      "lineWidth": 4.7244
+    }
+  ],
+  "regions": [
+    {
+      "id": "3ca47cb13d458f18",
+      "polygon": {
+        "polygon": [
+          2600,
+          59,
+          "L",
+          2600,
+          950,
+          3250,
+          950,
+          3250,
+          59,
+          2600,
+          59
+        ]
+      },
+      "layer": 12,
+      "rule": [
+        2,
+        6,
+        5,
+        7
+      ]
+    },
+    {
+      "id": "873dc9d7f015afbf",
+      "polygon": {
+        "polygon": [
+          590.5512,
+          59.0551,
+          "L",
+          590.5512,
+          590.5512,
+          984.252,
+          590.5512,
+          984.252,
+          59.0551,
+          590.5512,
+          59.0551
+        ]
+      },
+      "layer": 12,
+      "rule": [
+        6,
+        5,
+        7
+      ]
+    }
+  ]
+}

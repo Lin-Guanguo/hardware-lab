@@ -1,0 +1,246 @@
+{
+  "status": "PRELAYOUT_NOT_FOR_FABRICATION",
+  "unit": "mm",
+  "coordinate_system": "FreeCAD XY, origin at lower-left of 86 x 54 mm enclosure; PCB API uses mil; rotation is counter-clockwise",
+  "pcb_uuid": "13f7744be10c4bb4",
+  "enclosure_mm": [
+    86,
+    54,
+    5
+  ],
+  "board_outline_mm": [
+    [
+      1.5,
+      1.5
+    ],
+    [
+      43.5,
+      1.5
+    ],
+    [
+      43.5,
+      23.5
+    ],
+    [
+      76.5,
+      23.5
+    ],
+    [
+      76.5,
+      1.5
+    ],
+    [
+      84.5,
+      1.5
+    ],
+    [
+      84.5,
+      6.85
+    ],
+    [
+      78.7,
+      6.85
+    ],
+    [
+      78.7,
+      16.09
+    ],
+    [
+      84.5,
+      16.09
+    ],
+    [
+      84.5,
+      52.5
+    ],
+    [
+      1.5,
+      52.5
+    ]
+  ],
+  "board_thickness_target_mm": 0.8,
+  "placements": {
+    "U1": [
+      9.15,
+      8.35,
+      270
+    ],
+    "J1": [
+      80.525,
+      11.47,
+      90
+    ],
+    "U2": [
+      28.1,
+      13,
+      90
+    ],
+    "U3": [
+      33,
+      13,
+      0
+    ],
+    "SW1": [
+      28.1,
+      6,
+      90
+    ],
+    "SW2": [
+      34.3,
+      6,
+      90
+    ],
+    "SW3": [
+      40.5,
+      6,
+      90
+    ],
+    "R1": [
+      78.1,
+      22,
+      0
+    ],
+    "R2": [
+      82,
+      22,
+      0
+    ],
+    "R3": [
+      5,
+      2.4,
+      0
+    ],
+    "R4": [
+      8.3,
+      2.4,
+      0
+    ],
+    "C6": [
+      2.4,
+      6.7,
+      90
+    ],
+    "C7": [
+      2.4,
+      9.5,
+      90
+    ],
+    "C8": [
+      2.4,
+      12.3,
+      90
+    ],
+    "C1": [
+      27.7,
+      16,
+      0
+    ],
+    "C2": [
+      31,
+      16,
+      0
+    ],
+    "C3": [
+      28,
+      19,
+      0
+    ],
+    "C4": [
+      34.5,
+      16,
+      0
+    ],
+    "C5": [
+      38,
+      16,
+      0
+    ],
+    "R5": [
+      26.7,
+      22,
+      0
+    ],
+    "R6": [
+      30,
+      22,
+      0
+    ],
+    "R7": [
+      33.3,
+      22,
+      0
+    ],
+    "R8": [
+      36.6,
+      22,
+      0
+    ],
+    "R9": [
+      39.9,
+      22,
+      0
+    ],
+    "R10": [
+      21.5,
+      16.5,
+      0
+    ],
+    "R11": [
+      21.5,
+      19.5,
+      0
+    ],
+    "R12": [
+      21.5,
+      22.5,
+      0
+    ]
+  },
+  "mechanical_source": "../enclosure/pcba-e6-302030-report.json",
+  "changes_from_freecad": [
+    "SW1-3 rotated 90 degrees and moved +1.4 mm in Y for 8 mm pad span",
+    "Passive placement extends beyond original power reserve; some low-profile parts under display require Z-clearance review",
+    "Battery lead reference moved from y=9 to y=10.5 after rotating SW3",
+    "USB shifted 0.8 mm inward: mouth at x=85.2; final draft notch x=78.7, bridge 2.2 mm; plug/case access remains unverified"
+  ],
+  "unresolved": [
+    "No routed nets",
+    "E6 driver/FPC, battery/NTC, USB ESD, SWD pads and NFC coil/matching incomplete",
+    "Library footprints not fully audited",
+    "Battery size, screen FPC bend/contact side and complete thickness unverified",
+    "USB signal-pad to slot clearance approximately 0.2 mm vs current 0.3 mm rule; manufacturer footprint and fabrication clearance need review",
+    "USB mouth recessed 0.8 mm from case outer edge; plug insertion must be checked",
+    "Battery-to-NFC routing corridor 1.5 mm; battery-to-USB board bridge 2.2 mm"
+  ],
+  "verification": {
+    "components": 27,
+    "pads": 145,
+    "save_reopen_changes": [],
+    "client_normalizations": [
+      "Client changed inactive color on unused inner layers 5/10",
+      "Client materialized default empty-net length-tolerance selector",
+      "Inactive-layer transparency restored by client"
+    ],
+    "pad_net_mismatches_vs_schematic": [],
+    "placement_errors": [],
+    "pad_corners_outside_board": [],
+    "inter_component_pad_bbox_overlaps": [],
+    "component_body_bbox_overlaps": [],
+    "pad_overlaps_nfc_reserve": [],
+    "layer_stack_mm": 0.8000238,
+    "database_quick_check": "ok",
+    "scope": "Axis-aligned footprint/body and pad bounds for current rotations. Does not verify trace routing, true courtyard, solder-mask, slot clearance, 3D fit, material strength, RF or manufacturing readiness. USB body intentionally overhangs; pads must stay on PCB.",
+    "pcb_drc": {
+      "passed": false,
+      "total": 122,
+      "unrouted_connectivity": 98,
+      "board_outline_to_usb_smd_pads": 12,
+      "usb_footprint_internal_outline_to_smd_pads": 12,
+      "measured_clearance_mm_approx": 0.2,
+      "configured_minimum_mm": 0.3
+    },
+    "netlist_critical_pin_checks": 108,
+    "pcb_netlist_sha256": "603984c23c4648b40997f4a93a21d905316409b546282f06204d263b4f171d84",
+    "project_export_zip_crc": "passed"
+  }
+}

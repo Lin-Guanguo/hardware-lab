@@ -1,0 +1,549 @@
+{
+  "status": "CANDIDATE_LAYOUT_NOT_MANUFACTURING_READY",
+  "freecad_version": [
+    "1",
+    "1",
+    "3"
+  ],
+  "card_mm": [
+    86,
+    54,
+    5
+  ],
+  "layout_variant": "e6-302030",
+  "board_connected_solids": 1,
+  "modeled_physical_collisions": [],
+  "outside_assumed_cavity_excluding_usb_side_opening": [],
+  "physical_components_over_nfc_reserve": [],
+  "stack_inputs_mm": {
+    "module_full_print_nominal": [
+      0.8,
+      0.1,
+      0.8,
+      0.1,
+      2.0,
+      0.1,
+      0.8
+    ],
+    "module_full_print_planning": [
+      0.9,
+      0.15,
+      0.9,
+      0.1,
+      2.2,
+      0.15,
+      0.9
+    ],
+    "usb_full_print_nominal": [
+      0.8,
+      0.1,
+      3.16,
+      0.1,
+      0.8
+    ],
+    "usb_full_print_planning": [
+      0.9,
+      0.15,
+      3.36,
+      0.15,
+      0.9
+    ],
+    "battery_full_print_nominal": [
+      0.8,
+      0.2,
+      3.0,
+      0.1,
+      0.8
+    ],
+    "battery_thin_cover_nominal": [
+      0.8,
+      0.2,
+      3.0,
+      0.1,
+      0.3
+    ],
+    "battery_thin_cover_planning_3p4": [
+      0.9,
+      0.15,
+      3.4,
+      0.15,
+      0.35
+    ]
+  },
+  "stack_totals_mm": {
+    "module_full_print_nominal": 4.7,
+    "module_full_print_planning": 5.3,
+    "usb_full_print_nominal": 4.96,
+    "usb_full_print_planning": 5.46,
+    "module_thin_cover_nominal": 4.2,
+    "module_thin_cover_planning": 4.75,
+    "usb_thin_cover_nominal": 4.46,
+    "usb_thin_cover_planning": 4.91,
+    "battery_full_print_nominal": 4.9,
+    "battery_thin_cover_nominal": 4.4,
+    "battery_thin_cover_planning_3p4": 4.95
+  },
+  "components": [
+    {
+      "name": "BackPlane",
+      "label": "背壁预算面",
+      "size_mm": [
+        86,
+        54,
+        0.8
+      ],
+      "position_mm": [
+        0,
+        0,
+        0
+      ],
+      "color": "#CBD5E1",
+      "role": "reference",
+      "evidence": "0.8 mm 是设计值，尚未验证打印与整件公差。"
+    },
+    {
+      "name": "FrontPlane",
+      "label": "0.3 mm 薄片前盖（隐藏）",
+      "size_mm": [
+        86,
+        54,
+        0.3
+      ],
+      "position_mm": [
+        0,
+        0,
+        4.7
+      ],
+      "color": "#CBD5E1",
+      "role": "reference",
+      "evidence": "比较方案；材料、粘接台阶、按键孔和强度未验证。"
+    },
+    {
+      "name": "OuterEnvelope",
+      "label": "86 × 54 × 5 mm",
+      "size_mm": [
+        86,
+        54,
+        5
+      ],
+      "position_mm": [
+        0,
+        0,
+        0
+      ],
+      "color": "#64748B",
+      "role": "reference",
+      "evidence": "外形目标；所有坐标为设计分配。"
+    },
+    {
+      "name": "Module",
+      "label": "U1 · MDBT50Q-P1MV2",
+      "size_mm": [
+        15.7,
+        10.7,
+        2.2
+      ],
+      "position_mm": [
+        3,
+        3,
+        1.8
+      ],
+      "color": "#B6CFE7",
+      "role": "component",
+      "evidence": "Raytac Rev L；采用三个方向 +0.20 mm 图纸上界；不含焊接抬高。当前商城缺货。"
+    },
+    {
+      "name": "Display",
+      "label": "DS1 · GDEH0154E01 六色屏",
+      "size_mm": [
+        37.42,
+        31.9,
+        1.0
+      ],
+      "position_mm": [
+        3,
+        20.5,
+        3.6
+      ],
+      "color": "#E3E8EF",
+      "role": "component",
+      "evidence": "原厂 v1.0 第 5 页尺寸上界；尾部朝右；不含保护膜、固定和未知装配偏差。"
+    },
+    {
+      "name": "BatteryTarget",
+      "label": "BT1 · 302030 / 150 mAh 标称",
+      "size_mm": [
+        32,
+        20,
+        3
+      ],
+      "position_mm": [
+        44,
+        3,
+        1.0
+      ],
+      "color": "#F2CA8B",
+      "role": "component",
+      "evidence": "商家标称包体，非实测或最大尺寸；另需保护板/胶带/焊点公差和尺寸增长预留。"
+    },
+    {
+      "name": "UsbBody",
+      "label": "J1 · USB4500 主体",
+      "size_mm": [
+        6.5,
+        8.94,
+        3.16
+      ],
+      "position_mm": [
+        79.5,
+        7,
+        0.9
+      ],
+      "color": "#C4CDD8",
+      "role": "component",
+      "evidence": "GCT A1 第 1 页名义主体；0.8 mm 沉板，主体上方距 PCB 顶面约 2.36 mm。侧翼/焊脚另作预留。"
+    },
+    {
+      "name": "UsbAssemblyReserve",
+      "label": "USB 焊脚与装配区",
+      "size_mm": [
+        8,
+        11.64,
+        3.56
+      ],
+      "position_mm": [
+        78,
+        5.65,
+        0.7
+      ],
+      "color": "#94A3B8",
+      "role": "reserve",
+      "evidence": "设计预留；锚脚、焊料、开口和厚度公差需要详细机械核对。"
+    },
+    {
+      "name": "FpcConnector",
+      "label": "J2 · 上接触 FPC 座待选",
+      "size_mm": [
+        6.8,
+        16.5,
+        2.2
+      ],
+      "position_mm": [
+        53,
+        28.2,
+        1.8
+      ],
+      "color": "#A8C6B2",
+      "role": "component",
+      "evidence": "6.8 × 16.5 × 2.2 mm 是采购/装配目标，非已选连接器；24 pin / 0.5 mm，方向待核对。"
+    },
+    {
+      "name": "FpcRouteReserve",
+      "label": "屏幕 FPC 路径与插入预留",
+      "size_mm": [
+        15.48,
+        16.5,
+        1.8
+      ],
+      "position_mm": [
+        40.42,
+        28.2,
+        2.2
+      ],
+      "color": "#DDD0EA",
+      "role": "reserve",
+      "evidence": "与六色屏尾部中心对齐的路径目标；14.3±0.3 mm 尾长，Z 向折弯与插入尚未设计。"
+    },
+    {
+      "name": "EpdCircuitReserve",
+      "label": "六色屏升压器件区",
+      "size_mm": [
+        19.5,
+        7.5,
+        1.8
+      ],
+      "position_mm": [
+        41,
+        45,
+        1.8
+      ],
+      "color": "#C9BAE1",
+      "role": "reserve",
+      "evidence": "146.25 mm² 面积分配，未证明 DESPI-E01 所需外围及走线全部放得下。"
+    },
+    {
+      "name": "NfcReserve",
+      "label": "NFC 专用区域",
+      "size_mm": [
+        23,
+        25,
+        0.2
+      ],
+      "position_mm": [
+        61,
+        25,
+        1.7
+      ],
+      "color": "#C1E3DE",
+      "role": "reserve",
+      "evidence": "PCB 基材允许存在；区域内不布其他金属/地平面，线圈匝数、引出与匹配未设计。"
+    },
+    {
+      "name": "BleReserve",
+      "label": "模块 2.4 GHz 天线预留",
+      "size_mm": [
+        10,
+        13.5,
+        0.2
+      ],
+      "position_mm": [
+        15,
+        1.5,
+        1.7
+      ],
+      "color": "#DBEAFE",
+      "role": "reserve",
+      "evidence": "随模块旋转到朝右边；示意区并非完整原厂铜净空，具体位置和范围需对照封装图。"
+    },
+    {
+      "name": "Charger",
+      "label": "U2 · BQ25186",
+      "size_mm": [
+        2.2,
+        2,
+        0.8
+      ],
+      "position_mm": [
+        27,
+        11,
+        1.8
+      ],
+      "color": "#E6C9CE",
+      "role": "component",
+      "evidence": "TI WSON 外形；散热焊盘和去耦未建模。"
+    },
+    {
+      "name": "Regulator",
+      "label": "U3 · TPS7A0233",
+      "size_mm": [
+        3.1,
+        3,
+        1.45
+      ],
+      "position_mm": [
+        31,
+        11,
+        1.8
+      ],
+      "color": "#E6C9CE",
+      "role": "component",
+      "evidence": "SOT-23-5 高度上界；XY 为含引脚包络预留，非焊盘。"
+    },
+    {
+      "name": "LoadSwitchReserve",
+      "label": "U4 · TPS22919 预留",
+      "size_mm": [
+        3,
+        3,
+        1.2
+      ],
+      "position_mm": [
+        36,
+        11,
+        1.8
+      ],
+      "color": "#E6C9CE",
+      "role": "reserve",
+      "evidence": "SC70 候选；包络为设计分配，尚未导入精确封装。"
+    },
+    {
+      "name": "PowerReserve",
+      "label": "电源与保护外围区",
+      "size_mm": [
+        15,
+        12,
+        0.2
+      ],
+      "position_mm": [
+        25.5,
+        8.2,
+        1.7
+      ],
+      "color": "#F5DADF",
+      "role": "reserve",
+      "evidence": "包含 U2/U3/U4 及未建模阻容/保护器件；面积待 PCB 布局复核。"
+    },
+    {
+      "name": "SwdReserve",
+      "label": "SWD 探针操作区",
+      "size_mm": [
+        14,
+        5,
+        0.2
+      ],
+      "position_mm": [
+        4,
+        15,
+        1.7
+      ],
+      "color": "#E2E8F0",
+      "role": "reserve",
+      "evidence": "五个测试点和探针入口的面积分配，未固定间距或治具。"
+    },
+    {
+      "name": "Button1",
+      "label": "SW1 · SKQGABE010",
+      "size_mm": [
+        5.2,
+        5.2,
+        1.5
+      ],
+      "position_mm": [
+        25.5,
+        2,
+        1.8
+      ],
+      "color": "#ECC2A7",
+      "role": "component",
+      "evidence": "原厂名义主体；不包含焊盘或键帽。"
+    },
+    {
+      "name": "ButtonTravel1",
+      "label": "按键 1 键帽与行程预留",
+      "size_mm": [
+        5.8,
+        5.8,
+        1.65
+      ],
+      "position_mm": [
+        25.2,
+        1.7,
+        3.3
+      ],
+      "color": "#F2DDCD",
+      "role": "reserve",
+      "evidence": "最高点 4.95 mm 是设计目标；需开孔、限位及机械行程核对。"
+    },
+    {
+      "name": "Button2",
+      "label": "SW2 · SKQGABE010",
+      "size_mm": [
+        5.2,
+        5.2,
+        1.5
+      ],
+      "position_mm": [
+        31.7,
+        2,
+        1.8
+      ],
+      "color": "#ECC2A7",
+      "role": "component",
+      "evidence": "原厂名义主体；不包含焊盘或键帽。"
+    },
+    {
+      "name": "ButtonTravel2",
+      "label": "按键 2 键帽与行程预留",
+      "size_mm": [
+        5.8,
+        5.8,
+        1.65
+      ],
+      "position_mm": [
+        31.4,
+        1.7,
+        3.3
+      ],
+      "color": "#F2DDCD",
+      "role": "reserve",
+      "evidence": "最高点 4.95 mm 是设计目标；需开孔、限位及机械行程核对。"
+    },
+    {
+      "name": "Button3",
+      "label": "SW3 · SKQGABE010",
+      "size_mm": [
+        5.2,
+        5.2,
+        1.5
+      ],
+      "position_mm": [
+        37.9,
+        2,
+        1.8
+      ],
+      "color": "#ECC2A7",
+      "role": "component",
+      "evidence": "原厂名义主体；不包含焊盘或键帽。"
+    },
+    {
+      "name": "ButtonTravel3",
+      "label": "按键 3 键帽与行程预留",
+      "size_mm": [
+        5.8,
+        5.8,
+        1.65
+      ],
+      "position_mm": [
+        37.6,
+        1.7,
+        3.3
+      ],
+      "color": "#F2DDCD",
+      "role": "reserve",
+      "evidence": "最高点 4.95 mm 是设计目标；需开孔、限位及机械行程核对。"
+    },
+    {
+      "name": "BatteryLeadReserve",
+      "label": "电池出线/接点预留",
+      "size_mm": [
+        3.3,
+        7,
+        1.2
+      ],
+      "position_mm": [
+        40.7,
+        9,
+        1.8
+      ],
+      "color": "#EDC88D",
+      "role": "reserve",
+      "evidence": "假设从电池左短边引出，完整出线图未取得；引线在 PCB 上方经过。"
+    }
+  ],
+  "limitations": [
+    "公差规划是工程假设，不是供应商交付上界；没有完成统计公差分析。",
+    "全打印 USB 名义叠层 4.96 mm，公差规划 5.46 mm；薄片方案仍待公差和强度验证。",
+    "无盒体碰撞不等于完成焊盘、布线、FPC 折弯、RF、固定件或实际装配检查。",
+    "USB 从侧壁开口伸出到 x=86；该处预算侧壁应开孔，尚未建模可制造外壳。",
+    "电池、键帽、线路区域为设计目标，尚无完整实物尺寸。",
+    "PCB 与多数器件坐标为生成时固定值；改参数后需重排与重新核查。",
+    "薄片前盖是结构比较方案；3.4 mm 电池厚度是敏感性假设，非卖家公差或鼓胀保证。",
+    "电池与 USB 槽间 PCB 最窄名义桥宽 2.5 mm；锚孔、焊盘、布线及插拔承力未验证。",
+    "六色屏上边缘距 0.8 mm 假设侧壁 0.8 mm；FPC 座仍为目标包络。",
+    "预留区在保存重开后另做几何检查；通过不代表已经放入实际器件与导线。"
+  ],
+  "battery_thickness_sensitivity_mm": [
+    {
+      "complete_pack": 3.0,
+      "thin_cover_stack": 4.55
+    },
+    {
+      "complete_pack": 3.2,
+      "thin_cover_stack": 4.75
+    },
+    {
+      "complete_pack": 3.4,
+      "thin_cover_stack": 4.95
+    },
+    {
+      "complete_pack": 3.5,
+      "thin_cover_stack": 5.05
+    },
+    {
+      "complete_pack": 4.0,
+      "thin_cover_stack": 5.55
+    }
+  ],
+  "battery_pack_thickness_limit_under_planning_mm": 3.45,
+  "board_web_between_battery_and_usb_cut_mm": 2.5
+}

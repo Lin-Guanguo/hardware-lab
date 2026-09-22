@@ -32,86 +32,87 @@
    "id": "battery-delivery-envelope",
    "status": "BLOCKED_INPUT",
    "purpose": "Freeze a safe battery keepout and thickness budget.",
-   "current_assumption": "301230 nominal 30 x 12 x 3 mm only; the board already carries dedicated BP (BAT_PACK_TBD, d1.5 at 49.5/23.55), BN (GND, d1.5 at 47.7/23.70) and NTC (BAT_NTC_TBD, d1.2 at 45.60/23.70) landing pads next to U2, so only the cell envelope, lead exit and NTC presence are open.",
+   "current_assumption": "E16 battery bite is 33.5 x 15 mm with a 3.6 mm pocket (0.4 mm plate to the 4.0 mm ceiling) and is at its hard limits: east 33.80 mm (SW pads start at 34.10 with the 0.3 mm copper-to-edge rule), north ~15.02 mm (bottom-layer KEY_PREV_N hugs the bite at y=15.40), height 3.6 mm. A cell up to 32.5 x 14 x 3.4 mm still leaves 0.5-1 mm margins. BP (BAT_PACK_TBD, d1.5 at 49.5/23.55), BN (GND, d1.5 at 47.7/23.70) and NTC (BAT_NTC_TBD, d1.2 at 45.60/23.70) pads are in place.",
    "required_evidence": [
     "supplier maximum body dimensions including protection board and adhesive",
     "lead exit direction and bend radius",
     "allowed charge/discharge current and NTC requirement",
     "swelling and assembly compression allowance"
    ],
-   "next_action": "Measure the received pack or obtain a supplier drawing; update EDA and CAD together."
+   "next_action": "Measure the received cell or take the supplier drawing and compare it with the limit table. Wider than 33.8 mm or taller than 15.02 mm forces the key column to move (about 8 traces) plus a new enclosure version; thicker than 3.6 mm breaks the 4.5 mm stack.",
+   "design_state": "BLOCKED_INPUT"
   },
   {
    "id": "board-outline-and-usb-opening",
-   "status": "BLOCKED_DEPENDENCY",
+   "status": "CLOSED",
    "purpose": "Make the PCB outline, USB edge cutout, anchor pads and enclosure opening agree.",
-   "current_assumption": "E14 still carries the historical board edge and USB candidate geometry.",
    "required_evidence": [
     "final J1 drawing and insertion direction",
     "edge slot, anchor and copper clearance accepted by the fabricator",
     "84 x 52 mm outline with tool radius and assembly datum"
    ],
-   "next_action": "Lock J1 mechanical reference, then edit the outline and enclosure datum in one controlled E14 revision."
+   "next_action": "No action. Revisit only if a real cable cannot seat because of the 0.8 mm inset mating face.",
+   "design_state": "CLOSED",
+   "current_snapshot": "E16 board 84 x 52 mm, L-shaped on layer 11: right-edge USB notch 9.24 x 6.5 mm (x 77.5-84, y 11.38-20.62) plus the 33.5 x 15 mm battery bite. The exported STEP measures a 0.80 mm board (the GCT USB4500 requirement), J1 body x 76.7-83.2 / y 10.22-21.77 / z 0.7-3.87 and a mating face 0.8 mm inside the card edge. check-e16-manufacture.py matches the outline vertex by vertex (worst deviation 0.0005 mm). check-e16-usb-plug.py: 0 mm3 interference against both shells, and mouldings up to 9.20 mm reach the connector face (a wider one rests on the card edge with 0.8 mm less insertion). Both shells are cut to the notch, so no wall slot is needed."
   },
   {
    "id": "netlist-and-power-routing",
-   "status": "NOT_STARTED",
+   "status": "DONE",
    "purpose": "Route USB data, VBUS, charger SYS/BAT, 3V3, ground return and EPD signals from the verified netlist.",
-   "current_snapshot": "Zero copper lines and zero vias; 188 connectivity DRC results are expected.",
+   "current_snapshot": "56 designators; pin-level schematic-to-PCB diff 56 refs / 234 pins / 0 net mismatches; four-page sch_Drc 0; native board DRC clearance 0 and connection 0 with the 12 known J1 slot-edge warnings; 781 copper segments, 242 pads, 162 vias and 2 GND pours; USB DP/DM, VBUS, charger SYS/BAT, 3V3 and every EPD signal are routed.",
    "required_evidence": [
     "schematic-to-PCB association rechecked after the final footprint choices",
     "USB DP/DM and VBUS fanout",
     "charger, battery and regulator return paths",
     "EPD busy/reset/data lines and local decoupling"
    ],
-   "next_action": "Route critical power and USB nets first, save, reopen and rerun DRC after each block."
+   "next_action": "No action.",
+   "design_state": "DONE"
   },
   {
    "id": "nfc-rf-and-metal-clearance",
-   "status": "NOT_STARTED",
+   "status": "BLOCKED_INPUT",
    "purpose": "Replace the rectangular NFC reserve with an actual antenna and matching layout.",
-   "current_assumption": "Upper-right prohibited region is a spatial constraint only.",
+   "current_assumption": "The reserve x 60-82 / y 24-50 is measured copper-free on both layers (17 x 21 mm usable after the USB shield keep-away) and the U1 antenna keep-out region d49ece88915402a1 (x 59.7-70.3, y 0.2-2.5, no fills/no pours) is in place; NFC1_TBD and NFC2_TBD still have 0 copper segments. Inductance study: 1.02 uH at 5 turns / 2.07 uH at 8 turns with Q 127-173, and the bottom-layer coil sits 0.7 mm from the back face. The maze run proves both feeds can reach candidate pads but forms a large loop and is not a recommended layout.",
    "required_evidence": [
     "antenna geometry and matching pads",
     "module and display keepout distances",
     "assembled read-range/tuning check"
    ],
-   "next_action": "Keep the region reserved during routing; do not claim NFC performance until the antenna is measured in the enclosure."
+   "next_action": "Run the PN532 bench test to pick the antenna form, then route the two ~19 mm feeds and the matching network and re-check the keep-out distances against the module and display.",
+   "design_state": "AREA_VERIFIED_ANTENNA_DEFERRED"
   },
   {
    "id": "cad-printable-enclosure",
-   "status": "BLOCKED_DEPENDENCY",
+   "status": "BLOCKED_INPUT",
    "purpose": "Turn the spatial study into a manufacturable shell only after the PCB datums are stable.",
-   "current_assumption": "Current FCStd/STEP is a block-level envelope, not a printable shell.",
-   "test_candidate": "../enclosure/nfc-card-e14-enclosure-v1.FCStd",
-   "test_candidate_status": "E14_ENCLOSURE_V1_PRINTABLE_SAMPLE_NOT_PRODUCTION_RELEASE",
-   "coordinate_reconciliation_candidate": "../enclosure/nfc-card-e14-enclosure-v2-eda-coordinate.FCStd",
-   "coordinate_reconciliation_status": "E14_ENCLOSURE_V2_EDA_COORDINATE_SAMPLE_NOT_PRODUCTION_RELEASE",
+   "test_candidate": "../enclosure/nfc-card-e16-enclosure-v7.FCStd",
+   "test_candidate_status": "E16_ENCLOSURE_V7_SAMPLE_NOT_PRODUCTION_RELEASE",
    "required_evidence": [
     "verified board outline and USB opening",
     "screen window, FPC bend and support",
     "button travel, wall thickness, catches and print clearances",
     "measured battery thickness and strain relief"
    ],
-   "next_action": "Keep the E14 CAD study as a reference and start the shell revision after the outline/USB gate passes."
+   "next_action": "Print the four V7 parts, then verify key travel, panel bonding, FPC bend and the thin-wall tolerance; pick a thinner-capable process or the hybrid thin-sheet cover route.",
+   "design_state": "SAMPLE_DONE_PHYSICAL_VERIFICATION_PENDING",
+   "current_snapshot": "V7: one solid per shell, no shell/reference intersections, USB connector contact 0 mm3, battery pocket floor 201 mm3 and ceiling 251.25 mm3 as expected, three key holes and three flush caps that clear the shells, each other and the real component models at rest and at the 0.25 mm travel, 4.5 mm stack. check-e16-board-fit.py: 0 shell / 0 rib / 0 key-cap interferences against the exported STEP; J1 is the tallest part at 3.87 mm with 0.13 mm to the ceiling. Walls are 0.4/0.5 mm, below the JLC 3DP 8001 >0.8 mm recommendation."
   },
   {
    "id": "vendor-manufacturing-package",
-   "status": "BLOCKED",
+   "status": "BLOCKED_DEPENDENCY",
    "purpose": "Release only a coherent Gerber/Excellon, BOM/CPL and production CAD package.",
    "release_rule": "All preceding gates pass, DRC/DFM is reviewed, and the package is saved and reopened from the same E14 revision.",
-   "current_snapshot": "No Gerber, Excellon, final BOM/CPL, production STEP or printable STL is generated.",
-   "next_action": "Do not export or send a vendor package from the current snapshot."
+   "current_snapshot": "Verification exports already exist and re-check: Gerber zip (16 files), 2 drill files, BOM 25 rows / 56 designators, CPL 56 designators with a 0.0005 mm worst placement delta, production STEP and the V7 STL. check-e16-manufacture.py returns ok=true, but the package is deliberately not released for ordering.",
+   "next_action": "Close the battery, antenna and enclosure gates, then re-export from one saved revision and place the order.",
+   "design_state": "NOT_RELEASED"
   }
  ],
  "ordered_next_actions": [
-  "Obtain or measure the actual battery envelope and lead/NTC details.",
-  "Freeze J1 insertion datum and revise the E14 board outline plus USB opening.",
-  "Recheck schematic/PCB associations, then route power and USB critical nets.",
-  "Route EPD and control signals, add ground return and validate DRC after save/reopen.",
-  "Design NFC antenna and matching after the metal and enclosure boundaries are known.",
-  "Convert the CAD envelope into the printable shell and run geometry/visual checks.",
-  "Generate the vendor package only after the release gates are green."
+  "Measure the received cell (or take the supplier drawing) against the battery limit table: east 33.80, north ~15.02, height 3.6 mm.",
+  "Run the PN532 bench test, then lay out the NFC antenna, its two feeds and the matching network.",
+  "Print the four V7 parts (bottom shell, top shell, three key caps) and verify key travel, panel bonding and the 0.4/0.5 mm walls.",
+  "Only then re-export the vendor package from one saved revision and release it for ordering."
  ],
  "release_artifacts": {
   "gerber": false,
@@ -165,5 +166,6 @@
   },
   "enclosure_candidate": "../enclosure/nfc-card-e16-enclosure-v7.FCStd",
   "enclosure_status": "E16_ENCLOSURE_V7_SAMPLE_NOT_PRODUCTION_RELEASE"
- }
+ },
+ "gate_notes": "status is the release gate; design_state mirrors current_design.status_by_gate for the same gate. Refreshed 2026-09-23 from the E16 board, so the earlier E14 baseline wording is superseded."
 }

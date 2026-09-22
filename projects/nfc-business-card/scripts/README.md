@@ -2,11 +2,11 @@
 
 ## 当前确定方案
 
-更新于 **2026-09-22**。当前 CAD 空间研究入口为 [e14-layout-study.py](../enclosure/e14-layout-study.py)，对应 [pcba-e14-battery-layout.FCStd](../enclosure/pcba-e14-battery-layout.FCStd)。它把 301230 标称包体和 E14 分区落到 84 × 52 mm 坐标；基于该空间研究另有 [e14-enclosure-v1.py](../enclosure/e14-enclosure-v1.py) 生成上下壳打印验证样件（[FCStd](../enclosure/nfc-card-e14-enclosure-v1.FCStd)、[STEP](../enclosure/nfc-card-e14-enclosure-v1.step)、上下壳 STL），外包络 5.0 mm，但完整装配与生产公差仍待验证。
+更新于 **2026-09-23**。E16 板（三键、L 形板框、右边缘 USB 缺口）已收口：PCB 原生 DRC 普通间距 0 / 连接 0、逐引脚网表 56 位号 / 234 引脚 / 0 差异、制造包自动核对 `ok`、外壳 V7 对真实元件模型 0 干涉。当前 CAD 入口是 [e16-enclosure-right-mid-usb-v7.py](../enclosure/e16-enclosure-right-mid-usb-v7.py)，配套校验脚本 [check-e16-board-fit.py](check-e16-board-fit.py) 与 [check-e16-usb-plug.py](check-e16-usb-plug.py)。E14 空间研究（[e14-layout-study.py](../enclosure/e14-layout-study.py)、[e14-enclosure-v1.py](../enclosure/e14-enclosure-v1.py)）与 V1–V6 外壳样件保留作历史入口。
 
 新的 PCB 开工入口是 [E15 清理版 PCB 开工记录](../hardware/pcb-e15-clean-layout.md)。E15 图页位于 E14 `.eprj2` 工程内；其审查快照由 [generate-e15-clean-layout-svg.py](generate-e15-clean-layout-svg.py) 从保存后的 E15 数据生成。该脚本只渲染审查图，不修改 EasyEDA 工程。
 
-右侧中部 USB 方向由 [E16 布局方案](../hardware/pcb-e16-usb-right-mid.md) 推进：[plan-e16-right-mid.py](plan-e16-right-mid.py) 用 E15 快照的真实焊盘坐标比较"原布局 / 新方案"的焊盘、模块外形、NFC 保留区和天线净空，输出 [e16-right-mid-plan.json](../hardware/e16-right-mid-plan.json)；[generate-e16-right-mid-svg.py](generate-e16-right-mid-svg.py) 直接读取 [e16-right-mid-snapshot.json](../hardware/e16-right-mid-snapshot.json) 画当前审查图（L 形板框、两键、禁布区与显示包络）。快照用 [eda-export-e16-snapshot.js](eda-export-e16-snapshot.js) 从 E16 图页重新导出，否则图会停在旧状态：
+右侧中部 USB 方向由 [E16 布局方案](../hardware/pcb-e16-usb-right-mid.md) 推进：[plan-e16-right-mid.py](plan-e16-right-mid.py) 用 E15 快照的真实焊盘坐标比较"原布局 / 新方案"的焊盘、模块外形、NFC 保留区和天线净空，输出 [e16-right-mid-plan.json](../hardware/e16-right-mid-plan.json)；[generate-e16-right-mid-svg.py](generate-e16-right-mid-svg.py) 直接读取 [e16-right-mid-snapshot.json](../hardware/e16-right-mid-snapshot.json) 画当前审查图（L 形板框、三键、禁布区与显示包络）。快照用 [eda-export-e16-snapshot.js](eda-export-e16-snapshot.js) 从 E16 图页重新导出，否则图会停在旧状态：
 
 ```sh
 node projects/nfc-business-card/scripts/eda-exec-wait.mjs \
@@ -15,7 +15,7 @@ python3 -c "import json,pathlib;d=json.load(open('/tmp/snap.json'))['result'];p=
 python3 projects/nfc-business-card/scripts/generate-e16-right-mid-svg.py
 ```
 
-原理图与 PCB 的一致性用逐引脚比对核实：[eda-export-pcb-pins.js](eda-export-pcb-pins.js) 导出 PCB 焊盘网络，[check-netlist-consistency.py](check-netlist-consistency.py) 与原理图导出的 netlist 做双向差集（当前 55 位号 / 230 引脚 / 0 处差异）：
+原理图与 PCB 的一致性用逐引脚比对核实：[eda-export-pcb-pins.js](eda-export-pcb-pins.js) 导出 PCB 焊盘网络，[check-netlist-consistency.py](check-netlist-consistency.py) 与原理图导出的 netlist 做双向差集（当前 56 位号 / 234 引脚 / 0 处差异）：
 
 ```sh
 node projects/nfc-business-card/scripts/eda-exec-wait.mjs \
@@ -55,7 +55,7 @@ node projects/nfc-business-card/scripts/eda-exec-wait.mjs projects/nfc-business-
 python3 projects/nfc-business-card/scripts/check-e16-manufacture.py
 ```
 
-外壳与**真实元件模型**的干涉检查（不只简化参考盒）：先用 [eda-export-e16-3d.js](eda-export-e16-3d.js) 从 E16 图页导出带元件模型的 STEP，等 `~/Downloads/.cn.lceda.pro.*` 的字节数稳定后复制到 `/tmp/e16-board.step`，再用 [check-e16-board-fit.py](check-e16-board-fit.py) 在 FreeCAD 里把板抬到 z=0.7 与 V4 上下壳求交：
+外壳与**真实元件模型**的干涉检查（不只简化参考盒）：先用 [eda-export-e16-3d.js](eda-export-e16-3d.js) 从 E16 图页导出带元件模型的 STEP，等 `~/Downloads/.cn.lceda.pro.*` 的字节数稳定后复制到 `/tmp/e16-board.step`，再用 [check-e16-board-fit.py](check-e16-board-fit.py) 在 FreeCAD 里把板抬到 z=0.7 与 V7 上下壳求交：
 
 ```sh
 node projects/nfc-business-card/scripts/eda-exec-wait.mjs projects/nfc-business-card/scripts/eda-export-e16-3d.js 120000
@@ -63,7 +63,7 @@ cp ~/Downloads/.cn.lceda.pro.XXXXXX /tmp/e16-board.step
 /Applications/FreeCAD.app/Contents/Resources/bin/freecadcmd projects/nfc-business-card/scripts/check-e16-board-fit.py
 ```
 
-脚本会过滤导出文件里堆在原点、没有放置的库模型，输出壳体干涉、三条加强筋带（z 3.6–4.0）干涉、两个键帽与实物元件的干涉，以及最高元件到上盖内表面的余量；有真实干涉时退出码为 1。默认读 V5 模型，可用 `--enclosure=...` 换版本。当前结果：462 个放置实体、壳体/加强筋/键帽 0 干涉、最高件 J1 余量 0.13 mm。
+脚本会过滤导出文件里堆在原点、没有放置的库模型，输出壳体干涉、三条加强筋带（z 3.6–4.0）干涉、三个键帽与实物元件的干涉，以及最高元件到上盖内表面的余量；有真实干涉时退出码为 1。默认读 V7 模型，可用 `--enclosure=...` 换版本。当前结果：918 个导出实体、474 个在板上，壳体/加强筋/三个键帽 **0 干涉**，最高件 J1 余量 0.13 mm。
 
 [pcb-maze-router.py](pcb-maze-router.py) 是补线阶段用的离线两层迷宫布线器。输入一份几何快照（`pcb_PrimitiveLine` / `pcb_PrimitiveVia` / `pcb_PrimitivePad` 的坐标，单位 mil）和任务表（`[网络, 起点, [目标...]]`，单位 mm），按实际设计规则做障碍扩张后用矢量桶队列 Dijkstra 求路径，输出线段与过孔清单；`--rip` 可先剔除挡路的既有线段，`--pen` 控制拥塞代价让多条线并行挤同一走廊，`--width` 调整线宽。它只写 JSON，改工程由单独的 EasyEDA 脚本完成：
 
@@ -77,11 +77,20 @@ E14 实际平面图由 [generate-e14-eda-layout-svg.py](generate-e14-eda-layout-
 
 外壳坐标协调样件由 [e14-enclosure-v2-eda-coordinate.py](../enclosure/e14-enclosure-v2-eda-coordinate.py) 生成；复核使用 [check-e14-enclosure-v2.py](check-e14-enclosure-v2.py)。V2 将 USB 开口放在 E14 实际 J1 所在的 y=0 边，只用于解决 PCB/外壳坐标关系。
 
-按键已收敛为**两颗**（SW1 y=3.30 / SW3 y=15.10，中心距 11.80 mm，本体间隙 6.60 mm），原第三颗 SW2 已从原理图与 PCB 删除，外壳 V3 只开两个键孔；菜单仍按两键（一级/二级切换）定义。
+按键为**三颗**：SW1 (38.1, 3.30)、SW3 (38.1, 15.10) 一列 + 三角第三点 SW2 (46.3, 8.80)，外壳 V7 开三个键孔；菜单仍按两键（一级/二级切换）定义，第三颗接在原本空置的 `KEY_NEXT_N` 上，功能待定。
 
 E14 模型可直接复现：`/Applications/FreeCAD.app/Contents/Resources/bin/freecadcmd projects/nfc-business-card/enclosure/e14-layout-study.py`；几何检查使用 `freecad-study.py check`，视觉检查使用一次 GUI 预览。统一输出到新目录或新文件，保留已有模型；不覆盖其他窗口中的手工或未保存修改。
 
 E14 生产化门槛记录见 [pcb-e14-manufacturing-gates.json](../hardware/pcb-e14-manufacturing-gates.json)。它只记录当前快照和放行条件，不生成制造文件，也不会把未确认的电池尺寸或空间包络当成供应商规格。
+
+插头侧复核：[check-e16-usb-plug.py](check-e16-usb-plug.py) 按 GCT mating view 的 8.34 × 2.56 mm 插头截面，在 V7 报告量到的 J1 包络上对中插到底，检查插头与注塑头是否撞壳：
+
+```sh
+/Applications/FreeCAD.app/Contents/Resources/bin/freecadcmd \
+  projects/nfc-business-card/scripts/check-e16-usb-plug.py
+```
+
+当前结果：金属壳对上/下壳 **0 / 0 mm³**；能插到接插面的最大注塑头宽度 **9.20 mm**（缺口 9.24 mm），更宽的注塑头会停在卡边、少插 0.8 mm（接插面在卡边内侧 0.8 mm）。
 
 门槛检查：
 

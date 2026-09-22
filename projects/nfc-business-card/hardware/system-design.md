@@ -16,7 +16,7 @@ flowchart LR
     SW["TPS22919\n屏幕受控供电"]
     EPD["屏幕升压外围 + 24 pin FPC\nGDEH0154E01 取样；待验证"]
     NFC["匹配电容 + 独立 NFC 线圈\n最终装配状态调谐"]
-    KEY["两键\n一级 / 二级轮换（第三键已取消）"]
+    KEY["两键\n一级 / 二级轮换（第三键备用）"]
     DEBUG["SWD 测试焊盘\n首烧与救援"]
     NTC["电池温度检测\n与包体热接触"]
     USB -->|VBUS| CHG

@@ -2,13 +2,13 @@
 
 ## 当前确定方案
 
-更新于 **2026-09-22**。沿含壳 **84 × 52 mm** 的定制 PCB/PCBA 继续，优先薄度和装配余量；E14 采用屏幕左上、301230 类电池左下、NFC 右上、USB/充电/主控右下的主布局方向。使用 nRF52840 内置 NFCT，不推进断电可读；厚度 ≤5 mm 和电池包体仍待实物验证。
+更新于 **2026-09-23**。沿含壳 **84 × 52 mm** 的定制 PCB/PCBA 继续，优先薄度和装配余量；屏幕左上、301230 类电池左下、NFC 右上、USB/充电/主控右侧（USB 取右边缘中部）。使用 nRF52840 内置 NFCT，不推进断电可读；厚度 ≤5 mm 和电池包体仍待实物验证。
 
-交互已确定以两键为基本能力：一级栏目轮换、二级选项轮换，二级选到即自动应用。硬件同步收敛为两颗按键（中心距 11.8 mm，外壳两个键孔），原第三键的备用输入带上拉保留在主控上。完整规则见[架构](architecture.md)。
+交互以两键为基本能力：一级栏目轮换、二级选项轮换，二级选到即自动应用。硬件为**三颗按键**（SW1 (38.1, 3.30)、SW3 (38.1, 15.10) 一列 + 三角第三点 SW2 (46.3, 8.80)，外壳 V7 开三个键孔），第三颗接在原本空置的带上拉输入 `KEY_NEXT_N` 上，功能待定。完整规则见[架构](architecture.md)。
 
-当前设计入口为[E14 新电池尺寸主布局评审](../hardware/pcb-e14-battery-layout.md)及[最新 EDA](../../../eda/NFC-Business-Card-84x52-E14-Battery-Layout.eprj2)。E14 已完成块级空间重排并保存重开；56 个元件、0 铜线，原生 DRC 仍有未布线连接错误、板边和测试点间距结果，尚未完成全部连接、RF、供电验证与实物装配。
+当前设计入口为 [E16 右侧中部 USB 布局](../hardware/pcb-e16-usb-right-mid.md) 及 [最新 EDA](../../../eda/NFC-Business-Card-84x52-E14-Battery-Layout.eprj2) 内的 `Board1_2`：56 个元件、242 个焊盘、781 段铜线、162 个过孔、两层 GND 覆铜，原生 DRC 普通间距 0 / 连接 0（仅 12 项 J1 槽边告警），逐引脚网表 234 项 0 差异。RF 性能、供电余量与实物装配仍未验证。
 
-当前 CAD 空间研究为 [pcba-e14-battery-layout.FCStd](../enclosure/pcba-e14-battery-layout.FCStd) 和 [E14 平面图](../enclosure/pcba-e14-battery-layout.svg)；它不是可打印外壳，窗口、按键孔、USB 开口和装配公差仍待 PCB 走线稳定后设计。旧版 FreeCAD 模型保留作历史对照。屏幕规格差异、BUSY、刷新时间和峰值电流的依据与待测项见[接口评估](gdeh0154e01-evaluation.md#接口与参考电路复核2026-09-21)。
+当前外壳为 [E16 V7](../enclosure/nfc-card-e16-enclosure-v7.FCStd)（L 形板框、电池袋封闭、三个齐平键帽、三条加强筋、4.5 mm 叠层），对导出的真实元件 STEP 0 干涉；0.4/0.5 mm 薄壁与键帽行程仍需实物样件验证。历史 CAD 研究（[pcba-e14-battery-layout.FCStd](../enclosure/pcba-e14-battery-layout.FCStd) 等）保留作对照。屏幕规格差异、BUSY、刷新时间和峰值电流的依据与待测项见[接口评估](gdeh0154e01-evaluation.md#接口与参考电路复核2026-09-21)。
 
 ## 当前优先阅读
 

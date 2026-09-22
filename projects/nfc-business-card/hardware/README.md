@@ -2,21 +2,18 @@
 
 ## 当前确定方案
 
-更新于 **2026-09-22**。成品沿 **84 × 52 mm（含壳边缘）定制 PCB/PCBA** 继续，优先薄度与装配余量；nRF52840 内置 NFCT、USB-C、GDEH0154E01 六色屏和至少两键。当前 E14 主布局把 301230 类电池按 30 × 12 × 3 mm 标称包体放在左下，屏幕在左上、NFC 在右上、USB/充电/主控在右下；电池规格和 ≤5 mm 仍待实物验证。
+更新于 **2026-09-23**。成品沿 **84 × 52 mm（含壳边缘）定制 PCB/PCBA** 继续，优先薄度与装配余量；nRF52840 内置 NFCT、USB-C（右边缘中部）、GDEH0154E01 六色屏和**三颗按键**。301230 类电池按 30 × 12 × 3 mm 标称包体放在左下电池挖空里，屏幕在左上、NFC 净空在右上、USB/充电/主控在右侧；电芯最大包络与目标厚度仍待实物验证。
 
-新的开工入口是[E15 清理版 PCB 开工记录](pcb-e15-clean-layout.md)。E15 位于 E14 工程内，已清除历史 PCB 图元并保存为 56 个元件、242 个焊盘、0 铜线、0 过孔的独立 PCB 图页；下一步先处理原理图关联、板框/USB 基准和真实电池最大包络。
+当前开工入口是 E14 工程内的 **`Board1_2` / E16 Right-Mid USB Study**（2026-09-23 与 `Schematic1` 关联）：L 形板框（84 × 52，左下 33.5 × 15 mm 电池挖空 + 右边缘 9.24 × 6.5 mm USB 缺口），**56 个元件、242 个焊盘、781 段铜线、162 个过孔、两层 GND 覆铜**；原生 DRC 保存/关闭/重开后普通间距 **0**、连接 **0**，只剩 12 项 J1 沉板槽边告警（0.20 mm，板厂下限允许）；原理图与 PCB **逐引脚 234 项、0 处网名差异**。外壳 V7 对导出的真实元件 STEP 0 干涉。[E15 底边 USB 版](pcb-e15-clean-layout.md) 与 `Board1/E6` 保留作回退。
 
-现有 EDA 保留三颗按键；基本交互只依赖两颗，分别轮换一级栏目和二级选项，二级选到即自动应用。第三颗在不影响薄度、走线和装配时保留，功能待定；本轮未删除元件或修改网络。
+按键为**三颗**：SW1 (38.1, 3.30)、SW3 (38.1, 15.10) 一列 + 三角第三点 SW2 (46.3, 8.80)，外壳 V7 开三个键孔。基本交互只用键 1 / 键 2（一级栏目 / 二级选项，选到即自动应用），第三颗接在原本空置的 `KEY_NEXT_N` 上，功能待定。
 
 - 最新原始工程：[NFC-Business-Card-84x52-E14-Battery-Layout.eprj2](../../../eda/NFC-Business-Card-84x52-E14-Battery-Layout.eprj2)。
-- 当前推进方法：[E14 新电池尺寸主布局评审](pcb-e14-battery-layout.md)。E14 是从 E9 复制的无铜块级布局副本，先验收电池、NFC、USB/充电/主控的空间关系；E13 自动布线和 E9/E7 作为历史与走线对照。
-- USB [工艺版本复核](usb4500-clearance-review.md)：国内更新说明允许内槽/锣边到铜 ≥0.20 mm，J1 满足名义最小值，保留原封装并继续整体重排；规则写入未成功，原生 58 条告警未变，未裁焊盘或缩槽。
-- 当前布局：[E14 新电池尺寸主布局评审](pcb-e14-battery-layout.md)；E7/E9 无铜基线、E13 走线对照、原电路选型和网表继续保留。
-- 生产化门槛：[E14 生产化门槛记录](pcb-e14-manufacturing-gates.json)；脚本 [check-e14-gates.py](../scripts/check-e14-gates.py) 只验证当前快照完整性，不会提前生成供应商制造包。
-- 在改 CAD 或新建 EDA 副本前，先做[布线空间先行研究](routing-space-study.md)：比较长条电池放左下、右下保留 16.5 mm 高连续布线区的可行性；该研究尚未替换 E9，也未冻结电池型号。
-- 最新机械研究：[pcba-e14-battery-layout.FCStd](../enclosure/pcba-e14-battery-layout.FCStd) 与 [按 EDA 实际坐标重绘的 E14 平面图](../enclosure/pcba-e14-battery-layout.svg)；后者由 [e14-eda-snapshot.json](e14-eda-snapshot.json) 和 [生成脚本](../scripts/generate-e14-eda-layout-svg.py)复现，明确显示当前历史板框、机械区和未入 PCB 的电池目标。空间包络已保存重开并通过几何检查。基于意图包络生成的 [外壳 V1 验证样件](../enclosure/nfc-card-e14-enclosure-v1.FCStd)仍保留右侧 USB 假设；新增 [V2 EDA 坐标协调样件](../enclosure/nfc-card-e14-enclosure-v2-eda-coordinate.FCStd)把 USB 开口移到当前 J1 所在的 y=0 边。V1/V2 均为验证样件，仍需先冻结实际板框、J1 朝向、电池包体和 DFM，不能直接下生产单。
-
-E14 保存重开后为 56 个元件、0 铜线、0 过孔；器件间 SMD 重叠已清除。原生 DRC 仍有 222 个叶级结果，其中 188 个为零铜线连接错误，另有板边/测试点间距结果；USB 数据、VBUS、地回流和 EPD_BUSY 仍未完成。NFC 禁布区已移至右上作为空间约束，天线、实物供电/装配和电池完整包体仍待解决，不能直接生产。
+- 当前布局记录：[E16 右侧中部 USB 布局](pcb-e16-usb-right-mid.md)（落盘、三键三角形、外壳干涉复检、制造包核对、电池接口与 NFC 馈线预研）；E15/E14/E13/E9/E7/E6 保留作历史与走线对照。
+- USB [工艺版本复核](usb4500-clearance-review.md)：国内更新说明允许内槽/锣边到铜 ≥0.20 mm，J1 满足名义最小值，保留原封装；那 12 项槽边告警就是这条 0.20 mm 规则的体现。
+- 生产化门槛：[E14 生产化门槛记录](pcb-e14-manufacturing-gates.json)；脚本 [check-e14-gates.py](../scripts/check-e14-gates.py) 只验证当前快照完整性，不会提前生成供应商制造包。当前仍未放行，阻塞项是电芯包络、NFC 天线、外壳实物验证与最终放行。
+- 待输入三件：① 电芯实物最大包络与出线方向（硬边界见 [E16 记录](pcb-e16-usb-right-mid.md)）；② PN532 桌面实验定 NFC 天线形式，再补两条馈线与匹配网络；③ 打印 V7 四件验键帽行程、屏幕贴合与 0.4–0.5 mm 薄壁公差。
+- 当前机械研究：[E16 外壳 V7](../enclosure/nfc-card-e16-enclosure-v7.FCStd)；历史：[pcba-e14-battery-layout.FCStd](../enclosure/pcba-e14-battery-layout.FCStd)、[E14 平面图](../enclosure/pcba-e14-battery-layout.svg)、[V1](../enclosure/nfc-card-e14-enclosure-v1.FCStd)/[V2](../enclosure/nfc-card-e14-enclosure-v2-eda-coordinate.FCStd) 验证样件。
 
 J2 采用参考板同款 FPC-05FB-24PH20 / C2856831；已有 [79 项名义尺寸比较](fpc-connector-review.json)不代替样品插合。电路取舍及规格差异见[本版记录](pcb-e6-84x52.md)与[屏幕资料](../docs/gdeh0154e01-evaluation.md)。
 

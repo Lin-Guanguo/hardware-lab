@@ -10,7 +10,7 @@
 
 - 最新原始工程：[NFC-Business-Card-84x52-E14-Battery-Layout.eprj2](../../../eda/NFC-Business-Card-84x52-E14-Battery-Layout.eprj2)。
 - 当前布局记录：[E16 右侧中部 USB 布局](pcb-e16-usb-right-mid.md)（落盘、三键三角形、外壳干涉复检、制造包核对、电池接口与 NFC 馈线预研）；E15/E14/E13/E9/E7/E6 保留作历史与走线对照。
-- USB [工艺版本复核](usb4500-clearance-review.md)：国内更新说明允许内槽/锣边到铜 ≥0.20 mm，J1 满足名义最小值，保留原封装；那 12 项槽边告警就是这条 0.20 mm 规则的体现。
+- USB [工艺版本复核](usb4500-clearance-review.md)：国内更新说明允许内槽/锣边到铜 ≥0.20 mm，J1 满足名义最小值，保留原封装；那 24 项告警就是这条 0.20 mm 规则的体现（J1 焊盘离板边 0.2007 mm）。
 - 生产化门槛：[E14 生产化门槛记录](pcb-e14-manufacturing-gates.json)；脚本 [check-e14-gates.py](../scripts/check-e14-gates.py) 只验证当前快照完整性，不会提前生成供应商制造包。当前仍未放行，阻塞项是电芯包络、NFC 天线、外壳实物验证与最终放行。
 - 待输入三件：① 电芯实物最大包络与出线方向（硬边界见 [E16 记录](pcb-e16-usb-right-mid.md)）；② PN532 桌面实验定 NFC 天线形式，再补两条馈线与匹配网络；③ 打印 V7 四件验键帽行程、屏幕贴合与 0.4–0.5 mm 薄壁公差。
 - 当前机械研究：[E16 外壳 V7](../enclosure/nfc-card-e16-enclosure-v7.FCStd)；历史：[pcba-e14-battery-layout.FCStd](../enclosure/pcba-e14-battery-layout.FCStd)、[E14 平面图](../enclosure/pcba-e14-battery-layout.svg)、[V1](../enclosure/nfc-card-e14-enclosure-v1.FCStd)/[V2](../enclosure/nfc-card-e14-enclosure-v2-eda-coordinate.FCStd) 验证样件。

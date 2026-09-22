@@ -2,7 +2,7 @@
 
 ## 当前确定方案
 
-更新于 **2026-09-23**。E16 板（三键、L 形板框、右边缘 USB 缺口）已收口：PCB 原生 DRC 普通间距 0 / 连接 0、逐引脚网表 56 位号 / 234 引脚 / 0 差异、制造包自动核对 `ok`、外壳 V7 对真实元件模型 0 干涉。当前 CAD 入口是 [e16-enclosure-right-mid-usb-v7.py](../enclosure/e16-enclosure-right-mid-usb-v7.py)，配套校验脚本 [check-e16-board-fit.py](check-e16-board-fit.py) 与 [check-e16-usb-plug.py](check-e16-usb-plug.py)。E14 空间研究（[e14-layout-study.py](../enclosure/e14-layout-study.py)、[e14-enclosure-v1.py](../enclosure/e14-enclosure-v1.py)）与 V1–V6 外壳样件保留作历史入口。
+更新于 **2026-09-23**。E16 板（三键、L 形板框、右边缘 USB 缺口）已收口：PCB 原生 DRC 连接 0、只剩 24 项 `Board Outline to SMD Pad`（同一处 0.2007 mm 焊盘到板边的两种分类）、逐引脚网表 56 位号 / 234 引脚 / 0 差异、制造包自动核对 `ok`、外壳 V7 对真实元件模型 0 干涉。当前 CAD 入口是 [e16-enclosure-right-mid-usb-v7.py](../enclosure/e16-enclosure-right-mid-usb-v7.py)，配套校验脚本 [check-e16-board-fit.py](check-e16-board-fit.py) 与 [check-e16-usb-plug.py](check-e16-usb-plug.py)。E14 空间研究（[e14-layout-study.py](../enclosure/e14-layout-study.py)、[e14-enclosure-v1.py](../enclosure/e14-enclosure-v1.py)）与 V1–V6 外壳样件保留作历史入口。
 
 新的 PCB 开工入口是 [E15 清理版 PCB 开工记录](../hardware/pcb-e15-clean-layout.md)。E15 图页位于 E14 `.eprj2` 工程内；其审查快照由 [generate-e15-clean-layout-svg.py](generate-e15-clean-layout-svg.py) 从保存后的 E15 数据生成。该脚本只渲染审查图，不修改 EasyEDA 工程。
 

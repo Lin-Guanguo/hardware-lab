@@ -16,12 +16,12 @@ status: pcb_routing_in_progress
 - 最新 CAD 研究：[pcba-e14-battery-layout.FCStd](enclosure/pcba-e14-battery-layout.FCStd)、[E14 新电池尺寸布局记录](hardware/pcb-e14-battery-layout.md)和[按 EDA 实际坐标重绘的平面图](enclosure/pcba-e14-battery-layout.svg)。这是空间验证包络，不是可打印外壳；旧的意图示意另存为 `pcba-e14-battery-layout-intended.svg`，旧版 `pcba-e6-84x52-detail.FCStd` 保留作历史对照。
 - 当前 EDA：[NFC-Business-Card-84x52-E14-Battery-Layout.eprj2](../../eda/NFC-Business-Card-84x52-E14-Battery-Layout.eprj2) 内的 [E15 Clean Layout - New Battery 图页](hardware/pcb-e15-clean-layout.md)。E15 已清除 E14 的历史板框、文字和机械图元，起始快照为 56 个元件、242 个焊盘、0 铜线、0 过孔；当前已通过新建 `Board1_1` 关联 `Schematic1`，并完成 `USB_CC2` 首段 4 条线/2 个通孔。右侧中部 USB 已确认作为外形优先方向，E15 底边中部布局和原 `Board1/E6` 保留作回退；最终 PCB 板框和 USB 开口仍待确认，因此不能生产。
 - USB 位置试探：[E8 USB 左移评审](hardware/pcb-e8-usb-left.md)。E8 证明现有板框缺口不允许只把 J1 横向移动；换边需要连板框和外壳一起重做，因此当前不替换 E7 的 USB 位置。
-- 右侧中部研究：[E16 右侧中部 USB 研究](hardware/pcb-e16-usb-right-mid.md)。E16 证明右侧中部会同时碰到 NFC 禁布区、U1/去耦和右板边；它作为独立研究副本保留，E15 仍是当前正式布线基线。
+- 右侧中部方案：[E16 右侧中部 USB 布局方案](hardware/pcb-e16-usb-right-mid.md)。USB 移到右边缘中部（缺口 13 × 6.5 mm，插口朝右），U1 转 180° 让模块天线朝下板边并保留各层净空；离线焊盘级校验相对 E15 无新增冲突，并顺带解决了 R1 压在底边缺口上的问题。方案尚未写入 EasyEDA：本机 Run API Gateway 扩展未连上桥接服务，重连后才落盘跑原生 DRC。
 - 屏幕资料：J2 已替换为参考板同款 FPC-05FB-24PH20 / C2856831；234 个元件引脚网络按型号规格、DESPI 参考电路及器件规格核对。BUSY、外围电容差异、峰值电流和实际插合仍待验证；[接口对照](docs/gdeh0154e01-evaluation.md#接口与参考电路复核2026-09-21)。
 - 机械边界：E14 已有独立 FreeCAD 空间研究模型并通过保存重开几何检查；V1 右侧 USB 意图样件保留，另生成了按 EDA 实际 J1 坐标协调的 [V2 外壳样件](enclosure/nfc-card-e14-enclosure-v2-eda-coordinate.FCStd)，两者外包络均按 84 × 52 × 5.0 mm 目标。V2 仍需随 Layer 11 板框、J1 朝向和真实电池包体冻结，不含卡扣、螺柱、胶槽和最终公差，需实物打印验证后才能继续生产化。
 - 烧录与总装：优先委托工厂首烧，后续 USB-C 升级，SWD 焊盘保留；设计基本定稿后、下单前确认工厂支持与费用。到手接屏、接电池与装壳的目标和待确认项见[烧录与装配交接](docs/usb-and-prototyping.md#工厂烧录与装配交接)。
 - 保存与同步已复核：17 条过期说明已删除或替换，保存重开未恢复；27 个 SCH/PCB 关联 ID 已对齐，原生网表告警消失。最新副本 112 项关联/封装检查通过；原版保留，本轮在副本调整 11 个小器件。
-- 下一步按[新布局开工记录](hardware/pcb-e15-clean-layout.md)推进：基于已关联的 `Board1_1/Schematic1`，明确 84 × 52 是外壳目标还是 PCB 板框，再按右侧中部 USB 方向重排板框入口、U1/去耦、NFC 保留区和真实电池最大包络；之后按 USB 数据/CC/VBUS/地回流/主控顺序布线，最后同步 CAD 和外壳。到货后仍需验证 FPC、刷新/功耗、电池与 NTC。
+- 下一步按[E16 右侧中部 USB 布局方案](hardware/pcb-e16-usb-right-mid.md)推进：重连 EDA 桥接后，在 E16 图页落盘板框与 11 个器件的移动、保存重开并复核旋转方向与原生 DRC；随后按 USB CC、DP/DM、VBUS、地回流和主控顺序布线，再同步 CAD 与外壳。到货后仍需验证 FPC、刷新/功耗、电池与 NTC。
 
 目录入口：[硬件](hardware/README.md) · [外壳与模型](enclosure/README.md) · [设计资料](docs/README.md) · [脚本](scripts/README.md)。83 × 51、旧 84 × 52 和其他版本保留比较；“最新”以上述文件为准。
 

@@ -29,6 +29,16 @@ python3 projects/nfc-business-card/scripts/check-netlist-consistency.py --sch /t
 python3 projects/nfc-business-card/scripts/render-stl-iso.py
 ```
 
+外壳与**真实元件模型**的干涉检查（不只简化参考盒）：先用 [eda-export-e16-3d.js](eda-export-e16-3d.js) 从 E16 图页导出带元件模型的 STEP，等 `~/Downloads/.cn.lceda.pro.*` 的字节数稳定后复制到 `/tmp/e16-board.step`，再用 [check-e16-board-fit.py](check-e16-board-fit.py) 在 FreeCAD 里把板抬到 z=0.7 与 V4 上下壳求交：
+
+```sh
+node projects/nfc-business-card/scripts/eda-exec-wait.mjs projects/nfc-business-card/scripts/eda-export-e16-3d.js 120000
+cp ~/Downloads/.cn.lceda.pro.XXXXXX /tmp/e16-board.step
+/Applications/FreeCAD.app/Contents/Resources/bin/freecadcmd projects/nfc-business-card/scripts/check-e16-board-fit.py
+```
+
+脚本会过滤导出文件里堆在原点、没有放置的库模型，输出壳体干涉、三条加强筋带（z 3.6–4.0）干涉和最高元件到上盖内表面的余量；有真实干涉时退出码为 1。当前结果：462 个放置实体、0 干涉、最高件 J1 余量 0.13 mm。
+
 [pcb-maze-router.py](pcb-maze-router.py) 是补线阶段用的离线两层迷宫布线器。输入一份几何快照（`pcb_PrimitiveLine` / `pcb_PrimitiveVia` / `pcb_PrimitivePad` 的坐标，单位 mil）和任务表（`[网络, 起点, [目标...]]`，单位 mm），按实际设计规则做障碍扩张后用矢量桶队列 Dijkstra 求路径，输出线段与过孔清单；`--rip` 可先剔除挡路的既有线段，`--pen` 控制拥塞代价让多条线并行挤同一走廊，`--width` 调整线宽。它只写 JSON，改工程由单独的 EasyEDA 脚本完成：
 
 ```sh

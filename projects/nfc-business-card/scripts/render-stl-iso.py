@@ -68,15 +68,15 @@ def render(path, color, draw_on, scale, ox, oy, center=False):
 
 img = Image.new('RGB', (1500, 700), 'white')
 d = ImageDraw.Draw(img)
-render(BASE/'nfc-card-e16-bottom-v5.stl', (120, 150, 185), d, 6.2, 400, 300)
-render(BASE/'nfc-card-e16-top-v5.stl', (150, 178, 210), d, 6.2, 1010, 300)
-render(BASE/'nfc-card-e16-keycaps-v5.stl', (240, 186, 150), d, 26.0, 780, 545, center=True)
-d.text((40, 30), 'E16 enclosure V5 - bottom, top and key caps, shaded isometric from STL', fill=(30, 45, 65))
+render(BASE/'nfc-card-e16-bottom-v7.stl', (120, 150, 185), d, 6.2, 400, 300)
+render(BASE/'nfc-card-e16-top-v7.stl', (150, 178, 210), d, 6.2, 1010, 300)
+render(BASE/'nfc-card-e16-keycaps-v7.stl', (240, 186, 150), d, 26.0, 780, 545, center=True)
+d.text((40, 30), 'E16 enclosure V7 - bottom, top and key caps, shaded isometric from STL', fill=(30, 45, 65))
 d.text((40, 55), 'outer 84 x 52 x 4.5, L-shaped PCB with the 33.5 x 15 battery bite', fill=(80, 95, 115))
 d.text((40, 78), 'top: screen window + two key holes; caps ride flush in the holes and press the SKQGABE010 stems', fill=(80, 95, 115))
 d.text((520, 660), 'key caps x2 (scale 26x): 4.2 mm puck riding in the 4.6 mm hole, 1.45 mm tall', fill=(150, 110, 80))
-img.save(OUT/'e16-enclosure-v5-iso.png')
-print('saved', OUT/'e16-enclosure-v5-iso.png')
+img.save(OUT/'e16-enclosure-v7-iso.png')
+print('saved', OUT/'e16-enclosure-v7-iso.png')
 
 
 def render_top(path, color, draw_on, scale, ox, oy):
@@ -100,7 +100,7 @@ def render_top(path, color, draw_on, scale, ox, oy):
 top = Image.new('RGB', (1500, 620), 'white')
 td = ImageDraw.Draw(top)
 SCALE, TOX, TOY = 9.6, 250, 598.0
-render_top(BASE / 'nfc-card-e16-top-v5.stl', (150, 178, 210), td, SCALE, TOX, TOY)
+render_top(BASE / 'nfc-card-e16-top-v7.stl', (150, 178, 210), td, SCALE, TOX, TOY)
 
 
 def tpt(x, y):
@@ -116,12 +116,12 @@ td.rectangle(trect(0, 0, 33.5, 15), outline=(150, 162, 178))
 td.text(tpt(4, 1.2), 'battery pocket 33.5 x 15 (closed floor + ceiling)', fill=(110, 125, 145))
 td.rectangle(trect(4.0, 20.3, 31.8, 48.1), outline=(20, 110, 100), width=2)
 td.text(tpt(5.5, 24.0), 'screen window 27.8 x 27.8', fill=(20, 110, 100))
-for label, y in [('KEY 1 (flush cap)', 3.3), ('KEY 2 (flush cap)', 15.1)]:
-    cx, cy = tpt(38.1, y)
+for label, (kx, ky) in [('KEY 1', (38.1, 3.3)), ('KEY 2', (38.1, 15.1)), ('KEY 3', (46.3, 8.8))]:
+    cx, cy = tpt(kx, ky)
     td.ellipse([cx - 18, cy - 18, cx + 18, cy + 18], outline=(217, 119, 6), width=2)
     td.text((cx + 26, cy - 6), f'{label}  y={y:.1f}', fill=(180, 90, 0))
-td.text((40, 30), 'E16 enclosure V5 - top shell seen from the front face (orthographic)', fill=(30, 45, 65))
-td.text((40, 55), 'two key holes on x = 38.1 at y = 3.3 / 15.1 mm, flush printed caps; screen window x 4.0-31.8, y 20.3-48.1', fill=(80, 95, 115))
+td.text((40, 30), 'E16 enclosure V7 - top shell seen from the front face (orthographic)', fill=(30, 45, 65))
+td.text((40, 55), 'three key holes: x=38.1 y=3.3 / 15.1 mm plus x=46.3 y=8.8 mm; screen window x 4.0-31.8, y 20.3-48.1', fill=(80, 95, 115))
 td.text((40, 78), 'the battery bite is a closed pocket: 0.4 mm printed floor below, 0.5 mm ceiling above', fill=(80, 95, 115))
-top.save(OUT / 'e16-enclosure-v5-top.png')
-print('saved', OUT / 'e16-enclosure-v5-top.png')
+top.save(OUT / 'e16-enclosure-v7-top.png')
+print('saved', OUT / 'e16-enclosure-v7-top.png')

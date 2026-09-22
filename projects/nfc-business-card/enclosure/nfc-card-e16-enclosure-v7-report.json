@@ -1,0 +1,179 @@
+{
+  "status": "E16_ENCLOSURE_V7_SAMPLE_NOT_PRODUCTION_RELEASE",
+  "outer_mm": [
+    84.0,
+    52.0,
+    4.5
+  ],
+  "battery_bite_mm": [
+    0.0,
+    0.0,
+    33.5,
+    15.0
+  ],
+  "size_basis": {
+    "structure": "laminate: L-shaped PCB outline is the card outline, shells carry a 1.0 mm inboard ledge, battery sits on the bottom plate inside the bite",
+    "card_outline_mm": [
+      84.0,
+      52.0
+    ],
+    "pcb_outline_mm": [
+      84.0,
+      52.0
+    ],
+    "connector_front_x_mm": 83.2,
+    "connector_overhang_past_card_mm": -0.8,
+    "overall_length_with_connector_mm": 83.2,
+    "business_card_reference_mm": [
+      85.6,
+      54.0
+    ]
+  },
+  "height_stack_mm": {
+    "bottom_plate": 0.4,
+    "under_pcb_clearance": 0.3,
+    "pcb": 0.8,
+    "top_cavity": 2.5,
+    "top_plate": 0.5,
+    "total": 4.5
+  },
+  "usb": {
+    "connector_body_x_mm": [
+      76.7,
+      83.2
+    ],
+    "y_mm": [
+      10.22,
+      21.77
+    ],
+    "z_mm": [
+      0.7,
+      3.87
+    ],
+    "note": "connector sits in the board notch; the shells follow the notch so no wall slot is cut"
+  },
+  "top_shell_ribs_mm": [
+    [
+      41.0,
+      16.4,
+      47.0,
+      17.2
+    ],
+    [
+      42.6,
+      0.5,
+      43.4,
+      15.5
+    ],
+    [
+      1.0,
+      7.1,
+      33.0,
+      7.9
+    ]
+  ],
+  "key_caps": {
+    "cap_solids": {
+      "KeyCap1": 1,
+      "KeyCap2": 1,
+      "KeyCap3": 1
+    },
+    "cap_to_shell_mm3": {
+      "KeyCap1/BottomShell": 0.0,
+      "KeyCap1/TopShell": 0.0,
+      "KeyCap2/BottomShell": 0.0,
+      "KeyCap2/TopShell": 0.0,
+      "KeyCap3/BottomShell": 0.0,
+      "KeyCap3/TopShell": 0.0
+    },
+    "cap_pair_intersection_mm3": 0.0,
+    "stem_top_z_mm": 3.0,
+    "cap_boss_bottom_z_mm": 3.05,
+    "travel_mm": 0.25,
+    "pressed": [
+      {
+        "cap": "KeyCap1",
+        "shell_mm3": 0.0,
+        "switch_body_mm3": 0.0
+      },
+      {
+        "cap": "KeyCap2",
+        "shell_mm3": 0.0,
+        "switch_body_mm3": 0.0
+      },
+      {
+        "cap": "KeyCap3",
+        "shell_mm3": 0.0,
+        "switch_body_mm3": 0.0
+      }
+    ]
+  },
+  "screen": {
+    "module_mm": [
+      37.32,
+      31.8,
+      0.85
+    ],
+    "module_origin_mm": [
+      2.0,
+      18.3,
+      3.05
+    ],
+    "active_area_mm": [
+      4.4,
+      20.7,
+      27.0,
+      27.0
+    ],
+    "window_mm": [
+      4.0,
+      20.3,
+      27.8,
+      27.8
+    ],
+    "source": "GDEH0154E01 mechanical drawing: 37.32 x 31.8 x 0.85, 27x27 active with 2.4 mm borders"
+  },
+  "button_holes_mm": [
+    [
+      38.1,
+      3.3
+    ],
+    [
+      38.1,
+      15.1
+    ],
+    [
+      46.3,
+      8.8
+    ]
+  ],
+  "geometry_checks": {
+    "invalid_shapes": [],
+    "shell_solids": {
+      "BottomShell": 1,
+      "TopShell": 1
+    },
+    "pocket_mm3": {
+      "floor_mm3": 201.0,
+      "floor_expected_mm3": 201.0,
+      "ceiling_mm3": 251.25,
+      "ceiling_expected_mm3": 251.25
+    },
+    "shell_intersections": [],
+    "shell_reference_intersections": [],
+    "connector_shell_contact_mm3": {
+      "BottomShell": 0.0,
+      "TopShell": 0.0
+    },
+    "findings": [],
+    "valid": true
+  },
+  "limitations": [
+    "Coordination sample only; not a production enclosure.",
+    "Battery is placed on the PCB top face as a 30 x 12 x 3 mm nominal target; supplier maximum, adhesive, swelling and lead bend are unverified.",
+    "The 5.0 mm stack needs 0.4/0.5 mm printed plates; a thicker plate or a bigger cell pushes the card past 5.0 mm.",
+    "Connector envelope (x 76.7-83.2, y 10.22-21.77, z 0-3.17 over the board) is measured from the STEP export of the saved board, so the mating face sits 0.8 mm inside the board edge; confirm against the part in hand.",
+    "Key caps, screen bonding, USB plug strain relief, ledge bonding and wall tolerances need physical samples.",
+    "The panel sits 1.51 mm above the PCB top (measured from the STEP export of the tallest part under the panel), so assembly needs a foam/gasket between the panel back and the components to press it against the bezel."
+  ]
+}

@@ -119,7 +119,7 @@ td.text(tpt(5.5, 24.0), 'screen window 27.8 x 27.8', fill=(20, 110, 100))
 for label, (kx, ky) in [('KEY 1', (38.1, 3.3)), ('KEY 2', (38.1, 15.1)), ('KEY 3', (46.3, 8.8))]:
     cx, cy = tpt(kx, ky)
     td.ellipse([cx - 18, cy - 18, cx + 18, cy + 18], outline=(217, 119, 6), width=2)
-    td.text((cx + 26, cy - 6), f'{label}  y={y:.1f}', fill=(180, 90, 0))
+    td.text((cx + 26, cy - 6), f'{label}  ({kx:.1f}, {ky:.1f})', fill=(180, 90, 0))
 td.text((40, 30), 'E16 enclosure V7 - top shell seen from the front face (orthographic)', fill=(30, 45, 65))
 td.text((40, 55), 'three key holes: x=38.1 y=3.3 / 15.1 mm plus x=46.3 y=8.8 mm; screen window x 4.0-31.8, y 20.3-48.1', fill=(80, 95, 115))
 td.text((40, 78), 'the battery bite is a closed pocket: 0.4 mm printed floor below, 0.5 mm ceiling above', fill=(80, 95, 115))

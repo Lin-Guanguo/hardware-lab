@@ -12,9 +12,9 @@ last_updated: 2026-09-23
 | 组件 | 位置 / 版本 | 用途 |
 | --- | --- | --- |
 | Node.js | `/Users/linguanguo/.nvm/versions/node/v24.19.0/bin/node`（nvm） | 桥接服务、EDA 脚本执行器 |
-| EasyEDA（嘉立创EDA）专业版 | 3.2.203 + 本机已启用 **Run API Gateway** 扩展 | 原理图/PCB 的唯一编辑环境 |
+| EasyEDA（嘉立创EDA）专业版 | 3.2.203 + **Run API Gateway** 扩展（启用步骤与排障见[软件说明](../projects/nfc-business-card/docs/software.md#客户端与启动命令)） | 原理图/PCB 的唯一编辑环境 |
 | FreeCAD | `/Applications/FreeCAD.app/Contents/Resources/bin/freecadcmd`（1.1.3） | 外壳建模、几何/干涉/网格检查、STEP/STL 导出 |
-| Python | `python3`（3.12，pyenv）+ `openpyxl`、`Pillow`、`matplotlib`、`numpy` | 快照分析、制造包核对、审查图渲染 |
+| Python | `python3`（3.12，pyenv）+ [scripts/requirements.txt](../projects/nfc-business-card/scripts/requirements.txt)（`openpyxl`、`Pillow`、`numpy`） | 快照分析、制造包核对、审查图渲染 |
 
 EDA 扩展与桥接之间是 WebSocket；桥接只监听 `127.0.0.1:49620`，不对外暴露。
 
@@ -31,6 +31,7 @@ EDA 扩展与桥接之间是 WebSocket；桥接只监听 `127.0.0.1:49620`，不
 
 ```sh
 git submodule update --init --recursive          # upstreams/ 里的 API 文档子模块
+python3 -m pip install -r projects/nfc-business-card/scripts/requirements.txt   # 脚本用到的三个包
 tools/easyeda-bridge/install-agent.sh            # 渲染 plist → bootout/bootstrap（仅登记，不启动）
 tools/easyeda-bridge/bridge-start.sh             # 需要时启动，并打印自检
 tools/easyeda-bridge/bridge-stop.sh              # 用完停止（作业保留）

@@ -86,6 +86,7 @@ python3 projects/nfc-business-card/scripts/check-e16-manufacture.py           # 
 | `/eda-windows` 里有“已连接”但实际只有 1 个窗口 | 扩展每十几秒重连一次并注册新 windowId，桥接会保留僵尸注册。执行器 [eda-exec-wait.mjs](../projects/nfc-business-card/scripts/eda-exec-wait.mjs) 每次先选在线窗口并重试 |
 | `~/Downloads/.cn.lceda.pro.*` 堆积 | EDA 导出的临时落盘口（隐藏随机名）。用 `projects/nfc-business-card/scripts/collect-e16-manufacture.py` 归纳到 `artifacts/manufacture/`，其余可清 |
 | 桥接进程反复退出 | 先看 `logs/easyeda-bridge.err` 是否有崩溃栈；`crashes (ERR_HTTP_HEADERS_SENT)` 计数长期为 0 才是正常 |
+| 所有 `lib_*.create` / `copy` / `modify` / `openInEditor` 失败（`Error: null` / `[object Object]`），但 PCB 的读写全部正常 | **本机没有个人库**。判据：`lib_LibrariesList.getAllLibrariesList()` 返回 `[]`、`getPersonalLibraryUuid()` 返回 `null`/`undefined`，且 `~/Documents/LCEDA-Pro/libraries/` 是空目录。客户端处于 `HALF_OFFLINE` 模式（官方推荐模式，无需登录），个人库本地可写但**必须先在 GUI 建一个**：起始页「新建库」按钮，或打开文档后顶部菜单 `文件 > 新建 > 库`。建完再重试 API 写入 |
 
 ## 相关文档
 

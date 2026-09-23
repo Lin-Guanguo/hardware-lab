@@ -12,8 +12,16 @@ Route files use the shape that plan-nfc-coil.py emits:
       "tracks": [{"net": "...", "layer": 1|2, "width_mm": 0.15, "points": [[x,y], ...]}],
       "vias":   [{"net": "...", "x": .., "y": .., "diameter_mm": 0.30, "hole_mm": 0.20}],
       "keepouts": [{"x0": .., "y0": .., "x1": .., "y1": ..}],   # optional, overrides the defaults
-      "ignore_nets": ["NFC1_TBD", "NFC2_TBD"]                   # copper this route is allowed to touch
+      "ignore_nets": ["NFC1_TBD", "NFC2_TBD"],                  # copper this route is allowed to touch
+      "pads": [{"net": "GND", "x": .., "y": ..,                 # optional: proposed component
+                "half_w_mm": 0.4, "half_h_mm": 0.45}]           # placement, checked like copper
     }
+
+Moving a component moves its pads, and pads were previously checked only against
+route tracks, never the other way round: a pad moved on top of an existing trace
+had no offline check at all. The "pads" list closes that. Pads are rectangles in
+millimetres, axis aligned, and are checked against existing traces, pads, vias and
+the board edge, plus against the route's own tracks and vias.
 
     python3 scripts/check-proposed-route.py --route hardware/e16-nfc-coil-plan.json
     python3 scripts/check-proposed-route.py --route plan.json --snapshot hardware/e16-right-mid-snapshot.json
@@ -37,6 +45,7 @@ MIL = 39.37007874015748
 # Clearances from the project's rule set (JLCPCB Capability, multiple layers).
 CL_TRACK_TRACK = 0.102
 CL_PAD_TRACK = 0.152
+CL_PAD_PAD = 0.152
 CL_VIA_TRACK = 0.152
 CL_EDGE = 0.300
 CL_HOLE_HOLE = 0.300
@@ -107,11 +116,19 @@ def check(route, snapshot):
         via["holeMil"] / MIL / 2, via.get("net") or "",
     ) for via in snapshot["vias"] if (via.get("net") or "") not in ignore]
 
+    proposed_pads = []
+    for pad in route.get("pads", []) or []:
+        proposed_pads.append((
+            pad["x"], pad["y"], pad["half_w_mm"], pad["half_h_mm"],
+            pad.get("net") or "", pad.get("layer"),
+        ))
+
     notes = []
     seen_keepout_notes = set()
     worst = {"track_to_track": (9e9, None), "track_to_pad": (9e9, None), "track_to_via": (9e9, None),
              "via_to_track": (9e9, None), "within_route": (9e9, None),
-             "board_edge": (9e9, None), "hole_to_hole": (9e9, None)}
+             "board_edge": (9e9, None), "hole_to_hole": (9e9, None),
+             "pad_to_track": (9e9, None), "pad_to_pad": (9e9, None), "pad_to_via": (9e9, None)}
     violations = []
 
     def note(kind, gap, where, rule):
@@ -206,9 +223,47 @@ def check(route, snapshot):
             note("via_to_track", point_to_segment(x, y, ax, ay, bx, by) - half_other - radius,
                  (round(x, 3), round(y, 3), other_net), CL_VIA_TRACK)
 
+    # Proposed component placements: the pads move, so every pad is checked the
+    # way a route would be. Unlike route copper this is distance *to* the pad
+    # rectangle, not from a centreline.
+    for (px, py, phw, phh, pnet, player) in proposed_pads:
+        pad_box = (px, py, phw, phh)
+        for (ax, ay, bx, by, half_other, other_net, other_layer) in lines:
+            if pnet and pnet == other_net:
+                continue
+            if player is not None and other_layer != player:
+                continue
+            length = math.hypot(bx - ax, by - ay)
+            count = max(2, int(length / 0.05) + 1)
+            for i in range(count + 1):
+                s = i / count
+                sx, sy = ax + (bx - ax) * s, ay + (by - ay) * s
+                note("pad_to_track", point_to_box(sx, sy, pad_box) - half_other,
+                     (round(px, 3), round(py, 3), other_net), CL_PAD_TRACK)
+        for (cx, cy, half_w, half_h, pad_net, number, pad_layer) in boxes:
+            if pnet and pnet == pad_net:
+                continue
+            if player is not None and pad_layer != player:
+                continue
+            gap = 9e9
+            for i in range(41):
+                s = i / 40
+                ox = cx - half_w + 2 * half_w * s
+                oy = cy - half_h + 2 * half_h * s
+                gap = min(gap, point_to_box(ox, oy, pad_box), point_to_box(ox, cy + half_h - 2 * half_h * s, pad_box))
+            note("pad_to_pad", gap, (round(px, 3), round(py, 3), f"pad {number} {pad_net}"), CL_PAD_PAD)
+        for (vx, vy, radius, _hole, other_net) in vias:
+            if pnet and pnet == other_net:
+                continue
+            note("pad_to_via", point_to_box(vx, vy, pad_box) - radius,
+                 (round(px, 3), round(py, 3), other_net), CL_PAD_TRACK)
+        note("board_edge", min(px - phw, 84 - px - phw, py - phh, 52 - py - phh),
+             (round(px, 3), round(py, 3), "pad"), CL_EDGE)
+
     return {
         "route": route.get("name", "unnamed"),
         "tracks": len(route.get("tracks", [])),
+        "pads": len(proposed_pads),
         "vias": len(route_vias),
         "worst_gap_mm": {kind: {"gap": round(value[0], 4), "at": value[1]} for kind, value in worst.items()},
         "notes": notes,

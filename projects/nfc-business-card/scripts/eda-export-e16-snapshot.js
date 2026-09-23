@@ -18,7 +18,25 @@ const regions = await eda.pcb_PrimitiveRegion.getAll();
 const strings = await eda.pcb_PrimitiveString.getAll();
 const lines = await eda.pcb_PrimitiveLine.getAll();
 const vias = await eda.pcb_PrimitiveVia.getAll();
+const pours = await eda.pcb_PrimitivePour.getAll();
+const poured = await eda.pcb_PrimitivePoured.getAll();
 const round = (v) => Math.round(v * 10000) / 10000;
+
+// A copper border or region exposes its outline as an IPCB_Polygon object, not
+// as a plain array: the source data comes from getSource(). The first version of
+// this exporter read `r.polygon`, which does not exist on a region, so the keep-
+// out outlines were dropped from the committed snapshot without any error.
+const polySource = (value) => {
+  if (value === undefined || value === null) return null;
+  if (typeof value.getSource === "function") {
+    try {
+      return value.getSource();
+    } catch (err) {
+      return null;
+    }
+  }
+  return value;
+};
 
 return {
   document: { uuid: E16_PAGE_UUID, name: "E16 Right-Mid USB Study" },
@@ -52,8 +70,37 @@ return {
   regions: regions.map((r) => ({
     id: r.primitiveId,
     layer: r.layer,
-    rule: r.rule,
-    polygon: r.polygon,
+    ruleType: r.ruleType,
+    regionName: r.regionName,
+    lineWidth: r.lineWidth,
+    complexPolygon: polySource(r.complexPolygon),
+  })),
+  // Copper borders: the outline a pour was drawn from. Kept separately from the
+  // filled result so a checker can tell "declared" from "actually filled".
+  pours: (pours || []).map((p) => ({
+    id: p.primitiveId,
+    net: p.net,
+    layer: p.layer,
+    pourName: p.pourName,
+    pourFillMethod: p.pourFillMethod,
+    preserveSilos: p.preserveSilos,
+    pourPriority: p.pourPriority,
+    lineWidth: p.lineWidth,
+    complexPolygon: polySource(p.complexPolygon),
+  })),
+  // Filled copper: the geometry that actually ends up on the board, including
+  // clearances and thermal relief. The EMC ground-plane and return-path checks
+  // need this, not the border.
+  poured: (poured || []).map((p) => ({
+    id: p.primitiveId,
+    net: p.net,
+    layer: p.layer,
+    fills: (Array.isArray(p.pourFill) ? p.pourFill : []).map((f) => ({
+      id: f.id,
+      fill: f.fill,
+      lineWidth: f.lineWidth,
+      path: polySource(f.path) ?? f.path ?? null,
+    })),
   })),
   strings: strings.map((s) => ({
     id: s.primitiveId,

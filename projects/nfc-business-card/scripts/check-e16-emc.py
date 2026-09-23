@@ -30,6 +30,13 @@ from pathlib import Path
 
 MIL = 0.0254  # mm per mil
 
+# EPCB_LayerId values used by the snapshot (see the upstream easyeda-api-skill
+# reference for the full enum).
+LAYER_TOP = 1
+LAYER_BOTTOM = 2
+LAYER_BOARD_OUTLINE = 11
+LAYER_MULTI = 12
+
 # E16 stackup. 0.8 mm total, two copper layers, so the plane-to-plane
 # dielectric height is the full board thickness.
 DIELECTRIC_HEIGHT_MM = 0.8
@@ -172,18 +179,26 @@ def check_ml_001(s: Snapshot):
     MDBT50Q module, which contains the radio, the NFC front end and the
     32 MHz crystal.
     """
-    inductor = s.position_mm("L1")
-    module = s.position_mm("U1")
-    if not inductor or not module:
-        return None
-    d = dist(*inductor, *module)
-    return {
-        "rule": "ML-001",
-        "threshold": "15 mm",
-        "measured": f"L1 (boost inductor) to U1 module = {d:.2f} mm",
-        "status": "fail" if d < 15.0 else "pass",
-        "source": "kicad-happy ML-001; inductor magnetic leakage couples into high-impedance nodes",
-    }
+    findings = []
+    for inductor_ref, inductor_role in SWITCHING_INDUCTORS.items():
+        inductor = s.position_mm(inductor_ref)
+        if not inductor:
+            continue
+        for sens_ref, sens_role in SENSITIVE_REFS.items():
+            sensitive = s.position_mm(sens_ref)
+            if not sensitive:
+                continue
+            d = dist(*inductor, *sensitive)
+            findings.append({
+                "rule": "ML-001",
+                "threshold": "15 mm",
+                "measured": f"{inductor_ref} ({inductor_role}) to {sens_ref} ({sens_role}) "
+                            f"= {d:.2f} mm",
+                "status": "fail" if d < 15.0 else "pass",
+                "source": "kicad-happy ML-001; inductor magnetic leakage couples into "
+                          "high-impedance nodes",
+            })
+    return findings or None
 
 
 def check_sw_002(s: Snapshot):
@@ -506,6 +521,155 @@ def check_es(s: Snapshot):
     return out
 
 
+# Device roles that geometry alone cannot recover from the snapshot. Footprints
+# encode the package, not the function, so the function map is declared here and
+# reported alongside every finding that depends on it.
+EXTERNAL_CONNECTORS = {"J1": "USB-C"}
+PROTECTION_REFS = {"U5": "USB ESD array", "U6": "USB ESD array"}
+SWITCHING_INDUCTORS = {"L1": "U4 EPD boost"}
+SENSITIVE_REFS = {"U1": "MDBT50Q module: radio, NFC front end, 32 MHz crystal"}
+
+
+def board_outline_edges(s: Snapshot):
+    """Closed polygon on the BOARD_OUTLINE layer as a list of mm segments."""
+    outline = [p for p in s.polylines if p["layer"] == LAYER_BOARD_OUTLINE]
+    if not outline:
+        return []
+    poly = outline[0]["polygon"]
+    if isinstance(poly, dict):
+        poly = poly.get("polygon", [])
+    nums = [float(v) for v in poly if not isinstance(v, str)]
+    verts = [(mm(nums[i]), mm(nums[i + 1])) for i in range(0, len(nums) - 1, 2)]
+    return [(a, b) for a, b in zip(verts, verts[1:] + verts[:1]) if a != b]
+
+
+def check_be_001(s: Snapshot):
+    """BE-001: signal trace on an outer layer within 1 x dielectric height of the
+    board edge.
+
+    Source: kicad-happy BE-001.
+
+    Applicability: both copper layers of a 2-layer board are outer layers, so
+    every trace qualifies geometrically. The rule targets edge radiation, which
+    only matters for nets with fast edges; nets whose role is DC or
+    press-driven are reported separately rather than counted as defects.
+    """
+    edges = board_outline_edges(s)
+    if not edges:
+        return {"rule": "BE-001", "status": "blocked", "threshold": "1 x H = 0.8 mm",
+                "measured": "no board outline on layer 11 in snapshot",
+                "source": "kicad-happy BE-001"}
+    limit = DIELECTRIC_HEIGHT_MM
+    slow_nets = {"USB_VBUS", "USB_CC1", "USB_CC2", "KEY_NEXT_N", "KEY_OK_N",
+                 "KEY_PREV_N", "CHG_CE_N", "CHG_PG_N", "CHG_INT_N", "CHG_SCL",
+                 "CHG_SDA", "BAT_NTC_TBD", "BAT_PACK_TBD", "SYS", "VDD_3V3",
+                 "EPD_EN_TBD", "EPD_BS0", "EPD_PUMP", "EPD_GDR", "EPD_RESE",
+                 "EPD_VCOM", "EPD_VDD", "EPD_VDDL", "EPD_VGH", "EPD_VGL",
+                 "EPD_VPH", "EPD_VSNH", "EPD_VSNL1", "EPD_VSNL2", "EPD_VSPH",
+                 "EPD_VSPL1", "EPD_VSPL2", "SWDIO"}
+    near = []
+    for l in s.lines:
+        if not l["net"]:
+            continue
+        x1, y1, x2, y2 = mm(l["x1"]), mm(l["y1"]), mm(l["x2"]), mm(l["y2"])
+        probes = [(x1, y1), (x2, y2), ((x1 + x2) / 2, (y1 + y2) / 2)]
+        d = min(point_segment_distance(px, py, ax, ay, bx, by)
+                for px, py in probes for (ax, ay), (bx, by) in edges)
+        if d < limit:
+            near.append((d, l["net"], l["layer"], x1, y1, x2, y2))
+    near.sort()
+    fast = [r for r in near if r[1] not in slow_nets]
+    return {
+        "rule": "BE-001",
+        "threshold": f"trace within 1 x H = {limit:.2f} mm of the board edge",
+        "measured": f"{len(near)} of {len([l for l in s.lines if l['net']])} trace "
+                    f"segments are inside it; {len(fast)} carry fast edges"
+                    + (f"; nearest {fast[0][1]} at {fast[0][0]:.3f} mm" if fast else
+                       f"; nearest is {near[0][1]} at {near[0][0]:.3f} mm, a DC or "
+                       f"press-driven net" if near else ""),
+        "status": "fail" if fast else ("warning" if near else "pass"),
+        "details": [f"{n} layer {lay} {d:.3f} mm" for d, n, lay, *_ in near[:10]],
+        "source": "kicad-happy BE-001",
+    }
+
+
+def check_be_003(s: Snapshot):
+    """BE-003: ground via stitching in a 10 mm radius around a connector, against
+    2 x lambda/20 for that connector's highest-frequency signal.
+
+    Source: kicad-happy BE-003; Altium stitching-via spacing.
+
+    Applicability note: the requirement scales with the connector's knee
+    frequency, so the result is reported with the distance that would actually
+    have to be met. At USB full speed that distance is far larger than the
+    board, which makes the rule non-binding rather than satisfied by design.
+    """
+    findings = []
+    for ref, kind in EXTERNAL_CONNECTORS.items():
+        pos = s.position_mm(ref)
+        if not pos:
+            continue
+        # USB full speed: 15 ns rise time, knee = 0.35 / t_rise.
+        knee_hz = 0.35 / 15e-9
+        required = 2 * lambda_over_20_mm(knee_hz)
+        radius = 10.0
+        vias = [v for v in s.vias_on_net("GND")
+                if dist(pos[0], pos[1], mm(v["x"]), mm(v["y"])) <= radius]
+        gnd = sorted((mm(v["x"]), mm(v["y"])) for v in vias)
+        avg = None
+        if len(gnd) > 1:
+            nn = [min(dist(a[0], a[1], b[0], b[1])
+                      for j, b in enumerate(gnd) if j != i)
+                  for i, a in enumerate(gnd)]
+            avg = sum(nn) / len(nn)
+        findings.append({
+            "rule": "BE-003",
+            "threshold": f"average spacing <= 2 x lambda/20 at the knee frequency "
+                         f"({required:.0f} mm at {knee_hz / 1e6:.1f} MHz)",
+            "measured": f"{ref} ({kind}): {len(vias)} GND vias within {radius:.0f} mm"
+                        + (f", average nearest-neighbour spacing {avg:.2f} mm" if avg else ""),
+            "status": "pass" if (avg is None or avg <= required) else "fail",
+            "source": "kicad-happy BE-003; Altium stitching-via spacing",
+        })
+    return findings
+
+
+def check_io_001(s: Snapshot):
+    """IO-001: an external connector with no EMC filtering or ESD/TVS device
+    within 25 mm. Source: kicad-happy IO-001.
+
+    Applicability: this board provides ESD arrays only; there is no ferrite bead
+    or common-mode choke, so the check confirms protection coverage rather than
+    filter coverage.
+    """
+    findings = []
+    for ref, kind in EXTERNAL_CONNECTORS.items():
+        pos = s.position_mm(ref)
+        if not pos:
+            continue
+        ranked = sorted(
+            (dist(pos[0], pos[1], *s.position_mm(pref)), pref, role)
+            for pref, role in PROTECTION_REFS.items() if s.position_mm(pref)
+        )
+        if not ranked:
+            findings.append({
+                "rule": "IO-001", "threshold": "protection device within 25 mm",
+                "measured": f"{ref} ({kind}): no protection device declared",
+                "status": "fail", "source": "kicad-happy IO-001",
+            })
+            continue
+        d, pref, role = ranked[0]
+        findings.append({
+            "rule": "IO-001",
+            "threshold": "protection device within 25 mm",
+            "measured": f"{ref} ({kind}): nearest protection {pref} ({role}) = {d:.2f} mm; "
+                        f"no ferrite bead or common-mode choke on this board",
+            "status": "pass" if d <= 25 else "fail",
+            "source": "kicad-happy IO-001",
+        })
+    return findings
+
+
 def check_xt_001(s: Snapshot):
     """XT-001: parallel coupling length >=5 mm at a spacing below 3x dielectric
     height on outer layers.
@@ -611,6 +775,9 @@ def main():
         ("DC-003", check_dc_003),
         ("RP-001", check_rp_001),
         ("VS-001", check_vs_001),
+        ("BE-001", check_be_001),
+        ("BE-003", check_be_003),
+        ("IO-001", check_io_001),
         ("DP-001/003", check_dp),
         ("ES-001/002", check_es),
         ("XT-001", check_xt_001),

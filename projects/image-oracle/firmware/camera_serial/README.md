@@ -1,5 +1,14 @@
 # USB 串口相机测试
 
+## 当前确定方案
+
+本目录保留已验证的单项相机基线：[camera_serial.ino](camera_serial.ino)，用于 OV3660 取帧和原生 USB 返回 320×240 JPEG；构建入口是 [build.sh](../../scripts/build.sh)。2026-09-19 已完成构建、烧录及取帧验证。
+
+项目当前整合版本是 [oracle_live](../oracle_live/README.md)。继续相机、屏幕和按键组合开发时从该版本进入；本工程用于独立排查与恢复。
+
+## 功能说明
+
+
 用于鹿小班／芯路城 ESP32-S3-CAM N16R8 套装的最小相机工程：初始化摄像头，接收 `SNAP` 命令，通过原生 USB 返回一张 320×240 JPEG。无需 Wi-Fi、屏幕或按键。
 
 ## 固定环境

@@ -1,5 +1,14 @@
 # ST7789 屏幕、中心键计数与 USB 命令测试
 
+## 当前确定方案
+
+本目录保留屏幕/中心键交互基线：[display_serial.ino](display_serial.ino)，版本 `button-counter-usb-nonblocking`，采用独立按键采样、局部重绘与非阻塞 USB 日志。2026-09-19 用户持续连按验收通过；构建入口是 [build-display.sh](../../scripts/build-display.sh)。
+
+项目当前整合版本是 [oracle_live](../oracle_live/README.md)。本工程继续用于屏幕与按键的单项测试、复现和恢复。
+
+## 功能说明
+
+
 用于 ESP32-S3-CAM N16R8 和套装 1.54 寸、240×240 SPI 屏幕。接线见[屏幕接线表](../../hardware/display-wiring.md)和[中心键共地接线](../../hardware/button-wiring.md)，本工程不启用摄像头或 SD。
 
 当前源码上电显示 `BUTTON COUNTER` 和计数 0；中心键每按一次加一，10 ms 消抖，长按不连加，重启归零。GPIO14 使用 `INPUT_PULLUP`，松开预期为 HIGH，按下接通 COM/GND 后为 LOW。通过原生 USB 发送命令可切换计数页、纯色、测试页和背光；切换页面后再次按键会回到计数页。

@@ -2,6 +2,12 @@
 
 本目录保存交互式 HTML 接线图；点击表中页面或使用 macOS `open` 命令打开。`sources/` 保留可编辑的对话图源，目录下同名 HTML 是可独立打开的导出页面。
 
+## 当前确定方案
+
+沿用 [oracle_live 桌面原型](../firmware/oracle_live/README.md)已验证的屏幕与 MID 中心键接线，不改变 GPIO。当前接线入口为[屏幕引脚位置](display-pin-locations.html)、[中心按键引脚位置](button-pin-locations.html)和[三路共地](shared-ground-wiring.html)；相机沿用原板排线。
+
+2026-09-19 已完成原型实物验收。图中的面包板孔号是示例，共地近照尚未取得；具体适用版本和验证范围见下表。修改图源从 `sources/` 进入，同名 HTML 是对外查看入口。
+
 ## 已归档的图
 
 | 图 | 内容 | 适用范围与验证状态 |

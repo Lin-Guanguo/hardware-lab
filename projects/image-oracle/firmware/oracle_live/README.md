@@ -1,5 +1,14 @@
 # 第三个程序：实时预览、定格照片与 Boolean Oracle
 
+## 当前确定方案
+
+本目录是项目当前采用的整合基线：[oracle_live.ino](oracle_live.ino)，构建入口为 [build-oracle.sh](../../scripts/build-oracle.sh)。ESP32-S3-CAM N16R8、OV3660、ST7789 和 MID 中心键沿用既有接线：左侧预览，按 MID 定格到右侧，并按固定图像算法生成 TRUE/FALSE。
+
+2026-09-19 已构建、烧录并获用户实物验收；后续在此继续开发，两个早期固件保留作单项基线。当前仍是开发板与模块的桌面原型，未完成定制 PCB 或外壳。
+
+## 功能说明
+
+
 这是独立于 `camera_serial` 和 `display_serial` 的第三个固件。前两个工程的源码与构建目录保持原样；本程序复用显示工程的 `button_debouncer.h`，构建时需保留仓库结构。
 
 ## 交互

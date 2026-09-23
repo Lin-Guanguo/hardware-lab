@@ -2,7 +2,9 @@
 
 用摄像头拍摄图像，通过固定算法从本地答案库中选取并显示答案。默认拍摄熔岩灯，也可以拍摄其他对象。
 
-## 当前状态
+## 当前确定方案
+
+继续开发的入口是 [oracle_live](firmware/oracle_live/README.md)（[主程序](firmware/oracle_live/oracle_live.ino)）：ESP32-S3-CAM N16R8 + OV3660 + ST7789 + MID 中心键，USB 供电，沿用已验证的[接线图册](wiring-diagrams/README.md)。`camera_serial` 与 `display_serial` 保留作单项测试和恢复基线。
 
 **2026-09-19：相机、屏幕与按键的桌面拼接原型完成，用户实物验收通过。** 当前运行第三个程序 `oracle_live`：左侧实时预览、MID 定格到右侧、下方生成 TRUE/FALSE。可用基线、已完成工作和后续路线见[阶段收尾记录](docs/prototype-milestone.md)。
 

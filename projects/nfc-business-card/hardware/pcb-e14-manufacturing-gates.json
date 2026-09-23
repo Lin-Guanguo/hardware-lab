@@ -4,7 +4,7 @@
  "checked_on": "2026-09-23",
  "source": {
   "eda_project": "../../../eda/NFC-Business-Card-84x52-E14-Battery-Layout.eprj2",
-  "eda_project_sha256": "68f8220a1d3c28cc63c468e18ffae05755be574ff852bf2a63b0b2d4435ea1bf",
+  "eda_project_sha256": "f0509b440fa68b9bc7821e7278254016e776c12c89157231b7ededddd392ff2b",
   "eda_snapshot": "pcb-e14-battery-layout.json",
   "cad_snapshot": "../enclosure/pcba-e14-battery-layout-report.json"
  },
@@ -19,14 +19,14 @@
    3.0
   ],
   "component_count": 56,
-  "copper_lines": 798,
-  "vias": 168,
+  "copper_lines": 803,
+  "vias": 172,
   "drc_leaf_results": 24,
   "drc_unrouted_connectivity_results": 0,
   "drc_board_edge_results": 24,
   "smd_to_smd_overlaps": 0,
   "sqlite_quick_check": "ok",
-  "note": "live values for Board1_2 / E16 after the NFC feed landing and the 2026-09-23 verification round: 244 pads (two bottom-layer square landing pads join NFC1_TBD / NFC2_TBD), 798 copper segments and 168 vias. Native DRC after the feed: 24 leaves, all 'Board Outline to SMD Pad' at 7.9 mil = 0.2007 mm, with no clearance, connection, hole-to-hole or copper-region items, so the rebuilt pours clear the new copper. The manufacture set re-exports cleanly (17 Gerber members including the new bottom paste layer, 168 via drills, BOM 25 rows / 56 designators, CPL 56 designators, 0.0005 mm worst placement delta). A stray duplicate GND via at (32.80, 28.00) that reappeared after the client restart was deleted: it overlapped the moved thermal via.",
+  "note": "live values for Board1_2 / E16 after the 2026-09-23 ground-stitch round: 244 pads, 803 copper segments and 172 vias (four ground vias and five tie traces were added beside the USB ESD arrays and the ground pours were refilled). Native DRC still returns false, as it did before the change, because of the 24 'Board Outline to SMD Pad' warnings at J1's slot edge. The manufacture package on disk is now stale: its drill file has 168 hits against 172 vias, so it must be re-exported before release.",
   "pad_count": 244
  },
  "gates": [
@@ -108,7 +108,7 @@
    "purpose": "Release only a coherent Gerber/Excellon, BOM/CPL and production CAD package.",
    "release_rule": "All preceding gates pass, DRC/DFM is reviewed, and the package is saved and reopened from the same E14 revision.",
    "current_snapshot": "Verification exports already exist and re-check: Gerber zip (16 files, GTL/GBL only = 2-layer, plus a FlyingProbeTesting.json for E-test), 2 drill files, BOM 25 rows / 56 designators, CPL 56 designators all on the top layer with a 0.0005 mm worst placement delta, production STEP and the V7 STL. check-e16-manufacture.py returns ok=true. Channel analysis (2026-09-23) says the card fits JLCPCB Economic PCBA as a single 84 x 52 mm board with no panel, rails or fiducials; the package is still deliberately not released for ordering.",
-   "next_action": "Close the battery, antenna and enclosure gates, pick the assembly channel, then re-export from one saved revision and place the order.",
+   "next_action": "Re-export the package after the remaining board changes: the on-disk drill file has 168 hits while the board now has 172 vias, which check-e16-manufacture.py reports as 'via drill has 168 hits, snapshot has 172 vias'.",
    "design_state": "NOT_RELEASED",
    "required_evidence": [
     "all preceding gates pass and the package is re-exported from one saved revision",

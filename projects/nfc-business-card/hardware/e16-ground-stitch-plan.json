@@ -1,0 +1,112 @@
+{
+ "name": "e16-ground-stitch",
+ "tracks": [
+  {
+   "net": "GND",
+   "layer": 1,
+   "width_mm": 0.4,
+   "points": [
+    [
+     73.1,
+     16.6
+    ],
+    [
+     72.75,
+     15.994
+    ]
+   ]
+  },
+  {
+   "net": "GND",
+   "layer": 1,
+   "width_mm": 0.3,
+   "points": [
+    [
+     73.1,
+     16.6
+    ],
+    [
+     72.7,
+     16.2
+    ]
+   ]
+  },
+  {
+   "net": "GND",
+   "layer": 1,
+   "width_mm": 0.3,
+   "points": [
+    [
+     73.1,
+     16.6
+    ],
+    [
+     72.7,
+     17.0
+    ]
+   ]
+  },
+  {
+   "net": "GND",
+   "layer": 1,
+   "width_mm": 0.25,
+   "points": [
+    [
+     72.65,
+     14.75
+    ],
+    [
+     72.55,
+     14.35
+    ]
+   ]
+  },
+  {
+   "net": "GND",
+   "layer": 1,
+   "width_mm": 0.25,
+   "points": [
+    [
+     72.65,
+     14.75
+    ],
+    [
+     73.05,
+     14.65
+    ]
+   ]
+  }
+ ],
+ "vias": [
+  {
+   "net": "GND",
+   "x": 72.7,
+   "y": 16.2,
+   "diameter_mm": 0.61,
+   "hole_mm": 0.305
+  },
+  {
+   "net": "GND",
+   "x": 72.7,
+   "y": 17.0,
+   "diameter_mm": 0.61,
+   "hole_mm": 0.305
+  },
+  {
+   "net": "GND",
+   "x": 72.55,
+   "y": 14.35,
+   "diameter_mm": 0.3,
+   "hole_mm": 0.2
+  },
+  {
+   "net": "GND",
+   "x": 73.05,
+   "y": 14.65,
+   "diameter_mm": 0.3,
+   "hole_mm": 0.2
+  }
+ ],
+ "keepouts": [],
+ "ignore_nets": []
+}

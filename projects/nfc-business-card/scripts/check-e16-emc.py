@@ -727,23 +727,41 @@ def check_xt_001(s: Snapshot):
     }
 
 
-BLOCKED = [
+# Rules this checker deliberately does not compute. Pour geometry is no longer a
+# blocker: the exporter captures it and analyze-e16-pour.py covers GP-003,
+# GP-004 and BE-002. What remains here is genuinely unimplemented, and saying so
+# is the point — a rule that is silently absent reads as a rule that passed.
+NOT_IMPLEMENTED = [
     {
-        "rule": "GP-001/GP-003/GP-004",
-        "why": "needs the filled polygons of the two GND pours; the snapshot exporter "
-               "collects regions (keepouts) but not copper pours",
+        "rule": "GP-001",
+        "why": "reference-plane coverage per signal net; pour geometry is available, "
+               "the check is simply not written yet",
+        "where": "could be added here or to analyze-e16-pour.py",
         "source": "Hubing, AltiumLive 2022; Ott, Ch. 16",
     },
     {
-        "rule": "BE-002/SU-001..003",
-        "why": "needs pour geometry and an explicit stackup record",
-        "source": "kicad-happy EMC rules",
+        "rule": "GP-005",
+        "why": "multiple ground domains; this board has a single GND net, and the "
+               "pour is one node, so the check would be vacuous",
+        "source": "kicad-happy GP-005",
+    },
+    {
+        "rule": "SU-001..003",
+        "why": "stackup rules assume inner layers and a plane pair; a 2-layer board "
+               "has neither, so the premises do not hold",
+        "source": "kicad-happy stackup rules",
     },
     {
         "rule": "PD-001..004 (PDN impedance)",
-        "why": "needs per-capacitor net mapping and plane geometry; computable from the "
-               "snapshot once pours are exported",
+        "why": "needs per-capacitor net mapping plus ESL/ESR; a 2-layer board has no "
+               "plane pair, so the payoff is limited",
         "source": "Bogatin; kicad-happy PDN checks",
+    },
+    {
+        "rule": "DP-002 (skew-induced CM radiation)",
+        "why": "needs cable length and a common-mode current path assumption; the "
+               "board alone does not define them",
+        "source": "Ott, Ch. 19; Johnson, Ch. 11",
     },
 ]
 
@@ -806,13 +824,14 @@ def main():
         if r["status"] == "pass":
             print(f"  {r['rule']:12} {r['measured']}")
 
-    print("\n--- blocked on missing snapshot data ---")
-    for b in BLOCKED:
+    print("\n--- not implemented (absent, not passing) ---")
+    for b in NOT_IMPLEMENTED:
         print(f"  {b['rule']}: {b['why']}")
 
     if args.json:
         args.json.write_text(json.dumps(
-            {"snapshot": str(args.snapshot), "results": results, "blocked": BLOCKED},
+            {"snapshot": str(args.snapshot), "results": results,
+             "not_implemented": NOT_IMPLEMENTED},
             indent=2, ensure_ascii=False))
         print(f"\nwrote {args.json}")
 

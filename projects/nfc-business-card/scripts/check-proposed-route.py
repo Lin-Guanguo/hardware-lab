@@ -110,7 +110,8 @@ def check(route, snapshot):
     notes = []
     seen_keepout_notes = set()
     worst = {"track_to_track": (9e9, None), "track_to_pad": (9e9, None), "track_to_via": (9e9, None),
-             "within_route": (9e9, None), "board_edge": (9e9, None), "hole_to_hole": (9e9, None)}
+             "via_to_track": (9e9, None), "within_route": (9e9, None),
+             "board_edge": (9e9, None), "hole_to_hole": (9e9, None)}
     violations = []
 
     def note(kind, gap, where, rule):
@@ -140,14 +141,23 @@ def check(route, snapshot):
             for (ax, ay, bx, by, half_other, net, other_layer) in lines:
                 if other_layer != layer:
                     continue
+                # Same-net copper is meant to touch; the clearance rules only
+                # constrain different nets. Without this a ground via cannot
+                # legally meet a ground trace.
+                if net and net == track.get("net"):
+                    continue
                 note("track_to_track", point_to_segment(x, y, ax, ay, bx, by) - half - half_other,
                      (round(x, 3), round(y, 3), net), CL_TRACK_TRACK)
             for (cx, cy, half_w, half_h, net, number, pad_layer) in boxes:
                 if pad_layer != layer:
                     continue
+                if net and net == track.get("net"):
+                    continue
                 note("track_to_pad", point_to_box(x, y, (cx, cy, half_w, half_h)) - half,
                      (round(x, 3), round(y, 3), f"pad {number} {net}"), CL_PAD_TRACK)
             for (vx, vy, radius, _hole, net) in vias:
+                if net and net == track.get("net"):
+                    continue
                 note("track_to_via", max(0.0, math.hypot(x - vx, y - vy) - radius) - half,
                      (round(x, 3), round(y, 3), net), CL_VIA_TRACK)
 
@@ -176,13 +186,25 @@ def check(route, snapshot):
         for (vx, vy, other_radius, other_hole, other_net) in vias + route_vias:
             if (vx, vy) == (x, y):
                 continue
+            # Hole-to-hole is mechanical, so it applies between any two drills
+            # regardless of net.
             note("hole_to_hole", math.hypot(x - vx, y - vy) - hole - other_hole,
                  (round(x, 3), round(y, 3), other_net), CL_HOLE_HOLE)
+            if net and net == other_net:
+                continue
             note("track_to_via", max(0.0, math.hypot(x - vx, y - vy) - other_radius) - radius,
                  (round(x, 3), round(y, 3), other_net), CL_VIA_TRACK)
         for (cx, cy, half_w, half_h, pad_net, number, pad_layer) in boxes:
+            if net and net == pad_net:
+                continue
             note("track_to_pad", point_to_box(x, y, (cx, cy, half_w, half_h)) - radius,
                  (round(x, 3), round(y, 3), f"pad {number} {pad_net}"), CL_PAD_TRACK)
+        # A through via has to clear copper on every layer, not just its own.
+        for (ax, ay, bx, by, half_other, other_net, _layer) in lines:
+            if net and net == other_net:
+                continue
+            note("via_to_track", point_to_segment(x, y, ax, ay, bx, by) - half_other - radius,
+                 (round(x, 3), round(y, 3), other_net), CL_VIA_TRACK)
 
     return {
         "route": route.get("name", "unnamed"),

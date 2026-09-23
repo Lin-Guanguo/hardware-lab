@@ -45,9 +45,10 @@ last_updated: 2026-09-23
 - [x] **补覆铜导出**（2026-09-23）：探测出 `pours` / `poured` / region 的真实结构（三处与假设不符，见 E16 记录），导出扩展后重导快照，**内容指纹与实况板逐字段一致**。新增 [analyze-e16-pour.py](../scripts/analyze-e16-pour.py) 与共享的 [pour_geometry.py](../scripts/pour_geometry.py)（带标定断言）。`ES-002` 由此确诊。
 - [ ] **给 `GP-003/GP-004/BE-002` 补检查器**：已在 `analyze-e16-pour.py` 中实现，但 `GP-001`（信号跨越覆铜缺口）仍未实现——它是"干扰"最核心的一条，判据可按顶层走线下方底层覆铜的连续覆盖率。
 - [ ] **把连通性审计的 `ground_reach` 修到可信**：目前报 2 个 GND 焊盘未到达覆铜，但都与手工验证的事实冲突（R13 的 GND 焊盘 0.050 mm 处就有 GND 过孔），标为 `trusted: false`、不参与门禁。修好后才能逐一验证 29+14 块覆铜区域与 GND 网络的连通性。
-- [ ] **给 USB/ESD 区域补地缝合孔**（需客户端）：U5/U6 的 GND 焊盘旁各 ≥2 个，用 0.61/0.305 mm 避免落进加价档；落铜前跑 `check-proposed-route.py`，落铜后重跑原生 DRC + 连通性 + 制造包。
+- [x] **给 USB/ESD 区域补地缝合孔**（2026-09-23 已落盘）：4 个 GND 过孔 + 5 条拉线，重铺两块地覆铜。`ES-002` 的 3 mm 内过孔数从 0 → 4（U5 与 U6 各 4）；U5 的地焊盘现在落在底层覆铜内，U6 到最近底层覆铜从 2.318 → 0.256 mm。独立 diff 校验 0 违规，保存关闭重开验证通过。U6 因 `USB_CC2` 封住唯一缺口，改从同电节点的 R1 地焊盘接入（理由与实测见 E16 记录）。
 - [ ] **C3 处置**（需客户端）：充电器的 BAT 引脚电容搬回 U2 旁，牵动 `BAT_PACK_TBD` 约 20 mm 走线重布。
-- [ ] **制造包放行前重新点数并记录过孔数**：门槛文件与散文都没有产物佐证（散文的 162 与新门槛文件的 168 不一致）。
+- [ ] **重导制造包**：板子已是 803 线 / 172 过孔，磁盘上的钻孔文件仍是 168 孔，`check-e16-manufacture.py` 已报失效。放在 C3 之后重导，避免白做一轮。
+- [ ] **补原生 DRC 明细的可读路径**：DRC API 只返回布尔值，明细在 UI 面板里；当前只能靠"前后布尔值都是 false + 独立 diff 校验"判定无新增错误。
 - [x] 引入方法论设施：4 个上游 submodule（跟随 main）+ 仓库级[规则索引](../../../docs/pcb-design-rules.md) + [pcb-methodology skill](../../../.agents/skills/pcb-methodology/SKILL.md) + `check-e16-emc.py`（16 条规则）+ `tools/check-rule-coverage.py`（防止覆盖过度声明）（2026-09-23）。
 - [x] artifacts 归档：23 个阶段目录进 `artifacts/archive/`，顶层只留当前产物（2026-09-23，提交 `63f35a5`）。
 - [x] 目录命名改为"用途优先"（`manufacture/`、`cad/`、`review/`、`studies/routing-space/`；版本写在文件名里）。

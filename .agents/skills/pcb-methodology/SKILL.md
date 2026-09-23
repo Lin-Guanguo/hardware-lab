@@ -101,6 +101,17 @@ node projects/nfc-business-card/scripts/eda-exec-wait.mjs \
 
 这两点由 `pour_geometry.py` 承载，并带**标定断言**（解析出的覆铜必须落在铜箔边框内 1 mm，否则拒绝出结论）。`ground_reach`（GND 焊盘是否到达覆铜）目前标为 `trusted: false`，**不参与门禁**：它与手工验证的事实冲突，属于线索而非发现。
 
+## 板载天线/线圈的表示（封装 vs 图形铜箔）
+
+画板载线圈（NFC 螺旋、平面电感、印刷天线）时，**螺旋铜箔必须落在封装里，两个焊盘在封装内被铜连起来、由工具按 net tie 处理**。不要把它当板级图形铜箔画。
+
+- 螺旋的两端属于两个不同网络（如 `NFC1_TBD` / `NFC2_TBD`），纯走线无法表示跨网络串联元件：整条标成一个网络会碰到两个网络，拆成两半则相接处仍是跨网络接触。
+- 一手来源：Altium 知识库 [Short two different nets intentionally](https://www.altium.com/documentation/knowledge-base/altium-designer/short-two-different-nets-intentionally) 直接点名 "planar inductor and other printed RF filters and antennas"，并要求螺旋两端 "terminated by pads to be registered as a Net Tie Component"；KiCad 手册同样写明 footprints can act as net ties。
+- 嘉立创 EDA 专业版的原生机制是原理图的 [短接符](https://prodocs.lceda.cn/cn/schematic/place-short-symbol/) 与 PCB 的 工具-连接焊盘。
+- **经验证**：把无网络铜箔（`netName:""`）画在板上，本工具 DRC 会报 `Clearance Error / Line to Track`，此路不通。别在没测之前假设"无网络铜箔不会被判违规"。
+
+必须先确认工具支持 net tie，再动手；封装要写库，而**库写入在离线工作区不可用**（见项目文档），所以开工前先确认库可写。
+
 ## 变更与实验循环
 
 1. **冻结输入**：记录当前 SHA、快照、DRC 分类计数作为对照基线。

@@ -264,7 +264,23 @@ ok = False | 136 项违规
 
 **这意味着**：落一个器件必须有库封装 uuid（`ATTR` 指向它），所以 A 方案的完整形态卡在库写入上。
 
-**可绕开库、且不污染网表的替代**：把螺旋作为**无网络的图形铜箔**（`POLY`，`netName:""`）画在 1/2 层，两个落点焊盘的网络保持 NFC1_TBD / NFC2_TBD 不变。这样 DRC 不会报跨网络短路、逐引脚网表核对也不受影响（它比的是焊盘网络，不查图形铜箔）。代价要说清楚：**线圈铜箔不进网表，因此网表核对无法验证线圈是否真的连通**——这属于"检查器不检查这件事"，必须在文档里写明，而不是当成通过。schematic 侧仍应补一个天线器件，但那同样需要库写入。
+**~~可绕开库、且不污染网表的替代：把螺旋作为无网络的图形铜箔画在 1/2 层。~~ 这条建议是错的，已于同日推翻并实测否决。**
+
+### 正确做法是「带 net tie 语义的封装」，不是图形铜箔
+
+按本仓库"规则要挂一手来源"的要求，查了两家工具的一手文档：
+
+- **Altium 官方知识库**（[KB: Short two different nets intentionally](https://www.altium.com/documentation/knowledge-base/altium-designer/short-two-different-nets-intentionally)，2025-10 更新）开篇即点明场景："To create a footprint where two pads are ohmically shorted together for such components as **planar inductor and other printed RF filters and antennas**, Altium introduces a notion called a **'Net Tie' component**"。并给出螺旋天线的具体造法："Planar inductor, coil, spiral antenna pattern can be constructed by placing and connecting 180deg arc primitives of incrementally changing radius. The end result is a long contiguous copper piece where **its two ends are terminated by pads to be registered as a Net Tie Component**."
+- **KiCad 官方文档**同样把封装当作 net tie 使用："Footprints can act as net ties, where two separate nets are electrically connected by copper"（[pcbnew 手册](https://docs.kicad.org/master/ru/pcbnew/pcbnew.pdf)）。
+- **嘉立创 EDA 专业版官方文档**里有对应的原生机制：原理图侧的 [放置 - 短接符](https://prodocs.lceda.cn/cn/schematic/place-short-symbol/)（Short Symbol）用于声明"有意把两个网络接起来"，PCB 侧有 [工具 - 连接焊盘](https://prodocs.easyeda.cn/cn/pcb/tools-connect-pads/)。
+
+所以：**螺旋必须落在封装里**，两个焊盘在封装内被铜连起来、由工具按 net tie 处理，而不是把无网络铜箔画在板上。
+
+**我自己实测也否决了图形铜箔**：在 E16 上建了一条 `netName:""` 的 `POLY`（层 2，横跨两个 NFC 落点焊盘），原生 DRC 立刻多出 **6 项 `Clearance Error / Line to Track`**（`(NFC1_TBD)` / `(NFC2_TBD)` 走线 vs 那条无网络线）；删除后 DRC 精确回到 24 项。也就是说**这个工具的 DRC 把"无网络铜箔碰到别的网络"当间距违规**，而线圈必须碰到落点焊盘才算接上——图形铜箔这条路在本工具里根本走不通。
+
+**用户 2026-09-23 的追问是对的：不能选省事的方案，要选正确的方案。** 我先前"封装只是可复用性更好、网表上等价"的说法不成立——封装是**唯一被工具承认的、把两个网络有意接起来的方式**，它与图形铜箔不是等价选择。
+
+**当前的唯一阻塞**：建这个封装需要库写入，而本机库写入 API 不可用（六项操作实测失败）。根因已查明：`dmt_Team.getCurrentTeamInfo()` 返回的是**本地文件夹** `/Users/linguanguo/dev/hardware-lab/eda`（`identity: 0`），即**本地离线工作区、没有登录账号**，库服务在 API 侧不存在。两条解锁路径：登录一个嘉立创账号让库服务可用，或在客户端 GUI 里手动新建封装（GUI 侧本地库是可写的）。
 
 **已查清的 API 路径**（下一轮直接执行）：
 

@@ -234,6 +234,39 @@ function check(strict, userInterface, includeVerboseError: true):  Promise<Array
 
 本轮所有实验都已撤回：板子复验为 **56 元件 / 244 焊盘 / 791 线 / 168 过孔**，DRC **24 项全为槽边基线、非基线 0 项**；库里只留下有用的 `HL_NFC_COIL_E16` 封装与一个探测用器件 `HL_NFC_COIL_TIE`。
 
+
+### 查证：EasyEDA 的 net tie 到底有没有，别人怎么解决（2026-09-23）
+
+上一节我写下"嘉立创 EDA 专业版没有 net tie 封装"就收笔了。用户追问"板载线圈这么常见，官方真没有吗？看看别人怎么解决"——**这个追问是对的，值得查清，而且结论比我上一节写的更有意思。**
+
+**社区证据：EasyEDA 标准版确实没有 net tie，而且是挂了五年多的功能请求。** 论坛帖 [Net-tie: a copper only component with 2 pads to split nets...](https://easyeda.com/forum/topic/Net-tie-a-copper-only-component-with-2-pads-to-split-nets-without-DRC-errors-and-multiple-netname-warnings-b6a099bf01bb4055b821ab398ee37b60) 由资深用户 andyfierman 发起，原文：
+
+> "At the moment a 0 Ohms resistor or a series component as part of an impedance matching network works OK because it has two separately numbered pads that are not connected in the Footprint by copper. However, **any attempt to replace that with a copper element: 1. results in warnings about more than one name on a net and; 2. generates DRC errors.** ... Apparently there is such a component in KiCad called a 'net-tie'."
+
+底下从 5 年前一路 `+1` 到 2 年前，官方始终没做进标准版。
+
+**更早的那篇[《How to design a PCB Lib for a PCB Antenna》](https://easyeda.com/forum/topic/How-to-design-a-PCB-Lib-for-a-PCB-Antenna-efa50ba1cdd9433c958ceedbad520398)问的正是我们这个场景**（"I need to connect two different pins together (feed and gnd), but that will result in a DRC error. Then, what should I do?"）。andyfierman 的回答是"This is a **really tricky problem**"，另一位用户的回答更有代表性：
+
+> "**I've resorted to remembering how many DRC errors a particular design generates, and subtract that from the total reported by the tool...** Not the most reassuring, but PCBs turn up ok!"
+
+也就是说，社区的实际做法是"**记住这块板固定有几项已知错误，从 DRC 总数里手动扣掉**"。**这正是我在本仓库反复拒绝的那种做法**——检查器报的数不能靠人事先减一个常数，那等于把真实错误也一起减掉。反过来说，它解释了为什么本项目要自己写 `check-e16-emc.py` 这类独立检查：原生 DRC 在这个问题上给不出干净答案。
+
+**为什么 EasyEDA 不能像 Altium 那样用 net tie 封装？** 因为它的封装有一条硬规则，出自同一作者的[《How to avoid DRC errors when connecting to PCB Footprints》](https://easyeda.com/forum/topic/How-to-avoid-DRC-errors-when-connecting-to-PCB-Footprints-a-k-a-PCB-Libs-90bf944fe3644b21a7d27a9e9d8df8d6)：
+
+> "anything made of copper in a PCB Footprint that is not a pad will generate a DRC error" —— 封装里的铜**必须全部用焊盘做**（可用多边形焊盘并编辑顶点）；
+> "All pads that are connected together by copper must have the same number" —— **被铜连起来的焊盘必须同号**；
+> "Do not try to use vias in a PCB footprint" —— 封装里不要用过孔，用尺寸相同的多层焊盘代替。
+
+一个"两端分别编号、中间用铜连起来"的元件，恰好同时违反这两条——所以 Altium 的 net tie 封装在 EasyEDA 里做不出来。**我上一轮那份封装用的正是 LINES + VIAS，正好是这条规则禁止的两样**，这也解释了实测到的 12 项 DRC。同一作者的修正版做法是把螺旋整条做成焊盘。
+
+**专业版的答案是短接符。** andyfierman 在同一个帖子里确认："A symbol for a device to do this is available in the Pro edition"，随后补一句"There is a **Short-Symbol** in EasyEDA Pro but it looks like it is not yet a complete 'Device'"。与本仓库查到的官方文档一致（[短接符](https://prodocs.lceda.cn/cn/schematic/place-short-symbol/)，对应 `ELIB_SymbolType.SHORT_CIRCUIT_FLAG = 22`）。
+
+**结论（三条都是有来源的，不是推测）**：
+
+1. **有 net tie 需求、且是常见的** —— 论坛五年多的功能请求就是证据；用户问"如果常用为什么没有"的答案不是"没有需求"，而是**标准版一直没做**。
+2. **Altium 的 net tie 封装在 EasyEDA 里做不出来** —— 卡在"封装铜必须是焊盘 + 相连焊盘必须同号"这条规则上，不是我没找对接口。
+3. **本工具的正解是原理图短接符 + 线圈走线**（专业版），或退化成"记住几项已知错误然后手工扣掉"（标准版做法，**本项目不采用**）。
+
 ## 连通性审计的缺口（已补，但结果尚不可信）
 
 [check-e16-copper-connectivity.py](../scripts/check-e16-copper-connectivity.py) 原本**明确排除 GND**，注释写着"GND 也通过两块地覆铜连接"。这个假设在覆铜几何存在之前无法验证，而它恰好能藏住一个悬空地焊盘。已加 `ground_reach`：把 GND 的焊盘/铜线/过孔/覆铜（含散热辐条）建成图，检查每个 GND 焊盘是否与覆铜同组。

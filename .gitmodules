@@ -2,3 +2,20 @@
 	path = upstreams/easyeda-api-skill
 	url = https://github.com/easyeda/easyeda-api-skill.git
 	ignore = untracked
+	branch = main
+[submodule "upstreams/kicad-happy"]
+	path = upstreams/kicad-happy
+	url = https://github.com/aklofas/kicad-happy.git
+	branch = main
+[submodule "upstreams/pcb-skill"]
+	path = upstreams/pcb-skill
+	url = https://github.com/daishuge/pcb-skill.git
+	branch = main
+[submodule "upstreams/pcba-design-skills"]
+	path = upstreams/pcba-design-skills
+	url = https://github.com/Keitark/pcba-design-skills.git
+	branch = main
+[submodule "upstreams/hw-review"]
+	path = upstreams/hw-review
+	url = https://github.com/ericshang98/hw-review.git
+	branch = main

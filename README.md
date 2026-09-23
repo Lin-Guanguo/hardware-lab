@@ -22,14 +22,20 @@ hardware-lab/
 ├── .gitmodules
 ├── .agents/
 │   └── skills/
-│       └── easyeda-api -> ../../upstreams/easyeda-api-skill
+│       ├── easyeda-api -> ../../upstreams/easyeda-api-skill   <- 外部 Skill（符号链接）
+│       └── pcb-methodology/                                   <- 本仓库自建的方法论总控
 ├── upstreams/
-│   └── easyeda-api-skill/
+│   ├── easyeda-api-skill/       <- 嘉立创 EDA 官方 API Skill（可调用）
+│   ├── kicad-happy/             <- EMC 规则、公式与监管限值（只读参考）
+│   ├── pcb-skill/               <- 同工具链的流程纪律与 MCP 陷阱（只读参考）
+│   ├── pcba-design-skills/      <- 证据门禁与产物失效模型（只读参考）
+│   └── hw-review/               <- 逐引脚证据式审查、嘉立创 EDA 解析（只读参考）
 ├── eda/
 │   ├── README.md
 │   └── AI-API-Smoke-Test.eprj2
 ├── docs/
 │   ├── environment.md      <- 工具链、常驻服务、五分钟自检（新接手先看）
+│   ├── pcb-design-rules.md <- DRC 看不见的规则：阈值、一手来源与本板适用性
 │   ├── inventory.md
 │   └── wiring-diagrams.md
 └── projects/
@@ -57,14 +63,21 @@ hardware-lab/
 
 现有接线图见 [Image Oracle 图册](projects/image-oracle/wiring-diagrams/README.md)。后续默认使用带主板外形、完整丝印和模块排针数字序号的接线图；各项目使用相同目录名。
 
+## 设计方法论
+
+DRC 只证明几何没撞上，不证明设计正确。仓库级 [PCB 设计规则索引](docs/pcb-design-rules.md) 列出 DRC 看不见的规则、阈值、一手来源，以及每条规则对 2 层薄板的适用性；流程、约束层级与电气敏感件门禁见自建 skill [pcb-methodology](.agents/skills/pcb-methodology/SKILL.md)。
+
+外部方法论仓库以 Git submodule 引入 `upstreams/`，按需跟随主线。分两类：可直接调用的 Skill 用符号链接进 `.agents/skills/`；只作参考的上游不加链接、不执行其脚本，由自建总控 skill 引用。上游的规则原文不复制进本仓库，引用时标注仓库、文件与规则编号。
+
 ## 开始工作
 
 0. 新机器/新接手先看[环境与常驻服务](docs/environment.md)：工具链路径、EDA 桥接（launchd）从零重建、五分钟自检清单与常见故障。
 1. 阅读 [AGENTS.md](AGENTS.md) 和目标项目的 README。
 2. 分配引脚和确定供电前，先核对实物及对应资料。
-3. 将固件放入项目的 `firmware/`，在项目 README 记录具体工具链、依赖版本和已验证的 shell 命令。
-4. 先复现已知可用的例程，再修改应用功能。
-5. 记录完成了哪些构建、哪些实机测试，以及仍未确认的事项。
+3. 改布局、布线、板框或器件位号前，先看 [PCB 设计规则索引](docs/pcb-design-rules.md)，并按敏感件门禁判断要动的器件属于哪一类。
+4. 将固件放入项目的 `firmware/`，在项目 README 记录具体工具链、依赖版本和已验证的 shell 命令。
+5. 先复现已知可用的例程，再修改应用功能。
+6. 记录完成了哪些构建、哪些实机测试，以及仍未确认的事项。
 
 各项目在自己的 README 记录已验证的构建、烧录与测试命令；在本地 Mac 上使用编辑器、shell 工具和 AI 辅助开发。
 

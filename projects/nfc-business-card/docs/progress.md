@@ -7,7 +7,11 @@ last_updated: 2026-09-23
 
 **一句话状态（2026-09-23）**：PCB 与 CAD 设计已收口到"可以打样验证"——E16 板（三键、L 形板框、右边缘 USB、NFC 馈线与底层落点）的原生 DRC、逐引脚网表、连通性、制造包全部通过；外壳 V7 的几何、真实元件干涉与 STL 网格检查通过并可直接打印。**板上只剩 NFC 线圈本身没落铜**，其余都在等外部输入。
 
-> 机器可读的门槛与证据以 [pcb-e14-manufacturing-gates.json](../hardware/pcb-e14-manufacturing-gates.json) 为准（含工程 sha256），本页是给人看的视图；两者冲突时以 JSON 与 `check-e14-gates.py` 的输出为准。
+> **新会话从这里开始**：根 [README](../../../README.md) → [环境与常驻服务](../../../docs/environment.md)（工具链、桥接启动、五分钟自检）→ 本页（门槛、外部输入、TODO）→ "
+        "[E16 记录](../hardware/pcb-e16-usb-right-mid.md)（全部细节与实测数据）。动手前先跑一遍自检，动铜箔前再跑连通性审计与 `check-proposed-route.py`。
+
+"
+        "> 机器可读的门槛与证据以 [pcb-e14-manufacturing-gates.json](../hardware/pcb-e14-manufacturing-gates.json) 为准（含工程 sha256），本页是给人看的视图；两者冲突时以 JSON 与 `check-e14-gates.py` 的输出为准。
 
 ## 设计门槛
 
@@ -29,7 +33,7 @@ last_updated: 2026-09-23
 
 ## 需要用户决策
 
-- [ ] 线圈现在就画（板上线圈默认方案，落点两种天线都兼容；不利再撤）还是等实验结论？
+- [ ] 线圈现在就画（板上线圈默认方案，落点两种天线都兼容；不利再撤）还是等实验结论？方案与校验工具已就位：[plan-nfc-coil.py](../scripts/plan-nfc-coil.py) 生成 [e16-nfc-coil-plan.json](../hardware/e16-nfc-coil-plan.json)，[check-proposed-route.py](../scripts/check-proposed-route.py) 离线校验（当前 `ok=true`，环间距 0.150 mm）。
 - [ ] 装壳后 SWD 救援是否加底层镜像焊盘 + 下壳三个 Ø1.2 mm 探针孔（外观取舍）。
 - [ ] 第三颗按键（SW2）的功能分配。
 - [ ] 下单通道：嘉立创经济型 PCBA 单板（84 × 52 可直下）还是标准型拼板。

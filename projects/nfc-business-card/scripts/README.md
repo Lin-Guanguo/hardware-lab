@@ -26,10 +26,24 @@ python3 projects/nfc-business-card/scripts/check-e16-copper-connectivity.py
 ```sh
 node projects/nfc-business-card/scripts/eda-exec-wait.mjs \
   projects/nfc-business-card/scripts/eda-export-pcb-pins.js 60000 > /tmp/pcb-pins.json
-python3 projects/nfc-business-card/scripts/check-netlist-consistency.py --sch /tmp/sch-netlist.enet --pcb /tmp/pcb-pins.json
+# 原理图那份 netlist 已随仓库保存（与验证过的那份 sha256 一致），无需再从客户端导出
+python3 projects/nfc-business-card/scripts/check-netlist-consistency.py \
+  --sch projects/nfc-business-card/hardware/records/e16-sch-netlist.enet \
+  --pcb /tmp/pcb-pins.json
 ```
 
-外壳叠层剖视图由 [generate-e16-v5-section-svg.py](generate-e16-v5-section-svg.py) 从几何报告生成（三张切片 + 图例，数字随报告更新）：
+**动铜箔之前先离线校验**：原生 DRC 只有铜箔落盘后才能看到结果，而 E16 的"连接 0"并不能证明连通。[plan-nfc-coil.py](plan-nfc-coil.py) 按记录好的几何生成 E16 线圈方案（6 圈矩形螺旋 + 两端馈线 + 顶层跨接 + 2 个过孔），[check-proposed-route.py](check-proposed-route.py) 拿这份方案与实时快照逐点比：线-线 0.102、焊盘/过孔-线 0.152、铜到板边 0.300、孔到孔 0.300，外加"线路自身间距"和禁布区规则（两份禁布区只禁填充/铺铜，允许走线）：
+
+```sh
+python3 projects/nfc-business-card/scripts/plan-nfc-coil.py --write     # -> hardware/e16-nfc-coil-plan.json
+python3 projects/nfc-business-card/scripts/check-proposed-route.py \
+  --route projects/nfc-business-card/hardware/e16-nfc-coil-plan.json
+# 期望：ok=true，且 within_route 最差约 0.150 mm（环间距）、其余间隙都在 2 mm 以上
+```
+
+方案文件里同时写着落盘前的两个前提：把保留区规则从 `[2,6,5,7]` 放宽为 `[2,6,7]`（去掉禁止走线），以及选择线圈的网表表示（合并两个 NFC 网络，或加一个天线器件+定制封装）。
+
+外壳叠层剖视图由 [generate-e16-v5-section-svg.py](generate-e16-v5-section-svg.py) 从几何报告生成（三张切片 + 图例，数字随报告更新）；[generate-e16-height-budget-svg.py](generate-e16-height-budget-svg.py) 画的是 5 mm 叠层高度账（电池区剖面 + 各层厚度标注，输出 `enclosure/nfc-card-e16-height-budget.svg`）：
 
 ```sh
 python3 projects/nfc-business-card/scripts/generate-e16-v5-section-svg.py

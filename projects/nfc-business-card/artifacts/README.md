@@ -20,7 +20,7 @@ last_updated: 2026-09-23
 
 | 目录 | 内容 | 怎么重建 |
 | --- | --- | --- |
-| `manufacture/` | 当前制造包：Gerber zip、BOM、贴装坐标、装配 PDF、`manifest.json`（含 sha256）。**验证用，不是下单文件** | `scripts/eda-export-e16-manufacture.js` 导出 → 从 `~/Downloads/.cn.lceda.pro.*` 拷进来 → `python3 scripts/check-e16-manufacture.py` |
+| `manufacture/` | 当前制造包：Gerber zip、BOM、贴装坐标、装配 PDF、`manifest.json`（含 sha256）。**验证用，不是下单文件** | `scripts/eda-export-e16-manufacture.js` 导出 → `python3 scripts/collect-e16-manufacture.py` 归纳进来 → `python3 scripts/check-e16-manufacture.py` |
 | `review/` | `pcba-e16-right-mid.png`：审查图的 PNG 预览（便于聊天/看图工具显示） | 权威图是受管理的 [enclosure/pcba-e16-right-mid.svg](../enclosure/pcba-e16-right-mid.svg)，PNG 由它渲染 |
 | `studies/routing-space/{initial,v2}/` | 长条电池 vs 右下布线区的研究输出（JSON + SVG） | `python3 scripts/routing-space-study.py --output-dir projects/nfc-business-card/artifacts/studies/routing-space/<new-run>` |
 | `archive/` | 2026-09-20/21 各阶段（E6–E13、compact/USB/datasheet 研究、EDA 冒烟测试与早期 FreeCAD 运行）的整块产物 | 只读留档，仅供追溯；命名保持当年原样 |

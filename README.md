@@ -29,6 +29,7 @@ hardware-lab/
 │   ├── README.md
 │   └── AI-API-Smoke-Test.eprj2
 ├── docs/
+│   ├── environment.md      <- 工具链、常驻服务、五分钟自检（新接手先看）
 │   ├── inventory.md
 │   └── wiring-diagrams.md
 └── projects/
@@ -43,13 +44,14 @@ hardware-lab/
     │   └── docs/
     └── nfc-business-card/
         ├── README.md
-        ├── hardware/
-        ├── enclosure/
-        ├── scripts/
-        └── docs/
+        ├── hardware/         <- BOM/接线/快照；records/ 存 EDA 重开、网表等证据
+        ├── enclosure/        <- 模型、STEP/STL、报告；renders/ 是渲染图册
+        ├── scripts/          <- 导出器、检查器、布线/线圈规划工具
+        ├── docs/             <- 含 progress.md 进度看板
+        └── artifacts/        <- 本机产物（全部忽略，只有 README.md 索引入库）
 ```
 
-目录用途与命名约定见 [AGENTS.md](AGENTS.md)。所有目录均在首次有实际内容时创建；新项目可以只有 README，不使用占位文件预建目录。根目录 `docs/` 保存跨项目信息，包括器件清单和[接线图制作与归档方法](docs/wiring-diagrams.md)。
+目录用途与命名约定见 [AGENTS.md](AGENTS.md)；本机环境、常驻服务与自检见 [环境与常驻服务](docs/environment.md)。所有目录均在首次有实际内容时创建；新项目可以只有 README，不使用占位文件预建目录。根目录 `docs/` 保存跨项目信息，包括器件清单和[接线图制作与归档方法](docs/wiring-diagrams.md)。
 
 根目录 [eda/](eda/README.md) 直接保存嘉立创 EDA 的原始 `.eprj2` 工程，不使用工程文件符号链接，也不再嵌套目录。客户端只需登记一次 `hardware-lab/eda/`。正式工程纳入 Git，所属项目通过文档关联；BOM 等资料仍保存在项目的 `hardware/`，临时导出产物放在 `artifacts/`。
 

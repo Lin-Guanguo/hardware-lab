@@ -1,0 +1,203 @@
+{
+ "name": "E16 NFC coil plan",
+ "note": "Planned copper, not drawn yet. Needs the reserve region relaxed from ruleType [2,6,5,7] to [2,6,7] (drop NO_WIRES) and a netlist decision: merge NFC1_TBD/NFC2_TBD, or add an antenna component whose footprint carries this copper.",
+ "keepouts": [
+  {
+   "name": "NFC reserve",
+   "x0": 60.0,
+   "y0": 24.0,
+   "x1": 82.0,
+   "y1": 50.0
+  },
+  {
+   "name": "U1 antenna",
+   "x0": 59.7,
+   "y0": 0.2,
+   "x1": 70.3,
+   "y1": 2.5
+  }
+ ],
+ "ignore_nets": [
+  "NFC1_TBD",
+  "NFC2_TBD"
+ ],
+ "tracks": [
+  {
+   "net": "NFC_COIL",
+   "layer": 2,
+   "width_mm": 0.25,
+   "points": [
+    [
+     68.0,
+     27.6
+    ],
+    [
+     60.6,
+     27.6
+    ],
+    [
+     60.6,
+     48.9
+    ],
+    [
+     71.0,
+     48.9
+    ],
+    [
+     71.0,
+     28.0
+    ],
+    [
+     61.0,
+     28.0
+    ],
+    [
+     61.0,
+     48.5
+    ],
+    [
+     70.6,
+     48.5
+    ],
+    [
+     70.6,
+     28.4
+    ],
+    [
+     61.4,
+     28.4
+    ],
+    [
+     61.4,
+     48.1
+    ],
+    [
+     70.2,
+     48.1
+    ],
+    [
+     70.2,
+     28.8
+    ],
+    [
+     61.8,
+     28.8
+    ],
+    [
+     61.8,
+     47.7
+    ],
+    [
+     69.8,
+     47.7
+    ],
+    [
+     69.8,
+     29.2
+    ],
+    [
+     62.2,
+     29.2
+    ],
+    [
+     62.2,
+     47.3
+    ],
+    [
+     69.4,
+     47.3
+    ],
+    [
+     69.4,
+     29.6
+    ],
+    [
+     62.6,
+     29.6
+    ],
+    [
+     62.6,
+     46.9
+    ],
+    [
+     69.0,
+     46.9
+    ],
+    [
+     69.0,
+     30.0
+    ]
+   ]
+  },
+  {
+   "net": "NFC_COIL",
+   "layer": 2,
+   "width_mm": 0.25,
+   "points": [
+    [
+     68.0,
+     23.0
+    ],
+    [
+     68.0,
+     27.6
+    ]
+   ]
+  },
+  {
+   "net": "NFC_COIL",
+   "layer": 1,
+   "width_mm": 0.25,
+   "points": [
+    [
+     69.0,
+     30.0
+    ],
+    [
+     69.0,
+     25.6
+    ],
+    [
+     70.2,
+     24.4
+    ],
+    [
+     71.4,
+     24.4
+    ]
+   ]
+  },
+  {
+   "net": "NFC_COIL",
+   "layer": 2,
+   "width_mm": 0.25,
+   "points": [
+    [
+     71.4,
+     24.4
+    ],
+    [
+     71.4,
+     23.0
+    ]
+   ]
+  }
+ ],
+ "vias": [
+  {
+   "net": "NFC_COIL",
+   "x": 69.0,
+   "y": 30.0,
+   "diameter_mm": 0.3,
+   "hole_mm": 0.2
+  },
+  {
+   "net": "NFC_COIL",
+   "x": 71.4,
+   "y": 24.4,
+   "diameter_mm": 0.3,
+   "hole_mm": 0.2
+  }
+ ],
+ "turns": 6
+}

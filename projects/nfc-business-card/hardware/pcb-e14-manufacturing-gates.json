@@ -4,7 +4,7 @@
  "checked_on": "2026-09-23",
  "source": {
   "eda_project": "../../../eda/NFC-Business-Card-84x52-E14-Battery-Layout.eprj2",
-  "eda_project_sha256": "1c8bdaa13c8bb5dee35c6377e85cc3d7eb09ca730f6f6911a4c2a011c62ab3a5",
+  "eda_project_sha256": "dd28c86126adf48e7d2af33542aeff388a34461f32af010a37627213b8c2da4c",
   "eda_snapshot": "pcb-e14-battery-layout.json",
   "cad_snapshot": "../enclosure/pcba-e14-battery-layout-report.json"
  },
@@ -26,7 +26,7 @@
   "drc_board_edge_results": 24,
   "smd_to_smd_overlaps": 0,
   "sqlite_quick_check": "ok",
-  "note": "live values for Board1_2 / E16 after the 2026-09-23 optimisation round: 244 pads, 792 copper segments and 168 vias. Two changes landed: four GND stitching vias plus five tie traces beside the USB ESD arrays with both ground pours refilled (ES-002 now passes), and C3, the BQ25186 BAT pin capacitor, was moved back beside U2 (DC-001 critical -> pass at 2.04 mm), which deleted its twelve-segment detour and four now-orphaned vias. Native DRC still returns false because of the 24 pre-existing 'Board Outline to SMD Pad' warnings at J1's slot edge. The manufacture package has been re-exported and re-checked: ok, 168 drill hits against 168 vias. The NFC reserve keep-out's ruleType was then relaxed from [2,6,5,7] to [2,6,7], dropping NO_WIRES so the on-board coil can legally exist there; NO_COMPONENTS, NO_FILLS and NO_POURS remain, and nothing else in the design changed.",
+  "note": "live values for Board1_2 / E16 after the 2026-09-23 optimisation round: 244 pads, 792 copper segments and 168 vias. Two changes landed: four GND stitching vias plus five tie traces beside the USB ESD arrays with both ground pours refilled (ES-002 now passes), and C3, the BQ25186 BAT pin capacitor, was moved back beside U2 (DC-001 critical -> pass at 2.04 mm), which deleted its twelve-segment detour and four now-orphaned vias. Native DRC still returns false because of the 24 pre-existing 'Board Outline to SMD Pad' warnings at J1's slot edge. The manufacture package has been re-exported and re-checked: ok, 168 drill hits against 168 vias. The NFC reserve keep-out's ruleType was then relaxed from [2,6,5,7] to [2,6,7], dropping NO_WIRES so the on-board coil can legally exist there; NO_COMPONENTS, NO_FILLS and NO_POURS remain, and nothing else in the design changed. Schematics were also probed read-only (two temporary wires created and deleted) while establishing that the API can open schematic sheets by sheet uuid; nothing else changed.",
   "pad_count": 244
  },
  "gates": [

@@ -7,7 +7,7 @@ last_updated: 2026-09-23
 
 **一句话状态（2026-09-23）**：PCB 与 CAD 设计已收口到"可以打样验证"——E16 板（三键、L 形板框、右边缘 USB、NFC 馈线与底层落点）的原生 DRC、逐引脚网表、连通性、制造包全部通过；外壳 V7 的几何、真实元件干涉与 STL 网格检查通过并可直接打印。**板上只剩 NFC 线圈本身没落铜**，其余都在等外部输入。
 
-> **2026-09-23 方法论检查新增两项待办**：用 DRC 看不见的规则集（[规则索引](../../../docs/pcb-design-rules.md)、[pcb-methodology skill](../../../.agents/skills/pcb-methodology/SKILL.md)）离线扫了一遍，得到两项需要写盘的动作——**C3（充电器 BAT 引脚电容）离它要服务的引脚 24.49 mm**，以及 **USB/ESD 区域几乎没有地缝合**（J1 的 10 mm 内仅 1 个地过孔）。两者都躲过了原生 DRC、逐引脚网表、连通性与制造包四项检查。细节与实测数据见 [E16 记录 · 方法论检查](../hardware/pcb-e16-usb-right-mid.md#方法论检查emc--信号完整性2026-09-23)。
+> **2026-09-23 方法论检查已确诊一项、新增一项**（覆铜导出补齐后 `ES-002` 从"无法裁决"变成机制清楚）：用 DRC 看不见的规则集（[规则索引](../../../docs/pcb-design-rules.md)、[pcb-methodology skill](../../../.agents/skills/pcb-methodology/SKILL.md)）离线扫了一遍，得到两项需要写盘的动作——**C3（充电器 BAT 引脚电容）离它要服务的引脚 24.49 mm**，以及 **USB/ESD 区域几乎没有地缝合**（J1 的 10 mm 内仅 1 个地过孔）。两者都躲过了原生 DRC、逐引脚网表、连通性与制造包四项检查。细节与实测数据见 [E16 记录 · 方法论检查](../hardware/pcb-e16-usb-right-mid.md#方法论检查emc--信号完整性2026-09-23)。
 
 > **新会话从这里开始**：根 [README](../../../README.md) → [环境与常驻服务](../../../docs/environment.md)（工具链、桥接启动、五分钟自检）→ 本页（门槛、外部输入、TODO）→ "
         "[E16 记录](../hardware/pcb-e16-usb-right-mid.md)（全部细节与实测数据）。动手前先跑一遍自检，动铜箔前再跑连通性审计与 `check-proposed-route.py`。
@@ -42,7 +42,9 @@ last_updated: 2026-09-23
 
 ## 工程化 TODO
 
-- [ ] **补覆铜导出**（需 EasyEDA 客户端）：先跑 [eda-probe-copper.js](../scripts/eda-probe-copper.js) 摸清 `pours` / `poured` / region 的真实对象结构，再确认 [eda-export-e16-snapshot.js](../scripts/eda-export-e16-snapshot.js) 的扩展并重导快照。这一步才能裁决 `ES-002`（地焊盘靠覆铜还是细线接地）并解锁 `GP-001/003/004`、`BE-002`、`PD-*`。
+- [x] **补覆铜导出**（2026-09-23）：探测出 `pours` / `poured` / region 的真实结构（三处与假设不符，见 E16 记录），导出扩展后重导快照，**内容指纹与实况板逐字段一致**。新增 [analyze-e16-pour.py](../scripts/analyze-e16-pour.py) 与共享的 [pour_geometry.py](../scripts/pour_geometry.py)（带标定断言）。`ES-002` 由此确诊。
+- [ ] **给 `GP-003/GP-004/BE-002` 补检查器**：已在 `analyze-e16-pour.py` 中实现，但 `GP-001`（信号跨越覆铜缺口）仍未实现——它是"干扰"最核心的一条，判据可按顶层走线下方底层覆铜的连续覆盖率。
+- [ ] **把连通性审计的 `ground_reach` 修到可信**：目前报 2 个 GND 焊盘未到达覆铜，但都与手工验证的事实冲突（R13 的 GND 焊盘 0.050 mm 处就有 GND 过孔），标为 `trusted: false`、不参与门禁。修好后才能逐一验证 29+14 块覆铜区域与 GND 网络的连通性。
 - [ ] **给 USB/ESD 区域补地缝合孔**（需客户端）：U5/U6 的 GND 焊盘旁各 ≥2 个，用 0.61/0.305 mm 避免落进加价档；落铜前跑 `check-proposed-route.py`，落铜后重跑原生 DRC + 连通性 + 制造包。
 - [ ] **C3 处置**（需客户端）：充电器的 BAT 引脚电容搬回 U2 旁，牵动 `BAT_PACK_TBD` 约 20 mm 走线重布。
 - [ ] **制造包放行前重新点数并记录过孔数**：门槛文件与散文都没有产物佐证（散文的 162 与新门槛文件的 168 不一致）。

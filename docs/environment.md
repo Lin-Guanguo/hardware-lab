@@ -80,6 +80,7 @@ python3 projects/nfc-business-card/scripts/check-e16-manufacture.py           # 
 | --- | --- |
 | 状态行 `bridge down`（按需模式） | 正常：服务没启动。用 `tools/easyeda-bridge/bridge-start.sh` 开 |
 | `bridge up but no EDA window` | EDA 客户端没开、扩展没启用，或编辑器标签页被关掉。打开客户端并确认扩展启用，扩展会在十几秒内重连 |
+| 客户端刚启动、`/health` 已报 `edaConnected: true`，但**所有图元 API 返回 null**（连 `pcb_PrimitiveLine.getAll()` 都报 `Cannot read properties of null (reading 'map')`） | 冷启动停在起始页、**没有打开任何工程**。`dmt_SelectControl.getCurrentDocumentInfo()` 会显示 `documentType: -1`、`tabId: tab_page1`。先跑 `node projects/nfc-business-card/scripts/eda-exec-wait.mjs projects/nfc-business-card/scripts/eda-open-e16.js 180000`：它用 `dmt_Project.openProject()` 打开 E16 所在工程，并用**内容指纹**（56 元件 / 244 焊盘 / 798 线 / 168 过孔）确认身份，不依赖 API 报出的工程名 |
 | 重操作（`pcb_Drc.check`、制造包导出）报 30 s 超时 | 走的是客户端界面线程：Mac 锁屏或窗口里有模态框时会超时。解锁并关掉对话框/重启客户端即可；轻量 API 不受影响 |
 | `/eda-windows` 里有“已连接”但实际只有 1 个窗口 | 扩展每十几秒重连一次并注册新 windowId，桥接会保留僵尸注册。执行器 [eda-exec-wait.mjs](../projects/nfc-business-card/scripts/eda-exec-wait.mjs) 每次先选在线窗口并重试 |
 | `~/Downloads/.cn.lceda.pro.*` 堆积 | EDA 导出的临时落盘口（隐藏随机名）。用 `projects/nfc-business-card/scripts/collect-e16-manufacture.py` 归纳到 `artifacts/manufacture/`，其余可清 |

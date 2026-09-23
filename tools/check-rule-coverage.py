@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Cross-check the rule table's coverage claims against the checkers.
 
+A checker is any script under projects/*/scripts/ named check-*.py or
+analyze-*.py that emits findings carrying a "rule" key.
+
 docs/pcb-design-rules.md marks each rule as automatically covered, blocked,
 manual or not applicable. A rule marked automatic that no checker actually
 implements is an overclaim, and an overclaim is worse than a gap: it makes the
@@ -23,7 +26,10 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 DEFAULT_DOC = REPO / "docs/pcb-design-rules.md"
-DEFAULT_CHECKERS = sorted((REPO / "projects").glob("*/scripts/check-*.py"))
+# Every script that emits machine-readable findings with a "rule" key counts.
+DEFAULT_CHECKERS = sorted(
+    set((REPO / "projects").glob("*/scripts/check-*.py"))
+    | set((REPO / "projects").glob("*/scripts/analyze-*.py")))
 
 RULE_ID = re.compile(r"\b([A-Z]{2}-\d{3})\b")
 IMPLEMENTED = re.compile(r'"rule":\s*"([A-Z]{2}-\d{3})"')

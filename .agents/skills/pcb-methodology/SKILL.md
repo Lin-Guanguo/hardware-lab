@@ -94,7 +94,12 @@ node projects/nfc-business-card/scripts/eda-exec-wait.mjs \
 | 制造包核对 | `check-e16-manufacture.py`、`collect-e16-manufacture.py` |
 | 进度与门槛 | `projects/*/docs/progress.md`、`hardware/pcb-e14-manufacturing-gates.json` |
 
-**已知的数据缺口**：快照导出未采集铜箔铺铜对象（`pcb_PrimitivePour` / `pcb_PrimitivePoured`），且 `regions` 缺 `polygon`。因此回流路径与跨缺口那一整类规则（GP-001/003/004、BE-002、PD-*）当前算不了，`ES-002` 也无法裁决。**碰到这类问题时先补导出，再谈结论**，不要把"算不了"写成"通过"。
+**覆铜几何已补齐**（2026-09-23）：导出脚本原先读 region 上不存在的 `polygon` / `rule`，两个字段被静默丢弃，铜箔对象则完全没采集。现已补齐 `pours` / `poured` 并通过内容指纹与实况板核对。两点必须记住，否则会量出自信的错数：
+
+- 填充坐标的**单位与快照其余对象不同**，1 单位 = 0.254 mm；`pours`、走线、焊盘、外形都是 mil。
+- `fills[]` 是混合列表：≥3 顶点的环是覆铜多边形（首环外轮廓、后续为孔），**2 点退化线段是散热辐条**——它才是把地焊盘接到覆铜的东西。
+
+这两点由 `pour_geometry.py` 承载，并带**标定断言**（解析出的覆铜必须落在铜箔边框内 1 mm，否则拒绝出结论）。`ground_reach`（GND 焊盘是否到达覆铜）目前标为 `trusted: false`，**不参与门禁**：它与手工验证的事实冲突，属于线索而非发现。
 
 ## 变更与实验循环
 

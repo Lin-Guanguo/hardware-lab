@@ -27,6 +27,8 @@ import math
 from collections import defaultdict
 from pathlib import Path
 
+from pour_geometry import load_pours
+
 MIL = 39.37007874015748
 REPO = Path(__file__).resolve().parents[3]
 DEFAULT_SNAPSHOT = REPO / "projects/nfc-business-card/hardware/e16-right-mid-snapshot.json"
@@ -99,6 +101,158 @@ class Groups:
         ra, rb = self.find(a), self.find(b)
         if ra != rb:
             self.parent[ra] = rb
+
+
+def ground_reach(snapshot):
+    """Report GND pads that have no copper path to the ground pour.
+
+    The net audit above skips GND because it "also connects through the two
+    ground pours". That assumption was untestable until the exporter captured
+    pour geometry, and it is exactly the assumption that would hide a floating
+    ground pad. This walks the GND copper only — pads, traces, vias and the
+    poured fills, including the thermal spokes that tie a pad to a pour — and
+    asks of every GND pad whether it shares a group with the pour.
+
+    Note what this does not cover: a pad that reaches the pour through a single
+    narrow neighbour still passes here. Path *quality* at an ESD device is a
+    separate question, checked by ES-002 in check-e16-emc.py.
+    """
+    pours = load_pours(snapshot)
+    if not pours:
+        return {"available": False, "unreached_pads": []}
+
+    groups = Groups()
+    pour_keys = {}
+    for layer in sorted(pours):
+        key = f"pour:{layer}"
+        pour_keys[layer] = key
+        groups.add(key)
+
+    gnd_pads = [p for p in snapshot["pads"] if p.get("net") == "GND"]
+    gnd_lines = [(i, l) for i, l in enumerate(snapshot["lines"]) if l["net"] == "GND"]
+    gnd_vias = [(i, v) for i, v in enumerate(snapshot["vias"]) if v["net"] == "GND"]
+
+    for i in range(len(gnd_pads)):
+        groups.add(f"pad:{i}")
+    for i, _ in gnd_lines:
+        groups.add(f"line:{i}")
+    for i, _ in gnd_vias:
+        groups.add(f"via:{i}")
+
+    def pour_contains(layer, x_mil, y_mil):
+        return pours[layer].contains(x_mil / MIL, y_mil / MIL)
+
+    # Same-net copper inside a pour is connected to it; the pour clears other
+    # nets but never its own.
+    for layer, pour in sorted(pours.items()):
+        key = pour_keys[layer]
+        for i, via in gnd_vias:
+            if pour_contains(layer, via["x"], via["y"]):
+                groups.union(key, f"via:{i}")
+        for i, line in gnd_lines:
+            if line["layer"] != layer:
+                continue
+            for t in (0.0, 0.25, 0.5, 0.75, 1.0):
+                x = line["x1"] + (line["x2"] - line["x1"]) * t
+                y = line["y1"] + (line["y2"] - line["y1"]) * t
+                if pour_contains(layer, x, y):
+                    groups.union(key, f"line:{i}")
+                    break
+        # Thermal spokes: a two-point path whose start sits on the pad and whose
+        # body leaves the pad towards the pour. Spoke coordinates come from
+        # pour_geometry in mm, and they must be converted with this module's MIL,
+        # which is mil-per-mm (39.37). pour_geometry's MIL is the reciprocal
+        # (mm-per-mil); mixing the two silently scales by 1550.
+        for spoke in pour.spokes:
+            sx_mil = spoke.start[0] * MIL
+            sy_mil = spoke.start[1] * MIL
+            for i, pad in enumerate(gnd_pads):
+                if distance_to_box(sx_mil, sy_mil, pad_box(pad)) <= 0.05 * MIL:
+                    groups.union(key, f"pad:{i}")
+
+    # Pads joined by overlapping each other, or to a trace/via of the same net.
+    for a in range(len(gnd_pads)):
+        box_a = pad_box(gnd_pads[a])
+        for b in range(a + 1, len(gnd_pads)):
+            box_b = pad_box(gnd_pads[b])
+            if (abs(box_a[0] - box_b[0]) <= box_a[2] + box_b[2]
+                    and abs(box_a[1] - box_b[1]) <= box_a[3] + box_b[3]):
+                groups.union(f"pad:{a}", f"pad:{b}")
+        for i, via in gnd_vias:
+            radius = via["diameterMil"] / 2
+            if distance_to_box(via["x"], via["y"], box_a) <= radius:
+                groups.union(f"pad:{a}", f"via:{i}")
+        for i, line in gnd_lines:
+            # Sample the centreline rather than projecting only the pad centre:
+            # a trace can pass a pad's corner well inside the pad while the
+            # centre-to-centre projection still looks far away.
+            steps = max(2, int(math.hypot(line["x2"] - line["x1"],
+                                         line["y2"] - line["y1"]) / 1.0) + 1)
+            closest = min(
+                distance_to_box(line["x1"] + (line["x2"] - line["x1"]) * t,
+                                line["y1"] + (line["y2"] - line["y1"]) * t, box_a)
+                for t in (i / steps for i in range(steps + 1)))
+            if closest <= line["widthMil"] / 2:
+                groups.union(f"pad:{a}", f"line:{i}")
+        # A pad whose copper body overlaps the pour is connected to it. The pad
+        # centre alone is not enough: a pad sitting in the pour's clearance gap
+        # still touches copper when the gap is smaller than the pad's own extent.
+        for layer in sorted(pours):
+            cx, cy, half_w, half_h = box_a
+            probes = [(cx + dx, cy + dy)
+                      for dx in (-half_w, 0.0, half_w)
+                      for dy in (-half_h, 0.0, half_h)]
+            if any(pour_contains(layer, px, py) for px, py in probes):
+                groups.union(pour_keys[layer], f"pad:{a}")
+
+    # A via is the only thing that joins copper across layers, so traces and
+    # vias of the GND net have to be linked or the graph reports a pad as
+    # isolated when it is merely on the other side of a layer change.
+    for i, via in gnd_vias:
+        radius = via["diameterMil"] / 2
+        for j, line in gnd_lines:
+            if point_to_segment(via["x"], via["y"], line) <= radius + line["widthMil"] / 2:
+                groups.union(f"via:{i}", f"line:{j}")
+    for i, first in gnd_lines:
+        for j in range(i + 1, len(gnd_lines)):
+            second = snapshot["lines"][j]
+            if second["net"] != "GND" or second["layer"] != first["layer"]:
+                continue
+            if segment_to_segment(first, second) <= (first["widthMil"] + second["widthMil"]) / 2:
+                groups.union(f"line:{i}", f"line:{j}")
+
+    unreached = []
+    for i, pad in enumerate(gnd_pads):
+        key = f"pad:{i}"
+        if not any(groups.find(key) == groups.find(pk) for pk in pour_keys.values()):
+            unreached.append({
+                "pad": pad["number"],
+                "x_mm": round(pad["x"] / MIL, 3),
+                "y_mm": round(pad["y"] / MIL, 3),
+                "nearest_pour_mm": round(
+                    min(p.nearest_region_distance(pad["x"] / MIL, pad["y"] / MIL)
+                        for p in pours.values()), 3),
+            })
+
+    return {
+        "available": True,
+        "pours": {layer: len(p.regions) for layer, p in sorted(pours.items())},
+        "gnd_pads_checked": len(gnd_pads),
+        "unreached_pads": unreached,
+        # Not trusted yet, and deliberately not part of the ok flag.
+        #
+        # Two pads come out unreached, but both conflict with evidence that the
+        # board is fine: R13's ground pad has a GND via 0.05 mm from its centre,
+        # C7's has one 1 mm away, and the native DRC reports zero unrouted
+        # connections on a net that is connected, so the graph here is still
+        # missing an edge type. Four bugs were found and fixed in this function
+        # already (spoke unit conversion, pad-centre-only containment, missing
+        # via-to-trace edges, missing line-to-line edges); a fifth is the likely
+        # explanation rather than two floating ground pads. Treat the result as a
+        # lead, not a finding, until it agrees with the hand check.
+        "trusted": False,
+        "candidates": [u["pad"] for u in unreached],
+    }
 
 
 def audit(snapshot):
@@ -209,6 +363,8 @@ def audit(snapshot):
                     "segment_length_mm": round(math.hypot(line["x2"] - line["x1"], line["y2"] - line["y1"]) / MIL, 3),
                 })
 
+    reach = ground_reach(snapshot)
+
     return {
         "snapshot": str(snapshot.get("_path", "")),
         "components": len(snapshot["components"]),
@@ -218,6 +374,9 @@ def audit(snapshot):
         "nets_checked": len(by_net) - 1,
         "split_nets": split_nets,
         "dead_ends": dead_ends,
+        "ground_reach": reach,
+        # ground_reach is advisory until it agrees with the hand check, so it is
+        # reported but not allowed to fail the gate.
         "ok": not split_nets and not dead_ends,
     }
 

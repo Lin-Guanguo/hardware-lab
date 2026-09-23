@@ -38,6 +38,10 @@ const polySource = (value) => {
   return value;
 };
 
+// A poured object carries no net or layer of its own, so the filled regions are
+// joined back to their copper border through pourPrimitiveId.
+const pourById = new Map((pours || []).map((p) => [p.primitiveId, p]));
+
 return {
   document: { uuid: E16_PAGE_UUID, name: "E16 Right-Mid USB Study" },
   components: comps.map((c) => ({
@@ -91,17 +95,27 @@ return {
   // Filled copper: the geometry that actually ends up on the board, including
   // clearances and thermal relief. The EMC ground-plane and return-path checks
   // need this, not the border.
-  poured: (poured || []).map((p) => ({
-    id: p.primitiveId,
-    net: p.net,
-    layer: p.layer,
-    fills: (Array.isArray(p.pourFill) ? p.pourFill : []).map((f) => ({
-      id: f.id,
-      fill: f.fill,
-      lineWidth: f.lineWidth,
-      path: polySource(f.path) ?? f.path ?? null,
-    })),
-  })),
+  //
+  // Field names verified by scripts/eda-probe-copper.js against the live client:
+  // a poured object exposes `pourFills` (plural), each fill carries its outline
+  // under `path.complexPolygon`, and the object itself has no net or layer, only
+  // `pourPrimitiveId`, which joins back to the copper border.
+  poured: (poured || []).map((p) => {
+    const border = pourById.get(p.pourPrimitiveId);
+    return {
+      id: p.primitiveId,
+      pourPrimitiveId: p.pourPrimitiveId,
+      net: border ? border.net : null,
+      layer: border ? border.layer : null,
+      pourName: border ? border.pourName : null,
+      fills: (Array.isArray(p.pourFills) ? p.pourFills : []).map((f) => ({
+        id: f.id,
+        fill: f.fill,
+        lineWidth: f.lineWidth,
+        path: polySource(f.path && f.path.complexPolygon ? f.path.complexPolygon : f.path),
+      })),
+    };
+  }),
   strings: strings.map((s) => ({
     id: s.primitiveId,
     layer: s.layer,

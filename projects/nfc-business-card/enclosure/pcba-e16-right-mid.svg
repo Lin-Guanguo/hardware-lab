@@ -995,9 +995,10 @@
 <text x="1010" y="546" font-size="15" font-weight="bold">板面数据（本图快照）</text>
 <text x="1010" y="568" class="s">56 个位号 · 244 个焊盘 · 798 段铜线</text>
 <text x="1010" y="589" class="s">168 个过孔 · 2 块 GND 覆铜（顶/底）</text>
-<text x="1010" y="610" class="s">原生 DRC（馈线落铜前）：间距 0、连接 0、孔到孔 0</text>
-<text x="1010" y="631" class="s">只剩 24 项 Board Outline to SMD Pad（固有 J1 槽边几何）</text>
+<text x="1010" y="610" class="s">原生 DRC（馈线落铜后复跑）：24 项固有 J1 槽边告警</text>
+<text x="1010" y="631" class="s">间距 / 连接 / 孔到孔 / 覆铜间隙 全部 0</text>
 <text x="1010" y="652" class="s">12 个焊盘离板边 0.2007 mm，板厂允许 ≥0.2 mm</text>
+<text x="1010" y="673" class="s">制造包重导 ok：17 个 Gerber 成员 · 168 孔 · 56 位号</text>
 <text x="1010" y="700" font-size="15" font-weight="bold">图例</text>
 <circle cx="1018" cy="720" r="5" fill="#C2542F"/>
 <text x="1030" y="724" class="s">USB / ESD / CC</text>

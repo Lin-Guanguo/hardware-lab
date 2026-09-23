@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 from pathlib import Path
 
 from pour_geometry import MIL, calibrate, load_pours, parse_path
@@ -32,6 +33,104 @@ PROBES = [
     ("J1 anchor 17", 77.10, 10.38), ("J1 anchor 18", 77.10, 21.62),
     ("USB DP via", 75.05, 16.75),
 ]
+
+
+def nearest_reference_distance(pour, px, py):
+    """Distance from a point to the nearest copper of this pour.
+
+    A pour carves its clearance out around every trace and pad, so a trace's own
+    centreline is never inside the pour: it sits in the gap the pour left for it.
+    Testing containment therefore reports 0% coverage for a perfectly continuous
+    plane. What matters is how far the nearest plane copper is.
+    """
+    best = float("inf")
+    for region in pour.regions:
+        x0, y0, x1, y1 = region.bbox
+        # Bounding-box lower bound, so distant regions cost nothing.
+        lower = math.hypot(max(x0 - px, 0.0, px - x1), max(y0 - py, 0.0, py - y1))
+        if lower >= best:
+            continue
+        d = region.distance(px, py)
+        if d < best:
+            best = d
+    return best
+
+
+# A trace keeps its return path where plane copper is within this distance. The
+# pour's own clearance to a trace is about 0.2 mm and a signal trace is 0.15 mm
+# wide, so 0.5 mm should mean "the plane is there".
+#
+# It does not work out that way, and the result is reported as a lead rather than
+# a finding. A dense board perforates the reference plane with its own routing, so
+# this metric cannot separate a genuine slot from a plane that is merely full of
+# other traces' clearances. With 0.5 mm it flags 45 of 48 signal nets, which is
+# not a credible verdict on a board whose ground pours cover 40% and 51% of the
+# area. The upstream rule fixes the 95% threshold but never defines the corridor
+# width, so the number is this repository's choice and the check is not trusted
+# until it is calibrated against something known to be bad.
+REFERENCE_CORRIDOR_MM = 0.50
+
+
+def reference_coverage(snapshot, pours, step=0.10):
+    """GP-001: does each signal net keep a reference plane along its route?
+
+    On a two-layer board a top-layer trace is referenced to the bottom ground
+    pour and vice versa, so each signal trace is sampled and scored by whether
+    plane copper lies within REFERENCE_CORRIDOR_MM of it. Rule: below 95%
+    coverage for any net.
+
+    Source: Hubing, "Common PCB Layout Mistakes that Cause EMC Compliance
+    Failures", AltiumLive 2022, which names this the top PCB layout cause of EMC
+    failures; kicad-happy GP-001.
+    """
+    mm = MIL
+    opposite = {1: 2, 2: 1}
+    by_net = {}
+    for line in snapshot["lines"]:
+        net = line.get("net") or ""
+        if not net or net == "GND":
+            continue
+        by_net.setdefault(net, []).append(line)
+
+    results = []
+    for net, segments in sorted(by_net.items()):
+        total = covered = 0
+        worst = 0.0
+        worst_at = None
+        for line in segments:
+            ref_layer = opposite.get(line["layer"])
+            if ref_layer not in pours:
+                continue
+            pour = pours[ref_layer]
+            x1, y1 = line["x1"] * mm, line["y1"] * mm
+            x2, y2 = line["x2"] * mm, line["y2"] * mm
+            length = math.hypot(x2 - x1, y2 - y1)
+            count = max(2, int(length / step) + 1)
+            for i in range(count + 1):
+                t = i / count
+                px, py = x1 + (x2 - x1) * t, y1 + (y2 - y1) * t
+                total += 1
+                d = nearest_reference_distance(pour, px, py)
+                if d <= REFERENCE_CORRIDOR_MM:
+                    covered += 1
+                elif d > worst:
+                    worst, worst_at = d, (round(px, 2), round(py, 2), line["layer"])
+        if not total:
+            continue
+        pct = 100.0 * covered / total
+        results.append({
+            "rule": "GP-001",
+            "net": net,
+            "samples": total,
+            "coverage_pct": round(pct, 2),
+            "worst_void_mm": round(worst, 3),
+            "worst_void_at": worst_at,
+            # Advisory: see REFERENCE_CORRIDOR_MM. Reported, never a failure.
+            "status": "info",
+            "would_fail_at_95pct": pct < 95.0,
+            "source": "Hubing, AltiumLive 2022; kicad-happy GP-001",
+        })
+    return results
 
 
 def main():
@@ -137,6 +236,27 @@ def main():
             "status": "fail" if worst[1] > 2.0 else "pass",
             "source": "kicad-happy BE-002",
         })
+    print()
+
+    print("--- GP-001: reference-plane coverage per signal net (rule 95%) ---")
+    coverage = reference_coverage(snapshot, pours)
+    report["findings"].extend(coverage)
+    worst = sorted(coverage, key=lambda c: c["coverage_pct"])[:8]
+    for c in worst:
+        mark = "FAIL" if c["status"] == "fail" else "    "
+        print(f"  {mark} {c['net']:18} {c['coverage_pct']:6.2f}% over {c['samples']:5} samples"
+              + (f"; worst void {c['worst_void_mm']} mm at {c['worst_void_at']}"
+                 if c["worst_void_mm"] else ""))
+    failing = [c for c in coverage if c["would_fail_at_95pct"]]
+    print(f"  {len(failing)} of {len(coverage)} signal nets below 95% "
+          f"-> ADVISORY ONLY, not a gate (see REFERENCE_CORRIDOR_MM)")
+    report["coverage_summary"] = {
+        "nets": len(coverage), "below_95pct": len(failing),
+        "trusted": False,
+        "note": ("The corridor width is this repository's choice and conflates a "
+                 "genuine plane slot with a plane perforated by same-layer "
+                 "routing. Calibrate against a known-bad board before trusting it."),
+    }
     print()
 
     print("--- ES-002 locality: how each ground pad reaches copper ---")

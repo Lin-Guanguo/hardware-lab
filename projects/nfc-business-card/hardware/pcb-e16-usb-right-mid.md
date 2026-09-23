@@ -171,6 +171,36 @@ ok = False | 136 项违规
 
 **已选定的做法（用户确认）：做成定制封装。** 螺旋作为封装的铜箔图形、两个焊盘接 NFC1_TBD / NFC2_TBD，schematic 侧加对应符号与器件，使逐引脚网表核对仍然有意义。另一条备选（合并 NFC1_TBD 与 NFC2_TBD 成一个网络）会使网表把线圈两端画成同一节点，从而让这两个网络上的逐引脚核对失去意义，未采用。
 
+
+**2026-09-23 追加：库写入 API 在本机不可用，"定制封装"这条路暂时走不通。**
+
+按 A 方案去建封装时实测了库侧能力，**六项写入/打开操作全部失败**（客户端 pro-api 0.3.18，错误来自 API 内部、多数没有消息）：
+
+| 操作 | 结果 |
+| --- | --- |
+| `lib_Footprint.create(工程库, 名, [], 描述)` | `Error: null` |
+| `lib_Footprint.create(系统库, …)` | `undefined`（系统库只读，符合预期） |
+| `lib_Footprint.copy(C0805, 工程库, 工程库, …, 新名)` | `Error: [object Object]` |
+| `lib_Footprint.modify(C0805, 工程库, …)` | `Error: [object Object]` |
+| `lib_Footprint.openInEditor(工程库封装)` | `Error: [object Object]`，并让客户端界面卡死十余秒 |
+| `lib_Symbol.create` / `lib_Device.create` | `Error: [object Object]` / `undefined` |
+
+`getPersonalLibraryUuid()` 返回 `null`／`"undefined"`，工程库只读得到、写不进——**疑似库会话未登录**（系统库只读、个人库不存在），但无论根因如何，结论是：**本机无法通过 API 建封装、建符号、建器件，也无法打开库封装文档**。每次失败的调用都要等客户端恢复，工程与板子本身没有受损（恢复后核对仍是 56 元件、E16 图页）。
+
+这一轮还纠正了我自己的两个前置错误，值得记：**工程库 uuid 不是字面量 `"project"`**（`getProjectLibraryUuid()` 返回的就是它，但传给 `create` 无效），真实 uuid 是 `194bce25cb1e43cb9ff128af160743ec`，由 `lib_Footprint.search("", "project", …)` 的结果反查得到；**系统库 uuid 才是 `0819f05c4eef4c71ace90d822a990e87`**，它只读，这也是第一次 `openInEditor` 返回 `false` 的原因。
+
+**顺带学到的文档格式**（用 `sys_FileManager.getDocumentSource()` 读 E16 图页得到，1685 行）：每行形如 `{"type":…,"ticket":N,"id":…}||{payload}|`，条目类型包括 `PAD` / `LINE` / `POLY` / `VIA` / `REGION` / `POUR` / `POURED` / `COMPONENT` / `ATTR` / `PAD_NET` / `NET` / `RULE` 等。关键形状：
+
+- `PAD`：`{netName, layerId, num, centerX, centerY, padAngle, hole, defaultPad:{padType,width,height}, padType, …}`
+- `POLY`：`{netName, layerId, width, path:[x,y,"L",…], polyType:"NORMAL"}`
+- `COMPONENT`：`{layerId, x, y, angle, attrs:{Name,…}}`，另有 `ATTR` 以 `key:"Footprint"`、`value:"<封装 uuid>"` 关联库封装
+- `PAD_NET`：以 `["PAD_NET", 器件id, 焊盘号, …]` 为 id，`{padNet, padLen, attrsMap}`
+- 坐标与尺寸单位是 **mil**（与快照一致）
+
+**这意味着**：落一个器件必须有库封装 uuid（`ATTR` 指向它），所以 A 方案的完整形态卡在库写入上。
+
+**可绕开库、且不污染网表的替代**：把螺旋作为**无网络的图形铜箔**（`POLY`，`netName:""`）画在 1/2 层，两个落点焊盘的网络保持 NFC1_TBD / NFC2_TBD 不变。这样 DRC 不会报跨网络短路、逐引脚网表核对也不受影响（它比的是焊盘网络，不查图形铜箔）。代价要说清楚：**线圈铜箔不进网表，因此网表核对无法验证线圈是否真的连通**——这属于"检查器不检查这件事"，必须在文档里写明，而不是当成通过。schematic 侧仍应补一个天线器件，但那同样需要库写入。
+
 **已查清的 API 路径**（下一轮直接执行）：
 
 | 步骤 | 接口 | 说明 |

@@ -212,6 +212,28 @@ function check(strict, userInterface, includeVerboseError: true):  Promise<Array
 2. **没有排除"正在移动的元件自己的焊盘"**——C3 的新 GND 焊盘曾"接"到 0.90 mm 外的 C3 旧 GND 焊盘，而那正是要被搬走的对象。已改为给检查器传一份"删掉 C3 现有焊盘"的快照，这既符合搬走之后的现实，也避免旧焊盘把搜索区域误否决；
 3. **只量拉线长度、不验证拉线本身**——曾有候选的 GND 拉线要横穿 BP 而短路，规划器看不出来。已把两条拉线合成进路线交给检查器一并校验，之后合法解从 27 个降到 0 个，正是这个修正起了作用。
 
+
+### 线圈封装已建好，但本工具的 net tie 在原理图侧（2026-09-23）
+
+**库写入的根因找到了：这台机器上从来没有个人库。** `getAllLibrariesList()` 返回 `[]`、`getPersonalLibraryUuid()` 返回 `null`、`~/Documents/LCEDA-Pro/libraries/` 是空目录。用户在 GUI 点「新建元件库」（起始页快速开始第三个按钮；或打开文档后 `文件 > 新建 > 库`）建了 `hardware-lab` 之后，**库写入立刻可用**——`lib_Footprint.create` 返回了 uuid 并能搜回来。客户端处于 `HALF_OFFLINE` 模式，官方 FAQ 说这是推荐模式、无需登录、个人库本地可写，所以问题从来不是"离线没有库服务"，而是"没有库"。
+
+**封装已建好**：`HL_NFC_COIL_E16`（库 `hardware-lab`，uuid `628b3d578f8845afa16440ca44024c80`），内容是 **29 段螺旋 + 2 个换层过孔 + 2 个焊盘**，原点取 NFC1 落点，所以把它放在 (68.00, 23.00) 时两个焊盘正好压在 NFC1 / NFC2 落点上。生成脚本 [build-e16-coil-footprint.js](../scripts/build-e16-coil-footprint.js) 由 [e16-coil-footprint-local.json](e16-coil-footprint-local.json) 驱动，不手抄坐标。
+
+**测出来的单位陷阱**：封装文档的 `CANVAS` 声明 `"unit":"mm"`，但**实际坐标是 mil**。按 mm 建的那一版，焊盘 2 落在离焊盘 1 只有 3.4 mil 的地方（差 39.37 倍），是落板后在 PCB 快照（mil）里量出来的。**声明与实况不一致时，以实况为准。**
+
+**关键结论：嘉立创 EDA 专业版没有"net tie 封装"这个概念。** 本地 API 参考里搜不到任何 netTie / footprint type 属性；唯一的 net-tie 机制是 `ELIB_SymbolType.SHORT_CIRCUIT_FLAG = 22`，而它是**原理图符号类型**。
+
+实测证据：把上述封装落板后，DRC 报 **12 项非基线**——`Track to Track`（螺旋铜箔 vs `NFC1_TBD`/`NFC2_TBD` 走线）、`SMD Pad to Track`、`SMD Pad to SMD Pad`、`Copper Region(Filled) to Via`，外加 `Device to Prohibited Region`（器件落在 NFC 保留区里，`NO_COMPONENTS` 挡着）。也就是说：**封装内部的铜箔并没有被当作 net tie 豁免**，Altium 那套"注册成 Net Tie 的封装"在本工具里没有对应物。
+
+所以本工具的正确路径是**原理图的短接符**：在原理图里跨 `NFC1_TBD` / `NFC2_TBD` 放一个短接符（符号类型 22）声明这处有意短接，再让线圈铜箔挂到合并后的网络上。这与前面查到的官方文档一致——嘉立创把 net tie 做在原理图侧。
+
+**顺带记两条工具行为**：
+
+- **器件会复制封装，不跟随封装更新**：改完封装后原器件仍用旧几何，必须删掉器件重建。这是"封装的修改不会自动下发"的一个实例。
+- **库写入不稳定**：同一个 `lib_Device.create` 调用会时而返回 uuid、时而返回 `undefined`；`search("")` 能列出的与刚创建成功的也不总一致。落盘前后都要用 `search` 复核，不能只看返回值。
+
+本轮所有实验都已撤回：板子复验为 **56 元件 / 244 焊盘 / 791 线 / 168 过孔**，DRC **24 项全为槽边基线、非基线 0 项**；库里只留下有用的 `HL_NFC_COIL_E16` 封装与一个探测用器件 `HL_NFC_COIL_TIE`。
+
 ## 连通性审计的缺口（已补，但结果尚不可信）
 
 [check-e16-copper-connectivity.py](../scripts/check-e16-copper-connectivity.py) 原本**明确排除 GND**，注释写着"GND 也通过两块地覆铜连接"。这个假设在覆铜几何存在之前无法验证，而它恰好能藏住一个悬空地焊盘。已加 `ground_reach`：把 GND 的焊盘/铜线/过孔/覆铜（含散热辐条）建成图，检查每个 GND 焊盘是否与覆铜同组。

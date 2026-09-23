@@ -4,7 +4,7 @@
  "checked_on": "2026-09-23",
  "source": {
   "eda_project": "../../../eda/NFC-Business-Card-84x52-E14-Battery-Layout.eprj2",
-  "eda_project_sha256": "d47063db4409fe5fe7a23057a5752f9f5bc52e857887b86c4bc851e04fd1a53b",
+  "eda_project_sha256": "68f8220a1d3c28cc63c468e18ffae05755be574ff852bf2a63b0b2d4435ea1bf",
   "eda_snapshot": "pcb-e14-battery-layout.json",
   "cad_snapshot": "../enclosure/pcba-e14-battery-layout-report.json"
  },
@@ -19,14 +19,14 @@
    3.0
   ],
   "component_count": 56,
-  "copper_lines": 800,
+  "copper_lines": 798,
   "vias": 168,
   "drc_leaf_results": 24,
   "drc_unrouted_connectivity_results": 0,
   "drc_board_edge_results": 24,
   "smd_to_smd_overlaps": 0,
   "sqlite_quick_check": "ok",
-  "note": "live values for Board1_2 / E16 after the 2026-09-23 documentation tidy and the NFC feed landing: 244 pads (two 1.5 x 1.5 mm square landing pads on the bottom layer join NFC1_TBD / NFC2_TBD), 800 copper segments and 168 vias (19 feed segments and 6 vias added). Both GND pours were rebuilt after the feed and report success (118 / 22 fill blocks). The native DRC and the Gerber re-export could not be read back at that moment: the client timed out on pcb_Drc.check() and on the manufacture export (>30 s) while light API calls stayed fast, and the Mac was locked with a modal dialog likely open - this is the one open verification item. All 24 DRC leaves before the feed were 'Board Outline to SMD Pad' at 7.9 mil = 0.2007 mm. The project file was re-saved while probing the pour behaviour (test pads created and deleted, pours rebuilt); the live snapshot still matches the committed one field by field, so only the project hash and the shelved pours moved.",
+  "note": "live values for Board1_2 / E16 after the NFC feed landing and the 2026-09-23 verification round: 244 pads (two bottom-layer square landing pads join NFC1_TBD / NFC2_TBD), 798 copper segments and 168 vias. Native DRC after the feed: 24 leaves, all 'Board Outline to SMD Pad' at 7.9 mil = 0.2007 mm, with no clearance, connection, hole-to-hole or copper-region items, so the rebuilt pours clear the new copper. The manufacture set re-exports cleanly (17 Gerber members including the new bottom paste layer, 168 via drills, BOM 25 rows / 56 designators, CPL 56 designators, 0.0005 mm worst placement delta). A stray duplicate GND via at (32.80, 28.00) that reappeared after the client restart was deleted: it overlapped the moved thermal via.",
   "pad_count": 244
  },
  "gates": [
@@ -147,10 +147,10 @@
    "vendor-manufacturing-package": "NOT_RELEASED"
   },
   "evidence": {
-   "drc": "native DRC after save/close/reopen (2026-09-23): clearance 0, connection 0, hole-to-hole 0; the only leaves are 24 'Board Outline to SMD Pad' at 7.9 mil = 0.2007 mm, i.e. the 12 J1 signal pads measured against the board outline and against the footprint's own board-edge line",
-   "copper": "800 segments, 244 pads, 168 vias, 2 GND pours after the 2026-09-23 NFC feed landing (the feeds add 19 segments and 6 vias; the two landing pads are bottom-layer squares because circular bottom-layer free pads crash the pour rebuild)",
+   "drc": "native DRC after the NFC feed (2026-09-23, trigger then read): 24 leaves, all 'Board Outline to SMD Pad' at 7.9 mil = 0.2007 mm (the 12 J1 signal pads measured against the board outline and against the footprint's own board-edge line). No clearance, connection, hole-to-hole or copper-region-fill items, which also proves the rebuilt GND pours clear the new feed, vias and landing pads.",
+   "copper": "798 segments, 244 pads, 168 vias, 2 GND pours (118 / 22 fill blocks) after the NFC feed landing; the feeds add 19 segments and 6 vias and the two landing pads are bottom-layer squares (circular bottom-layer free pads crash the pour rebuild).",
    "schematic": "4 pages, 56 designators; pin-level diff against the PCB pin map: 56 refs / 234 pins / 0 net mismatches; sch_Drc.check over all four pages returns 0 items",
-   "exports": "Gerber zip (16 files) + 2 drill files + BOM (25 rows / 56 designators) + pick-and-place (56 designators) re-exported 2026-09-23 into artifacts/e16-manufacture/; check-e16-manufacture.py ok=true",
+   "exports": "Gerber zip (17 members, including the new bottom paste layer for the landing pads) + 2 drill files (168 via holes) + BOM (25 rows / 56 designators) + pick-and-place (56 designators) re-exported 2026-09-23 after the NFC feed; check-e16-manufacture.py ok=true, problems=[].",
    "board_thickness_mm": 0.8,
    "nfc_area": "x 60-82, y 24-50 measured copper-free on both layers; usable coil area about 17 x 21 mm after the USB shield keep-away; U1 antenna keep-out added as region d49ece88915402a1 (x 59.7-70.3, y 0.2-2.5, no fills/no pours) with both GND pours rebuilt - sampled 0/1681 points with copper on each layer",
    "board_outline": "L-shape: 84 x 52 with the right-edge USB notch and a 33.5 x 15 mm battery bite at the lower-left (drawn on layer 11)",

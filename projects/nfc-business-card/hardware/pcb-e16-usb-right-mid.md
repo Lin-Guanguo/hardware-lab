@@ -102,7 +102,7 @@
 
 ### 待办（按依赖排序）
 
-1. **给 USB/ESD 区域补地缝合孔**（需客户端）：U5/U6 的 GND 焊盘旁各 ≥2 个，用 **0.61/0.305 mm**（不加价档）而不是 0.30/0.198；落铜前用 [check-proposed-route.py](../scripts/check-proposed-route.py) 逐点校验，落铜后重跑原生 DRC、连通性审计与制造包核对。
+1. **给 USB/ESD 区域补地缝合孔**（需客户端）：U5/U6 的 GND 焊盘旁各 ≥2 个，用 **0.61/0.305 mm**（不加价档）而不是 0.30/0.198。**必须重铺覆铜**：覆铜填充是计算结果，加过孔后不重铺，新过孔不会连到覆铜。API 已确认存在——`IPCB_PrimitivePour.rebuildCopperRegion()`（"Rebuild the copper fill of the copper region"，返回 `IPCB_PrimitivePoured`），从 `pcb_PrimitivePour.getAll()` 得到的铜箔对象上调用。完整序列：备份工程 → 落过孔 → 对两块 GND 铜箔各调一次 `rebuildCopperRegion()` → 保存 → 关闭重开 → 重导快照 → 原生 DRC + 连通性审计 + `analyze-e16-pour.py` + `check-e16-emc.py` 复查。落铜前先用 [check-proposed-route.py](../scripts/check-proposed-route.py) 逐点校验位置。
 2. **处置 C3**（需客户端）：搬回 U2 的 BAT 引脚旁。会牵动 `BAT_PACK_TBD`（现 18 段、45.66 mm）约 20 mm 走线的重布。
 3. **把 `ground_reach` 修到可信**，再据此检查 43 个覆铜区域与 GND 网络的连通性。
 4. **补 `GP-001`（信号跨越覆铜缺口）**：覆铜几何已就位，可按"顶层走线下方底层覆铜的连续覆盖率 <95%"实现，这是"干扰"最核心的一条。

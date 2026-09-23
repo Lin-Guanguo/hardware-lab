@@ -23,6 +23,13 @@ tools/easyeda-bridge/install-agent.sh --uninstall
 
 安装脚本会把 `com.hardwarelab.easyeda-bridge.plist.template` 渲染到 `~/Library/LaunchAgents/`，然后 `bootout → bootstrap → kickstart`，并把日志指到仓库的 `logs/`（已在 .gitignore 中）。旧 plist 会自动备份成 `.bak-<时间戳>`。
 
+## 日志与降噪
+
+默认每次扩展重连都会写一行，`logs/easyeda-bridge.out` 会缓慢增长。两种做法（细节见[环境与常驻服务](../../docs/environment.md)）：
+
+- **静音**：在 plist 里加 `EnvironmentVariables` → `EDA_BRIDGE_QUIET=1`，然后重新 `install-agent.sh`；
+- **轮转**：直接 `: > logs/easyeda-bridge.out` 截断即可，服务继续追加。
+
 ## 已知残留
 
 扩展自身仍会每隔数秒重连一次（`New eda connection → registered → disconnected (1005)`），这是扩展/窗口可见性的行为，不是桥接崩溃。调用侧请配合 `projects/nfc-business-card/scripts/eda-exec-wait.mjs`（先选在线窗口、失败重试）使用。

@@ -10,7 +10,7 @@
 | --- | --- | --- |
 | [AI Passport](projects/ai-passport/README.md) | 探索紧凑的可编程胸牌、屏幕按键交互与 NFC 链接 | 2026-09-16 确认已下单，等待到货 |
 | [Image Oracle](projects/image-oracle/README.md) | 用固定算法将摄像头图像映射为答案，默认拍摄熔岩灯 | 2026-09-19 拼接原型完成并验收；后续探索更多传感器，或焊接、定制 PCB 与 3D 打印的紧凑装置 |
-| [Programmable NFC Business Card](projects/nfc-business-card/README.md) | 按键切换身份的薄型 NFC 墨水屏名片 | 2026-09-22 E15 清理版成为新电池布局开工入口；56 元件、242 焊盘、0 铜线；原理图关联、板框、USB 扇出、CAD 与 RF 待验证 |
+| [Programmable NFC Business Card](projects/nfc-business-card/README.md) | 按键切换身份的薄型 NFC 墨水屏名片 | 2026-09-23 PCB 与 CAD 收口到可打样：E16 板 DRC/网表/连通性/制造包通过，NFC 馈线与落点已落铜，外壳 V7 可直接打印；只剩 NFC 线圈等 PN532 实验，见[进度看板](projects/nfc-business-card/docs/progress.md) |
 
 ## 目录结构
 
@@ -57,6 +57,7 @@ hardware-lab/
 
 ## 开始工作
 
+0. 新机器/新接手先看[环境与常驻服务](docs/environment.md)：工具链路径、EDA 桥接（launchd）从零重建、五分钟自检清单与常见故障。
 1. 阅读 [AGENTS.md](AGENTS.md) 和目标项目的 README。
 2. 分配引脚和确定供电前，先核对实物及对应资料。
 3. 将固件放入项目的 `firmware/`，在项目 README 记录具体工具链、依赖版本和已验证的 shell 命令。

@@ -57,10 +57,11 @@ python3 projects/nfc-business-card/scripts/report-free-space.py --region 33,0,46
 python3 projects/nfc-business-card/scripts/report-free-space.py --region 54,2,72,26 --layer 2 --limit 3
 ```
 
-制造包核对：`eda-export-e16-manufacture.js` 一次导出 Gerber/BOM/CPL/装配 PDF，`check-e16-manufacture.py` 把结果与当前快照逐点比对（板框顶点、钻孔孔数、位号集合、贴装坐标偏差）并写 `artifacts/manufacture/manifest.json`：
+制造包核对：`eda-export-e16-manufacture.js` 一次导出 Gerber/BOM/CPL/装配 PDF（文件落在 `~/Downloads/.cn.lceda.pro.*` 随机名），[collect-e16-manufacture.py](collect-e16-manufacture.py) 按内容识别这四个文件并拷成 `artifacts/manufacture/` 下的规范名，`check-e16-manufacture.py` 再把结果与当前快照逐点比对（板框顶点、钻孔孔数、位号集合、贴装坐标偏差）并写 `manifest.json`：
 
 ```sh
 node projects/nfc-business-card/scripts/eda-exec-wait.mjs projects/nfc-business-card/scripts/eda-export-e16-manufacture.js 120000
+python3 projects/nfc-business-card/scripts/collect-e16-manufacture.py    # 从 ~/Downloads 归纳到 artifacts/manufacture/
 python3 projects/nfc-business-card/scripts/check-e16-manufacture.py
 ```
 

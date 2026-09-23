@@ -1,0 +1,90 @@
+---
+description: 本机工具链、常驻服务与目录约定：新接手的人或 AI 从零跑起来 + 五分钟自检
+last_updated: 2026-09-23
+---
+
+# 环境与常驻服务
+
+这份文档回答三个问题：**这台机器上都有什么、怎么从零重建、怎么确认它现在是好的**。项目本身的状态与下一步在各项目 README 与 [NFC 名片进度](../projects/nfc-business-card/docs/progress.md)里。
+
+## 工具链
+
+| 组件 | 位置 / 版本 | 用途 |
+| --- | --- | --- |
+| Node.js | `/Users/linguanguo/.nvm/versions/node/v24.19.0/bin/node`（nvm） | 桥接服务、EDA 脚本执行器 |
+| EasyEDA（嘉立创EDA）专业版 | 3.2.203 + 本机已启用 **Run API Gateway** 扩展 | 原理图/PCB 的唯一编辑环境 |
+| FreeCAD | `/Applications/FreeCAD.app/Contents/Resources/bin/freecadcmd`（1.1.3） | 外壳建模、几何/干涉/网格检查、STEP/STL 导出 |
+| Python | `python3`（3.12，pyenv）+ `openpyxl`、`Pillow`、`matplotlib`、`numpy` | 快照分析、制造包核对、审查图渲染 |
+
+EDA 扩展与桥接之间是 WebSocket；桥接只监听 `127.0.0.1:49620`，不对外暴露。
+
+## 常驻服务：EDA 桥接
+
+| 项 | 值 |
+| --- | --- |
+| launchd 作业 | `com.hardwarelab.easyeda-bridge`（`~/Library/LaunchAgents/com.hardwarelab.easyeda-bridge.plist`，`RunAtLoad` + `KeepAlive` + `ThrottleInterval=10`） |
+| 服务本体 | [tools/easyeda-bridge/bridge-server.mjs](../tools/easyeda-bridge/bridge-server.mjs)（仓库自有补丁副本，不是上游子模块） |
+| 日志 | [logs/easyeda-bridge.out](../logs/) / `.err`（被 Git 忽略） |
+| 健康检查 | `bash tools/easyeda-bridge/bridge-status.sh`（一条命令给出进程、运行时长、`/health`、在线窗口、崩溃与重连计数、日志大小和结论行） |
+
+**从零重建（三条命令）**：
+
+```sh
+git submodule update --init --recursive          # upstreams/ 里的 API 文档子模块
+tools/easyeda-bridge/install-agent.sh            # 渲染 plist → bootout/bootstrap/kickstart → 自检
+bash tools/easyeda-bridge/bridge-status.sh       # 期望 verdict: bridge up and EDA connected
+```
+
+`install-agent.sh` 是幂等的：重复执行不会产生多余备份（`.bak-*` 只保留最近 2 份），`node_modules` 软链缺失时会自动重建。**不要**手动 `nohup node bridge-server.mjs`，会和 LaunchAgent 抢 49620。
+
+常用维护动作：
+
+```sh
+# 静音模式（默认记录每次扩展重连，日志会长）：把 EnvironmentVariables 加进 plist 后重启作业
+#   <key>EnvironmentVariables</key><dict><key>EDA_BRIDGE_QUIET</key><string>1</string></dict>
+# 清空/轮转日志（服务会继续追加）
+: > logs/easyeda-bridge.out
+```
+
+## 目录与"什么进 Git"
+
+| 路径 | 是否入库 | 说明 |
+| --- | --- | --- |
+| `eda/` | **是** | 嘉立创 EDA 原始 `.eprj2` 工程与阶段备份；客户端只登记这一个目录 |
+| `upstreams/`、`.agents/skills/` | **是** | submodule 固定上游提交 + 相对符号链接供技能发现 |
+| `projects/<项目>/` | **是** | 项目文档、硬件资料、脚本、可编辑 CAD（含小图册） |
+| `**/artifacts/**` | 否（唯一例外：[artifacts/README.md](../projects/nfc-business-card/artifacts/README.md)） | 本机产物与历史阶段输出；索引说明布局与重建方式 |
+| `downloads/`、`logs/`、`*.log` | 否 | 原厂资料缓存（有 `docs/download_manifest.json` 清单）与运行日志 |
+
+长期需要引用的证据不放 `artifacts/`：EDA 重开/DRC 记录在 `projects/nfc-business-card/hardware/records/`，外壳模型与渲染图在 `enclosure/` 与 `enclosure/renders/`。
+
+## 五分钟自检
+
+```sh
+cd /Users/linguanguo/dev/hardware-lab
+bash tools/easyeda-bridge/bridge-status.sh                         # 桥接健康 + 是否有在线 EDA 窗口
+python3 projects/nfc-business-card/scripts/check-e14-gates.py      # 工程 sha256、sqlite quick_check、门槛清单
+python3 projects/nfc-business-card/scripts/check-e16-copper-connectivity.py   # 每个网络单一铜簇、无死铜端
+python3 projects/nfc-business-card/scripts/check-e16-manufacture.py           # 制造包与快照逐点一致
+/Applications/FreeCAD.app/Contents/Resources/bin/freecadcmd \
+  projects/nfc-business-card/scripts/check-e16-print-meshes.py                # 三个 V7 STL 是否可打印
+```
+
+期望：桥接 `verdict` 为 `bridge up and EDA connected`（**EDA 客户端没开时会是 `bridge up but no EDA window`，这不算故障**）、四个检查都 `ok`。
+
+## 常见故障与判据
+
+| 现象 | 原因与处理 |
+| --- | --- |
+| `bridge up but no EDA window` | EDA 客户端没开、扩展没启用，或编辑器标签页被关掉。打开客户端并确认扩展启用，扩展会在十几秒内重连 |
+| 重操作（`pcb_Drc.check`、制造包导出）报 30 s 超时 | 走的是客户端界面线程：Mac 锁屏或窗口里有模态框时会超时。解锁并关掉对话框/重启客户端即可；轻量 API 不受影响 |
+| `/eda-windows` 里有“已连接”但实际只有 1 个窗口 | 扩展每十几秒重连一次并注册新 windowId，桥接会保留僵尸注册。执行器 [eda-exec-wait.mjs](../projects/nfc-business-card/scripts/eda-exec-wait.mjs) 每次先选在线窗口并重试 |
+| `~/Downloads/.cn.lceda.pro.*` 堆积 | EDA 导出的临时落盘口（隐藏随机名）。用 `projects/nfc-business-card/scripts/collect-e16-manufacture.py` 归纳到 `artifacts/manufacture/`，其余可清 |
+| 桥接进程反复退出 | 先看 `logs/easyeda-bridge.err` 是否有崩溃栈；`crashes (ERR_HTTP_HEADERS_SENT)` 计数长期为 0 才是正常 |
+
+## 相关文档
+
+- 项目状态与 TODO：[NFC 名片进度](../projects/nfc-business-card/docs/progress.md)
+- EDA/FreeCAD 脚本工作流：[软件说明](../projects/nfc-business-card/docs/software.md)
+- 桥接本体与安装细节：[tools/easyeda-bridge/README.md](../tools/easyeda-bridge/README.md)
+- artifacts 布局与重建方式：[artifacts/README.md](../projects/nfc-business-card/artifacts/README.md)

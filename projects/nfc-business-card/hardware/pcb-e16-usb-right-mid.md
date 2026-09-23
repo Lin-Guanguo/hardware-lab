@@ -319,6 +319,51 @@ await eda.pcb_PrimitiveLine.create('GND', 1, x1, y1, x2, y2, trackWidth, false);
 
 **这条更符合"选正确的方案"**：它用真实元件表达真实的串联关系，既不依赖工具的 net tie，也不放弃网表核对的意义。代价是需要先定串联元件的拓扑位置与封装（值可等 PN532 实验）。
 
+
+### 原理图侧打通了：预留位、待办说明，以及缺的那一个图元（2026-09-23）
+
+**原理图页可以用 API 打开并读取**——之前失败是因为我用了 `schematics` 的 uuid（`9ae79bee58c7d4fd`），正确做法是用 `sheets` 里的**图页 uuid**（`dmt_EditorControl.openDocument(sheet_uuid)` 返回 `documentType 1`）。四个图页都能读：
+
+| 图页 | uuid | 内容 |
+| --- | --- | --- |
+| 01 USB and Power | `cd0a81c0097ce6e0` | 18 器件 |
+| 02 MCU and Controls | `e286f508bc068ffe` | 11 器件（含 U1 与 NFC 网络标签） |
+| 03 GDEH0154E01 | `7c834e86d8dfecc6` | 27 器件 |
+| 04 USB ESD and interfaces | `04da360d6d8c1e54` | 3 器件 |
+
+**NFC 的接口就是图上预留的两条短桩导线 + 网络标签**（在 U1 东侧）：
+
+```
+WIRE e2ec8780fe3a8427  LINE (575,-575)->(605,-575)  NET 标签 "NFC2_TBD"
+WIRE fa730f8142533a08  LINE (575,-555)->(605,-555)  NET 标签 "NFC1_TBD"
+```
+
+而且**原理图自己就写明这是待办**，两处 TEXT：
+
+- 图页 02：**"屏幕电路见第 3 页；NFC 天线与匹配待设计。TBD 网络名保留用于追溯。"**
+- 图页 04：**"NFC1_TBD / NFC2_TBD：线圈与匹配尚未闭环；当前保留 22 × 26mm 无金属区域。"**
+
+**所以"把天线与匹配补上"不是新增需求，而是原理图自己预留、并注明待完成的那一项**；`NFC1_TBD / NFC2_TBD` 这两个名字本来就是为此留的占位。这一条改变了整件事的性质——我们是在收口一个已声明的待办，不是在绕过工具限制。
+
+**API 能力的边界（本轮实测）**：
+
+| 能力 | 结果 |
+| --- | --- |
+| 打开/读取原理图页 | ✓（用药图页 uuid） |
+| `sch_PrimitiveWire.create(line, net?, …)` | 接受坐标数组（`[x1,y1,x2,y2]`）；返回 id，删除也返回 true |
+| `lib_Footprint.create` | ✓（建个人库之后） |
+| **`lib_Symbol.create`** | **✗ `[object Object]`** |
+| `lib_Device.create` | 不稳定（同一调用时而成功时而 `undefined`） |
+| 短接符对应的图元类 | **不存在**（`sch_Primitive*` 里没有 short symbol；只有 `ELIB_SymbolType.SHORT_CIRCUIT_FLAG = 22` 这个符号类型） |
+
+**结论：三条路都需要一个 API 建不出来的原理图图元。**
+
+- 短接符路线需要 `SHORT_CIRCUIT_FLAG`（类型 22）的符号，而**符号建不了**；
+- 串联匹配元件路线需要一颗带符号的器件，**符号同样建不了**；
+- 只剩"线圈挂单网络、远端接受一处跨网络接触"这条路不需要新图元，但那一处 DRC 错误必须**显式白名单化并钉住几何**（只允许这一条、且位置可验证），不能像社区那样"记住几项然后手工从总数里减掉"。
+
+因此**最省的解锁动作是你在 GUI 里放一个短接符**（`放置 → 短接符`，跨那两条 NFC 短桩），这是内置图元、不需要建库；之后 PCB 侧的合并、落铜与全部验证我都能自动做完。
+
 ## 连通性审计的缺口（已补，但结果尚不可信）
 
 [check-e16-copper-connectivity.py](../scripts/check-e16-copper-connectivity.py) 原本**明确排除 GND**，注释写着"GND 也通过两块地覆铜连接"。这个假设在覆铜几何存在之前无法验证，而它恰好能藏住一个悬空地焊盘。已加 `ground_reach`：把 GND 的焊盘/铜线/过孔/覆铜（含散热辐条）建成图，检查每个 GND 焊盘是否与覆铜同组。

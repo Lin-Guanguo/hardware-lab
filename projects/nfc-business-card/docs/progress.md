@@ -42,10 +42,11 @@ last_updated: 2026-09-23
 - [x] `.gitignore` 改为 `**/artifacts/**` + 唯一例外 `artifacts/README.md` 索引；修复全仓相对链接（检查 0 断链）。
 - [x] 桥接"从零重建"实测：`install-agent.sh` 重装后新 PID 起来、`/health` ok、崩溃计数 0。
 - [x] 新增仓库级 [环境与常驻服务](../../../docs/environment.md)（工具链、服务、五分钟自检、常见故障）。
-- [ ] 制造包导出→归档的拷贝步骤脚本化（`scripts/collect-e16-manufacture.py`，见脚本说明）。
-- [ ] 桥接日志策略：默认静音（plist 加 `EDA_BRIDGE_QUIET=1`）已写入环境文档，尚未改机器上的 plist。
-- [ ] `~/Downloads` 里 20 个 `.cn.lceda.pro.*` 导出临时文件（约 6.8 MB）可清；属于用户目录，动手前先确认。
-- [ ] `artifacts/archive/` 里的大块产物（EDA 画布 JSON、`.eprj2` 副本、PNG 集）如确认无历史价值可整体删除；删前查文档引用。
+- [x] 制造包导出→归档的拷贝步骤脚本化：[collect-e16-manufacture.py](../scripts/collect-e16-manufacture.py) 按内容识别四件、拒绝跨批次混用（2026-09-23）。
+- [x] 桥接改为**按需启动**：plist 去掉 `RunAtLoad`/`KeepAlive`，新增 `bridge-start.sh` / `bridge-stop.sh`，`--login-start` 才自启；本机已按此重装并实测 start/stop（2026-09-23）。
+- [x] 桥接日志：`install-agent.sh --quiet` 可写入 `EDA_BRIDGE_QUIET=1`，超过 5 MB 自动轮转 `.1`；默认仍保留完整日志。
+- [x] `~/Downloads` 清理：20 个 `.cn.lceda.pro.*` 旧批次导出、旧 Gerber zip（v1–v5）、解压目录与 21 MB 的 `NFC-E16-3D.txt` 已删除（释放约 29 MB）；有长期价值的 `E16-sch-netlist.txt` 存为 [hardware/records/e16-sch-netlist.enet](../hardware/records/e16-sch-netlist.enet)（sha256 与验证过的那份一致）。
+- [x] `artifacts/archive/`：用户确认**全部保留**（体量可接受、索引可追溯），不删除。
 
 ## 这份看板怎么维护
 

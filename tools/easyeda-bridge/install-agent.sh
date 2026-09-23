@@ -8,16 +8,16 @@ TOOL="$REPO/tools/easyeda-bridge"
 LABEL="com.hardwarelab.easyeda-bridge"
 PLIST="$HOME/Library/LaunchAgents/$LABEL.plist"
 UPSTREAM_NODE_MODULES="$REPO/upstreams/easyeda-api-skill/node_modules"
-NO_LOGIN_START=0
+LOGIN_START=0
 QUIET=0
 NODE_BIN="$(command -v node || true)"
 
 for arg in "$@"; do
   case "$arg" in
-    --no-login-start) NO_LOGIN_START=1 ;;
+    --login-start) LOGIN_START=1 ;;
     --quiet) QUIET=1 ;;
     --uninstall|"") ;;
-    *) echo "unknown option: $arg (expected --uninstall, --no-login-start, --quiet)" >&2; exit 2 ;;
+    *) echo "unknown option: $arg (expected --uninstall, --login-start, --quiet)" >&2; exit 2 ;;
   esac
 done
 
@@ -67,8 +67,9 @@ if [[ -f "$PLIST" ]]; then
 fi
 sed -e "s|__NODE__|$NODE_BIN|g" -e "s|__REPO__|$REPO|g" \
   "$TOOL/$LABEL.plist.template" > "$PLIST"
-if [[ "$NO_LOGIN_START" == "1" ]]; then
-  plutil -replace RunAtLoad -bool false "$PLIST"
+if [[ "$LOGIN_START" == "1" ]]; then
+  plutil -replace RunAtLoad -bool true "$PLIST"
+  plutil -insert KeepAlive -bool true "$PLIST" 2>/dev/null || plutil -replace KeepAlive -bool true "$PLIST"
 fi
 if [[ "$QUIET" == "1" ]]; then
   plutil -insert EnvironmentVariables.EDA_BRIDGE_QUIET -string 1 "$PLIST" 2>/dev/null || plutil -replace EnvironmentVariables.EDA_BRIDGE_QUIET -string 1 "$PLIST"
@@ -82,10 +83,14 @@ if ! launchctl bootstrap "gui/$(id -u)" "$PLIST" 2>/dev/null; then
   sleep 2
   launchctl bootstrap "gui/$(id -u)" "$PLIST" || true
 fi
-launchctl kickstart -k "gui/$(id -u)/$LABEL" 2>/dev/null || true
-
-for _ in $(seq 1 20); do
-  if curl -s --max-time 2 http://127.0.0.1:49620/health | grep -q easyeda-bridge; then break; fi
-  sleep 0.5
-done
+if [[ "$LOGIN_START" == "1" ]]; then
+  # KeepAlive makes launchd start it right after bootstrap.
+  for _ in $(seq 1 20); do
+    if curl -s --max-time 2 http://127.0.0.1:49620/health | grep -q easyeda-bridge; then break; fi
+    sleep 0.5
+  done
+else
+  echo "installed in on-demand mode: nothing is running yet."
+  echo "start it with tools/easyeda-bridge/bridge-start.sh, stop it with bridge-stop.sh"
+fi
 "$TOOL/bridge-status.sh"

@@ -9,8 +9,9 @@
     <string>__REPO__/tools/easyeda-bridge/bridge-server.mjs</string>
   </array>
   <key>WorkingDirectory</key><string>__REPO__/tools/easyeda-bridge</string>
-  <key>RunAtLoad</key><true/>
-  <key>KeepAlive</key><true/>
+  <!-- On-demand by default: loading the agent does not start it. Use
+       install-agent.sh --login-start for auto-start plus keep-alive. -->
+  <key>RunAtLoad</key><false/>
   <key>ThrottleInterval</key><integer>10</integer>
   <key>StandardOutPath</key><string>__REPO__/logs/easyeda-bridge.out</string>
   <key>StandardErrorPath</key><string>__REPO__/logs/easyeda-bridge.err</string>

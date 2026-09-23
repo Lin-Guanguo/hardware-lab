@@ -22,28 +22,29 @@ EDA 扩展与桥接之间是 WebSocket；桥接只监听 `127.0.0.1:49620`，不
 
 | 项 | 值 |
 | --- | --- |
-| launchd 作业 | `com.hardwarelab.easyeda-bridge`（`~/Library/LaunchAgents/com.hardwarelab.easyeda-bridge.plist`，`RunAtLoad` + `KeepAlive` + `ThrottleInterval=10`） |
+| launchd 作业 | `com.hardwarelab.easyeda-bridge`（`~/Library/LaunchAgents/com.hardwarelab.easyeda-bridge.plist`，按需模式：`RunAtLoad=false`、无 `KeepAlive`；`--login-start` 才会改成自启+保活） |
 | 服务本体 | [tools/easyeda-bridge/bridge-server.mjs](../tools/easyeda-bridge/bridge-server.mjs)（仓库自有补丁副本，不是上游子模块） |
 | 日志 | [logs/easyeda-bridge.out](../logs/) / `.err`（被 Git 忽略） |
 | 健康检查 | `bash tools/easyeda-bridge/bridge-status.sh`（一条命令给出进程、运行时长、`/health`、在线窗口、崩溃与重连计数、日志大小和结论行） |
 
-**从零重建（三条命令）**：
+**桥接默认按需启动**：安装只登记作业，不开机自启；做 EDA 前手动开，做完可以关。
 
 ```sh
 git submodule update --init --recursive          # upstreams/ 里的 API 文档子模块
-tools/easyeda-bridge/install-agent.sh            # 渲染 plist → bootout/bootstrap/kickstart → 自检
-bash tools/easyeda-bridge/bridge-status.sh       # 期望 verdict: bridge up and EDA connected
+tools/easyeda-bridge/install-agent.sh            # 渲染 plist → bootout/bootstrap（仅登记，不启动）
+tools/easyeda-bridge/bridge-start.sh             # 需要时启动，并打印自检
+tools/easyeda-bridge/bridge-stop.sh              # 用完停止（作业保留）
+bash tools/easyeda-bridge/bridge-status.sh       # 随时查状态；期望 verdict: bridge up and EDA connected
+tools/easyeda-bridge/install-agent.sh --login-start   # 只有需要开机自启时才用这个
 ```
 
-`install-agent.sh` 是幂等的：重复执行不会产生多余备份（`.bak-*` 只保留最近 2 份），`node_modules` 软链缺失时会自动重建。**不要**手动 `nohup node bridge-server.mjs`，会和 LaunchAgent 抢 49620。
+`install-agent.sh` 是幂等的：重复执行不会产生多余备份（`.bak-*` 只保留最近 2 份），`node_modules` 软链缺失时会自动重建，日志超过 5 MB 会轮转一份 `.1`。**不要**手动 `nohup node bridge-server.mjs`，会和 LaunchAgent 抢 49620。
 
 常用维护动作：
 
 ```sh
-# 静音模式（默认记录每次扩展重连，日志会长）：把 EnvironmentVariables 加进 plist 后重启作业
-#   <key>EnvironmentVariables</key><dict><key>EDA_BRIDGE_QUIET</key><string>1</string></dict>
-# 清空/轮转日志（服务会继续追加）
-: > logs/easyeda-bridge.out
+tools/easyeda-bridge/install-agent.sh --quiet   # 写入 EDA_BRIDGE_QUIET=1，日志只留关键行
+: > logs/easyeda-bridge.out                     # 手动截断日志（安装脚本也会在超过 5 MB 时轮转）
 ```
 
 ## 目录与"什么进 Git"
@@ -76,6 +77,7 @@ python3 projects/nfc-business-card/scripts/check-e16-manufacture.py           # 
 
 | 现象 | 原因与处理 |
 | --- | --- |
+| 状态行 `bridge down`（按需模式） | 正常：服务没启动。用 `tools/easyeda-bridge/bridge-start.sh` 开 |
 | `bridge up but no EDA window` | EDA 客户端没开、扩展没启用，或编辑器标签页被关掉。打开客户端并确认扩展启用，扩展会在十几秒内重连 |
 | 重操作（`pcb_Drc.check`、制造包导出）报 30 s 超时 | 走的是客户端界面线程：Mac 锁屏或窗口里有模态框时会超时。解锁并关掉对话框/重启客户端即可；轻量 API 不受影响 |
 | `/eda-windows` 里有“已连接”但实际只有 1 个窗口 | 扩展每十几秒重连一次并注册新 windowId，桥接会保留僵尸注册。执行器 [eda-exec-wait.mjs](../projects/nfc-business-card/scripts/eda-exec-wait.mjs) 每次先选在线窗口并重试 |

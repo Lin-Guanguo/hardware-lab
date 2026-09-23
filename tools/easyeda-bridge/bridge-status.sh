@@ -23,8 +23,10 @@ echo "-- log stats --"
 echo "crashes (ERR_HTTP_HEADERS_SENT): $(grep -c 'ERR_HTTP_HEADERS_SENT' "$ERR" 2>/dev/null || echo 0)"
 echo "reconnects (New eda connection): $(grep -c 'New eda connection' "$OUT" 2>/dev/null || echo 0)"
 ls -l "$OUT" "$ERR" 2>/dev/null | awk '{print $5, $9}'
-if echo "$HEALTH" | grep -q '"edaConnected":true'; then
+if [[ -z "${HEALTH:-}" ]] || ! echo "$HEALTH" | grep -q '"service":"easyeda-bridge"'; then
+  echo "verdict: bridge down (on-demand mode: start it with tools/easyeda-bridge/bridge-start.sh)"
+elif echo "$HEALTH" | grep -q '"edaConnected":true'; then
   echo "verdict: bridge up and EDA connected"
 else
-  echo "verdict: bridge up but no EDA window - check the extension is enabled and its editor tab is open"
+  echo "verdict: bridge up but no EDA window - open EasyEDA and check the Run API Gateway extension"
 fi

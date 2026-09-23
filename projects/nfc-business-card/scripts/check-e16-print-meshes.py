@@ -123,7 +123,7 @@ def run():
     result = {"ok": ok, "parts": reports}
     # FreeCAD's mesh routines print progress to stdout after this script finishes,
     # so keep the machine-readable copy in a file and print a short summary here.
-    out = REPO / "projects/nfc-business-card/artifacts/e16-cad-preview/check-e16-print-meshes.json"
+    out = REPO / "projects/nfc-business-card/enclosure/nfc-card-e16-print-meshes-report.json"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(result, ensure_ascii=False, indent=1) + "\n")
     print(f"ok={ok}  report={out}")

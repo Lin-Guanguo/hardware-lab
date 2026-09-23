@@ -21,8 +21,13 @@ __pycache__/
 .env.*
 !.env.example
 
-# Temporary outputs; keep reusable source assets outside these directories
-artifacts/
+# Temporary outputs; keep reusable source assets outside these directories.
+# Everything under an artifacts/ directory is local output and stays out of Git;
+# the only exception is the index that explains the layout. Durable evidence
+# (reopen records, netlists, check scripts, render gallery) lives in the tracked
+# hardware/records/, enclosure/ and enclosure/renders/ directories instead.
+**/artifacts/**
+!projects/nfc-business-card/artifacts/README.md
 downloads/
 logs/
 *.log

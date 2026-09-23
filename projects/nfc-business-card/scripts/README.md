@@ -35,7 +35,7 @@ python3 projects/nfc-business-card/scripts/check-netlist-consistency.py --sch /t
 python3 projects/nfc-business-card/scripts/generate-e16-v5-section-svg.py
 ```
 
-外壳样件的着色等轴测图与正视顶视图由 [render-stl-iso.py](render-stl-iso.py) 直接从 STL 生成（不需要 FreeCAD GUI），输出到被忽略的 `artifacts/e16-cad-preview/`：
+外壳样件的着色等轴测图与正视顶视图由 [render-stl-iso.py](render-stl-iso.py) 直接从 STL 生成（不需要 FreeCAD GUI），输出到被忽略的 `enclosure/renders/`：
 
 ```sh
 python3 projects/nfc-business-card/scripts/render-stl-iso.py
@@ -57,7 +57,7 @@ python3 projects/nfc-business-card/scripts/report-free-space.py --region 33,0,46
 python3 projects/nfc-business-card/scripts/report-free-space.py --region 54,2,72,26 --layer 2 --limit 3
 ```
 
-制造包核对：`eda-export-e16-manufacture.js` 一次导出 Gerber/BOM/CPL/装配 PDF，`check-e16-manufacture.py` 把结果与当前快照逐点比对（板框顶点、钻孔孔数、位号集合、贴装坐标偏差）并写 `artifacts/e16-manufacture/manifest.json`：
+制造包核对：`eda-export-e16-manufacture.js` 一次导出 Gerber/BOM/CPL/装配 PDF，`check-e16-manufacture.py` 把结果与当前快照逐点比对（板框顶点、钻孔孔数、位号集合、贴装坐标偏差）并写 `artifacts/manufacture/manifest.json`：
 
 ```sh
 node projects/nfc-business-card/scripts/eda-exec-wait.mjs projects/nfc-business-card/scripts/eda-export-e16-manufacture.js 120000
@@ -157,7 +157,7 @@ python3 projects/nfc-business-card/scripts/freecad-study.py preview projects/nfc
 
 ```sh
 python3 projects/nfc-business-card/scripts/routing-space-study.py \
-  --output-dir projects/nfc-business-card/artifacts/routing-space-study/<new-run>
+  --output-dir projects/nfc-business-card/artifacts/studies/routing-space/<new-run>
 ```
 
 研究结论与限制见[布线空间先行研究](../hardware/routing-space-study.md)。

@@ -4,7 +4,7 @@
 
 更新于 **2026-09-21**。在重新生成 FreeCAD 外壳或修改 EDA 主工程前，先验证一项平面分区：屏幕固定在左上，长条电池放左下，NFC 保留在右上，USB、充电、电源、屏幕升压和主控尝试集中到右下。这个文件只记录空间假设，不冻结电池型号，也不替换 E9。
 
-研究输入为 84 × 52 mm 外形、现有屏幕/FPC/NFC 参考框和 E9 的功能块。脚本会生成候选电池的二维包络与右下自由区，输出到被忽略的 `artifacts/routing-space-study/`；它不打开 FreeCAD，不修改 `.FCStd`，也不修改 EasyEDA 工程。
+研究输入为 84 × 52 mm 外形、现有屏幕/FPC/NFC 参考框和 E9 的功能块。脚本会生成候选电池的二维包络与右下自由区，输出到被忽略的 `artifacts/studies/routing-space/`；它不打开 FreeCAD，不修改 `.FCStd`，也不修改 EasyEDA 工程。
 
 ## 先得到的结论
 
@@ -47,7 +47,7 @@
 
 ```sh
 python3 projects/nfc-business-card/scripts/routing-space-study.py \
-  --output-dir projects/nfc-business-card/artifacts/routing-space-study/<new-run>
+  --output-dir projects/nfc-business-card/artifacts/studies/routing-space/<new-run>
 ```
 
 输出中的 `routing-space-study.json` 是数值记录，`routing-space-study.svg` 是平面比较图。输出目录属于临时验证产物，不提交 Git；脚本和本说明保留。

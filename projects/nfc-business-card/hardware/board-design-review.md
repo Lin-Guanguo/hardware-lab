@@ -22,7 +22,7 @@ USB 整网试布线随后未通过验收，已完整撤回；详见下面的试�
 
 本次只否定“固定当前布局、删除 USB 旧线后由原生自动布线收尾”的方法，不证明两层板不可布。下一阶段必须重新安排主控方向和 USB/充电区，并明确关键线路与回流通道；不能继续以换一组自动布线参数代替布局设计。
 
-原始快照、失败结果和恢复记录位于被忽略的 `artifacts/eda-block-layout/usb-block-*`，修改前数据库备份为 `artifacts/usb-block/baseline.eprj2`。本轮未新增寻路算法，未提交 Git、下单或发消息给工厂。
+原始快照、失败结果和恢复记录位于被忽略的 `artifacts/archive/eda-block-layout/usb-block-*`，修改前数据库备份为 `artifacts/archive/usb-block/baseline.eprj2`。本轮未新增寻路算法，未提交 Git、下单或发消息给工厂。
 
 ## 找到的问题与处理决定
 

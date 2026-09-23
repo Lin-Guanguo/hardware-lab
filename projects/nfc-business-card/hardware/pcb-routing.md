@@ -59,7 +59,7 @@
 复核本轮网表快照：
 
 ```sh
-python3 projects/nfc-business-card/scripts/check-schematic-netlist.py projects/nfc-business-card/artifacts/eda-routing-refine/pcb.enet
+python3 projects/nfc-business-card/scripts/check-schematic-netlist.py projects/nfc-business-card/hardware/records/eda-routing-refine-pcb.enet
 ```
 
-[检查摘要](pcb-routing.json)随文归档。第一轮快照保留在 `artifacts/eda-routing/`；第二轮在线数据库备份、API 脚本、源数据、完整 DRC、网表及复核脚本 `verify.py` 位于被忽略的 `artifacts/eda-routing-refine/`。后续修改后应重新导出检查，不能沿用本次结果。
+[检查摘要](pcb-routing.json)随文归档。第一轮快照保留在 `artifacts/archive/eda-routing/`；第二轮在线数据库备份、API 脚本、源数据、完整 DRC、网表及复核脚本 `verify.py` 位于被忽略的 `artifacts/archive/eda-routing-refine/`。后续修改后应重新导出检查，不能沿用本次结果。

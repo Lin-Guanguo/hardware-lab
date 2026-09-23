@@ -15,7 +15,7 @@ last_updated: 2026-09-20
 
 - 上游：[easyeda/easyeda-api-skill](https://github.com/easyeda/easyeda-api-skill)。版本 **1.1.36**，固定提交 **`ccfaf28a577b61a09ebc907f0a943d1e6c782def`**。
 - 子模块：[`upstreams/easyeda-api-skill`](../../../upstreams/easyeda-api-skill)，保留上游原始文件。
-- Skill 入口：[`.agents/skills/easyeda-api/SKILL.md`](../../../.agents/skills/easyeda-api/SKILL.md)；目录是指向 `../../upstreams/easyeda-api-skill` 的相对符号链接。
+- Skill 入口：[`.agents/skills/easyeda-api/SKILL.md`](../../../.agents/skills/easyeda-api/SKILL.md)；目录是指向 `../../../upstreams/easyeda-api-skill` 的相对符号链接。
 - 本地依赖放在子模块的 `node_modules/`；`.gitmodules` 使用 `ignore = untracked` 忽略未跟踪的运行依赖，仍会显示已跟踪源码的修改。npm 缓存放在仓库已有忽略规则覆盖的 `.cache/npm/`。
 - 复用已有 Node.js **24.19.0**、npm **11.17.0**，安装锁文件中的 **ws 8.21.3**；未改全局 Skill、npm 包或 shell 配置。
 - 上游示例的 `${CLAUDE_SKILL_DIR}` 在 Codex 中按实际 Skill 路径解释，适配约定写在根目录 AGENTS.md。此提交已附带 `references/`，其 README 中的文档构建、打包命令与当前 `package.json` 不一致，不执行这些旧命令。
@@ -107,7 +107,7 @@ curl --fail --silent http://127.0.0.1:49620/eda-windows
 | 新版网表文件导出 | 通过，解析网表并断言 R1 的 2/1 脚为 VIN/VMID，R2 的 2/1 脚为 VMID/GND |
 | PCB 布局、ERC/DRC、Gerber、BOM/坐标、实物 | 未验证 |
 
-测试工程位于仓库根目录 `eda/`，其余导出产物保留在 `projects/nfc-business-card/artifacts/eda-smoke-test/`；此临时测试工程及产物均不入 Git：
+测试工程位于仓库根目录 `eda/`，其余导出产物保留在 `projects/nfc-business-card/artifacts/archive/eda-smoke-test/`；此临时测试工程及产物均不入 Git：
 
 - `eda/AI-API-Smoke-Test.eprj2`：可从 EDA 的“文件 → 打开工程”打开的本地原始工程。
 - `AI-API-Smoke-Test-export.epro2`：导出的工程包；不能只改后缀当作 `.eprj2` 使用。
@@ -144,13 +144,13 @@ python3 projects/nfc-business-card/scripts/check-schematic-netlist.py projects/n
 - **本机过孔下限**：内径 ≥7.9 mil、外径 ≥11.9 mil。写 7.8/11.8 时既报 `Via Diameter` 物理错误，又**不会被连通性判定接受**（外观贴着焊盘也不算连接）。
 - **Computer Use 可用**：早前 `-10005 noWindowsAvailable` 是目标窗口不在前台导致，不是权限问题；读 AX 树、点菜单、改输入框、画布缩放、截图都成功。
 
-本轮 API 执行记录、原始资料片段、PDF 与 `.epro2` 导出留在被忽略的 `artifacts/eda-draft/`。人工或 AI 继续编辑前先核对当前工程/图页、保存状态；不要原样重跑放置脚本造成重复元件。
+本轮 API 执行记录、原始资料片段、PDF 与 `.epro2` 导出留在被忽略的 `artifacts/archive/eda-draft/`。人工或 AI 继续编辑前先核对当前工程/图页、保存状态；不要原样重跑放置脚本造成重复元件。
 
 ### PCB 试布线验证（2026-09-20）
 
 当前图页为 `Board1 → E6-302030 试布线 - 未完成`；[结果与限制](../hardware/pcb-routing.md)。本轮验证 `pcb_Document.autoRouting({RoutingNets: [...], existingPrimitiveMode: 'keep'})`：属性名是 `RoutingNets`，不是类文档例子中的 `nets`。返回成功数量不能代替 DRC，存在报告成功但仍有断点的情况。
 
-铜线可用 `pcb_PrimitiveLine.create()`，铺铜边界用 `pcb_PrimitivePour.create()`，修改走线后逐个 `rebuildCopperRegion()` 再复查。`pcb_Drc.check(true, true, true)` 实际返回按类别分组的详细数组，可归档计数及未连接网络。工程规则未放宽；第一轮 DRC 53 条，第二轮 41 条，保存重开及 108 项网表检查通过。执行脚本、在线备份和完整快照分别见 `artifacts/eda-routing/` 与 `artifacts/eda-routing-refine/`。
+铜线可用 `pcb_PrimitiveLine.create()`，铺铜边界用 `pcb_PrimitivePour.create()`，修改走线后逐个 `rebuildCopperRegion()` 再复查。`pcb_Drc.check(true, true, true)` 实际返回按类别分组的详细数组，可归档计数及未连接网络。工程规则未放宽；第一轮 DRC 53 条，第二轮 41 条，保存重开及 108 项网表检查通过。执行脚本、在线备份和完整快照分别见 `artifacts/archive/eda-routing/` 与 `artifacts/archive/eda-routing-refine/`。
 
 第二轮接口经验：相邻线段可能在创建后合并，源数据中的最终 ID 不一定与每次 `create()` 返回 ID 一一对应。撤销某次试布线时应对比前后源数据，核对待删除对象及删除后的实际状态，不能只依赖返回成功或最初收集的 ID。本轮逐项删除并复核差异后完成清理。DRC 接口曾超时，保存并重开目标 PCB 图页后恢复；超时后先读取工程状态，不重复提交整批修改。
 
@@ -169,7 +169,7 @@ python3 projects/nfc-business-card/scripts/check-schematic-netlist.py projects/n
 5. `sys_FileManager.getDocumentFootprintSources()` 本机返回空数组；改为依次只读打开工程内的封装、取得 `getDocumentSource()` 后关闭，并恢复 PCB。出现未关联器件的提示时取消，不修改库器件关联。
 6. PCB 保存、关闭图页、重开；再导出网表、核对位置/网络和原生 DRC。显示设置会在重开时恢复部分默认值，270° 会规范化为 −90°，比较时须区分显示变化与实际设计变化。
 
-本轮原生 DRC 为 122 条，未通过；网表 108 项关键引脚检查通过，145 个焊盘的网络与原理图一致。API 调用、原始封装、数据库备份、验证脚本和导出包保存在被忽略的 `artifacts/eda-prelayout/`。后续编辑应核对当前源工程并局部修改，不能原样重跑创建图形脚本，以免产生重复板框或标注。
+本轮原生 DRC 为 122 条，未通过；网表 108 项关键引脚检查通过，145 个焊盘的网络与原理图一致。API 调用、原始封装、数据库备份、验证脚本和导出包保存在被忽略的 `artifacts/archive/eda-prelayout/`。后续编辑应核对当前源工程并局部修改，不能原样重跑创建图形脚本，以免产生重复板框或标注。
 
 ### 面板和 3D 外壳的范围
 
@@ -265,7 +265,7 @@ python3 projects/nfc-business-card/scripts/freecad-study.py preview projects/nfc
 
 生成目录内仍使用 `pcba-layout.FCStd` 等通用文件名。本次单独归档为 `enclosure/pcba-e6-302030.*`，没有替换旧版 `pcba-layout.*`。生成前的源文件审计根据变体选择对应的已保存模型，始终写新目录。
 
-2026-09-20 实际验证记录位于 `artifacts/freecad-e6-302030/`：`generate-v1` 保存重开与几何检查通过；`baseline-regression` 确认旧布局坐标、尺寸、证据和叠层保持一致；`check-published` 检查已归档新模型通过。FPC 通道和过厚电池的两个错误副本分别产生预留区冲突、内腔越界，命令正确返回非零。导出 STEP 重读为 11 个有效实体，体积差小于 `1e-5 mm³`。
+2026-09-20 实际验证记录位于 `artifacts/archive/freecad-e6-302030/`：`generate-v1` 保存重开与几何检查通过；`baseline-regression` 确认旧布局坐标、尺寸、证据和叠层保持一致；`check-published` 检查已归档新模型通过。FPC 通道和过厚电池的两个错误副本分别产生预留区冲突、内腔越界，命令正确返回非零。导出 STEP 重读为 11 个有效实体，体积差小于 `1e-5 mm³`。
 
 新增预留区通过模型属性 `CheckPhysicalClearance`、`AllowedComponents` 和 `KeepOutsideNfc` 控制检查，保存后重开仍有效。检查验证简化通道是否被其他实体占用，不验证真实柔性排线、电路布局或天线设计。
 
@@ -281,7 +281,7 @@ python3 projects/nfc-business-card/scripts/freecad-study.py check projects/nfc-b
 python3 projects/nfc-business-card/scripts/freecad-study.py preview projects/nfc-business-card/enclosure/pcba-e6-bottom-usb.FCStd
 ```
 
-本轮只执行一次 GUI 预览，其余生成和检查均调用 `freecadcmd`。`artifacts/bottom-usb/` 保存生成、检查、预览与 EDA API 记录；27 个简化形体的几何检查通过，完整 SVG、等轴测、顶视图和 EDA 画布分别目视检查。归档模型保留 GUI 显示属性，重新 `check` 通过。结构与 PCB 的具体验证边界见[排布记录](../hardware/pcb-bottom-usb.md)。
+本轮只执行一次 GUI 预览，其余生成和检查均调用 `freecadcmd`。`artifacts/archive/bottom-usb/` 保存生成、检查、预览与 EDA API 记录；27 个简化形体的几何检查通过，完整 SVG、等轴测、顶视图和 EDA 画布分别目视检查。归档模型保留 GUI 显示属性，重新 `check` 通过。结构与 PCB 的具体验证边界见[排布记录](../hardware/pcb-bottom-usb.md)。
 
 ### 银行卡以内的紧凑变体
 
@@ -295,9 +295,9 @@ python3 projects/nfc-business-card/scripts/freecad-study.py check projects/nfc-b
 python3 projects/nfc-business-card/scripts/freecad-study.py preview projects/nfc-business-card/enclosure/pcba-e6-84x52.FCStd
 ```
 
-本次运行记录在 `artifacts/compact-layout/`：两变体的 `generate` 和归档模型 `check` 均通过；旧 `e6-bottom-usb` 重新生成的报告与旧报告完全相同。只为 84 × 52 运行一次 GUI 预览，检查等轴测与顶视图后保存带颜色的模型；另用 Qt SVG 离屏渲染两方案平面图及比较图并目视检查。
+本次运行记录在 `artifacts/archive/compact-layout/`：两变体的 `generate` 和归档模型 `check` 均通过；旧 `e6-bottom-usb` 重新生成的报告与旧报告完全相同。只为 84 × 52 运行一次 GUI 预览，检查等轴测与顶视图后保存带颜色的模型；另用 Qt SVG 离屏渲染两方案平面图及比较图并目视检查。
 
-`review.py` 使用此前 `artifacts/bottom-usb/pad-geometry.json` 的封装快照进行离线平移检查，不能当作 EDA DRC；本机可运行 `python3 projects/nfc-business-card/artifacts/compact-layout/review.py` 复核。该脚本和输入快照是本地检查产物，不随 Git 分发；建议坐标与检查结论归档在 `enclosure/compact-layout-review.json`，后续必须在新 EDA 工程重新验证。完整说明见[紧凑排布记录](../enclosure/compact-layout.md)。
+`review.py` 使用此前 `hardware/records/pad-geometry.json` 的封装快照进行离线平移检查，不能当作 EDA DRC；本机可运行 `python3 projects/nfc-business-card/hardware/records/compact-layout-review.py` 复核。该脚本和输入快照是本地检查产物，不随 Git 分发；建议坐标与检查结论归档在 `enclosure/compact-layout-review.json`，后续必须在新 EDA 工程重新验证。完整说明见[紧凑排布记录](../enclosure/compact-layout.md)。
 
 ### 84 × 52 实际封装细化
 
@@ -310,9 +310,9 @@ python3 projects/nfc-business-card/scripts/freecad-study.py check projects/nfc-b
 python3 projects/nfc-business-card/scripts/freecad-study.py preview projects/nfc-business-card/enclosure/pcba-e6-84x52-detail.FCStd
 ```
 
-本轮 `generate` / 归档 `check` 均通过，36 个形体无已建模碰撞；一次 GUI 预览的等轴测与顶视、Qt 离屏 SVG 渲染和 EDA 画布分别查看。旧 `e6-84x52` 重生成的报告完全相同，既有 7 个 CAD/EDA 文件哈希不变。记录位于 `artifacts/compact-detail/`。
+本轮 `generate` / 归档 `check` 均通过，36 个形体无已建模碰撞；一次 GUI 预览的等轴测与顶视、Qt 离屏 SVG 渲染和 EDA 画布分别查看。旧 `e6-84x52` 重生成的报告完全相同，既有 7 个 CAD/EDA 文件哈希不变。记录位于 `artifacts/archive/compact-detail/`。
 
-EDA 经 API 保存重开后检查 30 个元件、188 个焊盘；本机快照核对命令为 `python3 projects/nfc-business-card/artifacts/compact-detail/check-layout.py`，该脚本及输入是本地临时产物。持久检查结果见 `hardware/pcb-84x52.json`；134 条 DRC 尚未通过，不能据此生产。旧原理图尚未同步 J2/U4/U5 候选，下一轮先修改原理图再同步板图。
+EDA 经 API 保存重开后检查 30 个元件、188 个焊盘；本机快照核对命令为 `python3 projects/nfc-business-card/hardware/records/compact-detail-check-layout.py`，该脚本及输入是本地临时产物。持久检查结果见 `hardware/pcb-84x52.json`；134 条 DRC 尚未通过，不能据此生产。旧原理图尚未同步 J2/U4/U5 候选，下一轮先修改原理图再同步板图。
 
 ### 保护手工修改
 
@@ -326,12 +326,12 @@ EDA 经 API 保存重开后检查 30 个元件、188 个焊盘；本机快照核
 
 ### 本机实际验证
 
-本轮固定输出根为 `projects/nfc-business-card/artifacts/freecad-workflow-validation/`，以下目录已使用，重跑应换目录名或省略 `--output-dir`：
+本轮固定输出根为 `projects/nfc-business-card/artifacts/freecad-workflow-validation/`（该轮的输出已归档到 `artifacts/archive/freecad-workflow-validation/`），以下目录已使用，重跑应换目录名或省略 `--output-dir`：
 
 ```sh
 python3 projects/nfc-business-card/scripts/freecad-study.py generate --output-dir projects/nfc-business-card/artifacts/freecad-workflow-validation/generate
 python3 projects/nfc-business-card/scripts/freecad-study.py check projects/nfc-business-card/enclosure/pcba-layout.FCStd --output-dir projects/nfc-business-card/artifacts/freecad-workflow-validation/check-existing
-python3 projects/nfc-business-card/scripts/freecad-study.py preview projects/nfc-business-card/artifacts/freecad-workflow-validation/generate/pcba-layout.FCStd --output-dir projects/nfc-business-card/artifacts/freecad-workflow-validation/preview-ready
+python3 projects/nfc-business-card/scripts/freecad-study.py preview projects/nfc-business-card/enclosure/pcba-layout-workflow-validation.FCStd --output-dir projects/nfc-business-card/artifacts/freecad-workflow-validation/preview-ready
 ```
 
 - **几何检查：通过。** 保存后重开，25 个几何实体有效；物理器件无碰撞、无超出假设内腔（USB 侧壁开口例外）、无侵入 NFC 平面预留区；PCB 为单一连通实体。几何检查读取模型本身，不沿用生成报告宣称成功。
@@ -414,7 +414,7 @@ nrfutil sdk-manager install v3.4.0
 
 独立比较原理图与 PCB 的制造网表发现 **27 处 Unique ID 不同**：原理图 J2、U4 和屏幕外围使用 `gge57`–`gge83`，PCB 对应元件仍使用 `gge28`–`gge54`；位号、封装与引脚网络一致。这是实际的关联差异；已用 `IPCB_PrimitiveComponent.toAsync()`、`setState_UniqueId()`、`await done()` 将 PCB 对齐原理图，保存重开后 112 项关联/封装检查通过，原生 Netlist Error 消失。不能仅凭引脚检查通过就忽略关联差异。
 
-`check-e6-netlist.py` 新增 `--pcb-netlist <PCB 导出的 .enet>`，比较元件集合、Unique ID、Footprint 和引脚网络。对修正前导出按预期失败，检出上述 27 项；修正后导出通过。正式 PCB 网表保存为 `hardware/e6-pcb.enet`；原有 `--pcb` 平面快照检查不包括关联 ID。API 原始记录、修改前 SQLite 在线备份及待执行的关联修正映射位于被忽略的 `artifacts/eda-persistence-review/`。
+`check-e6-netlist.py` 新增 `--pcb-netlist <PCB 导出的 .enet>`，比较元件集合、Unique ID、Footprint 和引脚网络。对修正前导出按预期失败，检出上述 27 项；修正后导出通过。正式 PCB 网表保存为 `hardware/e6-pcb.enet`；原有 `--pcb` 平面快照检查不包括关联 ID。API 原始记录、修改前 SQLite 在线备份及待执行的关联修正映射位于被忽略的 `artifacts/archive/eda-persistence-review/`。
 
 外部一手报告：[文字删除恢复 #36](https://github.com/easyeda/pro-api-sdk/issues/36)描述相同症状，并报告“API 选中 → 编辑器原生 Delete → 保存重开”有效；本机已复现可行路径：API 精确选中旧文字，再用原生“编辑 → 删除 → 已选”，保存并重开图页确认。第 3 页删除 13 条旧说明，第 1/2 页替换 4 条，均未恢复。单独发送 Delete 快捷键未生效，必须确认画布实际焦点或使用菜单。[网表比较 #39](https://github.com/easyeda/pro-api-sdk/issues/39)及其后续评论区分了 UUID 比较异常和原生导入更新状态；它不能代替本项目的网表审计，也不证明本项目告警是假阳性。
 

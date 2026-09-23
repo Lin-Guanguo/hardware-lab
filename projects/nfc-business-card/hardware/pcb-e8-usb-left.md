@@ -12,7 +12,7 @@ E8 是从 E7 复制出的独立失败候选，不是生产工程。它把 J1、U
 
 - [E8 USB 左移工程](../../../eda/NFC-Business-Card-84x52-E8-USB-Left.eprj2)：独立失败候选，保留用于对照，不能下单。
 - [E7 布局评审记录](pcb-e7-placement.md)：当前采用的干净布局副本和 USB 扇出试验记录。
-- [E8 左移重开检查](../artifacts/eda-block-layout/e8-final-reopen.json)：记录位置、元件数量、铜线数量和 DRC 结果。
+- [E8 左移重开检查](records/e8-final-reopen.json)：记录位置、元件数量、铜线数量和 DRC 结果。
 
 ## 下一步
 

@@ -6,4 +6,4 @@ E11 从 E9 独立复制，保持板框、器件位置和按键不变，只试验
 
 这次对照排除了“只靠错开普通通孔就能在当前两层布局完成 USB 扇出”的路径。下一步应在不增加成品长宽和目标厚度的约束下，比较更换带内部过渡的 USB 封装、把 ESD 放到连接器另一面，或按嘉立创可制造叠层评估盲/埋孔与四层方案；不能继续堆叠长绕线。
 
-验证记录：[E11 最终重开](../artifacts/eda-block-layout/e11-final-reopen.json)、[第二轮试线](../artifacts/eda-block-layout/e11-staggered-v2.json)。
+验证记录：[E11 最终重开](records/e11-final-reopen.json)、[第二轮试线](records/e11-staggered-v2.json)。

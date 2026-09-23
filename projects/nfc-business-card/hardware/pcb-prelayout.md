@@ -40,10 +40,10 @@
 本机复核命令：
 
 ```sh
-python3 projects/nfc-business-card/scripts/check-schematic-netlist.py projects/nfc-business-card/artifacts/eda-prelayout/pcb.enet
-python3 projects/nfc-business-card/artifacts/eda-prelayout/check-layout.py
+python3 projects/nfc-business-card/scripts/check-schematic-netlist.py projects/nfc-business-card/hardware/records/eda-prelayout-pcb.enet
+python3 projects/nfc-business-card/hardware/records/eda-prelayout-check-layout.py
 ```
 
-API 执行记录、原始封装快照、改动前数据库备份、DRC 面板记录与 `.epro2` 导出在被忽略的 `artifacts/eda-prelayout/`；检查脚本使用本轮导出快照，不会自动读取后来编辑的工程。长期设计源是根 `eda/` 下的工程，本文的图和 JSON 是本次评审快照。
+API 执行记录、原始封装快照、改动前数据库备份、DRC 面板记录与 `.epro2` 导出在被忽略的 `artifacts/archive/eda-prelayout/`；检查脚本使用本轮导出快照，不会自动读取后来编辑的工程。长期设计源是根 `eda/` 下的工程，本文的图和 JSON 是本次评审快照。
 
 下一步可先核 USB 封装和局部试布线，同时补 ESD、SWD 与六色屏电路；屏幕、电池实物确认后再收敛最终插座、排线、外壳和制造文件。

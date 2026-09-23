@@ -2,7 +2,7 @@
 """Validate the exported E16 manufacturing set against the live PCB snapshot.
 
 The set is produced by scripts/eda-export-e16-manufacture.js and copied into
-artifacts/e16-manufacture/ as NFC-E16-gerber.zip, NFC-E16-bom.xlsx,
+artifacts/manufacture/ as NFC-E16-gerber.zip, NFC-E16-bom.xlsx,
 NFC-E16-cpl.xlsx and NFC-E16-board-pdf.pdf. This checker proves that the fab
 data really describes the current board instead of an older revision:
 
@@ -30,7 +30,7 @@ from pathlib import Path
 import openpyxl
 
 REPO = Path(__file__).resolve().parents[3]
-DEFAULT_DIR = REPO / "projects/nfc-business-card/artifacts/e16-manufacture"
+DEFAULT_DIR = REPO / "projects/nfc-business-card/artifacts/manufacture"
 DEFAULT_SNAPSHOT = REPO / "projects/nfc-business-card/hardware/e16-right-mid-snapshot.json"
 MIL = 39.37007874015748
 

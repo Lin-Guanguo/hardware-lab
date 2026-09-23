@@ -22,7 +22,7 @@ last_updated: 2026-09-21
 - 页面及其下载区没有补充本型号的刷新耗时、刷新峰值电流、BUSY 勘误或装配 BOM；原先缺口仍存在。页面提及集成 DC-DC，不代表外部电感、MOSFET、二极管和电容可以省略。
 - 页面中标为 DESPI-E01 的文字链接实际指向 `/product/904.html`，打开后是 **DESPI-C169 / 30 pin**，不能混用该板资料。正确 [DESPI-E01 英文页](https://www.good-display.com/product/1087.html)为 24 pin；本项目沿用已核对的 DESPI-E01 中文说明书与电路图。
 
-结论：商家链接确认了产品及公开资料入口，**没有消除文档差异或证明实物版本兼容**。可继续封装审核和原理图草案；不能将“收到官网链接”当成投板条件已满足。下载端点与文件比较记录位于 `artifacts/gdeh0154e01-research/merchant-*.json`。
+结论：商家链接确认了产品及公开资料入口，**没有消除文档差异或证明实物版本兼容**。可继续封装审核和原理图草案；不能将“收到官网链接”当成投板条件已满足。下载端点与文件比较记录位于 `artifacts/archive/gdeh0154e01-research/merchant-*.json`。
 
 ## 核对结果
 
@@ -144,4 +144,4 @@ last_updated: 2026-09-21
 | `downloads/e6-design-notice-cn.pdf` | [产品页资料区](https://www.good-display.cn/product/718.html)提供的 E6 通用须知，25 页 | 全文抽取；第 3 页的 150 秒建议已目视核对 |
 | `downloads/fpc-05fb-24ph20.pdf` | [XUNPU 图纸入口](https://www.lcsc.com/datasheet/C2856831.pdf)，系列图 REV A + 产品规格，共 5 页 | 首张机械/焊盘/FPC 图目视核对；Poppler 报 XRef 结构警告但可渲染，保留原文件；实际库名义尺寸已核对，装配未验证 |
 
-使用 `pdftotext -layout` 抽取文本，`pdftoppm -png` 渲染关键页；文本及 PNG 保存在被忽略的 `artifacts/gdeh0154e01-research/`。示例只从压缩包读取到该研究缓存，未引入正式固件目录。原始代码和文档保留上游声明。
+使用 `pdftotext -layout` 抽取文本，`pdftoppm -png` 渲染关键页；文本及 PNG 保存在被忽略的 `artifacts/archive/gdeh0154e01-research/`。示例只从压缩包读取到该研究缓存，未引入正式固件目录。原始代码和文档保留上游声明。

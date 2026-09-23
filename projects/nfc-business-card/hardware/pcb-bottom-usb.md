@@ -49,6 +49,6 @@
 
 **视觉通过空间方案检查：** 只启动一次临时 FreeCAD GUI，通过 API 生成并查看等轴测和顶视图；另检查完整 SVG 渲染及 EDA 画布。已保存带显示属性的独立模型。FreeCAD 是大件与预留区包络，EDA 是实际的 27 个封装，两者不等于完整装配模型。
 
-记录位于本机 `artifacts/bottom-usb/`；可重复的 FreeCAD 命令见[软件说明](../docs/software.md#电池靠右usb-下长边变体)。原 EDA 与三个既有 `.FCStd` 的 SHA-256 均与本轮开始时一致。
+记录位于本机 `artifacts/archive/bottom-usb/`；可重复的 FreeCAD 命令见[软件说明](../docs/software.md#电池靠右usb-下长边变体)。原 EDA 与三个既有 `.FCStd` 的 SHA-256 均与本轮开始时一致。
 
 下一步按此新方案补齐六色屏外围/FPC、电池接点/NTC、USB ESD 和 SWD，并核 USB 槽口与板厂规则，再安排完整布线。先用纸样或结构样片验证竖持按键位置；收到样品后核电池完整包体、出线及屏幕排线。薄片前盖下 USB 规划厚度仍为 4.91 mm，3.4 mm 电池的假设规划值仍为 4.95 mm；换位置没有消除厚度、公差和实物验证缺口。

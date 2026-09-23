@@ -9,7 +9,7 @@
 - 审查图：[pcba-e16-right-mid.svg](../enclosure/pcba-e16-right-mid.svg)（L 形板框、三键、双面铜箔、焊盘/过孔实形、位号、禁布区与显示包络）
 - E16 实时快照：[e16-right-mid-snapshot.json](e16-right-mid-snapshot.json)
 - 外壳剖视图：[nfc-card-e16-v5-stack-section.svg](../enclosure/nfc-card-e16-v5-stack-section.svg)（4.5 mm 叠层：电池袋 / 按键列 / 屏幕 FPC）
-- 外壳样件：[nfc-card-e16-enclosure-v7.FCStd](../enclosure/nfc-card-e16-enclosure-v7.FCStd) · [几何报告](../enclosure/nfc-card-e16-enclosure-v7-report.json) · [脚本](../enclosure/e16-enclosure-right-mid-usb-v7.py) · 预览图 `artifacts/e16-cad-preview/e16-enclosure-v7-{iso,top}.png`（V5/V6 见[外壳说明](../enclosure/README.md)）
+- 外壳样件：[nfc-card-e16-enclosure-v7.FCStd](../enclosure/nfc-card-e16-enclosure-v7.FCStd) · [几何报告](../enclosure/nfc-card-e16-enclosure-v7-report.json) · [脚本](../enclosure/e16-enclosure-right-mid-usb-v7.py) · 预览图 `enclosure/renders/e16-enclosure-v7-{iso,top}.png`（V5/V6 见[外壳说明](../enclosure/README.md)）
 - 校验脚本：[plan-e16-right-mid.py](../scripts/plan-e16-right-mid.py)
 - 外壳与板级校验：[check-e16-board-fit.py](../scripts/check-e16-board-fit.py) · [check-e16-board-clearance.py](../scripts/check-e16-board-clearance.py) · [check-e16-usb-plug.py](../scripts/check-e16-usb-plug.py)
 - 铜箔连通性：[check-e16-copper-connectivity.py](../scripts/check-e16-copper-connectivity.py)（原生 DRC 的"连接 0"不能证明连通，动铜箔后必须跑）
@@ -235,7 +235,7 @@ USB 七网布通后剩 176 项连接错误。自动布线处理了其中 29 条�
 
 ### 制造可交付性检查（2026-09-22）
 
-用 `pcb_ManufactureData` 把 E16 图页导出到 `artifacts/e16-manufacture/`（**验证用，不是下单文件**；这些产物按仓库约定不入库），核对结果：
+用 `pcb_ManufactureData` 把 E16 图页导出到 `artifacts/manufacture/`（**验证用，不是下单文件**；这些产物按仓库约定不入库），核对结果：
 
 | 项目 | 结果 |
 | --- | --- |
@@ -681,7 +681,7 @@ python3 projects/nfc-business-card/scripts/check-e16-manufacture.py
 | BOM | 25 行、**56 个位号**，与快照位号集合完全一致 |
 | 贴装坐标 | **56 个位号**，与快照逐件比对最大偏差 **0.0005 mm**（J1） |
 | 装配 PDF | 801 849 B（约 802 kB），未截断 |
-| 文件哈希（SHA-256） | Gerber `2276d58e…`、BOM `df4306f0…`、CPL `e9719434…`、PDF `57ff6f60…`（完整值见 `artifacts/e16-manufacture/manifest.json`） |
+| 文件哈希（SHA-256） | Gerber `2276d58e…`、BOM `df4306f0…`、CPL `e9719434…`、PDF `57ff6f60…`（完整值见 `artifacts/manufacture/manifest.json`） |
 
 同一天还从**当前保存的工程**重跑了一遍完整链路作为收口证据：快照导出与提交的 `e16-right-mid-snapshot.json` 逐字段 **0 差异**（56 元件 / 242 焊盘 / 781 段铜 / 162 过孔 / 2 区域 / 9 折线 / 10 文字）、板级 DRC 只有 12 项 `Board Outline to SMD Pad`（J1 槽边类）、逐引脚网表 56 位号 / 234 引脚 / 0 差异、制造包重导后 `ok=true` 且上表数值不变。
 

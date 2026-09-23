@@ -1,0 +1,71 @@
+{
+ "ok": true,
+ "parts": [
+  {
+   "file": "nfc-card-e16-bottom-v7.stl",
+   "facets": 80,
+   "points": 42,
+   "bbox_mm": [
+    0.0,
+    0.0,
+    0.0,
+    84.0,
+    52.0,
+    0.7
+   ],
+   "volume_mm3": 1775.605,
+   "area_mm2": 8806.585,
+   "is_solid": true,
+   "self_intersections": 0,
+   "has_non_manifolds": false,
+   "degenerate_facets": 0,
+   "duplicate_points": 0,
+   "problems": [],
+   "part": "bottom_shell"
+  },
+  {
+   "file": "nfc-card-e16-top-v7.stl",
+   "facets": 1734,
+   "points": 861,
+   "bbox_mm": [
+    0.0,
+    0.0,
+    1.5,
+    84.0,
+    52.0,
+    4.5
+   ],
+   "volume_mm3": 2270.169,
+   "area_mm2": 8236.609,
+   "is_solid": true,
+   "self_intersections": 0,
+   "has_non_manifolds": false,
+   "degenerate_facets": 0,
+   "duplicate_points": 0,
+   "problems": [],
+   "part": "top_shell"
+  },
+  {
+   "file": "nfc-card-e16-keycaps-v7.stl",
+   "facets": 3012,
+   "points": 1512,
+   "bbox_mm": [
+    36.0,
+    1.201,
+    3.05,
+    48.4,
+    17.199,
+    4.5
+   ],
+   "volume_mm3": 43.684,
+   "area_mm2": 131.53,
+   "is_solid": true,
+   "self_intersections": 0,
+   "has_non_manifolds": false,
+   "degenerate_facets": 0,
+   "duplicate_points": 0,
+   "problems": [],
+   "part": "keycaps"
+  }
+ ]
+}

@@ -4,7 +4,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 
 BASE = Path('/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/enclosure')
-OUT = Path('/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/artifacts/e16-cad-preview')
+OUT = Path('/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/enclosure/renders')
 OUT.mkdir(parents=True, exist_ok=True)
 
 

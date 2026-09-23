@@ -60,4 +60,4 @@ git diff --check
 
 剩余 34 条连接问题按对象计数：GND 7、USB_VBUS 4、VDD_3V3 5、EPD_VDD 2、USB_CC1/2 各 2、USB_DP_CONN/USB_DM_CONN 各 3、BAT_NTC_TBD 2、USB_DM_MCU 2、EPD_DC_TBD 2。24 条槽边距仍需结合 GCT USB4500 图纸和制造能力解决。NFC 线圈、VBUS 保护、充电限流/NTC、完整供电与刷新实测、CAD 同步仍未完成。
 
-方法参考：[Altium 布局与布线教程](https://www.altium.com/documentation/altium-designer/tutorial/component-placement-routing-board)、[功能分组与固定器件布局](https://resources.altium.com/p/where-do-they-all-go-pcb-layout-component-placement-guidelines)、[关键网络优先、出线与自动布线准备](https://resources.altium.com/p/automated-pcb-routing-with-situs-topological-autorouter)。这些方法用于指导取舍，不替代本板验证。API 调用、几何脚本、各阶段快照和在线备份保存在被忽略的 `artifacts/eda-block-layout/`。
+方法参考：[Altium 布局与布线教程](https://www.altium.com/documentation/altium-designer/tutorial/component-placement-routing-board)、[功能分组与固定器件布局](https://resources.altium.com/p/where-do-they-all-go-pcb-layout-component-placement-guidelines)、[关键网络优先、出线与自动布线准备](https://resources.altium.com/p/automated-pcb-routing-with-situs-topological-autorouter)。这些方法用于指导取舍，不替代本板验证。API 调用、几何脚本、各阶段快照和在线备份保存在被忽略的 `artifacts/archive/eda-block-layout/`。

@@ -20,9 +20,9 @@ E10 保存重开后仍为 56 个元件、242 个焊盘、0 段线、0 个过孔�
 
 ## 验证记录
 
-- E9 保存重开：[e9-final-reopen.json](../artifacts/eda-block-layout/e9-final-reopen.json)
-- E9 CC 受控试线：[e9-usb-cc-only-run.json](../artifacts/eda-block-layout/e9-usb-cc-only-run.json)
-- E10 按键右移保存重开：[e10-final-reopen.json](../artifacts/eda-block-layout/e10-final-reopen.json)
-- E10 按键网络焊盘位置：[e10-key-pads.json](../artifacts/eda-block-layout/e10-key-pads.json)
+- E9 保存重开：[e9-final-reopen.json](records/e9-final-reopen.json)
+- E9 CC 受控试线：[e9-usb-cc-only-run.json](records/e9-usb-cc-only-run.json)
+- E10 按键右移保存重开：[e10-final-reopen.json](records/e10-final-reopen.json)
+- E10 按键网络焊盘位置：[e10-key-pads.json](records/e10-key-pads.json)
 
 以上检查只覆盖 EDA 几何、连接性和保存重开；未验证 USB 阻抗、RF/NFC、FPC 插合、实物高度、电池安全或外壳装配。

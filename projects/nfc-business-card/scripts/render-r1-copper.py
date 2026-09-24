@@ -15,7 +15,7 @@ from shapely.geometry.polygon import orient
 from pour_geometry import parse_path, load_pours
 
 pad_shape=runpy.run_path(str(Path(__file__).with_name('check-r1-copper.py')))['pad_shape']
-ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--snapshot',type=Path,required=True);ap.add_argument('--output',type=Path,required=True);a=ap.parse_args()
+ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--snapshot',type=Path,required=True);ap.add_argument('--output',type=Path,required=True);ap.add_argument('--title',default='NFC Card R1 | Routed PCB');a=ap.parse_args()
 s=json.loads(a.snapshot.read_text());outline=parse_path(next(p for p in s['polylines']if p['layer']==11)['polygon']['polygon'],.0254)
 fig,axes=plt.subplots(1,2,figsize=(16,6.5));fig.patch.set_facecolor('#edf2f6')
 for ax,layer,title in zip(axes,(1,2),('FRONT / components + controls','REAR / NFC + debug pads')):
@@ -48,7 +48,7 @@ for ax,layer,title in zip(axes,(1,2),('FRONT / components + controls','REAR / NF
   for x,label in [(65,'GND'),(68,'3V3'),(71,'CLK'),(74,'DIO'),(77,'RST')]:
    ax.text(x,46.8,label,ha='center',fontsize=7,color='white')
   ax.invert_xaxis()
-fig.suptitle('NFC Card R1 | Routed PCB',fontsize=21,weight='bold',x=.04,ha='left')
+fig.suptitle(a.title,fontsize=21,weight='bold',x=.04,ha='left')
 fig.text(.04,.065,'Actual exported copper. Front reference labels and the dashed screen outline are review overlays.',fontsize=10,color='#42576c')
 fig.text(.04,.03,'2 copper layers / 0.8 mm PCB / rear 5-turn NFC coil. RF tuning and physical assembly remain prototype tests.',fontsize=10,color='#42576c')
 fig.subplots_adjust(left=.035,right=.985,top=.86,bottom=.15,wspace=.06);a.output.parent.mkdir(parents=True,exist_ok=True)

@@ -1,0 +1,373 @@
+{
+  "scope": "Offline geometry trial only; native R3 remains unchanged. Set 54 sub-0.30 mm vias to 0.30 mm drill and 0.51 mm diameter.",
+  "candidate_via_drill_mm": 0.3,
+  "candidate_via_diameter_mm": 0.51,
+  "modified_vias": 54,
+  "different_net_pairs_below_0p15_mm": 29,
+  "minimum_gap_mm": 0.1166,
+  "groups": [
+    {
+      "nets": [
+        "EPD_VGL",
+        "EPD_VGH"
+      ],
+      "layers": [
+        1,
+        2
+      ],
+      "minimum_gap_mm": 0.1166,
+      "closest_midpoint_mm": [
+        65.1,
+        44.19
+      ],
+      "pair_count": 1
+    },
+    {
+      "nets": [
+        "EPD_RESE",
+        "EPD_GDR"
+      ],
+      "layers": [
+        1,
+        2
+      ],
+      "minimum_gap_mm": 0.1167,
+      "closest_midpoint_mm": [
+        59.85,
+        27.68
+      ],
+      "pair_count": 1
+    },
+    {
+      "nets": [
+        "EPD_GDR",
+        "EPD_VGL"
+      ],
+      "layers": [
+        1
+      ],
+      "minimum_gap_mm": 0.1229,
+      "closest_midpoint_mm": [
+        67.79,
+        39.34
+      ],
+      "pair_count": 1
+    },
+    {
+      "nets": [
+        "EPD_VSNL2",
+        "EPD_VDD"
+      ],
+      "layers": [
+        1
+      ],
+      "minimum_gap_mm": 0.1236,
+      "closest_midpoint_mm": [
+        55.66,
+        37.35
+      ],
+      "pair_count": 1
+    },
+    {
+      "nets": [
+        "EPD_DC_TBD",
+        "VDD_3V3"
+      ],
+      "layers": [
+        2
+      ],
+      "minimum_gap_mm": 0.1283,
+      "closest_midpoint_mm": [
+        57.87,
+        25.73
+      ],
+      "pair_count": 1
+    },
+    {
+      "nets": [
+        "EPD_RESE",
+        "EPD_GDR"
+      ],
+      "layers": [
+        1
+      ],
+      "minimum_gap_mm": 0.1295,
+      "closest_midpoint_mm": [
+        55.12,
+        29.24
+      ],
+      "pair_count": 1
+    },
+    {
+      "nets": [
+        "EPD_RESE",
+        "EPD_GDR"
+      ],
+      "layers": [
+        2
+      ],
+      "minimum_gap_mm": 0.1295,
+      "closest_midpoint_mm": [
+        65.62,
+        34.04
+      ],
+      "pair_count": 1
+    },
+    {
+      "nets": [
+        "GND",
+        "VDD_3V3"
+      ],
+      "layers": [
+        2
+      ],
+      "minimum_gap_mm": 0.1295,
+      "closest_midpoint_mm": [
+        56.52,
+        21.08
+      ],
+      "pair_count": 1
+    },
+    {
+      "nets": [
+        "GND",
+        "EPD_VDD"
+      ],
+      "layers": [
+        1
+      ],
+      "minimum_gap_mm": 0.1296,
+      "closest_midpoint_mm": [
+        65.02,
+        36.13
+      ],
+      "pair_count": 2
+    },
+    {
+      "nets": [
+        "EPD_RESET_N_TBD",
+        "EPD_RESE"
+      ],
+      "layers": [
+        2
+      ],
+      "minimum_gap_mm": 0.132,
+      "closest_midpoint_mm": [
+        55.03,
+        28.31
+      ],
+      "pair_count": 1
+    },
+    {
+      "nets": [
+        "EPD_RESET_N_TBD",
+        "EPD_GDR"
+      ],
+      "layers": [
+        2
+      ],
+      "minimum_gap_mm": 0.132,
+      "closest_midpoint_mm": [
+        55.03,
+        29.01
+      ],
+      "pair_count": 1
+    },
+    {
+      "nets": [
+        "EPD_VSPH",
+        "EPD_VDD"
+      ],
+      "layers": [
+        1
+      ],
+      "minimum_gap_mm": 0.1345,
+      "closest_midpoint_mm": [
+        55.18,
+        37.59
+      ],
+      "pair_count": 2
+    },
+    {
+      "nets": [
+        "EPD_EN_TBD",
+        "GND"
+      ],
+      "layers": [
+        1
+      ],
+      "minimum_gap_mm": 0.1351,
+      "closest_midpoint_mm": [
+        66.62,
+        38.37
+      ],
+      "pair_count": 1
+    },
+    {
+      "nets": [
+        "EPD_VGL",
+        "VDD_3V3"
+      ],
+      "layers": [
+        2
+      ],
+      "minimum_gap_mm": 0.1377,
+      "closest_midpoint_mm": [
+        68.23,
+        38.68
+      ],
+      "pair_count": 1
+    },
+    {
+      "nets": [
+        "EPD_VSPH",
+        "EPD_VGH"
+      ],
+      "layers": [
+        1
+      ],
+      "minimum_gap_mm": 0.1382,
+      "closest_midpoint_mm": [
+        55.29,
+        38.2
+      ],
+      "pair_count": 2
+    },
+    {
+      "nets": [
+        "EPD_VSNH",
+        "EPD_VGH"
+      ],
+      "layers": [
+        1
+      ],
+      "minimum_gap_mm": 0.1386,
+      "closest_midpoint_mm": [
+        55.29,
+        38.82
+      ],
+      "pair_count": 2
+    },
+    {
+      "nets": [
+        "GND",
+        "USB_CC2"
+      ],
+      "layers": [
+        1
+      ],
+      "minimum_gap_mm": 0.1401,
+      "closest_midpoint_mm": [
+        69.08,
+        29.4
+      ],
+      "pair_count": 1
+    },
+    {
+      "nets": [
+        "EPD_VDD",
+        "GND"
+      ],
+      "layers": [
+        1,
+        2
+      ],
+      "minimum_gap_mm": 0.1404,
+      "closest_midpoint_mm": [
+        55.36,
+        36.99
+      ],
+      "pair_count": 1
+    },
+    {
+      "nets": [
+        "NRESET",
+        "GND"
+      ],
+      "layers": [
+        2
+      ],
+      "minimum_gap_mm": 0.1421,
+      "closest_midpoint_mm": [
+        75.68,
+        29.8
+      ],
+      "pair_count": 1
+    },
+    {
+      "nets": [
+        "EPD_VDD",
+        "GND"
+      ],
+      "layers": [
+        1
+      ],
+      "minimum_gap_mm": 0.1438,
+      "closest_midpoint_mm": [
+        55.14,
+        36.89
+      ],
+      "pair_count": 1
+    },
+    {
+      "nets": [
+        "EPD_GDR",
+        "VDD_3V3"
+      ],
+      "layers": [
+        1
+      ],
+      "minimum_gap_mm": 0.1475,
+      "closest_midpoint_mm": [
+        68.69,
+        39.14
+      ],
+      "pair_count": 1
+    },
+    {
+      "nets": [
+        "EPD_VCOM",
+        "EPD_VGL"
+      ],
+      "layers": [
+        1
+      ],
+      "minimum_gap_mm": 0.1482,
+      "closest_midpoint_mm": [
+        55.88,
+        42.43
+      ],
+      "pair_count": 2
+    },
+    {
+      "nets": [
+        "EPD_VSNL1",
+        "EPD_VDD"
+      ],
+      "layers": [
+        1
+      ],
+      "minimum_gap_mm": 0.1489,
+      "closest_midpoint_mm": [
+        55.66,
+        37.19
+      ],
+      "pair_count": 1
+    },
+    {
+      "nets": [
+        "GND",
+        "EPD_RESE"
+      ],
+      "layers": [
+        2
+      ],
+      "minimum_gap_mm": 0.1499,
+      "closest_midpoint_mm": [
+        60.0,
+        27.08
+      ],
+      "pair_count": 1
+    }
+  ]
+}

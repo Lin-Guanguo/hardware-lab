@@ -1,0 +1,4 @@
+schematic refs 66 · PCB refs 66 · schematic pins 256 · PCB pins 256
+refs only in schematic: none
+refs only in PCB: none
+pin/net mismatches: 0

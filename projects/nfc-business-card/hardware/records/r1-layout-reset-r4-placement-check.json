@@ -1,0 +1,69 @@
+{
+  "status": "placement_only_not_for_manufacture",
+  "source": "R2 native PCB imported as an independent R4 project",
+  "components": 66,
+  "pads": 266,
+  "moved_components": [
+    "C10",
+    "C11",
+    "C12",
+    "C13",
+    "C9",
+    "D1",
+    "D2",
+    "D3",
+    "L1",
+    "Q1",
+    "R13",
+    "R14",
+    "R15",
+    "R16",
+    "U4"
+  ],
+  "routes_unchanged_and_stale": true,
+  "named_pad_center_distances": [
+    {
+      "pair": "C9-1 / U4-1",
+      "r2_mm": 1.55,
+      "r4_mm": 1.553
+    },
+    {
+      "pair": "C9-2 / U4-2",
+      "r2_mm": 3.008,
+      "r4_mm": 3.008
+    },
+    {
+      "pair": "C10-1 / U4-5",
+      "r2_mm": 2.2,
+      "r4_mm": 2.203
+    },
+    {
+      "pair": "C10-2 / U4-2",
+      "r2_mm": 4.521,
+      "r4_mm": 4.522
+    },
+    {
+      "pair": "L1-1 / C10-1",
+      "r2_mm": 3.036,
+      "r4_mm": 3.034
+    },
+    {
+      "pair": "L1-2 / Q1-3",
+      "r2_mm": 1.372,
+      "r4_mm": 1.372
+    },
+    {
+      "pair": "C11-1 / L1-2",
+      "r2_mm": 4.404,
+      "r4_mm": 4.404
+    }
+  ],
+  "nearest_different_net_pad_gap_involving_moved_component_mm": 0.636,
+  "nearest_different_net_pad_pair": [
+    "C12",
+    "2",
+    "R16",
+    "1"
+  ],
+  "scope": "Pad copper only; excludes old tracks, vias, pours, solder mask and component bodies."
+}

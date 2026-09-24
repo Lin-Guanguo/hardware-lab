@@ -2,6 +2,8 @@
 
 ## 当前确定方案
 
+2026-09-24：[R4 先摆位独立候选](../hardware/production/r1-layout-reset-r4/README.md)从 R2 导入，移动 15 个显示供电器件，保留其余器件、板框、天线及旧铜。七对命名敏感焊盘的中心距与 R2 偏差均小于 0.02 mm；移动器件所涉异网元件焊盘最小铜间距为 0.636 mm。重开后位置、铜箔快照一致，过孔规则保留 0.30 mm 钻孔／约 0.55 mm 默认外径；旧铜造成原生 DRC 62 条间距错误、36 条断连。此版只完成摆位，不可投产。下一步复核封装包络并局部拆除／重布受影响走线，再完成整板验证和供应商 DFM；R2 仍是最新低成本制造候选。
+
 2026-09-24：[R2 独立候选](../hardware/production/r1-free-0p30-sense-ring-r2/README.md)在原电池采样候选上完成局部移孔和重布线，保留敏感器件、板框与天线不动。重开原生 DRC 0；最小钻孔 0.30226 mm、最小径向孔环 0.1016 mm；走线/焊盘/过孔异网间距审计未发现 <0.15 mm。Gerber/BOM/CPL 已从同一工程导出，本地独立连通、NFC、板框、四槽及 66/66 位号检查通过。[新版线上 PCB/SMT DFM](../hardware/production/r1-free-0p30-sense-ring-r2/vendor-dfm-2026-09-24.md)走线间距警告由 12 降至 1，盘到线及 PTH 孔到线危险清零；但孔环危险仍显示 100，VIA 孔到焊盘危险增至 32，SMT 新增 U1 焊脚到孔 2 条危险，J1/U1 原有问题未变。需继续局部处理和人工审核；原 R1 制造基准未变，未下单。
 
 2026-09-24：[R3 独立重排试验](../hardware/production/r1-power-relayout-r3/README.md)将显示供电区与 USB/充电区分开，保留电池采样。66/66 引脚、重开原生 DRC、独立铜箔连通、屏幕/NFC 净空及 0.15 mm 异网间距在旧规则下本地检查通过。**自动布线产生 54 个约 0.25 mm 孔**；仅扩大至 0.30 mm／0.51 mm 外径的离线试验又有 29 对 <0.15 mm 的间距。当前工程已把过孔内径最小/默认设为 0.30 mm、外径最小/默认设为 0.50/0.55 mm；原生 DRC 据此报 54 条过孔尺寸错误。另已在嘉立创 EDA 保存同尺寸的双面板规则为新建 PCB 默认配置。命名焊盘复核发现 L1-1 到 C10-1 从 3.04 增至 7.37 mm，C11-1 到 L1-2 从 4.40 增至 10.29 mm，显示供电相对摆位需重做。本版标为布局起点与失败工艺试验，未送供应商 DFM，不可投产；R2 仍是低成本候选。下一步先优化敏感器件相对摆位，再以 0.30 mm 孔和 0.15 mm 目标约束布线。
@@ -28,6 +30,7 @@
 | 0.30 mm＋电池采样前版 | [独立工程与文件](../hardware/production/r1-free-0p30-sense/README.md)已补 TS/MR 及采样；[线上 PCB/SMT DFM](../hardware/production/r1-free-0p30-sense/vendor-dfm-2026-09-24.md)完成，29 组器件匹配。薄孔环、槽、铜/阻焊、J1/U1 危险未关闭；其扩大孔环诊断 DRC 24，已由 R2 局部重布承接。 |
 | R2 孔环与间距候选 | [独立工程与文件](../hardware/production/r1-free-0p30-sense-ring-r2/README.md)的本地检查通过，最小钻孔 0.30226 mm、最小径向孔环 0.1016 mm；独立对象间距审计无 <0.15 mm。[线上 PCB/SMT DFM](../hardware/production/r1-free-0p30-sense-ring-r2/vendor-dfm-2026-09-24.md)仍报孔环 100、VIA 到焊盘 32、U1 焊脚到孔 2、J1 焊脚重叠 12 条危险；需继续局部修改与工厂人工审核，不能作为下单包。 |
 | R3 功能区重排 | [独立工程与预览](../hardware/production/r1-power-relayout-r3/README.md)已保存。电池采样保留，USB 保护/主控去耦/屏幕/NFC 未挪；本地几何连通检查通过。54 个小钻孔及显示供电回路扩大阻止其成为制板版；先做按工艺约束的下一轮布线。 |
+| R4 先摆位重排 | [独立工程与对照图](../hardware/production/r1-layout-reset-r4/README.md)已保存、重开；15 个显示供电器件摆位，0.30 mm 钻孔规则保留。旧铜导致 62 条间距错误、36 条断连；待局部重布并完成全部门禁。 |
 | Battery | User measures protected pack and wires; nominal 31 × 12 × 3 mm |
 
 No order placed. [Historical progress and experiments](../archive/pre-r1/readmes/projects/nfc-business-card/docs/progress.md) retain earlier findings and resolutions.

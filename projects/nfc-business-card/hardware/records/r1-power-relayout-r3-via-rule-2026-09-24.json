@@ -1,0 +1,17 @@
+{
+  "project": "NFC-Card-R1-Power-Relayout-R3",
+  "date": "2026-09-24",
+  "source": "JLC EDA Pro V3.2.203, Design Rules and native DRC UI",
+  "new_pcb_default_preset": "嘉立创双面板-0.30mm普通过孔",
+  "via_rule_mm": {
+    "outer_diameter_min": 0.5,
+    "outer_diameter_default": 0.55,
+    "inner_diameter_min": 0.3,
+    "inner_diameter_default": 0.3
+  },
+  "native_drc_after_rule_change": {
+    "total": 54,
+    "physical_via_size": 54
+  },
+  "note": "Existing vias were not resized. Earlier R3 exports and zero-DRC records were generated under the former 0.20 mm minimum and 0.25 mm default inner-diameter rule."
+}

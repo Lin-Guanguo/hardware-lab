@@ -1,0 +1,29 @@
+{
+  "revision": "E20",
+  "pcb_uuid": "81780e0793288f82",
+  "status": "PLACEMENT_BASELINE_UNROUTED_NOT_RELEASED",
+  "source_sha256": "9da0854ffafef07e47c1c5b9e5f3667523a13c170901a9eda33801469fd783b1",
+  "counts": {
+    "components": 58,
+    "pads": 248,
+    "lines": 0,
+    "vias": 0
+  },
+  "native_drc_after_save_close_reopen": {
+    "Connection Error": 155
+  },
+  "pin_map": {
+    "refs": 58,
+    "pins": 238,
+    "mismatches": 0
+  },
+  "independent_connectivity": {
+    "split_non_ground_nets": 47,
+    "dead_ends": 0,
+    "expected_unrouted": true,
+    "ground_checker_trusted": false
+  },
+  "cad_report": "../../enclosure/e20-v1/e20-assembly-report.json",
+  "full_routing_gate": "NOT_RUN",
+  "manufacturing_release": "BLOCKED_BY_UNROUTED_COPPER_AND_UNVERIFIED_PHYSICAL_REQUIREMENTS"
+}

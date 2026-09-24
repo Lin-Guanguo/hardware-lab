@@ -1,0 +1,54 @@
+"""Render the saved clear-shell candidate without changing its geometry."""
+import os
+import traceback
+from pathlib import Path
+import FreeCAD as App
+import FreeCADGui as Gui
+from PySide import QtCore, QtWidgets
+
+out = Path(os.environ['NFC_E20_OUT'])
+doc = App.openDocument(str(out/'e20-clear-assembly.FCStd'))
+for obj in doc.Objects:
+    if not hasattr(obj, 'Shape'):
+        continue
+    obj.ViewObject.Visibility = True
+    obj.ViewObject.ShapeColor = obj.DesignColor
+    obj.ViewObject.Transparency = obj.DesignTransparency
+    obj.ViewObject.LineColor = (.20, .23, .25)
+    obj.ViewObject.DisplayMode = 'Flat Lines'
+    if obj.Name.startswith(('Component_R', 'Component_C', 'Component_U')):
+        obj.ViewObject.ShapeColor = (.24, .26, .28)
+for obj in doc.Objects:
+    if obj.Name.endswith('ServiceVolume'):
+        obj.ViewObject.Visibility = False
+doc.recompute()
+doc.save()
+view = Gui.activeDocument().activeView()
+
+
+def finish_open():
+    try:
+        view.saveImage(str(out/'e20-clear-open-iso.png'), 1800, 1120, 'White')
+    except Exception:
+        (out/'render-error.txt').write_text(traceback.format_exc())
+    QtWidgets.QApplication.instance().quit()
+
+
+def assembled():
+    try:
+        view.saveImage(str(out/'e20-clear-assembled-iso.png'), 1800, 1120, 'White')
+        for name in ['ClearLid', 'LidSeamPSA', 'ScreenPSA', 'ClearKey1', 'ClearKey2', 'ClearKey3']:
+            doc.getObject(name).ViewObject.Visibility = False
+        QtCore.QTimer.singleShot(1500, finish_open)
+    except Exception:
+        (out/'render-error.txt').write_text(traceback.format_exc())
+        QtWidgets.QApplication.instance().quit()
+
+
+def start():
+    view.viewAxonometric()
+    view.fitAll()
+    QtCore.QTimer.singleShot(1500, assembled)
+
+
+QtCore.QTimer.singleShot(2000, start)

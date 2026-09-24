@@ -30,6 +30,10 @@ ap.add_argument('--rip', default=None)
 ap.add_argument('--width', type=float, default=0.20, help='track width in mm')
 ap.add_argument('--pen', type=int, default=30, help='congestion cost per use')
 ap.add_argument('--out', default='routes.json')
+ap.add_argument('--constraints', help='JSON with outline_mm and keepouts_mm for another layout')
+ap.add_argument('--via-diameter', type=float, default=.30)
+ap.add_argument('--via-hole', type=float, default=.20)
+ap.add_argument('--grid', type=float, default=.1)
 args = ap.parse_args()
 
 DUMP_PATH = args.dump
@@ -40,17 +44,21 @@ HW_TRACK = args.width / 2
 PEN_DEFAULT = args.pen
 
 S = 39.3701
-GRID = 0.1
+GRID = args.grid
 W, H = 84.0, 52.0
 NX, NY = int(W/GRID)+1, int(H/GRID)+1
 PLANE = NY*NX
 CL_TT, CL_PT, CL_VT, CL_VP, CL_EDGE = 0.102, 0.152, 0.152, 0.152, 0.300
-VIA_OD, VIA_DR = 0.30, 0.20
+VIA_OD, VIA_DR = args.via_diameter, args.via_hole
 HW_VIA = VIA_OD/2
 HOLE_CLEARANCE = 0.30        # hole-to-hole; applies to every net, including the one being routed
 OUTLINE = [(34,0),(34,15),(0,15),(0,52),(84,52),(84,20.62),(76.704165,20.62),(76.704165,11.38),(84,11.38),(84,0)]
 # prohibited region (keepout) x 60.0-82.0, y 24.0-50.0 mm, all layers
 KEEPOUT = [(60.0, 24.0, 82.0, 50.0)]
+if args.constraints:
+    constraints = json.load(open(args.constraints))
+    OUTLINE = constraints['outline_mm']
+    KEEPOUT = constraints['keepouts_mm']
 
 def mm(v): return v/S
 xs = np.arange(NX)*GRID; ys = np.arange(NY)*GRID
@@ -73,7 +81,7 @@ def pad_box(p):
     if (p.get('rot') or 0) % 180 == 90: w, h = h, w
     x, y = mm(p['x']), mm(p['y'])
     return {'x0':x-w/2,'y0':y-h/2,'x1':x+w/2,'y1':y+h/2,'ell':shape.startswith('ELL'),
-            'layer':p['layer'],'net':p['net'] or '','cx':x,'cy':y,'id':p['id'],'num':p['num']}
+            'layer':p['layer'],'net':p['net'] or '','cx':x,'cy':y,'id':p['id'],'num':p['num'], 'hole':p.get('hole')}
 
 def pad_layers(p):
     return [0, 1] if p['layer'] not in (1, 2) else [p['layer']-1]
@@ -129,7 +137,11 @@ def build(net_keep, hw_track, hw_via):
     # refine: SMD pads only on their layer
     tr[:] = False; vi[:] = False
     for p in pads:
-        if p['net'] == net_keep: continue
+        if p['net'] == net_keep:
+            # Keep new drill holes outside their own SMD lands too.
+            for L in pad_layers(p):
+                for yy, xx in cells([p], VIA_DR/2 + .15): vi[L, yy, xx] = True
+            continue
         for L in pad_layers(p):
             for yy, xx in cells([p], CL_PT + hw_track): tr[L, yy, xx] = True
             for yy, xx in cells([p], CL_VP + hw_via):   vi[L, yy, xx] = True
@@ -276,6 +288,8 @@ def route(src_mask, goal_mask, track_free, via_free, usage=None, PEN=30):
                 l2,qx,qy = lay[ok],qx[ok],qy[ok]
                 sl,sx,sy = lay[ok],px[ok],py[ok]
                 good=track_free[l2,qy,qx]
+                if dx and dy:
+                    good &= track_free[l2,sy,qx] & track_free[l2,qy,sx]
                 if not good.any(): continue
                 l2,qx,qy,sl,sx,sy = l2[good],qx[good],qy[good],sl[good],sx[good],sy[good]
                 extra = (usage[l2,qy,qx]*PEN) if usage is not None else 0
@@ -425,9 +439,11 @@ for net, srcpt, goals in TASKS:
     rec={'net':net,'segments':[],'vias':[],'status':[]}
     for gp in goals:
         gp_pad,_ = find_pad(*gp)
-        goalmask = np.zeros((2,NY,NX),bool)
-        for yy,xx in cells([gp_pad],0.0):
-            for L in pad_layers(gp_pad): goalmask[L,yy,xx]=True
+        goal_group = next((c for c in components(net)
+                           if any(k == 'pad' and it['id'] == gp_pad['id'] for k, it in c)), None)
+        if goal_group is None:
+            raise ValueError(f'{net}: goal pad is not on this net')
+        goalmask = group_mask(goal_group)
         p = route(srcmask, goalmask, tf, vf, usage=USAGE, PEN=PEN_DEFAULT)
         if p is None:
             rec['status'].append(['FAIL', list(gp)]); continue

@@ -1,18 +1,37 @@
 ---
 description: 使用 ESP32 与 PN532 或 nRF52840 开发板，先验证按键切换 NFC 名片的手机体验
-last_updated: 2026-09-20
-status: proposed_not_tested
+last_updated: 2026-09-23
+status: hardware_received_not_tested
 ---
 
 # NFC 最小桌面实验
 
-用户希望复用此前 ESP32 面包板经验，先确认 NFC 能否达到预期效果，再投入定制生产。这项实验补充现有 PCB/PCBA 主线，不将最终主控改为 ESP32；用户已确认购买 PN532，到货和实测尚未确认。
+用户希望复用此前 ESP32 面包板经验，先确认 NFC 能否达到预期效果，再投入定制生产。这项实验补充现有 PCB/PCBA 主线，不将最终主控改为 ESP32；PN532 已到货，尚未接线或实测。
 
 ## 已选实验模块
 
-2026-09-20 用户选择淘宝「深圳市优信电子科技有限公司」商品中的 **PN532_NFC模块_蓝板**，并确认该选项排针已焊好；随后确认已购买 PN532，到货仍未确认。商品图标称约 79 × 49 mm、自带 PCB 天线；不把桌面模块的尺寸计为最终名片设计。
+2026-09-20 用户选择淘宝「深圳市优信电子科技有限公司」商品中的 **PN532_NFC模块_蓝板**，并确认该选项排针已焊好。2026-09-23 用户确认到货并提供正反面照片：可见 PCB 天线、已焊双排针、SET0/SET1 开关，以及另一排印有接口名称的未焊孔位。其外观接近 ITEAD PN532 NFC Module，但实物版本和双排针针序尚未独立确认。商品图标称约 79 × 49 mm；不把桌面模块的尺寸计为最终名片设计。
 
-商家提供的说明标注 SPI 为 3.3 V 逻辑，I2C/UART 为 5 V TTL，因此实验优先核对 SPI 接口；它与所引用例程默认 HSU 接口不同，实现时需要调整驱动配置。到货后按实物确认供电、模式开关、排针丝印和具体 ESP32 板型，再给出接线图。当前没有已验证的 GPIO 分配或实测手机读取结果。
+商家提供的说明标注 SPI 为 3.3 V 逻辑，I2C/UART 为 5 V TTL，因此实验优先核对 SPI 接口；它与所引用例程默认 HSU 接口不同，实现时需要调整驱动配置。ITEAD 同外观模块的[原厂规格书](https://www.openimpulse.com/blog/wp-content/uploads/wpsc/downloadables/PN532-NFC-Module-Datasheet.pdf)列出 SPI 模式为 SET0=L、SET1=H，但具体供电和双排针位置仍须按实物或可靠资料核对。照片中带 SCK 等丝印的一排是未焊孔位，不能直接按其位置推断已焊双排针的针序。当前没有已验证的 GPIO 分配或实测手机读取结果。
+
+桌面测试复用 [Image Oracle 的 ESP32-S3-CAM N16R8](../../image-oracle/README.md)。其现有 `oracle_live` 固件、相机、TFT 和按键已验证；先在 USB 断电后拆下 TFT 的八根连接线并保留相机排线，不需要为拆屏而擦除固件。测试 PN532 与墨水屏转接板时逐个接入、分别构建和烧录测试程序；新程序烧录后原程序不再运行，恢复文件已归档于 Image Oracle 项目。墨水屏裸屏不能直接接 GPIO，必须先确认随附转接板型号、FPC 插入方向和接口丝印。
+
+## PN532 双排针与拟接线（未通电验证）
+
+照片左侧的已焊 **2×13 双排针**是 Raspberry Pi 26 针接口；照片左右镜像，不能直接按屏幕上的左右方向数针。[ITEAD 原厂规格书](https://www.openimpulse.com/blog/wp-content/uploads/wpsc/downloadables/PN532-NFC-Module-Datasheet.pdf)第 2 页的板卡图与实物布局相符，[原厂连接示例](https://itead.cc/nextion/raspberry-pi-drives-itead-pn532-nfc-module-with-libnfc/)用 26 芯排线连接 Raspberry Pi。板边标 `SCK / MI / MO/SDA/TX / NSS/SCL/RX / IRQ / RST# / GND / 5V` 的八孔是另一个接口，用户这块尚未焊排针。不要把八孔丝印逐行套到双排针上。
+
+以下按该双排针遵循标准 Raspberry Pi 26 针排布**推导**，尚未在用户实物上量通断。将板正面 `NFC` 字样摆正、天线置左、双排针置右；原厂图中双排针靠上、靠天线一侧的**方形焊盘为 1 号脚**，相邻靠板外缘的是 2 号脚，往下逐排递增。若实物看不清方形焊盘或方向不符，先暂停接线。Raspberry Pi 物理针序与 SPI 信号取自[官方 GPIO 文档](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#spi)。ESP32 的 40/41/42 是拆除 TFT 后释放的原已验证引脚；39 在这块 ESP32 板的排针上，但尚未验证作 PN532 MISO。
+
+| PN532 双排针物理脚 | 预期信号 | ESP32-S3-CAM 丝印 | 状态 |
+| --- | --- | --- | --- |
+| 2 | 5 V 供电 | `5V` | 待实物核对 |
+| 6 | GND | `GND` | 待实物核对 |
+| 19 | MOSI | `41` | 拟接 |
+| 21 | MISO | `39` | 拟接 |
+| 23 | SCK | `40` | 拟接 |
+| 24 | CE0 / NSS | `42` | 拟接 |
+
+只需六根母对母杜邦线；IRQ、RST# 和其余双排针暂不接。SET0 拨到板上 `L`、SET1 拨到 `H`，对应 SPI。先断 USB、拆 TFT；准备并烧录专用 PN532 测试固件后再次断 USB，逐根核对供电与信号再接模块，最后重新上电。不要把 5 V 接到任何 ESP32 GPIO，也不要在通电时改线。若不想使用双排针，也可给板边八孔焊一排单列排针后按丝印连接；未焊孔不能靠松插导线作可靠测试。
 
 ## 实验目标与术语
 
@@ -55,4 +74,6 @@ status: proposed_not_tested
 
 通过后可以确认交互方向，再在最终 nRF52840 固件和 PCBA 上重复核心测试。PN532 实验成功不能证明定制板的功耗、读距或 Type 2 兼容性；PN532 特定驱动失败也不能直接判定最终 nRF52840 路线不可行。
 
-当前缺口：实物到货、具体模块/ESP32 版本、使用手机、工具安装范围与测试结果。已记录用户确认购买；无实物接线、固件构建或设备烧录结果。
+2026-09-23 已在 `/dev/cu.usbmodem1101` 用原 `oracle_live STATUS` 确认当前板卡；Image Oracle 恢复包八个文件的 SHA-256 校验均通过。新建 [PN532 SPI 探测固件](../firmware/pn532_probe/README.md)，使用 Adafruit PN532 1.3.4 与现有 ESP32 工具链构建通过，实机写入四段摘要校验通过；芯片识别为 ESP32-S3 v0.2，MAC 为 `68:ee:8f:4c:ff:b0`。烧录后串口 `STATUS` 返回 `PN532_PROBE_READY pins_idle=1`，证明原 `oracle_live` 已停止。**PN532 尚未接线或通电**；新固件只在收到 `PROBE` 时初始化 SPI。
+
+当前缺口：PN532 双排针在用户实物上的 1 号脚方向、六线接入后的 SPI 应答、墨水屏转接板实物型号和接口、手机卡模拟体验。构建与烧录成功不是 PN532 功能验证。

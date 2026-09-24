@@ -121,7 +121,7 @@ curl --fail --silent http://127.0.0.1:49620/eda-windows
 
 ### 电子名片原理图草案（2026-09-20）
 
-源文件：[`eda/NFC-Business-Card.eprj2`](../../../eda/NFC-Business-Card.eprj2)。在客户端“所有工程”的仓库 `eda` 目录刷新后打开，或使用“文件 → 打开工程”选择该文件。三页电路与检查范围见 [原理图草案记录](../hardware/schematic-draft.md)；27 个电路元件及 32 个命名网络已保存，另有一个排除 BOM/PCB 的 FPC 座候选。
+源文件：[`eda/NFC-Business-Card.eprj2`](../../../eda/archive/nfc-business-card/NFC-Business-Card.eprj2)。在客户端“所有工程”的仓库 `eda` 目录刷新后打开，或使用“文件 → 打开工程”选择该文件。三页电路与检查范围见 [原理图草案记录](../archive/pre-r1/hardware/schematic-draft.md)；27 个电路元件及 32 个命名网络已保存，另有一个排除 BOM/PCB 的 FPC 座候选。
 
 实际验证了保存并重开工程、网表导出前后对照、SQLite `quick_check`、`.epro2` 导出包完整性，以及 PDF 三页预览。原理图 DRC 有 15 警告，未通过；这不等于 PCB/PCBA 验证。网表检查命令：
 
@@ -148,7 +148,7 @@ python3 projects/nfc-business-card/scripts/check-schematic-netlist.py projects/n
 
 ### PCB 试布线验证（2026-09-20）
 
-当前图页为 `Board1 → E6-302030 试布线 - 未完成`；[结果与限制](../hardware/pcb-routing.md)。本轮验证 `pcb_Document.autoRouting({RoutingNets: [...], existingPrimitiveMode: 'keep'})`：属性名是 `RoutingNets`，不是类文档例子中的 `nets`。返回成功数量不能代替 DRC，存在报告成功但仍有断点的情况。
+当前图页为 `Board1 → E6-302030 试布线 - 未完成`；[结果与限制](../archive/pre-r1/hardware/pcb-routing.md)。本轮验证 `pcb_Document.autoRouting({RoutingNets: [...], existingPrimitiveMode: 'keep'})`：属性名是 `RoutingNets`，不是类文档例子中的 `nets`。返回成功数量不能代替 DRC，存在报告成功但仍有断点的情况。
 
 铜线可用 `pcb_PrimitiveLine.create()`，铺铜边界用 `pcb_PrimitivePour.create()`，修改走线后逐个 `rebuildCopperRegion()` 再复查。`pcb_Drc.check(true, true, true)` 实际返回按类别分组的详细数组，可归档计数及未连接网络。工程规则未放宽；第一轮 DRC 53 条，第二轮 41 条，保存重开及 108 项网表检查通过。执行脚本、在线备份和完整快照分别见 `artifacts/archive/eda-routing/` 与 `artifacts/archive/eda-routing-refine/`。
 
@@ -158,7 +158,7 @@ python3 projects/nfc-business-card/scripts/check-schematic-netlist.py projects/n
 
 ### PCB 预布局验证（2026-09-20）
 
-同一源工程的 `Board1 → E6-302030 预布局 - 未布线` 已保存，具体器件、板框、预览及 DRC 结果见 [PCB 预布局记录](../hardware/pcb-prelayout.md)。没有启动 FreeCAD，本轮只改 EDA；三维模型不会自动同步。
+同一源工程的 `Board1 → E6-302030 预布局 - 未布线` 已保存，具体器件、板框、预览及 DRC 结果见 [PCB 预布局记录](../archive/pre-r1/hardware/pcb-prelayout.md)。没有启动 FreeCAD，本轮只改 EDA；三维模型不会自动同步。
 
 已验证的步骤：
 
@@ -205,7 +205,7 @@ brew outdated --cask freecad
 
 ## FreeCAD 脚本工作流
 
-2026-09-20 已验证命令行生成/检查与脚本驱动的 GUI 预览。入口是 [freecad-study.py](../scripts/freecad-study.py)，内部工作脚本为 [freecad-worker.py](../scripts/freecad-worker.py)，建模仍复用 [pcba-layout.FCMacro](../enclosure/pcba-layout.FCMacro)。没有新增 MCP、插件或常驻服务。
+2026-09-20 已验证命令行生成/检查与脚本驱动的 GUI 预览。入口是 [freecad-study.py](../archive/pre-r1/scripts/freecad-study.py)，内部工作脚本为 [freecad-worker.py](../scripts/freecad-worker.py)，建模仍复用 [pcba-layout.FCMacro](../archive/pre-r1/enclosure/pcba-layout.FCMacro)。没有新增 MCP、插件或常驻服务。
 
 ### 日常命令
 
@@ -231,7 +231,7 @@ python3 projects/nfc-business-card/scripts/freecad-study.py preview projects/nfc
 | `preview` | 输入副本、几何报告、`isometric.png`、`top.png`、保留显示属性的 `pcba-layout-view.FCStd` |
 | 所有命令 | `job.json`、`source-audit.json`、`result.json`、`freecad.log` |
 
-`pcba-envelopes.step` 只有简化物理器件和 PCB 包络，不含参考面/预留区；不是可制造 PCB、完整器件 STEP 或可打印外壳。预览生成的 `.FCStd` 仍可编辑。平时直接打开现有 [PCBA 模型](../enclosure/pcba-layout.FCStd)：
+`pcba-envelopes.step` 只有简化物理器件和 PCB 包络，不含参考面/预留区；不是可制造 PCB、完整器件 STEP 或可打印外壳。预览生成的 `.FCStd` 仍可编辑。平时直接打开现有 [PCBA 模型](../archive/pre-r1/enclosure/pcba-layout.FCStd)：
 
 ```sh
 open -a FreeCAD projects/nfc-business-card/enclosure/pcba-layout.FCStd
@@ -281,7 +281,7 @@ python3 projects/nfc-business-card/scripts/freecad-study.py check projects/nfc-b
 python3 projects/nfc-business-card/scripts/freecad-study.py preview projects/nfc-business-card/enclosure/pcba-e6-bottom-usb.FCStd
 ```
 
-本轮只执行一次 GUI 预览，其余生成和检查均调用 `freecadcmd`。`artifacts/archive/bottom-usb/` 保存生成、检查、预览与 EDA API 记录；27 个简化形体的几何检查通过，完整 SVG、等轴测、顶视图和 EDA 画布分别目视检查。归档模型保留 GUI 显示属性，重新 `check` 通过。结构与 PCB 的具体验证边界见[排布记录](../hardware/pcb-bottom-usb.md)。
+本轮只执行一次 GUI 预览，其余生成和检查均调用 `freecadcmd`。`artifacts/archive/bottom-usb/` 保存生成、检查、预览与 EDA API 记录；27 个简化形体的几何检查通过，完整 SVG、等轴测、顶视图和 EDA 画布分别目视检查。归档模型保留 GUI 显示属性，重新 `check` 通过。结构与 PCB 的具体验证边界见[排布记录](../archive/pre-r1/hardware/pcb-bottom-usb.md)。
 
 ### 银行卡以内的紧凑变体
 
@@ -297,11 +297,11 @@ python3 projects/nfc-business-card/scripts/freecad-study.py preview projects/nfc
 
 本次运行记录在 `artifacts/archive/compact-layout/`：两变体的 `generate` 和归档模型 `check` 均通过；旧 `e6-bottom-usb` 重新生成的报告与旧报告完全相同。只为 84 × 52 运行一次 GUI 预览，检查等轴测与顶视图后保存带颜色的模型；另用 Qt SVG 离屏渲染两方案平面图及比较图并目视检查。
 
-`review.py` 使用此前 `hardware/records/pad-geometry.json` 的封装快照进行离线平移检查，不能当作 EDA DRC；本机可运行 `python3 projects/nfc-business-card/hardware/records/compact-layout-review.py` 复核。该脚本和输入快照是本地检查产物，不随 Git 分发；建议坐标与检查结论归档在 `enclosure/compact-layout-review.json`，后续必须在新 EDA 工程重新验证。完整说明见[紧凑排布记录](../enclosure/compact-layout.md)。
+`review.py` 使用此前 `hardware/records/pad-geometry.json` 的封装快照进行离线平移检查，不能当作 EDA DRC；本机可运行 `python3 projects/nfc-business-card/hardware/records/compact-layout-review.py` 复核。该脚本和输入快照是本地检查产物，不随 Git 分发；建议坐标与检查结论归档在 `enclosure/compact-layout-review.json`，后续必须在新 EDA 工程重新验证。完整说明见[紧凑排布记录](../archive/pre-r1/enclosure/compact-layout.md)。
 
 ### 84 × 52 实际封装细化
 
-2026-09-21 新增 `e6-84x52-detail`，仍复用同一宏与命令。归档模型为 `enclosure/pcba-e6-84x52-detail.FCStd`，独立 EDA 为 `eda/NFC-Business-Card-84x52.eprj2`。相对旧比较版，使用 FH12A 候选本体上界并靠近屏幕，加入 U4/U5 包络及 8 个平面焊盘；未验证的插接、电路和制造项见[排布记录](../hardware/pcb-84x52.md)。
+2026-09-21 新增 `e6-84x52-detail`，仍复用同一宏与命令。归档模型为 `enclosure/pcba-e6-84x52-detail.FCStd`，独立 EDA 为 `eda/NFC-Business-Card-84x52.eprj2`。相对旧比较版，使用 FH12A 候选本体上界并靠近屏幕，加入 U4/U5 包络及 8 个平面焊盘；未验证的插接、电路和制造项见[排布记录](../archive/pre-r1/hardware/pcb-84x52.md)。
 
 ```sh
 python3 projects/nfc-business-card/scripts/freecad-study.py generate --variant e6-84x52-detail
@@ -399,7 +399,7 @@ nrfutil sdk-manager install v3.4.0
 
 ## E6 电路工程的 API 验证记录（2026-09-21）
 
-最新工程：[NFC-Business-Card-84x52-E6.eprj2](../../../eda/NFC-Business-Card-84x52-E6.eprj2)，[验证记录](../hardware/pcb-e6-84x52.md)。本机 3.2.203 + Run API Gateway 1.0.6 可创建/连接元件和试布线，但下列返回值不能直接作为验收依据：
+最新工程：[NFC-Business-Card-84x52-E6.eprj2](../../../eda/archive/nfc-business-card/NFC-Business-Card-84x52-E6.eprj2)，[验证记录](../archive/pre-r1/hardware/pcb-e6-84x52.md)。本机 3.2.203 + Run API Gateway 1.0.6 可创建/连接元件和试布线，但下列返回值不能直接作为验收依据：
 
 - `pcb_Document.importChanges()` 返回成功可能只是打开“确认导入信息”，仍需核对差异并应用。独立检查全部元件引脚与封装焊盘网络；不要只看返回布尔值。
 - 本次遇到原理图文字删除/部分属性更新在内存生效、保存后冷重开和 PDF 却仍为旧值；`save() === true` 不足以证明该类修改持久化。本页后续排查已通过原生删除解决旧文字恢复；此前 PDF 未重新验收，不能作为制造文档。
@@ -425,7 +425,7 @@ Skill 文档列出 `sch_ManufactureData.getSvgFile()`，但本机 3.2.203 运行
 
 ### E6 局部布线与过孔检查（2026-09-21）
 
-本轮通过 `pcb_PrimitiveLine` / `pcb_PrimitiveVia` API 局部重布 BUSY 并接通三条屏幕短网络，记录于[布线说明](../hardware/pcb-e6-84x52.md#本轮局部布线2026-09-21)。先保留 SQLite 在线备份和原始图元，再离线检查候选路径；只在当前 PCB UUID 核对一致后写入。最终为 648 段线、107 个过孔，DRC 67 条（43 条连接、24 条槽边距）。
+本轮通过 `pcb_PrimitiveLine` / `pcb_PrimitiveVia` API 局部重布 BUSY 并接通三条屏幕短网络，记录于[布线说明](../archive/pre-r1/hardware/pcb-e6-84x52.md#本轮局部布线2026-09-21)。先保留 SQLite 在线备份和原始图元，再离线检查候选路径；只在当前 PCB UUID 核对一致后写入。最终为 648 段线、107 个过孔，DRC 67 条（43 条连接、24 条槽边距）。
 
 新建 4 个普通通孔后，DRC 曾额外报告 8 条接触该过孔的连接错误。对这 4 个过孔执行 `toAsync()`、重新赋予原网络 `setState_Net(...)`、`setState_DesignRuleBlindViaName(null)` 并 `await done()` 后，额外错误消失；保存重开后仍成立。两项设置同时执行，不能断定是哪项生效，也不能认定根因是盲孔类型；读取属性时，新旧过孔均为普通通孔且盲孔规则名为空。对原有过孔做同样刷新未减少剩余错误，不得据此忽略真实断点。官方 [create 接口](https://prodocs.lceda.cn/cn/api/reference/pro-api.pcb_primitivevia.create.html)说明空盲孔规则表示非盲埋孔；本地现象仅限本机版本。
 
@@ -434,6 +434,6 @@ Skill 文档列出 `sch_ManufactureData.getSvgFile()`，但本机 3.2.203 运行
 
 ### E6 功能块副本与恢复检查（2026-09-21）
 
-当前 [E6-Blocks](../hardware/pcb-e6-84x52-blocks.md) 由 `getProjectFileByProjectUuid(..., 'epro2')` 导出，再以 `importProjectByProjectFile(..., {operation: 'New Project', ...})` 导入为独立工程。`openProject()` 切换后本机标题和 `prjPath` 仍指向旧文件；在副本修改前先关闭应用，从新 `.eprj2` 路径重新打开，核对窗口路径、工程 UUID 和 PCB 上下文。不要只根据 API 工程名判断正在编辑哪个磁盘文件。
+当前 [E6-Blocks](../archive/pre-r1/hardware/pcb-e6-84x52-blocks.md) 由 `getProjectFileByProjectUuid(..., 'epro2')` 导出，再以 `importProjectByProjectFile(..., {operation: 'New Project', ...})` 导入为独立工程。`openProject()` 切换后本机标题和 `prjPath` 仍指向旧文件；在副本修改前先关闭应用，从新 `.eprj2` 路径重新打开，核对窗口路径、工程 UUID 和 PCB 上下文。不要只根据 API 工程名判断正在编辑哪个磁盘文件。
 
 本轮曾出现 DRC 请求超时而源数据读取、修改和保存仍正常的情况。超时不证明修改未执行，也不表示 DRC 通过：先读回元件坐标，避免重复执行删除/创建；保存后重新启动该工程，再复验。重启后 DRC 恢复并完成保存重开验证；未确定超时根因。原 E6 文件 SHA-256 保持不变，副本 `quick_check=ok`，234 项原理图引脚、234 项 PCB 焊盘和 112 项关联检查通过。

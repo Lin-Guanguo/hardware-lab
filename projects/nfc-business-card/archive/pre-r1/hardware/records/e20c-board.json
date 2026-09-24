@@ -1,0 +1,54 @@
+{
+  "pcb": {
+    "itemType": "PCB",
+    "uuid": "83b00fdce1e6d63a",
+    "name": "E20B Functional Groups - Unrouted_1",
+    "parentProjectUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+    "parentBoardName": "E20C Three Keys Battery Room"
+  },
+  "uuid": "81659f89ad61f16d",
+  "name": "E20C Three Keys Battery Room",
+  "zIndex": 3,
+  "schematic": {
+    "itemType": "Schematic",
+    "uuid": "75d837076da786e4",
+    "page": [
+      {
+        "itemType": "Schematic Page",
+        "uuid": "4f610b11a3ce61fb",
+        "name": "04 usb esd and assembly interfaces",
+        "parentSchematicUuid": "75d837076da786e4",
+        "showTitleBlock": true,
+        "titleBlockData": {}
+      },
+      {
+        "itemType": "Schematic Page",
+        "uuid": "f4aa3ee90476ee46",
+        "name": "01 usb and power - draft",
+        "parentSchematicUuid": "75d837076da786e4",
+        "showTitleBlock": true,
+        "titleBlockData": {}
+      },
+      {
+        "itemType": "Schematic Page",
+        "uuid": "a91123eecd18cd49",
+        "name": "02 mcu and controls - draft",
+        "parentSchematicUuid": "75d837076da786e4",
+        "showTitleBlock": true,
+        "titleBlockData": {}
+      },
+      {
+        "itemType": "Schematic Page",
+        "uuid": "fb127465cf80038d",
+        "name": "03 gdeh0154e01 - e6 circuit draft",
+        "parentSchematicUuid": "75d837076da786e4",
+        "showTitleBlock": true,
+        "titleBlockData": {}
+      }
+    ],
+    "parentProjectUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+    "parentBoardName": "E20C Three Keys Battery Room",
+    "name": "schematic1_6"
+  },
+  "parentProjectUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee"
+}

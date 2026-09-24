@@ -39,7 +39,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[3]
 PROJECT = REPO / "projects/nfc-business-card"
-DEFAULT_SNAPSHOT = PROJECT / "hardware/e16-right-mid-snapshot.json"
+DEFAULT_SNAPSHOT = PROJECT / "hardware/records/r1-routed-snapshot.json"
 MIL = 39.37007874015748
 
 # Clearances from the project's rule set (JLCPCB Capability, multiple layers).
@@ -187,6 +187,8 @@ def check(route, snapshot):
         for layer_b, half_b, points_b, net_b in route_tracks[i:]:
             if layer_a != layer_b:
                 continue
+            if route.get("allow_same_net_contacts") and net_a and net_a == net_b:
+                continue
             for segment_a in zip(points_a, points_a[1:]):
                 for segment_b in zip(points_b, points_b[1:]):
                     if segment_a == segment_b or shares_endpoint(segment_a, segment_b):
@@ -222,6 +224,12 @@ def check(route, snapshot):
                 continue
             note("via_to_track", point_to_segment(x, y, ax, ay, bx, by) - half_other - radius,
                  (round(x, 3), round(y, 3), other_net), CL_VIA_TRACK)
+        for _layer, half_other, points, other_net in route_tracks:
+            if net and net == other_net:
+                continue
+            for (ax, ay), (bx, by) in zip(points, points[1:]):
+                note("via_to_track", point_to_segment(x, y, ax, ay, bx, by) - half_other - radius,
+                     (round(x, 3), round(y, 3), other_net), CL_VIA_TRACK)
 
     # Proposed component placements: the pads move, so every pad is checked the
     # way a route would be. Unlike route copper this is distance *to* the pad

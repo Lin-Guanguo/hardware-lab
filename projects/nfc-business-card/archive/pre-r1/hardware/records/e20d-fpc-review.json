@@ -1,0 +1,90 @@
+{
+  "status": "DRAWING_AND_PHOTO_CROSSCHECK_FINAL_BEND_UNQUALIFIED",
+  "drawing": {
+    "screen_mm": [
+      37.32,
+      31.8,
+      0.85
+    ],
+    "extended_tail_mm": 14.3,
+    "flat_total_mm": 51.620000000000005,
+    "worst_case_arithmetic_flat_range_mm": [
+      51.220000000000006,
+      52.02
+    ],
+    "insertion_nominal_mm": 2.1,
+    "connector_body_depth_mm": 4.9,
+    "connector_including_leads_mm": 5.4,
+    "assembled_flat_to_body_rear_mm": 54.42,
+    "assembled_flat_to_lead_rear_mm": 54.92,
+    "stiffener_mm": 6
+  },
+  "user_photos": {
+    "unplugged_total_reading_mm": 51.5,
+    "plugged_to_connector_rear_reading_mm": 54.8,
+    "measurement_precision": "Rough hand-held endpoint measurement; caliper accuracy and exact plugged endpoint are not established."
+  },
+  "native_candidate": {
+    "screen_xy_mm": [
+      2,
+      18.3
+    ],
+    "window_xywh_mm": [
+      4.0,
+      20.3,
+      27.8,
+      27.8
+    ],
+    "active_xywh_mm": [
+      4.4,
+      20.7,
+      27.0,
+      27.0
+    ],
+    "window_margins_mm": [
+      0.40000000000000036,
+      0.3999999999999986,
+      0.3999999999999986,
+      0.40000000000000213
+    ],
+    "j2_origin_xy_mm": [
+      54.699999819999995,
+      34.260000059999996
+    ],
+    "fpc_center_y_mm": 34.260000000000005,
+    "pin_alignment": [
+      {
+        "screen_pin": 1,
+        "connector_pin": 1,
+        "expected_y_mm": 28.510000000000005,
+        "actual_y_mm": 28.508960000000002
+      },
+      {
+        "screen_pin": 24,
+        "connector_pin": 24,
+        "expected_y_mm": 40.010000000000005,
+        "actual_y_mm": 40.01008
+      }
+    ],
+    "connector_mouth_x_mm": 51.17506477454445,
+    "seated_tip_x_mm": 53.275064774544454,
+    "stiffener_start_x_mm": 47.275064774544454,
+    "nominal_flex_length_before_stiffener_mm": 8.3,
+    "projected_span_before_stiffener_mm": 7.955064774544454,
+    "nominal_length_less_plan_projection_mm": 0.3449352254555471,
+    "rear_lead_to_screen_far_edge_mm": 54.575064774543996
+  },
+  "screen_pdf_sha256": "a3aa45389653aff47ece0f5fce8edd99f07e2889d291b54547efef4c05ba2ebd",
+  "sources": {
+    "screen_page": "https://www.good-display.com/companyfile/2038.html",
+    "screen_pdf": "https://v4.cecdn.yun300.cn/100001_1909185148/GDEH0154E01.pdf",
+    "connector_drawing": "https://www.lcsc.com/datasheet/C2856831.pdf"
+  },
+  "limits": [
+    "Total length agreement does not verify the final bent assembly.",
+    "The 2.1 mm insertion is read from the connector section drawing, not measured on the delivered connector.",
+    "Screen exit height, connector FPC seating height, minimum bend radius and tolerance stack remain unmeasured.",
+    "Nominal 0.4 mm window margins require controlled screen registration and print verification.",
+    "A prior verbal pin-reversal warning was a mixed-coordinate-view error. No electrical pin mapping was changed."
+  ]
+}

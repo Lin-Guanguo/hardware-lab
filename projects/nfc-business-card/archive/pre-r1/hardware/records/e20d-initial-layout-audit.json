@@ -1,0 +1,147 @@
+{
+  "status": "UNROUTED_GEOMETRY_AUDIT",
+  "components": 58,
+  "pads": 248,
+  "tracks": 0,
+  "vias": 0,
+  "usb_center_y_mm": 25.9999988,
+  "usb_pin_translation_max_error_mm": 0.0005600000000036687,
+  "battery_straight_span_mm": [
+    35.9,
+    16.7
+  ],
+  "31mm_pack_length_total_remainder_mm": 4.9,
+  "31mm_pack_right_gap_at_x1_5_mm": 4,
+  "c8_to_u2_in_pad_distance_mm": 1.746873804944134,
+  "rf_region_xyxy_mm": [
+    3,
+    19,
+    35,
+    45
+  ],
+  "pads_in_rf_region": [],
+  "pour_parser_calibration": {
+    "1": {
+      "inset_mm": 0.584,
+      "ok": true
+    },
+    "2": {
+      "inset_mm": 0.584,
+      "ok": true
+    }
+  },
+  "rf_pour_grid_check": {
+    "1": {
+      "sample_spacing_mm": 0.25,
+      "points": 13312,
+      "filled_points": 0
+    },
+    "2": {
+      "sample_spacing_mm": 0.25,
+      "points": 13312,
+      "filled_points": 0
+    }
+  },
+  "rf_spoke_bbox_intrusions": [],
+  "coil_outer_centerline_study_mm": [
+    30,
+    24
+  ],
+  "coil_outer_rectangle_area_study_mm2": 720,
+  "previous_coil_outer_rectangle_area_study_mm2": 383.40000000000003,
+  "display_power_moved_refs": [
+    "U4",
+    "C9",
+    "C10",
+    "L1",
+    "Q1",
+    "R13",
+    "R14",
+    "R15",
+    "D1",
+    "C11",
+    "C12",
+    "D2",
+    "R16",
+    "D3",
+    "C13"
+  ],
+  "display_power_internal_translation_mm": [
+    36,
+    0
+  ],
+  "power_to_j2_pin_distances": [
+    {
+      "from": "U4.6",
+      "net": "EPD_VDD",
+      "nearest_j2_pin_before_mm": 26.522316219493344,
+      "nearest_j2_pin_after_mm": 15.095081310148684
+    },
+    {
+      "from": "U4.5",
+      "net": "EPD_VDD",
+      "nearest_j2_pin_before_mm": 26.286500742069105,
+      "nearest_j2_pin_after_mm": 14.67679608688491
+    },
+    {
+      "from": "C10.1",
+      "net": "EPD_VDD",
+      "nearest_j2_pin_before_mm": 23.089760295377683,
+      "nearest_j2_pin_after_mm": 17.49250422759417
+    },
+    {
+      "from": "L1.1",
+      "net": "EPD_VDD",
+      "nearest_j2_pin_before_mm": 23.863695933916013,
+      "nearest_j2_pin_after_mm": 13.218769361434523
+    },
+    {
+      "from": "Q1.2",
+      "net": "EPD_RESE",
+      "nearest_j2_pin_before_mm": 18.014289202896677,
+      "nearest_j2_pin_after_mm": 18.303825995337696
+    },
+    {
+      "from": "Q1.1",
+      "net": "EPD_GDR",
+      "nearest_j2_pin_before_mm": 17.92522846257754,
+      "nearest_j2_pin_after_mm": 18.216180884521325
+    },
+    {
+      "from": "R14.1",
+      "net": "EPD_GDR",
+      "nearest_j2_pin_before_mm": 19.42259891851757,
+      "nearest_j2_pin_after_mm": 16.608191428581264
+    },
+    {
+      "from": "R15.1",
+      "net": "EPD_RESE",
+      "nearest_j2_pin_before_mm": 15.885913778086541,
+      "nearest_j2_pin_after_mm": 20.169331380340804
+    },
+    {
+      "from": "R16.2",
+      "net": "EPD_VGH",
+      "nearest_j2_pin_before_mm": 21.520032443172568,
+      "nearest_j2_pin_after_mm": 14.772343896619795
+    },
+    {
+      "from": "D3.2",
+      "net": "EPD_VGL",
+      "nearest_j2_pin_before_mm": 18.558659091647755,
+      "nearest_j2_pin_after_mm": 17.858120794271723
+    },
+    {
+      "from": "C13.1",
+      "net": "EPD_VGL",
+      "nearest_j2_pin_before_mm": 18.568441857226468,
+      "nearest_j2_pin_after_mm": 19.226545897014372
+    }
+  ],
+  "limits": [
+    "RF coil is reserved, not routed; no inductance, coupling or read-range test.",
+    "Pour exclusion samples and conservative pad checks do not certify RF performance.",
+    "Pad-centre distances are not routed current loops; some J2 branches get longer.",
+    "3D, profile and native DRC results are recorded separately."
+  ]
+}

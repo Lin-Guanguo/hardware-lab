@@ -1,0 +1,54 @@
+{
+  "pcb": {
+    "itemType": "PCB",
+    "uuid": "8033127c48771f3b",
+    "name": "E20D Front Controls Rear NFC - Unrouted",
+    "parentProjectUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+    "parentBoardName": "E20D Front Controls Rear NFC"
+  },
+  "uuid": "e1f10e4544d7bc4a",
+  "name": "E20D Front Controls Rear NFC",
+  "zIndex": 3,
+  "schematic": {
+    "itemType": "Schematic",
+    "uuid": "cb710ad853244a9b",
+    "page": [
+      {
+        "itemType": "Schematic Page",
+        "uuid": "ab0d992d5bfabd5f",
+        "name": "04 usb esd and assembly interfaces",
+        "parentSchematicUuid": "cb710ad853244a9b",
+        "showTitleBlock": true,
+        "titleBlockData": {}
+      },
+      {
+        "itemType": "Schematic Page",
+        "uuid": "4cf951f5906ea999",
+        "name": "01 usb and power - draft",
+        "parentSchematicUuid": "cb710ad853244a9b",
+        "showTitleBlock": true,
+        "titleBlockData": {}
+      },
+      {
+        "itemType": "Schematic Page",
+        "uuid": "e2c2c83cec53c4ee",
+        "name": "02 mcu and controls - draft",
+        "parentSchematicUuid": "cb710ad853244a9b",
+        "showTitleBlock": true,
+        "titleBlockData": {}
+      },
+      {
+        "itemType": "Schematic Page",
+        "uuid": "475f18002dfb57d7",
+        "name": "03 gdeh0154e01 - e6 circuit draft",
+        "parentSchematicUuid": "cb710ad853244a9b",
+        "showTitleBlock": true,
+        "titleBlockData": {}
+      }
+    ],
+    "parentProjectUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+    "parentBoardName": "E20D Front Controls Rear NFC",
+    "name": "schematic1_7"
+  },
+  "parentProjectUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee"
+}

@@ -1,0 +1,54 @@
+{
+  "pcb": {
+    "itemType": "PCB",
+    "uuid": "b56c80ec89c9e8b6",
+    "name": "E20B Functional Groups - Unrouted",
+    "parentProjectUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+    "parentBoardName": "E20B Functional Layout"
+  },
+  "uuid": "28a363928ed6d388",
+  "name": "E20B Functional Layout",
+  "zIndex": 3,
+  "schematic": {
+    "itemType": "Schematic",
+    "uuid": "df1ec7d5bafe722e",
+    "page": [
+      {
+        "itemType": "Schematic Page",
+        "uuid": "568a2d3f57aac27e",
+        "name": "04 usb esd and assembly interfaces",
+        "parentSchematicUuid": "df1ec7d5bafe722e",
+        "showTitleBlock": true,
+        "titleBlockData": {}
+      },
+      {
+        "itemType": "Schematic Page",
+        "uuid": "27bc3859b8dcca7b",
+        "name": "01 usb and power - draft",
+        "parentSchematicUuid": "df1ec7d5bafe722e",
+        "showTitleBlock": true,
+        "titleBlockData": {}
+      },
+      {
+        "itemType": "Schematic Page",
+        "uuid": "12d3ad593a91f0e7",
+        "name": "02 mcu and controls - draft",
+        "parentSchematicUuid": "df1ec7d5bafe722e",
+        "showTitleBlock": true,
+        "titleBlockData": {}
+      },
+      {
+        "itemType": "Schematic Page",
+        "uuid": "fe86c2e1a7b68a02",
+        "name": "03 gdeh0154e01 - e6 circuit draft",
+        "parentSchematicUuid": "df1ec7d5bafe722e",
+        "showTitleBlock": true,
+        "titleBlockData": {}
+      }
+    ],
+    "parentProjectUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee",
+    "parentBoardName": "E20B Functional Layout",
+    "name": "schematic1_5"
+  },
+  "parentProjectUuid": "a68e904fd0949ac3371d8377b4eae2e46a65c670b2db21236a38fa6081ad7cee"
+}

@@ -1,0 +1,6 @@
+{
+  "duplicate_gerber_contour_rejected": true,
+  "opposite_layer_pads_separate_without_via": true,
+  "opposite_layer_pads_join_with_via": true,
+  "scope": "Calibration of profile topology and connectivity layer handling; not a release test."
+}

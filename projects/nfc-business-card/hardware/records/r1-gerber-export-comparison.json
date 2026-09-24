@@ -1,0 +1,183 @@
+{
+  "api": {
+    "bytes": 90588,
+    "sha256": "0c50da00c222c4cbeee16633531793a44280e48674dbee207d9974e888e65017"
+  },
+  "manual": {
+    "bytes": 141176,
+    "sha256": "dfe551ca52369752291a27f94378d98efe5e6c3163e021e0030bf6ada08cd1be"
+  },
+  "files": {
+    "Drill_PTH_Through.DRL": {
+      "equivalent_within_export_precision": true,
+      "normalized_commands": [
+        172,
+        172
+      ],
+      "max_numeric_delta": 5.000000001587068e-06,
+      "unused_aperture_definitions_ignored": [
+        0,
+        0
+      ],
+      "differences": []
+    },
+    "Drill_PTH_Through_Via.DRL": {
+      "equivalent_within_export_precision": true,
+      "normalized_commands": [
+        166,
+        166
+      ],
+      "max_numeric_delta": 5.000000001587068e-06,
+      "unused_aperture_definitions_ignored": [
+        0,
+        0
+      ],
+      "differences": []
+    },
+    "FlyingProbeTesting.json": {
+      "identical_bytes": true
+    },
+    "Gerber_BoardOutlineLayer.GKO": {
+      "equivalent_within_export_precision": true,
+      "normalized_commands": [
+        24,
+        24
+      ],
+      "max_numeric_delta": 2.0000000020559128e-06,
+      "unused_aperture_definitions_ignored": [
+        1,
+        1
+      ],
+      "differences": []
+    },
+    "Gerber_BottomLayer.GBL": {
+      "equivalent_within_export_precision": true,
+      "normalized_commands": [
+        2225,
+        2225
+      ],
+      "max_numeric_delta": 5.000000001587068e-06,
+      "unused_aperture_definitions_ignored": [
+        1,
+        1
+      ],
+      "differences": []
+    },
+    "Gerber_BottomPasteMaskLayer.GBP": {
+      "equivalent_within_export_precision": true,
+      "normalized_commands": [
+        7,
+        7
+      ],
+      "max_numeric_delta": 1.00000000458067e-06,
+      "unused_aperture_definitions_ignored": [
+        1,
+        1
+      ],
+      "differences": []
+    },
+    "Gerber_BottomSilkscreenLayer.GBO": {
+      "equivalent_within_export_precision": true,
+      "normalized_commands": [
+        183,
+        183
+      ],
+      "max_numeric_delta": 0,
+      "unused_aperture_definitions_ignored": [
+        1,
+        1
+      ],
+      "differences": []
+    },
+    "Gerber_BottomSolderMaskLayer.GBS": {
+      "equivalent_within_export_precision": true,
+      "normalized_commands": [
+        23,
+        23
+      ],
+      "max_numeric_delta": 1.00000000458067e-06,
+      "unused_aperture_definitions_ignored": [
+        1,
+        1
+      ],
+      "differences": []
+    },
+    "Gerber_TopLayer.GTL": {
+      "equivalent_within_export_precision": true,
+      "normalized_commands": [
+        4485,
+        4485
+      ],
+      "max_numeric_delta": 5.000000001587068e-06,
+      "unused_aperture_definitions_ignored": [
+        1,
+        1
+      ],
+      "differences": []
+    },
+    "Gerber_TopPasteMaskLayer.GTP": {
+      "equivalent_within_export_precision": true,
+      "normalized_commands": [
+        1695,
+        1695
+      ],
+      "max_numeric_delta": 5.000000001587068e-06,
+      "unused_aperture_definitions_ignored": [
+        1,
+        1
+      ],
+      "differences": []
+    },
+    "Gerber_TopSilkscreenLayer.GTO": {
+      "equivalent_within_export_precision": true,
+      "normalized_commands": [
+        1373,
+        1373
+      ],
+      "max_numeric_delta": 5.000000001587068e-06,
+      "unused_aperture_definitions_ignored": [
+        1,
+        1
+      ],
+      "differences": []
+    },
+    "Gerber_TopSolderMaskLayer.GTS": {
+      "equivalent_within_export_precision": true,
+      "normalized_commands": [
+        304,
+        304
+      ],
+      "max_numeric_delta": 5.000000001587068e-06,
+      "unused_aperture_definitions_ignored": [
+        1,
+        1
+      ],
+      "differences": []
+    },
+    "PCB\u4e0b\u5355\u5fc5\u8bfb.txt": {
+      "identical_bytes": true
+    }
+  },
+  "only_api": [],
+  "only_manual": [
+    "Gerber_DocumentLayer.GDL",
+    "Gerber_DrillDrawingLayer.GDD",
+    "Gerber_TopAssemblyLayer.GTA"
+  ],
+  "extra_manual_files": {
+    "Gerber_DocumentLayer.GDL": {
+      "bytes": 101626,
+      "compressed_bytes": 21900
+    },
+    "Gerber_DrillDrawingLayer.GDD": {
+      "bytes": 135300,
+      "compressed_bytes": 27053
+    },
+    "Gerber_TopAssemblyLayer.GTA": {
+      "bytes": 38277,
+      "compressed_bytes": 9025
+    }
+  },
+  "ok": true,
+  "one_mm_coordinate_change_rejected": true
+}

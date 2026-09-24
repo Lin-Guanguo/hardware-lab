@@ -1,0 +1,29 @@
+{
+  "name": "E18 antenna-terminal tuning capacitors",
+  "note": "Candidate only: 220 pF C0G on each side; tune by measurement.",
+  "ignore_nets": [],
+  "keepouts": [
+    {"name":"NFC reserve","x0":60,"y0":24,"x1":82,"y1":50},
+    {"name":"U1 antenna","x0":59.7,"y0":0.2,"x1":70.3,"y1":2.5}
+  ],
+  "pads": [
+    {"net":"NFC1_TBD","x":67.2,"y":22.6,"half_w_mm":0.4,"half_h_mm":0.45},
+    {"net":"GND","x":65.8,"y":22.6,"half_w_mm":0.4,"half_h_mm":0.45},
+    {"net":"NFC1_TBD","x":72.3,"y":22.6,"half_w_mm":0.4,"half_h_mm":0.45},
+    {"net":"GND","x":73.7,"y":22.6,"half_w_mm":0.4,"half_h_mm":0.45}
+  ],
+  "tracks": [
+    {"net":"NFC1_TBD","layer":1,"width_mm":0.25,"points":[[67.2,22.6],[67.2,21.8]]},
+    {"net":"NFC1_TBD","layer":2,"width_mm":0.25,"points":[[67.2,21.8],[68.0,23.0]]},
+    {"net":"NFC1_TBD","layer":1,"width_mm":0.25,"points":[[72.3,22.6],[72.3,21.8]]},
+    {"net":"NFC1_TBD","layer":2,"width_mm":0.25,"points":[[72.3,21.8],[71.4,23.0]]},
+    {"net":"GND","layer":1,"width_mm":0.25,"points":[[65.8,22.6],[65.2,22.6]]},
+    {"net":"GND","layer":1,"width_mm":0.25,"points":[[73.7,22.6],[74.3,22.6]]}
+  ],
+  "vias": [
+    {"net":"NFC1_TBD","x":67.2,"y":21.8,"diameter_mm":0.3048,"hole_mm":0.2032},
+    {"net":"NFC1_TBD","x":72.3,"y":21.8,"diameter_mm":0.3048,"hole_mm":0.2032},
+    {"net":"GND","x":65.2,"y":22.6,"diameter_mm":0.3048,"hole_mm":0.2032},
+    {"net":"GND","x":74.3,"y":22.6,"diameter_mm":0.3048,"hole_mm":0.2032}
+  ]
+}

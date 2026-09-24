@@ -1,0 +1,9 @@
+{
+  "ok": true,
+  "checks": [
+    "Proposed via intersecting another proposed net is rejected",
+    "Separated via is accepted",
+    "Same-net T junction remains rejected in default coil mode",
+    "Explicit ordinary-net contact mode accepts same-net T junction"
+  ]
+}

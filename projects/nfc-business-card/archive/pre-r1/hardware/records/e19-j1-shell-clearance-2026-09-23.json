@@ -1,0 +1,88 @@
+{
+  "enclosure": "projects/nfc-business-card/enclosure/nfc-card-e16-enclosure-v7.FCStd",
+  "step": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/artifacts/coil-api-study/expanded-board.step",
+  "pcb_z0_mm": 0.7,
+  "reference_ceiling_z_mm": 4.0,
+  "note": "Reference plane only; cutouts and local relief change the real shell clearance.",
+  "j1_shell_clearance": {
+    "BottomShell": {
+      "minimum_distance_mm": 0.398321,
+      "intersection_mm3": 0.0,
+      "nearest_points_mm": [
+        [
+          [
+            80.712193,
+            21.723874,
+            0.795641
+          ],
+          [
+            80.712193,
+            21.77,
+            0.4
+          ]
+        ],
+        [
+          [
+            81.495965,
+            21.723874,
+            0.795641
+          ],
+          [
+            81.495965,
+            21.77,
+            0.4
+          ]
+        ]
+      ]
+    },
+    "TopShell": {
+      "minimum_distance_mm": 0.339979,
+      "intersection_mm3": 0.0,
+      "nearest_points_mm": [
+        [
+          [
+            76.859079,
+            15.268936,
+            3.860021
+          ],
+          [
+            76.859079,
+            15.268936,
+            4.2
+          ]
+        ],
+        [
+          [
+            77.329079,
+            14.679493,
+            3.860021
+          ],
+          [
+            77.329079,
+            14.679493,
+            4.2
+          ]
+        ],
+        [
+          [
+            76.859079,
+            16.73005,
+            3.860021
+          ],
+          [
+            76.859079,
+            16.73005,
+            4.2
+          ]
+        ]
+      ]
+    }
+  },
+  "nominal_interference_check_ok": true,
+  "date": "2026-09-23",
+  "method": "FreeCAD Shape.distToShape on the complete placed J1 assembly; library source solids excluded.",
+  "source_sha256": {
+    "enclosure": "9a49b92679a1fc641b90dfb2ff963083858b1268af0c3323b2edc42a71ec03d8",
+    "step": "c0083c8e583239868e55ce17c10b5be13e64d8ba6d4947088c3035f49cbb7ad7"
+  }
+}

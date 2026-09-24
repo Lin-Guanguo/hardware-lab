@@ -1,0 +1,144 @@
+{
+  "status": "READ_ONLY_PLACEMENT_REVIEW",
+  "eda_modified": false,
+  "screen_nominal_thickness_mm": 0.85,
+  "screen_max_thickness_mm": 1.0,
+  "pcb_to_max_screen_back_mm": 2.0200000000000005,
+  "pad_distances": [
+    {
+      "from": "C1.1",
+      "to": "U1.32",
+      "net": "USB_VBUS",
+      "pad_center_distance_mm": 14.32417680873843
+    },
+    {
+      "from": "C8.1",
+      "to": "U2.10",
+      "net": "USB_VBUS",
+      "pad_center_distance_mm": 3.9170720166981856
+    },
+    {
+      "from": "C3.1",
+      "to": "U2.2",
+      "net": "BAT_PACK_TBD",
+      "pad_center_distance_mm": 4.603088326243593
+    },
+    {
+      "from": "R3.2",
+      "to": "U1.35",
+      "net": "USB_DP_MCU",
+      "pad_center_distance_mm": 13.302842320722284
+    },
+    {
+      "from": "R4.2",
+      "to": "U1.34",
+      "net": "USB_DM_MCU",
+      "pad_center_distance_mm": 14.167652109520471
+    },
+    {
+      "from": "C22.1",
+      "to": "J2.24",
+      "net": "EPD_VCOM",
+      "pad_center_distance_mm": 6.301932979713447
+    },
+    {
+      "from": "R10.2",
+      "to": "U1.3",
+      "net": "KEY_PREV_N",
+      "pad_center_distance_mm": 46.74254404510735
+    },
+    {
+      "from": "R11.2",
+      "to": "U1.4",
+      "net": "KEY_NEXT_N",
+      "pad_center_distance_mm": 46.672066573769804
+    },
+    {
+      "from": "R12.2",
+      "to": "U1.5",
+      "net": "KEY_OK_N",
+      "pad_center_distance_mm": 46.4819224119571
+    }
+  ],
+  "under_screen": {
+    "D1": {
+      "model_height_above_pcb_mm": 1.450025407063,
+      "vertical_gap_to_max_screen_mm": 0.5699745929370001
+    },
+    "D2": {
+      "model_height_above_pcb_mm": 1.450025407063,
+      "vertical_gap_to_max_screen_mm": 0.5699745929370001
+    },
+    "D3": {
+      "model_height_above_pcb_mm": 1.450025407063,
+      "vertical_gap_to_max_screen_mm": 0.5699745929370001
+    },
+    "R10": {
+      "model_height_above_pcb_mm": 0.45002539979799994,
+      "vertical_gap_to_max_screen_mm": 1.5699746002020003
+    },
+    "R11": {
+      "model_height_above_pcb_mm": 0.45002539979799994,
+      "vertical_gap_to_max_screen_mm": 1.5699746002020003
+    },
+    "R12": {
+      "model_height_above_pcb_mm": 0.45002539979799994,
+      "vertical_gap_to_max_screen_mm": 1.5699746002020003
+    },
+    "R13": {
+      "model_height_above_pcb_mm": 0.45002539979799994,
+      "vertical_gap_to_max_screen_mm": 1.5699746002020003
+    },
+    "R14": {
+      "model_height_above_pcb_mm": 0.45002539979799994,
+      "vertical_gap_to_max_screen_mm": 1.5699746002020003
+    },
+    "R15": {
+      "model_height_above_pcb_mm": 0.45002539979799994,
+      "vertical_gap_to_max_screen_mm": 1.5699746002020003
+    },
+    "R16": {
+      "model_height_above_pcb_mm": 0.45002539979799994,
+      "vertical_gap_to_max_screen_mm": 1.5699746002020003
+    },
+    "C9": {
+      "model_height_above_pcb_mm": 1.300025376209,
+      "vertical_gap_to_max_screen_mm": 0.7199746237910003
+    },
+    "C10": {
+      "model_height_above_pcb_mm": 1.300025376209,
+      "vertical_gap_to_max_screen_mm": 0.7199746237910003
+    },
+    "C11": {
+      "model_height_above_pcb_mm": 1.300025376209,
+      "vertical_gap_to_max_screen_mm": 0.7199746237910003
+    },
+    "C12": {
+      "model_height_above_pcb_mm": 1.300025376209,
+      "vertical_gap_to_max_screen_mm": 0.7199746237910003
+    },
+    "C13": {
+      "model_height_above_pcb_mm": 1.300025376209,
+      "vertical_gap_to_max_screen_mm": 0.7199746237910003
+    },
+    "Q1": {
+      "model_height_above_pcb_mm": 1.1760254030299995,
+      "vertical_gap_to_max_screen_mm": 0.8439745969700008
+    },
+    "L1": {
+      "model_height_above_pcb_mm": 1.5100254000510003,
+      "vertical_gap_to_max_screen_mm": 0.509974599949
+    },
+    "U4": {
+      "model_height_above_pcb_mm": 1.0000254015409997,
+      "vertical_gap_to_max_screen_mm": 1.0199745984590005
+    }
+  },
+  "limits": [
+    "Distances are pad-centre straight lines, not routed lengths.",
+    "Body bounds are native STEP geometry, not supplier maxima.",
+    "The drawing shows current placement; no proposed moves were applied."
+  ],
+  "source_sha256": "ab9c8d6e17345150826a3009ec7da8c2bac116f8350c3b9d5392ded62681534f",
+  "source_unchanged_after_review": true
+}

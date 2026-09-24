@@ -1,0 +1,9 @@
+# CAD exports are reviewed through geometry checks and rendered previews.
+*.step binary
+*.stp binary
+*.stl binary
+*.FCStd binary
+*.eprj2 binary
+*.epro2 binary
+# Native manufacture-data CSV uses CRLF.
+*.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

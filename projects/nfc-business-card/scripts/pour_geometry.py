@@ -44,7 +44,7 @@ def sample_arc(p0, p1, sweep_deg, max_step_deg=6.0):
         ux, uy = (x1 - x0) / chord, (y1 - y0) / chord
         nx, ny = -uy, ux
         sign = 1.0 if sweep > 0 else -1.0
-        cx, cy = mx - sign * h * nx, my - sign * h * ny
+        cx, cy = mx + sign * h * nx, my + sign * h * ny
     a0 = math.atan2(y0 - cy, x0 - cx)
     steps = max(2, int(abs(math.degrees(sweep)) / max_step_deg) + 1)
     return [(cx + radius * math.cos(a0 + sweep * i / steps),
@@ -225,7 +225,11 @@ def calibrate(pours):
         ys1 = max(r.bbox[3] for r in pour.regions)
         bx0, by0, bx1, by1 = pour.border_bbox
         inset = max(bx0 - xs0, by0 - ys0, xs1 - bx1, ys1 - by1)
-        good = -CALIB_TOLERANCE <= inset <= CALIB_TOLERANCE
+        # An oversized border may be clipped well inside by the board outline
+        # or keepouts. Check containment, then reject a tenfold scale mismatch
+        # using the span of these board-wide ground pours.
+        span_ratio = max(xs1-xs0, ys1-ys0) / max(bx1-bx0, by1-by0)
+        good = inset <= CALIB_TOLERANCE and .5 <= span_ratio <= 1.05
         ok = ok and good
-        details[layer] = {"inset_mm": round(inset, 3), "ok": good}
+        details[layer] = {"inset_mm": round(inset, 3), "span_ratio": round(span_ratio, 3), "ok": good}
     return ok, details

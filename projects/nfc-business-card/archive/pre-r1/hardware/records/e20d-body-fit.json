@@ -1,0 +1,144 @@
+{
+  "status": "NOMINAL_NATIVE_BODY_GEOMETRY",
+  "components": 58,
+  "nearby_pairs": [
+    {
+      "a": "R1",
+      "b": "U6",
+      "clearance_mm": 0.38904741808399024,
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "C21",
+      "b": "C22",
+      "clearance_mm": 0.5000025400049779,
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "C20",
+      "b": "C21",
+      "clearance_mm": 0.500002540004985,
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "C16",
+      "b": "C17",
+      "clearance_mm": 0.5000025400049992,
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "C18",
+      "b": "C19",
+      "clearance_mm": 0.5000025400049992,
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "C19",
+      "b": "C20",
+      "clearance_mm": 0.5000050800099842,
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "C17",
+      "b": "C18",
+      "clearance_mm": 0.5000050800100055,
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "C1",
+      "b": "U1",
+      "clearance_mm": 0.549017018035002,
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "C6",
+      "b": "U1",
+      "clearance_mm": 0.549017018035002,
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "C7",
+      "b": "U1",
+      "clearance_mm": 0.549017018035002,
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "R5",
+      "b": "R6",
+      "clearance_mm": 0.5900025400059974,
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "R5",
+      "b": "R8",
+      "clearance_mm": 0.5900025400060009,
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "R7",
+      "b": "R9",
+      "clearance_mm": 0.5900050800119985,
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "R8",
+      "b": "SW3",
+      "clearance_mm": 0.5948806149790009,
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "C3",
+      "b": "R7",
+      "clearance_mm": 0.5950025447890006,
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "C6",
+      "b": "C7",
+      "clearance_mm": 0.6000025400060096,
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "R3",
+      "b": "R4",
+      "clearance_mm": 0.6900025400060006,
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "C8",
+      "b": "U2",
+      "clearance_mm": 0.6989547927420006,
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "C14",
+      "b": "C15",
+      "clearance_mm": 0.700002540004995,
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "U5",
+      "b": "U6",
+      "clearance_mm": 0.702925702046997,
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "C9",
+      "b": "U4",
+      "clearance_mm": 0.7050568006603135,
+      "intersection_mm3": 0.0
+    },
+    {
+      "a": "C10",
+      "b": "U4",
+      "clearance_mm": 0.7050573527548151,
+      "intersection_mm3": 0.0
+    }
+  ],
+  "component_intersections": [],
+  "open_lid_fpc_service_intersections_mm3": {},
+  "limits": [
+    "Native library models are not supplier maximum envelopes.",
+    "Assembly service volume is not the folded flex geometry."
+  ]
+}

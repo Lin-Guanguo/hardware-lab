@@ -1,0 +1,338 @@
+{
+  "revision": "E20C",
+  "status": "three_keys_shifted_1mm_unrouted_candidate",
+  "pcb_uuid": "83b00fdce1e6d63a",
+  "board_name": "E20C Three Keys Battery Room",
+  "layers": 2,
+  "pcb_thickness_mm": 0.8,
+  "outer_mm": [
+    81.8,
+    49.8
+  ],
+  "maximum_finished_thickness_mm": null,
+  "stack": {
+    "bottom_pc_mm": 0.25,
+    "lower_psa_mm": 0.06,
+    "pet_spacer_mm": 0.1,
+    "upper_spacer_psa_mm": 0.06,
+    "pcb_mm": 0.8,
+    "printed_frame_above_pcb_mm": 2.85,
+    "top_psa_mm": 0.06,
+    "top_pc_mm": 0.25,
+    "frame_psa_mm": 0.06
+  },
+  "tolerance_allocations_mm": {
+    "two_pc_sheets_total": 0.06,
+    "pet_spacer": 0.02,
+    "pcb": 0.1,
+    "frame": 0.2,
+    "four_psa_layers_total": 0.08
+  },
+  "tolerance_status": "Design allocations; sheet, spacer, PSA and feature-specific frame tolerances need supplier acceptance.",
+  "placement": {
+    "U1": {
+      "delta_mm": [
+        -2,
+        2.615008
+      ]
+    },
+    "C5": {
+      "delta_mm": [
+        -2,
+        0.6
+      ]
+    },
+    "C6": {
+      "delta_mm": [
+        -2,
+        0.6
+      ]
+    },
+    "C7": {
+      "delta_mm": [
+        -2,
+        0.6
+      ]
+    },
+    "J1": {
+      "delta_mm": [
+        0.3,
+        0
+      ]
+    },
+    "SW1": {
+      "delta_mm": [
+        2,
+        1.20054
+      ]
+    },
+    "SW3": {
+      "delta_mm": [
+        2,
+        -0.7003
+      ]
+    },
+    "R10": {
+      "delta_mm": [
+        0,
+        1.7
+      ]
+    },
+    "SW2": {
+      "delta_mm": [
+        2.29997576,
+        0
+      ]
+    }
+  },
+  "usb": {
+    "part": "USB4500-03-0-A",
+    "signal_land_shift_from_original_footprint_mm": -0.3,
+    "cutout_back_x_mm": 76.80424,
+    "cutout_y_mm": [
+      11.17832,
+      20.82036
+    ],
+    "inside_corner_radius_mm": 0.5,
+    "nominal_body_back_clearance_mm": 0.2,
+    "nominal_body_side_clearance_mm": 0.35,
+    "mating_face_x_mm": 83.504079,
+    "source": "GCT recommended drawing A1 and TinyTapeout footprint 0301871; rectangular slot widened for R0.5 routing. Local tolerance acceptance remains open.",
+    "plug_access": "Case front locally cut back to x=83.1 mm; connector face projects 0.404 mm beyond this opening."
+  },
+  "nfc": {
+    "outer_centerline_rect_mm": [
+      60.6,
+      27.6,
+      78.6,
+      48.9
+    ],
+    "turns": 5,
+    "track_width_mm": 0.25,
+    "clearance_mm": 0.25,
+    "tuning_capacitors": "C23/C24, values provisional until assembled RF test"
+  },
+  "battery": {
+    "target_nominal_mm": [
+      31,
+      12,
+      3
+    ],
+    "complete_pack_design_envelope_mm": [
+      32.5,
+      14,
+      3.4
+    ],
+    "status": "User selected purchased 31x12x3 mm nominal pack; complete protection, sealed edges and lead dimensions unmeasured.",
+    "pcb_cutout_mm": [
+      36.5,
+      17.3
+    ],
+    "pack_xy_mm": [
+      1.5,
+      1.5
+    ],
+    "clear_shell_straight_span_mm": [
+      35.9,
+      16.7
+    ]
+  },
+  "sources": {
+    "usb": "https://gct.co/connector/usb4500",
+    "pcb": "https://jlcpcb.com/capabilities/Capab",
+    "frame": "https://jlc3dp.com/help/article/photosensitive-8001-resin",
+    "psa": "https://multimedia.3m.com/mws/media/2366204O/3M-Adhesive-Transfer-Tape-467MP.pdf?pif=000024",
+    "cover": "https://ff.sabic.eu/uploads/resources/1604271936-656637-LEXAN-8010-SHEETED-FILM-DATASHEET-2020.pdf",
+    "inductor": "https://ds.yuden.co.jp/TYCOMPAS/eu/detail?pn=LSXNE3030KKT470MN&u=M"
+  },
+  "swd": {
+    "access": "bottom cover holes, existing pad XY preserved",
+    "pad_diameter_mm": 1.19888,
+    "cover_hole_diameter_mm": 1.8
+  },
+  "mcu": {
+    "footprint_origin_offset_from_body_center_local_mm": [
+      0,
+      1.715008
+    ],
+    "body_nominal_mm": [
+      10.5,
+      15.5,
+      2
+    ],
+    "body_max_mm": [
+      10.7,
+      15.7,
+      2.2
+    ],
+    "antenna_keepout_rect_mm": [
+      56.5,
+      0,
+      69.5,
+      4.96
+    ],
+    "top_extra_keepout_rect_mm": [
+      63.65,
+      4.96,
+      65.35,
+      6.25
+    ],
+    "source": "Raytac MDBT50Q revision L, pages 8-9"
+  },
+  "screen": {
+    "xy_mm": [
+      2,
+      18.3
+    ],
+    "nominal_mm": [
+      37.32,
+      31.8,
+      0.85
+    ],
+    "maximum_mm": [
+      37.42,
+      31.9,
+      1.0
+    ],
+    "mount": "Front border bonded under the printed aperture bezel with 0.06 mm patterned PSA; active display area is exposed.",
+    "source": "GDEH0154E01 drawing page 5; adhesive compatibility requires sample assembly",
+    "active_xywh_mm": [
+      4.4,
+      20.7,
+      27.0,
+      27.0
+    ],
+    "window_xywh_mm": [
+      4.0,
+      20.3,
+      27.8,
+      27.8
+    ]
+  },
+  "maximum_product_xy_mm": [
+    85.6,
+    53.98
+  ],
+  "keys_xy_mm": [
+    [
+      41.1,
+      4.5
+    ],
+    [
+      41.1,
+      14.4
+    ],
+    [
+      49.6,
+      8.80000526
+    ]
+  ],
+  "thickness_decision": "User selected a fully transparent printed enclosure and authorized a fresh thickness comparison; 5 mm is no longer the active hard limit.",
+  "clear_shell": {
+    "candidates_nominal_height_mm": [
+      5.8
+    ],
+    "recommended_nominal_height_mm": 5.8,
+    "outer_xy_mm": [
+      85.2,
+      53.2
+    ],
+    "outer_offset_xy_mm": [
+      -0.6,
+      -0.6
+    ],
+    "floor_mm": 0.8,
+    "lid_mm": 0.8,
+    "wall_mm": 1.2,
+    "pcb_support_stack_mm": 0.32,
+    "lid_seam_psa_mm": 0.06,
+    "screen_psa_mm": 0.06,
+    "material": "Transparent SLA resin; user-supplied vendor screenshot states 0.8 mm walls and \u00b10.2 mm accuracy; exact resin and feature-specific acceptance unconfirmed.",
+    "appearance": "Clear perimeter enclosure, no internal crossbeams or battery divider. PCB supports are below the board; the battery is located by an adhesive pattern and assembly jig.",
+    "closure": "Two printed halves bonded with a patterned perimeter PSA; assembly alignment jig required.",
+    "status": "Candidates; print tolerance, optical finish, bonded lid durability and flex routing require samples.",
+    "pcb_side_clearance_mm": 0.5,
+    "thickness_basis": "Regional stacks with 0.3 mm nominal assembly clearance require approximately 5.62 mm; round to 5.8 mm. Actual folded FPC and tolerances remain unqualified.",
+    "supplier_input": {
+      "source": "User-provided screenshot, 2026-09-23",
+      "wall_mm": 0.8,
+      "accuracy_mm": 0.2,
+      "heat_resistance_c": 49,
+      "material_identity_confirmed": false,
+      "jlc8001_equivalence_confirmed": false
+    },
+    "pcb_supports_xywh_mm": [
+      [
+        3,
+        49,
+        5,
+        1.5
+      ],
+      [
+        76,
+        49,
+        5,
+        1.5
+      ],
+      [
+        38,
+        1.5,
+        5,
+        2
+      ],
+      [
+        78,
+        3,
+        4,
+        2
+      ],
+      [
+        76,
+        8,
+        5,
+        1.2
+      ],
+      [
+        76,
+        23,
+        5,
+        1.2
+      ]
+    ],
+    "wire_service_boxes_mm": [
+      [
+        34,
+        7.5,
+        2.5,
+        2,
+        2.42,
+        1
+      ],
+      [
+        34.5,
+        8.5,
+        2,
+        15.7,
+        2.42,
+        1
+      ],
+      [
+        35.5,
+        23.2,
+        15.3,
+        2,
+        2.42,
+        1
+      ]
+    ],
+    "wire_service_note": "Assumed 1mm-high lead corridor in expanded pocket and below screen; actual lead exit/diameter/bend unmeasured."
+  },
+  "pcb_bounds_mm": [
+    1.1,
+    1.1,
+    82.9,
+    50.9
+  ],
+  "pcb_name": "E20C Three Keys +1mm - Unrouted",
+  "placement_snapshot": "hardware/records/e20c-placement-snapshot.json"
+}

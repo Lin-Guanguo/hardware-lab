@@ -1,0 +1,80 @@
+{
+  "date": "2026-09-23",
+  "eda_project_sha256": "dec8a4c16e69bab1ab781f6d73a75fe56407340fa6a88fb2a20a4257f75e80db",
+  "project_sqlite_quick_check": "ok",
+  "board": "Board1_4",
+  "pcb_uuid": "484f4f656a5a6cb6",
+  "schematic_mcu_page_uuid": "f21112c76677b226",
+  "purpose": "E18 six-turn coil plus two terminal tuning capacitor candidates",
+  "components": 58,
+  "pads": 248,
+  "copper_lines": 828,
+  "vias": 174,
+  "gnd_pours": 2,
+  "offline_route_clearance": {"violations": 0, "minimum_other_net_copper_gap_mm": 0.5922},
+  "schematic_drc": {"pages": 4, "errors": 0},
+  "native_drc": {
+    "clearance_error_board_outline_to_smd_pad": 12,
+    "same_footprint_board_outline_to_smd_pad": 12,
+    "nonbaseline_leaves": 0
+  },
+  "pin_netlist": {
+    "schematic_refs": 58,
+    "pcb_refs": 58,
+    "pins": 238,
+    "mismatches": 0
+  },
+  "copper_connectivity": {
+    "nets_checked": 47,
+    "split_nets": 0,
+    "dead_ends": 0,
+    "ground_reach_trusted": false
+  },
+  "nfc_branch_cut": {
+    "checker_ok": true,
+    "cut": "outer-loop bottom-layer line x=60.6 mm, y=27.6–48.9 mm",
+    "groups_after_cut": 2,
+    "outer_group": ["U1 pin 52", "NFC1 landing", "C23 pin 1"],
+    "inner_group": ["U1 pin 54", "NFC2 landing", "C24 pin 1"]
+  },
+  "matching_caps": {
+    "refs": ["C23", "C24"],
+    "part": "GRM1885C1H221JA01D",
+    "lcsc": "C77032",
+    "value_pf": 220,
+    "dielectric": "C0G",
+    "status": "prototype starting value; physical RF retuning required"
+  },
+  "manufacture_export": {
+    "original_consistency_checker_ok": true,
+    "strengthened_outline_checker_ok": false,
+    "outline_issues": ["GKO has an extra open J1 guide path", "GME has a conflicting full-size rectangle"],
+    "gerber_members": 17,
+    "via_drill_hits": 174,
+    "bom_rows": 26,
+    "bom_designators": 58,
+    "cpl_designators": 58,
+    "worst_placement_delta_mm": 0.0005
+  },
+  "cad": {
+    "board_clearance_ok": true,
+    "real_board_intrusions": 0,
+    "v7_enclosure_fit_ok": true,
+    "real_shell_collisions": 0,
+    "rib_collisions": 0,
+    "key_cap_collisions": 0,
+    "c23_model_bbox_mm": [65.7, 22.2, 0.8, 67.3, 23.0, 1.6],
+    "c24_model_bbox_mm": [72.2, 22.2, 0.8, 73.8, 23.0, 1.6]
+  },
+  "baseline_preserved": {
+    "E16": {"components": 56, "pads": 244, "lines": 791, "vias": 168, "native_drc_leaves": 24, "nonbaseline_leaves": 0},
+    "E17": {"components": 56, "pads": 244, "lines": 820, "vias": 170, "native_drc_leaves": 24, "nonbaseline_leaves": 0}
+  },
+  "release_ready": false,
+  "open_work": [
+    "Remove conflicting Gerber outlines and pass the strengthened manufacturing checker before any PCB order.",
+    "Measure actual antenna inductance, loaded resonance and read range before freezing C23/C24 values.",
+    "Measure delivered battery and display assemblies and physically test V7 enclosure fit and thin walls.",
+    "Re-export and review a production package only after the RF and assembly inputs are fixed."
+  ]
+}

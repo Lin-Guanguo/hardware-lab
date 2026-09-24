@@ -10,7 +10,7 @@
 | --- | --- | --- |
 | [AI Passport](projects/ai-passport/README.md) | 探索紧凑的可编程胸牌、屏幕按键交互与 NFC 链接 | 2026-09-16 确认已下单，等待到货 |
 | [Image Oracle](projects/image-oracle/README.md) | 用固定算法将摄像头图像映射为答案，默认拍摄熔岩灯 | 2026-09-19 拼接原型完成并验收；后续探索更多传感器，或焊接、定制 PCB 与 3D 打印的紧凑装置 |
-| [Programmable NFC Business Card](projects/nfc-business-card/README.md) | 按键切换身份的薄型 NFC 墨水屏名片 | 2026-09-23 PCB 与 CAD 收口到可打样：E16 板 DRC/网表/连通性/制造包通过，NFC 馈线与落点已落铜，外壳 V7 可直接打印；只剩 NFC 线圈等 PN532 实验，见[进度看板](projects/nfc-business-card/docs/progress.md) |
+| [Programmable NFC Business Card](projects/nfc-business-card/README.md) | 按键切换身份的薄型 NFC 墨水屏名片 | 2026-09-24 R1 routed in a clean native project: saved/reopened DRC 0, 5.8 mm clear case; perimeter-copper/coil optimization is pending. [Delivery and checks](projects/nfc-business-card/hardware/pcb-r1-delivery.md). RF and physical fit remain untested. |
 
 ## 目录结构
 
@@ -32,7 +32,8 @@ hardware-lab/
 │   └── hw-review/               <- 逐引脚证据式审查、嘉立创 EDA 解析（只读参考）
 ├── eda/
 │   ├── README.md
-│   └── AI-API-Smoke-Test.eprj2
+│   ├── NFC-Card-R1.eprj2
+│   └── archive/              <- Historical native projects
 ├── docs/
 │   ├── environment.md      <- 工具链、常驻服务、五分钟自检（新接手先看）
 │   ├── pcb-design-rules.md <- DRC 看不见的规则：阈值、一手来源与本板适用性
@@ -50,16 +51,17 @@ hardware-lab/
     │   └── docs/
     └── nfc-business-card/
         ├── README.md
-        ├── hardware/         <- BOM/接线/快照；records/ 存 EDA 重开、网表等证据
+        ├── hardware/         <- production/r1/ 制造文件；records/ 校验证据
         ├── enclosure/        <- 模型、STEP/STL、报告；renders/ 是渲染图册
         ├── scripts/          <- 导出器、检查器、布线/线圈规划工具
         ├── docs/             <- 含 progress.md 进度看板
+        ├── archive/          <- 历史方案与旧索引
         └── artifacts/        <- 本机产物（全部忽略，只有 README.md 索引入库）
 ```
 
 目录用途与命名约定见 [AGENTS.md](AGENTS.md)；本机环境、常驻服务与自检见 [环境与常驻服务](docs/environment.md)。所有目录均在首次有实际内容时创建；新项目可以只有 README，不使用占位文件预建目录。根目录 `docs/` 保存跨项目信息，包括器件清单和[接线图制作与归档方法](docs/wiring-diagrams.md)。
 
-根目录 [eda/](eda/README.md) 直接保存嘉立创 EDA 的原始 `.eprj2` 工程，不使用工程文件符号链接，也不再嵌套目录。客户端只需登记一次 `hardware-lab/eda/`。正式工程纳入 Git，所属项目通过文档关联；BOM 等资料仍保存在项目的 `hardware/`，临时导出产物放在 `artifacts/`。
+根目录 [eda/](eda/README.md) 直接保存嘉立创 EDA 的原始 `.eprj2` 工程，不使用工程文件符号链接；历史工程移到 `eda/archive/`。客户端只需登记一次 `hardware-lab/eda/`。正式工程纳入 Git，所属项目通过文档关联；BOM 等资料仍保存在项目的 `hardware/`，临时导出产物放在 `artifacts/`。
 
 现有接线图见 [Image Oracle 图册](projects/image-oracle/wiring-diagrams/README.md)。后续默认使用带主板外形、完整丝印和模块排针数字序号的接线图；各项目使用相同目录名。
 

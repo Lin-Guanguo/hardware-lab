@@ -28,6 +28,14 @@ DRC 只回答"几何有没有撞上"。它不回答：
 
 判断口诀：**先问"我要动的东西属于哪一层"，再问"这次改动的代价记在哪一层"。** 用户提出"为了好看"时，不要回答"美观不重要"，要回答"这件事落在哪一层、代价是什么"。
 
+## 先参考、再布局、后布线
+
+- 标准连接器优先核对原厂推荐焊盘、板厚、开槽和装配图，并查同型号的公开参考设计。先解释参考方案与本板的差异，再决定是否需要定制几何。
+- 先确认屏幕、电池、连接器、按键、主控和天线的包络与布局余量，再进行详细布线；原有走线不是固定器件位置的硬约束。
+- 走线经过器件本体投影不等于冲突。要分别检查焊盘、实际器件包络、天线禁布区和图层；不能把投影内的线段数量当作必须重布的数量。
+- 厂商最小间距是工艺判据。设计值减去最小值的差不是成品可靠性或装配公差，不据此断言容易损坏。
+- 高度差与实体间隙分别报告。局部挖空、台阶和让位存在时，应直接计算真实实体最短距离，不能用统一顶面平面代替。
+
 ## 电气敏感件门禁（改布局前必做）
 
 任何移动、旋转、重排之前，把要动的每个器件对照下表分类。命中后两类时，**必须附命名证据**才能提交。
@@ -78,39 +86,39 @@ DRC 只回答"几何有没有撞上"。它不回答：
 # 桥接按需启动（不是开机自启；状态/停止同名脚本）
 tools/easyeda-bridge/bridge-start.sh
 
-# 导出 E16 实时快照（经桥接；输出 hardware/e16-right-mid-snapshot.json）
+# 导出 R1 实时快照（经桥接；同时校验 project/PCB UUID）
 node projects/nfc-business-card/scripts/eda-exec-wait.mjs \
-     projects/nfc-business-card/scripts/eda-export-e16-snapshot.js 60000
+     projects/nfc-business-card/scripts/eda-export-r1-snapshot.js 60000
 ```
 
 | 用途 | 入口 |
 | --- | --- |
 | 环境、五分钟自检、常见故障 | [docs/environment.md](../../../docs/environment.md) |
 | DRC 看不见的规则索引与板级适用性 | [docs/pcb-design-rules.md](../../../docs/pcb-design-rules.md) |
-| EMC / 信号完整性只读检查 | `projects/nfc-business-card/scripts/check-e16-emc.py` |
-| 铜箔连通性（动铜箔后必跑） | `projects/nfc-business-card/scripts/check-e16-copper-connectivity.py` |
+| EMC / 信号完整性只读检查 | `projects/nfc-business-card/archive/pre-r1/scripts/check-e16-emc.py`（历史 E16，仅作参考） |
+| 铜箔连通性（动铜箔后必跑） | `projects/nfc-business-card/scripts/check-r1-copper.py` |
 | 落铜前逐点校验 | `projects/nfc-business-card/scripts/check-proposed-route.py` |
 | 逐引脚网表一致性 | `check-netlist-consistency.py` + `eda-export-pcb-pins.js` |
-| 制造包核对 | `check-e16-manufacture.py`、`collect-e16-manufacture.py` |
-| 进度与门槛 | `projects/*/docs/progress.md`、`hardware/pcb-e14-manufacturing-gates.json` |
+| 制造包核对 | `check-r1-delivery.py`、`check-e20-outline.py` |
+| 进度与门槛 | `projects/*/docs/progress.md`、`hardware/records/r1-validation.json` |
 
 **覆铜几何已补齐**（2026-09-23）：导出脚本原先读 region 上不存在的 `polygon` / `rule`，两个字段被静默丢弃，铜箔对象则完全没采集。现已补齐 `pours` / `poured` 并通过内容指纹与实况板核对。两点必须记住，否则会量出自信的错数：
 
 - 填充坐标的**单位与快照其余对象不同**，1 单位 = 0.254 mm；`pours`、走线、焊盘、外形都是 mil。
 - `fills[]` 是混合列表：≥3 顶点的环是覆铜多边形（首环外轮廓、后续为孔），**2 点退化线段是散热辐条**——它才是把地焊盘接到覆铜的东西。
 
-这两点由 `pour_geometry.py` 承载，并带**标定断言**（解析出的覆铜必须落在铜箔边框内 1 mm，否则拒绝出结论）。`ground_reach`（GND 焊盘是否到达覆铜）目前标为 `trusted: false`，**不参与门禁**：它与手工验证的事实冲突，属于线索而非发现。
+这两点由 `pour_geometry.py` 承载，并带**标定断言**（解析出的覆铜必须落在铜箔边框内 1 mm，否则拒绝出结论）。历史 E16 检查器的 `ground_reach`（GND 焊盘是否到达覆铜）标为 `trusted: false`，**不参与门禁**：它与手工验证的事实冲突，属于线索而非发现。
 
 ## 板载天线/线圈的表示（封装 vs 图形铜箔）
 
-画板载线圈（NFC 螺旋、平面电感、印刷天线）时，**螺旋铜箔必须落在封装里，两个焊盘在封装内被铜连起来、由工具按 net tie 处理**。不要把它当板级图形铜箔画。
+画板载线圈（NFC 螺旋、平面电感、印刷天线）时，先验证当前 EDA 对跨网络连续铜的表示方式，再选图元。嘉立创 EDA 专业版的这个项目已实测可用**原理图短接符 + 单网络板级走线**表示线圈；线圈不必强行做成封装。
 
-- 螺旋的两端属于两个不同网络（如 `NFC1_TBD` / `NFC2_TBD`），纯走线无法表示跨网络串联元件：整条标成一个网络会碰到两个网络，拆成两半则相接处仍是跨网络接触。
+- 螺旋是连接两个 NFC 引脚的连续导体。若原理图仍把两端留在不同网络，纯走线会产生跨网络 DRC；短接符明确声明直流连通，然后两端与线圈共用一个网络。短接符只解决网表表示，不验证 13.56 MHz 谐振。
 - 一手来源：Altium 知识库 [Short two different nets intentionally](https://www.altium.com/documentation/knowledge-base/altium-designer/short-two-different-nets-intentionally) 直接点名 "planar inductor and other printed RF filters and antennas"，并要求螺旋两端 "terminated by pads to be registered as a Net Tie Component"；KiCad 手册同样写明 footprints can act as net ties。
-- 嘉立创 EDA 专业版的原生机制是原理图的 [短接符](https://prodocs.lceda.cn/cn/schematic/place-short-symbol/) 与 PCB 的 工具-连接焊盘。
+- 嘉立创 EDA 专业版的原生机制是原理图的 [短接符](https://prodocs.lceda.cn/cn/schematic/place-short-symbol/)。本地 API 有 `sch_PrimitiveComponent.createShortCircuitFlag(x, y, rotation, mirror)`；本项目在 MCU 图页 `(605,565,90,false)` 放置后，两脚网表均为 `NFC1_TBD`，PCB 原生 DRC 非基线项为 0。API 图页坐标是正 y；不要照导出源文件的负 y 放置。
 - **经验证**：把无网络铜箔（`netName:""`）画在板上，本工具 DRC 会报 `Clearance Error / Line to Track`，此路不通。别在没测之前假设"无网络铜箔不会被判违规"。
 
-必须先确认工具支持 net tie，再动手；封装要写库，而**库写入在离线工作区不可用**（见项目文档），所以开工前先确认库可写。
+本项目的自制 net tie 封装实测新增 12 项 DRC，已放弃。若另一个工具确实支持封装 net tie，可依该工具规则处理；库是否可写须在当前工作区实测，不能从离线模式推断。
 
 ## 变更与实验循环
 
@@ -131,3 +139,5 @@ node projects/nfc-business-card/scripts/eda-exec-wait.mjs \
 - 发现的问题需要"重新生成"而不是局部修补——把代价和收益讲清楚再动手
 
 其余情况按本 skill 直接推进，把假设和证据写在文档里。
+
+R1 uses `check-r1-copper.py` for physical GND connectivity, including thermal spokes and layer-changing vias. Historical E16 heuristics are not current R1 gates.

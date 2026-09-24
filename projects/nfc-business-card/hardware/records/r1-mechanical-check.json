@@ -1,0 +1,76 @@
+{
+  "status": "NOMINAL_CAD_AND_PRINT_MESH_PASS",
+  "total_height_mm": 5.8,
+  "intersection_count": 0,
+  "debug_access": [
+    {
+      "pad": "TP1",
+      "center_mm": [
+        65,
+        48.5
+      ],
+      "registration_error_mm": 0.0016843990026088034,
+      "blocked_volume_mm3": 0.0
+    },
+    {
+      "pad": "TP2",
+      "center_mm": [
+        68,
+        48.5
+      ],
+      "registration_error_mm": 0.001520526224699304,
+      "blocked_volume_mm3": 0.0
+    },
+    {
+      "pad": "TP3",
+      "center_mm": [
+        71,
+        48.5
+      ],
+      "registration_error_mm": 0.001386362146051405,
+      "blocked_volume_mm3": 0.0
+    },
+    {
+      "pad": "TP4",
+      "center_mm": [
+        74,
+        48.5
+      ],
+      "registration_error_mm": 0.0012912009913283637,
+      "blocked_volume_mm3": 0.0
+    },
+    {
+      "pad": "TP5",
+      "center_mm": [
+        77,
+        48.5
+      ],
+      "registration_error_mm": 0.001244025723209771,
+      "blocked_volume_mm3": 0.0
+    }
+  ],
+  "old_screen_access_holes_closed": true,
+  "supports_fully_on_board": true,
+  "meshes": {
+    "tray": {
+      "closed_solid": true,
+      "facets": 3616,
+      "sha256": "a28e741261d148e1e8a3b5513e78f4162001c3a80c13f946b2bc5d27d458fe22"
+    },
+    "lid": {
+      "closed_solid": true,
+      "facets": 2084,
+      "sha256": "7a0132f1a38ef464cba55b779d88b16def12e00ebb0c77a759a1a723111154f1"
+    },
+    "keys": {
+      "closed_solid": true,
+      "facets": 4524,
+      "sha256": "f3d7d724e762c7afbbef71c95ef46e385af2aa03f470f92bac04dd72fa3335da"
+    }
+  },
+  "screen_back_to_pcb_mm": 2.0200000000000005,
+  "limits": [
+    "Nominal geometry only; resin and assembly tolerances unqualified.",
+    "Battery, flex, USB plug, key feel and adhesive retention require sample assembly."
+  ]
+}

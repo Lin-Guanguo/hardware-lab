@@ -1,0 +1,168 @@
+---
+description: 可切换身份的薄型 NFC 墨水屏名片，技术选项与开发入口
+last_updated: 2026-09-24
+status: r1_routed_engineering_prototype
+---
+
+# Programmable NFC Business Card
+
+## 当前确定方案
+
+**R1 handoff (2026-09-24):** [NFC-Card-R1.eprj2](../../../../../../../eda/NFC-Card-R1.eprj2) is the clean active project, with one PCB and four schematic pages. Routing is complete: **saved/reopened native DRC 0**, 238 pin nets matched, no split nets or dead ends. The complete screen area is clear on both copper faces except NFC. The [delivery ZIP](../../../../../artifacts/NFC-Card-R1-prototype.zip) includes Gerber, BOM, CPL, PDF, STEP and coordinated 5.8 mm clear-case files. [Current evidence and remaining physical tests](../../../../../hardware/pcb-r1-delivery.md) / [actual copper preview](../../../../../enclosure/renders/r1-routed-front-rear.png). RF tuning, battery envelope and physical assembly remain unverified.
+
+## Accepted E20D placement baseline
+
+**Accepted E20D layout (2026-09-24):** The user accepted the [front/rear diagram](../../../enclosure/renders/e20d-front-rear.png) as the layout baseline. Display and all three keys are on the front; NFC is reserved behind the display for rear-side phone reading. The archived unrouted baseline is **E20D Front Controls Rear NFC - Unrouted** (`8033127c48771f3b`). Three keys move right 1 mm, the selected battery is nominal **31 × 12 × 3 mm**, USB is centred on the right edge, and 15 display-power components move into the former antenna area. The clear printed case remains **85.2 × 53.2 × 5.8 mm**, with 0.8 mm panels and no internal crossbeams. [Current files, acceptance and verification](../../../hardware/pcb-e20d-front-rear.md) / [remaining work and physical inputs](../../../../../docs/progress.md).
+
+**Review status:** 58 components, 248 pads, zero tracks/vias. Saved/reopened native DRC: **154 unfinished connections, zero clearance errors**. Nominal CAD checks found no collisions; screen projection contains no components. The rear coil is a reservation, not routed copper. RF performance, complete battery dimensions, flex folding and printed fit remain unverified. Original E20 and E20B are preserved; E20C is an intermediate battery/key study.
+
+**Screen/FPC refinement:** The official 51.62 mm flat length agrees with the 51.5 mm user measurement; the approximately 54.8 mm plugged reading includes the connector body. J2 moves right 3.17 mm and up 0.26 mm while the screen/window stay fixed. Display capacitors and silkscreen were aligned in functional groups. [Fit derivation and diagram](../../../hardware/pcb-e20d-screen-fit.md). The final vertical flex bend still needs sample validation.
+
+**Battery selection:** The purchased 31 × 12 × 3 mm option has 4.9 mm total nominal length remainder in the widened pocket. Complete protected dimensions remain unmeasured. The purchased 24 × 14 × 3 mm alternative and earlier 32 × 20 × 3 mm pack remain recorded in the [battery comparison](../../../hardware/pcb-e20b-battery-space.md); the wider old pack does not fit this PCB cutout.
+
+**样品到货（2026-09-23）：**用户确认 PN532、墨水屏屏体及随附转接板、约 32 × 20 × 3 mm 电池到货；PN532 有正反面照片，其余器件仍待丝印和完整尺寸核对。301230、301423 类电池已报告购买，到货未确认。先复用 ESP32-S3-CAM 拆下 TFT，分别做 [PN532 桌面实验](../../../../../docs/nfc-bench-test.md)和墨水屏转接板显示测试；到货不等于电气或最终成品验证。清单见[共享器件清单](../../../../../../../docs/inventory.md)。
+
+**桌面固件（2026-09-23）：**ESP32-S3-CAM 已刷入 [PN532 SPI 探测固件](../../../../../firmware/pn532_probe/README.md)，串口 `STATUS` 确认新程序待命且信号脚空闲；旧 Image Oracle 固件恢复包已校验。PN532 尚未接入，SPI 应答、卡模拟与手机读取均未验证。
+
+## Historical E16–E19 records
+
+The following versions, dimensions and pass results describe their recorded revisions. They are not E20 routing or release evidence. The previous ≤5 mm sheet-cover candidate is retained as E20 v1/v2; it was superseded by the user's all-printed transparent preference.
+
+**2026-09-23 复核更正：**后续按“原厂和同型号参考设计 → 布局与装配余量 → 详细布线”推进；走线经过模块投影不能证明器件放不下。J1 沉板 USB 是标准产品，当前仍为双层 0.8 mm PCB。旧记录中的 J1 顶部 0.13 mm 是统一参考平面高度差；重新计算 V7 实体的最近距离为 **上壳 0.34 mm、下壳 0.40 mm**，见[整板复核及参考来源](../../../hardware/pcb-e19-independent-review.md)。以下历史过程中的 0.13 mm 不得继续作为真实壳体间隙使用。
+
+更新于 **2026-09-23**。E14 工程内的 **`Board1_2` / E16** 保留为无线圈基线；**`Board1_3` / E17** 是六圈板载线圈研究页；**`Board1_4` / E18** 加入双侧调谐电容；**`Board1_5` / E19** 把线圈扩成五圈放大候选，详见 [线圈面积和工艺复核](../../../hardware/nfc-coil-area-process-review.md)。沿 **84 × 52 mm（含外壳边缘）的定制 PCB/PCBA** 继续，屏幕位于左上，长条电池先按名义 **30 × 12 × 3 mm** 包体放在左下，NFC 区位于右上，USB/充电/主控集中到右侧。优先薄度和装配余量，≤5 mm 是目标，尚未实物验证；电池保护板、出线、胶带和鼓胀余量仍待确认。按键为**三颗**：SW1 (38.1, 3.30)、SW3 (38.1, 15.10) 同一列，SW2 新增在 (46.3, 8.80) 组成三角形，外壳 V7 开三个键孔；交互仍按"键一换一级栏目、键二换二级选项"，第三颗接在原本空置的 `KEY_NEXT_N` 上，功能待定。
+
+- 进度看板：[docs/progress.md](../../../../../docs/progress.md)（设计门槛、等外部输入、需要谁决策、工程化 TODO）；本机工具链与常驻服务见[环境与常驻服务](../../../../../../../docs/environment.md)。
+- 按键交互：键 1 轮换一级栏目，键 2 轮换当前栏目的二级选项，选到即自动应用，不设必需的确认键。硬件为**三键**（SW1/SW3 一列 + 三角第三点 SW2，第三颗用原本空置的带上拉输入）；外壳 V7 配三个齐平键帽，行程 0.25 mm。详细规则见[交互架构](../../../../../docs/architecture.md)。
+- 功能路线：nRF52840 内置 NFCT，按键切换名片；USB-C 用于编程和供电/充电，不要求断电仍可读取 NFC。
+- 取样选择：GDEH0154E01 六色屏、DESPI-E01 桌面转接板和 301230 类电池尺寸目标。用户已确认屏体、随附转接板和 302030 类电池到货；301230、301423 类电池已购买，尚未确认到货，实物型号与完整包络仍待核对。**302030 / 150 mAh（32 × 20 × 3）装不进当前架构**——深向超过 18.3 mm 的电芯必须 ≤2.65 mm 厚（屏幕背面 z=3.05 减底板 0.4），所以它只保留为历史取样对照，理由与边界见[电芯包络决策表](../../../hardware/pcb-e16-usb-right-mid.md#电芯包络决策表2026-09-23)；DESPI-E01 不装入最终成品。
+- 最新 CAD 研究：[pcba-e14-battery-layout.FCStd](../../../enclosure/pcba-e14-battery-layout.FCStd)、[E14 新电池尺寸布局记录](../../../hardware/pcb-e14-battery-layout.md)和[按 EDA 实际坐标重绘的平面图](../../../enclosure/pcba-e14-battery-layout.svg)。这是空间验证包络，不是可打印外壳；旧的意图示意另存为 `pcba-e14-battery-layout-intended.svg`，旧版 `pcba-e6-84x52-detail.FCStd` 保留作历史对照。
+- 当前 EDA：[NFC-Business-Card-84x52-E14-Battery-Layout.eprj2](../../../../../../../eda/archive/nfc-business-card/NFC-Business-Card-84x52-E14-Battery-Layout.eprj2) 内的 **`Board1_2` / E16 Right-Mid USB Study**（2026-09-23 用 `dmt_Board.createBoard` 与 `Schematic1` 关联）：**56 个元件、244 个焊盘、791 段铜线、168 个过孔、两层 GND 覆铜**；L 形板框（84 × 52，左下 33.5 × 15 mm 电池挖空 + 右边缘 USB 缺口）。原生 DRC 保存/关闭/重开后 **非基线违规 0 项**，只剩 24 项 `Board Outline to SMD Pad`：12 个 J1 信号焊盘离板边 0.2007 mm（板厂允许 ≥0.2 mm），板框侧与封装槽线侧各判一次。原理图与 PCB **逐引脚 234 项、0 处网名差异**。[E15 底边 USB 版](../../../hardware/pcb-e15-clean-layout.md)与 `Board1/E6` 保留作回退。
+- E17 线圈研究：同一工程的 **`Board1_3`** 用原理图短接符合并 NFC 两脚网络，并落六圈板载螺旋；**56 元件、244 焊盘、820 铜线、170 过孔**。原生 DRC 新增项 0、逐引脚网表 0 差异、铜连通 0 断网，V7 外壳 STEP 名义干涉检查通过；制造导出能生成但当前板框完整性检查失败。**双侧匹配电容尚未设计、13.56 MHz 谐振及读距未实测，不可直接下单。**
+- E18 双侧匹配研究：同一工程的 **`Board1_4`** 加 C23/C24 两只 0603 对地调谐电容焊位，**58 元件、248 焊盘、828 铜线、174 过孔**。网表、断线/旁路、原生 DRC、器件 STEP 与 V7 外壳名义空间核对通过；制造导出有同样的板框完整性问题。**220 pF 是待实测调整的首板起始值，不可直接下单**。[验证记录](../../../hardware/pcb-e18-matching-study.md)。
+- E19 放大线圈研究：独立 **`Board1_5`** 将线圈外框由 10.4 × 21.3 扩到 **20.2 × 21.3 mm**，改为五圈，保留 C23/C24；**58 元件、248 焊盘、825 铜线、174 过孔**。四页原理图、网表、PCB DRC 与连通性检查无新增问题；Gerber/BOM/CPL 数量一致，**但二次审查发现 Gerber 板框有冲突轮廓，增强后的制造包检查失败**。RF 与实物公差仍未验证。[整板复核](../../../hardware/pcb-e19-independent-review.md)。
+- USB 位置试探：[E8 USB 左移评审](../../../hardware/pcb-e8-usb-left.md)。E8 证明现有板框缺口不允许只把 J1 横向移动；换边需要连板框和外壳一起重做，因此当前不替换 E7 的 USB 位置。
+- 右侧中部方案：[E16 右侧中部 USB 布局](../../../hardware/pcb-e16-usb-right-mid.md)。E16 图页已落盘并通过多次关闭重开验证：右边缘中部 9.24 × **7.30** mm 缺口（内缘 x=76.704，2026-09-23 按 J1 封装板边线修正）、J1 插口朝右、U1 转 180° 天线朝下板边、屏窗上移 1.30 mm、**三键三角形排布**（SW1/SW3 中心距 11.80 mm，SW2 在 (46.3, 8.80)）；USB 小元件群集中到 J1 左侧。
+- **USB 接口已全部布通（2026-09-22）：**图页规则切到 `JLCPCB Capability(Multiple Layers Board)`（过孔 ≥0.3 / 孔径 ≥0.2 mm）。用 0.3/0.2 mm 小孔完成 J1 数据扇出（DM 错列到 ESD 焊盘行之间、DP 在焊盘行上、CC2 换到底层腾出顶层通道），随后依次布通 **DP/DM 完整通路**（连接器 → U5 ESD → 串阻 R3/R4 → 主控 U1）和 **USB_VBUS**（换层孔全部在连接器本体之外，底层主横线走 y=8.2，C8/C1 与主控 VBUS 脚各自用焊盘内过孔汇入）。
+- **PCB 布线完成（2026-09-22 晚）：全部网络连通，原生 DRC 连接错误 0**。USB 七网之后用新增的 [离线迷宫布线器](../../../../../scripts/pcb-maze-router.py)收口 12 条被自动布线放死的连接（五条 EPD 控制线、EPD_DC/EPD_BUSY 重排、充电器五条配置线、SYS、VDD_3V3、BAT_PACK），拆掉 18 段挡路旧线、补 246 段新线；再铺 `GND_TOP`/`GND_BOT` 整板覆铜，并用缝合过孔与短走线补齐被邻网切碎的 GND 孤岛。保存、关闭、重开后 DRC（当时数值）：**普通间距 0、连接 0**，只剩 12 项同封装 J1 沉板槽边告警（原 1 项 BAT_PACK 测试点到 R6_2 的 0.05 mm 冲突已把测试点挪开解决）。E7/E11 时代"两层做不出 USB 数据扇出"的结论已被推翻。
+- **覆铜接口要点：**`pcb_PrimitivePour.create()` 只有在多边形**显式闭合**（首点重复）时才成功，不闭合一律报"无法创建覆铜边框图元"；覆铜不会自动解决全部 GND——被邻网切碎的孤岛仍要缝合过孔或短走线，且过孔落点要同时满足间距、孔-孔和"搭到焊盘铜"三个条件。详见 [E16 记录](../../../hardware/pcb-e16-usb-right-mid.md#gnd-覆铜)。
+- **CAD 进展（V7，当前）：**[E16 外壳样件 V7](../../../enclosure/nfc-card-e16-enclosure-v7.FCStd) 跟随 L 形板框（左下角 33.5 × 15 mm 电池挖空）：电芯坐在下壳底板上、不再压在 PCB 上，整机厚度 **4.5 mm**（0.4 底盖 + 0.3 板下间隙 + 0.8 PCB + 2.5 顶腔 + 0.5 上盖）。V3 的两块打印板按 L 形生成后电池袋上下都缺板、加强筋悬空，V4 改成整卡轮廓减 USB 缺口并重新封闭电池袋（底板 201 mm³ + 上盖 251.25 mm³ 写进回归检查）；V5 起加入齐平键帽（Ø4.2 圆片骑在 Ø4.6 孔里、行程柱压在开关上，总高 1.45 mm），按 SKQGABE010 的 1.5 mm 本体 / 0.25 mm 行程校核，并把加强筋 #1 西端收到键帽东侧 0.8 mm 外；V7 把键孔与键帽从两个改为**三个**。几何检查通过（上下壳各一实体、无壳体/参考件相交、连接器零接触、对真实元件 STEP 干涉 0/0/0），上盖保留三条加强筋防止 0.5 mm 薄板塌陷；屏幕窗口按 GDEH0154E01 图纸压在有效区上、屏幕架空 1.51 mm 用垫片压紧。电芯最大外形、键帽、屏幕贴合与壁厚公差仍需实物验证。
+- 屏幕资料：J2 已替换为参考板同款 FPC-05FB-24PH20 / C2856831；234 个元件引脚网络按型号规格、DESPI 参考电路及器件规格核对。BUSY、外围电容差异、峰值电流和实际插合仍待验证；[接口对照](../../../../../docs/gdeh0154e01-evaluation.md#接口与参考电路复核2026-09-21)。
+- 机械边界：外壳当前版本是 [V7](../../../enclosure/nfc-card-e16-enclosure-v7.FCStd)（L 形板框、电池袋封闭、三个齐平键帽、三条加强筋），与导出的真实元件 STEP 做过干涉检查：壳体/加强筋/键帽 **0 干涉**，最高件 J1 顶面到上盖内表面余量 0.13 mm。屏窗按 GDEH0154E01 图纸压在有效区上，屏幕背面 1.5 mm 泡棉顶到凸台；装配顺序见[外壳说明](../../../../../enclosure/README.md)。E14 V1/V2 样件保留作历史对照。
+- 烧录与总装：优先委托工厂首烧，后续 USB-C 升级，SWD 焊盘保留；设计基本定稿后、下单前确认工厂支持与费用。到手接屏、接电池与装壳的目标和待确认项见[烧录与装配交接](../../../../../docs/usb-and-prototyping.md#工厂烧录与装配交接)。
+- 保存与同步已复核：17 条过期说明已删除或替换，保存重开未恢复；27 个 SCH/PCB 关联 ID 已对齐，原生网表告警消失。最新副本 112 项关联/封装检查通过；原版保留，本轮在副本调整 11 个小器件。
+- **PCB 与 CAD 名义几何检查（2026-09-23）**：三键方案 B 落盘（SW1 (38.1,3.30) / SW3 (38.1,15.10) / SW2 (46.3,8.80)），原理图四页 DRC 0、板级原生 DRC 连接 0（仍有 24 项 `Board Outline to SMD Pad`，即 J1 焊盘离板边 0.2007 mm，板框侧/封装槽线侧各判一次）、逐引脚网表 56 位号 / 234 引脚 / 0 差异、器件与板子 0 名义相交、外壳 V7 对真实元件模型 0 名义干涉；板级已关联 `Board1_2` ↔ `Schematic1`。制造包检查器补上板框完整性后**由通过改判为失败**，详见 [整板复核](../../../hardware/pcb-e19-independent-review.md)。
+- **USB 缺口基准已对齐，余量仍需重审（2026-09-23）**：缺口内缘按 J1 封装板边线调到 x=76.704，名义器件与板子 0 相交；但 0.2007 mm 铜到槽边距离几乎贴着公开下限，外壳对 J1 顶部余量仅 0.13 mm。E18/E19 均有双侧 NFC 匹配焊位；两种线圈需实测调谐/读距，电芯、屏幕和外壳需按实物公差重核。当前制造包存在板框图层问题，不能下单。[整板复核](../../../hardware/pcb-e19-independent-review.md)。
+
+目录入口：[硬件](../../../../../hardware/README.md) · [外壳与模型](../../../../../enclosure/README.md) · [设计资料](../../../../../docs/README.md) · [脚本](../../../../../scripts/README.md)。83 × 51、旧 84 × 52 和其他版本保留比较；“最新”以上述文件为准。
+
+USB [工艺版本复核](../../../hardware/usb4500-clearance-review.md)发现国内更新说明允许内槽/锣边到铜 ≥0.20 mm；J1 满足该名义最小值，保留原焊盘与开槽，继续整体布局。EDA 规则写入未成功、配置未变，重新检查仍为 58 条；其中 24 条旧阈值告警不再作为必须改接口尺寸的依据。下单前仍需核对生产稿和贴装。
+
+后续 [USB 整网试验](../../../hardware/board-design-review.md#usb-整网试验与撤回2026-09-21)未能完成接口且造成地铜分离，已完整撤回并验证保存重开。E7 已把主控/USB/充电区作为独立布局副本重排；旧 E6 的 638 段线、102 个过孔和 58 条 DRC 只作历史对照。
+
+## 背景与历次进展
+
+以下保留各阶段的方案和验证记录，历史段落中的“当前”“下一步”指记录当时；最新采用方案见首章。
+
+中文名：可编程 NFC 墨水屏名片。项目目录：`nfc-business-card`。
+
+目标：**优先薄，然后小。** 厚度不超过 5 mm，并尽量进一步降低；在保持平铺、功能和装配余量的前提下缩小长宽，成品含打印边缘及突出物不超过 85.60 × 53.98 mm。标准卡套适配不作为硬性要求。按键切换身份，墨水屏显示当前身份，手机或兼容读卡器读取对应 NFC 链接。
+
+现有原理图以 **nRF52840 + 可编程 USB-C + 1.54 英寸黑白墨水屏 + 三个按键 + 约 40–60 mAh 薄电池**起步。用户新增 USB 编程要求后，原 nRF52832 + 日常 SWD 方案退为备选。NFC 使用主控内置的 NFC-A Type 2 标签功能，按键修改 NDEF 内容。2026-09-20 用户进一步强调紧凑化，成品路线改为优先评估薄模块与定制 PCB/PCBA，现成开发板保留作桌面功能验证；具体器件与制造方案尚未冻结。
+
+**最新取样选择：GDEH0154E01 六色屏 + DESPI-E01 转接板 1 套，以及 302030 / 150 mAh 电池 1 只。**（这一只 32 × 20 × 3 的包体**装不进**当前 33.5 × 15 mm 的电池挖空——见[电芯包络决策表](../../../hardware/pcb-e16-usb-right-mid.md#电芯包络决策表2026-09-23)，窄电芯目标为 301230/301225 类。） 用户已在[硬件 配件购买](codex://threads/01a0be87-5f3b-7b23-8fdc-68312f9cc88e)决定取样，并提供对应购物车；尚未确认付款、到货或实测。黑白屏/窄电池组合保留为旧草案和备选，DESPI-E01 只作桌面测试。
+
+**此前 EDA 独立方案：[电池靠右、USB 下长边](../../../hardware/pcb-bottom-usb.md)。** 已新增 [EDA 工程](../../../../../../../eda/archive/nfc-business-card/NFC-Business-Card-Bottom-USB.eprj2)和 [FreeCAD 模型](../../../enclosure/pcba-e6-bottom-usb.FCStd)，旧版工程与模型未覆盖。电池横放靠右下、三键位于电池左侧，取消原来右侧窄 PCB 支臂；用户认可竖持时三键成为中段横排的使用姿态。机械几何、实际封装和保存重开检查通过，视觉已检查。新版尚未布线，DRC 为 122 条（98 未连接、24 USB 槽边距）；旧版 41 条 DRC 的试布线保留作对照。以下为此前版本的进展。
+
+NFC 决策：用户确认不推进断电可读，继续使用 nRF52840 内置 NFCT，把工作集中在薄度与外形。屏幕后置线圈和隔磁片仍留作后续备选；[既有调研](../../../docs/nfc-next-version-options.md)保留供参考。
+
+已完成独立的[六色屏/302030 排布图](../../../enclosure/pcba-e6-302030.svg)和[FreeCAD 模型](../../../enclosure/pcba-e6-302030.FCStd)：电池移到右下的 PCB 缺口，主控与按键置于下方，右上保留 NFC 区。26 个简化实体检查通过，完整平面图与等轴测已查看，旧模型未覆盖。薄片前盖下 USB 局部规划 4.91 mm；若完整电池厚 3.4 mm，电池区规划 4.95 mm，仍需实测和公差验证。PCB 的 2.5 mm 窄桥、FPC 选型与支撑也未定；[详细边界](../../../../../enclosure/README.md)。EDA 尚未迁移到六色屏。
+
+同一 EDA 工程已从 [PCB 预布局](../../../hardware/pcb-prelayout.md)进入[第二轮试布线](../../../hardware/pcb-routing.md)，图页名为 **E6-302030 试布线 - 未完成**：保留 27 个元件和 145 个焊盘，当前有 304 段铜线、45 个过孔与双面地铜。保存重开和 108 项网表检查通过；PCB DRC 从预布局 122 条、第一轮 53 条降至 **41 条（17 条未连接、24 条 USB 槽边距）**。供电、地和充电使能已无连接性错误，仍不能生产。电池参考区保持在右下，与新版 `pcba-e6-302030.FCStd` 一致；其缺口与沉板 USB 槽之间仅剩 2.2 mm 板桥，下一步优先复评电池/USB 排布。按键、USB 和电源小元件调整尚未同步回 FreeCAD。
+
+这是待评审的工程路线，已绘制原理图草案与 PCB 预布局，尚未完成布线或可生产外壳，成品方案未采购、构建或实测。用户发现成品卡套内腔偏低，希望尝试透明树脂打印；下一步优先验证 SLA 薄壁与透明后处理样片。≤5 mm 仍是目标，全打印双壳尚未证明可达，打印框/底壳配透明薄片保留为备选。
+
+2026-09-19：已用 Homebrew 安装 FreeCAD 1.1.3 arm64，生成首份可编辑包络模型，并通过保存后重开、简化几何和显示检查。首批 3 个暂作为电路板数量候选，尚未下单；先补齐具体主控板、屏幕驱动板和电池完整尺寸，再决定现成板或定制 PCBA。见 [设计启动记录](../../../docs/design-start.md)，软件实际安装与验证状态见 [软件说明](../../../../../docs/software.md)。
+
+2026-09-20：已调研嘉立创国内制造范围、贴片尺寸/板厚条件及 AI 操作案例，嘉立创作为首选询价对象。官方 EDA Skill 1.1.36 通过 `upstreams/` 子模块和仓库内符号链接接入；用户安装的专业版客户端 3.2.203 已连接官方 Run API Gateway 1.0.6。独立的两电阻分压测试完成 API 绘制、保存后从磁盘重开、工程包导出和网表连接核对；随后已开始电子名片本身的电路草案。未取得实际报价，PCB 布局和制造文件导出尚待验证。见 [PCBA 调研](../../../../../docs/pcba-ai-workflow.md)和[软件安装记录](../../../../../docs/software.md)。
+
+同日继续完成 [系统框图与接口边界](../../../../../hardware/system-design.md)、[候选 BOM](../../../../../hardware/candidate-bom.md) 和 [PCBA 排布图](../../../enclosure/pcba-layout.svg)。新 FreeCAD 模型加入沉板 USB-C、FPC 座、电源与屏幕升压预留区；简化实体检查通过，但全打印 USB 区名义叠层已达 4.96 mm，当前公差规划为 5.46 mm。薄片前盖可降低该局部规划值至 4.91 mm，尚不能保证整机 ≤5 mm。主控模块网页缺货、屏幕新版规格未取得、电池完整包体未知，均已记录为待解决项。
+
+FreeCAD 已改为[脚本工作流](../../../../../docs/software.md#freecad-脚本工作流)：`generate` / `check` 无窗口，`preview` 通过 `FreeCADGui` 生成两张视图后退出临时窗口。新结果写入独立目录，保留已有模型；几何、视觉和拒绝覆盖/异常布局检查已分别验证。
+
+电子名片 [EDA 源工程](../../../../../../../eda/archive/nfc-business-card/NFC-Business-Card.eprj2)已保存三页[原理图草案](../../../hardware/schematic-draft.md)：USB/电源、主控/按键、待确认接口。27 个电路元件的 108 项关键引脚检查通过，保存重开后的网表一致。原理图 DRC 为 0 致命错误、0 错误、15 警告，尚未通过；屏幕、电池/NTC、NFC 天线、USB 保护与 SWD 焊盘仍待完善。
+
+早期采购核对：GDEY0154D67 黑白裸屏已找到厂家官网指向的淘宝入口，现保留为备选；GM201030 带保护板旧规格最大厚度为 4 mm，取消主选。LP201230 60 mAh 仍是未确认小量供应的备选。见[器件选项与询样问题](../../../../../hardware/component-options.md)。
+
+电池采购补充：2 mm 窄电池仍未找到已确认的国内零售现货；新增 YDL 301225 80 mAh、标称含保护板 27 × 12 × 3 mm 的询样线索，但起订量信息不一致，国内配送未确认。下一步按实际可供样品评估约 3 mm 电池与薄片前盖，原 2.6 mm 电池空间目标暂不视为采购硬限制；CAD 与 ≤5 mm 整机目标未改动。
+
+用户提供大佳满益 302030 / 150 mAh 的零售截图，标称 32 × 20 × 3 mm、满充 4.2 V。允许充放电电流和完整包体最大尺寸仍待确认，不能用过流保护阈值代替工作电流规格。旧排布原位替换会与屏幕重叠；新模型已重排。薄片前盖下电池局部名义预算为 4.4 mm，交付公差和整机装配尚未验证，详见[器件候选记录](../../../../../hardware/component-options.md)。
+
+用户新增关注 GDEH0154E01 六色屏。已下载并核对原厂规格、ESP32 示例、DESPI-E01 电路及 E6 须知：规格中的功耗仍为 TBD，示例只确认整屏更新流程，120 秒是刷新超时，150 秒是通用翻页间隔建议，均不是实测刷新耗时。彩色候选尚未替换黑白原理图，见[六色屏评估与厂家待答问题](../../../../../docs/gdeh0154e01-evaluation.md)。
+
+## 已确认需求
+
+| 项目 | 约束 |
+| --- | --- |
+| 外形 | 先薄、再小；所有突出物计入 ≤5 mm，并继续争取减薄；含打印边缘的长宽 ≤85.60 × 53.98 mm，当前选 84 × 52，优先排布余量；不以标准卡套适配为硬要求 |
+| 外壳 | 希望半透明，可 3D 打印；屏幕、电池尽量平铺 |
+| 交互 | 两键完成操作：一级栏目轮换 / 二级选项轮换，二级选到即生效；硬件保留第三颗开关作备用输入，功能待定 |
+| NFC | 自己按键切换对外呈现的名片/身份，让手机或读卡器读取 |
+| 电池耗尽 | 允许 NFC 暂停，充电后再用；不要求无电仍能读 |
+| 内容更新 | V1 编译进固件，重新烧录修改；不做手机配置端 |
+| USB | 必须有可编程 USB 口；按 USB-C 日常刷固件并供电/充电规划，SWD 仅首烧/救援 |
+| 软件安装 | FreeCAD 已用 Homebrew 安装；EDA 客户端由用户从官网安装；外部 Skill 使用仓库内 `upstreams/` 子模块与符号链接 |
+
+“身份”在 V1 指名称和链接等应用数据；不等同于模拟任意门禁、支付凭据或改变任意读卡系统认定的身份。
+
+## 可选路线
+
+| 选项 | 组成 | 优点 | 主要代价 | 建议 |
+| --- | --- | --- | --- | --- |
+| A：薄模块备选 | nRF52832 / MDBT42V-P512KV2，512 KB Flash / 64 KB RAM | 模块标称高 1.50 mm，NFC 满足需求 | 没有原生 USB；若加 USB 转串口需额外硬件与 bootloader | 不再作为主方案 |
+| B：原生 USB | nRF52840；MDBT50Q-P1MV2 为已核对候选，1 MB Flash / 256 KB RAM | 同时具备 USB 与 NFC | 该模块标称高 2.00 mm，需重做 USB/外壳预算并实现下载流程 | **当前主路线，模块料号未冻结** |
+| C：掉电可读 | 低功耗 MCU + NTAG I²C Plus | 无电可读最后一次写入的内容 | 多一颗芯片与总线协调，当前需求用不到 | 暂不采用 |
+| D：极限定制 | 裸 nRF52 + 全定制电源/天线 | 可降低模块占用 | 首板难度与调试工作更多 | A/B 无法达到机械目标时再评估 |
+
+模块尺寸、官方来源与限定条件见 [器件选项](../../../../../hardware/component-options.md)。NFC 行为及固件状态见 [架构](../../../../../docs/architecture.md)。
+
+## 开发资料
+
+- [NFC 最小桌面实验](../../../../../docs/nfc-bench-test.md)：PN532 蓝板已到货并有正反面照片，计划配 ESP32 验证手机读取与按键切换；双排针针序、接线和功能未实测。
+- [系统设计草案](../../../../../hardware/system-design.md)：功能框图、已核对模块接口、电源启动条件和原理图输入。
+- [EDA 原理图草案与检查](../../../hardware/schematic-draft.md)：三页源工程、GPIO 分配、阻容选型、网表验证及未完成项。
+- [EDA PCB 试布线](../../../hardware/pcb-routing.md)：已布铜线、铺铜、剩余 41 条 DRC，电池/USB 窄通道问题及 FreeCAD 版本对照。
+- [84 × 52 实际封装排布](../../../hardware/pcb-84x52.md)：新 EDA/CAD、上接触 FPC 候选、平面焊盘及 134 条 DRC 的具体边界。
+- [银行卡以内的紧凑比较](../../../enclosure/compact-layout.md)：84 × 52 与 83 × 51 的几何比较；当前选择前者保留余量。
+- [电池靠右、USB 下长边方案](../../../hardware/pcb-bottom-usb.md)：独立新 EDA 与 FreeCAD 文件、竖持姿态、几何验证及未布线状态。
+- [EDA PCB 预布局](../../../hardware/pcb-prelayout.md)：首次实际封装、板框与屏幕/FPC 参考区快照。
+- [PCBA 候选 BOM](../../../../../hardware/candidate-bom.md)：关键器件、必要外围、供货快照及待确认规格；不是可下单 BOM。
+- [六色屏/302030 排布图](../../../enclosure/pcba-e6-302030.svg) / [FreeCAD 模型](../../../enclosure/pcba-e6-302030.FCStd)：当前样品空间研究；旧版[黑白屏/窄电池模型](../../../enclosure/pcba-layout.FCStd)保留作对照。
+- [PCBA 与 AI 设计流程调研](../../../../../docs/pcba-ai-workflow.md)：紧凑成品路线、嘉立创服务边界、制造条件、AI 案例与工具验证计划。
+- [首版设计启动](../../../docs/design-start.md)：首批数量候选、FreeCAD 包络模型、缺失尺寸和制造前验证顺序。
+- [USB 编程与现成板/定制板路线](../../../../../docs/usb-and-prototyping.md)：USB-C 为必需功能；解释哪些可复用、哪些需组合。
+- [器件选项与采购前待确认项](../../../../../hardware/component-options.md)：主控、屏幕、电池、按键、电源与现成设备对照；新增用户提供的 3.2 mm nice!nano v2.0SMT 小板，NFC 引出与整板高度待核实。
+- [GDEH0154E01 六色屏评估](../../../../../docs/gdeh0154e01-evaluation.md)：原厂资料、示例更新流程、功耗缺口和配套转接板差异。
+- [厚度预算与外壳路线](../../../../../enclosure/README.md)：全打印与混合前盖的公差计算、平面布局约束。
+- [透明外壳质感与制造流程](../../../../../enclosure/finish-and-manufacturing.md)：比较注塑、透明树脂后处理和成品薄面板路线，附现售 PC 卡套线索；具体产品工艺和候选壳装配尺寸未确认。
+- [结构示意图](../../../enclosure/layout-options.svg)：概念布局和剖面，不是加工图。
+- [固件与 NFC 架构](../../../../../docs/architecture.md)：身份切换、断电恢复、功耗模型和兼容性。
+- [分阶段开发与验证](../../../docs/development-plan.md)：较早的成品小板验证计划；成品路线的最新建议与制造验证顺序见 PCBA 调研。
+- [软件选项与本机检查](../../../../../docs/software.md)：FreeCAD 安装与管理记录，以及后续电路/固件工具的安装范围。
+- [统一 EDA 工程目录](../../../../../../../eda/README.md)：原始 `.eprj2` 直接保存在仓库根目录 `eda/`，临时测试工程已迁入；客户端路径由用户切换。
+- [来源索引](../../../../../docs/sources.md) 与 [下载清单](../../../../../docs/download_manifest.json)：调研时间、官方文档、校验值。
+
+原厂 PDF（包括新增 FH12A 图纸）、XIAO 官方机械模型和屏幕官方 ESP32 示例压缩包保存在被 Git 忽略的 `downloads/`，具体文件与校验值见下载清单。关键 PDF 机械图已渲染目视核对；机械模型在官方资源区归属 Sense，不能直接代替普通版或 Plus 的尺寸。Git 保留来源与 SHA-256 清单，不把缓存资料当成自己编写的开发文档。
+
+资料检查：下载文件的字节数/SHA-256 已核对，屏幕示例压缩包通过 ZIP CRC 检查。本地相对链接、JSON/SVG 格式及厚度算式已检查，PCBA 排布图已渲染目视检查。FreeCAD 模型的实际生成与验证记录见软件说明；原理图连接与 DRC 结果见草案记录，PCB DRC 未通过的具体项目见试布线记录。尚无固件构建或实物验证结果。
+
+用户另提出了 [成品卡套面板 + 打印增高中框](../../../enclosure/card-holder-option.md)。现保留为历史结构思路；该尺寸不满足最新成品不得大于银行卡的要求，不再作为当前成品候选。截图标注的“容量 97 × 66 × 3 mm”尚未确认为实测内腔，材质/外尺寸/面板厚度也待核对。较大的卡套属于额外尺寸选项，不自动替换原来的银行卡大小目标。
+
+## 当前结论与下一步
+
+1. **沿 84 × 52 mm 完成电路与装配细化。** E18 六圈小线圈和 E19 五圈放大线圈均有双侧调谐电容焊位并通过几何与 CAD 检查；接下来比较装屏装电池后的 13.56 MHz 谐振与读距，再复核 J2 触点、六色屏外围及电池/壳体装配。当前不能放行成品订单。
+2. **验证已选样品并收敛器件。** 用 GDEH0154E01 + DESPI-E01 测刷新体验和供电需求，核对 BUSY、FPC 和驱动版本；量 302030 / 150 mAh 完整包体并取得允许充放电电流、出线及尺寸增长要求，验证新排布。确认 MDBT50Q-P1MV2 的可交付渠道/来料贴装或评审替代；黑白屏和窄电池保留为备选。
+3. **继续收敛 5 mm 结构。** 当前全打印 USB 区没有足够公差余量，薄片前盖作为对照；先做壁厚/装配样片，再验证 FPC 折弯、按键最高点、线材与固定结构。不直接把空间模型当可打印外壳。
+4. 完成原理图、RF 与装配验证后，收敛 PCB 布线、制造导出和嘉立创 DFM/报价；首批 3 块板仍是候选数量。现成开发板保留作 USB/NFC/屏幕的桌面功能验证。
+
+关联背景：[之前的硬件讨论](codex://threads/01a09e15-c035-7db1-8ac4-32905e180be2)。已下单的 [AI Passport](../../../../../../ai-passport/README.md) 仍是独立项目，不把其固定 NFC 标签当成本项目已实现的功能。

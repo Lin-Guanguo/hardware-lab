@@ -1,0 +1,66 @@
+{
+  "checked_at": "2026-09-24T00:01:21.072195+08:00",
+  "status": "UNROUTED_PLACEMENT_AND_NOMINAL_FIT_CHECKED_NOT_FOR_ORDER",
+  "pcb_uuid": "8033127c48771f3b",
+  "counts": {
+    "components": 58,
+    "pads": 248,
+    "tracks": 0,
+    "vias": 0
+  },
+  "saved_reopened_drc": {
+    "Connection Error": 154
+  },
+  "netlist": {
+    "component_pins_compared": 238,
+    "mismatches": 0
+  },
+  "independent_connectivity": {
+    "expected_unrouted_failure": true,
+    "split_nets": 47
+  },
+  "profile_status": "PROFILE_ONLY_PASS_UNROUTED_NOT_FOR_ORDER",
+  "cad_tested_intersections": [],
+  "component_body_intersections": [],
+  "screen_registration": {
+    "active_to_window_edge_margins_mm": [
+      0.40000000000000036,
+      0.3999999999999986,
+      0.3999999999999986,
+      0.40000000000000213
+    ],
+    "method": "Align screen active area to the bezel using an assembly fixture, then bond the border. The FPC must not locate or preload the screen.",
+    "fpc_tail_center_y_mm": 34.260000000000005,
+    "j2_center_y_mm": 34.260119380239,
+    "connector_rear_lead_to_screen_far_edge_mm": 54.575064774543996
+  },
+  "visual_review": [
+    "e20d-screen-fpc-registration.png",
+    "e20d-front-rear.png",
+    "e20-clear-assembled-iso.png"
+  ],
+  "sha256": {
+    "hardware/e20d-design.json": "b8f757c1f1214b4705886bd03bb310f938fece3abf526b90b96feff3426ef9f5",
+    "hardware/e20d-placement.json": "387d6521fffdf57fafd7d7e7591d5a91e009588c7c72dd8b4424ad410a6f1ef7",
+    "hardware/e20d-refinement.json": "45dd6244742c2c44cb079aa1396a313e436838dcf6d18bfbe8d0d7b64ed23c93",
+    "hardware/records/e20d-placement-snapshot.json": "1dcf2b8d76eeb10f95d1cc8d1efef405c1651c0f6f73c119272995a5f24ebaee",
+    "hardware/records/e20d-layout-pins.json": "39086cabdb6bcbaf110680ebd12c84055af71542d2ba84a85d5dda945a1a60cf",
+    "hardware/records/e20d-placement-drc.json": "c3fa2edc39e22652df24d54a74434d902da338b84f81b157e64af84bc4fbbaad",
+    "hardware/records/e20d-schematic.enet": "4c7d7196fee316ea16ba23bb49cca77c9b156ef0834e1db6377a69ff7739d3be",
+    "hardware/records/e20d-designators.json": "284ed740e68ec07f9819bfa55d1c021731a4b7e212828095319b0d1518af10d9",
+    "hardware/records/e20d-body-fit.json": "3a38caa238767b3727e19955a407e166ca9c0c18e6ede51c73cd41b4b2b31658",
+    "hardware/records/e20d-fpc-review.json": "4c36a89a9017db1848fc6504405c8e1e73ce9755f9bb0bc270ffe27448c531b1",
+    "artifacts/e20d-front-rear/e20d-refined-native.step": "bdcdd1e145a93d433a5c6b921a405ee54e4145302a34248ccb58eeef885c3aa8",
+    "artifacts/e20d-front-rear/e20d-profile-review.zip": "8cee52298221c66358effacee36010dd60765636726e4c17dc3d58ac36e92478",
+    "enclosure/e20d-front-rear-refined-5.8/e20-clear-assembly.FCStd": "6f20c4184f1cee5711ca43ba40ab047a3ae8aef0ddb6ccdcaa4daa67f84c587a",
+    "enclosure/e20d-front-rear-refined-5.8/e20-clear-assembly.step": "f7b6c246df9818be5b4bec6ac93511dfda9adc7b3b0d0a298c57eb785029952f",
+    "enclosure/e20d-front-rear-refined-5.8/e20-clear-report.json": "5e7d1fda1067f7e9b6aa59c5b96a8590ef30add2cd72a1b4c7d046d2c5eaba60"
+  },
+  "release_gates_open": [
+    "Signal and NFC routing",
+    "RF tuning with actual screen and enclosure",
+    "Battery complete-pack dimensions and leads",
+    "Final FPC bend and printed assembly tolerance",
+    "Remaining electrical values and manufacturing qualification"
+  ]
+}

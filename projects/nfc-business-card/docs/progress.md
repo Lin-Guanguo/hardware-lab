@@ -1,125 +1,18 @@
----
-description: NFC 名片进度看板：当前状态、NFC 线圈交接、工具边界、外部输入与待决策
-last_updated: 2026-09-23
----
+# R1 progress
 
-# 进度看板
+## 当前确定方案
 
-**一句话状态（2026-09-23）**：PCB 与 CAD 已收口到"可以打样验证"——E16 板（三键、L 形板框、右边缘 USB、NFC 馈线与底层落点）**56 元件 / 244 焊盘 / 791 线 / 168 过孔**，原生 DRC **24 项全为 J1 槽边基线、非基线 0 项**，逐引脚网表、连通性、制造包（168 钻孔命中 168 过孔）、CAD 干涉（0 外壳/0 肋位/0 侵入）全部通过。**板上只剩 NFC 线圈本身没落铜，卡在"线圈两端属于两个网络"的表示问题上，而不是几何或间距问题。**
+2026-09-24: the [R1 checkpoint](../README.md) freezes the routed PCB and coordinated 5.8 mm clear enclosure before antenna optimization.
 
-> **2026-09-23 方法论检查：两项都已修复。** 用 DRC 看不见的规则集（[规则索引](../../../docs/pcb-design-rules.md)、[pcb-methodology skill](../../../.agents/skills/pcb-methodology/SKILL.md)）离线扫出两处缺陷并已落盘复验：**USB/ESD 区域几乎没有地缝合**（`ES-002` 各 0 → 4 个过孔）与 **C3（充电器 BAT 引脚电容）离它要服务的引脚 24.49 mm**（`DC-001` CRITICAL → 通过）。两者原本都躲过了原生 DRC、逐引脚网表、连通性与制造包四项检查。细节见 [E16 记录 · 方法论检查](../hardware/pcb-e16-usb-right-mid.md#方法论检查emc--信号完整性2026-09-23)。
+| Work | Status / next step |
+| --- | --- |
+| Source and file organization | R1 active files indexed; E-series history archived; manufacturing outputs tracked |
+| Existing electrical checks | Saved/reopened native DRC 0; 58 components, 238 schematic pins matched; copper connectivity and winding cut proof pass |
+| Screen protrusion perimeter | **Open finding:** residual GND outside the old rectangular keepout; remove in the next PCB revision |
+| Coil appearance and edge offsets | Next revision: 45° chamfers and equal spacing to the three exposed board edges |
+| Broader layout review | Recheck using `pcb-methodology` and applicable upstream rules; refresh downstream exports |
+| Enclosure | Nominal fit and meshes pass; physical assembly unverified |
+| RF and bring-up | User/agent must test the assembled board; provisional 220 pF tuning capacitors |
+| Battery | User measures protected pack and wires; nominal 31 × 12 × 3 mm |
 
-> **新会话从这里开始**：根 [README](../../../README.md) → [环境与常驻服务](../../../docs/environment.md)（工具链、桥接启动、五分钟自检）→ 本页 → [E16 记录](../hardware/pcb-e16-usb-right-mid.md)（全部细节与实测数据）。动手前先跑自检；动铜箔前再跑连通性审计与 `check-proposed-route.py`。机器可读的门槛与证据以 [pcb-e14-manufacturing-gates.json](../hardware/pcb-e14-manufacturing-gates.json) 为准（含工程 sha256），本页是给人看的视图，冲突时以 JSON 与 `check-e14-gates.py` 为准。
-
----
-
-## 交接：NFC 线圈（唯一未落的板级项）
-
-### 问题本身
-
-线圈是一段**连续导体**，两端分属 `NFC1_TBD` 与 `NFC2_TBD` **两个网络**。纯走线无法表示跨网络串联元件：整条标成一个网络会碰到两个网络，拆成两半则相接处仍是跨网络接触。**这不是几何问题，间距、保留区、电感都已校验通过。**
-
-板上预留：NFC1 / NFC2 两个 **1.5 × 1.5 mm 自由焊盘**（第 2 层，(68.001, 23.000) 与 (71.399, 23.000)），馈线已从 U1 的 pin 52 / 54 拉通。几何方案见 [线圈候选设计](../hardware/pcb-e16-usb-right-mid.md#线圈候选设计已算好并离线校验等实验拍板)，离线校验结果为 `ok=true`、环间距 0.150 mm。
-
-### 四条路，两条已实测否决
-
-| 方案 | 结论 | 证据 |
-| --- | --- | --- |
-| 定制 **net tie 封装** | ❌ **DRC 否决** | 落板实测 **12 项非基线**（`Track to Track` / `SMD Pad to Track` 等指向螺旋与两个 NFC 网络冲突）。原因是工具规则：**封装里的铜必须全部用焊盘做，且被铜连起来的焊盘必须同号**（[一手来源](https://easyeda.com/forum/topic/How-to-avoid-DRC-errors-when-connecting-to-PCB-Footprints-a-k-a-PCB-Libs-90bf944fe3644b21a7d27a9e9d8df8d6)），两端分别编号的铜元件做不出来。Altium 的 net-tie 封装在本工具**没有对应物** |
-| **无网络图形铜箔**（`POLY`，`netName:""`） | ❌ **DRC 否决** | 实测新增 **6 项 `Clearance Error / Line to Track`**；删除后 DRC 精确回到 24 项 |
-| 原理图**短接符** + 线圈单网络 | ✅ 工具原生，**需用户在 GUI 放一次短接符** | 短接符 = `ELIB_SymbolType.SHORT_CIRCUIT_FLAG = 22`，官方文档与论坛作者均确认这是 Pro 版的 net tie；但 `lib_Symbol.create` 经 API 调用**失败**，且没有短接符图元类 |
-| 线圈单网络 + 一颗**真实串联匹配元件** | ✅ 语义最好，但同样受阻于"建不了符号" | 论坛原话 "a series component as part of an impedance matching network **works OK**"，正是 NFC 天线的标准拓扑（引脚—匹配—线圈—匹配—引脚）；需要一颗带符号的器件，而符号建不了 |
-| 线圈单网络 + **白名单一处跨网络接触** | ⚠️ 可全自动，但需显式登记 | 远端那一处接触是"网表表示"造成的，铜箔本身不是制造缺陷。若走这条，检查器必须**钉死这一条的坐标与对象**，新增任何其它非基线错误都要失败——**不可沿用社区"记住几项然后手工从总数里减掉"的做法** |
-
-### 推荐路径与所需动作
-
-**权限最小、语义最正的是第三条**：在原理图里放一个短接符，跨住那两条已预留的 NFC 短桩（`放置 → 短接符`，内置图元、不需建库），声明这处有意短接；之后 PCB 侧的合并、落铜与全部验证都能自动完成。
-
-**若不愿动 GUI**，走第五条并明确登记那一条已知项。
-
-### 原理图侧已查清的事实
-
-- **图页要用 sheet uuid 打开**，不是 `schematics` 的 uuid：`dmt_EditorControl.openDocument(sheet_uuid)` 返回 `documentType 1`。四个图页：`cd0a81c0097ce6e0`(01 USB and Power)、`e286f508bc068ffe`(**02 MCU and Controls，含 U1 与 NFC 网络标签**)、`7c834e86d8dfecc6`(03 GDEH0154E01)、`04da360d6d8c1e54`(04 USB ESD and interfaces)。用 `9ae79bee58c7d4fd`（`schematics` 的 uuid）会静默失败。
-- **NFC 接口在图上是已预留的**两条短桩导线 + 网络标签，位于 U1 东侧：
-
-  ```
-  WIRE fa730f8142533a08   LINE (575,-555) → (605,-555)   标签 NFC1_TBD
-  WIRE e2ec8780fe3a8427   LINE (575,-575) → (605,-575)   标签 NFC2_TBD
-  ```
-
-- **原理图自己写明这是待办**：图页 02 有 "NFC 天线与匹配待设计。TBD 网络名保留用于追溯。"；图页 04 有 "NFC1_TBD / NFC2_TBD：线圈与匹配尚未闭环；当前保留 22 × 26mm 无金属区域。"。**所以补上天线是收口一个已声明的待办，网络名本来就是为此留的占位。**
-- **自由焊盘不在网表核对范围内**：`check-netlist-consistency.py` 只遍历 `components` 的引脚，NFC 落点是纯 PCB 自由焊盘。任何新增的**器件**都必须同时出现在原理图，否则网表核对会报差异。
-
----
-
-## 工具边界与踩坑记录（避免重复推导）
-
-1. **DRC 明细可读**：`pcb_Drc.check(strict, userInterface, true)` 返回违规数组。**不要相信布尔值**——`check(..., false)` 因为 24 项槽边基线恒为 `false`，对改动没有分辨力。此前我误记"DRC 只有布尔值"，代价是带着 6 项真实违规落盘却报告"0 违规"。
-2. **封装文档的坐标是 mil**，尽管它的 `CANVAS` 声明 `"unit":"mm"`。按 mm 建会差 **39.37 倍**——这个错误是落板后在 PCB 快照（mil）里量出来的，不是看声明看出来的。
-3. **器件会复制封装，不跟随封装更新**：改完封装必须删掉器件重建，否则落板仍是旧几何。
-4. **库写入需要先存在个人库**（GUI 起始页「新建元件库」，或 `文件 > 新建 > 库`）。此前六项库操作全部失败，根因就是 `~/Documents/LCEDA-Pro/libraries/` 为空。建库后：**封装可建 ✓、符号建不了 ✗（`[object Object]`）、器件不稳定**（同一调用时而返回 uuid、时而 `undefined`）。**必须用 `search` 复核，不能只看返回值。**客户端是 `HALF_OFFLINE` 模式（官方推荐、无需登录）。
-5. **直接落封装会抛错**：`pcb_PrimitiveComponent.create({libraryType: 4, ...})` 报 `Cannot read properties of null (reading 'attrsMap')`，并且会把客户端搞到起始页。要**通过器件**落。
-6. **单位陷阱**：PCB 文档与快照是 **mil**；覆铜 `fill` 坐标是 **0.254 mm/单位**；`pour_geometry.MIL = 0.0254`（mm per mil）而 `check-e16-copper-connectivity.py` 的 `MIL = 39.37`（mil per mm）——**同名互为倒数**。
-7. **`check-proposed-route.py` 已有 `pads` 模式**，可校验"被移动元件的焊盘 vs 既有铜箔"。它**已对 DRC 校准**：复算已知违规的 C3 原位得 4.34 / 4.08 mil，DRC 报 4.3 / 4.0。移动元件前先跑它。
-8. **过孔孔径下限 7.9 mil**（0.2007 mm），且**规则按网络生效**：板上 30 个 7.8 mil 孔径只有 GND 上那 2 个（我加的）被报错，信号网络上的同规格未被约束。
-9. **建多边形要走两跳**：先 `pcb_MathPolygon.createPolygon(source)` 得到 `IPCB_Polygon`，再 `pcb_PrimitivePolyline.create(net, layer, polygon, width)`；直接把坐标数组传给后者会报"参数不正确"。
-10. **客户端会在保存时卡住**，留下一个不动的进度条（常见 `1%`）。判据：`/health` 仍在、文档 API 有响应、**工程文件 sha256 与门槛记录一致 → 改动已落盘**，可以放心重启。桥接会报 `AbortError` 并重试，那是界面卡住不是数据损坏。
-11. **过孔创建参数顺序**：`pcb_PrimitiveVia.create(net, x, y, holeDiameter, diameter, ...)`——**孔径在前**。
-12. **线圈用走线画是官方认可的做法**——官方[线圈生成器扩展](https://github.com/easyeda/eext-coil-creator)九处调用全是 `pcb_PrimitiveLine.create('GND', 1, ...)`（单层、网络硬编码 `GND` 占位）。但它**不解决网络问题**，也不接受外部几何。
-
----
-
-## 设计门槛
-
-| 门槛 | 状态 | 现在缺什么 | 证据入口 |
-| --- | --- | --- | --- |
-| 板框与 USB 开口 | ✅ 已闭合 | — | [E16 记录 · USB 缺口基准](../hardware/pcb-e16-usb-right-mid.md#j1-与板框基准复核2026-09-23已修正并复验) |
-| 网表与电源布线 | ✅ 已完成 | — | 逐引脚 56 位号 / 234 引脚 / 0 差异；原生 DRC 只剩 24 项固有 J1 槽边告警 |
-| **NFC 天线与匹配** | ⏳ **卡在表示方式** | 用户在 GUI 放一次短接符，或选定白名单方案（见上节） | [交接节](#交接nfc-线圈唯一未落的板级项) |
-| 电芯交付包络 | ⏳ 等实测 | 电芯实物最大外形（含保护板/引线/胶带/鼓胀）与出线方向 | [电芯包络决策表](../hardware/pcb-e16-usb-right-mid.md#电芯包络决策表2026-09-23) |
-| 可打印外壳 | ⏳ 等样件 | 打印三件并试装（键帽行程、屏幕贴合、0.4/0.5 mm 薄壁与 ±0.2 公差） | [外壳说明](../enclosure/README.md)、[打印网格报告](../enclosure/nfc-card-e16-print-meshes-report.json) |
-| 供应商制造包 | ⏳ 依赖上面三项 | 确认后从同一版本重导并放行 | [制造包核对](../hardware/pcb-e16-usb-right-mid.md#制造包自动核对2026-09-23) |
-
-### 下单前必须核对的板厂约束（已查实）
-
-| 项 | 板厂要求 | 本板 |
-| --- | --- | --- |
-| **线圈线宽线距** | 常规 0.254 mm；**极限 0.15 mm 仅限线路盖油** | **0.25 / 0.15 mm → 必须保持线圈被阻焊盖住**。若要开窗露铜，线宽线距须 ≥0.254 mm，那是几何重做（环间距 0.150→0.254 会改变 1.12 µH / Q 139，`plan-nfc-coil.py` 需重算） |
-| 锣边到铜 | **≥0.2 mm** | J1 焊盘 **0.2007 mm**，余量仅 **0.0007 mm** ⚠️ 生产稿确认时重点核对 |
-| 过孔孔到孔 | ≥0.2 mm | 最差 0.385 mm ✓ |
-| 免费打样表面处理 | 喷锡券已取消 → **统一 OSP**；沉金券保留 | 无金手指/半孔 → **OSP 可用** |
-| 下单沟通 | 设计在 Gerber 里；表面处理等是页面选项；**关键环节是"生产稿确认"**；只有非常规要求才写下单备注 | 不需要预先找客服。求助渠道：下单页「技术咨询」、PCB 技术支持 QQ `3001741855`、官网「服务指引 → 人工服务」 |
-
-## 等外部输入
-
-- [ ] **电芯实物测量**（或供应商图纸）：对照边界表东 33.80 / 北 ~15.02 / 高 3.6 mm；超了要移按键列并重排约 8 条走线。
-- [ ] **PN532 桌面实验**：读距与金属负载结论，决定天线形式；板上线圈按实测区 10.4 × 21.3 mm 算得 6 圈 1.12 µH / Q 139，匹配电容起点 100 pF + 15 pF。**匹配网络的拓扑可以现在定、值等实验。**
-- [ ] **打印 V7 三件**（下壳、上壳、三个键帽一次打）并试装反馈。
-- [ ] **J1 到手核对**壳脚与板边，并确认插头插到底。
-
-## 需要用户决策
-
-- [ ] **NFC 线圈的落铜方式**（唯一阻塞项）：① 你在 GUI 放一次短接符（推荐，之后全自动）；② 我走"单网络 + 白名单一处跨网络接触"（全自动，但 DRC 上留一条显式登记的已知项）；③ 等 PN532 实验后再定。见[交接节](#交接nfc-线圈唯一未落的板级项)。
-- [ ] 装壳后 SWD 救援是否加底层镜像焊盘 + 下壳三个 Ø1.2 mm 探针孔（外观取舍）。
-- [ ] 第三颗按键（SW2）的功能分配。
-- [ ] 下单通道：嘉立创经济型 PCBA 单板（84 × 52 可直下）还是标准型拼板。
-
-## 工程化 TODO
-
-- [ ] **把连通性审计的 `ground_reach` 修到可信**：目前报 2 个 GND 焊盘未到达覆铜，但都与手工验证的事实冲突（R13 的 GND 焊盘 0.050 mm 处就有 GND 过孔），标为 `trusted: false`、不参与门禁。**修好后才能逐一验证 27+16 块覆铜区域与 GND 网络的连通性。**
-- [ ] **校准 `GP-001`（信号跨越覆铜缺口）**：已实现（`analyze-e16-pour.py`），按"采样点到最近参考铜箔的距离 ≤ 0.5 mm"判覆盖率，结果是 48 个信号网络里 **45 个低于 95%**——**该结论不可信**且已标为参考项。走廊宽度 0.5 mm 是本仓库自定（上游只给 95% 阈值），且该指标分不清"真实平面开槽"与"平面被同层其它走线的间距穿孔"。**要校准到一块已知有问题的板子才能用。**
-- [x] **原生 DRC 明细可读**（2026-09-23）：`pcb_Drc.check(_, _, true)`；由此抓出并修复了 C3 造成的 6 项真实违规。
-- [x] **给 USB/ESD 区域补地缝合孔**（2026-09-23）：4 个 GND 过孔 + 5 条拉线，重铺两块地覆铜；`ES-002` 各 0 → 4；U6 到最近底层覆铜 2.318 → 0.256 mm。
-- [x] **C3 处置**（2026-09-23）：搬到 (48.60, 22.75) rot 180，`DC-001` 通过（最近同网络焊盘 0.82 mm）。顺带删掉 12 段绕行与 4 个孤立过孔——删除后连通性一度报 1 处断网，正是那 4 个过孔造成的。
-- [x] **重导制造包**（2026-09-23）：按最终板重导并核对，`ok=true`，168 钻孔命中对应 168 过孔。
-- [x] **建线圈封装 `HL_NFC_COIL_E16`**（库 `hardware-lab`）：29 段螺旋 + 2 个换层过孔 + 2 个焊盘；**但本工具的 DRC 不接受它作为 net tie**，见交接节。
-- [x] 引入方法论设施：4 个上游 submodule（跟随 main）+ 仓库级[规则索引](../../../docs/pcb-design-rules.md) + [pcb-methodology skill](../../../.agents/skills/pcb-methodology/SKILL.md) + `check-e16-emc.py`（16 条规则）+ `tools/check-rule-coverage.py`。
-- [x] 新增仓库级 [环境与常驻服务](../../../docs/environment.md)（工具链、服务、五分钟自检、常见故障；含"库 API 失败 = 缺个人库"与"保存卡住"两条判据）。
-- [x] 桥接改为**按需启动**；日志轮转；`artifacts/` 归档与 `.gitignore` 收敛；`collect-e16-manufacture.py` 按内容识别四件、拒绝跨批次混用。
-
-## 这份看板怎么维护
-
-1. **只改事实**：状态、门槛、TODO 勾选；细节写进对应项目文档，不在这里重复。
-2. **收尾时更新**：每轮工作结束（提交前）把新完成项打勾、新增待办补上，并更新 `last_updated`。
-3. **门槛以 JSON 为准**：设计门槛变化必须同时更新 [门槛文件](../hardware/pcb-e14-manufacturing-gates.json) 并跑 `check-e14-gates.py`。
-4. **交接给别的 Agent 时**：重点看上面三节——「交接：NFC 线圈」「工具边界与踩坑记录」「下单前必须核对的板厂约束」。**工具边界那一节是几十次实测换来的，不要跳过。**
+No order placed. [Historical progress and experiments](../archive/pre-r1/readmes/projects/nfc-business-card/docs/progress.md) retain earlier findings and resolutions.

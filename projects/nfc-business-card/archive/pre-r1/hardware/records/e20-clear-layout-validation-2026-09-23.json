@@ -1,0 +1,58 @@
+{
+  "revision": "E20",
+  "pcb_uuid": "81780e0793288f82",
+  "status": "UNROUTED_LAYOUT_CANDIDATE",
+  "source_sha256": "ab9c8d6e17345150826a3009ec7da8c2bac116f8350c3b9d5392ded62681534f",
+  "counts": {
+    "components": 58,
+    "pads": 248,
+    "lines": 0,
+    "vias": 0
+  },
+  "native_drc": {
+    "Connection Error": 155
+  },
+  "pin_map": {
+    "refs": 58,
+    "pins": 238,
+    "mismatches": 0,
+    "preserved_after_placement_changes": true
+  },
+  "independent_split_non_ground_nets": 47,
+  "manufacturing_release": false,
+  "open_design_work": [
+    "Recheck functional placement, including local U1 VBUS decoupling, before detailed routing.",
+    "Route every net from the unrouted baseline; NFC branches need a cut-coil no-bypass check.",
+    "Verify native DRC, connectivity including actual ground fill, BOM/CPL and manufacturing export after routing."
+  ],
+  "external_checks": [
+    "Complete battery dimensions and wire exit",
+    "Screen flex and insertion geometry",
+    "Assembled NFC tuning and read range",
+    "Factory clear-print tolerances, finish, lid bonding and key feel"
+  ],
+  "reopened_source_snapshot_identical": true,
+  "snapshot_sha256": "8deef7266318b1de6616399a652211e4017b8139aefa61606e5f50d63ad6b0fe",
+  "pcb_bounds_mm": [
+    1.1,
+    1.1,
+    82.9,
+    50.9
+  ],
+  "active_cad": "enclosure/e20-clear-window-5.8/e20-clear-assembly.FCStd",
+  "enclosure": {
+    "nominal_height_mm": 5.8,
+    "upper_lower_panels_mm": 0.8,
+    "window_xywh_mm": [
+      4.0,
+      20.3,
+      27.8,
+      27.8
+    ],
+    "no_intersections_in_tested_nominal_relations": true,
+    "report": "../enclosure/e20-clear-window-5.8/e20-clear-report.json",
+    "assembly_sha256": "34037686e401d4e5b428b9b1e78346cb49a70b9b892a356009f89606ceb238b3",
+    "visual_preview_inspected": true,
+    "physical_qualification": false
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "status": "PLACEMENT_COMPARISON_ONLY",
+  "component_moves": 42,
+  "standalone_pad_moves": 3,
+  "components": 58,
+  "pads": 248,
+  "tracks": 0,
+  "vias": 0,
+  "distance_metrics": [
+    {
+      "from": "C1.1",
+      "to": "U1.32",
+      "net": "USB_VBUS",
+      "before_mm": 14.32417680873843,
+      "after_mm": 1.2386140131614858
+    },
+    {
+      "from": "C8.1",
+      "to": "U2.10",
+      "net": "USB_VBUS",
+      "before_mm": 3.9170720166981856,
+      "after_mm": 1.3008693753025304
+    },
+    {
+      "from": "C2.1",
+      "to": "U2.1",
+      "net": "SYS",
+      "before_mm": 2.9093213665045647,
+      "after_mm": 1.4943167772597599
+    },
+    {
+      "from": "C3.1",
+      "to": "U2.2",
+      "net": "BAT_PACK_TBD",
+      "before_mm": 4.603088326243593,
+      "after_mm": 1.8290063633568951
+    },
+    {
+      "from": "C4.1",
+      "to": "U3.1",
+      "net": "SYS",
+      "before_mm": 4.6624694142482035,
+      "after_mm": 1.7762610639205019
+    },
+    {
+      "from": "C5.1",
+      "to": "U3.5",
+      "net": "VDD_3V3",
+      "before_mm": 4.258993048409454,
+      "after_mm": 1.7745440555815999
+    },
+    {
+      "from": "C6.1",
+      "to": "U1.28",
+      "net": "VDD_3V3",
+      "before_mm": 1.8711113045460424,
+      "after_mm": 1.5271970466184137
+    },
+    {
+      "from": "C7.1",
+      "to": "U1.30",
+      "net": "VDD_3V3",
+      "before_mm": 3.0424333751127577,
+      "after_mm": 1.269707866400771
+    },
+    {
+      "from": "R3.2",
+      "to": "U1.35",
+      "net": "USB_DP_MCU",
+      "before_mm": 13.302842320722284,
+      "after_mm": 2.000070579254649
+    },
+    {
+      "from": "R4.2",
+      "to": "U1.34",
+      "net": "USB_DM_MCU",
+      "before_mm": 14.167652109520471,
+      "after_mm": 2.0966465348265135
+    },
+    {
+      "from": "R10.2",
+      "to": "U1.3",
+      "net": "KEY_PREV_N",
+      "before_mm": 46.74254404510735,
+      "after_mm": 2.1124036404058764
+    },
+    {
+      "from": "R11.2",
+      "to": "U1.4",
+      "net": "KEY_NEXT_N",
+      "before_mm": 46.672066573769804,
+      "after_mm": 2.0965403720415208
+    },
+    {
+      "from": "R12.2",
+      "to": "U1.5",
+      "net": "KEY_OK_N",
+      "before_mm": 46.4819224119571,
+      "after_mm": 3.2781413583919794
+    },
+    {
+      "from": "C14.1",
+      "to": "J2.4",
+      "net": "EPD_VDDL",
+      "before_mm": 3.614320933287471,
+      "after_mm": 1.9868012487413071
+    },
+    {
+      "from": "C15.1",
+      "to": "J2.5",
+      "net": "EPD_VSPL1",
+      "before_mm": 2.5295709395073356,
+      "after_mm": 1.8299602708255769
+    },
+    {
+      "from": "C16.1",
+      "to": "J2.16",
+      "net": "EPD_VSPL2",
+      "before_mm": 2.5295709395073356,
+      "after_mm": 2.4022398299087504
+    },
+    {
+      "from": "C17.1",
+      "to": "J2.18",
+      "net": "EPD_VSNL1",
+      "before_mm": 2.349368190897293,
+      "after_mm": 1.9413876507282166
+    },
+    {
+      "from": "C18.1",
+      "to": "J2.19",
+      "net": "EPD_VSNL2",
+      "before_mm": 2.6115572980120536,
+      "after_mm": 1.8026002592921213
+    },
+    {
+      "from": "C19.1",
+      "to": "J2.20",
+      "net": "EPD_VSPH",
+      "before_mm": 3.3917836526523946,
+      "after_mm": 2.4713690950564247
+    },
+    {
+      "from": "C20.1",
+      "to": "J2.22",
+      "net": "EPD_VSNH",
+      "before_mm": 4.00625722239599,
+      "after_mm": 3.090027706348284
+    },
+    {
+      "from": "C21.1",
+      "to": "J2.23",
+      "net": "EPD_VGL",
+      "before_mm": 5.117712367454824,
+      "after_mm": 4.227574199230577
+    },
+    {
+      "from": "C22.1",
+      "to": "J2.24",
+      "net": "EPD_VCOM",
+      "before_mm": 6.301932979713447,
+      "after_mm": 5.436251577769376
+    }
+  ],
+  "battery_positive_negative_pad_edge_gap_mm": {
+    "before": 0.3034133635778122,
+    "after": 1.4986000000000033
+  },
+  "display_cap_distance_sum_mm": {
+    "before_mm": 32.452074523428145,
+    "after_mm": 25.188211837900635
+  },
+  "switching_group_translation_mm": [
+    2.5,
+    0
+  ],
+  "translation_max_error_mm": 8.000000883967573e-08,
+  "fixed_references": [
+    "U1",
+    "U2",
+    "U3",
+    "U5",
+    "U6",
+    "J1",
+    "J2",
+    "SW1",
+    "SW2",
+    "SW3"
+  ],
+  "outline_and_exclusion_geometry_unchanged": true,
+  "limits": [
+    "Pad-centre straight-line distances are not routed lengths or measured electrical performance.",
+    "SW-002 copper area and DC-003 via proximity cannot be evaluated before routing.",
+    "Display power group preserves internal placement; its real switching loop includes J2 and still needs routing review.",
+    "BP/BN diameter is unchanged; wire and assembly sample tests remain open."
+  ]
+}

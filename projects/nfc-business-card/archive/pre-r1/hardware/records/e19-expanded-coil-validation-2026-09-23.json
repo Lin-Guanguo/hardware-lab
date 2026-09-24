@@ -1,0 +1,71 @@
+{
+  "date": "2026-09-23",
+  "eda_project_sha256": "16cd65a2089653ea6b0b5723ef6ad56e50db22991cd7fb656e3a4ffb35cc9505",
+  "project_sqlite_quick_check": "ok",
+  "board": "Board1_5",
+  "pcb_uuid": "d61e35108eab5d4b",
+  "schematic_mcu_page_uuid": "1da202410bff5d9c",
+  "purpose": "E19 expanded five-turn NFC coil with E18 matching capacitor positions",
+  "coil": {
+    "turns": 5,
+    "outer_centerline_mm": [60.6, 27.6, 80.8, 48.9],
+    "track_width_mm": 0.25,
+    "copper_edge_gap_mm": 0.15,
+    "covered_by_soldermask": true,
+    "estimated_inductance_uH": 1.145,
+    "estimated_only": true,
+    "minimum_planar_gap_to_j1_metal_envelope_mm": 5.7,
+    "j1_gap_is_empirical_not_vendor_minimum": true
+  },
+  "components": 58,
+  "pads": 248,
+  "copper_lines": 825,
+  "vias": 174,
+  "gnd_pours": 2,
+  "schematic_drc": {"pages": 4, "errors": 0},
+  "native_pcb_drc": {"baseline_j1_board_outline_to_smd_pad_leaves": 24, "nonbaseline_leaves": 0},
+  "pin_netlist": {"schematic_refs": 58, "pcb_refs": 58, "pins": 238, "mismatches": 0},
+  "copper_connectivity": {"nets_checked": 47, "split_nets": 0, "dead_ends": 0, "ground_reach_trusted": false},
+  "nfc_branch_cut": {
+    "checker_ok": true,
+    "groups_after_cut": 2,
+    "outer_group": ["U1 pin 52", "NFC1 landing", "C23 pin 1"],
+    "inner_group": ["U1 pin 54", "NFC2 landing", "C24 pin 1"]
+  },
+  "route_clearance": {"offline_violations": 0, "minimum_within_route_copper_gap_mm": 0.15},
+  "manufacture_export": {
+    "original_consistency_checker_ok": true,
+    "strengthened_outline_checker_ok": false,
+    "outline_issues": [
+      "GKO contains the intended L-shaped outline plus an extra open J1 footprint guide path.",
+      "GME contains a second complete 84x52 mm rectangular outline."
+    ],
+    "gerber_members": 17,
+    "via_drill_hits": 174,
+    "bom_rows": 26,
+    "bom_designators": 58,
+    "cpl_designators": 58,
+    "worst_placement_delta_mm": 0.0005,
+    "bottom_soldermask_coil_openings": 0
+  },
+  "cad": {
+    "board_clearance_ok": true,
+    "real_board_intrusions": 0,
+    "v7_enclosure_fit_ok": true,
+    "real_shell_collisions": 0,
+    "rib_collisions": 0,
+    "key_cap_collisions": 0
+  },
+  "baseline_preserved": {
+    "E16": {"components": 56, "pads": 244, "lines": 791, "vias": 168, "nonbaseline_drc_leaves": 0},
+    "E17": {"components": 56, "pads": 244, "lines": 820, "vias": 170, "nonbaseline_drc_leaves": 0},
+    "E18": {"components": 58, "pads": 248, "lines": 828, "vias": 174, "nonbaseline_drc_leaves": 0}
+  },
+  "release_ready": false,
+  "open_work": [
+    "Remove the conflicting Gerber outlines in the EDA source/export, then re-export and pass the strengthened manufacturing checker.",
+    "Measure loaded 13.56 MHz resonance and read range of physical E19 and ideally E18 comparison boards.",
+    "Tune matched C23/C24 values based on measurements.",
+    "Measure delivered battery/display assemblies and physically test V7 enclosure fit before production release."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "asymmetric_arc_cases": [
+    {
+      "sweep_degrees": 90,
+      "endpoint_error_mm": 9.930136612989092e-16
+    },
+    {
+      "sweep_degrees": -90,
+      "endpoint_error_mm": 1.831026719408895e-15
+    },
+    {
+      "sweep_degrees": 135,
+      "endpoint_error_mm": 4.440892098500626e-16
+    },
+    {
+      "sweep_degrees": -135,
+      "endpoint_error_mm": 8.881784197001252e-16
+    }
+  ],
+  "tenfold_wrong_fill_scale_rejected": true
+}

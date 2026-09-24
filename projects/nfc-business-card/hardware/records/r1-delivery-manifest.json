@@ -1,0 +1,170 @@
+{
+  "revision": "R1",
+  "status": "ROUTED_ENGINEERING_PROTOTYPE",
+  "files": {
+    "NFC-Card-R1-assembly.pdf": {
+      "bytes": 808399,
+      "sha256": "f0b7787a0fb4ad38ce19f4a02109e2c7b9d83031ef261017042dfcddf533a91a"
+    },
+    "NFC-Card-R1-bom.csv": {
+      "bytes": 2416,
+      "sha256": "77a8e2ca401d5e2be38abefe1918f86fd5bc99595d70da2c214301e3c7a182c8"
+    },
+    "NFC-Card-R1-copper-preview.png": {
+      "bytes": 304942,
+      "sha256": "33bb561bd76376a31547ce3d8f1cce75596915f064de90e7973075fca2087437"
+    },
+    "NFC-Card-R1-cpl.csv": {
+      "bytes": 9952,
+      "sha256": "683528f32f83f6a74d9916dcf438c53cb9ff34fba52b7f3da60e6ba1ae1f5f1b"
+    },
+    "NFC-Card-R1-gerber.zip": {
+      "bytes": 90588,
+      "sha256": "0c50da00c222c4cbeee16633531793a44280e48674dbee207d9974e888e65017"
+    },
+    "NFC-Card-R1-pcba.step": {
+      "bytes": 22034676,
+      "sha256": "ef008338b9549b209ef3c4e4c38b82f06acef4bd6279db4d6ae14b6bc285bb62"
+    },
+    "NFC-Card-R1-project.epro2": {
+      "bytes": 2952301,
+      "sha256": "71e54a40c54a444622c4bd21db0c486bf4f10dfdc289ebd182098ee54c21ec97"
+    },
+    "NFC-Card-R1.eprj2": {
+      "bytes": 8261632,
+      "sha256": "69f4f6d329ad5ea81c98537f53042197a44354dc6d20ada6a957fa9f9491c235"
+    },
+    "README.md": {
+      "bytes": 667,
+      "sha256": "0144b8d74c8dbee003aa4be5cae6972c51e9a89232cefb8abed4c32160d2896a"
+    },
+    "case/NFC-Card-R1-case.FCStd": {
+      "bytes": 8545535,
+      "sha256": "12f9390674037cc8afb54fe6b993d329a2391ea30dcc76fe99e4dc8e5de3e6d4"
+    },
+    "case/NFC-Card-R1-case.step": {
+      "bytes": 46317182,
+      "sha256": "c7d3a1126bb21e5e754f60def2feeabf0e4f91a0643b7af4f7e39f5c13fa3359"
+    },
+    "case/NFC-Card-R1-keys.stl": {
+      "bytes": 226284,
+      "sha256": "f3d7d724e762c7afbbef71c95ef46e385af2aa03f470f92bac04dd72fa3335da"
+    },
+    "case/NFC-Card-R1-lid.step": {
+      "bytes": 26472,
+      "sha256": "5a7eeab4d2da2ba4a38ea865ee129e26dae5f80ce316fa8a16bf65704b52b805"
+    },
+    "case/NFC-Card-R1-lid.stl": {
+      "bytes": 104284,
+      "sha256": "7a0132f1a38ef464cba55b779d88b16def12e00ebb0c77a759a1a723111154f1"
+    },
+    "case/NFC-Card-R1-tray.step": {
+      "bytes": 36982,
+      "sha256": "43596fa62387387fb758a3806f5a561364bed2ad647e97c01580df0194fd9e0b"
+    },
+    "case/NFC-Card-R1-tray.stl": {
+      "bytes": 180884,
+      "sha256": "a28e741261d148e1e8a3b5513e78f4162001c3a80c13f946b2bc5d27d458fe22"
+    },
+    "case/assembled-preview.png": {
+      "bytes": 72494,
+      "sha256": "e5a7d08ca3daf80604fc1d3088b0e2dd1904f5502c0c1325c029492a3b4e3dbb"
+    },
+    "case/design-inputs.json": {
+      "bytes": 7551,
+      "sha256": "04ef9b40c3a6efcba4ee5952a8a46dcbfd08b8b26aaa987ff0bf9a4b5e6160a2"
+    },
+    "case/geometry-report.json": {
+      "bytes": 55735,
+      "sha256": "809c6040677d9353818f0aab449a461c537977ace04a653a36969cfd5d28e7d9"
+    },
+    "case/open-preview.png": {
+      "bytes": 55885,
+      "sha256": "af99a320f7f41e1670eac3223e65debbfc1b121098eb19b4169d115406cf5def"
+    },
+    "checks/r1-board.json": {
+      "bytes": 65842,
+      "sha256": "8c1900c57eab03e0e29043286682b83770fca8a33d36c11e4908ebd60e055e59"
+    },
+    "checks/r1-copper-check.json": {
+      "bytes": 10570,
+      "sha256": "a54701c8e4236191749c163087f680a83986c8888442469605c4bc6306762aa1"
+    },
+    "checks/r1-critical-plan.json": {
+      "bytes": 15141,
+      "sha256": "39952aad2cf533610fe3e3c1d250a247420eb83d4f1f53e5079373cfb39f53d1"
+    },
+    "checks/r1-decoupling-plan.json": {
+      "bytes": 1308,
+      "sha256": "aeaf5685e4cc7416c59367cd3fc2cb30024c742cab9c6ebb540d576eaba64385"
+    },
+    "checks/r1-drc-rules.json": {
+      "bytes": 18960,
+      "sha256": "a5b64ebdf3f3dba4da896da23efd6d1b80bb894fd260b6044809cd9adbb014bd"
+    },
+    "checks/r1-geometry-calibration.json": {
+      "bytes": 454,
+      "sha256": "970d6947ef9b61f37cd55b0a86f03f9b0710f2e1a18338dd0f7c385c29a956d1"
+    },
+    "checks/r1-gerber-export-comparison.json": {
+      "bytes": 4320,
+      "sha256": "4ab4dfdd74d6cbfba790e815698c2a06ffbc9937682718e0fc8601bc17c5d8b7"
+    },
+    "checks/r1-initial-snapshot.json": {
+      "bytes": 260485,
+      "sha256": "1c1728d80535402612c31dee5b0dd5b6f929d0356eb2f4cc9f09f0858f1ea89d"
+    },
+    "checks/r1-mechanical-check.json": {
+      "bytes": 1777,
+      "sha256": "ab5d480b5bd33d0af6cbcd884112a14f4eb25c7a70b0cf1b38ee5d7c4f6dcdaa"
+    },
+    "checks/r1-native-drc.json": {
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "checks/r1-nfc-check.json": {
+      "bytes": 504,
+      "sha256": "c8c2c85f363cb4af83a91fcc93c18f5f86317a272e4239b6b42a05a2f7ed853e"
+    },
+    "checks/r1-nfc-coil-plan.json": {
+      "bytes": 2677,
+      "sha256": "745a518ff29814fab9a7a3c4fb1448248d5e7a03772b174fc9294d0ec2a093fc"
+    },
+    "checks/r1-pcb-pins.json": {
+      "bytes": 17894,
+      "sha256": "71309f14b267a8196c3ad7c2e5fca2fa5639f788cbfd768a1207bffebf5e10ac"
+    },
+    "checks/r1-profile-check.json": {
+      "bytes": 784,
+      "sha256": "ff2384c477a5af5ef62b8f49448f1f769b25c4eea984615cff884f9aeb65303b"
+    },
+    "checks/r1-review.json": {
+      "bytes": 679,
+      "sha256": "6160ea8425b128665e531195b295fccd6bad63dc10edfa1d866afe616b355252"
+    },
+    "checks/r1-rf-ground-short-plan.json": {
+      "bytes": 628,
+      "sha256": "51cecd7e4ff1fd643463007898e44920186de034f07dbdcde23da6a584ab246d"
+    },
+    "checks/r1-route-checker-calibration.json": {
+      "bytes": 269,
+      "sha256": "3bbba711f12e067b0a3ae38472165886ed33024295e604a2aafa0c0aa549bb74"
+    },
+    "checks/r1-routed-snapshot.json": {
+      "bytes": 398724,
+      "sha256": "dc99d11ad6fc09410286c16db21833e56ea0fc94879ad94c5396f148f204eb5b"
+    },
+    "checks/r1-schematic.enet": {
+      "bytes": 164019,
+      "sha256": "2c6f44171b13ffb8858428fdc790236bd657a71647f7c62ad928f6853f7fe49f"
+    },
+    "checks/r1-validation.json": {
+      "bytes": 1307,
+      "sha256": "bec7fd5f0b70e02db6895ce338b4b9c57b22f31051e3367d6f5c99b97568d27f"
+    }
+  },
+  "bundle": {
+    "bytes": 30103506,
+    "sha256": "9c3eefeb05f781fd43d16fc577818c08c2975f84eb03d341f87a7bff249f7ec3"
+  }
+}

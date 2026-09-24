@@ -13,9 +13,9 @@ last_updated: 2026-09-23
 
 ## 为什么需要这份索引
 
-EasyEDA 的原生 DRC 只检查几何间距与连接：它是必要条件，不是充分条件。这一点本项目已经反复踩到并写进记录——[整板评审](../projects/nfc-business-card/hardware/board-design-review.md) 写明"不会以 DRC 剩余数量作为改层依据"，[E16 记录](../projects/nfc-business-card/hardware/pcb-e16-usb-right-mid.md) 写明"这只是几何与额定电流的估算：压降、去耦回路、升压瞬态和地回流阻抗仍需在实物上测"。
+EasyEDA 的原生 DRC 只检查几何间距与连接：它是必要条件，不是充分条件。这一点本项目已经反复踩到并写进记录——[整板评审](../projects/nfc-business-card/archive/pre-r1/hardware/board-design-review.md) 写明"不会以 DRC 剩余数量作为改层依据"，[E16 记录](../projects/nfc-business-card/archive/pre-r1/hardware/pcb-e16-usb-right-mid.md) 写明"这只是几何与额定电流的估算：压降、去耦回路、升压瞬态和地回流阻抗仍需在实物上测"。
 
-已发生的实例（本索引存在的理由）：`C3` 是 BQ25186 的 BAT 引脚电容（2.2 µF），在 E16 的 USB 排版中被归入"USB 小元件"搬到 (71.90, 20.60)，离 U2 的 BAT 焊盘 24.49 mm（E15 时在 (49.53, 22.86)，约 4.7 mm）。原生 DRC 0 间距、逐引脚网表 0 差异、连通性 0 断网、制造包 `ok=true` **四项全过**——因为它是一处布局意图错误，没有任何一项检查会问"这颗电容该在哪"。DC-001 一次就把它标出来了，随后按本索引的流程搬回 U2 旁 (49.60, 21.60)，实测 2.04 mm，规则从 CRITICAL 变为通过（见 [E16 记录](../projects/nfc-business-card/hardware/pcb-e16-usb-right-mid.md)）。
+已发生的实例（本索引存在的理由）：`C3` 是 BQ25186 的 BAT 引脚电容（2.2 µF），在 E16 的 USB 排版中被归入"USB 小元件"搬到 (71.90, 20.60)，离 U2 的 BAT 焊盘 24.49 mm（E15 时在 (49.53, 22.86)，约 4.7 mm）。原生 DRC 0 间距、逐引脚网表 0 差异、连通性 0 断网、制造包 `ok=true` **四项全过**——因为它是一处布局意图错误，没有任何一项检查会问"这颗电容该在哪"。DC-001 一次就把它标出来了，随后按本索引的流程搬回 U2 旁 (49.60, 21.60)，实测 2.04 mm，规则从 CRITICAL 变为通过（见 [E16 记录](../projects/nfc-business-card/archive/pre-r1/hardware/pcb-e16-usb-right-mid.md)）。
 
 ## 覆盖状态图例
 
@@ -27,7 +27,7 @@ EasyEDA 的原生 DRC 只检查几何间距与连接：它是必要条件，不�
 | ⬜ 待实现 | 判据所需几何已具备，但检查器还没写 |
 | — 不适用 | 规则前提在本板类别下不成立 |
 
-检查器：[check-e16-emc.py](../projects/nfc-business-card/scripts/check-e16-emc.py)（E16 专用；板级无关的通用化等第二块板再做，不预先抽象）。
+检查器：[check-e16-emc.py](../projects/nfc-business-card/archive/pre-r1/scripts/check-e16-emc.py)（E16 专用；板级无关的通用化等第二块板再做，不预先抽象）。
 
 ```bash
 cd projects/nfc-business-card
@@ -47,7 +47,7 @@ python3 tools/check-rule-coverage.py
 | 规则 | 阈值 | 本板 | 说明 |
 | --- | --- | --- | --- |
 | [GP-001](../upstreams/kicad-happy/skills/emc/references/pcb-emc-rules.md) 信号跨越铺铜缺口 | 任一信号网络的参考面覆盖率 <95% | ✅ 自动（**仅供参考，非门禁**） | 已实现，但**结论暂不可信**：铺铜会沿每条走线留出间距，走线中心线永远落在铺铜为它挖出的间隙里，所以必须按"到最近参考铜箔的距离"判，而**走廊宽度是我定的**。取 0.5 mm 时 48 个信号网络里 45 个低于 95%——对一个地覆铜占 40% / 51% 的板子，这个结论不可信。症结是这个指标无法区分"真实平面开槽"与"平面被同层其它走线的间距穿孔"。标为参考项，**校准到已知有问题的板子之前不作为发现**。本板确实存在的两处开槽是 NFC 禁布区（设计如此）与 EPD 电容列 (x 44–58, y 25–45) |
-| GP-003 地平面碎裂 | 地网络有 >3 个不连通岛 | ✅ 自动 | 实测顶层 **29** 个覆铜区域、底层 **14** 个（`analyze-e16-pour.py`）。区域数远超"3 个岛"的阈值，但**这 29 块是否都连到 GND 网络尚未逐一验证**——原生 DRC 报 0 未布通，而本项目的 `ground_reach` 尚不可信（见[E16 记录](../projects/nfc-business-card/hardware/pcb-e16-usb-right-mid.md)）|
+| GP-003 地平面碎裂 | 地网络有 >3 个不连通岛 | ✅ 自动 | 实测顶层 **29** 个覆铜区域、底层 **14** 个（`analyze-e16-pour.py`）。区域数远超"3 个岛"的阈值，但**这 29 块是否都连到 GND 网络尚未逐一验证**——原生 DRC 报 0 未布通，而本项目的 `ground_reach` 尚不可信（见[E16 记录](../projects/nfc-business-card/archive/pre-r1/hardware/pcb-e16-usb-right-mid.md)）|
 | GP-004 地填充率 | 地覆铜填充率 <60% | ✅ 自动 | 实测顶层 **40.0%**、底层 **50.7%**，均低于 60% 阈值。**适用性**：该阈值按专用地平面写；2 层板双面密集走线下 40–50% 属预期，其含义是回流通道被压缩，正是 `GP-001` 要查的，不宜单独当缺陷 |
 | GP-005 多个地域 | 检测到多个地网络 | 🔒 | 本板单一 GND，预期通过；仍需覆铜确认无孤岛 |
 | [RP-001](../upstreams/kicad-happy/skills/emc/references/pcb-emc-rules.md) 换层缺缝合孔 | 信号过孔周围 max(2 × 介质厚, 1.0 mm) 内无地缝合孔 | ✅ 自动 | 本板 2 层、介质 0.8 mm，阈值 1.6 mm。实测 120 个信号过孔中 93 个超过；其中 **22 个带快速边沿**。USB 对的 8 个换层孔离最近地过孔 **4.27–6.83 mm**。**适用性**：2 层板没有平面对，回流在两面地覆铜之间跳，全速 USB 的 15 ns 边沿下这条绕行只有 λ/1000 量级 |
@@ -118,7 +118,7 @@ python3 tools/check-rule-coverage.py
 
 | 规则 | 现状 | 该补什么 |
 | --- | --- | --- |
-| NFC 线圈外缘离大块金属 ≥5 mm | [E16 记录](../projects/nfc-business-card/hardware/pcb-e16-usb-right-mid.md) 自己标注为"经验余量" | NXP/Nordic 天线设计指南的原文依据，或标为待实测 |
+| NFC 线圈外缘离大块金属 ≥5 mm | [E16 记录](../projects/nfc-business-card/archive/pre-r1/hardware/pcb-e16-usb-right-mid.md) 自己标注为"经验余量" | NXP/Nordic 天线设计指南的原文依据，或标为待实测 |
 | 0.15 mm 线宽 ≈ 600 mA @10 °C 温升 | 已标注依据为 IPC-2221 外层 1 oz | 保留；IPC-2221 是正式标准，属可追溯 |
 
 ## 署名与许可

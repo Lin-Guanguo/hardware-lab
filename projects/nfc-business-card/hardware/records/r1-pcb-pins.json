@@ -1,0 +1,1244 @@
+[
+  {
+    "ref": "C1",
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND"
+      },
+      {
+        "number": "1",
+        "net": "USB_VBUS"
+      }
+    ]
+  },
+  {
+    "ref": "C2",
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND"
+      },
+      {
+        "number": "1",
+        "net": "SYS"
+      }
+    ]
+  },
+  {
+    "ref": "C3",
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND"
+      },
+      {
+        "number": "1",
+        "net": "BAT_PACK_TBD"
+      }
+    ]
+  },
+  {
+    "ref": "C4",
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND"
+      },
+      {
+        "number": "1",
+        "net": "SYS"
+      }
+    ]
+  },
+  {
+    "ref": "C5",
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND"
+      },
+      {
+        "number": "1",
+        "net": "VDD_3V3"
+      }
+    ]
+  },
+  {
+    "ref": "C6",
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND"
+      },
+      {
+        "number": "1",
+        "net": "VDD_3V3"
+      }
+    ]
+  },
+  {
+    "ref": "C7",
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND"
+      },
+      {
+        "number": "1",
+        "net": "VDD_3V3"
+      }
+    ]
+  },
+  {
+    "ref": "C8",
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND"
+      },
+      {
+        "number": "1",
+        "net": "USB_VBUS"
+      }
+    ]
+  },
+  {
+    "ref": "R1",
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND"
+      },
+      {
+        "number": "1",
+        "net": "USB_CC1"
+      }
+    ]
+  },
+  {
+    "ref": "R2",
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND"
+      },
+      {
+        "number": "1",
+        "net": "USB_CC2"
+      }
+    ]
+  },
+  {
+    "ref": "R3",
+    "pins": [
+      {
+        "number": "2",
+        "net": "USB_DP_MCU"
+      },
+      {
+        "number": "1",
+        "net": "USB_DP_CONN"
+      }
+    ]
+  },
+  {
+    "ref": "R4",
+    "pins": [
+      {
+        "number": "2",
+        "net": "USB_DM_MCU"
+      },
+      {
+        "number": "1",
+        "net": "USB_DM_CONN"
+      }
+    ]
+  },
+  {
+    "ref": "R5",
+    "pins": [
+      {
+        "number": "2",
+        "net": "CHG_SDA"
+      },
+      {
+        "number": "1",
+        "net": "VDD_3V3"
+      }
+    ]
+  },
+  {
+    "ref": "R6",
+    "pins": [
+      {
+        "number": "2",
+        "net": "CHG_SCL"
+      },
+      {
+        "number": "1",
+        "net": "VDD_3V3"
+      }
+    ]
+  },
+  {
+    "ref": "R7",
+    "pins": [
+      {
+        "number": "2",
+        "net": "CHG_CE_N"
+      },
+      {
+        "number": "1",
+        "net": "VDD_3V3"
+      }
+    ]
+  },
+  {
+    "ref": "R8",
+    "pins": [
+      {
+        "number": "2",
+        "net": "CHG_INT_N"
+      },
+      {
+        "number": "1",
+        "net": "VDD_3V3"
+      }
+    ]
+  },
+  {
+    "ref": "R9",
+    "pins": [
+      {
+        "number": "2",
+        "net": "CHG_PG_N"
+      },
+      {
+        "number": "1",
+        "net": "VDD_3V3"
+      }
+    ]
+  },
+  {
+    "ref": "R10",
+    "pins": [
+      {
+        "number": "2",
+        "net": "KEY_PREV_N"
+      },
+      {
+        "number": "1",
+        "net": "VDD_3V3"
+      }
+    ]
+  },
+  {
+    "ref": "R11",
+    "pins": [
+      {
+        "number": "2",
+        "net": "KEY_NEXT_N"
+      },
+      {
+        "number": "1",
+        "net": "VDD_3V3"
+      }
+    ]
+  },
+  {
+    "ref": "R12",
+    "pins": [
+      {
+        "number": "2",
+        "net": "KEY_OK_N"
+      },
+      {
+        "number": "1",
+        "net": "VDD_3V3"
+      }
+    ]
+  },
+  {
+    "ref": "SW1",
+    "pins": [
+      {
+        "number": "1",
+        "net": "KEY_PREV_N"
+      },
+      {
+        "number": "3",
+        "net": "GND"
+      },
+      {
+        "number": "2",
+        "net": "KEY_PREV_N"
+      },
+      {
+        "number": "4",
+        "net": "GND"
+      }
+    ]
+  },
+  {
+    "ref": "SW3",
+    "pins": [
+      {
+        "number": "1",
+        "net": "KEY_OK_N"
+      },
+      {
+        "number": "3",
+        "net": "GND"
+      },
+      {
+        "number": "2",
+        "net": "KEY_OK_N"
+      },
+      {
+        "number": "4",
+        "net": "GND"
+      }
+    ]
+  },
+  {
+    "ref": "U1",
+    "pins": [
+      {
+        "number": "1",
+        "net": "GND"
+      },
+      {
+        "number": "2",
+        "net": "GND"
+      },
+      {
+        "number": "3",
+        "net": "KEY_PREV_N"
+      },
+      {
+        "number": "4",
+        "net": "KEY_NEXT_N"
+      },
+      {
+        "number": "5",
+        "net": "KEY_OK_N"
+      },
+      {
+        "number": "6",
+        "net": ""
+      },
+      {
+        "number": "7",
+        "net": ""
+      },
+      {
+        "number": "8",
+        "net": ""
+      },
+      {
+        "number": "9",
+        "net": ""
+      },
+      {
+        "number": "10",
+        "net": ""
+      },
+      {
+        "number": "11",
+        "net": ""
+      },
+      {
+        "number": "12",
+        "net": ""
+      },
+      {
+        "number": "13",
+        "net": ""
+      },
+      {
+        "number": "14",
+        "net": ""
+      },
+      {
+        "number": "15",
+        "net": "GND"
+      },
+      {
+        "number": "16",
+        "net": "CHG_SCL"
+      },
+      {
+        "number": "17",
+        "net": ""
+      },
+      {
+        "number": "18",
+        "net": ""
+      },
+      {
+        "number": "19",
+        "net": "CHG_SDA"
+      },
+      {
+        "number": "20",
+        "net": "CHG_INT_N"
+      },
+      {
+        "number": "21",
+        "net": "CHG_PG_N"
+      },
+      {
+        "number": "22",
+        "net": "CHG_CE_N"
+      },
+      {
+        "number": "23",
+        "net": ""
+      },
+      {
+        "number": "24",
+        "net": "EPD_BUSY_TBD"
+      },
+      {
+        "number": "25",
+        "net": ""
+      },
+      {
+        "number": "26",
+        "net": ""
+      },
+      {
+        "number": "27",
+        "net": "EPD_EN_TBD"
+      },
+      {
+        "number": "28",
+        "net": "VDD_3V3"
+      },
+      {
+        "number": "29",
+        "net": ""
+      },
+      {
+        "number": "30",
+        "net": "VDD_3V3"
+      },
+      {
+        "number": "31",
+        "net": ""
+      },
+      {
+        "number": "32",
+        "net": "USB_VBUS"
+      },
+      {
+        "number": "33",
+        "net": "GND"
+      },
+      {
+        "number": "34",
+        "net": "USB_DM_MCU"
+      },
+      {
+        "number": "35",
+        "net": "USB_DP_MCU"
+      },
+      {
+        "number": "36",
+        "net": "EPD_SCK_TBD"
+      },
+      {
+        "number": "37",
+        "net": "EPD_MOSI_TBD"
+      },
+      {
+        "number": "38",
+        "net": "EPD_CS_N_TBD"
+      },
+      {
+        "number": "39",
+        "net": "EPD_DC_TBD"
+      },
+      {
+        "number": "40",
+        "net": "NRESET"
+      },
+      {
+        "number": "41",
+        "net": "EPD_RESET_N_TBD"
+      },
+      {
+        "number": "42",
+        "net": ""
+      },
+      {
+        "number": "43",
+        "net": ""
+      },
+      {
+        "number": "44",
+        "net": ""
+      },
+      {
+        "number": "45",
+        "net": ""
+      },
+      {
+        "number": "46",
+        "net": ""
+      },
+      {
+        "number": "47",
+        "net": ""
+      },
+      {
+        "number": "48",
+        "net": ""
+      },
+      {
+        "number": "49",
+        "net": ""
+      },
+      {
+        "number": "50",
+        "net": ""
+      },
+      {
+        "number": "51",
+        "net": "SWDIO"
+      },
+      {
+        "number": "52",
+        "net": "NFC1_TBD"
+      },
+      {
+        "number": "53",
+        "net": "SWDCLK"
+      },
+      {
+        "number": "54",
+        "net": "NFC1_TBD"
+      },
+      {
+        "number": "55",
+        "net": "GND"
+      },
+      {
+        "number": "56",
+        "net": ""
+      },
+      {
+        "number": "57",
+        "net": ""
+      },
+      {
+        "number": "58",
+        "net": ""
+      },
+      {
+        "number": "59",
+        "net": ""
+      },
+      {
+        "number": "60",
+        "net": ""
+      },
+      {
+        "number": "61",
+        "net": ""
+      }
+    ]
+  },
+  {
+    "ref": "U2",
+    "pins": [
+      {
+        "number": "1",
+        "net": "SYS"
+      },
+      {
+        "number": "2",
+        "net": "BAT_PACK_TBD"
+      },
+      {
+        "number": "3",
+        "net": "CHG_PG_N"
+      },
+      {
+        "number": "4",
+        "net": "CHG_CE_N"
+      },
+      {
+        "number": "5",
+        "net": "GND"
+      },
+      {
+        "number": "6",
+        "net": "BAT_NTC_TBD"
+      },
+      {
+        "number": "7",
+        "net": "CHG_SDA"
+      },
+      {
+        "number": "8",
+        "net": "CHG_SCL"
+      },
+      {
+        "number": "9",
+        "net": "CHG_INT_N"
+      },
+      {
+        "number": "10",
+        "net": "USB_VBUS"
+      },
+      {
+        "number": "11",
+        "net": "GND"
+      }
+    ]
+  },
+  {
+    "ref": "U3",
+    "pins": [
+      {
+        "number": "5",
+        "net": "VDD_3V3"
+      },
+      {
+        "number": "4",
+        "net": ""
+      },
+      {
+        "number": "1",
+        "net": "SYS"
+      },
+      {
+        "number": "3",
+        "net": "SYS"
+      },
+      {
+        "number": "2",
+        "net": "GND"
+      }
+    ]
+  },
+  {
+    "ref": "J2",
+    "pins": [
+      {
+        "number": "24",
+        "net": "EPD_VCOM"
+      },
+      {
+        "number": "23",
+        "net": "EPD_VGL"
+      },
+      {
+        "number": "22",
+        "net": "EPD_VSNH"
+      },
+      {
+        "number": "21",
+        "net": "EPD_VGH"
+      },
+      {
+        "number": "20",
+        "net": "EPD_VSPH"
+      },
+      {
+        "number": "19",
+        "net": "EPD_VSNL2"
+      },
+      {
+        "number": "18",
+        "net": "EPD_VSNL1"
+      },
+      {
+        "number": "17",
+        "net": "GND"
+      },
+      {
+        "number": "16",
+        "net": "EPD_VSPL2"
+      },
+      {
+        "number": "15",
+        "net": "EPD_VDD"
+      },
+      {
+        "number": "14",
+        "net": "EPD_MOSI_TBD"
+      },
+      {
+        "number": "13",
+        "net": "EPD_SCK_TBD"
+      },
+      {
+        "number": "12",
+        "net": "EPD_CS_N_TBD"
+      },
+      {
+        "number": "11",
+        "net": "EPD_DC_TBD"
+      },
+      {
+        "number": "10",
+        "net": "EPD_RESET_N_TBD"
+      },
+      {
+        "number": "9",
+        "net": "EPD_BUSY_TBD"
+      },
+      {
+        "number": "8",
+        "net": "EPD_BS0"
+      },
+      {
+        "number": "7",
+        "net": ""
+      },
+      {
+        "number": "6",
+        "net": ""
+      },
+      {
+        "number": "5",
+        "net": "EPD_VSPL1"
+      },
+      {
+        "number": "4",
+        "net": "EPD_VDDL"
+      },
+      {
+        "number": "3",
+        "net": "EPD_RESE"
+      },
+      {
+        "number": "2",
+        "net": "EPD_GDR"
+      },
+      {
+        "number": "1",
+        "net": ""
+      },
+      {
+        "number": "25",
+        "net": ""
+      },
+      {
+        "number": "26",
+        "net": ""
+      }
+    ]
+  },
+  {
+    "ref": "U4",
+    "pins": [
+      {
+        "number": "6",
+        "net": "EPD_VDD"
+      },
+      {
+        "number": "5",
+        "net": "EPD_VDD"
+      },
+      {
+        "number": "4",
+        "net": ""
+      },
+      {
+        "number": "3",
+        "net": "EPD_EN_TBD"
+      },
+      {
+        "number": "2",
+        "net": "GND"
+      },
+      {
+        "number": "1",
+        "net": "VDD_3V3"
+      }
+    ]
+  },
+  {
+    "ref": "C9",
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND"
+      },
+      {
+        "number": "1",
+        "net": "VDD_3V3"
+      }
+    ]
+  },
+  {
+    "ref": "C10",
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND"
+      },
+      {
+        "number": "1",
+        "net": "EPD_VDD"
+      }
+    ]
+  },
+  {
+    "ref": "R13",
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND"
+      },
+      {
+        "number": "1",
+        "net": "EPD_EN_TBD"
+      }
+    ]
+  },
+  {
+    "ref": "L1",
+    "pins": [
+      {
+        "number": "1",
+        "net": "EPD_VDD"
+      },
+      {
+        "number": "2",
+        "net": "EPD_SW"
+      }
+    ]
+  },
+  {
+    "ref": "Q1",
+    "pins": [
+      {
+        "number": "3",
+        "net": "EPD_SW"
+      },
+      {
+        "number": "2",
+        "net": "EPD_RESE"
+      },
+      {
+        "number": "1",
+        "net": "EPD_GDR"
+      }
+    ]
+  },
+  {
+    "ref": "R14",
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND"
+      },
+      {
+        "number": "1",
+        "net": "EPD_GDR"
+      }
+    ]
+  },
+  {
+    "ref": "R15",
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND"
+      },
+      {
+        "number": "1",
+        "net": "EPD_RESE"
+      }
+    ]
+  },
+  {
+    "ref": "D1",
+    "pins": [
+      {
+        "number": "2",
+        "net": "EPD_SW"
+      },
+      {
+        "number": "1",
+        "net": "EPD_VPH"
+      }
+    ]
+  },
+  {
+    "ref": "D2",
+    "pins": [
+      {
+        "number": "2",
+        "net": "EPD_PUMP"
+      },
+      {
+        "number": "1",
+        "net": "GND"
+      }
+    ]
+  },
+  {
+    "ref": "D3",
+    "pins": [
+      {
+        "number": "2",
+        "net": "EPD_VGL"
+      },
+      {
+        "number": "1",
+        "net": "EPD_PUMP"
+      }
+    ]
+  },
+  {
+    "ref": "C11",
+    "pins": [
+      {
+        "number": "2",
+        "net": "EPD_PUMP"
+      },
+      {
+        "number": "1",
+        "net": "EPD_SW"
+      }
+    ]
+  },
+  {
+    "ref": "C12",
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND"
+      },
+      {
+        "number": "1",
+        "net": "EPD_VPH"
+      }
+    ]
+  },
+  {
+    "ref": "R16",
+    "pins": [
+      {
+        "number": "2",
+        "net": "EPD_VGH"
+      },
+      {
+        "number": "1",
+        "net": "EPD_VPH"
+      }
+    ]
+  },
+  {
+    "ref": "C13",
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND"
+      },
+      {
+        "number": "1",
+        "net": "EPD_VGL"
+      }
+    ]
+  },
+  {
+    "ref": "R17",
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND"
+      },
+      {
+        "number": "1",
+        "net": "EPD_BS0"
+      }
+    ]
+  },
+  {
+    "ref": "R18",
+    "pins": [
+      {
+        "number": "2",
+        "net": "EPD_BUSY_TBD"
+      },
+      {
+        "number": "1",
+        "net": "EPD_VDD"
+      }
+    ]
+  },
+  {
+    "ref": "C14",
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND"
+      },
+      {
+        "number": "1",
+        "net": "EPD_VDDL"
+      }
+    ]
+  },
+  {
+    "ref": "C15",
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND"
+      },
+      {
+        "number": "1",
+        "net": "EPD_VSPL1"
+      }
+    ]
+  },
+  {
+    "ref": "C16",
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND"
+      },
+      {
+        "number": "1",
+        "net": "EPD_VSPL2"
+      }
+    ]
+  },
+  {
+    "ref": "C17",
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND"
+      },
+      {
+        "number": "1",
+        "net": "EPD_VSNL1"
+      }
+    ]
+  },
+  {
+    "ref": "C18",
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND"
+      },
+      {
+        "number": "1",
+        "net": "EPD_VSNL2"
+      }
+    ]
+  },
+  {
+    "ref": "C19",
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND"
+      },
+      {
+        "number": "1",
+        "net": "EPD_VSPH"
+      }
+    ]
+  },
+  {
+    "ref": "C20",
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND"
+      },
+      {
+        "number": "1",
+        "net": "EPD_VSNH"
+      }
+    ]
+  },
+  {
+    "ref": "C21",
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND"
+      },
+      {
+        "number": "1",
+        "net": "EPD_VGL"
+      }
+    ]
+  },
+  {
+    "ref": "C22",
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND"
+      },
+      {
+        "number": "1",
+        "net": "EPD_VCOM"
+      }
+    ]
+  },
+  {
+    "ref": "U5",
+    "pins": [
+      {
+        "number": "1",
+        "net": "USB_DP_CONN"
+      },
+      {
+        "number": "2",
+        "net": "USB_DM_CONN"
+      },
+      {
+        "number": "3",
+        "net": "GND"
+      }
+    ]
+  },
+  {
+    "ref": "U6",
+    "pins": [
+      {
+        "number": "1",
+        "net": "USB_CC1"
+      },
+      {
+        "number": "2",
+        "net": "USB_CC2"
+      },
+      {
+        "number": "3",
+        "net": "GND"
+      }
+    ]
+  },
+  {
+    "ref": "SW2",
+    "pins": [
+      {
+        "number": "1",
+        "net": "KEY_NEXT_N"
+      },
+      {
+        "number": "3",
+        "net": "GND"
+      },
+      {
+        "number": "2",
+        "net": "KEY_NEXT_N"
+      },
+      {
+        "number": "4",
+        "net": "GND"
+      }
+    ]
+  },
+  {
+    "ref": "C23",
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND"
+      },
+      {
+        "number": "1",
+        "net": "NFC1_TBD"
+      }
+    ]
+  },
+  {
+    "ref": "C24",
+    "pins": [
+      {
+        "number": "2",
+        "net": "GND"
+      },
+      {
+        "number": "1",
+        "net": "NFC1_TBD"
+      }
+    ]
+  },
+  {
+    "ref": "J1",
+    "pins": [
+      {
+        "number": "B8",
+        "net": ""
+      },
+      {
+        "number": "A5",
+        "net": "USB_CC1"
+      },
+      {
+        "number": "B7",
+        "net": "USB_DM_CONN"
+      },
+      {
+        "number": "A6",
+        "net": "USB_DP_CONN"
+      },
+      {
+        "number": "A7",
+        "net": "USB_DM_CONN"
+      },
+      {
+        "number": "B6",
+        "net": "USB_DP_CONN"
+      },
+      {
+        "number": "A8",
+        "net": ""
+      },
+      {
+        "number": "B5",
+        "net": "USB_CC2"
+      },
+      {
+        "number": "B4A9",
+        "net": "USB_VBUS"
+      },
+      {
+        "number": "B1A12",
+        "net": "GND"
+      },
+      {
+        "number": "A4B9",
+        "net": "USB_VBUS"
+      },
+      {
+        "number": "A1B12",
+        "net": "GND"
+      },
+      {
+        "number": "20",
+        "net": "GND"
+      },
+      {
+        "number": "19",
+        "net": "GND"
+      },
+      {
+        "number": "18",
+        "net": "GND"
+      },
+      {
+        "number": "17",
+        "net": "GND"
+      }
+    ]
+  }
+]

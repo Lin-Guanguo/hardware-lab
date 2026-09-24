@@ -1,0 +1,285 @@
+{
+  "status": "READ_ONLY_SPACE_STUDY_NOT_IMPLEMENTED",
+  "battery_options": [
+    {
+      "label": "New short pack",
+      "nominal_lwh_mm": [
+        24,
+        14,
+        3
+      ],
+      "total_length_remainder_mm": 10.899999999999999,
+      "total_width_remainder_mm": 2.6999999999999993,
+      "right_gap_to_pcb_straight_edge_mm": 10.0,
+      "lower_gap_to_pcb_straight_edge_mm": 1.8000000000000007,
+      "board_intersection_mm3": 0.0,
+      "tray_intersection_mm3": 0.0,
+      "lid_intersection_mm3": 0.0,
+      "screen_max_distance_mm": 2.7502908937056096,
+      "screen_max_intersection_mm3": 0.0,
+      "lid_distance_mm": 1.1
+    },
+    {
+      "label": "New long pack",
+      "nominal_lwh_mm": [
+        31,
+        12,
+        3
+      ],
+      "total_length_remainder_mm": 3.8999999999999986,
+      "total_width_remainder_mm": 4.699999999999999,
+      "right_gap_to_pcb_straight_edge_mm": 3.0,
+      "lower_gap_to_pcb_straight_edge_mm": 3.8000000000000007,
+      "board_intersection_mm3": 0.0,
+      "tray_intersection_mm3": 0.0,
+      "lid_intersection_mm3": 0.0,
+      "screen_max_distance_mm": 4.750168418066879,
+      "screen_max_intersection_mm3": 0.0,
+      "lid_distance_mm": 1.1
+    },
+    {
+      "label": "Previous wide pack",
+      "nominal_lwh_mm": [
+        32,
+        20,
+        3
+      ],
+      "total_length_remainder_mm": 2.8999999999999986,
+      "total_width_remainder_mm": -3.3000000000000007,
+      "right_gap_to_pcb_straight_edge_mm": 2.0,
+      "lower_gap_to_pcb_straight_edge_mm": -4.199999999999999,
+      "board_intersection_mm3": 107.19709702600659,
+      "tray_intersection_mm3": 0.0,
+      "lid_intersection_mm3": 0.0,
+      "screen_max_distance_mm": 0.040000000000000036,
+      "screen_max_intersection_mm3": 0.0,
+      "lid_distance_mm": 1.1
+    }
+  ],
+  "battery_length_reported_mm": 31,
+  "battery_length_basis": "User reports purchasing nominal 3x14x24 and 3x12x31 mm batteries plus a previous 3x20x32 mm option. Complete pack boundaries and protection inclusion are unconfirmed; new packs not received.",
+  "pack_width_height_assumed_mm": [
+    14,
+    3.4
+  ],
+  "protected_pack_review_envelope_mm": [
+    32.5,
+    14,
+    3.4
+  ],
+  "case_height_mm": 5.8,
+  "options": [
+    {
+      "name": "Current three keys",
+      "cutout_x_mm": 35.5,
+      "moves": {},
+      "remove": [],
+      "nominal_straight_cavity_length_mm": 34.9,
+      "nominal_straight_cavity_width_mm": 16.7,
+      "total_length_remainder_31_mm": 3.8999999999999986,
+      "total_length_remainder_32_5_mm": 2.3999999999999986,
+      "right_gap_31_mm": 3.0,
+      "right_gap_32_5_mm": 1.5,
+      "left_gap_mm": 0.9,
+      "battery31_to_board_distance_mm": 1.8127355854709997,
+      "battery31_to_tray_distance_mm": 0.09999999999999998,
+      "battery31_to_lid_distance_mm": 0.7000000000000002,
+      "envelope_to_board_distance_mm": 1.5127711455419544,
+      "shifted_switch_neighbours": [],
+      "pads_cut_by_proposed_opening": [],
+      "pads_near_cutout": [
+        {
+          "ref": "SW1",
+          "pin": "1",
+          "left_pad_to_cutout_mm": 0.5997500000000002
+        },
+        {
+          "ref": "SW1",
+          "pin": "3",
+          "left_pad_to_cutout_mm": 0.5997500000000002
+        },
+        {
+          "ref": "SW3",
+          "pin": "1",
+          "left_pad_to_cutout_mm": 0.5997500000000002
+        },
+        {
+          "ref": "SW3",
+          "pin": "3",
+          "left_pad_to_cutout_mm": 0.5997500000000002
+        }
+      ],
+      "switch_centres_mm": {
+        "SW1": [
+          40.10000108,
+          4.500001160000001
+        ],
+        "SW3": [
+          40.10000108,
+          14.399999139999998
+        ],
+        "SW2": [
+          48.59999932,
+          8.80000526
+        ]
+      }
+    },
+    {
+      "name": "Three keys, shift 1 mm",
+      "cutout_x_mm": 36.5,
+      "moves": {
+        "SW1": [
+          1,
+          0
+        ],
+        "SW2": [
+          1,
+          0
+        ],
+        "SW3": [
+          1,
+          0
+        ]
+      },
+      "remove": [],
+      "nominal_straight_cavity_length_mm": 35.9,
+      "nominal_straight_cavity_width_mm": 16.7,
+      "total_length_remainder_31_mm": 4.899999999999999,
+      "total_length_remainder_32_5_mm": 3.3999999999999986,
+      "right_gap_31_mm": 4.0,
+      "right_gap_32_5_mm": 2.5,
+      "left_gap_mm": 0.9,
+      "battery31_to_board_distance_mm": 1.8127355854709997,
+      "battery31_to_tray_distance_mm": 0.09999999999999998,
+      "battery31_to_lid_distance_mm": 0.7000000000000002,
+      "envelope_to_board_distance_mm": 1.8127355854709997,
+      "shifted_switch_neighbours": [
+        {
+          "a": "SW3",
+          "b": "R8",
+          "distance_mm": 0.5948806149790009,
+          "intersection_mm3": 0.0
+        },
+        {
+          "a": "SW3",
+          "b": "C8",
+          "distance_mm": 0.8000101600209959,
+          "intersection_mm3": 0.0
+        }
+      ],
+      "pads_cut_by_proposed_opening": [],
+      "pads_near_cutout": [
+        {
+          "ref": "SW1",
+          "pin": "1",
+          "left_pad_to_cutout_mm": 0.5997500000000002
+        },
+        {
+          "ref": "SW1",
+          "pin": "3",
+          "left_pad_to_cutout_mm": 0.5997500000000002
+        },
+        {
+          "ref": "SW3",
+          "pin": "1",
+          "left_pad_to_cutout_mm": 0.5997500000000002
+        },
+        {
+          "ref": "SW3",
+          "pin": "3",
+          "left_pad_to_cutout_mm": 0.5997500000000002
+        }
+      ],
+      "switch_centres_mm": {
+        "SW1": [
+          41.10000108,
+          4.500001160000001
+        ],
+        "SW3": [
+          41.10000108,
+          14.399999139999998
+        ],
+        "SW2": [
+          49.59999932,
+          8.80000526
+        ]
+      }
+    },
+    {
+      "name": "Two keys, expand 4 mm",
+      "cutout_x_mm": 39.5,
+      "moves": {
+        "SW1": [
+          4,
+          0
+        ],
+        "SW3": [
+          4,
+          -1.9
+        ]
+      },
+      "remove": [
+        "SW2"
+      ],
+      "nominal_straight_cavity_length_mm": 38.9,
+      "nominal_straight_cavity_width_mm": 16.7,
+      "total_length_remainder_31_mm": 7.899999999999999,
+      "total_length_remainder_32_5_mm": 6.399999999999999,
+      "right_gap_31_mm": 7.0,
+      "right_gap_32_5_mm": 5.5,
+      "left_gap_mm": 0.9,
+      "battery31_to_board_distance_mm": 1.8127355854709997,
+      "battery31_to_tray_distance_mm": 0.09999999999999998,
+      "battery31_to_lid_distance_mm": 0.7000000000000002,
+      "envelope_to_board_distance_mm": 1.8127355854709997,
+      "shifted_switch_neighbours": [
+        {
+          "a": "SW3",
+          "b": "C8",
+          "distance_mm": 0.8998780797570003,
+          "intersection_mm3": 0.0
+        }
+      ],
+      "pads_cut_by_proposed_opening": [],
+      "pads_near_cutout": [
+        {
+          "ref": "SW1",
+          "pin": "1",
+          "left_pad_to_cutout_mm": 0.5997500000000002
+        },
+        {
+          "ref": "SW1",
+          "pin": "3",
+          "left_pad_to_cutout_mm": 0.5997500000000002
+        },
+        {
+          "ref": "SW3",
+          "pin": "1",
+          "left_pad_to_cutout_mm": 0.5997500000000002
+        },
+        {
+          "ref": "SW3",
+          "pin": "3",
+          "left_pad_to_cutout_mm": 0.5997500000000002
+        }
+      ],
+      "switch_centres_mm": {
+        "SW1": [
+          44.10000108,
+          4.500001160000001
+        ],
+        "SW3": [
+          44.10000108,
+          12.499999139999998
+        ]
+      }
+    }
+  ],
+  "limits": [
+    "Straight cavity dimensions are geometric spans, not guaranteed maximum rectangular pack sizes; corner radii and tolerances remain.",
+    "Pocket extension is a local CAD subtraction study, not a manufacturable final profile.",
+    "Native PCB, schematic, lid and key caps have not been modified.",
+    "Selected changes require native DRC, full cap-travel/wire/support checks and rerendered CAD.",
+    "Battery width, thickness, complete sealed length and lead exit remain unmeasured."
+  ]
+}

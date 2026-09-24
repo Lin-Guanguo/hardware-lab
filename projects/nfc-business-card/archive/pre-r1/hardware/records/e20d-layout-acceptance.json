@@ -1,0 +1,77 @@
+{
+  "recorded_at": "2026-09-24T00:13:31.719260+08:00",
+  "revision": "E20D",
+  "status": "LAYOUT_ACCEPTED_UNROUTED_NOT_FOR_ORDER",
+  "accepted_by": "Lin Guanguo",
+  "acceptance_scope": "Arrangement shown in enclosure/renders/e20d-front-rear.png accepted as the layout baseline for completion. Electrical, RF and physical assembly approval is not implied.",
+  "pcb_uuid": "8033127c48771f3b",
+  "pcb_name": "E20D Front Controls Rear NFC - Unrouted",
+  "native_project_from_repository_root": "eda/NFC-Business-Card-84x52-E14-Battery-Layout.eprj2",
+  "counts": {
+    "components": 58,
+    "pads": 248,
+    "tracks": 0,
+    "vias": 0
+  },
+  "preserve": [
+    "Front display and all three keys",
+    "Rear-side NFC reservation behind the screen",
+    "USB centred on right edge",
+    "Selected nominal 31 x 12 x 3 mm battery pocket",
+    "All-printed clear enclosure without crossbeams",
+    "Screen active area registered to the case aperture"
+  ],
+  "validation_provenance": {
+    "record": "hardware/records/e20d-validation.json",
+    "artifact_hashes_checked": 15,
+    "hash_mismatches": 0
+  },
+  "manufacturing_release": false,
+  "open_gates": [
+    "Signal and NFC routing",
+    "RF tuning with actual screen and enclosure",
+    "Battery complete-pack dimensions and leads",
+    "Final FPC bend and printed assembly tolerance",
+    "Remaining electrical values and manufacturing qualification"
+  ],
+  "sha256": {
+    "hardware/e20d-design.json": "b8f757c1f1214b4705886bd03bb310f938fece3abf526b90b96feff3426ef9f5",
+    "hardware/e20d-placement.json": "387d6521fffdf57fafd7d7e7591d5a91e009588c7c72dd8b4424ad410a6f1ef7",
+    "hardware/e20d-refinement.json": "45dd6244742c2c44cb079aa1396a313e436838dcf6d18bfbe8d0d7b64ed23c93",
+    "hardware/records/e20d-placement-snapshot.json": "1dcf2b8d76eeb10f95d1cc8d1efef405c1651c0f6f73c119272995a5f24ebaee",
+    "hardware/records/e20d-layout-pins.json": "39086cabdb6bcbaf110680ebd12c84055af71542d2ba84a85d5dda945a1a60cf",
+    "hardware/records/e20d-placement-drc.json": "c3fa2edc39e22652df24d54a74434d902da338b84f81b157e64af84bc4fbbaad",
+    "hardware/records/e20d-schematic.enet": "4c7d7196fee316ea16ba23bb49cca77c9b156ef0834e1db6377a69ff7739d3be",
+    "hardware/records/e20d-designators.json": "284ed740e68ec07f9819bfa55d1c021731a4b7e212828095319b0d1518af10d9",
+    "hardware/records/e20d-body-fit.json": "3a38caa238767b3727e19955a407e166ca9c0c18e6ede51c73cd41b4b2b31658",
+    "hardware/records/e20d-fpc-review.json": "4c36a89a9017db1848fc6504405c8e1e73ce9755f9bb0bc270ffe27448c531b1",
+    "artifacts/e20d-front-rear/e20d-refined-native.step": "bdcdd1e145a93d433a5c6b921a405ee54e4145302a34248ccb58eeef885c3aa8",
+    "artifacts/e20d-front-rear/e20d-profile-review.zip": "8cee52298221c66358effacee36010dd60765636726e4c17dc3d58ac36e92478",
+    "enclosure/e20d-front-rear-refined-5.8/e20-clear-assembly.FCStd": "6f20c4184f1cee5711ca43ba40ab047a3ae8aef0ddb6ccdcaa4daa67f84c587a",
+    "enclosure/e20d-front-rear-refined-5.8/e20-clear-assembly.step": "f7b6c246df9818be5b4bec6ac93511dfda9adc7b3b0d0a298c57eb785029952f",
+    "enclosure/e20d-front-rear-refined-5.8/e20-clear-report.json": "5e7d1fda1067f7e9b6aa59c5b96a8590ef30add2cd72a1b4c7d046d2c5eaba60",
+    "hardware/records/e20d-validation.json": "195d25b7e2aef86cb9135e90bf5a8b9020579bdd7d2ac1ee05f4fcb634588a2c",
+    "enclosure/renders/e20d-front-rear.png": "775bec252ac7854466abf405ddaa18d284b2da9c5144a9d636cbb2dfe25ea187",
+    "enclosure/renders/e20d-front-rear.svg": "ddac1eae1a7ddaa599f1e6c395130ff315de22718f975c70160f492bfd71117b",
+    "enclosure/renders/e20d-screen-fpc-registration.png": "e278086e9c641efa7e4fd06867c5bca6de47d4835fc937fb411426a1361ac5f8",
+    "enclosure/renders/e20d-screen-fpc-registration.svg": "b7603d12bd229acb1d10a0098c8cdb81a670f1edbfcb2ba16cf2eb1f76e3ca29",
+    "enclosure/e20d-front-rear-refined-5.8/e20-clear-tray.stl": "cb7df97364ffe736361ceee21597a74b56eb0a56893a7a0a829f49d9dec158d8",
+    "enclosure/e20d-front-rear-refined-5.8/e20-clear-lid.stl": "7a0132f1a38ef464cba55b779d88b16def12e00ebb0c77a759a1a723111154f1",
+    "enclosure/e20d-front-rear-refined-5.8/e20-clear-keys.stl": "f3d7d724e762c7afbbef71c95ef46e385af2aa03f470f92bac04dd72fa3335da",
+    "enclosure/e20d-front-rear-refined-5.8/e20-clear-assembled-iso.png": "0d1960883f20d195bc160c5c6b156f9bc192add04d4cd0c76a64f831b2820b10",
+    "enclosure/e20d-front-rear-refined-5.8/design-inputs.json": "b8f757c1f1214b4705886bd03bb310f938fece3abf526b90b96feff3426ef9f5"
+  },
+  "live_snapshot_check": {
+    "checked_at": "2026-09-24T00:16:56.094775+08:00",
+    "source": "Read-only export from the active native E20D PCB through the EDA API",
+    "compared_to": "hardware/records/e20d-placement-snapshot.json",
+    "changed_sections": [],
+    "counts": {
+      "components": 58,
+      "pads": 248,
+      "tracks": 0,
+      "vias": 0,
+      "pour_borders": 2
+    }
+  }
+}

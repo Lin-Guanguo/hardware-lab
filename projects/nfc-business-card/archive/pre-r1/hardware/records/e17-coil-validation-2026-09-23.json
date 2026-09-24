@@ -1,0 +1,74 @@
+{
+  "date": "2026-09-23",
+  "eda_project_sha256": "435f7f953fd8ff0058a38863e76b60185f28a48cc7da7996f4f1ef61f5eb9bf2",
+  "project_sqlite_quick_check": "ok",
+  "boards": {
+    "Board1_2": {
+      "purpose": "E16 no-coil baseline",
+      "components": 56,
+      "pads": 244,
+      "copper_lines": 791,
+      "vias": 168,
+      "native_drc_leaves": 24,
+      "nonbaseline_drc_leaves": 0,
+      "schematic_short_flags": 0,
+      "u1_pin_52_net": "NFC1_TBD",
+      "u1_pin_54_net": "NFC2_TBD"
+    },
+    "Board1_3": {
+      "purpose": "E17 six-turn on-board NFC coil study",
+      "components": 56,
+      "pads": 244,
+      "copper_lines": 820,
+      "vias": 170,
+      "native_drc": {
+        "clearance_error_board_outline_to_smd_pad": 12,
+        "same_footprint_board_outline_to_smd_pad": 12,
+        "nonbaseline_leaves": 0
+      },
+      "schematic_short_flags": 1,
+      "u1_pin_52_net": "NFC1_TBD",
+      "u1_pin_54_net": "NFC1_TBD",
+      "pin_netlist": {
+        "schematic_refs": 56,
+        "pcb_refs": 56,
+        "pins": 234,
+        "mismatches": 0
+      },
+      "copper_connectivity": {
+        "nets_checked": 47,
+        "split_nets": 0,
+        "dead_ends": 0,
+        "ground_reach_trusted": false
+      },
+      "coil_route": {
+        "tracks_added": 29,
+        "vias_added": 2,
+        "minimum_within_route_copper_gap_mm": 0.15,
+        "offline_violations": 0
+      },
+      "manufacture_export": {
+        "original_consistency_checker_ok": true,
+        "strengthened_outline_checker_ok": false,
+        "outline_issues": ["GKO has an extra open J1 guide path", "GME has a conflicting full-size rectangle"],
+        "gerber_members": 17,
+        "via_drill_hits": 170,
+        "bom_designators": 56,
+        "cpl_designators": 56
+      },
+      "cad": {
+        "board_clearance_ok": true,
+        "real_board_intrusions": 0,
+        "v7_enclosure_fit_ok": true,
+        "real_shell_collisions": 0,
+        "rib_collisions": 0,
+        "cap_collisions": 0
+      },
+      "release_ready": false,
+      "open_rf_work": [
+        "Two matched NFC tuning capacitor positions are absent from the schematic and PCB.",
+        "Antenna inductance, resonance, metal loading, and reader range are unmeasured."
+      ]
+    }
+  }
+}

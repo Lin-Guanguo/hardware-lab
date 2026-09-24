@@ -1,0 +1,2237 @@
+[
+  {
+    "from": "eda/NFC-Business-Card-84x52-E10-Button-Right.eprj2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card-84x52-E10-Button-Right.eprj2",
+    "sha256_before": "79135016f1e28b78cfe472339bdf4de035864e50a0d9d10494efbb7d1563ceb1"
+  },
+  {
+    "from": "eda/NFC-Business-Card-84x52-E11-Data-Fanout.eprj2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card-84x52-E11-Data-Fanout.eprj2",
+    "sha256_before": "24ab78db01384562f1e54d96564ce0828845ac5455e1dc2d4cdcf25f594e7e01"
+  },
+  {
+    "from": "eda/NFC-Business-Card-84x52-E12-Long-Battery.eprj2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card-84x52-E12-Long-Battery.eprj2",
+    "sha256_before": "dbaec12f8deff86bb29315c2a9708b143cb3114081ccd694a62f26a46dff694d"
+  },
+  {
+    "from": "eda/NFC-Business-Card-84x52-E13-Routing.eprj2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card-84x52-E13-Routing.eprj2",
+    "sha256_before": "dd2a844548959420047e0c572959d3bc9c4d884d62b0d3285d0bb99411c41fad"
+  },
+  {
+    "from": "eda/NFC-Business-Card-84x52-E14-Battery-Layout.before-battery-cutout-20260923.eprj2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card-84x52-E14-Battery-Layout.before-battery-cutout-20260923.eprj2",
+    "sha256_before": "bed3b3a3bcb2b597a223baa66712b0874d65099d32254dbc19c29ff12fbff133"
+  },
+  {
+    "from": "eda/NFC-Business-Card-84x52-E14-Battery-Layout.before-board-link-20260923.eprj2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card-84x52-E14-Battery-Layout.before-board-link-20260923.eprj2",
+    "sha256_before": "2cce9c560c7ef62f8253f727ee4204249bd841a8f7755274265a675b19e1a4fb"
+  },
+  {
+    "from": "eda/NFC-Business-Card-84x52-E14-Battery-Layout.before-epd-autoroute-20260922.eprj2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card-84x52-E14-Battery-Layout.before-epd-autoroute-20260922.eprj2",
+    "sha256_before": "f882085a9490dae46ae7bb4037a795858f80f7f7bdc99dfe6fd8f7d66708ac46"
+  },
+  {
+    "from": "eda/NFC-Business-Card-84x52-E14-Battery-Layout.before-nfc-feed-20260923.eprj2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card-84x52-E14-Battery-Layout.before-nfc-feed-20260923.eprj2",
+    "sha256_before": "518d2be7cc938f78cd4e24620f70cfd4b50b73b82b847191d130a40c3a84e371"
+  },
+  {
+    "from": "eda/NFC-Business-Card-84x52-E14-Battery-Layout.before-offline-router-20260922.eprj2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card-84x52-E14-Battery-Layout.before-offline-router-20260922.eprj2",
+    "sha256_before": "c2aaff8ad2f631998ff4e0750fb5aaa5641179fdfa6f99d59ab1edd5e403118b"
+  },
+  {
+    "from": "eda/NFC-Business-Card-84x52-E14-Battery-Layout.before-outline-20260922.eprj2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card-84x52-E14-Battery-Layout.before-outline-20260922.eprj2",
+    "sha256_before": "947cdb047bc5c6fdec697bdba0b9072fd75492d4546043b674dac1c8fa059678"
+  },
+  {
+    "from": "eda/NFC-Business-Card-84x52-E14-Battery-Layout.before-routing-20260922.eprj2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card-84x52-E14-Battery-Layout.before-routing-20260922.eprj2",
+    "sha256_before": "895073062ef668d676b4bb4559bacd8d6dd6928e4a330b9bacb6b11b2c60d3de"
+  },
+  {
+    "from": "eda/NFC-Business-Card-84x52-E14-Battery-Layout.before-three-keys-20260923.eprj2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card-84x52-E14-Battery-Layout.before-three-keys-20260923.eprj2",
+    "sha256_before": "73e8d2b6eb18908015919da1a5f1eed1b0d6fba6cb44bf796fe44a41d43c29d9"
+  },
+  {
+    "from": "eda/NFC-Business-Card-84x52-E14-Battery-Layout.before-tidy-20260923.eprj2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card-84x52-E14-Battery-Layout.before-tidy-20260923.eprj2",
+    "sha256_before": "9bc265fd75170da1cc1fd6ed66c4926fc141a3a3ecd56a7bc252827230c91825"
+  },
+  {
+    "from": "eda/NFC-Business-Card-84x52-E14-Battery-Layout.before-two-keys-20260923.eprj2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card-84x52-E14-Battery-Layout.before-two-keys-20260923.eprj2",
+    "sha256_before": "55f2d23f3aa66216ab54887af42b40d7e29abcaf4b1296a8b1eaeb8b9bbbe483"
+  },
+  {
+    "from": "eda/NFC-Business-Card-84x52-E14-Battery-Layout.before-usb-notch-datum-20260923.eprj2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card-84x52-E14-Battery-Layout.before-usb-notch-datum-20260923.eprj2",
+    "sha256_before": "eaecf229865f7436561a63130025b3a8f84111b8ac3beb80e2e1517b6b16afe6"
+  },
+  {
+    "from": "eda/NFC-Business-Card-84x52-E14-Battery-Layout.eprj2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card-84x52-E14-Battery-Layout.eprj2",
+    "sha256_before": "b0bc26131d192a988bc6dc553078533c3efec7fd4274a61e1dc63050a1d8f958"
+  },
+  {
+    "from": "eda/NFC-Business-Card-84x52-E14-Battery-Layout_backup/NFC-Business-Card-84x52-E14-Battery-Layout_2026-09-22-01-36.epro2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card-84x52-E14-Battery-Layout_backup/NFC-Business-Card-84x52-E14-Battery-Layout_2026-09-22-01-36.epro2",
+    "sha256_before": "58af8754bfa18762380ea42151bd7817e5dc11b243541a274dd3f169e2893a6a"
+  },
+  {
+    "from": "eda/NFC-Business-Card-84x52-E14-Battery-Layout_backup/NFC-Business-Card-84x52-E14-Battery-Layout_2026-09-22-21-10.epro2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card-84x52-E14-Battery-Layout_backup/NFC-Business-Card-84x52-E14-Battery-Layout_2026-09-22-21-10.epro2",
+    "sha256_before": "15e00b24e2487485fa8cb34711ef6bb58a40188f35d68b7cfd7e150eeeeb5d08"
+  },
+  {
+    "from": "eda/NFC-Business-Card-84x52-E14-Battery-Layout_backup/NFC-Business-Card-84x52-E14-Battery-Layout_2026-09-23-00-22.epro2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card-84x52-E14-Battery-Layout_backup/NFC-Business-Card-84x52-E14-Battery-Layout_2026-09-23-00-22.epro2",
+    "sha256_before": "23a144a26f3f92f9fb9b606f79c6d6aa53d9a08b98548f081800e7893ad436e4"
+  },
+  {
+    "from": "eda/NFC-Business-Card-84x52-E14-Battery-Layout_backup/NFC-Business-Card-84x52-E14-Battery-Layout_2026-09-23-15-56.epro2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card-84x52-E14-Battery-Layout_backup/NFC-Business-Card-84x52-E14-Battery-Layout_2026-09-23-15-56.epro2",
+    "sha256_before": "f9b1cffc9ab4bf08d8f1f5994cc2ebf72412b83888b463fdba7a31be43b72bb9"
+  },
+  {
+    "from": "eda/NFC-Business-Card-84x52-E14-Battery-Layout_backup/NFC-Business-Card-84x52-E14-Battery-Layout_2026-09-23-20-56.epro2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card-84x52-E14-Battery-Layout_backup/NFC-Business-Card-84x52-E14-Battery-Layout_2026-09-23-20-56.epro2",
+    "sha256_before": "039261d551e7d1441876471c3151dcc283301fd177d715eda34312df0183736b"
+  },
+  {
+    "from": "eda/NFC-Business-Card-84x52-E6-Blocks.eprj2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card-84x52-E6-Blocks.eprj2",
+    "sha256_before": "9673c67d2732f5acf0ff1419f8c6896eb8a2d59f760457babaaa117ca6ae5a79"
+  },
+  {
+    "from": "eda/NFC-Business-Card-84x52-E6.eprj2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card-84x52-E6.eprj2",
+    "sha256_before": "5f62b2cf47ed2c33f1bd5d1bbc570b59ea47767588e385811ea9cb816cb43a60"
+  },
+  {
+    "from": "eda/NFC-Business-Card-84x52-E7-Placement.eprj2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card-84x52-E7-Placement.eprj2",
+    "sha256_before": "4d82197ed719dc4470aff88431ba5adb622c2eb3ddb0292de0835b787d7c739c"
+  },
+  {
+    "from": "eda/NFC-Business-Card-84x52-E7-Placement_backup/NFC-Business-Card-84x52-E7-Placement_2026-09-21-20-52.epro2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card-84x52-E7-Placement_backup/NFC-Business-Card-84x52-E7-Placement_2026-09-21-20-52.epro2",
+    "sha256_before": "4f064086552c92e5fc52f10229d4cc47f7f300be6016c480b52b0de45c12aa6f"
+  },
+  {
+    "from": "eda/NFC-Business-Card-84x52-E8-USB-Left.eprj2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card-84x52-E8-USB-Left.eprj2",
+    "sha256_before": "138e5eb4f24f30b52bfbcace9ef9b0d3e98591f53caae85b091fd31c3a71f67f"
+  },
+  {
+    "from": "eda/NFC-Business-Card-84x52-E9-USB-Local-Compact.eprj2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card-84x52-E9-USB-Local-Compact.eprj2",
+    "sha256_before": "25932f0ed981cf046bb666d9eafbc3f614374f81fde371f9ddc640b126b1e5b3"
+  },
+  {
+    "from": "eda/NFC-Business-Card-84x52-E9-USB-Local-Compact_backup/NFC-Business-Card-84x52-E9-USB-Local-Compact_2026-09-21-23-17.epro2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card-84x52-E9-USB-Local-Compact_backup/NFC-Business-Card-84x52-E9-USB-Local-Compact_2026-09-21-23-17.epro2",
+    "sha256_before": "239e388ead1366e7400a56719786d609728c5d61ee1aefbc7726c2834925f828"
+  },
+  {
+    "from": "eda/NFC-Business-Card-84x52.eprj2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card-84x52.eprj2",
+    "sha256_before": "98fe5a502f2351bb396d59a4503c1ad02d01d38bc0ad5e6f91fb1f59190b1333"
+  },
+  {
+    "from": "eda/NFC-Business-Card-Bottom-USB.eprj2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card-Bottom-USB.eprj2",
+    "sha256_before": "0764280b768b521fceec207c6ac0b28015f0d6c610466ad5858c72c134f16a18"
+  },
+  {
+    "from": "eda/NFC-Business-Card-Bottom-USB_backup/NFC-Business-Card-Bottom-USB_2026-09-20-22-32.epro2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card-Bottom-USB_backup/NFC-Business-Card-Bottom-USB_2026-09-20-22-32.epro2",
+    "sha256_before": "d546fd6cc65b631b8650f33d7dc2252e6bd24cf06e9e2a79fe0b029cc5a98552"
+  },
+  {
+    "from": "eda/NFC-Business-Card.eprj2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card.eprj2",
+    "sha256_before": "7dededf7e1f92e3d770fc36d6e773b39e00b73aaa307562a8f4217e134e3a46c"
+  },
+  {
+    "from": "eda/NFC-Business-Card_backup/NFC-Business-Card_2026-09-20-20-17.epro2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card_backup/NFC-Business-Card_2026-09-20-20-17.epro2",
+    "sha256_before": "197e7e2fa33202d512e19ddd488dd7c7f05c47ee3c0345ec6de1247ab4e001f3"
+  },
+  {
+    "from": "eda/NFC-Business-Card_backup/NFC-Business-Card_2026-09-20-21-17.epro2",
+    "to": "eda/archive/nfc-business-card/NFC-Business-Card_backup/NFC-Business-Card_2026-09-20-21-17.epro2",
+    "sha256_before": "2d098eaa8646b3596480bc67b0905ebd9cd7018f56c163e72d8bab4439b5e57d"
+  },
+  {
+    "from": "projects/nfc-business-card/docs/design-start.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/docs/design-start.md",
+    "sha256_before": "0a6c5b724e2603a56cc63ac28e2a87e15232fbcffc430d7b6dbeba9fd198a771"
+  },
+  {
+    "from": "projects/nfc-business-card/docs/development-plan.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/docs/development-plan.md",
+    "sha256_before": "3e06a6048b1ba04f80167ff4be274568bb21f5b0ab361adc5147dd5a9d4ac9f5"
+  },
+  {
+    "from": "projects/nfc-business-card/docs/nfc-next-version-options.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/docs/nfc-next-version-options.md",
+    "sha256_before": "1f22c299a34478e735c3895c6e47e470c46842c30749c05ba6b6e962b5ca152c"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/card-holder-option.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/card-holder-option.md",
+    "sha256_before": "bffe3e43e09c093a169e67ef1b750d2e5be14fa17177e06e9d376ea6308c2203"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/compact-layout-comparison.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/compact-layout-comparison.png",
+    "sha256_before": "d6799fe52e14897558ec27454ea75d24b36b4a8f9ec7c813fb580a0746b7a358"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/compact-layout-comparison.svg",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/compact-layout-comparison.svg",
+    "sha256_before": "fccb62f9758dcd9d8a7beef032f01a8ba3dff1dfa6f937a7dc3b3996425e3130"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/compact-layout-review.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/compact-layout-review.json",
+    "sha256_before": "da3842482519ce2886a2e04323ec43b0961bb1ddca6054dd76c2ba73cbe91c36"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/compact-layout.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/compact-layout.md",
+    "sha256_before": "8553e5ed1cb801ee83ff0e072cb5d8a9750bd3a59ad0ead8a43f24a1da011a3d"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e14-enclosure-v1.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e14-enclosure-v1.py",
+    "sha256_before": "7b4b91a6451c1120cdcfaa057ce09c2fd08b3c231a05f2c97ce72cd5877904c9"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e14-enclosure-v2-eda-coordinate.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e14-enclosure-v2-eda-coordinate.py",
+    "sha256_before": "b33258ad7f4ba4260a38bb34234e9d76dadd8ecd2b9c2e9498b037e86364adad"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e14-layout-study.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e14-layout-study.py",
+    "sha256_before": "545b134b81e603ed473a1cff702e49a4141f254142321788075eb81f6158c5fe"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e16-enclosure-right-mid-usb-v2.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e16-enclosure-right-mid-usb-v2.py",
+    "sha256_before": "2c84ab68be878daeabdae79333ec8305eee153a548f2731468402a65cef79bc8"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e16-enclosure-right-mid-usb-v3.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e16-enclosure-right-mid-usb-v3.py",
+    "sha256_before": "b1540bf80dcffaa7f047ecacbe318a958f9e4d1b66ada01b2b7f2d9cf6dd6792"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e16-enclosure-right-mid-usb-v4.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e16-enclosure-right-mid-usb-v4.py",
+    "sha256_before": "86103b299c16e70d812d670d1d0f37230b9f86ba23d108592c9a3e90f8d200c4"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e16-enclosure-right-mid-usb-v5.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e16-enclosure-right-mid-usb-v5.py",
+    "sha256_before": "625ec8bfd03ba07a8fdc6d0bb647dc745e0e5f5a1adedb82222b41f8ab5ef599"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e16-enclosure-right-mid-usb-v6.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e16-enclosure-right-mid-usb-v6.py",
+    "sha256_before": "ff839ee53ab6951eeb5a3b1f5c23c3f48fe65d4e10a14ada9fd2b63916470df3"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e16-enclosure-right-mid-usb-v7.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e16-enclosure-right-mid-usb-v7.py",
+    "sha256_before": "202b1539c61ac9f6c8224a8e841d78c66d09a5dc4adc5cc33668d59146fcb825"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e16-enclosure-right-mid-usb.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e16-enclosure-right-mid-usb.py",
+    "sha256_before": "b467c82644400449cd16b45f89831b31bba5495834e89005edcc3930ecf2ada6"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-clear-5.8/design-inputs.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-clear-5.8/design-inputs.json",
+    "sha256_before": "766126b17325ddc2aee86f4a299bc8a5dfe367c9d99cf9b2db9702721b9f9c85"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-clear-5.8/e20-clear-assembly.FCStd",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-clear-5.8/e20-clear-assembly.FCStd",
+    "sha256_before": "17641608514b7cb34413083eeacd79d33b504348f6ad90a91ac14c5faa3bff90"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-clear-5.8/e20-clear-assembly.step",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-clear-5.8/e20-clear-assembly.step",
+    "sha256_before": "7a0fee30286b72c8943c6a6445c7b6f8a8e9f5090cecc7b799d8ff525c372292"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-clear-5.8/e20-clear-keys.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-clear-5.8/e20-clear-keys.stl",
+    "sha256_before": "ce121593e8153d07e4fb2a7ff3bb4bd547bc105c742a0518394e06a82f62f965"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-clear-5.8/e20-clear-lid.step",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-clear-5.8/e20-clear-lid.step",
+    "sha256_before": "6b99174decd72b4648b965cb352c2562a8b8aa2a4277fe7fdaccc22604adecea"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-clear-5.8/e20-clear-lid.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-clear-5.8/e20-clear-lid.stl",
+    "sha256_before": "56ba7c4950544dbe42dd361247e169c944b3793172b98ae910ef61cd213c250c"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-clear-5.8/e20-clear-report.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-clear-5.8/e20-clear-report.json",
+    "sha256_before": "11d914f70272f307bfc64bc07863aef684eb14dd317c995944af6741e46a93dd"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-clear-5.8/e20-clear-tray.step",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-clear-5.8/e20-clear-tray.step",
+    "sha256_before": "1ccb59ffdf858cf28cd6ecebaeb0be947d35291387eefc50b5bcfeb613c9ff59"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-clear-5.8/e20-clear-tray.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-clear-5.8/e20-clear-tray.stl",
+    "sha256_before": "c772fbc4922eb0edd8098f276271d829a1da7b58a2dac8540a9dcdf8e52ab5f9"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-clear-6.2/design-inputs.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-clear-6.2/design-inputs.json",
+    "sha256_before": "766126b17325ddc2aee86f4a299bc8a5dfe367c9d99cf9b2db9702721b9f9c85"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-clear-6.2/e20-clear-assembled-iso.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-clear-6.2/e20-clear-assembled-iso.png",
+    "sha256_before": "008fe872be4b2f0bc0e919140d2d48edc1006b4c627bc727cb60abb8cfbcdd22"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-clear-6.2/e20-clear-assembly.FCStd",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-clear-6.2/e20-clear-assembly.FCStd",
+    "sha256_before": "304f141ad0359f4e53f1b7267fd98b3498c27b902e8f9640a4e7bf1cb2f6d1b2"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-clear-6.2/e20-clear-assembly.step",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-clear-6.2/e20-clear-assembly.step",
+    "sha256_before": "89d76dc2a73bbcefe81cb99d6afacee6deb66e8dd938b96c934eff3f42d817b2"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-clear-6.2/e20-clear-keys.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-clear-6.2/e20-clear-keys.stl",
+    "sha256_before": "e0a94a0e2d181d514a2018b31348ea24ee8129366395bb4e32b6a47d32108f6d"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-clear-6.2/e20-clear-lid.step",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-clear-6.2/e20-clear-lid.step",
+    "sha256_before": "81fbaea804cd9db305039d33d75220cbebab4cbf53478d94a0dd42475da3068d"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-clear-6.2/e20-clear-lid.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-clear-6.2/e20-clear-lid.stl",
+    "sha256_before": "f5e8587fc5dd39c5003ceb8a9655fdcbf6b87fc428e8269daca5a9146253a1bb"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-clear-6.2/e20-clear-open-iso.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-clear-6.2/e20-clear-open-iso.png",
+    "sha256_before": "53316eb43ea2e1728a4a68f0d3062fdac222ea8ab0be14e10542303ad8ee8804"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-clear-6.2/e20-clear-report.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-clear-6.2/e20-clear-report.json",
+    "sha256_before": "8f70a0665fef29dae1e34b849597e1bcade0fc09da2a1d70f1665fe36b1e9da3"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-clear-6.2/e20-clear-tray.step",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-clear-6.2/e20-clear-tray.step",
+    "sha256_before": "e1fd8add4cfaf982fce34adb9507ac079bad696e2acf783cf7dc40787fe61e23"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-clear-6.2/e20-clear-tray.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-clear-6.2/e20-clear-tray.stl",
+    "sha256_before": "2e12f1c401d27fa02dd5bdb671456b8186e896261bc827f9c82e86cc09865256"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-clear-window-5.8/design-inputs.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-clear-window-5.8/design-inputs.json",
+    "sha256_before": "f53291948d64654d52d1ce27958568dca5437a8b6259e6996a86ad721e3b2ae4"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-clear-window-5.8/e20-clear-assembled-iso.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-clear-window-5.8/e20-clear-assembled-iso.png",
+    "sha256_before": "90a182c5b1c39f8f609296b3afc742f1667450a6e06c94d5fbd48a67c5f3893b"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-clear-window-5.8/e20-clear-assembly.FCStd",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-clear-window-5.8/e20-clear-assembly.FCStd",
+    "sha256_before": "34037686e401d4e5b428b9b1e78346cb49a70b9b892a356009f89606ceb238b3"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-clear-window-5.8/e20-clear-assembly.step",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-clear-window-5.8/e20-clear-assembly.step",
+    "sha256_before": "3f0622d20b9aeebb7321536fc1a1eef143ce7cf4d1de7d565a77c812e1c64118"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-clear-window-5.8/e20-clear-keys.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-clear-window-5.8/e20-clear-keys.stl",
+    "sha256_before": "a5f7c3bde9b1895e6434434cd70dfb6ca882d37a2f7a5d50d42fda74dc2dddc8"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-clear-window-5.8/e20-clear-lid.step",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-clear-window-5.8/e20-clear-lid.step",
+    "sha256_before": "71927a965ce48ef38c27bdd6b44d377b0ad0720b1b08584d0a89c22a2dead100"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-clear-window-5.8/e20-clear-lid.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-clear-window-5.8/e20-clear-lid.stl",
+    "sha256_before": "7da44fccb753423ee1a23ed6435a1379c94d84f9281bc15a83d6dd01b3afa43e"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-clear-window-5.8/e20-clear-open-iso.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-clear-window-5.8/e20-clear-open-iso.png",
+    "sha256_before": "3435826b99e3dbd5c10740d614b3c5effadc432b7de990ad4504ccd538b30f47"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-clear-window-5.8/e20-clear-report.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-clear-window-5.8/e20-clear-report.json",
+    "sha256_before": "0536e67c4ed3937b4b3d53ad5eed6f2a6eee8798904a52c33a60e35ee4f21694"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-clear-window-5.8/e20-clear-tray.step",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-clear-window-5.8/e20-clear-tray.step",
+    "sha256_before": "44cd5429ed887ba00b57d4213eccfc025501919ce465482b4524bc9beeaeb446"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-clear-window-5.8/e20-clear-tray.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-clear-window-5.8/e20-clear-tray.stl",
+    "sha256_before": "da280ef0bacf3d8a4c5242024bef1614b0ca74320ebf62a50ecc70da8fd40949"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-thin-cover.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-thin-cover.py",
+    "sha256_before": "c98f9f38e292a2a6ac9636e844e3a0ce7ab551e6a73c67030bc7e7dbb54b7bce"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-v1/design-inputs.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-v1/design-inputs.json",
+    "sha256_before": "8dca1a014ff76383345b50e8391b48aeadd388b4d4eb129cd154f33c0347fafc"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-v1/e20-assembly-report.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-v1/e20-assembly-report.json",
+    "sha256_before": "710d518ed245ff5be4f1eafc2d386b649fd2a21c3ae5415f8d111d0c0625d604"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-v1/e20-assembly.FCStd",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-v1/e20-assembly.FCStd",
+    "sha256_before": "7e494176e841de85c40fe139b862af12961ced4686cd9c3f217ae9315bd6ca99"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-v1/e20-assembly.step",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-v1/e20-assembly.step",
+    "sha256_before": "764d9aa65338c31b25293abffaf4df384b1a743ca2aee67ace3d6df2d37cfaf3"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-v1/e20-bottom-cut.svg",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-v1/e20-bottom-cut.svg",
+    "sha256_before": "65c1c7ac031126bde22b79d96d819f473a23ea9244bb9b461f5173c1e3597341"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-v1/e20-frame-psa-cut.svg",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-v1/e20-frame-psa-cut.svg",
+    "sha256_before": "78383c6eb5ad87f6d025c262e5c3f12b6f7b8c46d86095f630adabfaca4f1867"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-v1/e20-frame.step",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-v1/e20-frame.step",
+    "sha256_before": "a5ab856617ac563495ade948ca1fdf182892ec798cbc555955e7ed765f97953f"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-v1/e20-frame.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-v1/e20-frame.stl",
+    "sha256_before": "86f5d758943ee7cb96e8d050545b0a9ff3a0923de8d279f45eff4a813877ab85"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-v1/e20-keycaps.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-v1/e20-keycaps.stl",
+    "sha256_before": "b6f38dbced9f0609319ba0cf2a45cd27eb199f98e5cbf2ad1e0248f93311ea0d"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-v1/e20-open-iso.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-v1/e20-open-iso.png",
+    "sha256_before": "a39d57d8a02555413c324a6f9e3b65a205dbc7312d2ee0b9352df81517914ae9"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-v1/e20-open-top.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-v1/e20-open-top.png",
+    "sha256_before": "07d0a8620c7c1b3f0a7ac7f6ff82677ad7a5e415bc1196a47ce46ad9e48a9e44"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-v1/e20-pet-cut.svg",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-v1/e20-pet-cut.svg",
+    "sha256_before": "12bc95f9f7da847f372966ce85c4f9088344914dc540f219affc760c0f3a78b5"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-v1/e20-top-cut.svg",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-v1/e20-top-cut.svg",
+    "sha256_before": "a9f874fe0cf96c7f090a2fb4d8fa33ce81e73a8ef8baea1f64e8c0428d5468ff"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-v1/e20-top-psa-cut.svg",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-v1/e20-top-psa-cut.svg",
+    "sha256_before": "0cadc1b6d22b83ef518aea939731482fc1a423275e0b0a789fff82ad57280359"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-v1/outline-polygon-mm.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-v1/outline-polygon-mm.json",
+    "sha256_before": "cd8c8f1509a6d28aebfcbd366695bf596759a8e767e624c5df12fe2664f5ef3c"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-v2/design-inputs.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-v2/design-inputs.json",
+    "sha256_before": "8dca1a014ff76383345b50e8391b48aeadd388b4d4eb129cd154f33c0347fafc"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-v2/e20-assembly-report.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-v2/e20-assembly-report.json",
+    "sha256_before": "cce3aa5842bfd5cb656b8ac77e2898de6c3d02658750cac3485cd1b676a6f7f0"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-v2/e20-assembly.FCStd",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-v2/e20-assembly.FCStd",
+    "sha256_before": "f279fe56451cd92daa73394ea86a784ba195ca023f65db01cfe607ebc470b793"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-v2/e20-assembly.step",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-v2/e20-assembly.step",
+    "sha256_before": "418ea68855155d05b66276b4ccebea12cac7ee26e2c8eeed718652048edfbdbe"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-v2/e20-bottom-cut.svg",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-v2/e20-bottom-cut.svg",
+    "sha256_before": "65c1c7ac031126bde22b79d96d819f473a23ea9244bb9b461f5173c1e3597341"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-v2/e20-frame-psa-cut.svg",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-v2/e20-frame-psa-cut.svg",
+    "sha256_before": "18401f341bdceb5b2a395acb14ac1748973a68d66113230b41a2795718720ea6"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-v2/e20-frame.step",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-v2/e20-frame.step",
+    "sha256_before": "052e02bed0a285281b7a9b84982d2df7068340c50fc288252fdca8e46c135a92"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-v2/e20-frame.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-v2/e20-frame.stl",
+    "sha256_before": "d78a6f83893d9d78f42b0ea88ee2898888f4b9fbc8fb167d279cad2dc419c5c6"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-v2/e20-keycaps.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-v2/e20-keycaps.stl",
+    "sha256_before": "b6f38dbced9f0609319ba0cf2a45cd27eb199f98e5cbf2ad1e0248f93311ea0d"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-v2/e20-pet-cut.svg",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-v2/e20-pet-cut.svg",
+    "sha256_before": "12bc95f9f7da847f372966ce85c4f9088344914dc540f219affc760c0f3a78b5"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-v2/e20-top-cut.svg",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-v2/e20-top-cut.svg",
+    "sha256_before": "a9f874fe0cf96c7f090a2fb4d8fa33ce81e73a8ef8baea1f64e8c0428d5468ff"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-v2/e20-top-psa-cut.svg",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-v2/e20-top-psa-cut.svg",
+    "sha256_before": "210f5e1b1f0c23e74d1e34b552b792d89008cb6e06c7fa5929facf32ce9c25eb"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20-v2/outline-polygon-mm.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20-v2/outline-polygon-mm.json",
+    "sha256_before": "cd8c8f1509a6d28aebfcbd366695bf596759a8e767e624c5df12fe2664f5ef3c"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20b-functional-5.8/design-inputs.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20b-functional-5.8/design-inputs.json",
+    "sha256_before": "f53291948d64654d52d1ce27958568dca5437a8b6259e6996a86ad721e3b2ae4"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20b-functional-5.8/e20-clear-assembled-iso.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20b-functional-5.8/e20-clear-assembled-iso.png",
+    "sha256_before": "59d1c40125f8fa3e96675c48a09046a47100364fa988f2e4c37b6bf386cca25e"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20b-functional-5.8/e20-clear-assembly.FCStd",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20b-functional-5.8/e20-clear-assembly.FCStd",
+    "sha256_before": "fbe4da8abc3a57b7e16b7ed21e095118661755e77092760cf8a755e0854847d7"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20b-functional-5.8/e20-clear-assembly.step",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20b-functional-5.8/e20-clear-assembly.step",
+    "sha256_before": "2afc88cab4e822b0afba60d2a026b2233e3dc1d0f372703a309175e12f9074c7"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20b-functional-5.8/e20-clear-keys.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20b-functional-5.8/e20-clear-keys.stl",
+    "sha256_before": "a5f7c3bde9b1895e6434434cd70dfb6ca882d37a2f7a5d50d42fda74dc2dddc8"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20b-functional-5.8/e20-clear-lid.step",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20b-functional-5.8/e20-clear-lid.step",
+    "sha256_before": "8a90fd5a1ca4f642d4fa4eb93411f1d437f9aff866338f2e139344c8a00f281e"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20b-functional-5.8/e20-clear-lid.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20b-functional-5.8/e20-clear-lid.stl",
+    "sha256_before": "7da44fccb753423ee1a23ed6435a1379c94d84f9281bc15a83d6dd01b3afa43e"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20b-functional-5.8/e20-clear-open-iso.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20b-functional-5.8/e20-clear-open-iso.png",
+    "sha256_before": "dac810d8b5380b1fbc43b696c193b538552e27cafe6ec87d7fd9ad42f64779a0"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20b-functional-5.8/e20-clear-report.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20b-functional-5.8/e20-clear-report.json",
+    "sha256_before": "d6569ab7685c3b69a4ad6b112e67a20d7c1eb29d1fabc967dd14f7f01060c011"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20b-functional-5.8/e20-clear-tray.step",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20b-functional-5.8/e20-clear-tray.step",
+    "sha256_before": "5dae3d23f0651dc9050a882d63ef35ee24e1cb4779b847f6fa9ebb679223d483"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20b-functional-5.8/e20-clear-tray.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20b-functional-5.8/e20-clear-tray.stl",
+    "sha256_before": "da280ef0bacf3d8a4c5242024bef1614b0ca74320ebf62a50ecc70da8fd40949"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20d-front-rear-5.8/design-inputs.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20d-front-rear-5.8/design-inputs.json",
+    "sha256_before": "d88fa4a56dbd1e8f4fddcf6cb097ab419cb25cf6c6c3b9e5d4f75605c1238024"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20d-front-rear-5.8/e20-clear-assembled-iso.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20d-front-rear-5.8/e20-clear-assembled-iso.png",
+    "sha256_before": "faceed96b77282c5f5ad57326d56ed72389bd7c96b6112c5307c8339a885f323"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20d-front-rear-5.8/e20-clear-assembly.20260923-232812.FCBak",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20d-front-rear-5.8/e20-clear-assembly.20260923-232812.FCBak",
+    "sha256_before": "6c3ecb31e44fc5d6c06ca08ccc386d9301723a413da0729c630e74e8e8ec20d4"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20d-front-rear-5.8/e20-clear-assembly.FCStd",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20d-front-rear-5.8/e20-clear-assembly.FCStd",
+    "sha256_before": "083eb00d34c8b4a9ed1163197220ab7719733bf5f51c10c916741f3ed8075b41"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20d-front-rear-5.8/e20-clear-assembly.step",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20d-front-rear-5.8/e20-clear-assembly.step",
+    "sha256_before": "92297c83097b6bf627715e58d91851892b4c8e2972c2e92f636ddc3cf4864754"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20d-front-rear-5.8/e20-clear-keys.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20d-front-rear-5.8/e20-clear-keys.stl",
+    "sha256_before": "f3d7d724e762c7afbbef71c95ef46e385af2aa03f470f92bac04dd72fa3335da"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20d-front-rear-5.8/e20-clear-lid.step",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20d-front-rear-5.8/e20-clear-lid.step",
+    "sha256_before": "f9ed3596e8cae7ddc00992dc101e190d59faa3482fbf2e230025897766e01c0c"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20d-front-rear-5.8/e20-clear-lid.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20d-front-rear-5.8/e20-clear-lid.stl",
+    "sha256_before": "7a0132f1a38ef464cba55b779d88b16def12e00ebb0c77a759a1a723111154f1"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20d-front-rear-5.8/e20-clear-open-iso.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20d-front-rear-5.8/e20-clear-open-iso.png",
+    "sha256_before": "be21e7e12028c9300121329fd6f517da5d9d77b99f40e90b6023c0a7cbcc7771"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20d-front-rear-5.8/e20-clear-report.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20d-front-rear-5.8/e20-clear-report.json",
+    "sha256_before": "4c0470a03c9c2b0fb6131fee3347fd086a91869623eeb083fcc883d40d8a284a"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20d-front-rear-5.8/e20-clear-tray.step",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20d-front-rear-5.8/e20-clear-tray.step",
+    "sha256_before": "b72ef82ebab26e70acae5524114c3aae336990c8cfa138e59697754a54051bec"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20d-front-rear-5.8/e20-clear-tray.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20d-front-rear-5.8/e20-clear-tray.stl",
+    "sha256_before": "cb7df97364ffe736361ceee21597a74b56eb0a56893a7a0a829f49d9dec158d8"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20d-front-rear-refined-5.8/design-inputs.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20d-front-rear-refined-5.8/design-inputs.json",
+    "sha256_before": "b8f757c1f1214b4705886bd03bb310f938fece3abf526b90b96feff3426ef9f5"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20d-front-rear-refined-5.8/e20-clear-assembled-iso.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20d-front-rear-refined-5.8/e20-clear-assembled-iso.png",
+    "sha256_before": "0d1960883f20d195bc160c5c6b156f9bc192add04d4cd0c76a64f831b2820b10"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20d-front-rear-refined-5.8/e20-clear-assembly.20260923-235530.FCBak",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20d-front-rear-refined-5.8/e20-clear-assembly.20260923-235530.FCBak",
+    "sha256_before": "87b0b26bfc1e68f219c27bc46dceb2480a451e64c5073f8266fe60f9cb2ae6f0"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20d-front-rear-refined-5.8/e20-clear-assembly.FCStd",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20d-front-rear-refined-5.8/e20-clear-assembly.FCStd",
+    "sha256_before": "6f20c4184f1cee5711ca43ba40ab047a3ae8aef0ddb6ccdcaa4daa67f84c587a"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20d-front-rear-refined-5.8/e20-clear-assembly.step",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20d-front-rear-refined-5.8/e20-clear-assembly.step",
+    "sha256_before": "f7b6c246df9818be5b4bec6ac93511dfda9adc7b3b0d0a298c57eb785029952f"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20d-front-rear-refined-5.8/e20-clear-keys.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20d-front-rear-refined-5.8/e20-clear-keys.stl",
+    "sha256_before": "f3d7d724e762c7afbbef71c95ef46e385af2aa03f470f92bac04dd72fa3335da"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20d-front-rear-refined-5.8/e20-clear-lid.step",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20d-front-rear-refined-5.8/e20-clear-lid.step",
+    "sha256_before": "f9822bdeccfa7399202c43cb075c4621946a23f6a3b4126132a71da3ef4f50e9"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20d-front-rear-refined-5.8/e20-clear-lid.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20d-front-rear-refined-5.8/e20-clear-lid.stl",
+    "sha256_before": "7a0132f1a38ef464cba55b779d88b16def12e00ebb0c77a759a1a723111154f1"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20d-front-rear-refined-5.8/e20-clear-open-iso.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20d-front-rear-refined-5.8/e20-clear-open-iso.png",
+    "sha256_before": "1d0631ff39f1d5083a12084c06fea1d8d83c96c196c17e4a235ba0c36f2893a0"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20d-front-rear-refined-5.8/e20-clear-report.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20d-front-rear-refined-5.8/e20-clear-report.json",
+    "sha256_before": "5e7d1fda1067f7e9b6aa59c5b96a8590ef30add2cd72a1b4c7d046d2c5eaba60"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20d-front-rear-refined-5.8/e20-clear-tray.step",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20d-front-rear-refined-5.8/e20-clear-tray.step",
+    "sha256_before": "bcc6eec06495cf5fb8bc0255f3e7d86cb44bc1fbe13104b98554ef2bc5acb083"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/e20d-front-rear-refined-5.8/e20-clear-tray.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/e20d-front-rear-refined-5.8/e20-clear-tray.stl",
+    "sha256_before": "cb7df97364ffe736361ceee21597a74b56eb0a56893a7a0a829f49d9dec158d8"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/layout-options.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/layout-options.png",
+    "sha256_before": "7f76ac7974c5afecda1075926979f3501d53ee6b7d53b352a3f88400ede19d42"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/layout-options.svg",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/layout-options.svg",
+    "sha256_before": "cb8299fa0424d5d3c572977d13fd71a7c034e89a37c2fd5fe62575270ef344f7"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/layout-study-report.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/layout-study-report.json",
+    "sha256_before": "aee10e1628208734de21bb21724fb9d7bc7e252355b71818a2c29ea2354a0b64"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/layout-study.FCMacro",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/layout-study.FCMacro",
+    "sha256_before": "13e4fc10773febe58b5da712cdcd762ccc01692f24a32ab8a19d9c0d79ee391e"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/layout-study.FCStd",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/layout-study.FCStd",
+    "sha256_before": "6e0c7cfc538c161e8d06df4b35d6a4718d99dc31023b9394eea88b9eb3464039"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e14-bottom-v1.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e14-bottom-v1.stl",
+    "sha256_before": "005760cffc30a17b7f02021e7191fdd3ac878c7de39bb8259adc996ebcf5a286"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e14-bottom-v2-eda-coordinate.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e14-bottom-v2-eda-coordinate.stl",
+    "sha256_before": "7723aa02c2278585770280b1303297f6bab84c69f20f535b1c2b3d2f54c9cced"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e14-enclosure-v1-isometric.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e14-enclosure-v1-isometric.png",
+    "sha256_before": "75d3ef8f3814df356f512950b1fc8bb649faf638550cdfd347d40e3ae247ec12"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e14-enclosure-v1-report.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e14-enclosure-v1-report.json",
+    "sha256_before": "32dc67dd864d2ec84b3ed38baa6da020f12ebe04282b6b196e032ce4f717dee7"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e14-enclosure-v1-review.svg",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e14-enclosure-v1-review.svg",
+    "sha256_before": "8022c18cac296983760dda4f5a4b0883cc31e6f4d0c33e090cf0e9a9a00e8c3f"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e14-enclosure-v1-top.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e14-enclosure-v1-top.png",
+    "sha256_before": "61f2d513d262d6bf532b5ec414e1a077cd872afd5673f34d4a50d4a408dbb5a8"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e14-enclosure-v1.FCStd",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e14-enclosure-v1.FCStd",
+    "sha256_before": "f4cba4aa46b8bf598bba2c94f30adfeda358c27e446562408e6cf6693f162cb4"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e14-enclosure-v1.step",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e14-enclosure-v1.step",
+    "sha256_before": "9c9b55e03b7add4022c44c11b945800e98387bb7ab14adede3cd4df50a6b28c2"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e14-enclosure-v2-eda-coordinate-report.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e14-enclosure-v2-eda-coordinate-report.json",
+    "sha256_before": "636f02388fd8d6decc02f921c0d809779b0917097bfcea9dbc70804cf912144d"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e14-enclosure-v2-eda-coordinate.FCStd",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e14-enclosure-v2-eda-coordinate.FCStd",
+    "sha256_before": "56ca84d532595c3765ed4d7082eae2fd36e421bd96a5c2a59ac7d1ffac59fcc4"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e14-enclosure-v2-eda-coordinate.step",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e14-enclosure-v2-eda-coordinate.step",
+    "sha256_before": "0b7d13b230d62e18daf701dc462e253b544a4f9589883c6905122a80204a9233"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e14-top-v1.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e14-top-v1.stl",
+    "sha256_before": "fc83225ccc2a22ab38414aaebd1f31a21b3f4d0f63543d2b31ca21c7d94d856b"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e14-top-v2-eda-coordinate.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e14-top-v2-eda-coordinate.stl",
+    "sha256_before": "50e24e6874084591da1cf32207ff562f0a2abece39c6549d126a4d5606578e72"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-bottom-v1.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-bottom-v1.stl",
+    "sha256_before": "ff51520c2158ec38680cbfd0776ee44e1546baa4061a32663fd27c873fd5c8ff"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-bottom-v2.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-bottom-v2.stl",
+    "sha256_before": "fb9632cae371da0cd47f8020f21ffed979014eb24359572360ca63a6c88e4da9"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-bottom-v3.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-bottom-v3.stl",
+    "sha256_before": "0c566d8fef8cec15e9f910da942e32228ffd97df0889fb7bee3b7826d34bc923"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-bottom-v4.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-bottom-v4.stl",
+    "sha256_before": "af4a02650128a834d2becbb8b97cee4159637e8f9467f0e4d0ab452c27caa25f"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-bottom-v5.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-bottom-v5.stl",
+    "sha256_before": "af4a02650128a834d2becbb8b97cee4159637e8f9467f0e4d0ab452c27caa25f"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-bottom-v6.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-bottom-v6.stl",
+    "sha256_before": "af4a02650128a834d2becbb8b97cee4159637e8f9467f0e4d0ab452c27caa25f"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-bottom-v7.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-bottom-v7.stl",
+    "sha256_before": "af4a02650128a834d2becbb8b97cee4159637e8f9467f0e4d0ab452c27caa25f"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-enclosure-v1-report.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-enclosure-v1-report.json",
+    "sha256_before": "cff20ab684a4c51a56bc31bb0d877bb8a880a114a77bb1adab0a512fed4924c0"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-enclosure-v1-review.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-enclosure-v1-review.png",
+    "sha256_before": "1926c85caf5dd82cbd237e64b7b18498f9efedae7b31c59a50b492626ec558cd"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-enclosure-v1.FCStd",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-enclosure-v1.FCStd",
+    "sha256_before": "490a0a6f4fbacc2df71f5d69faa9dc0eaa13bcd7266ccd9931df9346ab0d5839"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-enclosure-v1.step",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-enclosure-v1.step",
+    "sha256_before": "ed8760abd5e8663797e2b7395d97f33c6ca68fe55022217709243f0d3baa9a86"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-enclosure-v2-report.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-enclosure-v2-report.json",
+    "sha256_before": "b0f1ec0d718cd74a495db63d6d69f5764d2e95414d9f7f7f64db8904e80024a5"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-enclosure-v2.FCStd",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-enclosure-v2.FCStd",
+    "sha256_before": "c908a5060fb67776f5ecfad701e4b8118528141cefe14d385dd6cbaa66827037"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-enclosure-v2.step",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-enclosure-v2.step",
+    "sha256_before": "fe06de302d523ba2fc9c270032e42acb797cfb08ffee340373ff62f662800afa"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-enclosure-v3-report.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-enclosure-v3-report.json",
+    "sha256_before": "25ccf0f041c3a10379e7ba6c856cd22075eb0c947007479f2d49475fc016563e"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-enclosure-v3.FCStd",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-enclosure-v3.FCStd",
+    "sha256_before": "5b601c42e9e0dc1533e84f8396ffb64ad4815ab9a66ac14b4187907ece7efaf4"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-enclosure-v3.step",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-enclosure-v3.step",
+    "sha256_before": "dcd9b23fd31f71426a65937d879513baf79b99a3a94a43a931072500ef2c4ee4"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-enclosure-v4-report.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-enclosure-v4-report.json",
+    "sha256_before": "3b4053497a23b388eead15fc642333f16d5373eae23f4a9b1c42c9205dc9034e"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-enclosure-v4.FCStd",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-enclosure-v4.FCStd",
+    "sha256_before": "2c3794889a6aac47b1a24f7edad3175b5748b994720357411981ac3e00ffa32a"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-enclosure-v4.step",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-enclosure-v4.step",
+    "sha256_before": "920877c0c315c3c3de5846997add060964679e34cae9bfe8f9c7949b73164329"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-enclosure-v5-report.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-enclosure-v5-report.json",
+    "sha256_before": "de181b0e50ba322d4234ea706a2fbe286bca02677c4ac0f20e3345c88476868a"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-enclosure-v5.FCStd",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-enclosure-v5.FCStd",
+    "sha256_before": "d25377aba1b55f692e2a2a2de90fe17ae8aee23ce061293bef4151677d50f1b1"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-enclosure-v5.step",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-enclosure-v5.step",
+    "sha256_before": "2057c583fe021938bbc70ff7b97f603cd6ae07be4ad32623ddf85342df28ae30"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-enclosure-v6-report.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-enclosure-v6-report.json",
+    "sha256_before": "c6cd1ebc84ad0ae39089eacb32ee88b31b8f4f3b001db2176b29b42f11f29880"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-enclosure-v6.FCStd",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-enclosure-v6.FCStd",
+    "sha256_before": "1eaf03f41e23a9d72b722041c6061883ff5091f6da8097339a0a54288068d1bc"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-enclosure-v6.step",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-enclosure-v6.step",
+    "sha256_before": "c7b345b12538d719993ef3a219057ff8972c9e339c8a4367978dd8b5f0681a75"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-enclosure-v7-report.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-enclosure-v7-report.json",
+    "sha256_before": "e27d70649212e055ebeb2eb0f16917f3ebcba934680a647143a94b24bff4ba03"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-enclosure-v7.FCStd",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-enclosure-v7.FCStd",
+    "sha256_before": "9a49b92679a1fc641b90dfb2ff963083858b1268af0c3323b2edc42a71ec03d8"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-enclosure-v7.step",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-enclosure-v7.step",
+    "sha256_before": "12b14ebcefcdfe8026a05c414e4ca0b1b5858d774f70e212424e2d430a5c7148"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-height-budget.svg",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-height-budget.svg",
+    "sha256_before": "cd691e52d31aedd2225c94eb0df99cd01a92f9f504f8fade58b27a9f9b94b45a"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-keycaps-v5.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-keycaps-v5.stl",
+    "sha256_before": "1ea1701a3441dcae063e9bc24a5b48c388216c6a4c797857e0f4613521bafc65"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-keycaps-v6.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-keycaps-v6.stl",
+    "sha256_before": "5e23d35ba1280dd6be44515eacc6f379e282a54b6046091d6ceaaba0e6ef8118"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-keycaps-v7.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-keycaps-v7.stl",
+    "sha256_before": "38bae802ae8477772b56ce15274db1f075f7e0755f6788d0a07b107bc1c1765b"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-print-meshes-report.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-print-meshes-report.json",
+    "sha256_before": "9841e2879fec9b3f0127d4b6382f141616a2b058ea0344afd34af171efbda2bf"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-top-v1.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-top-v1.stl",
+    "sha256_before": "136530629f84339d800b0d787d837393dfc58bd8884d4cb47772b91e8a794e56"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-top-v2.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-top-v2.stl",
+    "sha256_before": "6baed37b804794f558001efef00bfe68a1c4c6f81e2e0e8bc0d8ee5dedf30684"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-top-v3.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-top-v3.stl",
+    "sha256_before": "e85a9a270894fe5e773850143eedddf8797839a422321e0f34c117aed4a6751e"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-top-v4.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-top-v4.stl",
+    "sha256_before": "6f6ca4ce1bb0ec45a97ff19097771995edbe242993cabf03df776e9a67037ffd"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-top-v5.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-top-v5.stl",
+    "sha256_before": "101203eb4a7b90340e221be9ac7d4d21b2aa4929c05a238fa6d87e6bf7082b43"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-top-v6.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-top-v6.stl",
+    "sha256_before": "106116c6e118cf42233aa2664f35aa7988287ffe135037c611521ea701569044"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-top-v7.stl",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-top-v7.stl",
+    "sha256_before": "f9b5d610d6d0c7630782f67b9d9cc6706138b34f53d22e6ead97f079da2ae443"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/nfc-card-e16-v5-stack-section.svg",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/nfc-card-e16-v5-stack-section.svg",
+    "sha256_before": "fca272764ec1bf4f342a82212959e8a5a7d58adb3c8f350e4115679c52738062"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/pcba-e14-battery-layout-intended.svg",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/pcba-e14-battery-layout-intended.svg",
+    "sha256_before": "a539056445d2a4aee8c8b8d9b30d0623e65f170dc5b8cff5376fc127420950ed"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/pcba-e14-battery-layout-report.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/pcba-e14-battery-layout-report.json",
+    "sha256_before": "f669ccf2ff996d3574815558828ff54eece1caa2e09413ed9aee1ae1a5d5454f"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/pcba-e14-battery-layout.FCStd",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/pcba-e14-battery-layout.FCStd",
+    "sha256_before": "1d912759845cb02aca9aa87e7ebf8f21f1ea82711fe5f1baa507f0a1c7eb7178"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/pcba-e14-battery-layout.svg",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/pcba-e14-battery-layout.svg",
+    "sha256_before": "200254b5651409082c5f035b7998d9cd7ed9babb1926b80d7ec28b68cc560975"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/pcba-e14-layout-envelope.step",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/pcba-e14-layout-envelope.step",
+    "sha256_before": "7ddf19b07c1e351c6987d4199f9c93c081842158671c82c6f6e288bd2dfae307"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/pcba-e15-clean-layout.svg",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/pcba-e15-clean-layout.svg",
+    "sha256_before": "aa780847794461553ccdde5e1ea871a270e16a4c381f1ffd1a07f656db2c72da"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/pcba-e16-right-mid.svg",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/pcba-e16-right-mid.svg",
+    "sha256_before": "3412d9e63d4017a4d4a5074a686714c73c63b4991e3f97caed675ce05bf02394"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/pcba-e6-302030-report.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/pcba-e6-302030-report.json",
+    "sha256_before": "25da1239d596e96cb32cb082b61748f96f571f0baced223adbd50583bc9206db"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/pcba-e6-302030.FCStd",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/pcba-e6-302030.FCStd",
+    "sha256_before": "c0032c83de7935903589b0381a00c5645f1f585ef5fb89258eb47d3ec03e0041"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/pcba-e6-302030.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/pcba-e6-302030.png",
+    "sha256_before": "77f168be324dc01571cb38d34469aefb0cb71a924d3390541182b36021686e07"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/pcba-e6-302030.svg",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/pcba-e6-302030.svg",
+    "sha256_before": "79f953e0db015aee1a7380ba0bc896647e80a5e0f85ab0688b3fa0d80fba73d7"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/pcba-e6-84x52-detail-report.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/pcba-e6-84x52-detail-report.json",
+    "sha256_before": "3c693fe2ad07178f089cf53e7b62c11d179a2d5e973207fc5c22ebf7c3b85042"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/pcba-e6-84x52-detail.FCStd",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/pcba-e6-84x52-detail.FCStd",
+    "sha256_before": "115fa7abdd8932e7036a9af022b54640d32f0b1a6f9e6e39b7134011b42cec60"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/pcba-e6-84x52-detail.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/pcba-e6-84x52-detail.png",
+    "sha256_before": "6d6b76b1df37f39275e613394797cbe0eedc5fc682080a0458b2a00fab1c893f"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/pcba-e6-84x52-detail.svg",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/pcba-e6-84x52-detail.svg",
+    "sha256_before": "d86bd6e698c2ba36d731d23c38181b35490f1efb8e5b6a048571840da90a97fb"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/pcba-e6-84x52-report.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/pcba-e6-84x52-report.json",
+    "sha256_before": "66d8152cf91e014fcf6f7a4d15aa073f69dc6d83d5b94457cc847f9bc736ea95"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/pcba-e6-84x52.FCStd",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/pcba-e6-84x52.FCStd",
+    "sha256_before": "7fc7dfe1aea4b6d8a68b2914148ce69c28aeb9b3a4379061b7079dccc55494fd"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/pcba-e6-84x52.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/pcba-e6-84x52.png",
+    "sha256_before": "c381a6c5c60b8a09a2a4aeb395b10788cd942203bf7bd45ec9f6b3469093671c"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/pcba-e6-84x52.svg",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/pcba-e6-84x52.svg",
+    "sha256_before": "7431b6d07923f073a68112d8049b97a73f7e17b6f57d7e341f1bb63459ae9ed1"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/pcba-e6-bottom-usb-report.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/pcba-e6-bottom-usb-report.json",
+    "sha256_before": "1ba8cb4db24c8e4bd88918b3bfd195546d90e1ee73369383ddbfc002ca99e068"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/pcba-e6-bottom-usb.FCStd",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/pcba-e6-bottom-usb.FCStd",
+    "sha256_before": "93f0b8dd790083cee825533701c6f2b0ffeb1bdea01a8fb058f1fce25efd42f5"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/pcba-e6-bottom-usb.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/pcba-e6-bottom-usb.png",
+    "sha256_before": "3c7ee6080808d2a354516d1424dd74ed5c5650c37545dfc70863a567396837ae"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/pcba-e6-bottom-usb.svg",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/pcba-e6-bottom-usb.svg",
+    "sha256_before": "c2a52e5140906f6c70aa4fd1ec54f2adc8a96db7547fac36ca8dbdfef2ee2fa2"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/pcba-layout-report.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/pcba-layout-report.json",
+    "sha256_before": "2e7f95d57659be1172eca1b932c74912617d0f753381c4c512b131dfd70abee8"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/pcba-layout-workflow-validation.FCStd",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/pcba-layout-workflow-validation.FCStd",
+    "sha256_before": "0053f89786498f2d22e0ac31856d62263efd04fc0a91fcc121faac421a081d85"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/pcba-layout.FCMacro",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/pcba-layout.FCMacro",
+    "sha256_before": "53e3299e5ac388205b45b632fe8c8bad6e07157a2671717e27bba65c99528d70"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/pcba-layout.FCStd",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/pcba-layout.FCStd",
+    "sha256_before": "38beb4c759ea376ea54425027e56b42a0dbdcd92902e1bb36265c9e487e62506"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/pcba-layout.svg",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/pcba-layout.svg",
+    "sha256_before": "38374a3f90314370ae00ed3331253649d81b8d0d7d6839df2c1fc418fcbdadee"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/renders/e16-board-routing.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/renders/e16-board-routing.png",
+    "sha256_before": "1eb31a454f4fed0569dda92b9bd2decb612a30749eb9859cfd063d3715098f70"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/renders/e16-enclosure-iso.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/renders/e16-enclosure-iso.png",
+    "sha256_before": "b16b82f870bbcceb16d6be6b56d37b5d70ed1bd9aa4cdeb072d751ccbf09a09e"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/renders/e16-enclosure-top.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/renders/e16-enclosure-top.png",
+    "sha256_before": "5618869771d2245b4d23edc9b03c32e789c6e3d30b0df151b7d7abc12dea924a"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/renders/e16-enclosure-v2-iso.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/renders/e16-enclosure-v2-iso.png",
+    "sha256_before": "23f6519182787828ac8bacdfdcb246207bd62a38b9a25f9180929bc2768d7a86"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/renders/e16-enclosure-v3-iso.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/renders/e16-enclosure-v3-iso.png",
+    "sha256_before": "ff3478601f574f813008349a3573b52c3265935bdebe628fc292a05c80dae851"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/renders/e16-enclosure-v3-top.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/renders/e16-enclosure-v3-top.png",
+    "sha256_before": "cf6bca1e6023004edc5ed5a0b658f72eb3026be4f95333c31ab74cf29d5d6320"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/renders/e16-enclosure-v4-iso.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/renders/e16-enclosure-v4-iso.png",
+    "sha256_before": "29ccd51a6fde671d7c52e6bb85022e832ba77943e8d307af38189713b58cc739"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/renders/e16-enclosure-v4-top.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/renders/e16-enclosure-v4-top.png",
+    "sha256_before": "28db97c5d6c6a2241cfe5f6b1c654e6ac98517ce6b914031df5806f6021c0477"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/renders/e16-enclosure-v5-iso.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/renders/e16-enclosure-v5-iso.png",
+    "sha256_before": "5d0bfd8f34540b346c6264ea27affed5adeae82426f23210c6206948917f4f99"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/renders/e16-enclosure-v5-top.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/renders/e16-enclosure-v5-top.png",
+    "sha256_before": "62f4f765ae6b41851535a8c05a8e83983ff3c6d2938a24dc6f685db19d979e11"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/renders/e16-enclosure-v7-iso.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/renders/e16-enclosure-v7-iso.png",
+    "sha256_before": "1b39c2448034b8bdd946abfd1056dfd35f695f87a3cccef80e90dd75eed23c91"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/renders/e16-enclosure-v7-top.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/renders/e16-enclosure-v7-top.png",
+    "sha256_before": "bfe458a502a46326089adc134c18fd23975a2467f34c7e1a27ded17d47d2deb5"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/renders/e20-placement-review.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/renders/e20-placement-review.png",
+    "sha256_before": "86ff0e9ace87c1bac1892e734413c156cd20641eae95318d3369183ee08b0b0d"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/renders/e20-placement-review.svg",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/renders/e20-placement-review.svg",
+    "sha256_before": "c31e94fc21a511e12c1d3dffdb44c66c01948388ee4aa58459fb55c377bbd4d7"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/renders/e20b-battery-space.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/renders/e20b-battery-space.png",
+    "sha256_before": "22d3ff5833b34575ae6de5ae8172f31967e291e8f6ced5660f301685e3a59075"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/renders/e20b-battery-space.svg",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/renders/e20b-battery-space.svg",
+    "sha256_before": "5960ca5353efc3fca2c9a9c61e4b7bf43592e3bd9e614c12885f5f1022effedd"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/renders/e20b-functional-comparison.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/renders/e20b-functional-comparison.png",
+    "sha256_before": "0a30ece539989d784c46d71036a8a8f0a9c4fda89a53afe488c37ad139f9ee4d"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/renders/e20b-functional-comparison.svg",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/renders/e20b-functional-comparison.svg",
+    "sha256_before": "d4762524857f03b8410e384fdae94941af992aef3100578a99c4210af899d522"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/renders/e20d-front-rear.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/renders/e20d-front-rear.png",
+    "sha256_before": "775bec252ac7854466abf405ddaa18d284b2da9c5144a9d636cbb2dfe25ea187"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/renders/e20d-front-rear.svg",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/renders/e20d-front-rear.svg",
+    "sha256_before": "ddac1eae1a7ddaa599f1e6c395130ff315de22718f975c70160f492bfd71117b"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/renders/e20d-screen-fpc-registration.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/renders/e20d-screen-fpc-registration.png",
+    "sha256_before": "e278086e9c641efa7e4fd06867c5bca6de47d4835fc937fb411426a1361ac5f8"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/renders/e20d-screen-fpc-registration.svg",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/renders/e20d-screen-fpc-registration.svg",
+    "sha256_before": "b7603d12bd229acb1d10a0098c8cdb81a670f1edbfcb2ba16cf2eb1f76e3ca29"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/renders/nfc-coil-area-comparison.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/renders/nfc-coil-area-comparison.png",
+    "sha256_before": "ea922606507125b9033c8508edb1d865b3134c816de87503f6668a5d084e9ab5"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/renders/nfc-coil-area-comparison.svg",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/renders/nfc-coil-area-comparison.svg",
+    "sha256_before": "d6dfcab7e92b1830d26e7829a831eba107e6e617c1ebc43e0a00593a569d4d95"
+  },
+  {
+    "from": "projects/nfc-business-card/enclosure/renders/pcb-margin-options.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/enclosure/renders/pcb-margin-options.png",
+    "sha256_before": "731ae773b2733fa129b8d32c4fe0ff94bd19fada8089f647b1f5e391553c0962"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/board-design-review.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/board-design-review.md",
+    "sha256_before": "ab917f033e17e1fa964725a3f96632430a275097b1a3f135a77a9a41fd6225b4"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/e14-eda-components-pins.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/e14-eda-components-pins.json",
+    "sha256_before": "fca31c92751f08b538c29f9272350c61349109c3577820b2c2d990c01180ad31"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/e14-eda-snapshot.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/e14-eda-snapshot.json",
+    "sha256_before": "ec9bb015e5efe0a8cfeaf418e29c574eb6d1029518c4e20d9fe50985c27d6215"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/e15-clean-layout.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/e15-clean-layout.json",
+    "sha256_before": "4a817a540816c17a25e0c4b4119b9e69be55cfc64b8080ebcc3c1de7cc66e6db"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/e15-usb-cc2-route.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/e15-usb-cc2-route.json",
+    "sha256_before": "7ef24d472ee32ca5cd66f038c77a69a45469c5b64139b24818fa13b2292e12ef"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/e16-c3-move-plan.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/e16-c3-move-plan.json",
+    "sha256_before": "6a3fd2d763ec611404e36ec991e97532f9d592fb99fbe1a3a71662309914d1e0"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/e16-coil-footprint-local.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/e16-coil-footprint-local.json",
+    "sha256_before": "555041832d77938d7993b5aaba7ea5c6903875eeb1b4ed54bc9e2a90b4fbdccf"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/e16-ground-stitch-plan.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/e16-ground-stitch-plan.json",
+    "sha256_before": "0c70f4f05ad554489459faaf1289d20516777083568b1788fd4d77ae2959c3d8"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/e16-nfc-coil-plan.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/e16-nfc-coil-plan.json",
+    "sha256_before": "a934ffb9248f0999211c7f935cfb24bc44c4e69315b04674890d017830f38ee8"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/e16-right-mid-applied.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/e16-right-mid-applied.json",
+    "sha256_before": "dadce075731007cb6a2f9c2544bba9cdfac113ffa84cdd1fcf3e6b5cfbade5b3"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/e16-right-mid-plan.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/e16-right-mid-plan.json",
+    "sha256_before": "54ef576f91ccc1cf5b2d256e9344c9184bffec3e48b97f463e0aae2c53de99e9"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/e16-right-mid-snapshot.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/e16-right-mid-snapshot.json",
+    "sha256_before": "4a0a735b4f70a8c18b0e9e6007cebf46d233f78f3fde562ae04044d1b46bf716"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/e16-usb-right-mid-study.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/e16-usb-right-mid-study.json",
+    "sha256_before": "51e54e455f8cab519f1255231056b301978851acbfd892d1c77968f1e95f6add"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/e18-nfc-tuning-plan.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/e18-nfc-tuning-plan.json",
+    "sha256_before": "1ba1cac0a2d20bd46f1203c700ab847dd0cc0aaf71f584b8c1d3cea1a51ceb13"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/e20-design.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/e20-design.json",
+    "sha256_before": "b5e9221d94aad1170858df5b100c6496c20ef6d7a1ad1d433b625519f5a64a2d"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/e20b-functional-placement.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/e20b-functional-placement.json",
+    "sha256_before": "86535b934c16ccdddf03d3f248781628ee30810aa55c6bd7cc7bccf6927db404"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/e20c-design.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/e20c-design.json",
+    "sha256_before": "a1da6727821313954804baa19cb2119447a996a6827a59d2f7d27414e1d41010"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/e20c-placement.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/e20c-placement.json",
+    "sha256_before": "befbfc8319b2fc59d48763cbab9dbfedf3703e07c34b473979f5efbd5536be5e"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/e20d-design.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/e20d-design.json",
+    "sha256_before": "b8f757c1f1214b4705886bd03bb310f938fece3abf526b90b96feff3426ef9f5"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/e20d-placement.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/e20d-placement.json",
+    "sha256_before": "387d6521fffdf57fafd7d7e7591d5a91e009588c7c72dd8b4424ad410a6f1ef7"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/e20d-refinement.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/e20d-refinement.json",
+    "sha256_before": "45dd6244742c2c44cb079aa1396a313e436838dcf6d18bfbe8d0d7b64ed23c93"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/e6-blocks-circuit.enet",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/e6-blocks-circuit.enet",
+    "sha256_before": "db6faba474bb6a9b9989c59714d3da1f7a14f8767280f84ecdd516ca4798fb96"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/e6-blocks-pcb.enet",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/e6-blocks-pcb.enet",
+    "sha256_before": "6360b750f8d4113e6929644b8d620cb4d83b42d50725ef9d9dbcb690bdfea363"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/e6-circuit.enet",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/e6-circuit.enet",
+    "sha256_before": "c0e982a5ac2fc89badf769ffa70fde282dd5eae2509f69edef0d84eb62d34ee0"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/e6-pcb.enet",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/e6-pcb.enet",
+    "sha256_before": "6360b750f8d4113e6929644b8d620cb4d83b42d50725ef9d9dbcb690bdfea363"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/fpc-connector-review.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/fpc-connector-review.json",
+    "sha256_before": "3e9ef73f3416f4f9b99e04381aabe0588eaab962db553ddc8e2a64c8fbc8df3a"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/nfc-coil-area-process-review.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/nfc-coil-area-process-review.md",
+    "sha256_before": "3a01006ff5f557b3607999ff21b9c3e0e9a97169f023da8d8c0bd06288b3d1f3"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/nfc-expanded-five-turn-study.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/nfc-expanded-five-turn-study.json",
+    "sha256_before": "3e815f98297b50e4b8bf0682ae6a5c2c4d4e4b94aea523161564e40405c5724b"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-84x52.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-84x52.json",
+    "sha256_before": "b9c16924af53f3d283bcee514610cee2c2be6321373e1cc837a76e59da367212"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-84x52.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-84x52.md",
+    "sha256_before": "26685d8d9312d7653be12b045a94a4097546dbbe3e1aac731e76dd533d520dec"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-84x52.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-84x52.png",
+    "sha256_before": "e1be891f5744bf6a6ab1f6d99b9570399215197302af66006ac41bc4fcf7d30c"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-bottom-usb.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-bottom-usb.json",
+    "sha256_before": "7149c9b72358bcd0d6d39f71ea049668d330710bd23323b278bfac23ddb4564e"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-bottom-usb.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-bottom-usb.md",
+    "sha256_before": "7d135647fa70343bd9f801f1a0bd55964055ed89231d5a676d57c31ef9842c2a"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-bottom-usb.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-bottom-usb.png",
+    "sha256_before": "c0d888f0c20d63faaf115c49d38a3191a3119d0a7aff661591d7614a17166d83"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-e10-button-right.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-e10-button-right.md",
+    "sha256_before": "dbe326ef79d859ef52675a53d5c24916111af8946ed3b184c78587afe3e5b8e2"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-e11-data-fanout.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-e11-data-fanout.md",
+    "sha256_before": "f6487a8c46be7dcfaf19705af972bcb1eaa7bcc60ae4cda1dbd574c547566628"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-e14-battery-layout.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-e14-battery-layout.json",
+    "sha256_before": "e8c101aadd9bbf5c7a9f9b14496cecba697faa9658e0c7092252f1bebad5a454"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-e14-battery-layout.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-e14-battery-layout.md",
+    "sha256_before": "ae1db41ed299930cf5477c18bc88904d1e80d2a9f1b195b3e3e872051e290ef6"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-e14-manufacturing-gates.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-e14-manufacturing-gates.json",
+    "sha256_before": "4fb2ea608f5bffdadfc24a10260a9e8e16b091d125c10dcd707dd8186a962317"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-e15-clean-layout.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-e15-clean-layout.md",
+    "sha256_before": "0a94d90963c54d4df366fa94e011c418263e13239b916a3c97b6c46ffdafdfe3"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-e16-regions-label.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-e16-regions-label.png",
+    "sha256_before": "dad92aa6bd4c600b28132267cabac30e0414c352274b7b0aeed3e2302285b906"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-e16-routing.svg",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-e16-routing.svg",
+    "sha256_before": "34b44483d43180c4f107f3ca7ea169a76170cc0da2dee840f10095f61f13e053"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-e16-u1-label.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-e16-u1-label.png",
+    "sha256_before": "e96eaf321f6cbff954efac02ba8a9ba1cb13c453c5dfaa725e7c9dd718005952"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-e16-usb-right-mid.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-e16-usb-right-mid.md",
+    "sha256_before": "92f55daecf2059c9612c2b13b530b237f9cee08a471f9887c1e7cea0e532419f"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-e17-coil-study.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-e17-coil-study.md",
+    "sha256_before": "6bb00cb2a49fa005179e1edd6e4f74c469582cad9d2d835068fff7dfe7c1bb9f"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-e18-matching-study.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-e18-matching-study.md",
+    "sha256_before": "f082805ad71d9241373034709c8068b13a0ec88e7dcba731286445f102725580"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-e19-independent-review.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-e19-independent-review.md",
+    "sha256_before": "9eac916cace52ccc073bd7dbf34a6643778963a3642eb9818d13c266a48a2e4c"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-e20-architecture-review.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-e20-architecture-review.md",
+    "sha256_before": "0d3262f0869767a6f8e076fecacfa7bf3a6cd2698e1b5a4d0bf2b97a44b8b033"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-e20-placement-review.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-e20-placement-review.md",
+    "sha256_before": "0336294e98172a6fa960caea996c9ff73d2fd9b6546a00f2c8b00f2cf3fe485f"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-e20-production-layout.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-e20-production-layout.md",
+    "sha256_before": "0c8676632b07e72343836ff62a33f1b2ac945911e4da38a2af8766df1f94e4b5"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-e20b-battery-space.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-e20b-battery-space.md",
+    "sha256_before": "63f873169033c7e9efa1e531865c040d1c2d0ba950b1fec333b2857542a7191f"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-e20b-functional-comparison.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-e20b-functional-comparison.md",
+    "sha256_before": "30c9f3b3553ae3a3d8f95451e18ea024231331a3f633920790784d737d1bb2b3"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-e20d-front-rear.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-e20d-front-rear.md",
+    "sha256_before": "73f3a6552238dad59dc030245e45aad0feda703af24344855555ef5641cf5fec"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-e20d-screen-fit.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-e20d-screen-fit.md",
+    "sha256_before": "9e38209b3782fed02b7e1251135bf156a069ec0f12bd19e29c045ff24e9f5db5"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-e6-84x52-blocks.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-e6-84x52-blocks.json",
+    "sha256_before": "9b87b03fb5c1d70270c067dbda4c16db71fecdf1940428c35d1ed3c3bb1bda08"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-e6-84x52-blocks.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-e6-84x52-blocks.md",
+    "sha256_before": "85e15a3bedfe318b97fc929481d8b39ac37c0ebd570a3b43ee579ff3f6ec39c8"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-e6-84x52-blocks.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-e6-84x52-blocks.png",
+    "sha256_before": "49cdeac5f06167aeb695b3f600b462a8ed8c4fe9d52bf85bc7f96ec2053956e5"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-e6-84x52.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-e6-84x52.json",
+    "sha256_before": "d0459ba6166f15c33285af0c47224929b73975b83674ae36db8a86494eb5f369"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-e6-84x52.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-e6-84x52.md",
+    "sha256_before": "9c908963f3b7e4e923b7a970472490c01627126697178fea3a7452f7bd71b8fd"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-e6-84x52.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-e6-84x52.png",
+    "sha256_before": "e160b8331ce90d8fb8085e2cb8fd22a1110f9b880f0ac81122fb5a510b34e4d0"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-e7-placement.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-e7-placement.md",
+    "sha256_before": "93700c6d3bb403b8d27b1541d685e77c08d7b3af42e380b18f4c5ca3debbc582"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-e8-usb-left.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-e8-usb-left.md",
+    "sha256_before": "3f95080fe596fd0a64a9f0e192da3e5f824d9ee01fea3cda62ecf79a272f40d3"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-e9-usb-local.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-e9-usb-local.md",
+    "sha256_before": "459e80ddf32ac1ec437cf024faf31dc5b05e23c164bd4c21896f4fcb9d08f565"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-prelayout.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-prelayout.json",
+    "sha256_before": "4bfad1174e2bfbbe8ecb5a6c66cdefc16f3c08d619c3633908142bfa4a10d0e6"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-prelayout.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-prelayout.md",
+    "sha256_before": "212999272f43017089509b2b9ae4658ade8a35ec28dc8cbe9796d2f2d7cd9f1b"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-prelayout.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-prelayout.png",
+    "sha256_before": "15818dc4273d59a4450000295923682a09e409ef05ba4d9b9770dd4fccc1adab"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-routing.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-routing.json",
+    "sha256_before": "e5f58b63a5ae053daad219519616dc4e59e71fcf296263e7ee99232049db2d29"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-routing.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-routing.md",
+    "sha256_before": "8702bc7bf1892fbfe9552bb9e22cb1c3b86c6c934c067875cc77e12ba3b2931d"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/pcb-routing.png",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/pcb-routing.png",
+    "sha256_before": "11e48ae38d33c2e90d0110b0698e356ac52f6c59b536f07c328378e067ed55d6"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/compact-detail-check-layout.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/compact-detail-check-layout.py",
+    "sha256_before": "d9446fec13e8261b53cf81e7d820249bccf297726b541ada1017bc067220d507"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/compact-layout-review.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/compact-layout-review.py",
+    "sha256_before": "66f7ed5ad6b5a93f9f78df80ede19d341e797ddcfed4e36c4f9781414358a851"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e10-final-reopen.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e10-final-reopen.json",
+    "sha256_before": "294fbf5e66d4495a692dc5d691e04fa28684c2fc9243d954896ed05b5d2c2c9f"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e10-key-pads.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e10-key-pads.json",
+    "sha256_before": "e569936eced503fa367267601618ce56fc42b930ae90a0671dfb1b5670300e9e"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e11-final-reopen.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e11-final-reopen.json",
+    "sha256_before": "cc54ed240152a67538ae892af34d78cc26b65612f4fa5c2ff1b78cd617d82907"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e11-staggered-v2.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e11-staggered-v2.json",
+    "sha256_before": "c0bd40c1dff82758ce699602c0d2408a8a6b464eb3389535f16f1868f6b17d0c"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e16-sch-netlist.enet",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e16-sch-netlist.enet",
+    "sha256_before": "752c3735ad79ae3c016bd52d3574c1f05d50fbdbbe9694bc326d3247abb493ef"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e17-coil-validation-2026-09-23.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e17-coil-validation-2026-09-23.json",
+    "sha256_before": "551f5a85bd2400af52ef8f88d11f82121cb25af09d27f8f059c1e43dbbfc9a86"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e18-matching-validation-2026-09-23.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e18-matching-validation-2026-09-23.json",
+    "sha256_before": "514621d7279ee6cc9124145612d069f633362b37f6ff891ae443d6938f82259b"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e19-expanded-coil-validation-2026-09-23.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e19-expanded-coil-validation-2026-09-23.json",
+    "sha256_before": "50b15302f11893e4f34d2e023eb23d199e717406d00b9dec2ebccc772985235d"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e19-j1-shell-clearance-2026-09-23.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e19-j1-shell-clearance-2026-09-23.json",
+    "sha256_before": "a7987170d9d4394522f56293b107fd3f2fe6b6b1866f7ab285f1f536a4851d1c"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20-checker-calibration.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20-checker-calibration.json",
+    "sha256_before": "837587098f05fb2d569d95fabbcbc9e38631488b167b6d3ceb199de35ba2b728"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20-clear-layout-validation-2026-09-23.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20-clear-layout-validation-2026-09-23.json",
+    "sha256_before": "f2b40618cc3b01d81094aec234b59f6d9a282e37ca0a22baeb63f2c3c8833997"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20-clear-placement-drc.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20-clear-placement-drc.json",
+    "sha256_before": "7ab95ea246defc6db60fb06ba79562aab20795393e1aed934e9162e7b394274f"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20-clear-placement-snapshot.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20-clear-placement-snapshot.json",
+    "sha256_before": "8deef7266318b1de6616399a652211e4017b8139aefa61606e5f50d63ad6b0fe"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20-layout-review-body-bounds.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20-layout-review-body-bounds.json",
+    "sha256_before": "a62cb8959f41f82b8b9be4512c1658a1cacdca6213eaa28725f663409386fcc7"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20-layout-review-pins.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20-layout-review-pins.json",
+    "sha256_before": "93c1868a6784703230b90811681034e065d5392d07775dec12cab907d190fc0b"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20-layout-review.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20-layout-review.json",
+    "sha256_before": "b2d292fd29c24fc719d07bd82033a0f3f3419a12b396bb0769109685b93d7920"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20-pcb-pins.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20-pcb-pins.json",
+    "sha256_before": "f20479bd6c4b09ee2c69770fb42320018b51c878eb0c2c3f29c00295c1becc61"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20-placement-validation-2026-09-23.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20-placement-validation-2026-09-23.json",
+    "sha256_before": "37806e7c131a6207dbcfa34e4db2684229215fe8ccd1fc4b15e67b80f17528e6"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20-schematic.enet",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20-schematic.enet",
+    "sha256_before": "4c7d7196fee316ea16ba23bb49cca77c9b156ef0834e1db6377a69ff7739d3be"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20-unrouted-profile-review.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20-unrouted-profile-review.json",
+    "sha256_before": "a6fe9c6cbd87c6fb046594def54776548213c6fe5ab07c633ca445e97bf75ac0"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20b-battery-space-study.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20b-battery-space-study.json",
+    "sha256_before": "3eae25b2e9cf51259d750a1eb00d1b2d76ea699676d843dc7bc6edee1fd1cf2a"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20b-board.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20b-board.json",
+    "sha256_before": "5f71be202e8613102b1f67f184474c6e0dc9ec54e75571dc436560db80794bda"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20b-body-bounds.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20b-body-bounds.json",
+    "sha256_before": "89a328836e75b7ab988b185fd3a879178fe3d2f4cad602a891a6bba319e001ee"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20b-body-fit.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20b-body-fit.json",
+    "sha256_before": "cd720369650e300ac17999a5ac89f0420239a73210f86561de6a2fd254418791"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20b-connectivity.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20b-connectivity.json",
+    "sha256_before": "f0c89fa2cad2f66a581fb38132e4490bd02381b6a1d39b882befa38cde3caaad"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20b-layout-pins.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20b-layout-pins.json",
+    "sha256_before": "e58e5e6a2c0eca457addb169a21c6a243f8ee46ff4154e01bbef92ddad507734"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20b-placement-comparison.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20b-placement-comparison.json",
+    "sha256_before": "de69da2da61bfbe92c1c50f666f498adf410c8852f483126eff9d15bd736f256"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20b-placement-drc.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20b-placement-drc.json",
+    "sha256_before": "58f4e5924ba367d262759f8db567cd9cb2fbeecfdb2262b887b3ef5e38bfe840"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20b-placement-snapshot.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20b-placement-snapshot.json",
+    "sha256_before": "eff2cdd49e69a27809b9419c6f9db16791a64269cfc8191c2f5cbff7cfab743b"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20b-schematic.enet",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20b-schematic.enet",
+    "sha256_before": "4c7d7196fee316ea16ba23bb49cca77c9b156ef0834e1db6377a69ff7739d3be"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20b-source-preservation.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20b-source-preservation.json",
+    "sha256_before": "1c91eda7ca11cd584f288aa2572b9d6bf2515c8b8a49877ca610ce54aa804de8"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20c-board.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20c-board.json",
+    "sha256_before": "dead6f9e6a63cb8e0130033b5049348a8ce6b5ce7058092684b81b3e9020c729"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20c-layout-pins.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20c-layout-pins.json",
+    "sha256_before": "8e0ba3a8c733f04262b6602193e5bd0c25657e288383e69bb119fcea558ca711"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20c-placement-drc.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20c-placement-drc.json",
+    "sha256_before": "400ed472a0abad85b6dc97d2f9d092160f49857f9dbd2a61987a40149d908496"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20c-placement-snapshot.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20c-placement-snapshot.json",
+    "sha256_before": "35a6463073f2edbc2fec9e84c9fa15abb7ebe96431e8433bb28bb78d0ab1adbc"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20d-board.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20d-board.json",
+    "sha256_before": "808e49da95d91ce81bb3ff0154c1abd1000e98d60a262965de31bb20ffbef906"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20d-body-bounds.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20d-body-bounds.json",
+    "sha256_before": "024ecf7df5067321c78479d4daf4457845f327f4806f5468352a9e7244210bbf"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20d-body-fit.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20d-body-fit.json",
+    "sha256_before": "3a38caa238767b3727e19955a407e166ca9c0c18e6ede51c73cd41b4b2b31658"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20d-connectivity.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20d-connectivity.json",
+    "sha256_before": "18ddb2e0aee6712fa72eef932946b7d6834afa58c30a9de6de2cc79ba33bdb47"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20d-designators.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20d-designators.json",
+    "sha256_before": "284ed740e68ec07f9819bfa55d1c021731a4b7e212828095319b0d1518af10d9"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20d-fpc-review.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20d-fpc-review.json",
+    "sha256_before": "4c36a89a9017db1848fc6504405c8e1e73ce9755f9bb0bc270ffe27448c531b1"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20d-initial-body-bounds.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20d-initial-body-bounds.json",
+    "sha256_before": "5fca977ba02aa78fdf411c2dd4f8838ffa12e94b3a6e0ee08de50ad1b41c954d"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20d-initial-layout-audit.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20d-initial-layout-audit.json",
+    "sha256_before": "4d3e92925764361d24f936c0ed4be38f860c3ae0ec895149f47f95c82f7050ef"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20d-initial-layout-pins.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20d-initial-layout-pins.json",
+    "sha256_before": "a8d301ec7567713f7ebb52e9774184e03567e2755370161bbcd642c73768ec40"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20d-initial-placement-drc.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20d-initial-placement-drc.json",
+    "sha256_before": "f1179bd5abefe5c7c9035205ac2364f52afc4ce29f52856316d1caa51d04eea4"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20d-initial-placement-snapshot.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20d-initial-placement-snapshot.json",
+    "sha256_before": "9b1b2f788ebc3ea3131034e5a565b5cbbdef3472f7b67bb5ede80a54e862fd9e"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20d-layout-acceptance.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20d-layout-acceptance.json",
+    "sha256_before": "99a57d91fbf8653f20ce2b51aaaf887d79088f961ff4d30e69f037ec10abbe79"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20d-layout-audit.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20d-layout-audit.json",
+    "sha256_before": "4dfecff97804e5e6242aef9840dd716ce41eafb06c2b0144cf46ba61fac9a34f"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20d-layout-pins.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20d-layout-pins.json",
+    "sha256_before": "39086cabdb6bcbaf110680ebd12c84055af71542d2ba84a85d5dda945a1a60cf"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20d-placement-drc.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20d-placement-drc.json",
+    "sha256_before": "c3fa2edc39e22652df24d54a74434d902da338b84f81b157e64af84bc4fbbaad"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20d-placement-snapshot.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20d-placement-snapshot.json",
+    "sha256_before": "1dcf2b8d76eeb10f95d1cc8d1efef405c1651c0f6f73c119272995a5f24ebaee"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20d-profile-review.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20d-profile-review.json",
+    "sha256_before": "4aaa2b97e97fee2493b141f0104b410938f116770b7c9d7c69eb17b8788a0524"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20d-refinement-first-drc.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20d-refinement-first-drc.json",
+    "sha256_before": "53659e4a286f6917ef9753c208c16e6f2cf8dfe59503d98b81e1f6f74303a517"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20d-schematic.enet",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20d-schematic.enet",
+    "sha256_before": "4c7d7196fee316ea16ba23bb49cca77c9b156ef0834e1db6377a69ff7739d3be"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20d-source-preservation.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20d-source-preservation.json",
+    "sha256_before": "9124fb9660a144ab4214cd34e61e5e0f6ab83556365f4269b29558e31ff52fdf"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e20d-validation.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e20d-validation.json",
+    "sha256_before": "195d25b7e2aef86cb9135e90bf5a8b9020579bdd7d2ac1ee05f4fcb634588a2c"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e8-final-reopen.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e8-final-reopen.json",
+    "sha256_before": "de6b1031746a731221f3304080029e5871ab6950b9a9f8de9a512757e89244fd"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e9-final-reopen.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e9-final-reopen.json",
+    "sha256_before": "9db31c5ac3c561c80f6d02d965e5bbddef2e2228f8d556c8c2cbcdbb76b0dbc4"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/e9-usb-cc-only-run.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/e9-usb-cc-only-run.json",
+    "sha256_before": "ca73012a40a6952b6cae0cfa5177c8773ec28c998ef2a4e4b85665849ecafc51"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/eda-prelayout-check-layout.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/eda-prelayout-check-layout.py",
+    "sha256_before": "7e1d19821bfe21dd493be14b83777b494764fe87dc57a69c419de2f4332eba8e"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/eda-prelayout-pcb.enet",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/eda-prelayout-pcb.enet",
+    "sha256_before": "603984c23c4648b40997f4a93a21d905316409b546282f06204d263b4f171d84"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/eda-routing-refine-pcb.enet",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/eda-routing-refine-pcb.enet",
+    "sha256_before": "603984c23c4648b40997f4a93a21d905316409b546282f06204d263b4f171d84"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/records/pad-geometry.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/records/pad-geometry.json",
+    "sha256_before": "3c4625be8607bb006679ed59bb4a926c74e78154680f53b4c89119c0dd05e3be"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/routing-space-study.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/routing-space-study.md",
+    "sha256_before": "866f1571a42c5bcabed3eba792dc2a3da469771fd5301cb71093dcf1a4268d52"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/schematic-draft.enet",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/schematic-draft.enet",
+    "sha256_before": "cfda742fd10d8585298c09f7c6b6d2510065750cc75068235877f2f7202961f6"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/schematic-draft.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/schematic-draft.md",
+    "sha256_before": "06973e7a1275e0b708579922c757e0f4641d04ece31320b48057c88a507d9458"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/usb4500-clearance-review.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/usb4500-clearance-review.json",
+    "sha256_before": "44ff5465aa40365bbca15d7842904869f4bc1a98a5103bfe7e26978b8e5fb59e"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/usb4500-clearance-review.md",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/usb4500-clearance-review.md",
+    "sha256_before": "6b580316349a8d7a8dd4836c2723cdba769cf24d148855e5113de357a60c96a3"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/usb4500-clearance-review.svg",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/usb4500-clearance-review.svg",
+    "sha256_before": "04d9664de93ecf6271fe37e1ea874b1a81611cd1663f6b0e40c50ea3b6b1f4f9"
+  },
+  {
+    "from": "projects/nfc-business-card/hardware/usb4500-process-check.json",
+    "to": "projects/nfc-business-card/archive/pre-r1/hardware/usb4500-process-check.json",
+    "sha256_before": "027f9eefa38e033fe04f512565d84c8341bbc81bb356afab1225a04213b297f0"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/analyze-e16-pour.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/analyze-e16-pour.py",
+    "sha256_before": "14de759cd68cd30beb4f66a088736628f88c1d70fb585323be79c1c61076168f"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/apply-e16-c3-move.js",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/apply-e16-c3-move.js",
+    "sha256_before": "b74a6bdb902041a00b7bd22b0861ab0b6e16ca5f0071bdb3fe054a5e51033845"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/apply-e16-c3-replace.js",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/apply-e16-c3-replace.js",
+    "sha256_before": "8f76c8659e6eca684133398d530111c6386becc336f45b46af20b0020001adf9"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/apply-e16-ground-stitch.js",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/apply-e16-ground-stitch.js",
+    "sha256_before": "385fca308920d680cade1cfe19c52f49d22ea55dc4c93a1ae6ff856425a68f3a"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/apply-e17-coil-study.js",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/apply-e17-coil-study.js",
+    "sha256_before": "1e4f21b02370fd0597a2d39b196e718c4501141eb0470ec78db6a652c70ef379"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/build-e16-coil-footprint.js",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/build-e16-coil-footprint.js",
+    "sha256_before": "ba1a75100b467db13a613f58d4d3c11a4b071df2b89fd1b1ff9601860d9cd214"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/check-e14-enclosure-v2.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/check-e14-enclosure-v2.py",
+    "sha256_before": "e909dc0e4710a65c1bdd9cd106794b3c1a762fe5b5410047b089538b82b13ea8"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/check-e14-gates.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/check-e14-gates.py",
+    "sha256_before": "8dc4a2eabdffc88b8763aac73cd846a293bdd462c15f7d1c6606451b714857f7"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/check-e16-board-clearance.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/check-e16-board-clearance.py",
+    "sha256_before": "b80187ef987079fa6557f879e74534ec33055995dc48a4b62740ff7978300215"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/check-e16-board-fit.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/check-e16-board-fit.py",
+    "sha256_before": "12fc57f76d3b6de7d87160268e7af6792784031842eeae4a611990fb9b8f29ee"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/check-e16-copper-connectivity.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/check-e16-copper-connectivity.py",
+    "sha256_before": "c3e0b99afb802a3edc4808bf0a375505357bb36c010af5d646b3f5522f2b54b4"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/check-e16-emc.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/check-e16-emc.py",
+    "sha256_before": "def2f0a3f9bc0815eff166d67da767fb45fe3f971e0da3f2a2024486417cc1be"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/check-e16-manufacture.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/check-e16-manufacture.py",
+    "sha256_before": "e0effe6c63507c30e0a4097ef7803ab232609a845218b16c0fdb983f039f97b2"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/check-e16-print-meshes.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/check-e16-print-meshes.py",
+    "sha256_before": "f511d69c364b251126af732cfb2f0444e71c788afd0f4ff41ed892f0d9baf896"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/check-e16-usb-plug.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/check-e16-usb-plug.py",
+    "sha256_before": "deb3d8e0c8ae94c5fb7be752209d22a364d9679d19fe2863cfcd0df7e7214810"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/check-e18-nfc-branches.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/check-e18-nfc-branches.py",
+    "sha256_before": "26859886c790fe0b4b5472a65a8a4833488bb78d66176ed64957a825b6a850c2"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/check-e20b-body-fit.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/check-e20b-body-fit.py",
+    "sha256_before": "9e0279a7cab5c0c4ae5c14a509892c9738ebd00e483c77cdfac9831b1b1d2f76"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/check-e20d-layout.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/check-e20d-layout.py",
+    "sha256_before": "1a31aa80564a586551c267bf11443a9646dcaa5c9cfe24f48d8f50ed767688bf"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/check-e6-netlist.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/check-e6-netlist.py",
+    "sha256_before": "c8ae309b17bb00974c5bd8d593959618cb542efa34108634a4cb882eb34feae4"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/collect-e16-manufacture.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/collect-e16-manufacture.py",
+    "sha256_before": "4f1eb4d7ae834ec8a4a4e4aebb6fbd0ed621f33273c90c3eca145670e942f6c7"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/compare-e20b-placement.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/compare-e20b-placement.py",
+    "sha256_before": "7e91795996360566dc9342405b064c2b80f6fedb72bc0bdf6036216be68da4f4"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/eda-export-e16-3d.js",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/eda-export-e16-3d.js",
+    "sha256_before": "3c4f7c53d1479eefb0f7aadd9a532bf97c44dfdd58117fd28315aeb0116d700a"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/eda-export-e16-manufacture.js",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/eda-export-e16-manufacture.js",
+    "sha256_before": "098bde8e926c699d88607eb34930e2f01ddfe458b7dfa31615cbaf1f40c9636e"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/eda-export-e16-snapshot.js",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/eda-export-e16-snapshot.js",
+    "sha256_before": "b061d73fbcde089b9869aafab03746f3ea7f75308a71c8d0dd99c260859ffff0"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/eda-open-e16.js",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/eda-open-e16.js",
+    "sha256_before": "9001b21fad5f52b0412ff0065ef768e744c7b9562c0cac92df2e80c763990809"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/eda-probe-copper.js",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/eda-probe-copper.js",
+    "sha256_before": "5747a5969f756e50b8e9f9c1db263f3aafdf28acb224aceaee634d0b7113af9e"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/freecad-study.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/freecad-study.py",
+    "sha256_before": "c7baa65484fc5f9743e3e77daaca0a062a5dca0ae0d800228834d41781f60911"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/generate-e14-eda-layout-svg.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/generate-e14-eda-layout-svg.py",
+    "sha256_before": "e029d7e4dac2d55049cdb91e824b2a685a8b4da5c327503b6adc5f5068f3f5cf"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/generate-e15-clean-layout-svg.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/generate-e15-clean-layout-svg.py",
+    "sha256_before": "f2b181bc3f7b2c1834c3e1ae956d352e1e65461420b24f4375f1c6e996b9ba4e"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/generate-e16-height-budget-svg.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/generate-e16-height-budget-svg.py",
+    "sha256_before": "7a1d9c860952cf8c97c8a3a8d563c7134ed75f7d3f6895e8517d234dd0bca188"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/generate-e16-right-mid-svg.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/generate-e16-right-mid-svg.py",
+    "sha256_before": "9669291f2e70538ed4d97fe03d602f27198be2c83134bc86004127b36c51cfa8"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/generate-e16-v5-section-svg.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/generate-e16-v5-section-svg.py",
+    "sha256_before": "1e1402203da09f1415ecbf139b4e0d8e2a88cacec62b9ac6776e9c3da9827321"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/plan-e16-c3-move.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/plan-e16-c3-move.py",
+    "sha256_before": "7621100f46e59beba89f19fa7b27e1a819d58d7c1404764611a887fb52a6c5c8"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/plan-e16-ground-stitch.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/plan-e16-ground-stitch.py",
+    "sha256_before": "2c20b2d4544d71a12626027c4793fbac33f8c95acf1c2506d03e814a6391fe6f"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/plan-e16-right-mid.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/plan-e16-right-mid.py",
+    "sha256_before": "313420259f0698c15b9c0047ab4bc67133abbd693ccc0d7611e28e7c6f23de6f"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/plan-nfc-coil.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/plan-nfc-coil.py",
+    "sha256_before": "05336722f1d26efe9d960bf149a2ccdcb038e329b354d9da9a41c3c397b0af7c"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/prepare-outline-review-package.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/prepare-outline-review-package.py",
+    "sha256_before": "0e4b057ac5b2eb84192bca448216c3d0c22d6a7a662d4519c588ab15b48870e7"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/render-e20b-battery-space.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/render-e20b-battery-space.py",
+    "sha256_before": "3ee4cdfaf9c5b2119011e9a470f2b8cfdaee5b3fb36e469c922fa609903933b4"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/render-e20d-front-rear.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/render-e20d-front-rear.py",
+    "sha256_before": "c671843fa2a426eae3ffd466c0987132def05469c78cbcdde25668a972aeda3e"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/render-nfc-coil-area.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/render-nfc-coil-area.py",
+    "sha256_before": "18ceb0f9a38e5527f2fcaba7f69ed45fb8fcc101ba6da68b8d246aff8999721d"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/render-pcb-margin-options.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/render-pcb-margin-options.py",
+    "sha256_before": "9d8b7994dc33e26ad27e0eae675ad739443ad6201fe9f1209edb6945c99a63ca"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/report-free-space.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/report-free-space.py",
+    "sha256_before": "5152fdc416bd905415ae2f90d27b27c6a39824f17c133e2e4b3f25a2ccafbcb8"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/review-e20-layout.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/review-e20-layout.py",
+    "sha256_before": "df52cea64c3e04f8ef8cd52b75d55eca151107b352224ac2689fd06e2f551760"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/review-e20d-fpc.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/review-e20d-fpc.py",
+    "sha256_before": "8fca4520be055c0d0c47a8bd75d4b65dc9ba9ea7ed4b61fe85b3fa089767b6bf"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/routing-space-study.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/routing-space-study.py",
+    "sha256_before": "621b407e23a999ac7e1e64faa3b580d3a47829a1b4219e37f8db844d76e1c948"
+  },
+  {
+    "from": "projects/nfc-business-card/scripts/study-e20b-battery-space.py",
+    "to": "projects/nfc-business-card/archive/pre-r1/scripts/study-e20b-battery-space.py",
+    "sha256_before": "fdd58a26ce88893e1d316632578374949933ef35c405930decc323b132fefae3"
+  }
+]

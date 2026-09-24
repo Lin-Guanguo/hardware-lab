@@ -7,7 +7,7 @@ last_updated: 2026-09-21
 
 早期条目访问于 **2026-09-17**；新增连接器图纸及 PCBA 供货快照访问于 **2026-09-20**，具体日期见下载清单与[候选 BOM](../hardware/candidate-bom.md)。选型结论是结合用户需求的工程判断，不是厂商对整机的保证。动态网页的库存、版本、工艺能力在采购/安装前重核。
 
-2026-09-21 新增 [FH12A 上接触插座原厂图纸](https://www.hirose.com/en/product/document?clcode=CL0586-0555-2-55&documentid=0000906835&documenttype=2DDrawing&lang=en&productname=FH12A-24S-0.5SH%2855%29&series=FH12)，归档 `downloads/fh12a-24s-drawing.pdf` 并核 SHA-256；两页均渲染检查，重点核本体、公差、开盖高度、插入段及推荐焊盘。与屏幕触点、库锚脚的差异见[84 × 52 排布记录](../hardware/pcb-84x52.md)。另核对 [TI TPD2EUSB30 数据手册](https://www.ti.com/lit/ds/symlink/tpd2eusb30.pdf)选择数据 ESD 空间候选，未完成电路连接或生产选型。
+2026-09-21 新增 [FH12A 上接触插座原厂图纸](https://www.hirose.com/en/product/document?clcode=CL0586-0555-2-55&documentid=0000906835&documenttype=2DDrawing&lang=en&productname=FH12A-24S-0.5SH%2855%29&series=FH12)，归档 `downloads/fh12a-24s-drawing.pdf` 并核 SHA-256；两页均渲染检查，重点核本体、公差、开盖高度、插入段及推荐焊盘。与屏幕触点、库锚脚的差异见[84 × 52 排布记录](../archive/pre-r1/hardware/pcb-84x52.md)。另核对 [TI TPD2EUSB30 数据手册](https://www.ti.com/lit/ds/symlink/tpd2eusb30.pdf)选择数据 ESD 空间候选，未完成电路连接或生产选型。
 
 ## 芯片与协议
 

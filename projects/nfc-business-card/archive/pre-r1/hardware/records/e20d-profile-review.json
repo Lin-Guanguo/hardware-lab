@@ -1,0 +1,30 @@
+{
+  "status": "PROFILE_ONLY_PASS_UNROUTED_NOT_FOR_ORDER",
+  "closed_contours": 1,
+  "bbox_mm": [
+    1.10000034,
+    1.10000034,
+    82.8999993,
+    50.899999799999996
+  ],
+  "arc_radii_mm": [
+    0.499999,
+    0.500000000001,
+    0.499999,
+    1.999999,
+    1.999999,
+    0.499999,
+    0.500000000001,
+    1.999999
+  ],
+  "usb_slot_centerline_lengths_mm": [
+    1.1999969999999962,
+    1.1999969999999962,
+    0.7999989999999997,
+    0.7999989999999997
+  ],
+  "conflicting_mechanical_layer": false,
+  "gerber_sha256": "8cee52298221c66358effacee36010dd60765636726e4c17dc3d58ac36e92478",
+  "snapshot_sha256": "1dcf2b8d76eeb10f95d1cc8d1efef405c1651c0f6f73c119272995a5f24ebaee",
+  "scope": "Outline and mounting-slot geometry only. Unrouted copper is not qualified for fabrication."
+}

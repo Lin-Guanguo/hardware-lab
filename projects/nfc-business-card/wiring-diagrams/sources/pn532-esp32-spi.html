@@ -1,0 +1,142 @@
+<div id="pn532-esp32-wiring">
+  <style>
+    #pn532-esp32-wiring { font: 15px/1.5 system-ui, sans-serif; color: #16243a; max-width: 1240px; margin: auto; }
+    #pn532-esp32-wiring * { box-sizing: border-box; }
+    #pn532-esp32-wiring h1 { font-size: 25px; margin: 0 0 8px; }
+    #pn532-esp32-wiring p { margin: 5px 0 12px; }
+    #pn532-esp32-wiring .notice { background: #fff5db; border: 1px solid #edc871; border-radius: 9px; padding: 9px 12px; }
+    #pn532-esp32-wiring .controls { margin: 12px 0; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    #pn532-esp32-wiring select { padding: 7px 10px; font: inherit; border-radius: 7px; border: 1px solid #8da1bb; background: white; color: inherit; }
+    #pn532-esp32-wiring .viewport { overflow-x: auto; border: 1px solid #cbd5e1; border-radius: 10px; background: #f8fafc; }
+    #pn532-esp32-wiring svg { display: block; min-width: 1100px; width: 100%; height: 680px; }
+    #pn532-esp32-wiring svg text { font-family: system-ui, sans-serif; }
+    #pn532-esp32-wiring .small { font-size: 12px; }
+    #pn532-esp32-wiring .pin-label { font-size: 12px; font-weight: 600; }
+    #pn532-esp32-wiring .board-title { font-size: 16px; font-weight: 700; }
+    #pn532-esp32-wiring .dim { opacity: .12; }
+    #pn532-esp32-wiring .wire-label { font-size: 13px; font-weight: 700; }
+    #pn532-esp32-wiring table { border-collapse: collapse; width: 100%; margin-top: 12px; }
+    #pn532-esp32-wiring th, #pn532-esp32-wiring td { border-bottom: 1px solid #cbd5e1; padding: 6px 8px; text-align: left; }
+    #pn532-esp32-wiring tr.active { background: #e6f3ff; font-weight: 700; }
+    #pn532-esp32-wiring .detail { min-height: 27px; font-weight: 600; }
+  </style>
+  <h1>PN532 → ESP32-S3-CAM · SPI 接线</h1>
+  <p>左：PN532 元件正面，将板上 NFC 字样摆正后，天线在左、双排针在右；你发来的正面照片左右镜像。右：ESP32 元件正面，天线上、USB 下。双排针从方形焊盘 ① 开始逐排数；圈内数字是 PN532 <strong>物理针号</strong>，ESP32 旁边数字是板上 <strong>GPIO 丝印</strong>。</p>
+  <p class="notice"><strong>改线或拨开关前拔掉 USB。</strong>此图按 ITEAD 同外形板及 Raspberry Pi 26 针接口推导；2026-09-24 按图接线、SET0=L、SET1=H 时已读出 PN532 固件 1.6，手机已正确打开固定 NDEF 网址。未逐针量通断。重新接线时仍以实物方形 1 号焊盘定位。</p>
+  <div class="controls"><label for="pn532-wire-select">逐根查看</label><select id="pn532-wire-select"><option value="all">全部 6 根线</option></select><span>开关：SET0 → L，SET1 → H</span></div>
+  <div class="viewport"><svg role="img" aria-label="PN532 双排针与 ESP32-S3-CAM 的六根 SPI 接线图"></svg></div>
+  <p class="detail" aria-live="polite"></p>
+  <table aria-label="六根接线表"><thead><tr><th>PN532 双排针</th><th>用途</th><th>ESP32 丝印</th></tr></thead><tbody></tbody></table>
+  <p>PN532 板边印着 SCK / MI / MO… 的八个孔是另一组<strong>未焊</strong>接口，本图不使用。IRQ、RST# 及其他双排针保持不接；摄像头排线可以留着，TFT 和按键连线已拆除。当前 NDEF 固件上电后启用 SPI。</p>
+  <script>
+    (() => {
+      const root = document.getElementById('pn532-esp32-wiring');
+      const svg = root.querySelector('svg');
+      const select = root.querySelector('select');
+      const detail = root.querySelector('.detail');
+      const tbody = root.querySelector('tbody');
+      const ns = 'http://www.w3.org/2000/svg';
+      const left = ['3V3', 'EN', '4', '5', '6', '7', '15', '16', '17', '18', '8', '3', '46', '9', '10', '11', '12', '13', '14', '5V'];
+      const right = ['TX', 'RX', '1', '2', '42', '41', '40', '39', '38', '37', '36', '35', '0', '45', '48', '47', '21', '20', '19', 'GND'];
+      const wires = [
+        { number: 2, signal: '5V 供电', esp: '5V', side: 'left', row: 19, color: '#d63d35' },
+        { number: 6, signal: 'GND 共地', esp: 'GND', side: 'right', row: 19, color: '#525f73' },
+        { number: 19, signal: 'MOSI', esp: '41', side: 'right', row: 5, color: '#c47a16' },
+        { number: 21, signal: 'MISO', esp: '39', side: 'right', row: 7, color: '#16866f' },
+        { number: 23, signal: 'SCK', esp: '40', side: 'right', row: 6, color: '#316fc9' },
+        { number: 24, signal: 'NSS / 片选', esp: '42', side: 'right', row: 4, color: '#9254b3' }
+      ];
+      for (const wire of wires) {
+        const option = document.createElement('option');
+        option.value = String(wire.number);
+        option.textContent = `PN532 ${wire.number} ${wire.signal} → ESP32 ${wire.esp}`;
+        select.appendChild(option);
+        const row = document.createElement('tr');
+        row.dataset.pin = wire.number;
+        row.innerHTML = `<td>${wire.number}</td><td>${wire.signal}</td><td>${wire.esp}</td>`;
+        tbody.appendChild(row);
+      }
+      function add(tag, attrs = {}, content, parent = svg) {
+        const node = document.createElementNS(ns, tag);
+        for (const [key, value] of Object.entries(attrs)) node.setAttribute(key, value);
+        if (content !== undefined) node.textContent = content;
+        parent.appendChild(node);
+        return node;
+      }
+      function label(x, y, value, attrs = {}) {
+        add('text', { x, y, 'dominant-baseline': 'middle', ...attrs }, value);
+      }
+      function draw() {
+        const chosen = select.value;
+        svg.setAttribute('viewBox', '0 0 1160 680');
+        svg.replaceChildren();
+        add('rect', { x: 42, y: 62, width: 380, height: 546, rx: 18, fill: '#2772a6', stroke: '#17557e', 'stroke-width': 3 });
+        add('rect', { x: 70, y: 105, width: 228, height: 448, rx: 23, fill: 'none', stroke: '#9ed8ec', 'stroke-width': 6 });
+        add('rect', { x: 90, y: 125, width: 188, height: 408, rx: 18, fill: 'none', stroke: '#9ed8ec', 'stroke-width': 4 });
+        label(182, 83, 'PN532 · 正面', { class: 'board-title', 'text-anchor': 'middle', fill: 'white' });
+        label(184, 317, 'NFC 天线', { 'text-anchor': 'middle', fill: 'white', 'font-size': 21, 'font-weight': 700 });
+        add('rect', { x: 92, y: 567, width: 65, height: 21, rx: 3, fill: '#dae6f2' });
+        add('rect', { x: 176, y: 567, width: 65, height: 21, rx: 3, fill: '#dae6f2' });
+        label(124, 580, 'SET0 L', { 'text-anchor': 'middle', class: 'small' });
+        label(208, 580, 'SET1 H', { 'text-anchor': 'middle', class: 'small' });
+        label(375, 39, '双排针 2 × 13', { 'text-anchor': 'middle', class: 'small' });
+        label(330, 620, '□ = 1 号脚；右列为偶数脚', { class: 'small', 'text-anchor': 'middle' });
+
+        add('rect', { x: 848, y: 69, width: 240, height: 546, rx: 12, fill: '#287c75', stroke: '#17615b', 'stroke-width': 3 });
+        add('rect', { x: 928, y: 42, width: 80, height: 76, rx: 5, fill: '#164e49', stroke: '#b0e1d4' });
+        label(968, 71, '天线', { 'text-anchor': 'middle', fill: 'white', class: 'small' });
+        add('rect', { x: 928, y: 131, width: 80, height: 133, rx: 5, fill: '#aebdcc', stroke: '#506b75' });
+        label(968, 175, 'ESP32-S3', { 'text-anchor': 'middle', class: 'small' });
+        label(968, 200, 'N16R8', { 'text-anchor': 'middle', class: 'small' });
+        add('rect', { x: 936, y: 423, width: 66, height: 24, rx: 3, fill: '#dae6f2' });
+        label(968, 436, '摄像头座', { 'text-anchor': 'middle', class: 'small' });
+        add('rect', { x: 903, y: 578, width: 44, height: 58, rx: 5, fill: '#c9d4df' });
+        add('rect', { x: 986, y: 578, width: 44, height: 58, rx: 5, fill: '#c9d4df' });
+        label(968, 653, 'USB ↓', { 'text-anchor': 'middle', class: 'board-title' });
+        label(968, 32, 'ESP32-S3-CAM · 正面', { class: 'board-title', 'text-anchor': 'middle' });
+        for (const wire of wires) {
+          const active = chosen === 'all' || chosen === String(wire.number);
+          const row = Math.floor((wire.number - 1) / 2);
+          const startX = wire.number % 2 ? 346 : 386;
+          const startY = 113 + row * 35;
+          const endX = wire.side === 'left' ? 862 : 1074;
+          const endY = 100 + wire.row * 25;
+          const laneX = 450 + wires.indexOf(wire) * 48;
+          const path = wire.number % 2
+            ? `M ${startX} ${startY - 12} V ${startY - 17} H ${laneX} V ${endY} H ${endX - 9}`
+            : `M ${startX + 12} ${startY} H ${laneX} V ${endY} H ${endX - 9}`;
+          add('path', { d: path, fill: 'none', stroke: wire.color, 'stroke-width': active ? 3 : 2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round', class: active ? '' : 'dim' });
+          label(laneX + 5, 45 + wires.indexOf(wire) * 20, `${wire.number} → ${wire.esp}`, { class: active ? 'wire-label' : 'wire-label dim', fill: wire.color });
+        }
+        for (let row = 0; row < 13; row++) {
+          const y = 113 + row * 35;
+          for (let col = 0; col < 2; col++) {
+            const number = row * 2 + col + 1;
+            const x = col === 0 ? 346 : 386;
+            const wire = wires.find(item => item.number === number);
+            const active = wire && (chosen === 'all' || chosen === String(number));
+            add(number === 1 ? 'rect' : 'circle', number === 1
+              ? { x: x - 11, y: y - 11, width: 22, height: 22, rx: 2, fill: '#fff7d6', stroke: '#5a6b7b', 'stroke-width': 2 }
+              : { cx: x, cy: y, r: 11, fill: active ? wire.color : '#e7eef5', stroke: '#547188', 'stroke-width': 1.5 });
+            label(x, y + 1, String(number), { 'text-anchor': 'middle', class: 'pin-label', fill: active ? 'white' : '#24364b' });
+          }
+        }
+        for (const [side, pins] of [['left', left], ['right', right]]) {
+          const x = side === 'left' ? 862 : 1074;
+          pins.forEach((pin, row) => {
+            const y = 100 + row * 25;
+            const wire = wires.find(item => item.side === side && item.row === row);
+            const active = wire && (chosen === 'all' || chosen === String(wire.number));
+            add('circle', { cx: x, cy: y, r: 8, fill: active ? wire.color : '#deeee9', stroke: '#346e6a', 'stroke-width': 1.5 });
+            label(side === 'left' ? x + 14 : x - 14, y + 1, pin, { 'text-anchor': side === 'left' ? 'start' : 'end', class: 'pin-label', fill: 'white' });
+          });
+        }
+        const wire = wires.find(item => chosen === String(item.number));
+        detail.textContent = wire ? `PN532 双排针 ${wire.number}（${wire.signal}）→ ESP32 板上丝印 ${wire.esp}` : '只接图中高亮的 6 根线；其他针脚暂不接。';
+        tbody.querySelectorAll('tr').forEach(row => row.classList.toggle('active', chosen === row.dataset.pin));
+      }
+      select.addEventListener('change', draw);
+      draw();
+    })();
+  </script>
+</div>

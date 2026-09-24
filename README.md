@@ -10,7 +10,7 @@
 | --- | --- | --- |
 | [AI Passport](projects/ai-passport/README.md) | 探索紧凑的可编程胸牌、屏幕按键交互与 NFC 链接 | 2026-09-16 确认已下单，等待到货 |
 | [Image Oracle](projects/image-oracle/README.md) | 用固定算法将摄像头图像映射为答案，默认拍摄熔岩灯 | 2026-09-19 拼接原型完成并验收；后续探索更多传感器，或焊接、定制 PCB 与 3D 打印的紧凑装置 |
-| [Programmable NFC Business Card](projects/nfc-business-card/README.md) | 按键切换身份的薄型 NFC 墨水屏名片 | 2026-09-24 R1 routed in a clean native project: saved/reopened DRC 0, 5.8 mm clear case. Checkpoint `bee8846` saved. Subsequent review removes all nominal 0.2 mm drills, adds USB ground stitching and corrects the C1/C8 review assignment; CE/SCL routing removes two vias and R3/R4 are corrected to 0 ohm. [SWD programmer recovery is selected](projects/nfc-business-card/hardware/r1-usb-swd-recovery.md), with no hidden RESET added. Vendor DFM and real-board tests remain open. [Delivery and checks](projects/nfc-business-card/hardware/pcb-r1-delivery.md). RF and physical fit remain untested. |
+| [Programmable NFC Business Card](projects/nfc-business-card/README.md) | 按键切换身份的薄型 NFC 墨水屏名片 | R1 PCB 与外壳仍待实物验证；2026-09-24 桌面 PN532 已通过 SPI 探测和手机固定网址 NDEF 读取。[桌面程序与记录](projects/nfc-business-card/README.md#pn532-桌面测试程序) |
 
 ## 目录结构
 
@@ -29,7 +29,9 @@ hardware-lab/
 │   ├── kicad-happy/             <- EMC 规则、公式与监管限值（只读参考）
 │   ├── pcb-skill/               <- 同工具链的流程纪律与 MCP 陷阱（只读参考）
 │   ├── pcba-design-skills/      <- 证据门禁与产物失效模型（只读参考）
-│   └── hw-review/               <- 逐引脚证据式审查、嘉立创 EDA 解析（只读参考）
+│   ├── hw-review/               <- 逐引脚证据式审查、嘉立创 EDA 解析（只读参考）
+│   ├── seeed-pn532/             <- PN532 NFC Type 4 模拟库（桌面测试依赖）
+│   └── ndef/                    <- NDEF 消息编码库（桌面测试依赖）
 ├── eda/
 │   ├── README.md
 │   ├── NFC-Card-R1.eprj2
@@ -51,9 +53,11 @@ hardware-lab/
     │   └── docs/
     └── nfc-business-card/
         ├── README.md
+        ├── firmware/         <- PN532 SPI 探测与固定网址 NDEF 测试程序
         ├── hardware/         <- production/r1/ 制造文件；records/ 校验证据
         ├── enclosure/        <- 模型、STEP/STL、报告；renders/ 是渲染图册
         ├── scripts/          <- 导出器、检查器、布线/线圈规划工具
+        ├── wiring-diagrams/  <- PN532 与 ESP32-S3-CAM 交互式接线图
         ├── docs/             <- 含 progress.md 进度看板
         ├── archive/          <- 历史方案与旧索引
         └── artifacts/        <- 本机产物（全部忽略，只有 README.md 索引入库）
@@ -63,7 +67,7 @@ hardware-lab/
 
 根目录 [eda/](eda/README.md) 直接保存嘉立创 EDA 的原始 `.eprj2` 工程，不使用工程文件符号链接；历史工程移到 `eda/archive/`。客户端只需登记一次 `hardware-lab/eda/`。正式工程纳入 Git，所属项目通过文档关联；BOM 等资料仍保存在项目的 `hardware/`，临时导出产物放在 `artifacts/`。
 
-现有接线图见 [Image Oracle 图册](projects/image-oracle/wiring-diagrams/README.md)。后续默认使用带主板外形、完整丝印和模块排针数字序号的接线图；各项目使用相同目录名。
+现有接线图见 [Image Oracle 图册](projects/image-oracle/wiring-diagrams/README.md)和[电子名片桌面实验图册](projects/nfc-business-card/wiring-diagrams/README.md)。后续默认使用带主板外形、完整丝印和模块排针数字序号的接线图；各项目使用相同目录名。
 
 ## 设计方法论
 

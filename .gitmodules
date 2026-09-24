@@ -19,3 +19,11 @@
 	path = upstreams/hw-review
 	url = https://github.com/ericshang98/hw-review.git
 	branch = main
+[submodule "upstreams/seeed-pn532"]
+	path = upstreams/seeed-pn532
+	url = https://github.com/Seeed-Studio/PN532.git
+	branch = arduino
+[submodule "upstreams/ndef"]
+	path = upstreams/ndef
+	url = https://github.com/don/NDEF.git
+	branch = master

@@ -2,6 +2,8 @@
 
 ## 当前确定方案
 
+**PN532 桌面实测（2026-09-24）：**[PN532 与 ESP32-S3-CAM 六线接线图](wiring-diagrams/pn532-esp32-spi.html)已归档，可逐根高亮双排针物理脚与 ESP32 丝印。SET0=L、SET1=H 时，SPI 探测返回 `PROBE_OK chip=0x32 firmware=1.6`；[固定网址 NDEF 测试固件](firmware/pn532_ndef_test/README.md)已烧录，用户实测手机弹出链接提示并正确打开 `https://example.com`。接下来验证 A/B 切换，墨水屏待单独测试。详细记录见 [NFC 桌面实验](docs/nfc-bench-test.md)。
+
 **3.0 mm 内腔研究：**按用户反馈电池最厚处可卡入 3 mm，已完成 [4.6 mm 总厚诊断](enclosure/r1-cavity-3mm-study/README.md)。现有 USB、主控、FPC 座和按键运动存在干涉；局部深腔与平整外表两条路线已有尺寸预算，尚无可打印的 3 mm 内腔方案。电池 3.0 mm 仅用于本次研究，打包版不变。
 
 **最新减薄候选：**[3.6 mm 内腔／5.2 mm 总厚度](enclosure/r1-usb-height-5.2/README.md)已生成。保持电池 3.4 mm 包络及 PCB 安装高度，调整键帽中央压柱后，静止无预压干涉、完整行程几何通过；USB-C 顶部名义余量约 0.11 mm，打印公差和实物回弹仍未验证。5.8 mm 打包版保持不变。
@@ -42,10 +44,21 @@
 | [Complete local ZIP](artifacts/NFC-Card-R1-prototype.zip) | Rebuildable handoff containing PCB, CAD and checks; do not upload it as a Gerber ZIP |
 | [Historical archive](archive/README.md) | E-series designs, experiments, old indexes and migration map |
 
+## PN532 桌面测试程序
+
+当前 ESP32-S3-CAM 上运行 [pn532_ndef_test](firmware/pn532_ndef_test/README.md)，SET0=L、SET1=H，手机已正确打开固定测试网址 `https://example.com`。接线按[六线交互图](wiring-diagrams/pn532-esp32-spi.html)；详细过程与证据见 [NFC 桌面实验](docs/nfc-bench-test.md)。
+
+| 程序 | 作用 | 本次实测 |
+| --- | --- | --- |
+| [pn532_probe](firmware/pn532_probe/README.md) | 串口收到 `PROBE` 后读取 PN532 芯片和固件版本 | `PROBE_OK chip=0x32 firmware=1.6` |
+| [pn532_ndef_test](firmware/pn532_ndef_test/README.md) | 模拟只读 NFC Type 4 标签，发布 `https://example.com` | `NDEF_READY`、`NDEF_SESSION`；手机弹出并打开正确链接 |
+
+两个工程都独立构建，具体工具链、依赖、构建与烧录命令在各自 README。NDEF 工程直接使用锁定在 `upstreams/` 的 Seeed PN532 与 don/NDEF 子模块。当前结果只覆盖固定网址的桌面模块与这一部手机；A/B 切换、墨水屏和最终 nRF52840 板仍未测试。
+
 ## Physical validation still required
 
 - Measure the complete protected battery, sealed edges and wires against the assumed 32.5 × 14 × 3.4 mm envelope.
 - Fit the fully inserted display flex, printed enclosure, keys and USB plug; check screen-to-aperture alignment and adhesive retention.
 - Bring up the assembled PCB and tune NFC with the final screen and enclosure. C23/C24 = 220 pF is provisional.
 
-[Bench experiments](docs/nfc-bench-test.md) and [firmware](firmware/pn532_probe/) are separate from production-board qualification. No order has been placed.
+[Bench experiments](docs/nfc-bench-test.md) and their firmware are separate from production-board qualification. No order has been placed.

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-"""Validate the routed R4 candidate against its saved native exports."""
+"""Validate a routed layout-reset candidate against its saved native exports."""
 
+import argparse
 import csv
 import hashlib
 import io
@@ -13,12 +14,16 @@ from collections import Counter
 from pathlib import Path
 
 
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument("--revision", choices=("r4", "r5", "r6", "r7"), default="r4")
+revision = parser.parse_args().revision
+
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 RECORDS = PROJECT_ROOT / "hardware/records"
-DELIVERY = PROJECT_ROOT / "hardware/production/r1-layout-reset-r4"
-EDA = PROJECT_ROOT.parents[1] / "eda/NFC-Card-R1-Layout-Reset-R4.eprj2"
-PREFIX = "NFC-Card-R1-Layout-Reset-R4"
-TAG = "r1-layout-reset-r4"
+DELIVERY = PROJECT_ROOT / f"hardware/production/r1-layout-reset-{revision}"
+EDA = PROJECT_ROOT.parents[1] / f"eda/NFC-Card-R1-Layout-Reset-{revision.upper()}.eprj2"
+PREFIX = f"NFC-Card-R1-Layout-Reset-{revision.upper()}"
+TAG = f"r1-layout-reset-{revision}"
 
 
 def sha256(path):

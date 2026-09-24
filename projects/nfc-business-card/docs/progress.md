@@ -2,7 +2,9 @@
 
 ## 当前确定方案
 
-2026-09-25：[R4 独立候选](../hardware/production/r1-layout-reset-r4/README.md)完成 15 个显示供电器件成组重排、受影响铜箔重布，并修正继承的 USB CC2 保护分支。66 个器件、256 个引脚一致；重开原生 DRC 0，独立连通、NFC/板框、Gerber 钻孔与孔环及同版 BOM/CPL 检查通过。167 个过孔最小实际钻孔约 0.30 mm、最小径向孔环 0.1016 mm，异网对象间距无 <0.15 mm 配对；同网过孔孔壁到焊盘仍有 36 对 <0.15 mm。Gerber/BOM/CPL 已上传[嘉立创 R4 任务](../hardware/production/r1-layout-reset-r4/vendor-dfm-2026-09-24.md)，刷新重跑后线上 PCB/SMT 明细发现新增 C9 焊脚到孔 0 mm、盘到线 2 条、PTH 孔到线 2 条危险；孔环、J1/U1 模型、阻焊和四槽风险仍在。下一步先在独立候选中局部移孔改线，再重新做全套本地和供应商 DFM；未下单。
+2026-09-25：[R7 独立候选](../hardware/production/r1-layout-reset-r7/README.md)继承 R4 的显示供电分区及 R5/R6 的 C9、USB CC2 修正，最终只移动 U1 附近一颗 GND 过孔及其短线。保存重开后原生 DRC 0；独立铜箔连通、CC2 保护断线、NFC/板框、Gerber 钻孔与孔环、同版 BOM/CPL 检查通过。167 个过孔最小实际钻孔约 0.30 mm、最小径向孔环 0.1016 mm，异网铜对象无 <0.15 mm 配对。[R7 线上 PCB/SMT DFM](../hardware/production/r1-layout-reset-r7/vendor-dfm-2026-09-25.md)确认 U1 焊脚到孔 2→0 条危险，VIA 孔到焊盘 32→30 条；孔环 100、阻焊桥 43、USB 四槽、J1 焊脚重叠 12、U1 板边 1 等危险未消除。下一步按实物图纸和供应商工艺规则逐点处理及确认，**不下单**。
+
+2026-09-25：[R4 初版](../hardware/production/r1-layout-reset-r4/README.md)完成显示供电区 15 个器件成组重排及布线，但线上 DFM 发现 C9 孔位、盘到线、PTH 孔到线危险；[R5](../hardware/production/r1-layout-reset-r5/README.md)消除这些新增危险但 CC2 焊盘间距回退，[R6](../hardware/production/r1-layout-reset-r6/README.md)修正 CC2 并确认保护拓扑，R7 继续修正 U1 孔位。各版独立工程和制造包保留用于回溯。
 
 2026-09-24：[R2 独立候选](../hardware/production/r1-free-0p30-sense-ring-r2/README.md)在原电池采样候选上完成局部移孔和重布线，保留敏感器件、板框与天线不动。重开原生 DRC 0；最小钻孔 0.30226 mm、最小径向孔环 0.1016 mm；走线/焊盘/过孔异网间距审计未发现 <0.15 mm。Gerber/BOM/CPL 已从同一工程导出，本地独立连通、NFC、板框、四槽及 66/66 位号检查通过。[新版线上 PCB/SMT DFM](../hardware/production/r1-free-0p30-sense-ring-r2/vendor-dfm-2026-09-24.md)走线间距警告由 12 降至 1，盘到线及 PTH 孔到线危险清零；但孔环危险仍显示 100，VIA 孔到焊盘危险增至 32，SMT 新增 U1 焊脚到孔 2 条危险，J1/U1 原有问题未变。需继续局部处理和人工审核；原 R1 制造基准未变，未下单。
 
@@ -31,6 +33,8 @@
 | R2 孔环与间距候选 | [独立工程与文件](../hardware/production/r1-free-0p30-sense-ring-r2/README.md)的本地检查通过，最小钻孔 0.30226 mm、最小径向孔环 0.1016 mm；独立对象间距审计无 <0.15 mm。[线上 PCB/SMT DFM](../hardware/production/r1-free-0p30-sense-ring-r2/vendor-dfm-2026-09-24.md)仍报孔环 100、VIA 到焊盘 32、U1 焊脚到孔 2、J1 焊脚重叠 12 条危险；需继续局部修改与工厂人工审核，不能作为下单包。 |
 | R3 功能区重排 | [独立工程与预览](../hardware/production/r1-power-relayout-r3/README.md)已保存。电池采样保留，USB 保护/主控去耦/屏幕/NFC 未挪；本地几何连通检查通过。54 个小钻孔及显示供电回路扩大阻止其成为制板版；先做按工艺约束的下一轮布线。 |
 | R4 已布线重排 | [独立工程与制造文件](../hardware/production/r1-layout-reset-r4/README.md)已保存、重开；本地 DRC、连通、孔环与 0.15 mm 异网对象间距检查通过。[线上 PCB/SMT DFM](../hardware/production/r1-layout-reset-r4/vendor-dfm-2026-09-24.md)显示新增 C9 孔位、盘到线和 PTH 孔到线危险，另有孔环、J1/U1 和阻焊风险；下一版先局部修复，不可下单。 |
+| R5／R6 局部修正 | [R5](../hardware/production/r1-layout-reset-r5/README.md)消除 C9 和部分 CC2 新危险；[R6](../hardware/production/r1-layout-reset-r6/README.md)修正 CC2 回退并完成线上 PCB/SMT 对照，U1 焊脚到孔仍有 2 条危险；保留对照，不可下单。 |
+| R7 当前候选 | [同版工程与文件](../hardware/production/r1-layout-reset-r7/README.md)本地检查通过，[线上 DFM](../hardware/production/r1-layout-reset-r7/vendor-dfm-2026-09-25.md)确认 U1 焊脚到孔危险 0；孔环、过孔到焊盘、阻焊、四槽、J1/U1 模型危险仍待处理和工厂审核，不可下单。 |
 | Battery | User measures protected pack and wires; nominal 31 × 12 × 3 mm |
 
 No order placed. [Historical progress and experiments](../archive/pre-r1/readmes/projects/nfc-business-card/docs/progress.md) retain earlier findings and resolutions.

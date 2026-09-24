@@ -8,7 +8,7 @@ Open [NFC-Card-R1.eprj2](NFC-Card-R1.eprj2) for the NFC card. It contains one PC
 
 [NFC-Card-R1-Power-Relayout-R3.eprj2](NFC-Card-R1-Power-Relayout-R3.eprj2) 是在独立工程中重新划分显示供电与 USB/充电功能区的**布局试验**。[R3 检查与下一轮约束](../projects/nfc-business-card/hardware/production/r1-power-relayout-r3/README.md)说明了自动布线产生的 0.25 mm 小孔及放大孔后的间距问题；此文件不可用于下单。R2 的 0.30 mm 低成本候选仍保留。
 
-[NFC-Card-R1-Layout-Reset-R4.eprj2](NFC-Card-R1-Layout-Reset-R4.eprj2) 是从 R2 另建的**先摆位候选**。[R4 检查记录](../projects/nfc-business-card/hardware/production/r1-layout-reset-r4/README.md)保存 15 个显示供电器件的重排、重开检查与旧铜造成的 DRC 错误；尚未重布线，不可用于下单。
+[NFC-Card-R1-Layout-Reset-R7.eprj2](NFC-Card-R1-Layout-Reset-R7.eprj2) 是当前最新的**独立已布线候选**。[R7 检查与线上 DFM](../projects/nfc-business-card/hardware/production/r1-layout-reset-r7/README.md)记录了 U1 接地过孔局部修正和剩余危险；不可用于下单。此前的 [R4](NFC-Card-R1-Layout-Reset-R4.eprj2)、[R5](NFC-Card-R1-Layout-Reset-R5.eprj2)、[R6](NFC-Card-R1-Layout-Reset-R6.eprj2)工程保留为各步对照，R4 已完成供电区重排与布线，并非仅有摆位。
 
 Historical projects and database checkpoints are preserved in [archive/nfc-business-card](archive/nfc-business-card/). The E14-named project contains later E-series experiments; its filename does not identify the final R1 source.
 

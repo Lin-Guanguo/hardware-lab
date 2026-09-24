@@ -50,9 +50,9 @@ report={'status':'HARDWARE_NET_AND_BOM_CHECK_PASS','snapshot_sha256':hashlib.sha
         'physical_swd_pads_front_coordinate_system':pads,'current_swd_pitch_mm':round(pads[1]['x_mm']-pads[0]['x_mm'],5),
         'swd_clip_compatibility':'2.54 mm implemented for user-selected generic Lushen 1x5 clip; physical fit untested',
         'pin1_identification':'TP1 GND is square; TP2-TP5 are circular; all five rear signal labels follow the lands',
-        'hidden_reset':'CAD candidate only; not present on PCB','factory_programming':False,
+        'hidden_reset':'Not selected for R1; user accepts SWD programmer recovery','factory_programming':False,
         'usb_updates_logs_hardware_tested':False,'swd_breakpoint_debug_hardware_tested':False,
-        'remaining':['Final framework and bootloader port','VBUS transients/current/backfeed/suspend tests','Physical clip contact and cover trial fit','RESET footprint, tool guide and fabrication decision'],
+        'remaining':['Final framework and bootloader port','VBUS transients/current/backfeed/suspend tests','Physical clip contact and cover trial fit','SWD/NRESET recovery with an invalid application and battery connected'],
         'scope':'Pin assignments and 0-ohm procurement consistency; no electrical waveform, USB compliance or fixture validation.'}
 (R/'r1-usb-swd-check.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report,indent=2))

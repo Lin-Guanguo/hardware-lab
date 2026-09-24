@@ -39,7 +39,7 @@
     "Confirm the 0.25 mm nominal drill tier, USB slots and custom connector placement in vendor DFM.",
     "Tune with screen, case and candidate NFC ferrite in place.",
     "Trial-fit the user-selected 2.54 mm five-pin clip on the bare board and through the revised cover.",
-    "Resolve hidden RESET tool guidance/stop with CAD before implementation; no RESET switch is installed.",
+    "Validate SWD/NRESET programmer recovery on the prototype; the user declined a hidden RESET switch for R1.",
     "Implement and test the board-specific bootloader and USB CDC firmware; hardware net checks do not prove operation."
   ],
   "limits": [

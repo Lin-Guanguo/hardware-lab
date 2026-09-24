@@ -2,6 +2,8 @@
 
 Status: hardware review and USB resistor correction completed; firmware and physical USB/SWD operation are unverified. The five SWD lands now use 2.54 mm pitch for the user-selected single-row 5P clip. The user accepted nominal fit assumptions; detailed clip metrology is not a release gate. No factory programming is requested.
 
+**Recovery decision, 2026-09-24:** the user accepts connecting an SWD programmer for recovery. Retain GND, VDD_3V3/VTref, SWCLK, SWDIO and NRESET; do not add a hidden RESET switch or side access hole for R1. The earlier RESET mechanical study is reference only and is no longer an ordering decision. Routine USB updates/logs remain planned firmware work; standalone button-only recovery with a failed application is not required.
+
 ## Implemented hardware correction
 
 R3 and R4 changed from 27 ohm to **0 ohm, UNI-ROYAL 0603WAF0000T5E / C21189**, using the existing R0603 lands and component locations. Schematic and PCB instance procurement fields are synchronized. Nordic states that the nRF52840 USB PHY already includes the series resistors; extra termination is not required. Keeping the two lands permits later measured changes without a layout change. [Nordic verified answer](https://devzone.nordicsemi.com/f/nordic-q-a/94955/resistors-for-d-and-d-), [Nordic signalling discussion](https://devzone.nordicsemi.com/f/nordic-q-a/82014/nrf52840-usb-d-d--impedance-matching/340456).
@@ -28,8 +30,8 @@ The charger's default input limit is 500 mA; its default charge current is 10 mA
 
 1. **First programming:** the user powers the board and uses SWD to program a board-specific bootloader and required configuration. Treat VDD_3V3 as the debugger's target-voltage reference by default; do not simultaneously drive it from an unrelated programmer supply.
 2. **Routine update:** evaluate Adafruit nRF52 UF2 with the final framework. NCS/Zephyr is a candidate, not a frozen production port. Confirm bootloader/SoftDevice/MBR layout, application link address, UF2 family identifier, USB identity, LF clock source, button GPIO and flash protection. Do not flash an unrelated board's complete image.
-3. **Application failure:** proposed entry is hold SW2, actuate hardware RESET, then let the bootloader sample SW2 before starting the app. A runtime USB command alone is insufficient when the application cannot start. Double-reset may be an additional convenience, not the only entry.
-4. **Interrupted application update:** retain an independently reachable bootloader and repeat the update. UF2 does not inherently guarantee automatic rollback or a second application image; use an explicitly designed MCUboot / dual-image scheme if that becomes a requirement.
+3. **Application failure:** connect the SWD programmer and recover through the retained SWD/NRESET pads. Firmware may additionally support holding SW2 while the programmer asserts NRESET to enter the bootloader, but direct SWD reprogramming remains the fallback. A runtime USB command alone is insufficient when the application cannot start; no standalone hidden RESET is required for R1.
+4. **Interrupted application update:** retry through the bootloader if reachable; otherwise recover with SWD. UF2 does not inherently guarantee automatic rollback or a second application image; use an explicitly designed MCUboot / dual-image scheme if that becomes a requirement.
 5. **Bootloader / configuration failure:** retain all five SWD signals as the recovery path. Document whether a debugger recovery mass-erase is needed and warn that it removes stored user data. Do not enable debug protection without a deliberate recovery decision.
 6. **Logs:** application USB CDC ACM is the candidate console, using bounded/non-blocking buffering and detach handling. UF2 bootloader USB and application USB are separate firmware states. USB logs/update do not provide SWD breakpoints.
 
@@ -37,7 +39,9 @@ A battery keeps the MCU powered when USB is unplugged. USB insertion/removal is 
 
 ## Mechanical handoff — proposals, not installed parts
 
-### Hidden RESET
+### Hidden RESET — not selected for R1
+
+The following dimensions preserve the earlier study only. The user selected SWD programmer recovery; do not implement this switch or its opening as part of R1 production preparation.
 
 A rear-mounted switch cannot be assumed to fit the current **0.32 mm** PCB-to-rear-cover space. Assess a front-side, side-operated switch with an inconspicuous right-wall tool hole.
 
@@ -74,7 +78,7 @@ CAD uses **Ø1.60 mm holes with an outer R0.05 mm mouth** for the revised access
 - SWD identify, initial bootloader program, reset pin operation, and recovery after an intentionally invalid application.
 - USB A-to-C and C-to-C data cables, both plug orientations; enumeration in bootloader and application; battery-only / USB-only / both-source transitions.
 - VBUS hot-plug peaks, 3.3 V stability and source/backfeed behaviour; total pre-enumeration, configured and suspend current; conservative battery charge configuration.
-- UF2 update interruption and retry, existing-key entry while the app is broken, and recovery while the battery remains connected.
+- UF2 update interruption and retry; SWD/NRESET recovery with an invalid application while the battery remains connected. If implemented, test SW2 plus programmer-driven reset as an additional bootloader entry.
 - USB log handling with no host, closed terminal and unplugged cable; no display/button task stalls.
 - Actual clip registration, electrical contact and non-shorting through the assembled cover.
 

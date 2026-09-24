@@ -163,7 +163,7 @@ report={'status':'REVIEW_REQUIRED_BEFORE_ORDER','native_drc_errors':0,'schematic
         'snapshot_sha256':sha(RECORDS/'r1-routed-snapshot.json'),
         'open_review':[item['item'] for item in read('r1-review.json')['discussion_items']] + [
             'Trial-fit the user-selected 2.54 mm five-pin clip on the bare board and through the revised cover.',
-            'Resolve hidden RESET tool guidance/stop with CAD before implementation; no RESET switch is installed.',
+            'Validate SWD/NRESET programmer recovery on the prototype; the user declined a hidden RESET switch for R1.',
             'Implement and test the board-specific bootloader and USB CDC firmware; hardware net checks do not prove operation.'],
         'limits':['RF resonance/read range with screen and case not measured.','Battery complete envelope and physical assembly not verified.','No order placed; not production-qualified.']}
 (RECORDS/'r1-validation.json').write_text(json.dumps(report,indent=2)+'\n')

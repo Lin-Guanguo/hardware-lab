@@ -39,8 +39,8 @@
       "sha256": "c6d729d9f3d906707301966eb84cc700e33301fd37733d93fc89962f554cdbdc"
     },
     "README.md": {
-      "bytes": 1640,
-      "sha256": "c805093a86c476194e03e3cdc85f811e9f40657c64b33c7010847457934ec437"
+      "bytes": 1689,
+      "sha256": "2baaea736248f6664e1c88d776d7fab00fa6b063a116debfd82a761d6c63a085"
     },
     "case/NFC-Card-R1-case.FCStd": {
       "bytes": 8512418,
@@ -219,12 +219,12 @@
       "sha256": "e13544f555b3e475db7f51a6f4bbf480d939fb98aadfd8acd6454c3071a3513b"
     },
     "checks/r1-usb-swd-check.json": {
-      "bytes": 1747,
-      "sha256": "43b56178ddd2eed7812cf9e5277b341dc859755d228688d9f8d64ac81c1e86c8"
+      "bytes": 1783,
+      "sha256": "2f377547631c731a58581e1617c97c21e2a9eef732d58cdc50794427fb3945d0"
     },
     "checks/r1-validation.json": {
-      "bytes": 2099,
-      "sha256": "3cc77eb3b6b80948f005d520ddfbca15432858577bcdf8eab99dd4e7ac3c2783"
+      "bytes": 2103,
+      "sha256": "4b92b668642e6f0d28026d75a56035556d6db0e138bae0109e72b9bceaf3113e"
     },
     "enclosure/r1-recovery-study.json": {
       "bytes": 2820,
@@ -235,12 +235,12 @@
       "sha256": "cfbf34c5998e84cdcc2906b5600fbfdd095e819a04d2f51a8d31fec3dc197408"
     },
     "hardware/r1-usb-swd-recovery.md": {
-      "bytes": 10917,
-      "sha256": "2ba59720eb163b108da06cd7534dff4da0c244b087fe0adb1cd43e2bfbce31db"
+      "bytes": 11742,
+      "sha256": "f2b345e1295c14898ee0745090fc59338a3ff2e7edddf20bbbe0e718ef4c48a2"
     }
   },
   "bundle": {
-    "bytes": 30984908,
-    "sha256": "5edba8598a48b443e6360569d23f4df4dffc805c28a7084c5d1516d5c53238c0"
+    "bytes": 30985228,
+    "sha256": "04ea4e898ec0159bbf7f9b39ce831816bc584f6006420059af4a9726eab19e57"
   }
 }

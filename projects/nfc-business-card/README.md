@@ -2,7 +2,7 @@
 
 ## 当前确定方案
 
-**PN532 桌面实测（2026-09-24）：**[PN532 与 ESP32-S3-CAM 六线接线图](wiring-diagrams/pn532-esp32-spi.html)已归档，可逐根高亮双排针物理脚与 ESP32 丝印。SET0=L、SET1=H 时，SPI 探测返回 `PROBE_OK chip=0x32 firmware=1.6`；[固定网址 NDEF 测试固件](firmware/pn532_ndef_test/README.md)已烧录，用户实测手机弹出链接提示并正确打开 `https://example.com`。接下来验证 A/B 切换，墨水屏待单独测试。详细记录见 [NFC 桌面实验](docs/nfc-bench-test.md)。
+**PN532 桌面实测（2026-09-25）：**[PN532 与 ESP32-S3-CAM 六线接线图](wiring-diagrams/pn532-esp32-spi.html)已归档。SET0=L、SET1=H 时，SPI 探测返回 `PROBE_OK chip=0x32 firmware=1.6`；[NDEF 测试固件](firmware/pn532_ndef_test/README.md)现支持串口临时切换 URI。手机已正确打开 `https://example.com`；小红书主页短链可经浏览器到达正确主页。微信个人二维码的 HTTPS 地址只到下载页，`weixin://addfriend/...` 可唤起微信选择但未进入加好友页。实验结束后当前运行状态切回小红书链接，ESP32 重启会恢复 `example.com`。下一步验证墨水屏显示微信原始二维码并让另一部手机用微信扫码；实体按键切换待测。详细记录见 [NFC 桌面实验](docs/nfc-bench-test.md)。
 
 **3.0 mm 内腔研究：**按用户反馈电池最厚处可卡入 3 mm，已完成 [4.6 mm 总厚诊断](enclosure/r1-cavity-3mm-study/README.md)。现有 USB、主控、FPC 座和按键运动存在干涉；局部深腔与平整外表两条路线已有尺寸预算，尚无可打印的 3 mm 内腔方案。电池 3.0 mm 仅用于本次研究，打包版不变。
 
@@ -46,14 +46,14 @@
 
 ## PN532 桌面测试程序
 
-当前 ESP32-S3-CAM 上运行 [pn532_ndef_test](firmware/pn532_ndef_test/README.md)，SET0=L、SET1=H，手机已正确打开固定测试网址 `https://example.com`。接线按[六线交互图](wiring-diagrams/pn532-esp32-spi.html)；详细过程与证据见 [NFC 桌面实验](docs/nfc-bench-test.md)。
+当前 ESP32-S3-CAM 上运行 [pn532_ndef_test](firmware/pn532_ndef_test/README.md)，SET0=L、SET1=H；串口可临时切换 NDEF URI。接线按[六线交互图](wiring-diagrams/pn532-esp32-spi.html)；手机实测及限制见 [NFC 桌面实验](docs/nfc-bench-test.md#个人主页与微信入口实测2026-09-25)。
 
 | 程序 | 作用 | 本次实测 |
 | --- | --- | --- |
 | [pn532_probe](firmware/pn532_probe/README.md) | 串口收到 `PROBE` 后读取 PN532 芯片和固件版本 | `PROBE_OK chip=0x32 firmware=1.6` |
-| [pn532_ndef_test](firmware/pn532_ndef_test/README.md) | 模拟只读 NFC Type 4 标签，发布 `https://example.com` | `NDEF_READY`、`NDEF_SESSION`；手机弹出并打开正确链接 |
+| [pn532_ndef_test](firmware/pn532_ndef_test/README.md) | 模拟只读 NFC Type 4 标签，上电默认 `example.com`，串口可临时切换 URI | `NDEF_READY`、`NDEF_SESSION`；小红书短链可达，个人微信直达未成功 |
 
-两个工程都独立构建，具体工具链、依赖、构建与烧录命令在各自 README。NDEF 工程直接使用锁定在 `upstreams/` 的 Seeed PN532 与 don/NDEF 子模块。当前结果只覆盖固定网址的桌面模块与这一部手机；A/B 切换、墨水屏和最终 nRF52840 板仍未测试。
+两个工程都独立构建，具体工具链、依赖、构建与烧录命令在各自 README。NDEF 工程直接使用锁定在 `upstreams/` 的 Seeed PN532 与 don/NDEF 子模块。当前结果只覆盖桌面模块与这一部手机；实体按键、墨水屏和最终 nRF52840 板仍未测试。
 
 ## Physical validation still required
 

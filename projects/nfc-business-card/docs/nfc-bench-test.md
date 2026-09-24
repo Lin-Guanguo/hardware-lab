@@ -1,12 +1,12 @@
 ---
 description: 使用 ESP32 与 PN532 或 nRF52840 开发板，先验证按键切换 NFC 名片的手机体验
-last_updated: 2026-09-24
-status: fixed_ndef_url_verified
+last_updated: 2026-09-25
+status: serial_url_switch_verified
 ---
 
 # NFC 最小桌面实验
 
-用户希望复用此前 ESP32 面包板经验，先确认 NFC 能否达到预期效果，再投入定制生产。这项实验补充现有 PCB/PCBA 主线，不将最终主控改为 ESP32；PN532 已接入 ESP32，SPI 探测及手机读取固定 NDEF 网址均通过，A/B 切换待测。
+用户希望复用此前 ESP32 面包板经验，先确认 NFC 能否达到预期效果，再投入定制生产。这项实验补充现有 PCB/PCBA 主线，不将最终主控改为 ESP32；PN532 已接入 ESP32，SPI 探测、手机读取固定 NDEF 网址和串口临时切换 URI 均通过，实体按键切换待测。
 
 ## 已选实验模块
 
@@ -100,4 +100,21 @@ status: fixed_ndef_url_verified
 
 随后烧录[固定网址 NDEF 测试固件](../firmware/pn532_ndef_test/README.md)，串口 `STATUS` 返回 `NDEF_READY url=https://example.com chip=0x32 firmware=1.6 sam_response=0`。手机靠近后串口记录 `NDEF_SESSION`；用户报告手机弹出“是否打开链接”，打开后确认网址正确。该结果验证了这块 PN532 与当前手机之间的固定 NDEF 网址交互；手机型号及系统版本未记录，A/B 切换和不同手机的体验尚未验证。
 
-当前缺口：A/B 网址切换、按键接入、墨水屏转接板实物型号和接口。固定网址测试成功不能证明最终 nRF52840 Type 2 实现及整机读距。
+当前缺口：实体按键切换、墨水屏转接板实物型号和接口。桌面测试成功不能证明最终 nRF52840 Type 2 实现及整机读距。
+
+## 个人主页与微信入口实测（2026-09-25）
+
+为逐一比较手机体验，[PN532 NDEF 测试固件](../firmware/pn532_ndef_test/README.md)新增串口 `URL <地址>`，可在保持 USB 供电时临时替换只读 NDEF URI。重新构建、烧录及写入摘要校验通过；ESP32-S3 的 MAC 与先前记录一致，PN532 `STATUS` 持续返回 `chip=0x32 firmware=1.6`。下列每个地址切换后均获得 `NDEF_URL_SET` 和 `NDEF_READY`；手机结果由用户在同一部手机上报告，手机型号与系统版本仍未记录。
+
+| NDEF URI | 手机实际结果 | 判断 |
+| --- | --- | --- |
+| 用户从小红书复制的 `https://xhslink.cn/o/...` 主页链接 | 先出现网址提示，点击后进入浏览器，再到正确的小红书主页 | 能到达目标，仍有浏览器中转 |
+| 用户微信个人二维码解出的 `https://u.wechat.com/...` | 点击网址后浏览器显示微信下载页 | 未到达个人加好友页；二维码中的完整地址不入库 |
+| `weixin://addfriend/<本人微信号>` | 手机出现应用选择卡片，选择微信后没有进一步页面 | 系统能交给微信，指定好友跳转未成功 |
+| `weixin://addfriend/<另一人微信号>` | 用户再次确认未到达指定人的加好友页 | 排除仅因“不能加自己”造成的失败；另一人账号不入库 |
+
+用户已提供真实微信号与二维码用于本轮实验，但固件上电仍默认 `https://example.com`，所有个人地址只通过串口临时切换。实验结束后已将当前运行状态切回上述可用的小红书链接；ESP32 重启后仍会恢复默认地址。
+
+搜索到的[墨水屏 NFC 卡实物体验](https://www.einkcn.com/html/product_6a5c413ec5d491752.html)把微信二维码作为屏幕图片，NFC 则打开预设名片网页；[官微名片产品](https://ltd.com/article_detail/5601786242260997?is_header=card)声称 NFC 可打开其自有小程序名片页，属于不同于个人微信加好友的入口。这些实例只作为交互方向参考，不算本项目实测。[Apple 后台 NFC 说明](https://developer.apple.com/documentation/corenfc/adding-support-for-background-tag-reading)明确指出不支持自定义 URL scheme，因此 `weixin://` 即便在这部手机能唤起应用选择，也不能作为跨平台方案。
+
+下一步先单独验证随屏转接板与墨水屏，确认尺寸、驱动和清晰度后试着显示**未经美化的原始微信个人二维码**，用另一部手机的微信“扫一扫”验证能否到达加好友页；NFC 侧继续用 HTTPS 分享小红书或个人名片网页。墨水屏扫码能力、个人名片网页与最终定制板均未验证。

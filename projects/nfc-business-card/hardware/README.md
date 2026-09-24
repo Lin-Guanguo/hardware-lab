@@ -2,7 +2,7 @@
 
 ## 当前确定方案
 
-Use the [R1 native project](../../../eda/NFC-Card-R1.eprj2) and [current project index](../README.md). The uncommitted antenna/CC2 revision is complete; [C1 placement and USB stitching findings](pcb-r1-review.md) remain for discussion before ordering.
+Use the [R1 native project](../../../eda/NFC-Card-R1.eprj2) and [current project index](../README.md). The antenna/CC2 and battery-pad changes were checkpointed in `bee8846`. The [pre-order follow-up](r1-preorder.md) removes nominal 0.2 mm drills, improves USB stitching and corrects the C1/C8 service assignment. The CE/SCL reroute removes two vias; R3/R4 are corrected to 0 ohm. [USB/SWD recovery](r1-usb-swd-recovery.md) records the implemented 2.54 mm SWD row, physical clip trial fit, pending RESET decision and firmware tests. Vendor DFM and prototype tests remain open.
 
 | Files | Purpose |
 | --- | --- |

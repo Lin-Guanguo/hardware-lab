@@ -6,7 +6,7 @@
   "counts": {
     "components": 58,
     "pads": 248,
-    "lines": 824,
+    "lines": 819,
     "vias": 153,
     "pours": 2
   },
@@ -33,11 +33,14 @@
   "mechanical_status": "NOMINAL_CAD_AND_PRINT_MESH_PASS",
   "mechanical_scope": "Existing 5.8 mm shell and unchanged component geometry. New B-pad wire/ferrite service bodies are pending mechanical revision.",
   "single_layer_or_isolated_via_count": 0,
-  "snapshot_sha256": "473022d650ac41f20f979c183711ab9adfb8b5a1fe3d2be2e791ed6b5f2367b3",
+  "snapshot_sha256": "65372faf0377a49005af666330171019fe9a179c05933d39735e422626758474",
   "open_review": [
-    "Move C1 close to U2 IN/GND or add a correctly specified local input capacitor.",
-    "Add nearby GND stitching at five USB layer transitions.",
-    "Tune with screen, case and candidate NFC ferrite in place."
+    "Review remaining USB reference-path detours during powered prototype tests.",
+    "Confirm the 0.25 mm nominal drill tier, USB slots and custom connector placement in vendor DFM.",
+    "Tune with screen, case and candidate NFC ferrite in place.",
+    "Trial-fit the user-selected 2.54 mm five-pin clip on the bare board and through the revised cover.",
+    "Resolve hidden RESET tool guidance/stop with CAD before implementation; no RESET switch is installed.",
+    "Implement and test the board-specific bootloader and USB CDC firmware; hardware net checks do not prove operation."
   ],
   "limits": [
     "RF resonance/read range with screen and case not measured.",

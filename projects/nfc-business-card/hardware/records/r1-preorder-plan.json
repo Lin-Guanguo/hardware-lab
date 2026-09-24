@@ -1,0 +1,213 @@
+{
+  "base_snapshot": "git:bee8846:projects/nfc-business-card/hardware/records/r1-routed-snapshot.json",
+  "via_changes": [
+    {
+      "index": 0,
+      "id": "f20b0ce18df35e1e",
+      "net": "USB_DM_CONN",
+      "from": [
+        75.14999956,
+        25.25014,
+        0.45212,
+        0.19812
+      ],
+      "to": [
+        75.14999956,
+        25.25014,
+        0.45,
+        0.25
+      ],
+      "copper_gap_mm": 0.20038014999999731,
+      "hole_gap_mm": 0.7507599999999996
+    },
+    {
+      "index": 1,
+      "id": "76cd2075e90bf07d",
+      "net": "USB_DM_CONN",
+      "from": [
+        75.14999956,
+        26.250899999999998,
+        0.45212,
+        0.19812
+      ],
+      "to": [
+        75.14999956,
+        26.250899999999998,
+        0.45,
+        0.25
+      ],
+      "copper_gap_mm": 0.16999921000001447,
+      "hole_gap_mm": 0.7507599999999996
+    },
+    {
+      "index": 7,
+      "id": "6e5d5014892a4e78",
+      "net": "USB_CC2",
+      "from": [
+        75.14999956,
+        27.749499999999998,
+        0.45212,
+        0.19812
+      ],
+      "to": [
+        75.14999956,
+        27.749499999999998,
+        0.45,
+        0.25
+      ],
+      "copper_gap_mm": 0.2079464589389084,
+      "hole_gap_mm": 0.5134932208353784
+    },
+    {
+      "index": 148,
+      "id": "e45e3534ae6925d1",
+      "net": "USB_CC2",
+      "from": [
+        73.99999932,
+        25.6999994,
+        0.29972,
+        0.19812
+      ],
+      "to": [
+        73.99999932,
+        25.6999994,
+        0.45,
+        0.25
+      ],
+      "copper_gap_mm": 0.2230306000000013,
+      "hole_gap_mm": 0.3205163063223385
+    },
+    {
+      "index": 149,
+      "id": "dcbbc08a28f2832a",
+      "net": "USB_CC2",
+      "from": [
+        73.99999932,
+        27.70000048,
+        0.29972,
+        0.19812
+      ],
+      "to": [
+        73.99999932,
+        27.70000048,
+        0.45,
+        0.25
+      ],
+      "copper_gap_mm": 0.15958266378686084,
+      "hole_gap_mm": 0.3608686409819396
+    },
+    {
+      "index": 150,
+      "id": "f939fc1e4bdc71a0",
+      "net": "BAT_PACK_TBD",
+      "from": [
+        40.20000088,
+        21.500000179999997,
+        0.40132,
+        0.19812
+      ],
+      "to": [
+        40.05,
+        21.5,
+        0.55,
+        0.3
+      ],
+      "copper_gap_mm": 0.24500014000000192,
+      "hole_gap_mm": 0.8801810687776968
+    }
+  ],
+  "line_changes": [
+    {
+      "index": 813,
+      "id": "e0e1c57852bc5947",
+      "coords_mm": [
+        39.85,
+        19.85,
+        40.05,
+        20.05
+      ]
+    },
+    {
+      "index": 814,
+      "id": "0b0ae75861e9a28a",
+      "coords_mm": [
+        40.05,
+        20.05,
+        40.05,
+        21.5
+      ]
+    },
+    {
+      "index": 815,
+      "id": "2ab6be16e78e751a",
+      "coords_mm": [
+        40.05,
+        21.5,
+        42.8,
+        21.5
+      ]
+    }
+  ],
+  "stitches": [
+    {
+      "net": "GND",
+      "x": 52.25,
+      "y": 12.35,
+      "diameter_mm": 0.45,
+      "hole_mm": 0.25,
+      "clearance_mm": 0.1809440449584698,
+      "distances": [
+        26.283523201192036,
+        26.788896966056665,
+        26.833981696162837,
+        2.617073291788644,
+        3.826615943152049
+      ],
+      "gain": 1.047383844940481,
+      "id": "d547dd0480b6ad22"
+    },
+    {
+      "net": "GND",
+      "x": 75.0,
+      "y": 24.15,
+      "diameter_mm": 0.45,
+      "hole_mm": 0.25,
+      "clearance_mm": 0.17871000000000378,
+      "distances": [
+        1.1103188225010834,
+        2.106248009613348,
+        3.2388279812305774,
+        23.147150608845863,
+        22.543680672649383
+      ],
+      "gain": 0.8975167521396783,
+      "id": "28e5a9a8e92dd96c"
+    }
+  ],
+  "source_snapshot_sha256": "473022d650ac41f20f979c183711ab9adfb8b5a1fe3d2be2e791ed6b5f2367b3",
+  "checkpoint_commit": "bee8846",
+  "status": "SAVED_REOPENED_DRC_AND_COPPER_PASS_EXPORTED",
+  "after_snapshot_sha256": "40e6e458483ba5deba21ed32f3fcadc7091490cfcfc723d574295a85f0b4a5a5",
+  "native_line_split_note": "EDA split the unchanged USB_DM_CONN bottom segment at its existing middle via; the two segments have the same union and no dead end.",
+  "result": {
+    "components": 58,
+    "lines": 825,
+    "vias": 155,
+    "native_drc": 0,
+    "minimum_nominal_drill_mm": 0.25,
+    "api_minimum_drill_mm": 0.24892,
+    "api_drill_groups_mm": {
+      "0.24892": 92,
+      "0.29972": 18,
+      "0.30480": 45
+    },
+    "before_minimum_api_annulus_mm": 0.05080000000000001,
+    "after_minimum_api_annulus_mm": 0.1016,
+    "usb_return": {
+      "above_contextual_guideline": 4,
+      "worst_nearest_ground_via_mm": 2.6170730511500246,
+      "qualification": "Proximity proxy only; continuity of the signal reference and powered USB operation remain unqualified."
+    },
+    "minimum_pad_to_outline_mm": 0.2991815200000012
+  }
+}

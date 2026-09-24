@@ -30,11 +30,11 @@
           19.85
         ],
         [
-          40.2,
-          20.2
+          40.05,
+          20.05
         ],
         [
-          40.2,
+          40.05,
           21.5
         ]
       ]
@@ -45,7 +45,7 @@
       "width_mm": 0.35,
       "points": [
         [
-          40.2,
+          40.05,
           21.5
         ],
         [
@@ -112,10 +112,10 @@
   "vias": [
     {
       "net": "BAT_PACK_TBD",
-      "x": 40.2,
+      "x": 40.05,
       "y": 21.5,
-      "diameter_mm": 0.4,
-      "hole_mm": 0.2
+      "diameter_mm": 0.55,
+      "hole_mm": 0.3
     },
     {
       "net": "GND",
@@ -210,5 +210,6 @@
       35.9,
       19.1
     ]
-  }
+  },
+  "via_enlargement_note": "Battery via moved 0.15 mm left to increase its drill from 0.20 to 0.30 mm; B+/B- lands retain the user-selected positions."
 }

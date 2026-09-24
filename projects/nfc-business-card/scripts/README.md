@@ -12,6 +12,7 @@ Use these scripts with the [R1 files](../README.md). Historical E-series scripts
 | `check-netlist-consistency.py` | Schematic/PCB pin-by-pin agreement |
 | `check-e20-outline.py` | Generic closed Gerber outline and USB plated-slot verification |
 | `check-r1-delivery.py` | Manufacturing files, positions, drill hits, saved evidence and native-source checks |
+| `check-r1-usb-swd.py` | USB/charger/key/SWD pin assignments and R3/R4 procurement consistency; records unverified firmware and fixture status |
 | `check-r1-case.py` | FreeCAD solid, print mesh and debug-hole checks |
 | `render-r1-copper.py` | Render actual saved copper |
 | `study-r1-packaging.py` | Read-only CAD/PCB study of thickness, full key motion and battery landing options |

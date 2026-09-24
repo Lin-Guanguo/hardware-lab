@@ -2,9 +2,9 @@
 
 ## Status
 
-**Reviewed prototype checkpoint; discuss remaining placement changes before ordering.** The organized checkpoint is Git commit `ccf9f92`. [Current files](../README.md), [machine-readable review](records/r1-review.json), [actual copper preview](../enclosure/renders/r1-routed-front-rear.png).
+**Reviewed engineering prototype; vendor DFM and powered/physical tests remain open.** Earlier checkpoints are `bee8846` (PCB/CAD studies) and `ccf9f92` (organization). The current repository checkpoint includes the subsequent drill, return-path, control routing, USB resistor and 2.54 mm SWD/CAD changes. [Current files](../README.md), [machine-readable review](records/r1-review.json), [actual copper preview](../enclosure/renders/r1-routed-front-rear.png).
 
-All 58 component placements, footprints and rotations are unchanged. The board outline and enclosure geometry are unchanged. Routing now has **824 segments and 153 vias**, compared with 792 and 151 in the checkpoint.
+All 58 component placements, footprints and rotations are unchanged. The board outline is unchanged. SWD cover access is synchronized to the new 2.54 mm pitch. Routing now has **819 segments and 153 vias**. The immediately preceding drill/return-path revision had 825 segments and 155 vias; checkpoint `bee8846` had 824 and 153. Component values R3/R4 are now 0 ohm; their geometry is unchanged.
 
 ## Implemented
 
@@ -39,17 +39,42 @@ The top battery routes cross rear NFC feedlines in XY and approach the winding t
 
 The user deferred thickness/button work. The [height handoff](../enclosure/r1-height-handoff.md) retains the current 5.8 mm case and records the 3.4 mm pack / 0.25 mm sheet assumptions. The frozen CAD wire/ferrite service volumes need updating for B-pad access in the next mechanical iteration.
 
+## Charger-control routing cleanup
+
+The foldback near (49,23.2) and the overlapping SCL segment were reviewed together with adjacent routing. The saved result reroutes CHG_CE_N and CHG_SCL as a group:
+
+| Net | Segments before → after | Vias before → after | Length before → after |
+| --- | ---: | ---: | ---: |
+| CHG_CE_N | 29 → 21 | 6 → 4 | 39.56 → 32.98 mm |
+| CHG_SCL | 18 → 19 | 4 → 4 | 33.76 → 35.46 mm |
+
+Together: **7 fewer segments, 2 fewer vias and 4.88 mm less trace**. SCL grows by 1.70 mm to free the shorter CE path. This is a verified local improvement, not a claim of globally optimal routing. The numbers come from the saved/reopened native snapshot; EDA merged some proposed segments during creation. All unrelated net traces/vias, pads, placements, board outline and antenna exclusions match the preceding snapshot exactly. USB D− and CC2 retain their functional crossings and protection routing.
+
+[Before/after front and rear comparison](../enclosure/renders/r1-control-routing-comparison.png), [actual metrics and preservation checks](records/r1-route-cleanup-check.json), [construction plan](records/r1-route-cleanup-plan.json).
+
+## USB firmware and recovery hardware
+
+R3/R4 changed from 27 ohm to **0 ohm / C21189**, with schematic/PCB procurement fields and native BOM synchronized. The nRF52840 PHY already includes series resistors. D+/D−, CC pull-downs, VBUS, charger defaults, existing key and all five SWD signals were checked against the netlist. [Hardware review, primary references and firmware/bench follow-up](r1-usb-swd-recovery.md), [machine checks](records/r1-usb-swd-check.json).
+
+UF2 and USB CDC remain firmware candidates requiring board-specific implementation and tests. The user will perform initial SWD programming; no factory programming is requested. The user selected the generic Lushen single-row 5P clip and accepted nominal 2.54 mm fit assumptions. Five rear lands/silk and their access routes are updated; TP1/GND is square for orientation. A physical trial fit remains. [SWD change check](records/r1-swd-254-check.json). A hidden side-operated RESET has a [CAD space study](../enclosure/r1-recovery-study.md), but its tool guide/stop and final footprint are not released; no RESET component has been added.
+
 ## Findings to discuss
 
-### 1. C1 input decoupling — fix before ordering
+### 1. C1/C8 service assignment — previous finding retracted
 
-**C1.1 to U2.10 is 14.28 mm** between pad centres. C1 is the external bypass capacitor on `USB_VBUS`; U2 is the BQ25186 charger. This exceeds the upstream DC-001 8 mm review threshold. More directly, TI specifies local IN/SYS/BAT capacitors at the IC. Move C1 close to U2 IN/GND, or retain it and add an appropriately specified local input capacitor after checking the BOM and bias derating. Component placement is deliberately left for the next discussion. [BQ25186 datasheet, sections 7.2.2 and 9.1](https://www.ti.com/lit/ds/symlink/bq25186.pdf).
+The previous review mapped C1 to U2.10 and omitted C8. That was incorrect. **C1.1 is 1.24 mm from U1.32 (module VBUS); C8.1 is 1.75 mm from U2.10 (charger IN).** Both capacitors share `USB_VBUS`, but serve different local loads. No component was moved. The checker now names both service pairs, with ground-via distances computed from the saved geometry.
 
-This is a layout finding that DRC and netlist agreement cannot detect. The other checked service pairs C2–C7/C9/C10 are 1.27–2.20 mm from their named supply pins; their nearest GND vias are all within 1.65 mm. C1's own GND via is near it, which does not compensate for the long connection to U2.
+C8 is Samsung CL10A475KO8NNNC, 4.7 µF / 16 V / X5R. Its manufacturer typical 25 °C DC-bias curve gives about 2.35 µF at 5 V (about 2.12 µF when also allowing −10% nominal tolerance). TI requires at least 1 µF effective IN capacitance. This supports the existing 5 V input choice; it does not guarantee full-temperature behaviour or replace transient testing. The manufacturer now marks this part NRND and suggests CL10A475KO8NQN#; no BOM substitution was made. [Samsung product data](https://product.samsungsem.com/mlcc/CL10A475KO8NNN.do), [TI sections 7.2.2/9.1](https://www.ti.com/lit/ds/symlink/bq25186.pdf), [recorded evidence](records/r1-input-capacitor-check.json).
 
-### 2. USB return stitching — optimization
+### 2. USB return stitching — partial geometric improvement
 
-Five USB signal vias are beyond the contextual 1.6 mm nearest-GND-via guideline: gaps are about 1.68, 1.99, 2.12, 2.46 and 3.66 mm. The two largest are near X54.1 at the MCU-side fanout. Evaluate legal nearby GND stitching without obstructing power/USB routing. This is a geometry-based return-path concern, not a demonstrated USB failure or an impedance certification.
+Added GND vias at **(52.25,12.35)** and **(75.00,24.15) mm**, outside SMT lands. Both touch copper on both faces and belong to the single connected GND network. The worst nearest-GND-via distance falls from **3.66 to 2.62 mm**. Four USB transitions remain above the contextual 1.6 mm guideline (about 1.68, 2.11, 2.46 and 2.62 mm).
+
+A closer candidate at (53.35,14.95) would sit in a region isolated from local GND on both layers; local 0.25 mm GND-route screening could not connect it without crossing existing copper. It was not installed. Eliminating every detour would require additional signal rerouting; the proximity guideline alone does not establish that tradeoff is necessary for USB full speed. Reference continuity and USB operation remain prototype validation items, not claimed fixes or certifications.
+
+### 2a. Small holes — enlarged
+
+All six nominal 0.2 mm holes are gone: five USB holes are now 0.25 mm with 0.45 mm lands; the battery via is now 0.30/0.55 mm, shifted 0.15 mm left. Battery solder lands remain at the user's selected positions. The two former 0.30/0.20 mm CC2 vias now have a nominal 0.10 mm annular ring instead of 0.05 mm. The board remains two-layer, with 97 nominal 0.25 mm and 56 nominal 0.30 mm vias. [Decision, current capabilities and remaining vendor checks](r1-preorder.md).
 
 ### 3. NFC screen/ferrite/tuning — physical validation
 
@@ -68,7 +93,7 @@ The enlarged coil is still behind the screen. The existing optional ferrite serv
 | Ground ring BE-002 | Not applied inside the NFC keepout; its plane-pair edge-emission premise does not override antenna clearance |
 | GP-002 / inner-layer rules | Not applicable to this two-layer board |
 | Full-board copper-fill percentage | Not a gate because NFC/BLE clearances intentionally remove copper |
-| Mechanical reuse | 58 unchanged placements and outline; 238 exported STEP solids match in volume, area and bounds; existing case retained |
+| Mechanical reuse | 58 unchanged placements and outline; 238 exported component STEP solids match in volume, area and bounds; the 5.8 mm case has synchronized 2.54 mm SWD holes |
 
 The TVS routing change follows TI's recommendation to eliminate the branch between the protected line and the TVS. It does not claim ESD qualification; the retained connector fanout still uses layer changes. [TI SLVA680A, sections 2.1 and 2.3](https://www.ti.com/lit/an/slva680/slva680.pdf).
 
@@ -80,7 +105,7 @@ Saved, closed and reopened native DRC: **0**. Independent copper: **0 split nets
 python3 projects/nfc-business-card/scripts/review-r1-layout.py --snapshot projects/nfc-business-card/hardware/records/r1-routed-snapshot.json --pins projects/nfc-business-card/hardware/records/r1-pcb-pins.json --output projects/nfc-business-card/hardware/records/r1-review.json
 ```
 
-See [delivery checks](pcb-r1-delivery.md#reproduce-checks) for copper, topology, netlist, profile and bundle verification. Passing those checks does not close the C1 finding.
+See [delivery checks](pcb-r1-delivery.md#reproduce-checks) for copper, topology, netlist, profile and bundle verification. Passing these checks does not qualify RF, USB operation or physical assembly.
 
 ## Method and provenance
 

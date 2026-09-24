@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "before_snapshot_sha256": "40e6e458483ba5deba21ed32f3fcadc7091490cfcfc723d574295a85f0b4a5a5",
+  "after_snapshot_sha256": "5b4c9fa2bf036d2519533c8995ae9c292775c00d37f4294c511a9027d73dc836",
+  "counts": {
+    "before": {
+      "segments": 825,
+      "vias": 155
+    },
+    "after": {
+      "segments": 818,
+      "vias": 153
+    }
+  },
+  "nets": {
+    "CHG_CE_N": {
+      "before": {
+        "segments": 29,
+        "vias": 6,
+        "trace_length_mm": 39.5568
+      },
+      "after": {
+        "segments": 21,
+        "vias": 4,
+        "trace_length_mm": 32.9817
+      }
+    },
+    "CHG_SCL": {
+      "before": {
+        "segments": 18,
+        "vias": 4,
+        "trace_length_mm": 33.764
+      },
+      "after": {
+        "segments": 19,
+        "vias": 4,
+        "trace_length_mm": 35.4627
+      }
+    }
+  },
+  "unchanged": [
+    "all 58 component positions/footprints",
+    "all pads",
+    "board outline",
+    "antenna exclusion polygons",
+    "all other net traces/vias including USB and NFC"
+  ],
+  "tradeoff": "CHG_SCL length increases by about 1.7 mm to replace the long CE detour; CE loses two layer changes. This is a local checked improvement, not a globally optimal routing proof.",
+  "native_drc_after_reopen": [],
+  "independent_copper_check": "r1-copper-check.json",
+  "firmware_and_rf_tested": false,
+  "usb_bom_change": "R3/R4 = C21189 0 ohm; existing R0603 symbol/footprint geometry retained."
+}

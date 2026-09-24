@@ -1,0 +1,92 @@
+{
+  "status": "CONDITIONAL_MECHANICAL_CANDIDATE_NOT_RELEASED",
+  "source_sha256": "6f0982c077b274382e1434d9eaead4f5f323d61fd3ee9d7b1780dae0130742e2",
+  "reset": {
+    "part": "SKSCLBE010",
+    "drawing": "https://tech.alpsalpine.com/cms.media/product_detail_fig_sksc_d_31_en_b3efc7326a.gif",
+    "datum_xy_mm": [
+      80.3,
+      8.6
+    ],
+    "actuator_face_xy_mm": [
+      82.4,
+      8.6
+    ],
+    "push_direction": "-X; actuator faces +X",
+    "pcb_top_z_mm": 1.9200254000510002,
+    "push_axis_z_mm": 2.6200254000510004,
+    "nominal_top_z_mm": 3.170025400051,
+    "evaluated_top_z_mm": 3.420025400051,
+    "boss_candidate_centers_xy_mm": [
+      [
+        79.39999999999999,
+        8.6
+      ],
+      [
+        81.2,
+        8.6
+      ]
+    ],
+    "boss_max_projection_mm": 0.6,
+    "boss_min_z_mm": 1.320025400051,
+    "boss_to_pcb_bottom_margin_mm": 0.200025400051,
+    "boss_inside_pcb": [
+      true,
+      true
+    ],
+    "footprint_projection_supported": true,
+    "envelope_to_upper_mm": 0.8499999999999943,
+    "envelope_to_rear_mm": 1.1200254000510004,
+    "envelope_collisions_mm3": {},
+    "insertion_upper_overlap_mm3": 0.0,
+    "tool_hole_diameter_mm": 2,
+    "tool_diameter_mm": 0.6,
+    "tool_contact_depth_from_outer_wall_mm": 2.1999999999999886,
+    "tool_pressed_depth_from_outer_wall_mm": 2.399999999999989,
+    "tool_existing_component_collisions_mm3": {},
+    "tool_pcb_overlap_mm3": 0.0,
+    "tool_opened_upper_overlap_mm3": 0.0,
+    "opened_upper_valid": true,
+    "opened_upper_solids": 1
+  },
+  "swd": {
+    "proposed_pitch_mm": 2.54,
+    "proposed_x_mm": [
+      65.9206,
+      68.4606,
+      71.0006,
+      73.5406,
+      76.0806
+    ],
+    "proposed_y_mm": 48.4988,
+    "pad_depth_from_rear_exterior_mm": 1.12,
+    "axis_distance_from_case_y_edge_mm": 4.101199999999999,
+    "axis_distance_from_pcb_y_edge_mm": 2.3886015748029976,
+    "hole_comparisons": [
+      {
+        "diameter_mm": 2.0,
+        "straight_web_mm": 0.54,
+        "mouth_web_with_existing_r008_mm": 0.38
+      },
+      {
+        "diameter_mm": 1.8,
+        "straight_web_mm": 0.74,
+        "mouth_web_with_existing_r008_mm": 0.58
+      },
+      {
+        "diameter_mm": 1.6,
+        "straight_web_mm": 0.94,
+        "mouth_web_with_existing_r008_mm": 0.7799999999999999
+      }
+    ],
+    "nominal_d06_tip_center_error_limit_on_d12_pad_mm": 0.3
+  },
+  "limits": [
+    "Conservative switch envelope, not an official STEP model or final footprint.",
+    "Mounting allowance and 0.6 mm tool are study assumptions.",
+    "No routing, PCB drilling, force, solder-joint strength, fixture or print qualification.",
+    "SWD clip dimensions remain unavailable; candidate coordinates are not approved.",
+    "Frozen physical bodies do not include updated battery wiring or actual flex."
+  ],
+  "source_unchanged": true
+}

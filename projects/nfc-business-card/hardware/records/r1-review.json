@@ -48,11 +48,19 @@
   "decoupling": [
     {
       "cap": "C1",
+      "served_pin": "U1.32",
+      "net": "USB_VBUS",
+      "supply_pad_distance_mm": 1.2386140131614845,
+      "ground_via_distance_mm": 1.0999597001876893,
+      "DC-001": "PASS"
+    },
+    {
+      "cap": "C8",
       "served_pin": "U2.10",
       "net": "USB_VBUS",
-      "supply_pad_distance_mm": 14.279924275989705,
-      "ground_via_distance_mm": 1.0999597001876893,
-      "DC-001": "HIGH"
+      "supply_pad_distance_mm": 1.746873804944134,
+      "ground_via_distance_mm": 0.8999761241952046,
+      "DC-001": "PASS"
     },
     {
       "cap": "C2",
@@ -128,15 +136,15 @@
     {
       "ref": "U6",
       "nearest_ground_via_mm": 0.8003805235931316,
-      "ground_vias_within_3mm": 6
+      "ground_vias_within_3mm": 7
     }
   ],
   "cc2_protection_cut_groups": [
     [
       "1@(72.85,28.80)",
       "2@(74.10,25.25)",
-      "via148",
-      "via149"
+      "via141",
+      "via142"
     ],
     [
       "B5@(75.95,27.75)",
@@ -153,8 +161,8 @@
         75.14999956,
         25.25014
       ],
-      "nearest_ground_via_mm": 1.9913530137193618,
-      "above_1_6_mm_guideline": true
+      "nearest_ground_via_mm": 1.1103188810478226,
+      "above_1_6_mm_guideline": false
     },
     {
       "net": "USB_DM_CONN",
@@ -162,7 +170,7 @@
         75.14999956,
         26.250899999999998
       ],
-      "nearest_ground_via_mm": 2.1227305705347477,
+      "nearest_ground_via_mm": 2.106248059482094,
       "above_1_6_mm_guideline": true
     },
     {
@@ -198,7 +206,7 @@
         54.10000102,
         14.201099359999999
       ],
-      "nearest_ground_via_mm": 3.664457136729125,
+      "nearest_ground_via_mm": 2.6170730511500246,
       "above_1_6_mm_guideline": true
     },
     {
@@ -229,17 +237,31 @@
       "above_1_6_mm_guideline": true
     }
   ],
+  "drill_diameter_counts_mm": {
+    "0.24892": 97,
+    "0.29972": 18,
+    "0.30480": 38
+  },
+  "corrected_finding": {
+    "item": "C1 was incorrectly assigned to U2 IN in the previous review.",
+    "resolution": "C1 serves U1.32; C8 (4.7 uF, 16 V) already serves U2.10. No component relocation is required by that finding.",
+    "evidence": "Named pin distances above; manufacturer DC-bias evidence in r1-input-capacitor-check.json."
+  },
+  "usb_return_summary": {
+    "above_contextual_guideline": 4,
+    "worst_nearest_ground_via_mm": 2.6170730511500246,
+    "qualification": "Proximity proxy only; continuity of the signal reference and powered USB operation remain unqualified."
+  },
   "discussion_items": [
     {
-      "priority": "before_order",
-      "item": "Move C1 close to U2 IN/GND or add a correctly specified local input capacitor.",
-      "evidence": "C1.1 to U2.10 = 14.28 mm; BQ25186 datasheet sections 7.2.2 and 9.1 require local input decoupling.",
-      "status": "Left for the next placement discussion; components unchanged."
+      "priority": "optimization",
+      "item": "Review remaining USB reference-path detours during powered prototype tests.",
+      "evidence": "4 USB vias exceed the contextual 1.6 mm guideline; worst gap 2.62 mm. Legal stitching improves proximity, but is not measured USB qualification."
     },
     {
-      "priority": "optimization",
-      "item": "Add nearby GND stitching at five USB layer transitions.",
-      "evidence": "Five USB vias exceed the contextual 1.6 mm guideline; worst gap about 3.66 mm. This is a return-path review item, not measured USB failure."
+      "priority": "vendor_confirmation",
+      "item": "Confirm the 0.25 mm nominal drill tier, USB slots and custom connector placement in vendor DFM.",
+      "evidence": "Current public capability supports these hole sizes; price tier, filling and assembly acceptance have not been quoted."
     },
     {
       "priority": "physical_validation",
@@ -257,7 +279,7 @@
   "limits": [
     "All distances and areas are computed from native geometry, not physical measurements.",
     "No EMC, USB signal integrity or RF qualification performed.",
-    "Unchanged component placement does not close the C1 finding."
+    "Typical capacitor DC-bias data does not guarantee the full operating temperature range."
   ],
-  "snapshot_sha256": "473022d650ac41f20f979c183711ab9adfb8b5a1fe3d2be2e791ed6b5f2367b3"
+  "snapshot_sha256": "65372faf0377a49005af666330171019fe9a179c05933d39735e422626758474"
 }

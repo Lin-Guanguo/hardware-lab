@@ -1,0 +1,57 @@
+{
+  "status": "HARDWARE_NET_AND_BOM_CHECK_PASS",
+  "snapshot_sha256": "65372faf0377a49005af666330171019fe9a179c05933d39735e422626758474",
+  "verified_pin_assignments": 50,
+  "usb_series_resistors": "R3/R4 = 0 ohm / C21189",
+  "physical_swd_pads_front_coordinate_system": [
+    {
+      "land": "TP1",
+      "net": "GND",
+      "x_mm": 65.92062,
+      "y_mm": 48.49876,
+      "diameter_mm": 1.19888
+    },
+    {
+      "land": "TP2",
+      "net": "VDD_3V3",
+      "x_mm": 68.46062,
+      "y_mm": 48.49876,
+      "diameter_mm": 1.19888
+    },
+    {
+      "land": "TP3",
+      "net": "SWDCLK",
+      "x_mm": 71.00062,
+      "y_mm": 48.49876,
+      "diameter_mm": 1.19888
+    },
+    {
+      "land": "TP4",
+      "net": "SWDIO",
+      "x_mm": 73.54062,
+      "y_mm": 48.49876,
+      "diameter_mm": 1.19888
+    },
+    {
+      "land": "TP5",
+      "net": "NRESET",
+      "x_mm": 76.08062,
+      "y_mm": 48.49876,
+      "diameter_mm": 1.19888
+    }
+  ],
+  "current_swd_pitch_mm": 2.54,
+  "swd_clip_compatibility": "2.54 mm implemented for user-selected generic Lushen 1x5 clip; physical fit untested",
+  "pin1_identification": "TP1 GND is square; TP2-TP5 are circular; all five rear signal labels follow the lands",
+  "hidden_reset": "CAD candidate only; not present on PCB",
+  "factory_programming": false,
+  "usb_updates_logs_hardware_tested": false,
+  "swd_breakpoint_debug_hardware_tested": false,
+  "remaining": [
+    "Final framework and bootloader port",
+    "VBUS transients/current/backfeed/suspend tests",
+    "Physical clip contact and cover trial fit",
+    "RESET footprint, tool guide and fabrication decision"
+  ],
+  "scope": "Pin assignments and 0-ohm procurement consistency; no electrical waveform, USB compliance or fixture validation."
+}

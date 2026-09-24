@@ -121,30 +121,36 @@
   "swd": {
     "access": "Five bottom-cover holes aligned with rear debug pads",
     "pad_diameter_mm": 1.19888,
-    "cover_hole_diameter_mm": 2.0,
+    "cover_hole_diameter_mm": 1.6,
     "pad_centers_mm": [
       [
-        65,
-        48.5
+        65.92062,
+        48.49876
       ],
       [
-        68,
-        48.5
+        68.46062,
+        48.49876
       ],
       [
-        71,
-        48.5
+        71.00062,
+        48.49876
       ],
       [
-        74,
-        48.5
+        73.54062,
+        48.49876
       ],
       [
-        77,
-        48.5
+        76.08062,
+        48.49876
       ]
     ],
-    "access_hole_diameter_mm": 2.0
+    "access_hole_diameter_mm": 1.6,
+    "pitch_mm": 2.54,
+    "pin1_shape": "Square GND; other four lands circular",
+    "minimum_surface_web_mm": 0.84,
+    "fixture": "绿深旗舰店 / 单排5P探针模块（2.54mm间距）",
+    "fit_basis": "User accepts nominal 2.54 mm generic clip adaptation; physical trial fit pending.",
+    "access_hole_mouth_radius_mm": 0.05
   },
   "mcu": {
     "footprint_origin_offset_from_body_center_local_mm": [
@@ -256,7 +262,7 @@
     "pcb_support_stack_mm": 0.32,
     "lid_seam_psa_mm": 0.06,
     "screen_psa_mm": 0.06,
-    "material": "Transparent SLA resin; user-supplied vendor screenshot states 0.8 mm walls and \u00b10.2 mm accuracy; exact resin and feature-specific acceptance unconfirmed.",
+    "material": "Transparent SLA resin; user-supplied vendor screenshot states 0.8 mm walls and ±0.2 mm accuracy; exact resin and feature-specific acceptance unconfirmed.",
     "appearance": "Clear perimeter enclosure, no internal crossbeams or battery divider. PCB supports are below the board; the battery is located by an adhesive pattern and assembly jig.",
     "closure": "Two printed halves bonded with a patterned perimeter PSA; assembly alignment jig required.",
     "status": "Existing 5.8 mm shell retained. Component solids/outline unchanged; B-pad wire service and 0.25 mm notched ferrite are not represented in the frozen CAD.",
@@ -355,5 +361,5 @@
   "placement_plan": "E20D component placement retained; standalone debug and selected B battery pads moved.",
   "tolerance_status": "Nominal clear-shell geometry only. Supplier feature tolerances, complete battery, folded flex and printed key fit remain unqualified.",
   "placement_refinement": "../archive/pre-r1/hardware/e20d-refinement.json",
-  "pcb_validation_note": "Reviewed revision passes native DRC and connectivity; C1 input decoupling placement remains an open before-order finding."
+  "pcb_validation_note": "Reviewed revision passes saved/reopened native DRC and independent connectivity. C1/C8 assignment corrected; nominal 0.2 mm drills removed; USB stitching improved; CE/SCL routing removes two vias; R3/R4 are 0 ohm. SWD is updated to 2.54 mm pitch with coordinated cover access under accepted generic clip assumptions; physical trial fit remains. Hidden RESET/CAD decision remains open, with no switch installed. Vendor DFM, USB/RF tests and physical fit remain open."
 }

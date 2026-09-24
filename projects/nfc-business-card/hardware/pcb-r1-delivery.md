@@ -12,13 +12,15 @@ This is a routed, editable prototype handoff. NFC performance and physical assem
 
 ## Review status
 
-This is the **reviewed prototype checkpoint**, after checkpoint `ccf9f92`. Perimeter ground copper, coil corners/equal edge spacing and the CC2 protection branch are corrected. **C1 remains 14.28 mm from the charger input pin and needs correction before ordering.** [Full review, remaining improvements and applicability](pcb-r1-review.md). Passing export/DRC checks does not close this finding.
+Checkpoint `bee8846` preserves the antenna, CC2, battery-pad and enclosure studies. Subsequent work eliminates all nominal 0.2 mm drills and adds two USB ground stitching vias. The previous C1 finding was incorrect: C1 bypasses U1 VBUS and C8 already bypasses the charger input. [Layout review](pcb-r1-review.md) and [pre-order DFM/assembly brief](r1-preorder.md) describe evidence and remaining work.
+
+The latest grouped CE/SCL reroute removes two vias and 4.88 mm of trace. R3/R4 are now 0 ohm / C21189. [USB/SWD review](r1-usb-swd-recovery.md) records the user-programmed bootloader plan, implemented 2.54 mm SWD interface and hidden RESET candidate; these recovery features are not yet physically qualified.
 
 ## Implemented changes
 
-All 58 component positions, rotations and footprints, and the board outline, retain the accepted E20D placement. The old project is preserved by SHA-256 comparison. Detailed routing now contains 824 line segments, 153 vias, 248 pads and two ground pours.
+All 58 component positions, rotations and footprints, and the board outline, retain the accepted E20D placement. The old project is preserved by SHA-256 comparison. Detailed routing now contains 819 line segments, 153 vias, 248 pads and two ground pours.
 
-The complete screen projection through all three exposed board edges is free of pours on both copper layers: X 0–39.62, Y 17–52 mm. The user selected a specific top-layer exception for B+/B− lands at (32.5,18.7)/(35.5,18.7) mm and their narrow routes; all other non-NFC copper remains excluded. See [battery plan](records/r1-battery-b-plan.json) and [RF/assembly limits](../enclosure/r1-height-handoff.md#battery-b-and-ferrite-integration). Five rear debug pads move to X 65/68/71/74/77, Y 48.5 mm (GND/3V3/CLK/DIO/RST). The R1 bottom cover has matching 2.0 mm access holes; the nearby PCB support moves clear of the holes. The screen, key and USB openings retain their accepted positions.
+The complete screen projection through all three exposed board edges is free of pours on both copper layers: X 0–39.62, Y 17–52 mm. The user selected a specific top-layer exception for B+/B− lands at (32.5,18.7)/(35.5,18.7) mm and their narrow routes; all other non-NFC copper remains excluded. See [battery plan](records/r1-battery-b-plan.json) and [RF/assembly limits](../enclosure/r1-height-handoff.md#battery-b-and-ferrite-integration). Five rear debug pads now use X 65.92062/68.46062/71.00062/73.54062/76.08062, Y 48.49876 mm (GND/3V3/CLK/DIO/RST), at 2.54 mm pitch. TP1/GND is square and the other lands are circular; rear signal labels follow the new centres. The R1 bottom cover has matching Ø1.60 mm access holes and R0.05 outer mouths; the nearby support remains clear. The screen, key and USB openings retain their accepted positions.
 
 The rear antenna is a five-turn spiral, outer centreline 29.9 × 27.6 mm, nominal trace/space 0.25/0.25 mm, 45° chamfers and 3 mm centreline offsets from the three exposed straight edges, covered by solder mask. The two NFCT terminals share a native net through a schematic short flag. A separate cut-and-reconnect proof verifies that the winding is not bypassed; ordinary net connectivity alone cannot prove this. C23/C24 remain **220 pF C0G provisional tuning values**. U1.52 connects through the C23 branch to NFC2; U1.54 through C24 to NFC1. These pad names are terminal identifiers, not proof of RF tuning.
 
@@ -72,6 +74,7 @@ python3 projects/nfc-business-card/scripts/check-r1-nfc.py --snapshot projects/n
 python3 projects/nfc-business-card/scripts/check-netlist-consistency.py --sch projects/nfc-business-card/hardware/records/r1-schematic.enet --pcb projects/nfc-business-card/hardware/records/r1-pcb-pins.json
 python3 projects/nfc-business-card/scripts/check-e20-outline.py --snapshot projects/nfc-business-card/hardware/records/r1-routed-snapshot.json --gerber projects/nfc-business-card/hardware/production/r1/NFC-Card-R1-gerber.zip --output projects/nfc-business-card/hardware/records/r1-profile-check.json
 python3 projects/nfc-business-card/scripts/check-r1-delivery.py
+python3 projects/nfc-business-card/scripts/check-r1-usb-swd.py
 python3 projects/nfc-business-card/scripts/render-r1-copper.py --snapshot projects/nfc-business-card/hardware/records/r1-routed-snapshot.json --output projects/nfc-business-card/enclosure/renders/r1-routed-front-rear.png
 ```
 

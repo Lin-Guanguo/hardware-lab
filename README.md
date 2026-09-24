@@ -10,7 +10,7 @@
 | --- | --- | --- |
 | [AI Passport](projects/ai-passport/README.md) | 探索紧凑的可编程胸牌、屏幕按键交互与 NFC 链接 | 2026-09-16 确认已下单，等待到货 |
 | [Image Oracle](projects/image-oracle/README.md) | 用固定算法将摄像头图像映射为答案，默认拍摄熔岩灯 | 2026-09-19 拼接原型完成并验收；后续探索更多传感器，或焊接、定制 PCB 与 3D 打印的紧凑装置 |
-| [Programmable NFC Business Card](projects/nfc-business-card/README.md) | 按键切换身份的薄型 NFC 墨水屏名片 | 2026-09-24 R1 routed in a clean native project: saved/reopened DRC 0, 5.8 mm clear case. Coil/clearance/CC2 review checkpoint saved; C1 placement needs correction before ordering. [Delivery and checks](projects/nfc-business-card/hardware/pcb-r1-delivery.md). RF and physical fit remain untested. |
+| [Programmable NFC Business Card](projects/nfc-business-card/README.md) | 按键切换身份的薄型 NFC 墨水屏名片 | 2026-09-24 R1 routed in a clean native project: saved/reopened DRC 0, 5.8 mm clear case. Checkpoint `bee8846` saved. Subsequent review removes all nominal 0.2 mm drills, adds USB ground stitching and corrects the C1/C8 review assignment; CE/SCL routing removes two vias and R3/R4 are corrected to 0 ohm. [USB/SWD recovery decisions](projects/nfc-business-card/hardware/r1-usb-swd-recovery.md), vendor DFM and real-board tests remain open. [Delivery and checks](projects/nfc-business-card/hardware/pcb-r1-delivery.md). RF and physical fit remain untested. |
 
 ## 目录结构
 

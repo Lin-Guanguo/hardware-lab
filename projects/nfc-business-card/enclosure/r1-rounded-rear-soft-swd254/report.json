@@ -1,0 +1,194 @@
+{
+  "status": "NOMINAL_SWD_ACCESS_UPDATED_NOT_PHYSICALLY_QUALIFIED",
+  "source": "r1-rounded-rear-soft/rear-cover-study.FCStd",
+  "source_sha256": "6f0982c077b274382e1434d9eaead4f5f323d61fd3ee9d7b1780dae0130742e2",
+  "coordinate_system": "PCB front-view XY; outside rear face Z=0",
+  "centers_xy_mm": [
+    [
+      65.92062,
+      48.49876
+    ],
+    [
+      68.46062,
+      48.49876
+    ],
+    [
+      71.00062,
+      48.49876
+    ],
+    [
+      73.54062,
+      48.49876
+    ],
+    [
+      76.08062,
+      48.49876
+    ]
+  ],
+  "net_order_increasing_x": [
+    "GND",
+    "VDD_3V3/VTref",
+    "SWCLK",
+    "SWDIO",
+    "NRESET"
+  ],
+  "pitch_mm": 2.54,
+  "bore_diameter_mm": 1.6,
+  "outer_mouth_radius_mm": 0.05,
+  "outer_mouth_diameter_mm": 1.7000000000000002,
+  "cover_thickness_mm": 0.8,
+  "straight_web_mm": 0.94,
+  "minimum_outer_surface_web_mm": 0.84,
+  "pad_depth_from_outer_rear_mm": 1.12,
+  "modified_volume_outside_access_region_mm3": 0.0,
+  "shell_intersection_mm3": 0.0,
+  "unchanged_objects": {
+    "RoundedUpperShell": true,
+    "PCB": true,
+    "Component_C9": true,
+    "Component_C10": true,
+    "Component_C11": true,
+    "Component_C12": true,
+    "Component_C13": true,
+    "Component_C14": true,
+    "Component_C15": true,
+    "Component_C16": true,
+    "Component_C17": true,
+    "Component_C18": true,
+    "Component_C19": true,
+    "Component_C20": true,
+    "Component_C21": true,
+    "Component_C22": true,
+    "Component_C1": true,
+    "Component_C2": true,
+    "Component_C3": true,
+    "Component_C4": true,
+    "Component_C5": true,
+    "Component_C6": true,
+    "Component_C7": true,
+    "Component_C8": true,
+    "Component_C23": true,
+    "Component_C24": true,
+    "Component_R1": true,
+    "Component_R2": true,
+    "Component_R3": true,
+    "Component_R4": true,
+    "Component_R5": true,
+    "Component_R6": true,
+    "Component_R7": true,
+    "Component_R8": true,
+    "Component_R9": true,
+    "Component_R10": true,
+    "Component_R11": true,
+    "Component_R12": true,
+    "Component_R13": true,
+    "Component_R14": true,
+    "Component_R15": true,
+    "Component_R16": true,
+    "Component_R17": true,
+    "Component_R18": true,
+    "Component_U1": true,
+    "Component_U4": true,
+    "Component_D1": true,
+    "Component_D2": true,
+    "Component_D3": true,
+    "Component_U5": true,
+    "Component_U6": true,
+    "Component_U2": true,
+    "Component_J2": true,
+    "Component_U3": true,
+    "Component_Q1": true,
+    "Component_L1": true,
+    "Component_SW1": true,
+    "Component_SW3": true,
+    "Component_SW2": true,
+    "Component_J1": true,
+    "PCBSupport1": true,
+    "PCBSupport2": true,
+    "PCBSupport3": true,
+    "PCBSupport4": true,
+    "PCBSupport5": true,
+    "PCBSupport6": true,
+    "ScreenNominal": true,
+    "BatteryMaximum": true,
+    "BatteryPSA": true,
+    "ScreenPSA": true,
+    "ClearKey1": true,
+    "ClearKey2": true,
+    "ClearKey3": true
+  },
+  "hole_checks": [
+    {
+      "center_xy_mm": [
+        65.92062,
+        48.49876
+      ],
+      "cylindrical_faces": 1,
+      "example_0_6mm_probe_shell_overlap_mm3": 0.0
+    },
+    {
+      "center_xy_mm": [
+        68.46062,
+        48.49876
+      ],
+      "cylindrical_faces": 1,
+      "example_0_6mm_probe_shell_overlap_mm3": 0.0
+    },
+    {
+      "center_xy_mm": [
+        71.00062,
+        48.49876
+      ],
+      "cylindrical_faces": 1,
+      "example_0_6mm_probe_shell_overlap_mm3": 0.0
+    },
+    {
+      "center_xy_mm": [
+        73.54062,
+        48.49876
+      ],
+      "cylindrical_faces": 1,
+      "example_0_6mm_probe_shell_overlap_mm3": 0.0
+    },
+    {
+      "center_xy_mm": [
+        76.08062,
+        48.49876
+      ],
+      "cylindrical_faces": 1,
+      "example_0_6mm_probe_shell_overlap_mm3": 0.0
+    }
+  ],
+  "exports": {
+    "rear.step": {
+      "valid": true,
+      "solids": 1
+    },
+    "rear-cover-study.step": {
+      "valid": true,
+      "solids": 2
+    },
+    "rear.stl": {
+      "closed": true,
+      "facets": 23600
+    },
+    "upper.stl": {
+      "closed": true,
+      "facets": 44512
+    }
+  },
+  "limits": [
+    "Generic single-row 5P 2.54 mm clip assumption accepted by user; no physical fit certification.",
+    "The supplier image 1.5 mm label describes a fixture needle hole, not a verified probe tip diameter.",
+    "1.6 mm bore and R0.05 mouth balance nominal access and remaining material; print and coating tolerances unqualified.",
+    "Source PCB solid has no debug-pad copper; coordinates follow PCB task handoff, not a refreshed PCB STEP.",
+    "No changes to RESET, thickness, keys, closure, antenna, PCB outline or battery service bodies.",
+    "Existing closure, battery wire/ferrite and key-tolerance limitations remain."
+  ],
+  "reopened_cad": {
+    "valid": true,
+    "solids": 1,
+    "difference_mm3": 0.0
+  },
+  "source_unchanged": true
+}

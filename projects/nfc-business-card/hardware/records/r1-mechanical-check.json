@@ -6,47 +6,57 @@
     {
       "pad": "TP1",
       "center_mm": [
-        65,
-        48.5
+        65.92062,
+        48.49876
       ],
-      "registration_error_mm": 0.0016843990026088034,
-      "blocked_volume_mm3": 0.0
+      "registration_error_mm": 0.0,
+      "blocked_volume_mm3": 0.0,
+      "bore_diameter_mm": 1.6,
+      "outer_mouth_radius_mm": 0.05
     },
     {
       "pad": "TP2",
       "center_mm": [
-        68,
-        48.5
+        68.46062,
+        48.49876
       ],
-      "registration_error_mm": 0.001520526224699304,
-      "blocked_volume_mm3": 0.0
+      "registration_error_mm": 0.0,
+      "blocked_volume_mm3": 0.0,
+      "bore_diameter_mm": 1.6,
+      "outer_mouth_radius_mm": 0.05
     },
     {
       "pad": "TP3",
       "center_mm": [
-        71,
-        48.5
+        71.00062,
+        48.49876
       ],
-      "registration_error_mm": 0.001386362146051405,
-      "blocked_volume_mm3": 0.0
+      "registration_error_mm": 0.0,
+      "blocked_volume_mm3": 0.0,
+      "bore_diameter_mm": 1.6,
+      "outer_mouth_radius_mm": 0.05
     },
     {
       "pad": "TP4",
       "center_mm": [
-        74,
-        48.5
+        73.54062,
+        48.49876
       ],
-      "registration_error_mm": 0.0012912009913283637,
-      "blocked_volume_mm3": 0.0
+      "registration_error_mm": 0.0,
+      "blocked_volume_mm3": 0.0,
+      "bore_diameter_mm": 1.6,
+      "outer_mouth_radius_mm": 0.05
     },
     {
       "pad": "TP5",
       "center_mm": [
-        77,
-        48.5
+        76.08062,
+        48.49876
       ],
-      "registration_error_mm": 0.001244025723209771,
-      "blocked_volume_mm3": 0.0
+      "registration_error_mm": 0.0,
+      "blocked_volume_mm3": 0.0,
+      "bore_diameter_mm": 1.6,
+      "outer_mouth_radius_mm": 0.05
     }
   ],
   "old_screen_access_holes_closed": true,
@@ -54,8 +64,8 @@
   "meshes": {
     "tray": {
       "closed_solid": true,
-      "facets": 3616,
-      "sha256": "a28e741261d148e1e8a3b5513e78f4162001c3a80c13f946b2bc5d27d458fe22"
+      "facets": 20064,
+      "sha256": "b2b935ed8130cfb685a0aee66f981b4e6c4fb695f1f9657f6503b082f349e9cd"
     },
     "lid": {
       "closed_solid": true,
@@ -69,8 +79,12 @@
     }
   },
   "screen_back_to_pcb_mm": 2.0200000000000005,
+  "cad_sha256": "6fe18f213160f34a8acfe327999ed832f4f31a99d81a819c47e7350bde73f627",
+  "pcb_snapshot_sha256": "65372faf0377a49005af666330171019fe9a179c05933d39735e422626758474",
   "limits": [
     "Nominal geometry only; resin and assembly tolerances unqualified.",
-    "Battery, flex, USB plug, key feel and adhesive retention require sample assembly."
+    "Generic 2.54 mm clip assumption; physical fixture fit untested.",
+    "Battery, flex, USB plug, key feel and adhesive retention require sample assembly.",
+    "Frozen CAD wire/ferrite bodies and 0.30 mm key travel checks do not qualify current wiring or maximum key travel."
   ]
 }

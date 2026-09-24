@@ -9,8 +9,8 @@ C7,CC0603KRX7R9BB104,C0603,60.9mm,18mm,60.9mm,18mm,60.9mm,17.3mm,2,T,90,Yes,100n
 C8,CL10A475KO8NNNC,C0603,46.1mm,16.8mm,46.1mm,16.8mm,46.1mm,17.5mm,2,T,270,Yes,4.7uF 16V,4.7uF,,LCSC,https://item.szlcsc.com/datasheet/CL10A475KO8NNNC/20375.html
 R1,0603WAF5101T5E,R0603,71.9mm,24.5mm,71.9mm,24.5mm,71.147mm,24.5mm,2,T,0,Yes,5.1k 1%,5.1kΩ,厚膜电阻,LCSC,https://item.szlcsc.com/datasheet/0603WAF5101T5E/23913.html
 R2,0603WAF5101T5E,R0603,73.6mm,28.8mm,73.6mm,28.8mm,72.847mm,28.8mm,2,T,0,Yes,5.1k 1%,5.1kΩ,厚膜电阻,LCSC,https://item.szlcsc.com/datasheet/0603WAF5101T5E/23913.html
-R3,RMC0603271%N,R0603,55.6mm,14.2mm,55.6mm,14.2mm,54.847mm,14.2mm,2,T,0,Yes,27R 1%,27Ω,,LCSC,https://item.szlcsc.com/datasheet/RMC0603271%2525N/305931.html
-R4,RMC0603271%N,R0603,55.6mm,15.7mm,55.6mm,15.7mm,54.847mm,15.7mm,2,T,0,Yes,27R 1%,27Ω,,LCSC,https://item.szlcsc.com/datasheet/RMC0603271%2525N/305931.html
+R3,RMC0603271%N,R0603,55.6mm,14.2mm,55.6mm,14.2mm,54.847mm,14.2mm,2,T,0,Yes,0Ω,0Ω,厚膜电阻,LCSC,https://item.szlcsc.com/datasheet/0603WAF0000T5E/21903.html
+R4,RMC0603271%N,R0603,55.6mm,15.7mm,55.6mm,15.7mm,54.847mm,15.7mm,2,T,0,Yes,0Ω,0Ω,厚膜电阻,LCSC,https://item.szlcsc.com/datasheet/0603WAF0000T5E/21903.html
 R5,0603WAF1002T5E,R0603,42.1mm,19.4mm,42.1mm,19.4mm,41.347mm,19.4mm,2,T,0,Yes,10k 1%,10kΩ,厚膜电阻,LCSC,https://item.szlcsc.com/datasheet/0603WAF1002T5E/26547.html
 R6,0603WAF1002T5E,R0603,42.1mm,20.8mm,42.1mm,20.8mm,41.347mm,20.8mm,2,T,0,Yes,10k 1%,10kΩ,厚膜电阻,LCSC,https://item.szlcsc.com/datasheet/0603WAF1002T5E/26547.html
 R7,0603WAF1002T5E,R0603,49.5mm,20.9mm,49.5mm,20.9mm,50.253mm,20.9mm,2,T,180,Yes,10k 1%,10kΩ,厚膜电阻,LCSC,https://item.szlcsc.com/datasheet/0603WAF1002T5E/26547.html

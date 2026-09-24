@@ -1,0 +1,13 @@
+{
+  "status": "NATIVE_EXPORT_REVIEW_PASS",
+  "pdf_sha256": "dc8684494035f2b192f2f6d37a01f8ebad384d39579346dbb879fd3ed854f60c",
+  "bytes": 796407,
+  "page_count": 7,
+  "snapshot_sha256": "65372faf0377a49005af666330171019fe9a179c05933d39735e422626758474",
+  "source": "EDA native pcb_ManufactureData.getPdfFile after SWD 2.54 mm change",
+  "bom_check": "R3,R4,R16 grouped as 0 ohm / C21189",
+  "visual_review_pages": [
+    6
+  ],
+  "review_scope": "Rear SWD land shape, pitch and labels; unchanged BOM text also checked. No mechanical or electrical qualification."
+}

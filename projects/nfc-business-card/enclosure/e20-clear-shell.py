@@ -89,6 +89,12 @@ debug_hole_diameter = C['swd'].get('access_hole_diameter_mm', 2.0)
 for xpad,ypad in debug_pads:
     tray=tray.cut(Part.makeCylinder(debug_hole_diameter/2,FLOOR+.2,V(xpad,ypad,-.1)))
 tray=tray.removeSplitter()
+debug_mouth_radius = C['swd'].get('access_hole_mouth_radius_mm', 0)
+if debug_mouth_radius:
+    mouth_edges = [e for e in tray.Edges if abs(e.BoundBox.ZMin) < 1e-7 and abs(e.BoundBox.ZMax) < 1e-7
+                   and any((e.CenterOfMass.x-px)**2+(e.CenterOfMass.y-py)**2 < 1e-10 for px,py in debug_pads)]
+    assert len(mouth_edges) == len(debug_pads)
+    tray = tray.makeFillet(debug_mouth_radius, mouth_edges)
 for kx,ky in C['keys_xy_mm']:
     lid=lid.cut(Part.makeCylinder(2.6,LID+.2,V(kx,ky,LID_Z-.1)))
 tray_obj=feature('ClearTray',tray,'transparent SLA candidate; perimeter walls; battery located by adhesive and assembly jig',(.77,.88,.92),78)
@@ -189,7 +195,7 @@ report={'status':'GEOMETRY_CANDIDATE_NOT_FOR_ORDER','nominal_height_mm':HEIGHT,'
         'floor_mm':FLOOR,'lid_mm':LID,'wall_mm':WALL,'pcb_z_mm':PCB_Z,'pcb_top_mm':PCB_TOP,
         'screen_back_max_mm':screen_top-1,'source_step_sha256':hashlib.sha256(SOURCE.read_bytes()).hexdigest(),
         'component_count':len(components),'full_height_crossbeams':0,'display_window_xywh_mm':window,
-        'debug_access':{'centers_mm':debug_pads,'diameter_mm':debug_hole_diameter},
+        'debug_access':{'centers_mm':debug_pads,'diameter_mm':debug_hole_diameter,'mouth_radius_mm':debug_mouth_radius},
         'under_screen_component_refs':under_screen,
         'height_budget':budget,
         'parts':{'tray':{'valid':tray.isValid(),'solids':len(tray.Solids)},'lid':{'valid':lid.isValid(),'solids':len(lid.Solids)}},

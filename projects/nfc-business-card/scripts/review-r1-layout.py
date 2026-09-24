@@ -48,7 +48,9 @@ def review(s,pins):
     assert not bleed
     comps={c['ref']:c for c in pins}
     ground_vias=[xy(v)for v in s['vias']if v['net']=='GND']
-    services=[('C1','U2','10'),('C2','U2','1'),('C3','U2','2'),('C4','U3','1'),('C5','U3','5'),('C6','U1','28'),('C7','U1','30'),('C9','U4','1'),('C10','U4','6')]
+    # C1 bypasses the module VBUS input; C8 is the charger's local input cap.
+    # Sharing USB_VBUS does not make every capacitor serve every IC on that net.
+    services=[('C1','U1','32'),('C8','U2','10'),('C2','U2','1'),('C3','U2','2'),('C4','U3','1'),('C5','U3','5'),('C6','U1','28'),('C7','U1','30'),('C9','U4','1'),('C10','U4','6')]
     decoupling=[]
     for cap,ic,pin in services:
         target=next(q for q in comps[ic]['pins']if q['number']==pin)
@@ -87,6 +89,16 @@ def review(s,pins):
     l1=next(p for p in comps['L1']['pins']if p['net']=='EPD_VDD')
     q1=next(p for p in comps['Q1']['pins']if p['net']=='EPD_SW')
     loop_proxy=Polygon([xy(c10),xy(l1),xy(q1)]).area
+    usb=[t for t in transitions if t['net'].startswith('USB_D')]
+    usb_distant=[t for t in usb if t['above_1_6_mm_guideline']]
+    drill_groups={}
+    for via in s['vias']:
+        key=f"{via['holeMil']*MM:.5f}"
+        drill_groups[key]=drill_groups.get(key,0)+1
+    # Native getters round to 0.1 mil; manufacturing output retains finer units.
+    # Allow that rounding, but prevent reintroducing 0.20 mm drills/thin rings.
+    assert min(v['holeMil']*MM for v in s['vias']) >= .247, 'R1 nominal minimum drill is 0.25 mm'
+    assert min((v['diameterMil']-v['holeMil'])*MM/2 for v in s['vias']) >= .097, 'R1 nominal minimum radial annulus is 0.10 mm'
     return {'status':'REVIEW_REQUIRED_BEFORE_ORDER','geometry_checks_pass':audit['ok'] and not bleed and cc2_ok,
             'fixed':['Screen protrusion ground rim removed on both layers.','Five-turn coil changed to 45-degree corners with equal exposed-edge offsets.','CC2 load branch moved from the pre-TVS tee to the U6 protection pad.','Copper checker now includes detached filled islands, even without pads/vias.','Battery lands routed at user-selected B position, shifted right 1.5 mm, with a narrow top-copper exception.','Three single-layer vias and one dead stub removed; two-face copper contact is now audited.'],
             'coil':{'turns':5,'chamfers':len(chamfers),'outer_centerline_bounds_mm':[x0,y0,x1,y1],'centerline_edge_offsets_mm':edge_offsets,
@@ -95,15 +107,19 @@ def review(s,pins):
             'ble_keepout_intrusions':bleed,'decoupling':decoupling,'esd_ground':esd,'cc2_protection_cut_groups':groups,
             'switch_node_copper_area_mm2':sw_area,'epd_input_inductor_switch_triangle_proxy_mm2':loop_proxy,
             'fast_signal_transitions':transitions,
-            'discussion_items':[{'priority':'before_order','item':'Move C1 close to U2 IN/GND or add a correctly specified local input capacitor.','evidence':'C1.1 to U2.10 = 14.28 mm; BQ25186 datasheet sections 7.2.2 and 9.1 require local input decoupling.','status':'Left for the next placement discussion; components unchanged.'},
-                                {'priority':'optimization','item':'Add nearby GND stitching at five USB layer transitions.','evidence':'Five USB vias exceed the contextual 1.6 mm guideline; worst gap about 3.66 mm. This is a return-path review item, not measured USB failure.'},
+            'drill_diameter_counts_mm':drill_groups,
+            'corrected_finding':{'item':'C1 was incorrectly assigned to U2 IN in the previous review.','resolution':'C1 serves U1.32; C8 (4.7 uF, 16 V) already serves U2.10. No component relocation is required by that finding.','evidence':'Named pin distances above; manufacturer DC-bias evidence in r1-input-capacitor-check.json.'},
+            'usb_return_summary':{'above_contextual_guideline':len(usb_distant),'worst_nearest_ground_via_mm':max(t['nearest_ground_via_mm']for t in usb),
+                                  'qualification':'Proximity proxy only; continuity of the signal reference and powered USB operation remain unqualified.'},
+            'discussion_items':[{'priority':'optimization','item':'Review remaining USB reference-path detours during powered prototype tests.','evidence':f"{len(usb_distant)} USB vias exceed the contextual 1.6 mm guideline; worst gap {max(t['nearest_ground_via_mm']for t in usb):.2f} mm. Legal stitching improves proximity, but is not measured USB qualification."},
+                                {'priority':'vendor_confirmation','item':'Confirm the 0.25 mm nominal drill tier, USB slots and custom connector placement in vendor DFM.','evidence':'Current public capability supports these hole sizes; price tier, filling and assembly acceptance have not been quoted.'},
                                 {'priority':'physical_validation','item':'Tune with screen, case and candidate NFC ferrite in place.','evidence':'Removing the rim does not remove display/battery metal loading; 220 pF is provisional.'}],
             'applicability':{'GP-002/CK-001/DP-004':'Not applicable: two copper layers, no inner signal layers or power/ground plane pair.',
                              'BE-002':'Intentionally excluded in the NFC region; a ground ring would conflict with the antenna clearance.',
                              'GP-004':'Whole-board fill percentage is not a gate because NFC and BLE clearances are intentional.',
                              'SW-003':'E-paper boost/charge-pump topology; recorded triangle is a placement proxy, not a buck input-loop proof.',
                              'RP-001':'1.6 mm contextual guideline using 0.8 mm thickness; not a universal pass/fail or USB certification.'},
-            'limits':['All distances and areas are computed from native geometry, not physical measurements.','No EMC, USB signal integrity or RF qualification performed.','Unchanged component placement does not close the C1 finding.']}
+            'limits':['All distances and areas are computed from native geometry, not physical measurements.','No EMC, USB signal integrity or RF qualification performed.','Typical capacitor DC-bias data does not guarantee the full operating temperature range.']}
 
 if __name__=='__main__':
     ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--snapshot',type=Path,required=True);ap.add_argument('--pins',type=Path,required=True);ap.add_argument('--output',type=Path,required=True)

@@ -1,0 +1,205 @@
+{
+  "before_snapshot_sha256": "857f56165ca859f0b8419c91437804fff3008285ffc127082bf5ca43ed8569a2",
+  "target_clip": "绿深旗舰店 / 单排5P探针模块（2.54mm间距）",
+  "fit_basis": "User accepts nominal 2.54 mm adaptation; detailed probe/jaw dimensions deferred to trial fit. Screenshot 1.5 mm labels fixture needle holes, not tip diameter.",
+  "remove_line_indices": [
+    353,
+    354,
+    355,
+    356,
+    357,
+    358,
+    363,
+    364,
+    401,
+    402,
+    532
+  ],
+  "tracks": [
+    {
+      "net": "NRESET",
+      "layer": 2,
+      "width_mm": 0.15,
+      "points": [
+        [
+          75.82594944,
+          24.265950959999998
+        ],
+        [
+          75.8259,
+          44.2
+        ],
+        [
+          72.35,
+          47.6759
+        ],
+        [
+          72.35,
+          49.0
+        ],
+        [
+          72.8159,
+          49.4659
+        ],
+        [
+          75.11348,
+          49.4659
+        ],
+        [
+          76.08062,
+          48.49876
+        ]
+      ]
+    },
+    {
+      "net": "SWDIO",
+      "layer": 2,
+      "width_mm": 0.15,
+      "points": [
+        [
+          76.20104648,
+          18.616063859999997
+        ],
+        [
+          76.201,
+          45.83838000000001
+        ],
+        [
+          73.54062,
+          48.49876
+        ]
+      ]
+    },
+    {
+      "net": "VDD_3V3",
+      "layer": 2,
+      "width_mm": 0.15,
+      "points": [
+        [
+          67.89996326,
+          45.6999086
+        ],
+        [
+          67.9,
+          47.93814
+        ],
+        [
+          68.46062,
+          48.49876
+        ]
+      ]
+    },
+    {
+      "net": "GND",
+      "layer": 2,
+      "width_mm": 0.15,
+      "points": [
+        [
+          62.26000756,
+          45.76000754
+        ],
+        [
+          63.18186754,
+          45.76000754
+        ],
+        [
+          65.92062,
+          48.49876
+        ]
+      ]
+    }
+  ],
+  "pads": [
+    {
+      "id": "a05fe89439dd95b0",
+      "number": "TP1",
+      "x": 2595.3,
+      "y": 1909.4,
+      "net": "GND",
+      "layer": 2,
+      "pad": [
+        "RECT",
+        47.2,
+        47.2,
+        0
+      ],
+      "rotation": 0,
+      "hole": null
+    },
+    {
+      "id": "947d5c6691b5cae2",
+      "number": "TP2",
+      "x": 2695.3,
+      "y": 1909.4,
+      "net": "VDD_3V3",
+      "layer": 2,
+      "pad": [
+        "ELLIPSE",
+        47.2,
+        47.2
+      ],
+      "rotation": 0,
+      "hole": null
+    },
+    {
+      "id": "03afabf70c769ea2",
+      "number": "TP3",
+      "x": 2795.3,
+      "y": 1909.4,
+      "net": "SWDCLK",
+      "layer": 2,
+      "pad": [
+        "ELLIPSE",
+        47.2,
+        47.2
+      ],
+      "rotation": 0,
+      "hole": null
+    },
+    {
+      "id": "fdd5094fe11c0cda",
+      "number": "TP4",
+      "x": 2895.3,
+      "y": 1909.4,
+      "net": "SWDIO",
+      "layer": 2,
+      "pad": [
+        "ELLIPSE",
+        47.2,
+        47.2
+      ],
+      "rotation": 0,
+      "hole": null
+    },
+    {
+      "id": "b82b1626190e8bd1",
+      "number": "TP5",
+      "x": 2995.3,
+      "y": 1909.4,
+      "net": "NRESET",
+      "layer": 2,
+      "pad": [
+        "ELLIPSE",
+        47.2,
+        47.2
+      ],
+      "rotation": 0,
+      "hole": null
+    }
+  ],
+  "pin1_identification": "Square GND pad; other four pads circular; individual rear silk labels move with the lands.",
+  "nominal_pitch_mm": 2.54,
+  "candidate_counts": {
+    "lines": 819,
+    "vias": 153
+  },
+  "minimum_clearance_mm": {
+    "track_pad": 0.22748567472624057,
+    "track_track": 0.22508739325409094,
+    "track_via": 0.17227559233630135,
+    "pad_track": 0.2926999999999964,
+    "pad_pad": 1.3411199999999894,
+    "pad_via": 3.259396611088185
+  },
+  "errors": []
+}

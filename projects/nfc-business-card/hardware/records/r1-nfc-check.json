@@ -8,8 +8,8 @@
       "NFC2@(36.30,30.00)",
       "via22",
       "via23",
-      "via85",
-      "via86"
+      "via78",
+      "via79"
     ],
     [
       "1@(55.90,6.00)",
@@ -19,7 +19,7 @@
       "via25"
     ]
   ],
-  "cut_line_index": 758,
+  "cut_line_index": 706,
   "scope": "Copper topology only; this does not establish RF resonance or read range.",
   "bypass_negative_control_passed": true
 }

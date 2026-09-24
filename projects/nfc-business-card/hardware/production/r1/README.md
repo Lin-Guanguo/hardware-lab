@@ -2,7 +2,7 @@
 
 ## 当前确定方案
 
-Frozen engineering-prototype exports from the [native project](../../../../../eda/NFC-Card-R1.eprj2). These are tracked in Git. Review the [project status](../../../README.md) before ordering; C1 input decoupling needs layout correction, and RF/physical fit are not qualified. The current files contain the saved review checkpoint.
+Frozen engineering-prototype exports from the [native project](../../../../../eda/NFC-Card-R1.eprj2). These are tracked in Git. Review the [project status](../../../README.md) before ordering; the previous C1 finding is retracted, nominal 0.2 mm holes have been enlarged, and USB ground stitching is improved. [Vendor DFM and assembly checks](../../r1-preorder.md) remain open; RF/physical fit are not qualified. The current files include the CE/SCL routing cleanup and R3/R4 = 0 ohm / C21189. The [USB/SWD review](../../r1-usb-swd-recovery.md) records the implemented 2.54 mm SWD row and pending hidden RESET. The selected generic 5P clip still needs a physical trial fit; this export has no RESET switch.
 
 | File | Use |
 | --- | --- |
@@ -19,6 +19,6 @@ The editable `.eprj2` remains in `eda/`; enclosure STL files are in [enclosure/r
 
 Open the PCB, then **导出 → PCB 制板文件（Gerber） → check DRC/flying wires → 一键导出 or 自定义配置 → 导出**. See [EasyEDA's official guide](https://prodocs.lceda.cn/cn/pcb/export-pcb-fabrication-file-gerber/). The API calls the same native manufacture-data exporter.
 
-The current reviewed Gerber is **90,363 bytes** and differs from the earlier download because its copper changed.
+The current reviewed Gerber is **89,074 bytes** and differs from the earlier download because its copper changed.
 
 For the pre-optimization checkpoint, the 2026-09-24 manual download is **141,176 bytes**; the initial API export is **90,588 bytes**. The manual export adds documentation, drill-drawing and top-assembly layers and uses a different coordinate precision. The common manufacturing layers agree within 0.000005 mm after normalization; flying-probe data is identical. [Historical comparison evidence](../../../archive/r1-checkpoint/r1-gerber-export-comparison.json). This comparison is tied to those exact hashes; later PCB revisions invalidate equivalence to the old download.

@@ -23,27 +23,29 @@
   "debug_access": {
     "centers_mm": [
       [
-        65,
-        48.5
+        65.92062,
+        48.49876
       ],
       [
-        68,
-        48.5
+        68.46062,
+        48.49876
       ],
       [
-        71,
-        48.5
+        71.00062,
+        48.49876
       ],
       [
-        74,
-        48.5
+        73.54062,
+        48.49876
       ],
       [
-        77,
-        48.5
+        76.08062,
+        48.49876
       ]
     ],
-    "diameter_mm": 2.0
+    "diameter_mm": 1.6,
+    "mouth_radius_mm": 0.05,
+    "pitch_mm": 2.54
   },
   "under_screen_component_refs": [],
   "height_budget": {
@@ -285,7 +287,7 @@
         "intersection_mm3": 0.0
       },
       "U1": {
-        "clearance_mm": 0.5510185420370007,
+        "clearance_mm": 0.551018542037001,
         "intersection_mm3": 0.0
       },
       "U4": {
@@ -313,7 +315,7 @@
         "intersection_mm3": 0.0
       },
       "U2": {
-        "clearance_mm": 1.120025399346,
+        "clearance_mm": 1.1200253993459999,
         "intersection_mm3": 0.0
       },
       "J2": {
@@ -321,7 +323,7 @@
         "intersection_mm3": 0.0
       },
       "U3": {
-        "clearance_mm": 1.120022770861,
+        "clearance_mm": 1.1200227708609998,
         "intersection_mm3": 0.0
       },
       "Q1": {
@@ -1090,11 +1092,11 @@
       {
         "key": 2,
         "tray_rest": {
-          "clearance_mm": 2.7200000000000006,
+          "clearance_mm": 2.7199999999999998,
           "intersection_mm3": 0.0
         },
         "tray_pressed": {
-          "clearance_mm": 2.420000000000001,
+          "clearance_mm": 2.42,
           "intersection_mm3": 0.0
         },
         "lid_rest": {
@@ -1343,11 +1345,11 @@
       {
         "key": 3,
         "tray_rest": {
-          "clearance_mm": 2.7200000000000006,
+          "clearance_mm": 2.7199999999999998,
           "intersection_mm3": 0.0
         },
         "tray_pressed": {
-          "clearance_mm": 2.420000000000001,
+          "clearance_mm": 2.42,
           "intersection_mm3": 0.0
         },
         "lid_rest": {
@@ -2127,7 +2129,8 @@
     "Nominal solid clearances only; supplier tolerances are not approved.",
     "Battery complete-pack size, lead exit, screen flex, lid bonding, key feel and panel deflection require samples.",
     "CAD transparency is an illustration, not a guarantee of optical transparency after printing.",
-    "R1 routing and saved/reopened native DRC pass. RF tuning and physical fit remain unverified."
+    "R1 routing and saved/reopened native DRC pass. RF tuning and physical fit remain unverified.",
+    "SWD holes use generic 2.54 mm fixture assumptions; physical clip fit untested."
   ],
   "screen_registration": {
     "active_to_window_edge_margins_mm": [
@@ -2140,5 +2143,10 @@
     "fpc_tail_center_y_mm": 34.260000000000005,
     "j2_center_y_mm": 34.260119380239,
     "connector_rear_lead_to_screen_far_edge_mm": 54.575064774543996
+  },
+  "swd_revision": {
+    "source_cad_sha256": "12f9390674037cc8afb54fe6b993d329a2391ea30dcc76fe99e4dc8e5de3e6d4",
+    "local_check": "swd-access-report.json",
+    "scope": "Tray relations refreshed; all other bodies and historical checks retained."
   }
 }

@@ -3,48 +3,52 @@
   "status": "REVIEW_REQUIRED_BEFORE_ORDER",
   "files": {
     "NFC-Card-R1-assembly.pdf": {
-      "bytes": 814684,
-      "sha256": "d9f5952b3cfa661f18e27b7353fcd9e47bf4e15d9d0bb15a858cbf65d4e371d8"
+      "bytes": 796407,
+      "sha256": "dc8684494035f2b192f2f6d37a01f8ebad384d39579346dbb879fd3ed854f60c"
     },
     "NFC-Card-R1-bom.csv": {
-      "bytes": 2416,
-      "sha256": "77a8e2ca401d5e2be38abefe1918f86fd5bc99595d70da2c214301e3c7a182c8"
+      "bytes": 2346,
+      "sha256": "567fd700de3a83a687ccceeef1fdbcdaf1fb58da507cbd5201b7f1760379b3a8"
     },
     "NFC-Card-R1-copper-preview.png": {
-      "bytes": 310900,
-      "sha256": "cae21992204c14511a966e0952ab179d07c8cbdb846b5efc79eda879580c058b"
+      "bytes": 308332,
+      "sha256": "fda8ae737e1b536e52971efcfaa810797f71a2d52a2268aba49513ae400ffd81"
     },
     "NFC-Card-R1-cpl.csv": {
-      "bytes": 9952,
-      "sha256": "683528f32f83f6a74d9916dcf438c53cb9ff34fba52b7f3da60e6ba1ae1f5f1b"
+      "bytes": 9962,
+      "sha256": "1d92f000278a9113f8f1dbf48b64ea121faa0bc4b6546f33ddfde4ee0cb88101"
     },
     "NFC-Card-R1-gerber.zip": {
-      "bytes": 90363,
-      "sha256": "318361ba3e27d3e3ab052d5d3a838ac4bf6ef622f26d5ee660966b0480d97f02"
+      "bytes": 89074,
+      "sha256": "bc26ce13373705df8b42c041d1c44eba96881d41cc013b50b29b341e18924c5b"
     },
     "NFC-Card-R1-pcba.step": {
-      "bytes": 22019265,
-      "sha256": "7f24b57b063aca85e2ba1a94f45cbdcad063a3265cc593326b683977ccff6355"
+      "bytes": 22022073,
+      "sha256": "ccd9f75ed67e80bbc9f64805261946e79481cc59e47b048616f1623209f86034"
     },
     "NFC-Card-R1-project.epro2": {
-      "bytes": 2958745,
-      "sha256": "93d30f8a4ca0f1879a03cb9fc6fc5c25ed110403307bc0905110adce5ac79c89"
+      "bytes": 2938901,
+      "sha256": "2aeda814f9beccf7fd3cb0b98790df33f4403de91e13bde56d95fefe7d2b9243"
+    },
+    "NFC-Card-R1-routing-comparison.png": {
+      "bytes": 332116,
+      "sha256": "198eb13f3542c4ce1ca9e2666a18707591c355527900fc99f4d70cdf6deb1088"
     },
     "NFC-Card-R1.eprj2": {
-      "bytes": 8523776,
-      "sha256": "c9e00d676e7f3b10b5ca38a3c3e700178f7dcedf47a0feee6df00e0c6b45449b"
+      "bytes": 8724480,
+      "sha256": "c6d729d9f3d906707301966eb84cc700e33301fd37733d93fc89962f554cdbdc"
     },
     "README.md": {
-      "bytes": 955,
-      "sha256": "59c4d2f70303f022c161684b9574dda711ab467516b89a98cab1752b1e18618c"
+      "bytes": 1640,
+      "sha256": "c805093a86c476194e03e3cdc85f811e9f40657c64b33c7010847457934ec437"
     },
     "case/NFC-Card-R1-case.FCStd": {
-      "bytes": 8545535,
-      "sha256": "12f9390674037cc8afb54fe6b993d329a2391ea30dcc76fe99e4dc8e5de3e6d4"
+      "bytes": 8512418,
+      "sha256": "6fe18f213160f34a8acfe327999ed832f4f31a99d81a819c47e7350bde73f627"
     },
     "case/NFC-Card-R1-case.step": {
-      "bytes": 46317182,
-      "sha256": "c7d3a1126bb21e5e754f60def2feeabf0e4f91a0643b7af4f7e39f5c13fa3359"
+      "bytes": 45625030,
+      "sha256": "379e780326d89b122b8105687729417f3cdaf301d0d49d5a1fbc6a7785994082"
     },
     "case/NFC-Card-R1-keys.stl": {
       "bytes": 226284,
@@ -59,48 +63,52 @@
       "sha256": "7a0132f1a38ef464cba55b779d88b16def12e00ebb0c77a759a1a723111154f1"
     },
     "case/NFC-Card-R1-tray.step": {
-      "bytes": 36982,
-      "sha256": "43596fa62387387fb758a3806f5a561364bed2ad647e97c01580df0194fd9e0b"
+      "bytes": 42773,
+      "sha256": "24b8e1cd8fd61b555c3f0dc10f526819c43213e2c0dae54851039e9f7c477b07"
     },
     "case/NFC-Card-R1-tray.stl": {
-      "bytes": 180884,
-      "sha256": "a28e741261d148e1e8a3b5513e78f4162001c3a80c13f946b2bc5d27d458fe22"
+      "bytes": 1003284,
+      "sha256": "b2b935ed8130cfb685a0aee66f981b4e6c4fb695f1f9657f6503b082f349e9cd"
     },
     "case/assembled-preview.png": {
-      "bytes": 72494,
-      "sha256": "e5a7d08ca3daf80604fc1d3088b0e2dd1904f5502c0c1325c029492a3b4e3dbb"
+      "bytes": 73048,
+      "sha256": "85df9595162bdf13ba645b7154fe2452b210883f6a7da29d7ffc430f990da696"
     },
     "case/cad-build-inputs.json": {
-      "bytes": 7524,
-      "sha256": "000844b765052f874f3689bda8e85fd08e5aeae20a247b90680c34b13c4bf120"
+      "bytes": 7762,
+      "sha256": "a8a4daf429557bb4b4d6bc6ae41ee2403d5df5dedb292f0d122088636f04e5e1"
     },
     "case/design-inputs.json": {
-      "bytes": 8814,
-      "sha256": "7967d36e5c0142ed3e57e04659773602c7ab75411c26456e2ef807c667a7f0c0"
+      "bytes": 9539,
+      "sha256": "2d958a10b53392680869aba6ed33fb01de08a19399e1339b7c9c12bd95af6b48"
     },
     "case/geometry-report.json": {
-      "bytes": 55735,
-      "sha256": "809c6040677d9353818f0aab449a461c537977ace04a653a36969cfd5d28e7d9"
+      "bytes": 56156,
+      "sha256": "305732cadc1b5c39bcd1768ee9ea8929f34381a73a10218713ec5f1329c8d9d0"
     },
     "case/open-preview.png": {
-      "bytes": 55885,
-      "sha256": "af99a320f7f41e1670eac3223e65debbfc1b121098eb19b4169d115406cf5def"
+      "bytes": 56166,
+      "sha256": "2b938146256d10e441c71a5031add2b169fb885903aab17788b972f76693cb6c"
+    },
+    "checks/r1-assembly-export-check.json": {
+      "bytes": 565,
+      "sha256": "8a3a79f29779cb0389939521c854c965a6fbaaaca717ebd48572ecf9149fa364"
     },
     "checks/r1-battery-b-check.json": {
       "bytes": 1157,
-      "sha256": "87e5db5b3bd529e695b0425c9f17906f034886cfb82d04dbdd3a69c46bfc28e4"
+      "sha256": "7fd9562d84fb8d5b70bb1f489659ccba0a16d8f97a66c324ae825e83903bcd68"
     },
     "checks/r1-battery-b-plan.json": {
-      "bytes": 3869,
-      "sha256": "b15b3ae5679f6068f62ce61551a1c8368000d30cb7c2fdb07fff97af664f9c64"
+      "bytes": 4027,
+      "sha256": "51e6862fdcc3dae553815b057fffc5eeeab09e9ca8ba3ddbb9de887bf149c9d3"
     },
     "checks/r1-board.json": {
       "bytes": 65842,
       "sha256": "8c1900c57eab03e0e29043286682b83770fca8a33d36c11e4908ebd60e055e59"
     },
     "checks/r1-cad-reuse-check.json": {
-      "bytes": 920,
-      "sha256": "3113a483ec77064bbaef91dcc99cf7f848b3dcb0d9f7e26475479a918bde2200"
+      "bytes": 1277,
+      "sha256": "904e482ee82131cdab57e2ba2865ce690ab1d07ec9bf537d7d4be517df85e3a8"
     },
     "checks/r1-cc2-protection-plan.json": {
       "bytes": 1165,
@@ -112,7 +120,7 @@
     },
     "checks/r1-copper-check.json": {
       "bytes": 10797,
-      "sha256": "0139031b2ab19091cada76d3d5fea135b49114e7674c9d47853668a909fb0ba7"
+      "sha256": "e0453e07b63e4b3e565649eec51d03096fb1bd3a1194dfc0a4e756a941833f42"
     },
     "checks/r1-critical-plan.json": {
       "bytes": 15141,
@@ -138,9 +146,13 @@
       "bytes": 260485,
       "sha256": "1c1728d80535402612c31dee5b0dd5b6f929d0356eb2f4cc9f09f0858f1ea89d"
     },
+    "checks/r1-input-capacitor-check.json": {
+      "bytes": 1726,
+      "sha256": "b9fc8b49fb369e9bee96e1cdd68535a75ba03f93b8267d42df7f76d08c163c8d"
+    },
     "checks/r1-mechanical-check.json": {
-      "bytes": 1777,
-      "sha256": "ab5d480b5bd33d0af6cbcd884112a14f4eb25c7a70b0cf1b38ee5d7c4f6dcdaa"
+      "bytes": 2450,
+      "sha256": "3c821625f00cc13bad19cb271db10b57be840254b5e94db70f0e38dd9c9bd97f"
     },
     "checks/r1-native-drc.json": {
       "bytes": 3,
@@ -148,7 +160,7 @@
     },
     "checks/r1-nfc-check.json": {
       "bytes": 504,
-      "sha256": "7db74672a68404441e033ce84023c4b7b790b6c0064f7229ebb169c115c8ff8c"
+      "sha256": "6ee747e51d8e7b7a245fc7bb85fdff14344fe68391c0c08f39465ede4e3f1b95"
     },
     "checks/r1-nfc-coil-plan.json": {
       "bytes": 5313,
@@ -162,13 +174,17 @@
       "bytes": 32424,
       "sha256": "f7d56b1abb6ce9a541edbcbec7203ccaaec65ce27f04eea49296782acfe30811"
     },
+    "checks/r1-preorder-plan.json": {
+      "bytes": 4744,
+      "sha256": "bd09a74c88f6bb4c544a74090732560a40761b9aea9e1a8b36b01e3cb75346a8"
+    },
     "checks/r1-profile-check.json": {
       "bytes": 784,
-      "sha256": "12804f00c8646678b7a65319b8fa5f4f97bc9adb18910ee93038c79cfd0cb7e6"
+      "sha256": "d0fbc28765828aa8222271344fdd57677aa6b821b620a78ee0766a1bdcf498ed"
     },
     "checks/r1-review.json": {
-      "bytes": 7724,
-      "sha256": "b03f2f66098a7bab37b56571c8a3bdc72cf683718a4e280daff2e6c0fa0181ce"
+      "bytes": 8640,
+      "sha256": "51a772ff26af8e1646544160b8b2ebab9c4c8d4cc6a067f3d4e0e43e519eaee3"
     },
     "checks/r1-rf-ground-short-plan.json": {
       "bytes": 628,
@@ -178,21 +194,53 @@
       "bytes": 269,
       "sha256": "3bbba711f12e067b0a3ae38472165886ed33024295e604a2aafa0c0aa549bb74"
     },
+    "checks/r1-route-cleanup-check.json": {
+      "bytes": 1441,
+      "sha256": "806505b6eb596b2e07de020d157cda76f4685aa359a055349d66f3499134506c"
+    },
+    "checks/r1-route-cleanup-plan.json": {
+      "bytes": 28200,
+      "sha256": "0eab28897ea3b9aed12f35e9886287b69bde68c5b7fedf2d1c6b1ee2fc0f1121"
+    },
     "checks/r1-routed-snapshot.json": {
-      "bytes": 404270,
-      "sha256": "473022d650ac41f20f979c183711ab9adfb8b5a1fe3d2be2e791ed6b5f2367b3"
+      "bytes": 401379,
+      "sha256": "65372faf0377a49005af666330171019fe9a179c05933d39735e422626758474"
     },
     "checks/r1-schematic.enet": {
-      "bytes": 164019,
-      "sha256": "2c6f44171b13ffb8858428fdc790236bd657a71647f7c62ad928f6853f7fe49f"
+      "bytes": 164321,
+      "sha256": "b3b58056159d2b8ecc86a62819f22d40d12582dda0c612dc6cba83f7ce668a1a"
+    },
+    "checks/r1-swd-254-check.json": {
+      "bytes": 1185,
+      "sha256": "0af94301966fd01bf281bac3da459bf80abde357114b6491d8facb36be298f3a"
+    },
+    "checks/r1-swd-254-plan.json": {
+      "bytes": 3683,
+      "sha256": "e13544f555b3e475db7f51a6f4bbf480d939fb98aadfd8acd6454c3071a3513b"
+    },
+    "checks/r1-usb-swd-check.json": {
+      "bytes": 1747,
+      "sha256": "43b56178ddd2eed7812cf9e5277b341dc859755d228688d9f8d64ac81c1e86c8"
     },
     "checks/r1-validation.json": {
-      "bytes": 1725,
-      "sha256": "2bc01ffa59079a39ba3b74c0e5f38e09db31eb3d4195e7ed4302fe26e7cbf9d4"
+      "bytes": 2099,
+      "sha256": "3cc77eb3b6b80948f005d520ddfbca15432858577bcdf8eab99dd4e7ac3c2783"
+    },
+    "enclosure/r1-recovery-study.json": {
+      "bytes": 2820,
+      "sha256": "9e4ea7be5adf6602ce36bb3881a08ba52f2195be3088c3a8dd21c18353154056"
+    },
+    "enclosure/r1-recovery-study.md": {
+      "bytes": 6993,
+      "sha256": "cfbf34c5998e84cdcc2906b5600fbfdd095e819a04d2f51a8d31fec3dc197408"
+    },
+    "hardware/r1-usb-swd-recovery.md": {
+      "bytes": 10917,
+      "sha256": "2ba59720eb163b108da06cd7534dff4da0c244b087fe0adb1cd43e2bfbce31db"
     }
   },
   "bundle": {
-    "bytes": 30312621,
-    "sha256": "1a1fbbcd4ec91f0714f2c7c0480a87d706e2b3b1c1a8b4035e6ce6a171ac5be1"
+    "bytes": 30984908,
+    "sha256": "5edba8598a48b443e6360569d23f4df4dffc805c28a7084c5d1516d5c53238c0"
   }
 }

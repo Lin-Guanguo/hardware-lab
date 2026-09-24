@@ -1,0 +1,47 @@
+{
+  "status": "SAVED_REOPENED_DRC_AND_COPPER_PASS",
+  "before_snapshot_sha256": "857f56165ca859f0b8419c91437804fff3008285ffc127082bf5ca43ed8569a2",
+  "after_snapshot_sha256": "65372faf0377a49005af666330171019fe9a179c05933d39735e422626758474",
+  "pitch_mm": 2.54,
+  "pin1": "TP1 GND square; remaining pads circular",
+  "pad_centers_front_xy_mm": [
+    [
+      65.92062,
+      48.49876
+    ],
+    [
+      68.46062,
+      48.49876
+    ],
+    [
+      71.00062,
+      48.49876
+    ],
+    [
+      73.54062,
+      48.49876
+    ],
+    [
+      76.08062,
+      48.49876
+    ]
+  ],
+  "land_size_mm": 1.19888,
+  "counts": {
+    "lines": 819,
+    "vias": 153,
+    "pads": 248,
+    "components": 58
+  },
+  "native_drc": [],
+  "independent_copper_ok": true,
+  "unchanged": [
+    "All 58 component placements and footprints",
+    "All 153 vias",
+    "Board outline and copper keepout polygons",
+    "All non-SWD pads",
+    "All traces outside the 11 selected rear access segments"
+  ],
+  "fixture_basis": "User accepts nominal 2.54 mm adaptation; detailed probe/jaw dimensions deferred to trial fit. Screenshot 1.5 mm labels fixture needle holes, not tip diameter.",
+  "physical_clip_tested": false
+}

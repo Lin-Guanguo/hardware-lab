@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "snapshot_sha256": "473022d650ac41f20f979c183711ab9adfb8b5a1fe3d2be2e791ed6b5f2367b3",
+  "snapshot_sha256": "65372faf0377a49005af666330171019fe9a179c05933d39735e422626758474",
   "selected_battery_position": "B_screen_lower_edge_shifted_right_1_5_mm",
   "shift_mm": 1.5,
   "native_drc_errors_after_reopen": 0,

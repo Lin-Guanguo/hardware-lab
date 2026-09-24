@@ -88,30 +88,34 @@
   "swd": {
     "access": "Five bottom-cover holes aligned with rear debug pads",
     "pad_diameter_mm": 1.19888,
-    "cover_hole_diameter_mm": 2.0,
+    "cover_hole_diameter_mm": 1.6,
     "pad_centers_mm": [
       [
-        65,
-        48.5
+        65.92062,
+        48.49876
       ],
       [
-        68,
-        48.5
+        68.46062,
+        48.49876
       ],
       [
-        71,
-        48.5
+        71.00062,
+        48.49876
       ],
       [
-        74,
-        48.5
+        73.54062,
+        48.49876
       ],
       [
-        77,
-        48.5
+        76.08062,
+        48.49876
       ]
     ],
-    "access_hole_diameter_mm": 2.0
+    "access_hole_diameter_mm": 1.6,
+    "pitch_mm": 2.54,
+    "access_hole_mouth_radius_mm": 0.05,
+    "tp1_shape": "square, 1.19888 mm; TP2-TP5 round",
+    "fit_status": "Generic 5P clip assumption; physical fit untested"
   },
   "mcu": {
     "footprint_origin_offset_from_body_center_local_mm": [

@@ -145,8 +145,12 @@ R1 uses `check-r1-copper.py` for physical GND connectivity, including thermal sp
 ## R1 review lessons — 2026-09-24
 
 - Antenna clearance must be checked against the **physical protruding board region through its exposed edges**, not only the display glass rectangle. A smaller rectangular keepout can leave an unwanted GND rim. General perimeter-ground rules do not override the antenna exclusion.
-- Measure each decoupling capacitor against its **named served IC pin**. C1 is near other circuitry but 14.28 mm from U2 IN; an arbitrary nearest same-net pad can hide this error.
+- Measure each decoupling capacitor against its **named served IC pin**, after enumerating all capacitors on the rail. R1 C1 serves U1 VBUS and C8 serves U2 IN; mapping C1 to U2 while omitting C8 produced a false finding.
 - Include copper fragments without pads or vias in connectivity audits; node-only connectedness misses detached fill islands. R1 uses an injected isolated-fill negative control.
 - For nested 45° coil corners, preserve normal pitch on the diagonal segments. Equal chamfer legs on each inset rectangle do not preserve equal diagonal spacing.
 - After copper changes, reopen the saved project and verify the keepout polygons, regenerated pour geometry, topology and manufacturing files. A live pre-save DRC result is insufficient.
 - After rerouting, check each via for actual copper contact on both faces and remove unused layer changes and their dead branches. A GND via without an explicit track can still stitch two pours; inspect filled copper before classifying it as unused.
+
+## Shared-rail capacitor review
+
+Before flagging a distant bypass capacitor, enumerate every capacitor on that rail and map each to its intended load. Record the named IC pin, capacitor supply pad, local ground connection and effective capacitance at operating bias. A net-wide distance to an arbitrarily chosen capacitor is not proof of missing local decoupling. R1 C1 serves the MCU VBUS pin; C8 is the existing BQ25186 IN bypass. Omitting C8 produced a false placement finding.

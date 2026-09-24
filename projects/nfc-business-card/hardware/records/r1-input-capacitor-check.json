@@ -1,0 +1,47 @@
+{
+  "part": "CL10A475KO8NNNC",
+  "source": "https://product.samsungsem.com/mlcc/CL10A475KO8NNN.do",
+  "temperature_C": 25,
+  "note": "Typical manufacturer curve, not a guaranteed full temperature/capacitance envelope.",
+  "points": [
+    {
+      "voltage": 5.0,
+      "change_percent": -49.91799437675726,
+      "typical_uF": 2.353854264292409,
+      "with_minus_10_percent_tolerance_uF": 2.118468837863168
+    },
+    {
+      "voltage": 5.11605,
+      "change_percent": -50.94388589503279,
+      "typical_uF": 2.305637362933459,
+      "with_minus_10_percent_tolerance_uF": 2.0750736266401133
+    },
+    {
+      "voltage": 5.2344,
+      "change_percent": -51.95160262417994,
+      "typical_uF": 2.258274676663543,
+      "with_minus_10_percent_tolerance_uF": 2.032447208997189
+    },
+    {
+      "voltage": 5.3553500000000005,
+      "change_percent": -52.943049437675725,
+      "typical_uF": 2.211676676429241,
+      "with_minus_10_percent_tolerance_uF": 1.9905090087863169
+    },
+    {
+      "voltage": 5.4792,
+      "change_percent": -53.920131208997184,
+      "typical_uF": 2.1657538331771327,
+      "with_minus_10_percent_tolerance_uF": 1.9491784498594196
+    }
+  ],
+  "status": "PREVIOUS_C1_LAYOUT_FINDING_RETRACTED",
+  "C1_serves": "U1.32 / USB_VBUS",
+  "C1_pad_distance_mm": 1.2386140131614858,
+  "C8_serves": "U2.10 / IN",
+  "C8_pad_distance_mm": 1.746873804944134,
+  "charger_minimum_effective_uF": 1,
+  "charger_source": "https://www.ti.com/lit/ds/symlink/bq25186.pdf",
+  "part_status": "NRND; manufacturer recommends CL10A475KO8NQN#. BOM unchanged; review availability/substitution with assembler.",
+  "design_scope": "5 V USB input, no USB PD voltage negotiation. Powered transient response remains to be tested."
+}

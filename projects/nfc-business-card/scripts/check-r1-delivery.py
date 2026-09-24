@@ -127,6 +127,12 @@ assert read('r1-copper-check.json')['ok'] and read('r1-nfc-check.json')['ok']
 assert read('r1-profile-check.json')['gerber_sha256']==sha(DELIVERY/'NFC-Card-R1-gerber.zip')
 mechanical=read('r1-mechanical-check.json')
 assert mechanical['status']=='NOMINAL_CAD_AND_PRINT_MESH_PASS'
+assert len(mechanical['debug_access'])==5
+for access in mechanical['debug_access']:
+    pad=next(p for p in s['pads'] if p['number']==access['pad'])
+    assert math.dist(access['center_mm'],[pad['x']*.0254,pad['y']*.0254])<.002, 'Stale CAD debug holes'
+for kind, evidence in mechanical['meshes'].items():
+    assert evidence['sha256']==sha(ROOT/f'enclosure/r1-clear-5.8/e20-clear-{kind}.stl'), 'Stale CAD mesh evidence'
 
 arcs=[]
 for sweep in (90,-90,135,-135):
@@ -155,7 +161,10 @@ report={'status':'REVIEW_REQUIRED_BEFORE_ORDER','native_drc_errors':0,'schematic
         'mechanical_scope':'Existing 5.8 mm shell and unchanged component geometry. New B-pad wire/ferrite service bodies are pending mechanical revision.',
         'single_layer_or_isolated_via_count':len(read('r1-copper-check.json')['single_layer_or_isolated_vias']),
         'snapshot_sha256':sha(RECORDS/'r1-routed-snapshot.json'),
-        'open_review':[item['item'] for item in read('r1-review.json')['discussion_items']],
+        'open_review':[item['item'] for item in read('r1-review.json')['discussion_items']] + [
+            'Trial-fit the user-selected 2.54 mm five-pin clip on the bare board and through the revised cover.',
+            'Resolve hidden RESET tool guidance/stop with CAD before implementation; no RESET switch is installed.',
+            'Implement and test the board-specific bootloader and USB CDC firmware; hardware net checks do not prove operation.'],
         'limits':['RF resonance/read range with screen and case not measured.','Battery complete envelope and physical assembly not verified.','No order placed; not production-qualified.']}
 (RECORDS/'r1-validation.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report,indent=2))

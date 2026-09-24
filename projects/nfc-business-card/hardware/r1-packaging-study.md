@@ -8,7 +8,7 @@ The comparison below is the earlier study, tied to its recorded pre-change snaps
 
 ## Earlier proposal (historical)
 
-Discussion study, 2026-09-24. **No active PCB, enclosure or manufacturing export is changed by this study.** All work remains uncommitted. The user accepted a **3.4 mm battery maximum** and **0.25 mm ferrite sheet** for calculations; these are design inputs, not measurements. The ferrite allocation includes adhesive; separate tape must be added if necessary.
+Discussion study, 2026-09-24. **No active PCB, enclosure or manufacturing export is changed by this study.** The study is retained in the repository checkpoint; its proposed thickness changes remain unimplemented. The user accepted a **3.4 mm battery maximum** and **0.25 mm ferrite sheet** for calculations; these are design inputs, not measurements. The ferrite allocation includes adhesive; separate tape must be added if necessary.
 
 - Preferred next mechanical candidate: **5.6 mm overall / 4.0 mm cavity**, with a revised 0.8 mm key flange.
 - 5.4 mm overall / 3.8 mm cavity is a tighter fitting experiment requiring further key design or measured fit.
@@ -104,4 +104,4 @@ python3 projects/nfc-business-card/scripts/study-r1-packaging.py
 
 This reads the saved FCStd through FreeCAD, computes the key motion cases, audits candidate pad geometry with Shapely, and renders the comparison images. It does not save the FCStd or write to EDA. The saved comparison is historical. Re-running against the current PCB replaces its baseline; current B-route verification is in the linked battery and PCB review records.
 
-For the next mechanical revision: discuss the cap/flange process, update B-pad wire/solder and ferrite relief, and retain the before-order C1 input-decoupling correction from the [PCB review](pcb-r1-review.md). Printing, battery growth allowance and final NFC tests remain physical validation tasks.
+For the next mechanical revision: discuss the cap/flange process, update B-pad wire/solder and ferrite relief, and use the updated [PCB review](pcb-r1-review.md), which corrects the earlier C1/C8 assignment. Printing, battery growth allowance and final NFC tests remain physical validation tasks.

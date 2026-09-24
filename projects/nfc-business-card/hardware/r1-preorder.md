@@ -57,6 +57,21 @@ Use the [current Gerber](production/r1/NFC-Card-R1-gerber.zip), **89,074 bytes**
 
 Before payment, obtain confirmation for the actual minimum drill tier, hole treatment, four plated slots and USB cutout. These are manufacturing acceptance questions, not a request to invent a special PCB process. The remaining 0.25 mm tier may still affect price.
 
+## 嘉立创 PCB 网页试算（2026-09-24）
+
+按 5 片、双层 FR-4、81.8 × 49.8 mm、0.8 mm 板厚、1 oz、绿色阻焊、沉金和 0.25 mm 最小孔径在[嘉立创 PCB 下单页](https://www.jlc.com/newOrder/#/pcb/pcbPlaceOrder)试算。选择 0.25 mm 后，页面提示该孔径属于高难度工艺，并自动选择过孔塞油。价格明细如下；这是未上传 Gerber 的裸板参数试算，不是已审核报价，也不含 SMT、器件和钢网。
+
+| 网页价格项 | 5 片试算 | 说明 |
+| --- | ---: | --- |
+| 最小孔径/外径 | ¥102.04 | 对应 0.25 mm 档；Gerber DFM 识别最小孔径 0.25 mm |
+| 喷镀费 | ¥102.85 | 所选沉金；DFM 估算沉金面积 6.53%，未达到页面提示的 30% 大面积加价线 |
+| 阻焊覆盖费 | ¥100.20 | 页面因 0.25 mm 孔径自动选择过孔塞油；Gerber 的实际过孔属性仍须审核 |
+| 四线低阻全测费 | ¥101.63 | 网页试算列项；确认是否由此孔径强制要求 |
+| 特价 | ¥30.00 | 裸板基础试算项 |
+| 品质赔付费 | ¥10.00 | 页面默认选择的可选保障服务，不属于 PCB 工艺 |
+
+网页合计 **¥446.72**，显示所选快递包邮；实际运费和价格以订单审核为准。0.8 mm 板厚、1 oz、绿色阻焊没有在这次价格明细中单列加价。四个镀铜槽、L 形外形、SMT 工艺边和元器件仍待供应商确认，不能据此试算认定免费或可生产。DFM 页面使用了默认有铅喷锡显示，而本试算选择沉金；最终表面处理要以正式制造参数为准。
+
 ## Assembly preparation
 
 Bare-board fabrication needs the Gerber ZIP. SMT assembly additionally needs the [BOM](production/r1/NFC-Card-R1-bom.csv), [CPL](production/r1/NFC-Card-R1-cpl.csv) and [assembly PDF](production/r1/NFC-Card-R1-assembly.pdf). A supplier number in the BOM is not proof of current stock or automatic assembly support.
@@ -71,7 +86,7 @@ Bare-board fabrication needs the Gerber ZIP. SMT assembly additionally needs the
 | SW1–SW3 SKQGABE010, C115351 | Three electrical switches are in the BOM; printed keycaps are separate enclosure parts |
 | Battery, display, ferrite | Fit and connect after PCBA reflow; they are not populated by the 58-component CPL |
 
-No live assembler BOM matching, stock reservation, stencil approval, panel approval or quotation has been completed. Those depend on the actual selected service and its review screen. The intentional R3/R4 substitution is documented in the [USB/SWD review](r1-usb-swd-recovery.md); no supplier-driven substitutions are approved.
+No live assembler BOM matching, stock reservation, stencil approval, panel approval or binding quotation has been completed. The bare-board parameter estimate above is provisional. Those remaining checks depend on the actual selected service and its review screen. The intentional R3/R4 substitution is documented in the [USB/SWD review](r1-usb-swd-recovery.md); no supplier-driven substitutions are approved.
 
 ## Remaining work and ownership
 

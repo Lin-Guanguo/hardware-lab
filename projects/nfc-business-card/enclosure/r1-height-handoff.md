@@ -1,5 +1,13 @@
 # R1 height and button handoff
 
+## 最新研究方向
+
+用户进一步要求研究 **3.0 mm 内腔**，并报告电池最厚处可以卡入 3 mm。[4.6 mm 总厚研究](r1-cavity-3mm-study/README.md)已按该电池输入检查：USB 超出约 0.49 mm、主控最大高度超出 0.32 mm、FPC 座超出 0.13 mm，当前键帽完整按压的竖向间隙为 −0.52 mm。均匀内腔方案失败；局部深腔或结构/器件联动仍可研究。以下 3.4 mm 电池是旧方案输入，不再作为此次 3 mm 研究的输入。
+
+后续推进到 [3.6 mm 内腔／5.2 mm 外厚](r1-usb-height-5.2/README.md)：保持 3.4 mm 电池包络，修正中央压柱高度后静止与完整行程无干涉；USB／电池名义间隙约 0.11／0.10 mm。5.4 mm 为较宽松的对照，打包版仍保持 5.8 mm。
+
+2026-09-24 用户恢复减薄设计：以 USB-C 高度为约束，已生成 [5.4 mm／内腔 3.8 mm 候选](r1-usb-height-5.4/README.md)。采用局部凹底键帽，保留 3.4 mm 电池包络；3.2 mm 仅为待实测对比，不通过挤压电池减薄。完整按压行程几何检查通过，但 0.6 mm 局部键帽和 0.05 mm 轴向间隙仍未通过工艺验证。下面“暂缓厚度”的决定已由本研究方向更新，交付模型仍保留 5.8 mm。
+
 ## Current decision
 
 2026-09-24: the user deferred enclosure thickness and button manufacturing to a separate discussion. **Keep the current 5.8 mm enclosure; no thinner case has been selected.** The user accepted a **3.4 mm maximum battery pack** and **0.25 mm ferrite including adhesive** as design assumptions. Neither value is a verified assembly measurement.

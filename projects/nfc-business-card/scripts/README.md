@@ -24,7 +24,7 @@ Use these scripts with the [R1 files](../README.md). Historical E-series scripts
 | `plan-r1-chamfered-coil.py` | Generate constant-normal-pitch 45° coil geometry |
 | `export-r1-manufacturing.py` | Export the guarded native PCB into a fresh output directory; an independent candidate can specify its project UUID, prefix and diagnostic core files |
 | `package-r1.py` | Rebuild the complete local handoff ZIP from tracked source, exports, CAD and evidence |
-| `check-proposed-route.py`, `pcb-maze-router.py` | Candidate-route geometry and routing helpers; plans require independent verification |
+| `check-proposed-route.py`, `pcb-maze-router.py` | 候选走线几何与离线布线辅助；后者默认 0.30 mm 钻孔、0.55 mm 外径、0.15 mm 线间距目标，结果仍需独立验证 |
 
 [Verification commands](../hardware/pcb-r1-delivery.md#reproduce-checks). Install Python dependencies from [requirements.txt](requirements.txt). FreeCAD checks use the [documented runtime](../docs/software.md).
 

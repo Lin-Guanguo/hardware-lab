@@ -1,6 +1,6 @@
 {
   "revision": "R1",
-  "status": "routed_engineering_prototype",
+  "status": "review_required_before_order",
   "pcb_uuid": "8033127c48771f3b",
   "board_name": "NFC Card R1",
   "layers": 2,
@@ -34,10 +34,10 @@
   },
   "nfc": {
     "outer_centerline_rect_mm": [
-      4,
-      20,
+      4.1,
+      20.3,
       34,
-      44
+      47.9
     ],
     "turns": 5,
     "track_width_mm": 0.25,
@@ -46,13 +46,28 @@
     "read_side": "rear",
     "layer": "B.Cu",
     "keepout_xywh_mm": [
+      0,
+      17,
+      39.62,
+      35
+    ],
+    "status": "Five-turn chamfered rear coil; no pours through screen edges. Selected top battery B lands/routes are the only non-NFC exception. RF remains unmeasured.",
+    "ferrite_allowance_mm": 0.25,
+    "ferrite_service_xywh_mm": [
       1.7,
       18,
       37.92,
       32.4
     ],
-    "status": "Five-turn rear coil and feed routed; topology checked. Assembled RF remains unmeasured.",
-    "ferrite_allowance_mm": 0.2
+    "corner_style": "45-degree chamfers; parallel offset preserves 0.5 mm normal pitch",
+    "outer_chamfer_leg_mm": 2.2,
+    "three_exposed_centerline_edge_offsets_mm": [
+      3,
+      3,
+      3
+    ],
+    "battery_copper_exception_plan": "hardware/records/r1-battery-b-plan.json",
+    "ferrite_status": "User accepted 0.25 mm including adhesive for calculations; material unqualified. Frozen CAD still shows 0.20 mm. Local notch around B pads needs mechanical revision."
   },
   "battery": {
     "target_nominal_mm": [
@@ -77,7 +92,25 @@
     "clear_shell_straight_span_mm": [
       35.9,
       16.7
-    ]
+    ],
+    "solder_pads": {
+      "selection": "B_screen_lower_edge",
+      "layer": "F.Cu",
+      "positive_xy_mm": [
+        32.5,
+        18.7
+      ],
+      "negative_xy_mm": [
+        35.5,
+        18.7
+      ],
+      "size_mm": [
+        1.8,
+        1.5
+      ],
+      "lead_exit": "Upper-right; battery long dimension remains horizontal; exact exit and wire diameter unmeasured.",
+      "right_shift_mm": 1.5
+    }
   },
   "sources": {
     "usb": "https://gct.co/connector/usb4500",
@@ -203,7 +236,7 @@
       8.80000526
     ]
   ],
-  "thickness_decision": "User selected a fully transparent printed enclosure and authorized a fresh thickness comparison; 5 mm is no longer the active hard limit.",
+  "thickness_decision": "Retain 5.8 mm. User deferred thickness and button manufacturing to a separate discussion; see enclosure/r1-height-handoff.md.",
   "clear_shell": {
     "candidates_nominal_height_mm": [
       5.8
@@ -226,7 +259,7 @@
     "material": "Transparent SLA resin; user-supplied vendor screenshot states 0.8 mm walls and \u00b10.2 mm accuracy; exact resin and feature-specific acceptance unconfirmed.",
     "appearance": "Clear perimeter enclosure, no internal crossbeams or battery divider. PCB supports are below the board; the battery is located by an adhesive pattern and assembly jig.",
     "closure": "Two printed halves bonded with a patterned perimeter PSA; assembly alignment jig required.",
-    "status": "R1 coordinated sample geometry; physical fit and resin-specific process approval remain open.",
+    "status": "Existing 5.8 mm shell retained. Component solids/outline unchanged; B-pad wire service and 0.25 mm notched ferrite are not represented in the frozen CAD.",
     "pcb_side_clearance_mm": 0.5,
     "thickness_basis": "Regional stacks with 0.3 mm nominal assembly clearance require approximately 5.62 mm; round to 5.8 mm. Actual folded FPC and tolerances remain unqualified.",
     "supplier_input": {
@@ -301,7 +334,7 @@
         1
       ]
     ],
-    "wire_service_note": "Assumed 1mm-high lead corridor in expanded pocket and below screen; actual lead exit/diameter/bend unmeasured.",
+    "wire_service_note": "OBSOLETE_FOR_B_PADS: values below preserve the previous CAD service corridor only. Upper-right lead exit and local solder/ferrite relief must be updated in the next mechanical revision; see enclosure/r1-height-handoff.md.",
     "fpc_service_xywh_zt_mm": [
       39.4,
       26,
@@ -319,8 +352,8 @@
   ],
   "pcb_name": "NFC Card R1",
   "placement_snapshot": "hardware/records/r1-routed-snapshot.json",
-  "placement_plan": "E20D placement retained; only standalone debug pads moved",
+  "placement_plan": "E20D component placement retained; standalone debug and selected B battery pads moved.",
   "tolerance_status": "Nominal clear-shell geometry only. Supplier feature tolerances, complete battery, folded flex and printed key fit remain unqualified.",
   "placement_refinement": "../archive/pre-r1/hardware/e20d-refinement.json",
-  "pcb_validation_note": "R1 routing and saved/reopened native DRC pass. RF tuning and physical fit remain unverified."
+  "pcb_validation_note": "Reviewed revision passes native DRC and connectivity; C1 input decoupling placement remains an open before-order finding."
 }

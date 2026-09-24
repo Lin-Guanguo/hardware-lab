@@ -6,20 +6,20 @@
       "1@(55.90,8.00)",
       "52@(59.25,6.66)",
       "NFC2@(36.30,30.00)",
+      "via22",
       "via23",
-      "via24",
-      "via88",
-      "via89"
+      "via85",
+      "via86"
     ],
     [
       "1@(55.90,6.00)",
       "54@(59.25,5.86)",
       "NFC1@(36.30,27.00)",
-      "via25",
-      "via26"
+      "via24",
+      "via25"
     ]
   ],
-  "cut_line_index": 493,
+  "cut_line_index": 758,
   "scope": "Copper topology only; this does not establish RF resonance or read range.",
   "bypass_negative_control_passed": true
 }

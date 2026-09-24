@@ -20,7 +20,7 @@ status: hardware_received_not_tested
 
 照片左侧的已焊 **2×13 双排针**是 Raspberry Pi 26 针接口；照片左右镜像，不能直接按屏幕上的左右方向数针。[ITEAD 原厂规格书](https://www.openimpulse.com/blog/wp-content/uploads/wpsc/downloadables/PN532-NFC-Module-Datasheet.pdf)第 2 页的板卡图与实物布局相符，[原厂连接示例](https://itead.cc/nextion/raspberry-pi-drives-itead-pn532-nfc-module-with-libnfc/)用 26 芯排线连接 Raspberry Pi。板边标 `SCK / MI / MO/SDA/TX / NSS/SCL/RX / IRQ / RST# / GND / 5V` 的八孔是另一个接口，用户这块尚未焊排针。不要把八孔丝印逐行套到双排针上。
 
-以下按该双排针遵循标准 Raspberry Pi 26 针排布**推导**，尚未在用户实物上量通断。将板正面 `NFC` 字样摆正、天线置左、双排针置右；原厂图中双排针靠上、靠天线一侧的**方形焊盘为 1 号脚**，相邻靠板外缘的是 2 号脚，往下逐排递增。若实物看不清方形焊盘或方向不符，先暂停接线。Raspberry Pi 物理针序与 SPI 信号取自[官方 GPIO 文档](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#spi)。ESP32 的 40/41/42 是拆除 TFT 后释放的原已验证引脚；39 在这块 ESP32 板的排针上，但尚未验证作 PN532 MISO。
+以下按该双排针遵循标准 Raspberry Pi 26 针排布**推导**，尚未在用户实物上量通断。将板正面 `NFC` 字样摆正、天线置左、双排针置右；原厂图中双排针靠上、靠天线一侧的**方形焊盘为 1 号脚**，相邻靠板外缘的是 2 号脚，往下逐排递增。从背面看会左右反转，因此以双排针自身的方形焊盘定位，不以照片左右定位；顶部另一组单排孔也有方形焊盘，不能拿来当双排针 1 号。若实物看不清方形焊盘或方向不符，先暂停接线。Raspberry Pi 物理针序与 SPI 信号取自[官方 GPIO 文档](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#spi)。ESP32 的 40/41/42 是拆除 TFT 后释放的原已验证引脚；39 在这块 ESP32 板的排针上，但尚未验证作 PN532 MISO。
 
 | PN532 双排针物理脚 | 预期信号 | ESP32-S3-CAM 丝印 | 状态 |
 | --- | --- | --- | --- |
@@ -30,6 +30,24 @@ status: hardware_received_not_tested
 | 21 | MISO | `39` | 拟接 |
 | 23 | SCK | `40` | 拟接 |
 | 24 | CE0 / NSS | `42` | 拟接 |
+
+按**双排针从方形焊盘所在的第一排开始**，13 排逐排数如下；`—` 表示本次不接，列位置随正反面观察会互换：
+
+| 从方形焊盘开始的排数 | 方形焊盘所在列：奇数脚 | 相邻列：偶数脚 |
+| --- | --- | --- |
+| 1 | 1 — | **2 → ESP32 `5V`** |
+| 2 | 3 — | 4 — |
+| 3 | 5 — | **6 → ESP32 `GND`** |
+| 4 | 7 — | 8 — |
+| 5 | 9 — | 10 — |
+| 6 | 11 — | 12 — |
+| 7 | 13 — | 14 — |
+| 8 | 15 — | 16 — |
+| 9 | 17 — | 18 — |
+| 10 | **19 → ESP32 `41`** | 20 — |
+| 11 | **21 → ESP32 `39`** | 22 — |
+| 12 | **23 → ESP32 `40`** | **24 → ESP32 `42`** |
+| 13 | 25 — | 26 — |
 
 只需六根母对母杜邦线；IRQ、RST# 和其余双排针暂不接。SET0 拨到板上 `L`、SET1 拨到 `H`，对应 SPI。先断 USB、拆 TFT；准备并烧录专用 PN532 测试固件后再次断 USB，逐根核对供电与信号再接模块，最后重新上电。不要把 5 V 接到任何 ESP32 GPIO，也不要在通电时改线。若不想使用双排针，也可给板边八孔焊一排单列排针后按丝印连接；未焊孔不能靠松插导线作可靠测试。
 

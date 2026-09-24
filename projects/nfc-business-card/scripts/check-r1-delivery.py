@@ -84,7 +84,7 @@ with zipfile.ZipFile(DELIVERY/'NFC-Card-R1-gerber.zip') as z:
         return hits,slots
     allhits,slots=drill('Drill_PTH_Through.DRL')
     viahits,viaslots=drill('Drill_PTH_Through_Via.DRL')
-    assert len(allhits)==len(viahits)==len(s['vias'])==151 and len(slots)==4 and not viaslots
+    assert len(allhits)==len(viahits)==len(s['vias']) and len(slots)==4 and not viaslots
     expected=[(v['x']*.0254,v['y']*.0254,v['holeMil']*.0254) for v in s['vias']]
     for hits in (allhits,viahits):
         remaining=list(hits)
@@ -140,16 +140,22 @@ try:assert not calibrate(load_pours(s))[0]
 finally:pour_geometry.FILL_UNIT=unit
 calibration={'ok':True,'asymmetric_arc_cases':arcs,'tenfold_wrong_fill_scale_rejected':True}
 (RECORDS/'r1-geometry-calibration.json').write_text(json.dumps(calibration,indent=2)+'\n')
-report={'status':'ROUTED_ENGINEERING_PROTOTYPE','native_drc_errors':0,'schematic_pcb_pin_count':len(sch),'pin_mismatches':0,
+report={'status':'REVIEW_REQUIRED_BEFORE_ORDER','native_drc_errors':0,'schematic_pcb_pin_count':len(sch),'pin_mismatches':0,
         'counts':{k:len(s[k]) for k in ('components','pads','lines','vias','pours')},
         'native_project_sqlite_quick_check':'ok','portable_pcb_count':1,'stackup_total_mm':thickness,
         'bom_component_count':len(bomrefs),'cpl_component_count':len(rows['cpl']),'max_cpl_reference_error_mm':max_position_error,
         'native_cpl_midpoint_minus_reference_mm':midpoint_offsets,
         'drill_vias':len(viahits),'usb_mounting_slots':len(slots),'outline_and_components_identical_to_e20d':True,
-        'old_project_unchanged_sha256':sha(source),'screen_rectangle_no_foreign_copper':True,'nfc_no_bypass_proved':True,
+        'old_project_unchanged_sha256':sha(source),
+        'screen_projection_no_foreign_copper':not read('r1-copper-check.json')['screen_foreign_copper_mm2'],
+        'screen_projection_no_unexpected_copper':not read('r1-copper-check.json')['screen_unexpected_copper_mm2'],
+        'screen_projection_no_poured_copper':not read('r1-copper-check.json')['screen_poured_copper_mm2'],
+        'nfc_no_bypass_proved':True,
         'mechanical_status':mechanical['status'],
+        'mechanical_scope':'Existing 5.8 mm shell and unchanged component geometry. New B-pad wire/ferrite service bodies are pending mechanical revision.',
+        'single_layer_or_isolated_via_count':len(read('r1-copper-check.json')['single_layer_or_isolated_vias']),
         'snapshot_sha256':sha(RECORDS/'r1-routed-snapshot.json'),
-        'open_review':['Perimeter GND outside the screen rectangle awaits the authorized antenna revision.'],
+        'open_review':[item['item'] for item in read('r1-review.json')['discussion_items']],
         'limits':['RF resonance/read range with screen and case not measured.','Battery complete envelope and physical assembly not verified.','No order placed; not production-qualified.']}
 (RECORDS/'r1-validation.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report,indent=2))

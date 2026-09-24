@@ -1,0 +1,214 @@
+{
+  "status": "APPLIED_SAVED_REOPENED_AND_EXPORTED",
+  "delete_line_ids": [
+    "766d980f45a26cda",
+    "193fcbd38e999201",
+    "1dcca4c0c4b43ed2",
+    "08587f31abc5d57d",
+    "db9953ff8cc879d7"
+  ],
+  "tracks": [
+    {
+      "net": "BAT_PACK_TBD",
+      "layer": 1,
+      "width_mm": 0.35,
+      "points": [
+        [
+          32.5,
+          18.7
+        ],
+        [
+          32.5,
+          19.35
+        ],
+        [
+          33.0,
+          19.85
+        ],
+        [
+          39.85,
+          19.85
+        ],
+        [
+          40.2,
+          20.2
+        ],
+        [
+          40.2,
+          21.5
+        ]
+      ]
+    },
+    {
+      "net": "BAT_PACK_TBD",
+      "layer": 2,
+      "width_mm": 0.35,
+      "points": [
+        [
+          40.2,
+          21.5
+        ],
+        [
+          42.8,
+          21.5
+        ],
+        [
+          45.4,
+          24.1
+        ],
+        [
+          45.83981,
+          24.1
+        ],
+        [
+          45.83981,
+          24.64619
+        ]
+      ]
+    },
+    {
+      "net": "GND",
+      "layer": 1,
+      "width_mm": 0.35,
+      "points": [
+        [
+          35.5,
+          18.7
+        ],
+        [
+          35.9,
+          19.1
+        ],
+        [
+          40.1,
+          19.1
+        ]
+      ]
+    },
+    {
+      "net": "GND",
+      "layer": 1,
+      "width_mm": 0.2,
+      "points": [
+        [
+          40.1,
+          19.1
+        ],
+        [
+          40.67,
+          19.67
+        ],
+        [
+          40.67,
+          21.87
+        ],
+        [
+          41,
+          22.2
+        ]
+      ]
+    }
+  ],
+  "vias": [
+    {
+      "net": "BAT_PACK_TBD",
+      "x": 40.2,
+      "y": 21.5,
+      "diameter_mm": 0.4,
+      "hole_mm": 0.2
+    },
+    {
+      "net": "GND",
+      "x": 40.1,
+      "y": 19.1,
+      "diameter_mm": 0.6,
+      "hole_mm": 0.3
+    },
+    {
+      "net": "GND",
+      "x": 41,
+      "y": 22.2,
+      "diameter_mm": 0.6,
+      "hole_mm": 0.3
+    }
+  ],
+  "pads": [
+    {
+      "id": "08513f3012415e50",
+      "net": "BAT_PACK_TBD",
+      "label": "BP",
+      "x": 32.5,
+      "y": 18.7,
+      "width_mm": 1.8,
+      "height_mm": 1.5,
+      "corner_mm": 0.2
+    },
+    {
+      "id": "e4832ff51a605b73",
+      "net": "GND",
+      "label": "BN",
+      "x": 35.5,
+      "y": 18.7,
+      "width_mm": 1.8,
+      "height_mm": 1.5,
+      "corner_mm": 0.2
+    }
+  ],
+  "selected_by_user": "B_screen_lower_edge",
+  "battery_orientation": "Long dimension remains horizontal; lead exit at upper-right corner.",
+  "source_snapshot_sha256": "348ece4485bc1544d6ebe7d8acb8d540a62ecc3bae3fa46a464c7e070739154f",
+  "redundant_vias_removed": {
+    "vias": [
+      {
+        "id": "4986ee4685f64ba2",
+        "net": "USB_CC2",
+        "x": 2838.5827,
+        "y": 1133.8583,
+        "diameter": 17.8,
+        "hole": 9.8
+      },
+      {
+        "id": "101c2b14e08bd821",
+        "net": "BAT_PACK_TBD",
+        "x": 1804.7169,
+        "y": 970.3224,
+        "diameter": 24,
+        "hole": 12
+      },
+      {
+        "id": "b9f2d3c9d2cce76e",
+        "net": "VDD_3V3",
+        "x": 2427.7441,
+        "y": 706.1535000000001,
+        "diameter": 17.8,
+        "hole": 9.8
+      }
+    ],
+    "stub": {
+      "id": "c3b099fb12ad0110",
+      "net": "VDD_3V3",
+      "layer": 1,
+      "x1": 2452.8,
+      "y1": 681.1,
+      "x2": 2427.7441,
+      "y2": 706.1535000000001,
+      "width": 5.9055
+    },
+    "dry_run_no_split_no_dead_end": true
+  },
+  "screen_exception_scope": "Only the top-layer BP/BN lands and their specified narrow traces; no poured copper on either face.",
+  "right_shift_mm": 1.5,
+  "right_shift_source_snapshot_sha256": "68ccf3c08e93707ce22c15915f30eac0ea41f86116d2b54a776c9c4ad6de8890",
+  "eda_auto_split_stub_removed": {
+    "id": "7f51e16aac091e24",
+    "net": "GND",
+    "start_mm": [
+      34.4,
+      19.1
+    ],
+    "end_mm": [
+      35.9,
+      19.1
+    ]
+  }
+}

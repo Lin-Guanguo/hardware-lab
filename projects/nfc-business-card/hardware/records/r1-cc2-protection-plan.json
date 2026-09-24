@@ -1,0 +1,79 @@
+{
+  "name": "R1 CC2 load branch leaves U6 protection pad directly",
+  "allow_same_net_contacts": true,
+  "tracks": [
+    {
+      "net": "USB_CC2",
+      "layer": 1,
+      "width_mm": 0.15,
+      "points": [
+        [
+          74.09942,
+          25.25014
+        ],
+        [
+          74.0,
+          25.34956
+        ],
+        [
+          74.0,
+          25.7
+        ]
+      ]
+    },
+    {
+      "net": "USB_CC2",
+      "layer": 2,
+      "width_mm": 0.15,
+      "points": [
+        [
+          74.0,
+          25.7
+        ],
+        [
+          74.0,
+          27.7
+        ]
+      ]
+    },
+    {
+      "net": "USB_CC2",
+      "layer": 1,
+      "width_mm": 0.15,
+      "points": [
+        [
+          74.0,
+          27.7
+        ],
+        [
+          73.5,
+          28.2
+        ],
+        [
+          72.7,
+          28.2
+        ],
+        [
+          72.1,
+          28.8
+        ]
+      ]
+    }
+  ],
+  "vias": [
+    {
+      "net": "USB_CC2",
+      "x": 74.0,
+      "y": 25.7,
+      "diameter_mm": 0.3,
+      "hole_mm": 0.2
+    },
+    {
+      "net": "USB_CC2",
+      "x": 74.0,
+      "y": 27.7,
+      "diameter_mm": 0.3,
+      "hole_mm": 0.2
+    }
+  ]
+}

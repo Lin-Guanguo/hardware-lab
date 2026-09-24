@@ -1,0 +1,13 @@
+{
+  "status": "UNCHANGED_MECHANICAL_GEOMETRY",
+  "solid_count": 238,
+  "comparison": "Sorted per-solid volume, area and 3D bounds agree to 1e-6 numeric units; component-only STEP.",
+  "original_step_sha256": "ef008338b9549b209ef3c4e4c38b82f06acef4bd6279db4d6ae14b6bc285bb62",
+  "reviewed_step_sha256": "7f24b57b063aca85e2ba1a94f45cbdcad063a3265cc593326b683977ccff6355",
+  "case_reused": true,
+  "reason": "Component solids and PCB outline are unchanged; the existing 5.8 mm shell is retained while thickness/button work is deferred.",
+  "previous_reviewed_step_sha256": "1807e7b99595ec9f9dbd8f47c4a01ff97b7399356f543f5074a038e9706e615e",
+  "max_numeric_difference": 0.0,
+  "battery_wire_and_ferrite_service_status": "NOT_UPDATED_IN_FROZEN_CAD: selected B pads and 0.25 mm ferrite need revised local wire/solder clearance and sheet notch in the next mechanical revision.",
+  "handoff": "enclosure/r1-height-handoff.md"
+}

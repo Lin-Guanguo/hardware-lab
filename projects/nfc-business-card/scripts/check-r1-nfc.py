@@ -10,9 +10,9 @@ COPPER = runpy.run_path(str(Path(__file__).with_name('check-r1-copper.py')))
 
 def check(s):
     cuts = [i for i,t in enumerate(s['lines']) if t['net']=='NFC1_TBD' and t['layer']==2
-            and abs(t['x1']*.0254-4)<.03 and abs(t['x2']*.0254-4)<.03
-            and abs(min(t['y1'],t['y2'])*.0254-20)<.03
-            and abs(max(t['y1'],t['y2'])*.0254-44)<.03]
+            and abs(t['x1']*.0254-4.1)<.03 and abs(t['x2']*.0254-4.1)<.03
+            and abs(min(t['y1'],t['y2'])*.0254-22.5)<.03
+            and abs(max(t['y1'],t['y2'])*.0254-45.7)<.03]
     assert len(cuts)==1, 'Expected one outer-loop cut segment'
     before = COPPER['audit'](s)['groups']['NFC1_TBD']
     after = COPPER['audit'](s, cuts[0])['groups']['NFC1_TBD']

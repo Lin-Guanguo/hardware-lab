@@ -10,17 +10,17 @@
 
 This is a routed, editable prototype handoff. NFC performance and physical assembly have not been tested; it is not a production-qualified product. No manufacturing order has been submitted.
 
-## Open review finding at this checkpoint
+## Review status
 
-The screen-footprint keepout does not reach the three exposed PCB edges. Narrow perimeter GND strips remain and are scheduled for removal together with 45° coil chamfers and equal board-edge offsets. The screen-exclusion check below covers only its stated rectangle, not the entire protruding board area.
+This is the **reviewed prototype checkpoint**, after checkpoint `ccf9f92`. Perimeter ground copper, coil corners/equal edge spacing and the CC2 protection branch are corrected. **C1 remains 14.28 mm from the charger input pin and needs correction before ordering.** [Full review, remaining improvements and applicability](pcb-r1-review.md). Passing export/DRC checks does not close this finding.
 
 ## Implemented changes
 
-All 58 component positions, rotations and footprints, and the board outline, retain the accepted E20D placement. The old project is preserved by SHA-256 comparison. Detailed routing now contains 792 line segments, 151 vias, 248 pads and two ground pours.
+All 58 component positions, rotations and footprints, and the board outline, retain the accepted E20D placement. The old project is preserved by SHA-256 comparison. Detailed routing now contains 824 line segments, 153 vias, 248 pads and two ground pours.
 
-The complete screen footprint plus 0.3 mm margin is clear on both copper layers: X 1.7–39.62, Y 18.0–50.4 mm. Only the NFC coil and its feed occupy this area. Five rear debug pads move to X 65/68/71/74/77, Y 48.5 mm (GND/3V3/CLK/DIO/RST). The R1 bottom cover has matching 2.0 mm access holes; the nearby PCB support moves clear of the holes. The screen, key and USB openings retain their accepted positions.
+The complete screen projection through all three exposed board edges is free of pours on both copper layers: X 0–39.62, Y 17–52 mm. The user selected a specific top-layer exception for B+/B− lands at (32.5,18.7)/(35.5,18.7) mm and their narrow routes; all other non-NFC copper remains excluded. See [battery plan](records/r1-battery-b-plan.json) and [RF/assembly limits](../enclosure/r1-height-handoff.md#battery-b-and-ferrite-integration). Five rear debug pads move to X 65/68/71/74/77, Y 48.5 mm (GND/3V3/CLK/DIO/RST). The R1 bottom cover has matching 2.0 mm access holes; the nearby PCB support moves clear of the holes. The screen, key and USB openings retain their accepted positions.
 
-The rear antenna is a five-turn spiral, outer centreline 30 × 24 mm, nominal trace/space 0.25/0.25 mm, covered by solder mask. The two NFCT terminals share a native net through a schematic short flag. A separate cut-and-reconnect proof verifies that the winding is not bypassed; ordinary net connectivity alone cannot prove this. C23/C24 remain **220 pF C0G provisional tuning values**. U1.52 connects through the C23 branch to NFC2; U1.54 through C24 to NFC1. These pad names are terminal identifiers, not proof of RF tuning.
+The rear antenna is a five-turn spiral, outer centreline 29.9 × 27.6 mm, nominal trace/space 0.25/0.25 mm, 45° chamfers and 3 mm centreline offsets from the three exposed straight edges, covered by solder mask. The two NFCT terminals share a native net through a schematic short flag. A separate cut-and-reconnect proof verifies that the winding is not bypassed; ordinary net connectivity alone cannot prove this. C23/C24 remain **220 pF C0G provisional tuning values**. U1.52 connects through the C23 branch to NFC2; U1.54 through C24 to NFC1. These pad names are terminal identifiers, not proof of RF tuning.
 
 USB protection/fanout, display power loops and local decoupling were routed before remaining controls and signals. Their construction records are [critical routes](records/r1-critical-plan.json), [local decoupling](records/r1-decoupling-plan.json), [coil](records/r1-nfc-coil-plan.json) and [RF ground return](records/r1-rf-ground-short-plan.json). Final exported geometry, rather than these construction plans, is the verification input. Short local power paths use 0.25–0.4 mm widths; control routing uses finer tracks where needed. USB is full speed; this two-layer layout has no controlled-impedance certification. Charger/display transient behaviour and USB operation still require powered board tests.
 
@@ -33,13 +33,14 @@ Major reference labels remain on the front silkscreen. Fine passive designators 
 | Saved, closed and reopened native project | SQLite `quick_check=ok`; native DRC **0** |
 | Schematic vs PCB | 58 references, 238 component pins, **0 mismatches** |
 | Independent physical copper, including ground pours/thermal spokes | **0 split nets, 0 dead ends** |
-| Screen exclusion | **0 non-NFC copper area** on either face |
+| Screen exclusion | **0 unexpected copper / 0 poured copper**; only the selected top battery lands/routes are excepted |
+| Redundant via audit | **0 isolated or single-layer vias**; three removed along with one dead stub |
 | NFC winding | Connected before cut; two correct branches after cutting an outer turn; deliberate bypass rejected |
 | Gerber outline | One closed contour, native corner radii, no competing mechanical contour |
-| Drills | 151 vias and four 0.6 mm plated mounting slots match the PCB |
+| Drills | 153 vias and four 0.6 mm plated mounting slots match the PCB |
 | BOM / CPL | 58 references each; positions and rotations match native reference coordinates |
 | Stack | Two copper layers, native total 0.800024 mm (nominal 0.8 mm) |
-| CAD | See [R1 mechanical check](records/r1-mechanical-check.json); nominal geometry only |
+| CAD | See [R1 mechanical check](records/r1-mechanical-check.json); nominal shell/component geometry only; [new wire/ferrite service bodies remain pending](../enclosure/r1-height-handoff.md) |
 
 The native J1 CPL automatic midpoint is 0.15 mm left of its reference origin because the custom signal lands shift the footprint bounds. The native values are retained, and both midpoint and reference coordinates are supplied. Confirm J1 orientation/registration in the assembler's placement preview, as with other connectors.
 

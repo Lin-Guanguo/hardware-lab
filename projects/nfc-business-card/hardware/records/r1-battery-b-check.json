@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "snapshot_sha256": "473022d650ac41f20f979c183711ab9adfb8b5a1fe3d2be2e791ed6b5f2367b3",
+  "selected_battery_position": "B_screen_lower_edge_shifted_right_1_5_mm",
+  "shift_mm": 1.5,
+  "native_drc_errors_after_reopen": 0,
+  "remaining_single_layer_or_isolated_vias": 0,
+  "pad_minimum_board_edge_mm": 0.648909040000003,
+  "pad_minimum_nfc_xy_gap_mm": 0.7249502899999953,
+  "pad_minimum_winding_xy_gap_mm": 0.7249502899999953,
+  "route_minimum_nfc_xy_gap_mm": 0.0,
+  "route_minimum_rear_winding_xy_gap_mm": 0.8667265379527496,
+  "nfc_feed_xy_overlap_mm2": 0.486861306667667,
+  "before_shift": {
+    "pad_minimum_board_edge_mm": 0.648909040000003,
+    "pad_minimum_nfc_xy_gap_mm": 0.7249502899999953,
+    "pad_minimum_winding_xy_gap_mm": 0.7249502899999953,
+    "route_minimum_nfc_xy_gap_mm": 0.0,
+    "route_minimum_rear_winding_xy_gap_mm": 0.15000028999999415,
+    "nfc_feed_xy_overlap_mm2": 0.486861306667667
+  },
+  "rf_limit": "Top battery routes still cross rear NFC feedlines. Winding clearance increases, but RF impact is not quantified.",
+  "redundant_cc2_via_rejected": true,
+  "ground_trace_outside_exception_rejected": true
+}

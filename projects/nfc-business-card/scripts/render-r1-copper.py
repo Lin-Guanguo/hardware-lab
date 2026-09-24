@@ -42,7 +42,7 @@ for ax,layer,title in zip(axes,(1,2),('FRONT / components + controls','REAR / NF
    x,y=c['x']*.0254,c['y']*.0254
    ax.text(x,y,c['ref'],color='white',ha='center',va='center',fontsize=5.8)
   ax.plot([2,39.32,39.32,2,2],[18.3,18.3,50.1,50.1,18.3],color='#aac1ce',linestyle='--',linewidth=.7)
-  ax.text(20,34,'Screen footprint\nNo ground copper on either face',ha='center',va='center',fontsize=10,color='#e6eef5')
+  ax.text(20,34,'Screen footprint\nNo pours; battery lands at lower edge',ha='center',va='center',fontsize=10,color='#e6eef5')
  else:
   ax.text(19,32,'NFC',ha='center',va='center',fontsize=18,color='#dfbd87')
   for x,label in [(65,'GND'),(68,'3V3'),(71,'CLK'),(74,'DIO'),(77,'RST')]:

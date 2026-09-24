@@ -1,0 +1,16 @@
+{
+  "status": "CHECKPOINT_WITH_OPEN_REVIEW",
+  "geometry_changed": false,
+  "finding": "Ground pour remains between the old screen rectangle and the exposed board edges.",
+  "measured_gnd_area_mm2_in_x0_39_62_y17_3_53": {
+    "top": 15.90778037323891,
+    "bottom": 15.370730001513394
+  },
+  "next": [
+    "Extend the pour exclusion through the three exposed board edges.",
+    "Replace rectangular coil corners with 45-degree chamfers.",
+    "Make outer winding offsets equal to the three exposed straight edges.",
+    "Apply pcb-methodology and upstream rules; regenerate checks and exports."
+  ],
+  "scope": "R1 pre-optimization checkpoint. RF performance is not measured."
+}

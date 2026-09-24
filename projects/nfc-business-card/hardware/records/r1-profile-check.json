@@ -24,7 +24,7 @@
     0.7999989999999997
   ],
   "conflicting_mechanical_layer": false,
-  "gerber_sha256": "0c50da00c222c4cbeee16633531793a44280e48674dbee207d9974e888e65017",
-  "snapshot_sha256": "dc99d11ad6fc09410286c16db21833e56ea0fc94879ad94c5396f148f204eb5b",
+  "gerber_sha256": "318361ba3e27d3e3ab052d5d3a838ac4bf6ef622f26d5ee660966b0480d97f02",
+  "snapshot_sha256": "473022d650ac41f20f979c183711ab9adfb8b5a1fe3d2be2e791ed6b5f2367b3",
   "scope": "Outline and mounting-slot geometry only. Copper connectivity and physical performance require separate checks."
 }

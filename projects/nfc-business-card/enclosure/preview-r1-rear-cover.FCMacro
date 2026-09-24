@@ -1,0 +1,63 @@
+"""Render the study in a separate GUI process without saving source geometry."""
+import json
+import os
+import traceback
+from pathlib import Path
+import FreeCAD as App
+import FreeCADGui as Gui
+from PySide import QtCore, QtWidgets
+from pivy import coin
+
+out = Path(os.environ['NFC_REAR_STUDY_OUT'])
+render_out = Path(os.environ.get('NFC_REAR_RENDER_OUT', str(out)))
+render_out.mkdir(parents=True, exist_ok=True)
+(render_out/'preview-error.txt').unlink(missing_ok=True)
+doc = App.openDocument(str(out/'rear-cover-study.FCStd'))
+for obj in doc.Objects:
+    if not hasattr(obj, 'Shape'):
+        continue
+    obj.ViewObject.ShapeColor = obj.StudyColor
+    obj.ViewObject.Transparency = 0
+    obj.ViewObject.LineColor = (.27, .34, .36)
+    obj.ViewObject.DisplayMode = os.environ.get('NFC_REAR_DISPLAY_MODE', 'Flat Lines')
+    obj.ViewObject.Deviation = .05
+    obj.ViewObject.AngularDeflection = 8
+    obj.ViewObject.Visibility = obj.Name in ('RoundedUpperShell', 'InsetRearCover', 'ScreenNominal', 'ClearKey1', 'ClearKey2', 'ClearKey3')
+view = Gui.activeDocument().activeView()
+front_rotation = App.Rotation(App.Vector(0, 0, 1), 45).multiply(App.Rotation(App.Vector(1, 0, 0), 55))
+rear_rotation = App.Rotation(App.Vector(1, 0, 0), 180).multiply(front_rotation)
+
+
+def finish():
+    try:
+        view.getCameraNode().orientation.setValue(rear_rotation.Q)
+        view.fitAll()
+        view.redraw()
+        view.saveImage(str(render_out/'rear-iso.png'), 1600, 1050, 'White')
+        (render_out/'preview.json').write_text(json.dumps({'status':'rendered', 'appearance':'Opaque colors distinguish geometry; not a resin transparency prediction.'})+'\n')
+    except Exception:
+        (render_out/'preview-error.txt').write_text(traceback.format_exc())
+    QtWidgets.QApplication.instance().quit()
+
+
+def rear():
+    try:
+        view.getCameraNode().orientation.setValue(front_rotation.Q)
+        view.fitAll()
+        view.redraw()
+        view.saveImage(str(render_out/'front-iso.png'), 1600, 1050, 'White')
+        view.setCameraOrientation(rear_rotation.Q)
+        view.fitAll()
+        QtCore.QTimer.singleShot(1500, finish)
+    except Exception:
+        (render_out/'preview-error.txt').write_text(traceback.format_exc())
+        QtWidgets.QApplication.instance().quit()
+
+
+def start():
+    view.viewAxonometric()
+    view.fitAll()
+    QtCore.QTimer.singleShot(1500, rear)
+
+
+QtCore.QTimer.singleShot(2000, start)

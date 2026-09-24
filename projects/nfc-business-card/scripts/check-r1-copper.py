@@ -12,7 +12,7 @@ from shapely.strtree import STRtree
 from pour_geometry import parse_path, load_pours, calibrate
 
 MM = .0254
-SCREEN = box(1.7, 18, 39.62, 50.4)
+SCREEN = box(0, 17, 39.62, 52)
 
 
 def pad_shape(p):
@@ -21,6 +21,9 @@ def pad_shape(p):
         shape = affinity.scale(Point(0, 0).buffer(1, quad_segs=24), w/2, h/2)
     else:
         shape = box(-w/2, -h/2, w/2, h/2)
+        if raw[0].upper() == 'RECT' and len(raw) > 3 and raw[3] > 0:
+            radius = min(raw[3]*MM, w/2, h/2)
+            shape = shape.buffer(-radius).buffer(radius)
     shape = affinity.rotate(shape, p.get('rotation', 0))
     return affinity.translate(shape, p['x'] * MM, p['y'] * MM)
 
@@ -72,9 +75,9 @@ def audit(snapshot, omit_line=None):
                 hits = trees[key].query(end.buffer(radius+.001))
                 if not any(not shapes[key][i].equals(own) and shapes[key][i].distance(end)<=radius+.001 for i in hits):
                     dead_ends.append({'net':t['net'], 'layer':t['layer'], 'xy_mm':list(xy)})
-    split = {}; groups_out = {}
-    for net in sorted({key[0] for key in nodes}):
-        parents = {}; labels = defaultdict(list); through = {}
+    split = {}; groups_out = {}; floating = []
+    for net in sorted({key[0] for key in shapes}):
+        parents = {}; labels = defaultdict(list); through = {}; all_pieces = {}
         def root(x):
             parents.setdefault(x, x)
             while parents[x] != x: x = parents[x]
@@ -84,6 +87,8 @@ def audit(snapshot, omit_line=None):
             g = union.get((net, layer))
             if g is None: continue
             pieces = list(g.geoms) if hasattr(g, 'geoms') else [g]
+            for i,piece in enumerate(pieces):
+                key=(layer,i);root(key);all_pieces[key]=piece
             for label, geom, plated in nodes.get((net, layer), []):
                 hits = [(layer, i) for i,p in enumerate(pieces) if p.intersects(geom)]
                 assert hits, (net, label, 'no copper')
@@ -94,15 +99,51 @@ def audit(snapshot, omit_line=None):
                     else: through[label] = hits[0]
         groups = defaultdict(set)
         for key, vals in labels.items(): groups[root(key)].update(vals)
+        for key,piece in all_pieces.items():
+            if root(key) not in groups:
+                floating.append({'net':net,'layer':key[0],'area_mm2':round(piece.area,6),'bounds_mm':list(piece.bounds)})
         groups_out[net] = [sorted(v) for v in groups.values()]
         if len(groups) > 1: split[net] = groups_out[net]
-    # Screen bounds include 0.3 mm beyond the glass; NFC is intentionally allowed.
+    # The user selected two battery lands below the coil. Only their frozen
+    # geometry is allowed; keep the complete exclusion for poured copper.
+    allowed = defaultdict(list)
+    plan_path = Path(__file__).resolve().parents[1]/'hardware/records/r1-battery-b-plan.json'
+    if plan_path.exists():
+        plan = json.loads(plan_path.read_text())
+        for p in plan['pads']:
+            allowed[p['net'], 1].append(box(p['x']-p['width_mm']/2, p['y']-p['height_mm']/2,
+                                           p['x']+p['width_mm']/2, p['y']+p['height_mm']/2))
+        for t in plan['tracks']:
+            allowed[t['net'], t['layer']].append(LineString(t['points']).buffer(t['width_mm']/2))
     intrusion = {f'{net}:{layer}': round(unary_union(items).intersection(SCREEN).area, 6)
                  for (net,layer), items in shapes.items() if net != 'NFC1_TBD' and unary_union(items).intersection(SCREEN).area > .00001}
+    unexpected = {}
+    for (net, layer), items in shapes.items():
+        if net == 'NFC1_TBD': continue
+        area = unary_union(items).intersection(SCREEN).difference(unary_union(allowed[net,layer]).buffer(.003)).area
+        if area > .00001: unexpected[f'{net}:{layer}'] = round(area, 6)
+    pour_only = {**snapshot, 'pads':[], 'lines':[], 'vias':[]}
+    pour_shapes, _ = copper(pour_only)
+    pour_intrusion = {f'{net}:{layer}':round(unary_union(items).intersection(SCREEN).area,6)
+                      for (net,layer),items in pour_shapes.items() if unary_union(items).intersection(SCREEN).area > .00001}
+    redundant_vias = []
+    for i, v in enumerate(snapshot['vias']):
+        own = Point(v['x']*MM, v['y']*MM).buffer(v['diameterMil']*MM/2)
+        contacts = []
+        for layer in (1,2):
+            key = v['net'], layer
+            connected = any(not shapes[key][j].equals(own) and own.distance(shapes[key][j]) <= .001
+                            for j in trees[key].query(own.buffer(.001)))
+            if connected: contacts.append(layer)
+        if len(contacts) < 2:
+            redundant_vias.append({'index':i,'net':v['net'],'xy_mm':[v['x']*MM,v['y']*MM],
+                                   'connected_layers':contacts})
     calibration, details = calibrate(load_pours(snapshot))
-    return {'ok': not split and not intrusion and calibration and not dead_ends, 'split_nets': split,
-            'dead_ends': dead_ends,
-            'screen_foreign_copper_mm2': intrusion, 'pour_parser_calibrated': calibration,
+    return {'ok': not split and not unexpected and not pour_intrusion and calibration and not dead_ends and not floating and not redundant_vias, 'split_nets': split,
+            'dead_ends': dead_ends, 'floating_copper':floating,
+            'screen_foreign_copper_mm2': intrusion, 'screen_unexpected_copper_mm2':unexpected,
+            'screen_poured_copper_mm2':pour_intrusion, 'single_layer_or_isolated_vias':redundant_vias,
+            'pour_parser_calibrated': calibration,
             'calibration': details, 'groups': groups_out}
 
 

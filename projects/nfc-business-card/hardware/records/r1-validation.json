@@ -1,13 +1,13 @@
 {
-  "status": "ROUTED_ENGINEERING_PROTOTYPE",
+  "status": "REVIEW_REQUIRED_BEFORE_ORDER",
   "native_drc_errors": 0,
   "schematic_pcb_pin_count": 238,
   "pin_mismatches": 0,
   "counts": {
     "components": 58,
     "pads": 248,
-    "lines": 792,
-    "vias": 151,
+    "lines": 824,
+    "vias": 153,
     "pours": 2
   },
   "native_project_sqlite_quick_check": "ok",
@@ -22,16 +22,22 @@
       0.0
     ]
   },
-  "drill_vias": 151,
+  "drill_vias": 153,
   "usb_mounting_slots": 4,
   "outline_and_components_identical_to_e20d": true,
   "old_project_unchanged_sha256": "b0bc26131d192a988bc6dc553078533c3efec7fd4274a61e1dc63050a1d8f958",
-  "screen_rectangle_no_foreign_copper": true,
+  "screen_projection_no_foreign_copper": false,
+  "screen_projection_no_unexpected_copper": true,
+  "screen_projection_no_poured_copper": true,
   "nfc_no_bypass_proved": true,
   "mechanical_status": "NOMINAL_CAD_AND_PRINT_MESH_PASS",
-  "snapshot_sha256": "dc99d11ad6fc09410286c16db21833e56ea0fc94879ad94c5396f148f204eb5b",
+  "mechanical_scope": "Existing 5.8 mm shell and unchanged component geometry. New B-pad wire/ferrite service bodies are pending mechanical revision.",
+  "single_layer_or_isolated_via_count": 0,
+  "snapshot_sha256": "473022d650ac41f20f979c183711ab9adfb8b5a1fe3d2be2e791ed6b5f2367b3",
   "open_review": [
-    "Perimeter GND outside the screen rectangle awaits the authorized antenna revision."
+    "Move C1 close to U2 IN/GND or add a correctly specified local input capacitor.",
+    "Add nearby GND stitching at five USB layer transitions.",
+    "Tune with screen, case and candidate NFC ferrite in place."
   ],
   "limits": [
     "RF resonance/read range with screen and case not measured.",

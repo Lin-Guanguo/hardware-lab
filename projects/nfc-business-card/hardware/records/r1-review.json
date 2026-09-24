@@ -1,16 +1,263 @@
 {
-  "status": "CHECKPOINT_WITH_OPEN_REVIEW",
-  "geometry_changed": false,
-  "finding": "Ground pour remains between the old screen rectangle and the exposed board edges.",
-  "measured_gnd_area_mm2_in_x0_39_62_y17_3_53": {
-    "top": 15.90778037323891,
-    "bottom": 15.370730001513394
-  },
-  "next": [
-    "Extend the pour exclusion through the three exposed board edges.",
-    "Replace rectangular coil corners with 45-degree chamfers.",
-    "Make outer winding offsets equal to the three exposed straight edges.",
-    "Apply pcb-methodology and upstream rules; regenerate checks and exports."
+  "status": "REVIEW_REQUIRED_BEFORE_ORDER",
+  "geometry_checks_pass": true,
+  "fixed": [
+    "Screen protrusion ground rim removed on both layers.",
+    "Five-turn coil changed to 45-degree corners with equal exposed-edge offsets.",
+    "CC2 load branch moved from the pre-TVS tee to the U6 protection pad.",
+    "Copper checker now includes detached filled islands, even without pads/vias.",
+    "Battery lands routed at user-selected B position, shifted right 1.5 mm, with a narrow top-copper exception.",
+    "Three single-layer vias and one dead stub removed; two-face copper contact is now audited."
   ],
-  "scope": "R1 pre-optimization checkpoint. RF performance is not measured."
+  "coil": {
+    "turns": 5,
+    "chamfers": 20,
+    "outer_centerline_bounds_mm": [
+      4.0999994200000005,
+      20.300000039999997,
+      34.00000058,
+      47.90000072
+    ],
+    "centerline_edge_offsets_mm": {
+      "left": 2.9999990800000003,
+      "bottom": 2.9999990799999985,
+      "top": 2.999999079999995
+    },
+    "copper_edge_offsets_mm": {
+      "left": 2.8749990800000003,
+      "bottom": 2.8749990799999985,
+      "top": 2.874999079999995
+    },
+    "minimum_trace_space_mm": 0.24999899999999542,
+    "minimum_copper_to_outline_mm": 2.874999079999995,
+    "track_width_mm": 0.25
+  },
+  "ground": {
+    "groups": 1,
+    "floating_copper": [],
+    "screen_foreign_copper_mm2": {
+      "BAT_PACK_TBD:1": 5.183051,
+      "GND:1": 3.796005
+    },
+    "screen_unexpected_copper_mm2": {},
+    "screen_poured_copper_mm2": {},
+    "single_layer_or_isolated_vias": [],
+    "detached_fill_negative_control_rejected": true
+  },
+  "ble_keepout_intrusions": [],
+  "decoupling": [
+    {
+      "cap": "C1",
+      "served_pin": "U2.10",
+      "net": "USB_VBUS",
+      "supply_pad_distance_mm": 14.279924275989705,
+      "ground_via_distance_mm": 1.0999597001876893,
+      "DC-001": "HIGH"
+    },
+    {
+      "cap": "C2",
+      "served_pin": "U2.1",
+      "net": "SYS",
+      "supply_pad_distance_mm": 1.4943167772597568,
+      "ground_via_distance_mm": 1.0500207601966116,
+      "DC-001": "PASS"
+    },
+    {
+      "cap": "C3",
+      "served_pin": "U2.2",
+      "net": "BAT_PACK_TBD",
+      "supply_pad_distance_mm": 1.8290063633568925,
+      "ground_via_distance_mm": 0.9010146102214028,
+      "DC-001": "PASS"
+    },
+    {
+      "cap": "C4",
+      "served_pin": "U3.1",
+      "net": "SYS",
+      "supply_pad_distance_mm": 1.7762610639205039,
+      "ground_via_distance_mm": 0.8999904931784706,
+      "DC-001": "PASS"
+    },
+    {
+      "cap": "C5",
+      "served_pin": "U3.5",
+      "net": "VDD_3V3",
+      "supply_pad_distance_mm": 1.7745440555816014,
+      "ground_via_distance_mm": 0.8999473869168233,
+      "DC-001": "PASS"
+    },
+    {
+      "cap": "C6",
+      "served_pin": "U1.28",
+      "net": "VDD_3V3",
+      "supply_pad_distance_mm": 1.5271970466184126,
+      "ground_via_distance_mm": 0.9500209602173085,
+      "DC-001": "PASS"
+    },
+    {
+      "cap": "C7",
+      "served_pin": "U1.30",
+      "net": "VDD_3V3",
+      "supply_pad_distance_mm": 1.2697078664007688,
+      "ground_via_distance_mm": 0.7500391402752452,
+      "DC-001": "PASS"
+    },
+    {
+      "cap": "C9",
+      "served_pin": "U4.1",
+      "net": "VDD_3V3",
+      "supply_pad_distance_mm": 1.5502325631981821,
+      "ground_via_distance_mm": 1.649990950727024,
+      "DC-001": "PASS"
+    },
+    {
+      "cap": "C10",
+      "served_pin": "U4.6",
+      "net": "EPD_VDD",
+      "supply_pad_distance_mm": 2.850288589248463,
+      "ground_via_distance_mm": 0.9499803208692879,
+      "DC-001": "PASS"
+    }
+  ],
+  "esd_ground": [
+    {
+      "ref": "U5",
+      "nearest_ground_via_mm": 0.8988816004676131,
+      "ground_vias_within_3mm": 7
+    },
+    {
+      "ref": "U6",
+      "nearest_ground_via_mm": 0.8003805235931316,
+      "ground_vias_within_3mm": 6
+    }
+  ],
+  "cc2_protection_cut_groups": [
+    [
+      "1@(72.85,28.80)",
+      "2@(74.10,25.25)",
+      "via148",
+      "via149"
+    ],
+    [
+      "B5@(75.95,27.75)",
+      "via7",
+      "via8"
+    ]
+  ],
+  "switch_node_copper_area_mm2": 9.756537261089186,
+  "epd_input_inductor_switch_triangle_proxy_mm2": 5.6430790363999845,
+  "fast_signal_transitions": [
+    {
+      "net": "USB_DM_CONN",
+      "xy_mm": [
+        75.14999956,
+        25.25014
+      ],
+      "nearest_ground_via_mm": 1.9913530137193618,
+      "above_1_6_mm_guideline": true
+    },
+    {
+      "net": "USB_DM_CONN",
+      "xy_mm": [
+        75.14999956,
+        26.250899999999998
+      ],
+      "nearest_ground_via_mm": 2.1227305705347477,
+      "above_1_6_mm_guideline": true
+    },
+    {
+      "net": "USB_DM_CONN",
+      "xy_mm": [
+        74.50000086,
+        27.35000118
+      ],
+      "nearest_ground_via_mm": 1.6800061994850923,
+      "above_1_6_mm_guideline": true
+    },
+    {
+      "net": "USB_DP_CONN",
+      "xy_mm": [
+        72.30000018,
+        25.9499989
+      ],
+      "nearest_ground_via_mm": 0.7017820388140261,
+      "above_1_6_mm_guideline": false
+    },
+    {
+      "net": "USB_DM_CONN",
+      "xy_mm": [
+        72.30000018,
+        27.249998839999996
+      ],
+      "nearest_ground_via_mm": 0.9013885521796636,
+      "above_1_6_mm_guideline": false
+    },
+    {
+      "net": "USB_DP_CONN",
+      "xy_mm": [
+        54.10000102,
+        14.201099359999999
+      ],
+      "nearest_ground_via_mm": 3.664457136729125,
+      "above_1_6_mm_guideline": true
+    },
+    {
+      "net": "USB_DM_CONN",
+      "xy_mm": [
+        54.10000102,
+        15.699699359999999
+      ],
+      "nearest_ground_via_mm": 2.464491161879267,
+      "above_1_6_mm_guideline": true
+    },
+    {
+      "net": "EPD_SCK_TBD",
+      "xy_mm": [
+        54.58199142,
+        34.00193098
+      ],
+      "nearest_ground_via_mm": 2.7329626966128404,
+      "above_1_6_mm_guideline": true
+    },
+    {
+      "net": "EPD_SCK_TBD",
+      "xy_mm": [
+        59.15398126,
+        14.95196908
+      ],
+      "nearest_ground_via_mm": 1.879108806258177,
+      "above_1_6_mm_guideline": true
+    }
+  ],
+  "discussion_items": [
+    {
+      "priority": "before_order",
+      "item": "Move C1 close to U2 IN/GND or add a correctly specified local input capacitor.",
+      "evidence": "C1.1 to U2.10 = 14.28 mm; BQ25186 datasheet sections 7.2.2 and 9.1 require local input decoupling.",
+      "status": "Left for the next placement discussion; components unchanged."
+    },
+    {
+      "priority": "optimization",
+      "item": "Add nearby GND stitching at five USB layer transitions.",
+      "evidence": "Five USB vias exceed the contextual 1.6 mm guideline; worst gap about 3.66 mm. This is a return-path review item, not measured USB failure."
+    },
+    {
+      "priority": "physical_validation",
+      "item": "Tune with screen, case and candidate NFC ferrite in place.",
+      "evidence": "Removing the rim does not remove display/battery metal loading; 220 pF is provisional."
+    }
+  ],
+  "applicability": {
+    "GP-002/CK-001/DP-004": "Not applicable: two copper layers, no inner signal layers or power/ground plane pair.",
+    "BE-002": "Intentionally excluded in the NFC region; a ground ring would conflict with the antenna clearance.",
+    "GP-004": "Whole-board fill percentage is not a gate because NFC and BLE clearances are intentional.",
+    "SW-003": "E-paper boost/charge-pump topology; recorded triangle is a placement proxy, not a buck input-loop proof.",
+    "RP-001": "1.6 mm contextual guideline using 0.8 mm thickness; not a universal pass/fail or USB certification."
+  },
+  "limits": [
+    "All distances and areas are computed from native geometry, not physical measurements.",
+    "No EMC, USB signal integrity or RF qualification performed.",
+    "Unchanged component placement does not close the C1 finding."
+  ],
+  "snapshot_sha256": "473022d650ac41f20f979c183711ab9adfb8b5a1fe3d2be2e791ed6b5f2367b3"
 }

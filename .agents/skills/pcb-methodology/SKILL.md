@@ -141,3 +141,12 @@ node projects/nfc-business-card/scripts/eda-exec-wait.mjs \
 其余情况按本 skill 直接推进，把假设和证据写在文档里。
 
 R1 uses `check-r1-copper.py` for physical GND connectivity, including thermal spokes and layer-changing vias. Historical E16 heuristics are not current R1 gates.
+
+## R1 review lessons — 2026-09-24
+
+- Antenna clearance must be checked against the **physical protruding board region through its exposed edges**, not only the display glass rectangle. A smaller rectangular keepout can leave an unwanted GND rim. General perimeter-ground rules do not override the antenna exclusion.
+- Measure each decoupling capacitor against its **named served IC pin**. C1 is near other circuitry but 14.28 mm from U2 IN; an arbitrary nearest same-net pad can hide this error.
+- Include copper fragments without pads or vias in connectivity audits; node-only connectedness misses detached fill islands. R1 uses an injected isolated-fill negative control.
+- For nested 45° coil corners, preserve normal pitch on the diagonal segments. Equal chamfer legs on each inset rectangle do not preserve equal diagonal spacing.
+- After copper changes, reopen the saved project and verify the keepout polygons, regenerated pour geometry, topology and manufacturing files. A live pre-save DRC result is insufficient.
+- After rerouting, check each via for actual copper contact on both faces and remove unused layer changes and their dead branches. A GND via without an explicit track can still stitch two pours; inspect filled copper before classifying it as unused.

@@ -169,7 +169,7 @@ under_screen=[r for r,s in components.items() if s.BoundBox.XMax>1.95 and s.Boun
 under_screen_ref=max(under_screen,key=lambda r:components[r].BoundBox.ZMax) if under_screen else None
 under_screen_height=components[under_screen_ref].BoundBox.ZMax-PCB_TOP if under_screen_ref else 0
 if C['nfc'].get('read_side')=='rear':
-    ferrite=box(*C['nfc']['keepout_xywh_mm'],PCB_TOP+.1,C['nfc']['ferrite_allowance_mm'])
+    ferrite=box(*C['nfc'].get('ferrite_service_xywh_mm',C['nfc']['keepout_xywh_mm']),PCB_TOP+.1,C['nfc']['ferrite_allowance_mm'])
     feature('NFCFerriteServiceVolume',ferrite,'optional ferrite space only; not selected material or BOM',(.35,.40,.45),80)
     checks['optional_ferrite_to_screen_max']=relation(ferrite,screen_max)
     checks['optional_ferrite_to_components']={r:relation(ferrite,s) for r,s in components.items()}

@@ -2,7 +2,7 @@
 
 ## 当前确定方案
 
-Use the [R1 native project](../../../eda/NFC-Card-R1.eprj2) and [current project index](../README.md). The first organized checkpoint retains the existing routing; the perimeter-copper/coil review is pending.
+Use the [R1 native project](../../../eda/NFC-Card-R1.eprj2) and [current project index](../README.md). The uncommitted antenna/CC2 revision is complete; [C1 placement and USB stitching findings](pcb-r1-review.md) remain for discussion before ordering.
 
 | Files | Purpose |
 | --- | --- |

@@ -13,3 +13,5 @@ The [active R1 index](../README.md) is the entry point for current work. This ar
 - [Historical native EDA projects](../../../eda/archive/nfc-business-card/): E6–E20 and intermediate database checkpoints.
 
 No historical design files were discarded. Markdown links were rebased where targets could be resolved. Local generated outputs remain in `artifacts/archive/` and are not committed.
+
+[Pre-optimization R1 checkpoint](r1-checkpoint/) preserves the original rectangular coil snapshot, Gerber comparison and mechanical source; complete state is commit `ccf9f92`.

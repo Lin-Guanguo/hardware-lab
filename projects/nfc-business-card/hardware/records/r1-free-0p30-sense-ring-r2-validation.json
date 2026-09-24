@@ -1,0 +1,28 @@
+{
+  "status": "LOCAL_CHECKS_PASS_VENDOR_REVIEW_REQUIRED",
+  "project_sha256": "3e4828d62ed46d71cec083546d9999be27de05241746dc16cbdd5394d5449eca",
+  "snapshot_sha256": "5b3f9e056714ec244c30b917167a81bb7321275f19329db214c3894e9d013bc6",
+  "gerber_sha256": "53c9f2a1c9f4492224b04d77a7035a0ed372b681ba2cef2e4bc03ccd2043c2f4",
+  "bom_sha256": "fefa28f37ce2731ca34cdade0101c9bfd037c41249601d1d8d2b3c69d664e294",
+  "cpl_sha256": "cd3007d6e0029755f65627a229d99b7c46797296290bf7f0dd482ebedf90ca37",
+  "components": 66,
+  "bom_groups": 29,
+  "cpl_components": 66,
+  "maximum_cpl_reference_error_mm": 0.00044061938223001435,
+  "vias": 169,
+  "drill_diameter_counts_mm": {
+    "0.30226": 34,
+    "0.3048": 97,
+    "0.305001": 38
+  },
+  "minimum_via_drill_mm": 0.30226,
+  "minimum_via_hole_gap_mm": 0.3039581961444145,
+  "minimum_radial_annular_ring_mm": 0.1016,
+  "vias_below_0p10_mm_radial_ring": 0,
+  "different_net_copper_pairs_below_0p15_mm": 0,
+  "same_net_via_hole_to_pad_pairs_below_0p15_mm": 41,
+  "same_net_via_holes_touching_pad_copper": 4,
+  "usb_plated_slots": 4,
+  "native_drc_errors_after_reopen": 0,
+  "qualification": "Online DFM found unresolved annular-ring, via-to-pad and SMT warnings; manual vendor review and physical validation remain required."
+}

@@ -2,7 +2,7 @@
 
 ## 当前确定方案
 
-**最新电路与低成本制板候选：**[0.30 mm 钻孔＋直接电池电压采样独立工程](hardware/production/r1-free-0p30-sense/README.md)已补 BQ25186 TS/MR 10 kΩ 到地及可关断的电池 ADC 分压，Gerber/BOM/CPL 和本地检查已生成。[新版嘉立创 PCB/SMT DFM](hardware/production/r1-free-0p30-sense/vendor-dfm-2026-09-24.md)显示 29/29 组器件匹配，但仍有薄孔环 100 条双面计数、四个镀铜槽、铜/阻焊及 J1/U1 装配危险。扩大孔环的独立诊断仍有 24 条原生 DRC，**尚无可投产的低成本修订版**；原 R1 继续作为未投产的制造基准。下一步先局部重布、重跑全部检查，再请供应商按新文件确认工艺、贴片和分项报价。
+**最新低成本制板候选：**[R2 独立工程与制造检查文件](hardware/production/r1-free-0p30-sense-ring-r2/README.md)继承了 TS/MR 10 kΩ 到地及可关断的电池 ADC 采样，在显示供电、USB 扇出及充电区局部重布。重开工程后原生 DRC 为 0，最小实际钻孔 0.30226 mm、最小径向孔环 0.1016 mm；独立走线/焊盘/过孔审计未发现小于 0.15 mm 的异网铜间距。[新版线上 PCB/SMT DFM](hardware/production/r1-free-0p30-sense-ring-r2/vendor-dfm-2026-09-24.md)仍列孔环、过孔到焊盘、USB 槽及 J1/U1 贴装危险，**尚不可投产**；原 R1 是未投产的制造基准。
 
 **3.0 mm 内腔研究：**按用户反馈电池最厚处可卡入 3 mm，已完成 [4.6 mm 总厚诊断](enclosure/r1-cavity-3mm-study/README.md)。现有 USB、主控、FPC 座和按键运动存在干涉；局部深腔与平整外表两条路线已有尺寸预算，尚无可打印的 3 mm 内腔方案。电池 3.0 mm 仅用于本次研究，打包版不变。
 
@@ -35,7 +35,8 @@
 | Entry | Purpose |
 | --- | --- |
 | [Native EDA project](../../eda/NFC-Card-R1.eprj2) | Primary editable source: one PCB and one four-page schematic |
-| [Battery-sensing cost candidate](hardware/production/r1-free-0p30-sense/README.md) | 独立可编辑工程、最新 Gerber/BOM/CPL 与线上 DFM；不可投产 |
+| [Ring and clearance R2 candidate](hardware/production/r1-free-0p30-sense-ring-r2/README.md) | 最新独立工程、Gerber/BOM/CPL、本地验证与新版线上 DFM；不可投产 |
+| [Previous battery-sensing cost candidate](hardware/production/r1-free-0p30-sense/README.md) | 前版线上 DFM 与薄孔环诊断基线 |
 | [Manufacturing files](hardware/production/r1/README.md) | Gerber for bare PCB; BOM and CPL for assembly; PDF, STEP and portable EDA backup |
 | [Design and verification](hardware/pcb-r1-delivery.md) | Design decisions, checks, limits and reproduction commands |
 | [USB/SWD recovery](hardware/r1-usb-swd-recovery.md) | Electrical checks, UF2/CDC plan, clip dimensions and selected SWD recovery |

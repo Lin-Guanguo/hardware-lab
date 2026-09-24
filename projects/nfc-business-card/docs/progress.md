@@ -2,9 +2,9 @@
 
 ## 当前确定方案
 
-2026-09-24：独立 [0.30 mm＋电池采样候选](../hardware/production/r1-free-0p30-sense/README.md)补齐 TS/MR 电阻和直接电池 ADC 采样，原生 DRC、独立连通、NFC/板框及 Gerber 检查通过；[新版线上 DFM 任务 DFMP2609240604](../hardware/production/r1-free-0p30-sense/vendor-dfm-2026-09-24.md)再次暴露孔环、USB 镀铜槽、阻焊和 J1/U1 贴装危险。全部扩大薄孔环的诊断由 64 条 DRC 降至 24 条，仍未得到可投产的孔环修订版。继续局部重布并重新 DFM；原 R1 制造基准未变，未下单。
+2026-09-24：[R2 独立候选](../hardware/production/r1-free-0p30-sense-ring-r2/README.md)在原电池采样候选上完成局部移孔和重布线，保留敏感器件、板框与天线不动。重开原生 DRC 0；最小钻孔 0.30226 mm、最小径向孔环 0.1016 mm；走线/焊盘/过孔异网间距审计未发现 <0.15 mm。Gerber/BOM/CPL 已从同一工程导出，本地独立连通、NFC、板框、四槽及 66/66 位号检查通过。[新版线上 PCB/SMT DFM](../hardware/production/r1-free-0p30-sense-ring-r2/vendor-dfm-2026-09-24.md)走线间距警告由 12 降至 1，盘到线及 PTH 孔到线危险清零；但孔环危险仍显示 100，VIA 孔到焊盘危险增至 32，SMT 新增 U1 焊脚到孔 2 条危险，J1/U1 原有问题未变。需继续局部处理和人工审核；原 R1 制造基准未变，未下单。
 
-[下一步按屏幕供电、USB 扇出、充电/全板间距、全量验证、供应商复查推进](../hardware/production/r1-free-0p30-sense/next-steps.md)；每区有明确通过条件，未完成前不合入主分支作为制造版。
+[R2 线上 DFM 记录](../hardware/production/r1-free-0p30-sense-ring-r2/vendor-dfm-2026-09-24.md#接下来的处理顺序)列明下一步：先处理 U1 焊脚到孔与过孔贴近焊盘，再请工厂按实际 Gerber/器件图纸核实孔环、J1 槽和贴片模型、U1 工艺边。危险和费用未明确前不合入主分支作为制造版。
 
 2026-09-24: checkpoint `ccf9f92` is committed. The [subsequent antenna/layout review](../hardware/pcb-r1-review.md) and battery-pad changes are saved in checkpoint `bee8846` at the user's request, alongside the separate enclosure studies. The subsequent drill/USB/routing review and 2.54 mm SWD/CAD synchronization are included in the current repository checkpoint at the user's request.
 
@@ -23,7 +23,8 @@
 | Redundant vias | Removed BAT/CC2/3V3 single-layer vias and one dead stub; all remaining vias contact copper on both faces. Audit rejects an injected redundant via. |
 | RF and bring-up | User/agent must test the assembled board; provisional 220 pF tuning capacitors |
 | 0.30 mm 低成本候选 | 改 TS 前的 Gerber 已完成[线上 DFM 任务 DFMP2609240514](../hardware/production/r1-free-0p30/vendor-dfm-2026-09-24.md)。孔环、镀铜槽、阻焊桥和 J1 SMT 告警尚未关闭；¥30 仅为裸板参数试算。制造前需在新版本补 TS/MR 10 kΩ 到地。供应商未正式接受，未下单。 |
-| 0.30 mm＋电池采样新版 | [独立工程与文件](../hardware/production/r1-free-0p30-sense/README.md)已补 TS/MR 及采样；[线上 PCB/SMT DFM](../hardware/production/r1-free-0p30-sense/vendor-dfm-2026-09-24.md)完成，29 组器件匹配。孔环、槽、铜/阻焊、J1/U1 危险未关闭；整体扩孔环试验剩 24 条 DRC。下一步局部移孔/改线，核实器件实物封装，再以修订版重跑全部检查和工厂审核。 |
+| 0.30 mm＋电池采样前版 | [独立工程与文件](../hardware/production/r1-free-0p30-sense/README.md)已补 TS/MR 及采样；[线上 PCB/SMT DFM](../hardware/production/r1-free-0p30-sense/vendor-dfm-2026-09-24.md)完成，29 组器件匹配。薄孔环、槽、铜/阻焊、J1/U1 危险未关闭；其扩大孔环诊断 DRC 24，已由 R2 局部重布承接。 |
+| R2 孔环与间距候选 | [独立工程与文件](../hardware/production/r1-free-0p30-sense-ring-r2/README.md)的本地检查通过，最小钻孔 0.30226 mm、最小径向孔环 0.1016 mm；独立对象间距审计无 <0.15 mm。[线上 PCB/SMT DFM](../hardware/production/r1-free-0p30-sense-ring-r2/vendor-dfm-2026-09-24.md)仍报孔环 100、VIA 到焊盘 32、U1 焊脚到孔 2、J1 焊脚重叠 12 条危险；需继续局部修改与工厂人工审核，不能作为下单包。 |
 | Battery | User measures protected pack and wires; nominal 31 × 12 × 3 mm |
 
 No order placed. [Historical progress and experiments](../archive/pre-r1/readmes/projects/nfc-business-card/docs/progress.md) retain earlier findings and resolutions.

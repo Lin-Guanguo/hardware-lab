@@ -118,3 +118,9 @@ status: serial_url_switch_verified
 搜索到的[墨水屏 NFC 卡实物体验](https://www.einkcn.com/html/product_6a5c413ec5d491752.html)把微信二维码作为屏幕图片，NFC 则打开预设名片网页；[官微名片产品](https://ltd.com/article_detail/5601786242260997?is_header=card)声称 NFC 可打开其自有小程序名片页，属于不同于个人微信加好友的入口。这些实例只作为交互方向参考，不算本项目实测。[Apple 后台 NFC 说明](https://developer.apple.com/documentation/corenfc/adding-support-for-background-tag-reading)明确指出不支持自定义 URL scheme，因此 `weixin://` 即便在这部手机能唤起应用选择，也不能作为跨平台方案。
 
 下一步先单独验证随屏转接板与墨水屏，确认尺寸、驱动和清晰度后试着显示**未经美化的原始微信个人二维码**，用另一部手机的微信“扫一扫”验证能否到达加好友页；NFC 侧继续用 HTTPS 分享小红书或个人名片网页。墨水屏扫码能力、个人名片网页与最终定制板均未验证。
+
+## NFC 与 App 唤起的边界
+
+本轮实验说明：NDEF URI 能被手机读取，不等于每个 App 都提供通用、稳定的指定页面入口。手机系统可按[Android App Links](https://developer.android.com/training/app-links/about)或[Apple Universal Links／后台 NFC](https://developer.apple.com/documentation/corenfc/adding-support-for-background-tag-reading)把受支持的 HTTPS 地址交给对应 App；目标 App 仍需自己声明可处理的域名和页面，未匹配时可能落到浏览器。Apple 后台 NFC 不支持任意自定义 URL scheme。这里不能据小红书和微信两项实验推断“国内 App 普遍支持很少”的数量结论，应逐个平台、链接类型和手机实测。
+
+支付宝“碰一下支付”是另一项专门接入的支付服务。[支付宝活动规则](https://render.alipay.com/p/c/180020570000128061/index.html?caprMode=sync)将其描述为基于**支付宝付款码和 NFC 通讯技术**，由已解锁且启用 NFC 的手机触碰**商家碰一下收银设备**完成支付。这说明 NFC 只是近距离交互环节，支付宝的账号、支付流程与商家设备也共同参与；不能据此认为任意 NDEF 名片链接都能唤起支付宝支付或其他 App 的内部操作。就本项目而言，优先使用目标平台正式提供的 HTTPS 分享链接；个人微信加好友继续以屏幕二维码作为待验证方案。

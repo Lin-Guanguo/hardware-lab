@@ -4,6 +4,8 @@
 
 2026-09-24：独立 [0.30 mm＋电池采样候选](../hardware/production/r1-free-0p30-sense/README.md)补齐 TS/MR 电阻和直接电池 ADC 采样，原生 DRC、独立连通、NFC/板框及 Gerber 检查通过；[新版线上 DFM 任务 DFMP2609240604](../hardware/production/r1-free-0p30-sense/vendor-dfm-2026-09-24.md)再次暴露孔环、USB 镀铜槽、阻焊和 J1/U1 贴装危险。全部扩大薄孔环的诊断由 64 条 DRC 降至 24 条，仍未得到可投产的孔环修订版。继续局部重布并重新 DFM；原 R1 制造基准未变，未下单。
 
+[下一步按屏幕供电、USB 扇出、充电/全板间距、全量验证、供应商复查推进](../hardware/production/r1-free-0p30-sense/next-steps.md)；每区有明确通过条件，未完成前不合入主分支作为制造版。
+
 2026-09-24: checkpoint `ccf9f92` is committed. The [subsequent antenna/layout review](../hardware/pcb-r1-review.md) and battery-pad changes are saved in checkpoint `bee8846` at the user's request, alongside the separate enclosure studies. The subsequent drill/USB/routing review and 2.54 mm SWD/CAD synchronization are included in the current repository checkpoint at the user's request.
 
 | Work | Status / next step |

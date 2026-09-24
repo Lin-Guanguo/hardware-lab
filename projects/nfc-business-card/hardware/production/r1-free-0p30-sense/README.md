@@ -11,6 +11,7 @@
 | [BOM](NFC-Card-R1-Free-0p30-Sense-bom.csv) / [CPL](NFC-Card-R1-Free-0p30-Sense-cpl.csv) | 已上传 SMT 预览；未授权替代料 |
 | [本地验证](../../records/r1-free-0p30-sense-validation.json) | 文件哈希、孔径、孔环及本地检查摘要 |
 | [线上 DFM](vendor-dfm-2026-09-24.md) | 任务号、全部主要危险和处理顺序 |
+| [下一步计划](next-steps.md) | 局部重布顺序、逐阶段验收与供应商确认边界 |
 
 ## 电路变更与验证范围
 

@@ -2,6 +2,8 @@
 
 ## 当前确定方案
 
+2026-09-24：独立 [0.30 mm＋电池采样候选](../hardware/production/r1-free-0p30-sense/README.md)补齐 TS/MR 电阻和直接电池 ADC 采样，原生 DRC、独立连通、NFC/板框及 Gerber 检查通过；[新版线上 DFM 任务 DFMP2609240604](../hardware/production/r1-free-0p30-sense/vendor-dfm-2026-09-24.md)再次暴露孔环、USB 镀铜槽、阻焊和 J1/U1 贴装危险。全部扩大薄孔环的诊断由 64 条 DRC 降至 24 条，仍未得到可投产的孔环修订版。继续局部重布并重新 DFM；原 R1 制造基准未变，未下单。
+
 2026-09-24: checkpoint `ccf9f92` is committed. The [subsequent antenna/layout review](../hardware/pcb-r1-review.md) and battery-pad changes are saved in checkpoint `bee8846` at the user's request, alongside the separate enclosure studies. The subsequent drill/USB/routing review and 2.54 mm SWD/CAD synchronization are included in the current repository checkpoint at the user's request.
 
 | Work | Status / next step |
@@ -19,6 +21,7 @@
 | Redundant vias | Removed BAT/CC2/3V3 single-layer vias and one dead stub; all remaining vias contact copper on both faces. Audit rejects an injected redundant via. |
 | RF and bring-up | User/agent must test the assembled board; provisional 220 pF tuning capacitors |
 | 0.30 mm 低成本候选 | 改 TS 前的 Gerber 已完成[线上 DFM 任务 DFMP2609240514](../hardware/production/r1-free-0p30/vendor-dfm-2026-09-24.md)。孔环、镀铜槽、阻焊桥和 J1 SMT 告警尚未关闭；¥30 仅为裸板参数试算。制造前需在新版本补 TS/MR 10 kΩ 到地。供应商未正式接受，未下单。 |
+| 0.30 mm＋电池采样新版 | [独立工程与文件](../hardware/production/r1-free-0p30-sense/README.md)已补 TS/MR 及采样；[线上 PCB/SMT DFM](../hardware/production/r1-free-0p30-sense/vendor-dfm-2026-09-24.md)完成，29 组器件匹配。孔环、槽、铜/阻焊、J1/U1 危险未关闭；整体扩孔环试验剩 24 条 DRC。下一步局部移孔/改线，核实器件实物封装，再以修订版重跑全部检查和工厂审核。 |
 | Battery | User measures protected pack and wires; nominal 31 × 12 × 3 mm |
 
 No order placed. [Historical progress and experiments](../archive/pre-r1/readmes/projects/nfc-business-card/docs/progress.md) retain earlier findings and resolutions.

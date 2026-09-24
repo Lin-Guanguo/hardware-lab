@@ -1,0 +1,722 @@
+{
+  "target_mm": 0.15,
+  "scope": "Lines, pads and vias in the exported snapshot; excludes poured copper and solder-mask openings. Rounded pad geometry is approximate.",
+  "pair_count_below_target": 39,
+  "net_pair_groups_below_target": 11,
+  "minimum_gap_mm": 0.1093,
+  "groups": [
+    {
+      "nets": [
+        "USB_CC1",
+        "USB_VBUS"
+      ],
+      "layers": [
+        1
+      ],
+      "minimum_gap_mm": 0.1093,
+      "closest_midpoint_mm": [
+        71.05,
+        23.41
+      ],
+      "pair_count": 2
+    },
+    {
+      "nets": [
+        "GND",
+        "EPD_VSPL2"
+      ],
+      "layers": [
+        2
+      ],
+      "minimum_gap_mm": 0.11,
+      "closest_midpoint_mm": [
+        58.05,
+        33.33
+      ],
+      "pair_count": 4
+    },
+    {
+      "nets": [
+        "CHG_SDA",
+        "CHG_PG_N"
+      ],
+      "layers": [
+        2
+      ],
+      "minimum_gap_mm": 0.1107,
+      "closest_midpoint_mm": [
+        54.22,
+        12.01
+      ],
+      "pair_count": 3
+    },
+    {
+      "nets": [
+        "CHG_INT_N",
+        "KEY_PREV_N"
+      ],
+      "layers": [
+        2
+      ],
+      "minimum_gap_mm": 0.1191,
+      "closest_midpoint_mm": [
+        58.35,
+        11.13
+      ],
+      "pair_count": 6
+    },
+    {
+      "nets": [
+        "EPD_VSPH",
+        "EPD_VDD"
+      ],
+      "layers": [
+        1
+      ],
+      "minimum_gap_mm": 0.122,
+      "closest_midpoint_mm": [
+        53.89,
+        38.52
+      ],
+      "pair_count": 6
+    },
+    {
+      "nets": [
+        "CHG_SDA",
+        "VDD_3V3"
+      ],
+      "layers": [
+        1
+      ],
+      "minimum_gap_mm": 0.1245,
+      "closest_midpoint_mm": [
+        41.98,
+        21.54
+      ],
+      "pair_count": 3
+    },
+    {
+      "nets": [
+        "GND",
+        "KEY_PREV_N"
+      ],
+      "layers": [
+        1
+      ],
+      "minimum_gap_mm": 0.125,
+      "closest_midpoint_mm": [
+        55.35,
+        7.16
+      ],
+      "pair_count": 3
+    },
+    {
+      "nets": [
+        "KEY_OK_N",
+        "CHG_INT_N"
+      ],
+      "layers": [
+        1
+      ],
+      "minimum_gap_mm": 0.1351,
+      "closest_midpoint_mm": [
+        45.61,
+        15.12
+      ],
+      "pair_count": 3
+    },
+    {
+      "nets": [
+        "CHG_INT_N",
+        "CHG_SDA"
+      ],
+      "layers": [
+        2
+      ],
+      "minimum_gap_mm": 0.1461,
+      "closest_midpoint_mm": [
+        60.63,
+        11.45
+      ],
+      "pair_count": 3
+    },
+    {
+      "nets": [
+        "EPD_RESE",
+        "EPD_VSPL2"
+      ],
+      "layers": [
+        2
+      ],
+      "minimum_gap_mm": 0.1486,
+      "closest_midpoint_mm": [
+        57.69,
+        33.09
+      ],
+      "pair_count": 3
+    },
+    {
+      "nets": [
+        "EPD_BS0",
+        "EPD_BUSY_TBD"
+      ],
+      "layers": [
+        1
+      ],
+      "minimum_gap_mm": 0.1489,
+      "closest_midpoint_mm": [
+        55.2,
+        32.15
+      ],
+      "pair_count": 3
+    }
+  ],
+  "pairs": [
+    {
+      "gap_mm": 0.1093,
+      "net1": "USB_CC1",
+      "net2": "USB_VBUS",
+      "object1": "track:29",
+      "object2": "track:568",
+      "closest_midpoint_mm": [
+        71.05,
+        23.41
+      ],
+      "layers": [
+        1
+      ]
+    },
+    {
+      "gap_mm": 0.1093,
+      "net1": "USB_CC1",
+      "net2": "USB_VBUS",
+      "object1": "track:30",
+      "object2": "track:568",
+      "closest_midpoint_mm": [
+        71.05,
+        23.41
+      ],
+      "layers": [
+        1
+      ]
+    },
+    {
+      "gap_mm": 0.11,
+      "net1": "GND",
+      "net2": "EPD_VSPL2",
+      "object1": "track:512",
+      "object2": "track:594",
+      "closest_midpoint_mm": [
+        58.05,
+        33.33
+      ],
+      "layers": [
+        2
+      ]
+    },
+    {
+      "gap_mm": 0.11,
+      "net1": "GND",
+      "net2": "EPD_VSPL2",
+      "object1": "track:512",
+      "object2": "track:595",
+      "closest_midpoint_mm": [
+        58.05,
+        33.33
+      ],
+      "layers": [
+        2
+      ]
+    },
+    {
+      "gap_mm": 0.11,
+      "net1": "GND",
+      "net2": "EPD_VSPL2",
+      "object1": "track:587",
+      "object2": "track:594",
+      "closest_midpoint_mm": [
+        57.97,
+        33.33
+      ],
+      "layers": [
+        2
+      ]
+    },
+    {
+      "gap_mm": 0.1107,
+      "net1": "CHG_SDA",
+      "net2": "CHG_PG_N",
+      "object1": "track:296",
+      "object2": "track:320",
+      "closest_midpoint_mm": [
+        54.22,
+        12.01
+      ],
+      "layers": [
+        2
+      ]
+    },
+    {
+      "gap_mm": 0.1107,
+      "net1": "CHG_SDA",
+      "net2": "CHG_PG_N",
+      "object1": "track:296",
+      "object2": "track:321",
+      "closest_midpoint_mm": [
+        59.62,
+        12.01
+      ],
+      "layers": [
+        2
+      ]
+    },
+    {
+      "gap_mm": 0.1107,
+      "net1": "CHG_SDA",
+      "net2": "CHG_PG_N",
+      "object1": "track:297",
+      "object2": "track:321",
+      "closest_midpoint_mm": [
+        59.62,
+        12.01
+      ],
+      "layers": [
+        2
+      ]
+    },
+    {
+      "gap_mm": 0.1191,
+      "net1": "CHG_INT_N",
+      "net2": "KEY_PREV_N",
+      "object1": "track:280",
+      "object2": "track:611",
+      "closest_midpoint_mm": [
+        58.35,
+        11.13
+      ],
+      "layers": [
+        2
+      ]
+    },
+    {
+      "gap_mm": 0.1191,
+      "net1": "CHG_INT_N",
+      "net2": "KEY_PREV_N",
+      "object1": "track:280",
+      "object2": "track:610",
+      "closest_midpoint_mm": [
+        58.35,
+        11.13
+      ],
+      "layers": [
+        2
+      ]
+    },
+    {
+      "gap_mm": 0.1191,
+      "net1": "CHG_INT_N",
+      "net2": "KEY_PREV_N",
+      "object1": "track:281",
+      "object2": "track:610",
+      "closest_midpoint_mm": [
+        61.09,
+        11.13
+      ],
+      "layers": [
+        2
+      ]
+    },
+    {
+      "gap_mm": 0.122,
+      "net1": "EPD_VSPH",
+      "net2": "EPD_VDD",
+      "object1": "track:151",
+      "object2": "track:665",
+      "closest_midpoint_mm": [
+        53.89,
+        38.52
+      ],
+      "layers": [
+        1
+      ]
+    },
+    {
+      "gap_mm": 0.122,
+      "net1": "EPD_VSPH",
+      "net2": "EPD_VDD",
+      "object1": "track:152",
+      "object2": "track:665",
+      "closest_midpoint_mm": [
+        53.89,
+        38.8
+      ],
+      "layers": [
+        1
+      ]
+    },
+    {
+      "gap_mm": 0.122,
+      "net1": "EPD_VSPH",
+      "net2": "EPD_VDD",
+      "object1": "track:152",
+      "object2": "track:666",
+      "closest_midpoint_mm": [
+        53.89,
+        38.8
+      ],
+      "layers": [
+        1
+      ]
+    },
+    {
+      "gap_mm": 0.1221,
+      "net1": "GND",
+      "net2": "EPD_VSPL2",
+      "object1": "track:587",
+      "object2": "track:595",
+      "closest_midpoint_mm": [
+        58.01,
+        33.33
+      ],
+      "layers": [
+        2
+      ]
+    },
+    {
+      "gap_mm": 0.1245,
+      "net1": "CHG_SDA",
+      "net2": "VDD_3V3",
+      "object1": "track:291",
+      "object2": "track:380",
+      "closest_midpoint_mm": [
+        41.98,
+        21.54
+      ],
+      "layers": [
+        1
+      ]
+    },
+    {
+      "gap_mm": 0.1245,
+      "net1": "CHG_SDA",
+      "net2": "VDD_3V3",
+      "object1": "track:292",
+      "object2": "track:380",
+      "closest_midpoint_mm": [
+        42.24,
+        21.79
+      ],
+      "layers": [
+        1
+      ]
+    },
+    {
+      "gap_mm": 0.1245,
+      "net1": "CHG_SDA",
+      "net2": "VDD_3V3",
+      "object1": "track:293",
+      "object2": "track:380",
+      "closest_midpoint_mm": [
+        42.24,
+        21.79
+      ],
+      "layers": [
+        1
+      ]
+    },
+    {
+      "gap_mm": 0.125,
+      "net1": "GND",
+      "net2": "KEY_PREV_N",
+      "object1": "track:563",
+      "object2": "track:625",
+      "closest_midpoint_mm": [
+        55.35,
+        7.16
+      ],
+      "layers": [
+        1
+      ]
+    },
+    {
+      "gap_mm": 0.125,
+      "net1": "GND",
+      "net2": "KEY_PREV_N",
+      "object1": "track:563",
+      "object2": "track:626",
+      "closest_midpoint_mm": [
+        55.35,
+        7.16
+      ],
+      "layers": [
+        1
+      ]
+    },
+    {
+      "gap_mm": 0.125,
+      "net1": "GND",
+      "net2": "KEY_PREV_N",
+      "object1": "track:563",
+      "object2": "track:624",
+      "closest_midpoint_mm": [
+        56.45,
+        7.16
+      ],
+      "layers": [
+        1
+      ]
+    },
+    {
+      "gap_mm": 0.1351,
+      "net1": "KEY_OK_N",
+      "net2": "CHG_INT_N",
+      "object1": "track:167",
+      "object2": "track:277",
+      "closest_midpoint_mm": [
+        45.61,
+        15.12
+      ],
+      "layers": [
+        1
+      ]
+    },
+    {
+      "gap_mm": 0.1351,
+      "net1": "KEY_OK_N",
+      "net2": "CHG_INT_N",
+      "object1": "track:167",
+      "object2": "track:276",
+      "closest_midpoint_mm": [
+        45.23,
+        15.49
+      ],
+      "layers": [
+        1
+      ]
+    },
+    {
+      "gap_mm": 0.1351,
+      "net1": "KEY_OK_N",
+      "net2": "CHG_INT_N",
+      "object1": "track:168",
+      "object2": "track:277",
+      "closest_midpoint_mm": [
+        45.61,
+        15.12
+      ],
+      "layers": [
+        1
+      ]
+    },
+    {
+      "gap_mm": 0.146,
+      "net1": "EPD_VSPH",
+      "net2": "EPD_VDD",
+      "object1": "track:150",
+      "object2": "track:664",
+      "closest_midpoint_mm": [
+        54.69,
+        37.61
+      ],
+      "layers": [
+        1
+      ]
+    },
+    {
+      "gap_mm": 0.146,
+      "net1": "EPD_VSPH",
+      "net2": "EPD_VDD",
+      "object1": "track:151",
+      "object2": "track:664",
+      "closest_midpoint_mm": [
+        53.93,
+        38.38
+      ],
+      "layers": [
+        1
+      ]
+    },
+    {
+      "gap_mm": 0.146,
+      "net1": "EPD_VSPH",
+      "net2": "EPD_VDD",
+      "object1": "track:152",
+      "object2": "track:664",
+      "closest_midpoint_mm": [
+        53.93,
+        38.38
+      ],
+      "layers": [
+        1
+      ]
+    },
+    {
+      "gap_mm": 0.1461,
+      "net1": "CHG_INT_N",
+      "net2": "CHG_SDA",
+      "object1": "track:280",
+      "object2": "track:298",
+      "closest_midpoint_mm": [
+        60.63,
+        11.45
+      ],
+      "layers": [
+        2
+      ]
+    },
+    {
+      "gap_mm": 0.1461,
+      "net1": "CHG_INT_N",
+      "net2": "CHG_SDA",
+      "object1": "track:280",
+      "object2": "track:299",
+      "closest_midpoint_mm": [
+        60.63,
+        11.45
+      ],
+      "layers": [
+        2
+      ]
+    },
+    {
+      "gap_mm": 0.1461,
+      "net1": "CHG_INT_N",
+      "net2": "CHG_SDA",
+      "object1": "track:280",
+      "object2": "track:297",
+      "closest_midpoint_mm": [
+        59.87,
+        11.45
+      ],
+      "layers": [
+        2
+      ]
+    },
+    {
+      "gap_mm": 0.1462,
+      "net1": "CHG_INT_N",
+      "net2": "KEY_PREV_N",
+      "object1": "track:280",
+      "object2": "track:609",
+      "closest_midpoint_mm": [
+        61.21,
+        11.17
+      ],
+      "layers": [
+        2
+      ]
+    },
+    {
+      "gap_mm": 0.1462,
+      "net1": "CHG_INT_N",
+      "net2": "KEY_PREV_N",
+      "object1": "track:281",
+      "object2": "track:609",
+      "closest_midpoint_mm": [
+        61.21,
+        11.17
+      ],
+      "layers": [
+        2
+      ]
+    },
+    {
+      "gap_mm": 0.1462,
+      "net1": "CHG_INT_N",
+      "net2": "KEY_PREV_N",
+      "object1": "track:281",
+      "object2": "track:608",
+      "closest_midpoint_mm": [
+        61.6,
+        11.55
+      ],
+      "layers": [
+        2
+      ]
+    },
+    {
+      "gap_mm": 0.1486,
+      "net1": "EPD_RESE",
+      "net2": "EPD_VSPL2",
+      "object1": "track:210",
+      "object2": "track:594",
+      "closest_midpoint_mm": [
+        57.69,
+        33.09
+      ],
+      "layers": [
+        2
+      ]
+    },
+    {
+      "gap_mm": 0.1486,
+      "net1": "EPD_RESE",
+      "net2": "EPD_VSPL2",
+      "object1": "track:210",
+      "object2": "track:593",
+      "closest_midpoint_mm": [
+        55.44,
+        35.35
+      ],
+      "layers": [
+        2
+      ]
+    },
+    {
+      "gap_mm": 0.1486,
+      "net1": "EPD_RESE",
+      "net2": "EPD_VSPL2",
+      "object1": "track:211",
+      "object2": "track:593",
+      "closest_midpoint_mm": [
+        55.44,
+        35.35
+      ],
+      "layers": [
+        2
+      ]
+    },
+    {
+      "gap_mm": 0.1489,
+      "net1": "EPD_BS0",
+      "net2": "EPD_BUSY_TBD",
+      "object1": "track:140",
+      "object2": "track:247",
+      "closest_midpoint_mm": [
+        55.2,
+        32.15
+      ],
+      "layers": [
+        1
+      ]
+    },
+    {
+      "gap_mm": 0.1489,
+      "net1": "EPD_BS0",
+      "net2": "EPD_BUSY_TBD",
+      "object1": "track:141",
+      "object2": "track:247",
+      "closest_midpoint_mm": [
+        54.91,
+        31.86
+      ],
+      "layers": [
+        1
+      ]
+    },
+    {
+      "gap_mm": 0.1489,
+      "net1": "EPD_BS0",
+      "net2": "EPD_BUSY_TBD",
+      "object1": "track:141",
+      "object2": "track:248",
+      "closest_midpoint_mm": [
+        54.91,
+        31.86
+      ],
+      "layers": [
+        1
+      ]
+    }
+  ]
+}

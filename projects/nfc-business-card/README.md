@@ -2,7 +2,7 @@
 
 ## 当前确定方案
 
-**最新局部重排候选：**[R4 原生工程、制造文件与检查记录](hardware/production/r1-layout-reset-r4/README.md)已完成显示供电区 15 个器件成组重排和受影响铜箔重布，修正继承的 USB CC2 保护分支。本地保存重开的原生 DRC、独立连通、板框／天线、Gerber 钻孔与孔环、BOM/CPL 一致性检查通过；最小实际钻孔约 0.30 mm、最小径向孔环 0.1016 mm，未发现小于 0.15 mm 的异网走线／焊盘／过孔铜间距。[嘉立创 R4 任务](hardware/production/r1-layout-reset-r4/vendor-dfm-2026-09-24.md)已上传 Gerber/BOM/CPL，但线上 PCB/SMT 危险明细尚未有效返回；J1/U1 贴装、阻焊、孔环及费用仍需供应商确认，**尚不可下单**。R2 保留为对照基线。
+**最新局部重排候选：**[R4 原生工程、制造文件与检查记录](hardware/production/r1-layout-reset-r4/README.md)已完成显示供电区 15 个器件成组重排和受影响铜箔重布，修正继承的 USB CC2 保护分支。本地保存重开的原生 DRC、独立连通、板框／天线、Gerber 钻孔与孔环、BOM/CPL 一致性检查通过；最小实际钻孔约 0.30 mm、最小径向孔环 0.1016 mm，未发现小于 0.15 mm 的异网走线／焊盘／过孔铜间距。[嘉立创 R4 PCB/SMT DFM](hardware/production/r1-layout-reset-r4/vendor-dfm-2026-09-24.md)刷新重跑后发现新增 C9 焊脚到孔 0 mm、盘到线 2 条及 PTH 孔到线 2 条危险；孔环、J1/U1、阻焊和 USB 槽危险也仍在，**不可下单**。下一步在独立候选中先局部移孔改线，再请供应商按实物审核遗留工艺项；R2 保留为对照基线。
 
 **最新低成本制板候选：**[R2 独立工程与制造检查文件](hardware/production/r1-free-0p30-sense-ring-r2/README.md)继承了 TS/MR 10 kΩ 到地及可关断的电池 ADC 采样，在显示供电、USB 扇出及充电区局部重布。重开工程后原生 DRC 为 0，最小实际钻孔 0.30226 mm、最小径向孔环 0.1016 mm；独立走线/焊盘/过孔审计未发现小于 0.15 mm 的异网铜间距。[新版线上 PCB/SMT DFM](hardware/production/r1-free-0p30-sense-ring-r2/vendor-dfm-2026-09-24.md)仍列孔环、过孔到焊盘、USB 槽及 J1/U1 贴装危险，**尚不可投产**；原 R1 是未投产的制造基准。
 
@@ -41,7 +41,7 @@
 | [Native EDA project](../../eda/NFC-Card-R1.eprj2) | Primary editable source: one PCB and one four-page schematic |
 | [Ring and clearance R2 candidate](hardware/production/r1-free-0p30-sense-ring-r2/README.md) | 最新独立工程、Gerber/BOM/CPL、本地验证与新版线上 DFM；不可投产 |
 | [R3 layout reset trial](hardware/production/r1-power-relayout-r3/README.md) | 独立重排与诊断导出；小孔和供电回路待解决，不可下单 |
-| [R4 routed layout candidate](hardware/production/r1-layout-reset-r4/README.md) | 独立工程、Gerber/BOM/CPL、本地验证及供应商任务；线上 DFM 待完成，不可下单 |
+| [R4 routed layout candidate](hardware/production/r1-layout-reset-r4/README.md) | 独立工程、Gerber/BOM/CPL、本地验证及 PCB/SMT DFM 危险明细；待改孔改线与供应商审核，不可下单 |
 | [Previous battery-sensing cost candidate](hardware/production/r1-free-0p30-sense/README.md) | 前版线上 DFM 与薄孔环诊断基线 |
 | [Manufacturing files](hardware/production/r1/README.md) | Gerber for bare PCB; BOM and CPL for assembly; PDF, STEP and portable EDA backup |
 | [Design and verification](hardware/pcb-r1-delivery.md) | Design decisions, checks, limits and reproduction commands |

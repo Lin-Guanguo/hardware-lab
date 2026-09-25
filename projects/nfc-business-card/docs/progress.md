@@ -2,6 +2,8 @@
 
 ## 当前确定方案
 
+2026-09-26：[R20 过孔间距候选](../hardware/production/r1-layout-reset-r20/README.md)在 R19 上局部移动 C23、R7/R9 和 NFC2 附近三个过孔，未移动器件、USB 接口、板框或天线。保存重开后原生 DRC 0，66 个位号／256 个引脚网络一致；独立连通、NFC、Gerber 钻孔／孔环、0.15 mm 异网离散铜间距及 BOM/CPL 检查通过。本地三处同网孔到焊盘 <0.10 mm 配对已消；[Gerber 已上传](../hardware/production/r1-layout-reset-r20/vendor-dfm-2026-09-26.md)，但 R20 线上 PCB／SMT 结果未读到。下一步读取网站结果，再手工简化 USB 扇出并处理剩余阻焊、孔环、装配和外壳问题；**不可下单**。
+
 2026-09-26：[R19 USB4110 同步候选](../hardware/r1-usb4110-sync-r19.md)修正了 R18B 原理图 J1 沿用旧符号导致的“器件／封装属性有误”。官方符号的 14 个有网络引脚保持原连接，SBU1/SBU2 不接；保存重开后原生 DRC **0**，原理图／PCB 66 个位号、256 个引脚逐脚一致。PCB 器件、焊盘、线、孔、板框和铺铜与 R18B 逐项相同。下一轮局部重布 USB 扇出、定位线上剩余工艺危险，并做真实 USB4110 机械候选；**不可下单**。
 
 2026-09-26：[R18B USB4110 独立诊断](../hardware/production/r1-layout-reset-r18b/README.md)完成整颗 J1 库器件替换、直板边、两颗 Ø0.65 mm 非镀定位孔、同版 Gerber／BOM／CPL 与[嘉立创 PCB／SMT DFM](../hardware/production/r1-layout-reset-r18b/vendor-dfm-2026-09-26.md)。旧接口四槽危险 4→0、J1 焊脚相交危险 12→0，BOM 29/29 组自动匹配；保存重开的原生 DRC 几何错误 0，但有 1 条 `Import Changes`，原理图 J1 仍带旧 USB4500 符号。孔环、阻焊、局部间距和 U1 贴装危险未关闭；现有 5.8 mm 外壳名义干涉约 0.18 mm。下一轮先同步原理图、重布 USB 局部并建独立外壳候选，**不可下单**。

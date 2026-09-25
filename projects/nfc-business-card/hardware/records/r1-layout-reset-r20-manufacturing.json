@@ -1,0 +1,21 @@
+{
+  "status": "LOCAL_CHECKS_PASS_VENDOR_DFM_REQUIRED",
+  "project_sha256": "f36b081bf92738dc0ed552336d5957bc6920ceee083e611ae7a51a3bb04c4c6c",
+  "snapshot_sha256": "c824fd64d40b376c56439ddbcdabd3d958419ba1cc4631ff9868dbbde265d791",
+  "gerber_sha256": "47e18869659b760c7bb0a73e2888c56a9025c6d9ea8e7d4bf5e93697542b0d7f",
+  "bom_sha256": "45e8b0f49e903e49467941fa57c0a3e454b6c6c02ed9870fa600ec1101ee6be4",
+  "cpl_sha256": "6c7693c9416bc138a22290d46044b21e9aafc80d1715ddab34148b9756f1f349",
+  "components": 66,
+  "bom_groups": 29,
+  "cpl_components": 66,
+  "maximum_cpl_reference_error_mm": 0.000441,
+  "vias": 167,
+  "minimum_via_drill_mm": 0.299999,
+  "minimum_radial_annular_ring_mm": 0.1016,
+  "different_net_copper_pairs_below_0p15_mm": 0,
+  "same_net_via_hole_to_pad_pairs_below_0p10_mm": 0,
+  "usb_plated_slots": 0,
+  "usb_npth_locating_holes": 2,
+  "native_drc_after_reopen": 0,
+  "qualification": "Local geometry only; online PCB/SMT DFM, assembly and enclosure fit are separate gates."
+}

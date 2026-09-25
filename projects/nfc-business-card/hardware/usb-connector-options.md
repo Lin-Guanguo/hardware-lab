@@ -2,7 +2,7 @@
 
 ## 当前确定方案
 
-目前仍以 [R14](production/r1-layout-reset-r14/README.md)作为 DRC 0 审核基线，**不下单**。[R17](production/r1-layout-reset-r17/README.md)证明 USB4500 焊盘位移可以保存重开，但 12 条 J1 装配危险未消，并新增 12 条板边错误。[R18B](production/r1-layout-reset-r18b/README.md)已在独立工程把整颗 J1 换为 USB4110：嘉立创线上 DFM 的旧四槽危险 4→0、J1 焊脚／焊盘相交危险 12→0。其原理图同步、其余工艺危险、USB 局部布线和外壳仍未完成；这验证了接口路线的局部收益，尚不构成制造放行。
+目前 [R19](r1-usb4110-sync-r19.md)是最新可重开的 USB4110 独立候选，原生 DRC 0，**仍不可下单**。[R17](production/r1-layout-reset-r17/README.md)证明 USB4500 焊盘位移可以保存重开，但 12 条 J1 装配危险未消，并新增 12 条板边错误。[R18B](production/r1-layout-reset-r18b/README.md)将整颗 J1 换为 USB4110，嘉立创线上 DFM 的旧四槽危险 4→0、J1 焊脚／焊盘相交危险 12→0；R19 修正了原理图符号同步，PCB 几何不变。其余工艺危险、USB 局部布线和外壳仍未完成。
 
 ## 一手资料与已测量的差异
 

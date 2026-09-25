@@ -14,6 +14,8 @@ Open [NFC-Card-R1.eprj2](NFC-Card-R1.eprj2) for the NFC card. It contains one PC
 
 [NFC-Card-R1-Layout-Reset-R18B-USB4110-Diagnostic.eprj2](NFC-Card-R1-Layout-Reset-R18B-USB4110-Diagnostic.eprj2) 是顶部贴装 USB4110 的独立接口诊断工程。[同版制造文件、本地检查和嘉立创线上 PCB／SMT DFM](../projects/nfc-business-card/hardware/production/r1-layout-reset-r18b/README.md)记录旧四槽和 J1 焊脚危险消除，同时保留原理图同步、其他工艺及外壳问题；不可下单。
 
+[NFC-Card-R1-Layout-Reset-R19-USB4110-Sync.eprj2](NFC-Card-R1-Layout-Reset-R19-USB4110-Sync.eprj2) 是修复原理图 J1 官方符号绑定的独立候选。[R19 检查与后续门槛](../projects/nfc-business-card/hardware/r1-usb4110-sync-r19.md)记录保存重开后原生 DRC 0、逐引脚网络与 R18B PCB 几何等价；仍不可下单。
+
 Historical projects and database checkpoints are preserved in [archive/nfc-business-card](archive/nfc-business-card/). The E14-named project contains later E-series experiments; its filename does not identify the final R1 source.
 
 [孔环扩张诊断工程](archive/NFC-Card-R1-Free-0p30-Sense-Ring-Study-DRC24.eprj2)保留 24 条 DRC 冲突，只供继续局部改线；不能作为制造工程。

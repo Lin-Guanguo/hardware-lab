@@ -1,0 +1,66 @@
+{
+  "status": "SCHEMATIC_SYNCED_NOT_PRODUCTION_READY",
+  "saved_reopened_native_drc_errors": 0,
+  "independent_netlist": {
+    "refs": 66,
+    "pins": 256,
+    "changed_pin_nets_vs_r18b": 0,
+    "pcb_pin_net_mismatches": 0
+  },
+  "j1": {
+    "part": "USB4110-GF-A",
+    "symbol_uuid": "d3534dfc85ea9d48",
+    "device_uuid": "d5e46cdeb84db2b7",
+    "footprint_uuid": "421752d223c72214",
+    "shell_pin_names": "SHELL",
+    "pin_count": 16
+  },
+  "pcb_geometry_comparison": {
+    "components": {
+      "r18b": 66,
+      "r19": 66,
+      "changed": 0
+    },
+    "pads": {
+      "r18b": 266,
+      "r19": 266,
+      "changed": 0
+    },
+    "polylines": {
+      "r18b": 8,
+      "r19": 8,
+      "changed": 0
+    },
+    "regions": {
+      "r18b": 5,
+      "r19": 5,
+      "changed": 0
+    },
+    "pours": {
+      "r18b": 2,
+      "r19": 2,
+      "changed": 0
+    },
+    "poured": {
+      "r18b": 2,
+      "r19": 2,
+      "changed": 0
+    },
+    "strings": {
+      "r18b": 17,
+      "r19": 17,
+      "changed": 0
+    },
+    "lines": {
+      "r18b": 944,
+      "r19": 944,
+      "changed": 0
+    },
+    "vias": {
+      "r18b": 167,
+      "r19": 167,
+      "changed": 0
+    }
+  },
+  "note": "R19 keeps R18B board geometry, placement and supplied Gerber; supplier DFM has not been rerun for this schematic-only candidate."
+}

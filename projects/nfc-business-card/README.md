@@ -2,6 +2,8 @@
 
 ## 当前确定方案
 
+**最新同步候选：**[R19 独立原生工程与检查记录](hardware/r1-usb4110-sync-r19.md)已把原理图 J1 换成完整官方 USB4110 库器件，14 个有网络引脚维持原连接。保存、关闭、重开后原生 DRC **0 条**；原理图／PCB 66 个位号、256 个引脚逐脚一致，PCB 几何与 R18B 逐项相同。R18B 的线上 DFM 仍揭示孔环、阻焊、局部间距和 U1 装配危险；外壳与 USB4110 也未适配，**R19 不可下单**。
+
 **最新 USB4110 诊断：**[R18B 原生工程、制造文件与线上 PCB／SMT DFM](hardware/production/r1-layout-reset-r18b/README.md)将 J1 换为 GCT 官方顶部贴装器件，并改用直板边。旧四个镀铜槽危险 4→0，J1 焊脚／焊盘相交危险 12→0；0.30 mm 最小钻孔、0.1016 mm 最小径向孔环、独立连通与天线检查通过。原生 DRC 仍有 1 条原理图／PCB 同步提示，网页仍报孔环、阻焊、局部间距及 U1 装配危险，5.8 mm 外壳与新接口名义干涉约 0.18 mm。USB 区旧绕线尚未重布，**R18B 不可下单**；R14 仍是 DRC 0 对照基线。
 
 **最新独立候选：**[R14 原生工程、制造文件与线上 DFM](hardware/production/r1-layout-reset-r14/README.md)继承 [R12](hardware/production/r1-layout-reset-r12/README.md)，只移动 R1、C1、C8 和 SWDIO 附近四个过孔及短线，器件、板框、天线和 USB 保护未移。保存重开后原生 DRC 0，独立连通、NFC／板框、0.30 mm 钻孔和 ≥0.10 mm 径向孔环检查通过；未发现 <0.15 mm 异网铜对象间距。同网孔壁到焊盘铜边 <0.10 mm 的不同过孔 8→4；嘉立创 VIA 孔到焊盘危险 20→12，焊盘间距危险未增加。孔环、阻焊、USB 槽及 J1/U1 装配危险仍待供应商人工确认，**不可下单**。
@@ -60,6 +62,7 @@
 | [R16 USB notch diagnostic](hardware/production/r1-layout-reset-r16/README.md) | 加宽缺口后重开与线上 DFM；J1 装配危险仍在，不可下单 |
 | [R17 USB land diagnostic](hardware/production/r1-layout-reset-r17/README.md) | 12 个焊盘在原生封装保存重开；板边 DRC 与线上危险新增，待原厂／工艺复核 |
 | [R18B USB4110 diagnostic](hardware/production/r1-layout-reset-r18b/README.md) | 标准顶部贴装接口、直板边、同版制造文件与线上 PCB／SMT DFM；仍有原生同步、局部工艺和外壳问题，不可下单 |
+| [R19 USB4110 schematic sync](hardware/r1-usb4110-sync-r19.md) | 替换完整官方原理图符号，保存重开后原生 DRC 0；PCB 几何与 R18B 一致，仍不可下单 |
 | [USB connector options](hardware/usb-connector-options.md) | 原厂顶部贴装 USB4110 可避开中置缺口／槽，但名义上需要约 6.3 mm 外壳候选 |
 | [Previous battery-sensing cost candidate](hardware/production/r1-free-0p30-sense/README.md) | 前版线上 DFM 与薄孔环诊断基线 |
 | [Manufacturing files](hardware/production/r1/README.md) | Gerber for bare PCB; BOM and CPL for assembly; PDF, STEP and portable EDA backup |

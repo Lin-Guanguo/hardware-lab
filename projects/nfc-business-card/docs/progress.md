@@ -2,7 +2,9 @@
 
 ## 当前确定方案
 
-2026-09-25：[R10 独立候选](../hardware/production/r1-layout-reset-r10/README.md)从 R9 导入，只清理顶层封装外框，保留 D1–D3 阴极标记；铜、孔、装配、板框和天线不变。修正 Gerber 填充边界误计后，顶层外框触及焊盘线段 **3→0**，距焊盘 <0.13 mm 的线段 **78→68**。原生 DRC 0、独立连通、NFC／板框、0.30 mm 钻孔、≥0.10 mm 径向孔环检查通过。R10 Gerber/BOM/CPL 已上传嘉立创，29/29 组器件自动匹配；PCB DFM 的 VIA 孔到焊盘危险为 24，孔环 100、阻焊桥 43、USB 四槽等危险仍在。SMT DFM 分析待完成，供应商未确认，**不下单**。
+2026-09-25：[R12 独立候选](../hardware/production/r1-layout-reset-r12/README.md)从 R10 原生工程重新建立，只移动 R2、Q2 附近两孔和相连短线，保留 R10 顶层丝印。保存重开后原生 DRC 0；独立连通、NFC／板框、0.30 mm 钻孔、≥0.10 mm 径向孔环与异网 0.15 mm 间距检查通过。同网过孔压入焊盘 **2→0**；[嘉立创 PCB/SMT DFM](../hardware/production/r1-layout-reset-r12/vendor-dfm-2026-09-25.md)确认孔落焊盘警告 **4→0**、VIA 孔到焊盘危险 **24→20**，BOM 29/29 组匹配；孔环 100、阻焊桥 43、USB 四槽、J1 焊脚相交 12 和 U1 板边 0.07 mm 危险仍在，供应商未确认，**不下单**。
+
+2026-09-25：[R10 独立候选](../hardware/production/r1-layout-reset-r10/README.md)从 R9 导入，只清理顶层封装外框，保留 D1–D3 阴极标记；铜、孔、装配、板框和天线不变。修正 Gerber 填充边界误计后，顶层外框触及焊盘线段 **3→0**，距焊盘 <0.13 mm 的线段 **78→68**。原生 DRC 0、独立连通、NFC／板框、0.30 mm 钻孔、≥0.10 mm 径向孔环检查通过。R10 Gerber/BOM/CPL 已上传嘉立创，29/29 组器件自动匹配；PCB DFM 的 VIA 孔到焊盘危险为 24，孔环 100、阻焊桥 43、USB 四槽等危险仍在。SMT DFM 后续返回 J1 焊脚相交 12 和 U1 板边 0.07 mm 危险，**不下单**。
 
 2026-09-25：[R9 独立候选](../hardware/production/r1-layout-reset-r9/README.md)继承 R8 丝印清理，只移动 R15、Q3、R1 附近的 3 个 GND 过孔及短线。本地同网孔壁到焊盘铜边 <0.10 mm 的不同过孔 13→10，压入焊盘 4→2；保存重开的原生 DRC 0，独立连通、NFC/板框、0.30 mm 钻孔、≥0.10 mm 径向孔环和 0.15 mm 异网间距检查通过。Gerber 已上传嘉立创“我的文件”，线上结果页未打开，BOM/CPL 尚未上传到该任务；剩余孔距、封装外框丝印、孔环、阻焊、USB 槽及 J1/U1 装配危险待复核，**不下单**。
 
@@ -43,7 +45,8 @@
 | R7 DFM 基线 | [同版工程与文件](../hardware/production/r1-layout-reset-r7/README.md)本地检查通过，[线上 DFM](../hardware/production/r1-layout-reset-r7/vendor-dfm-2026-09-25.md)确认 U1 焊脚到孔危险 0；孔环、过孔到焊盘、阻焊、四槽、J1/U1 模型危险仍待处理和工厂审核，不可下单。 |
 | R8 丝印候选 | [独立工程与制造文件](../hardware/production/r1-layout-reset-r8/README.md)已保存，原生 DRC 0，8 个过近顶层位号已隐藏；文字到焊盘近距笔画 89→0，封装外框与其他 DFM 危险仍待处理。Gerber 已上传，线上结果尚未读取，不可下单。 |
 | R9 过孔局部修正 | [独立工程与制造文件](../hardware/production/r1-layout-reset-r9/README.md)已保存并重开，原生 DRC 0；同网薄孔到焊盘 13→10，压入焊盘 4→2。Gerber 已上传，线上 PCB/SMT 结果尚未读取；继续局部处理并请供应商审核，不可下单。 |
-| R10 顶层封装丝印 | [独立工程与制造文件](../hardware/production/r1-layout-reset-r10/README.md)已保存，原生 DRC 0；修正审计器后触及焊盘铜边的丝印线段 3→0。线上 PCB DFM 仍有孔环、过孔到焊盘、阻焊、四槽危险；SMT 分析待完成，不可下单。 |
+| R10 顶层封装丝印 | [独立工程与制造文件](../hardware/production/r1-layout-reset-r10/README.md)已保存，原生 DRC 0；修正审计器后触及焊盘铜边的丝印线段 3→0。线上 PCB/SMT DFM 仍有孔环、过孔到焊盘、阻焊、四槽及 J1/U1 装配危险，不可下单。 |
+| R12 两孔局部修正 | [独立工程与制造文件](../hardware/production/r1-layout-reset-r12/README.md)已保存重开，原生 DRC 0；孔落焊盘警告清零、过孔到焊盘危险 24→20。线上 PCB/SMT 仍报孔环、阻焊、四槽及 J1/U1 危险，待进一步局部修改与供应商审核，不可下单。 |
 | Battery | User measures protected pack and wires; nominal 31 × 12 × 3 mm |
 
 No order placed. [Historical progress and experiments](../archive/pre-r1/readmes/projects/nfc-business-card/docs/progress.md) retain earlier findings and resolutions.

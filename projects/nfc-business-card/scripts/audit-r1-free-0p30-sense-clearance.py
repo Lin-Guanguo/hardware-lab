@@ -57,6 +57,7 @@ def silk_pad_audit(gerber, pads):
             section = "other"
             aperture = None
             previous = None
+            in_region = False
             counts = defaultdict(lambda: {"strokes": 0, "within_0p13_mm": 0, "touching_pad": 0})
             for line in lines:
                 if line.startswith("G04 Text Start"):
@@ -65,8 +66,18 @@ def silk_pad_audit(gerber, pads):
                     section = "footprint"
                 elif line.startswith("G04 Circle Start"):
                     section = "circle"
+                if line == "G36*":
+                    in_region = True
+                    previous = None
+                    continue
+                if line == "G37*":
+                    in_region = False
+                    previous = None
+                    continue
                 if match := re.fullmatch(r"G54D(\d+)\*", line):
                     aperture = int(match[1])
+                    continue
+                if in_region:
                     continue
                 match = re.fullmatch(r"G0[123]X(\d+)Y(\d+)D(0[123])\*", line)
                 if not match:

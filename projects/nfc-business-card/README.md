@@ -2,7 +2,7 @@
 
 ## 当前确定方案
 
-**最新独立候选：**[R9 原生工程与制造文件](hardware/production/r1-layout-reset-r9/README.md)从 R8 丝印清理版再局部移动 3 个同网 GND 过孔及短线；本地孔壁到焊盘铜边 <0.10 mm 的不同过孔由 13 减至 10，实际压入焊盘的由 4 减至 2。保存重开的原生 DRC、独立连通、NFC/板框、0.30 mm 钻孔和 ≥0.10 mm 径向孔环检查通过，未发现 <0.15 mm 的异网铜对象间距。R9 Gerber 已上传嘉立创，但线上 PCB/SMT 结果尚未取得，**不可下单**。前版 [R8](hardware/production/r1-layout-reset-r8/README.md)清理了 8 个过近顶层位号；本地文字近距笔画 89→0，封装外框仍有 96 段过近。
+**最新独立候选：**[R10 原生工程、制造文件与线上 DFM](hardware/production/r1-layout-reset-r10/README.md)继承 R9 的过孔局部修正，继续清理顶层封装丝印并保留二极管阴极标记。修正 Gerber 审计器误计填充边界后，触及焊盘铜边的外框线段由 R9 的 3 段降至 0。原生 DRC、独立连通、NFC/板框、0.30 mm 钻孔和 ≥0.10 mm 径向孔环检查通过，未发现 <0.15 mm 异网铜对象间距。嘉立创 PCB DFM 的 VIA 孔到焊盘危险为 24 条；孔环、阻焊、USB 槽及 J1/U1 装配仍待处理，**不可下单**。前版 [R8](hardware/production/r1-layout-reset-r8/README.md)隐藏了 8 个过近顶层位号，[R9](hardware/production/r1-layout-reset-r9/README.md)局部移动了 3 个同网过孔。
 
 **前版布局与 DFM 基线：**[R7 原生工程、制造文件与检查记录](hardware/production/r1-layout-reset-r7/README.md)从 R4 经 R5、R6 的局部修正继续迭代，保留显示供电分区、电池采样和 USB CC2 保护拓扑。保存重开的原生 DRC、独立连通、板框／天线、Gerber 钻孔与孔环、BOM/CPL 一致性检查通过；最小实际钻孔约 0.30 mm、最小径向孔环 0.1016 mm，未发现小于 0.15 mm 的异网铜对象间距。[嘉立创 R7 PCB/SMT DFM](hardware/production/r1-layout-reset-r7/vendor-dfm-2026-09-25.md)确认 U1 焊脚到孔危险从 2 降为 0，VIA 孔到焊盘危险从 32 降为 30；孔环、阻焊、USB 槽、J1 焊脚模型和 U1 板边危险仍需处理及供应商人工确认，**不可下单**。R5/R6 保留为对照；R2 是较早的低成本基线。
 
@@ -46,7 +46,8 @@
 | [R4 routed layout candidate](hardware/production/r1-layout-reset-r4/README.md) | 独立工程、Gerber/BOM/CPL、本地验证及 PCB/SMT DFM 危险明细；待改孔改线与供应商审核，不可下单 |
 | [R5/R6 intermediate candidates](hardware/production/r1-layout-reset-r6/README.md) | R5 消除 C9 和 CC2 部分危险，R6 修正 CC2 回退并保留保护拓扑；均为对照，不能下单 |
 | [R7 latest layout candidate](hardware/production/r1-layout-reset-r7/README.md) | U1 孔位局部修正，同版制造文件、本地检查和线上 PCB/SMT DFM；仍有危险，不可下单 |
-| [R9 latest local candidate](hardware/production/r1-layout-reset-r9/README.md) | 继承 R8 丝印清理，局部移开 3 个同网过孔；本地检查通过，待线上 PCB/SMT DFM 与供应商审核，不可下单 |
+| [R9 via-clearance checkpoint](hardware/production/r1-layout-reset-r9/README.md) | 继承 R8 丝印清理，局部移开 3 个同网过孔；保留作对照 |
+| [R10 latest layout candidate](hardware/production/r1-layout-reset-r10/README.md) | 顶层封装丝印清理，保留阴极标记；本地检查通过，线上 DFM 仍需处理，不可下单 |
 | [Previous battery-sensing cost candidate](hardware/production/r1-free-0p30-sense/README.md) | 前版线上 DFM 与薄孔环诊断基线 |
 | [Manufacturing files](hardware/production/r1/README.md) | Gerber for bare PCB; BOM and CPL for assembly; PDF, STEP and portable EDA backup |
 | [Design and verification](hardware/pcb-r1-delivery.md) | Design decisions, checks, limits and reproduction commands |

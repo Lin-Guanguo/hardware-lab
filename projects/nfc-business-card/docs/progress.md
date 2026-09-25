@@ -2,7 +2,7 @@
 
 ## 当前确定方案
 
-2026-09-26：[R21 USB CC2 局部候选](../hardware/production/r1-layout-reset-r21/README.md)从 R20 仅重布 `USB_CC2`，去除并行底层绕行。过孔 4→2，线长 12.454→8.196 mm；器件、焊盘、原理图网络、天线、板框不变。首次布线产生微小孤立 GND 铜，已在独立试验中修正；最终工程保存重开后原生 DRC 0，独立连通无孤立铜，离散异网 0.15 mm 间距、Gerber 钻孔／孔环、BOM/CPL 检查通过。[线上 R21 DFM](../hardware/production/r1-layout-reset-r21/vendor-dfm-2026-09-26.md)未获取。下一步先读供应商结果，再逐组处理 D+/D−、VBUS 和剩余阻焊／装配／外壳问题；**不可下单**。
+2026-09-26：[R21 USB CC2 局部候选](../hardware/production/r1-layout-reset-r21/README.md)从 R20 仅重布 `USB_CC2`，去除并行底层绕行。过孔 4→2，线长 12.454→8.196 mm；器件、焊盘、原理图网络、天线、板框不变。首次布线产生微小孤立 GND 铜，已在独立试验中修正；最终工程保存重开后原生 DRC 0，独立连通无孤立铜，离散异网 0.15 mm 间距、Gerber 钻孔／孔环、BOM/CPL 检查通过。[线上 R21 DFM](../hardware/production/r1-layout-reset-r21/vendor-dfm-2026-09-26.md)未获取。[后续逐孔复核](../hardware/r1-usb-routing-review-r21.md)确认 D− 的五孔分别承担触点汇合与 U5 前后换层等作用；尝试给 U5 GND 直连附近过孔时与 D+ 顶层线相交，已撤销试布，当前 R21 不变。下一步先读供应商结果，再把 D+/D− 与 U5 GND 联合规划，核对 VBUS、剩余阻焊／装配／外壳问题；**不可下单**。
 
 2026-09-26：[R20 过孔间距候选](../hardware/production/r1-layout-reset-r20/README.md)在 R19 上局部移动 C23、R7/R9 和 NFC2 附近三个过孔，未移动器件、USB 接口、板框或天线。保存重开后原生 DRC 0，66 个位号／256 个引脚网络一致；独立连通、NFC、Gerber 钻孔／孔环、0.15 mm 异网离散铜间距及 BOM/CPL 检查通过。本地三处同网孔到焊盘 <0.10 mm 配对已消；[Gerber 已上传](../hardware/production/r1-layout-reset-r20/vendor-dfm-2026-09-26.md)，但 R20 线上 PCB／SMT 结果未读到。下一步读取网站结果，再手工简化 USB 扇出并处理剩余阻焊、孔环、装配和外壳问题；**不可下单**。
 

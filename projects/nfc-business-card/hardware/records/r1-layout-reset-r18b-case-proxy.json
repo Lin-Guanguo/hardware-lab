@@ -1,0 +1,44 @@
+{
+  "status": "NOMINAL_PROXY_ONLY",
+  "source": "enclosure/r1-rounded-rear-soft-swd254/rear-cover-study.FCStd",
+  "input": {
+    "connector": "GCT USB4110-GF-A",
+    "profile_above_board_mm": 3.26,
+    "proxy_length_mm": 7.7,
+    "proxy_width_mm": 11.55022128564,
+    "pcb_top_z_mm": 1.92003,
+    "mating_face_x_mm": 83.50408,
+    "floor_mm": 0.8,
+    "pcb_support_mm": 0.32,
+    "lid_mm": 0.8,
+    "target_nominal_top_gap_mm": 0.3
+  },
+  "proxy_box_mm": [
+    75.80408,
+    83.50408,
+    20.22494,
+    31.77516,
+    1.92003,
+    5.18003
+  ],
+  "other_component_solid_intersection_mm3": {},
+  "case_heights": {
+    "5.8": {
+      "lid_inner_z_mm": 5.0,
+      "usb_top_gap_mm": -0.18003,
+      "nominal_interference_mm": 0.18003
+    },
+    "6.3": {
+      "lid_inner_z_mm": 5.5,
+      "usb_top_gap_mm": 0.31997,
+      "nominal_interference_mm": 0
+    }
+  },
+  "minimum_total_height_for_target_gap_mm": 6.28003,
+  "limits": [
+    "Rectangular connector proxy; does not model real USB4110 STEP, shell tabs or locating pegs.",
+    "The existing case CAD still contains the USB4500 body and opening, not a USB4110 model.",
+    "R18B has a straight PCB edge, but the case opening and connector position are unverified.",
+    "No print tolerance, solder stand-off, connector tolerance or lid deformation included."
+  ]
+}

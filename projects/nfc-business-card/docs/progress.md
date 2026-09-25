@@ -2,6 +2,8 @@
 
 ## 当前确定方案
 
+2026-09-26：[R18B USB4110 独立诊断](../hardware/production/r1-layout-reset-r18b/README.md)完成整颗 J1 库器件替换、直板边、两颗 Ø0.65 mm 非镀定位孔、同版 Gerber／BOM／CPL 与[嘉立创 PCB／SMT DFM](../hardware/production/r1-layout-reset-r18b/vendor-dfm-2026-09-26.md)。旧接口四槽危险 4→0、J1 焊脚相交危险 12→0，BOM 29/29 组自动匹配；保存重开的原生 DRC 几何错误 0，但有 1 条 `Import Changes`，原理图 J1 仍带旧 USB4500 符号。孔环、阻焊、局部间距和 U1 贴装危险未关闭；现有 5.8 mm 外壳名义干涉约 0.18 mm。下一轮先同步原理图、重布 USB 局部并建独立外壳候选，**不可下单**。
+
 2026-09-25：按[GCT 原厂图与嘉立创物料页比较 USB4500／USB4110](../hardware/usb-connector-options.md)。USB4110 是 16 针顶部贴装，四个外壳 SMT 焊盘和两个 Ø0.65 mm 定位孔，可避开中置缺口与四个 0.60 mm 镀铜槽；料号 C5143397 的网页列为 Economic/Standard PCBA、装配难度 High。现有 5.8 mm 外壳按名义高度会与其干涉约 0.18 mm；若保留约 0.30 mm 顶部间隙，需研究约 6.3 mm 的独立外壳候选。连接器和外壳路线待用户选择，不改现有 BOM／外壳交付版。
 
 2026-09-25：[R17 USB4500 封装诊断](../hardware/production/r1-layout-reset-r17/README.md)从 R16 独立导出项目，在封装主数据里把 J1 的 12 个 SMT 焊盘中心从 113.2 改为 101.4 mil；导入、保存、关闭重开后位置保持。原生 DRC 新增 **12 条 J1 焊盘到缺口边缘错误**；独立连通、0.30 mm 钻孔、≥0.1016 mm 径向孔环、离散异网 0.15 mm 间距及板框／槽几何检查通过。[嘉立创 PCB／SMT DFM](../hardware/production/r1-layout-reset-r17/vendor-dfm-2026-09-25.md)的 VIA 孔到焊盘危险 12→6、焊盘距外型线危险 0→12；BOM 29/29 组匹配。J1 焊脚接触比约 0.35→0.50，但 **12 条 SMT 危险仍在**。下一步先按 GCT 图纸统一焊盘／槽／缺口／CPL 基准，明确这处板边铜是否符合普通制造与装配，再重布 USB；**R17 不可下单，R14 仍是 DRC 0 审核基线**。

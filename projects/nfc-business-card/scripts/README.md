@@ -11,6 +11,7 @@ Use these scripts with the [R1 files](../README.md). Historical E-series scripts
 | `check-r1-nfc.py` | Cut-winding topology proof and deliberate bypass negative control |
 | `check-netlist-consistency.py` | Schematic/PCB pin-by-pin agreement |
 | `check-e20-outline.py` | Generic closed Gerber outline and USB plated-slot verification |
+| `check-r18b-usb-profile.py`, `check-r18b-usb-case-proxy.py` | R18B 直板边／USB4110 定位孔 Gerber 核查，以及基于现有 FreeCAD 外壳的名义高度代理；外壳代理不能替代真实装配验证 |
 | `check-r1-delivery.py` | Manufacturing files, positions, drill hits, saved evidence and native-source checks |
 | `check-r1-free-0p30-sense.py` | 独立电池采样候选的工程、BOM/CPL、Gerber 孔径/孔环与已有本地证据校验；目前报告不可投产 |
 | `check-r1-relayout-r3.py` | R3 独立布局试验的原生工程、BOM/CPL、钻孔/孔环与本地检查对账；明确报告小孔阻塞 |

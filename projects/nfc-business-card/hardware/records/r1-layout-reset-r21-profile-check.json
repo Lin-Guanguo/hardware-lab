@@ -1,0 +1,19 @@
+{
+  "ok": true,
+  "board_outline_contours": 1,
+  "right_edge_x_mm": 82.9,
+  "outline_arcs": 6,
+  "usb_plated_slots": 0,
+  "usb_npth_locating_holes": [
+    [
+      77.22423,
+      28.890011,
+      0.649986
+    ],
+    [
+      77.22423,
+      23.109987,
+      0.649986
+    ]
+  ]
+}

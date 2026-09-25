@@ -8,9 +8,11 @@
 
 - [Gerber ZIP](NFC-Card-R1-Layout-Reset-R20-Via-Clearance-gerber.zip)、[BOM](NFC-Card-R1-Layout-Reset-R20-Via-Clearance-bom.csv)、[CPL](NFC-Card-R1-Layout-Reset-R20-Via-Clearance-cpl.csv)从保存并重开的 R20 原生工程导出。
 - EDA 关闭重开后原生 DRC **0 条**，原理图与 PCB 为 66 个位号、256 个引脚、0 个网络差异；独立[铜连通](../../records/r1-layout-reset-r20-copper-check.json)与[NFC 线圈](../../records/r1-layout-reset-r20-nfc-check.json)检查通过。
-- [制造对账记录](../../records/r1-layout-reset-r20-manufacturing.json)与[复核脚本](../../../scripts/check-r20-manufacturing.py)确认 BOM/CPL 均含 66 个位号，Gerber 有 167 个过孔，最小实际钻孔约 0.30 mm，最小径向孔环 0.1016 mm；[板框／USB 孔检查](../../records/r1-layout-reset-r20-profile-check.json)确认旧四个镀铜槽为 0，两颗 Ø0.65 mm 非镀定位孔保留。
+- [制造对账记录](../../records/r1-layout-reset-r20-manufacturing.json)与[复核脚本](../../../scripts/check-layout-reset-manufacturing.py)确认 BOM/CPL 均含 66 个位号，Gerber 有 167 个过孔，最小实际钻孔约 0.30 mm，最小径向孔环 0.1016 mm；[板框／USB 孔检查](../../records/r1-layout-reset-r20-profile-check.json)确认旧四个镀铜槽为 0，两颗 Ø0.65 mm 非镀定位孔保留。
 - [独立铜间距审计](../../records/r1-layout-reset-r20-clearance-audit.json)未发现 <0.15 mm 的异网离散铜对象配对；三处同网孔壁到焊盘铜边 <0.10 mm 的配对降为 0。该审计不覆盖铺铜和阻焊；R18B 网站曾报最小线距 0.12 mm，仍需用 R20 成品层定位。
 - [重开工程快照](../../records/r1-layout-reset-r20-routed-snapshot.json)与[引脚清单](../../records/r1-layout-reset-r20-pcb-pins.json)供复查，不代替原生工程。
+
+![R20 USB 局部铜线，实线为顶层、虚线为底层](../../records/r1-layout-reset-r20-usb-detail.png)
 
 ## 线上与后续
 

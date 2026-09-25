@@ -16,6 +16,7 @@ Use these scripts with the [R1 files](../README.md). Historical E-series scripts
 | `check-r1-free-0p30-sense.py` | 独立电池采样候选的工程、BOM/CPL、Gerber 孔径/孔环与已有本地证据校验；目前报告不可投产 |
 | `check-r1-relayout-r3.py` | R3 独立布局试验的原生工程、BOM/CPL、钻孔/孔环与本地检查对账；明确报告小孔阻塞 |
 | `check-r1-layout-r4.py` | R4–R7、R9 已布线候选的保存工程、同版 Gerber/BOM/CPL、孔环与本地检查记录对账；供应商 DFM 另行审核 |
+| `check-layout-reset-manufacturing.py` | R20／R21 独立工程、同版 Gerber/BOM/CPL、钻孔孔环、CC2 过孔与走线、本地记录对账；分别用参数 `r20`、`r21` 运行，线上 DFM 另行审核 |
 | `audit-r1-free-0p30-sense-clearance.py` | 定位走线/焊盘/过孔的 <0.15 mm 异网间距及同网过孔到焊盘距离，可选近似统计 Gerber 丝印到焊盘铜边；不包括铺铜和阻焊开窗 |
 | `check-r1-usb-swd.py` | USB/charger/key/SWD pin assignments and R3/R4 procurement consistency; records unverified firmware and fixture status |
 | `check-r1-case.py` | FreeCAD solid, print mesh and debug-hole checks |

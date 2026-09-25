@@ -6,6 +6,8 @@
 
 **USB 诊断：**[R15 焊盘位移试验](hardware/production/r1-layout-reset-r15/README.md)在当次 Gerber 中把 J1 信号焊盘移动约 0.30 mm，线上 SMT 接触比约 0.35→0.50，但焊盘位移**未保存到重开的原生工程**，上传文件不能由该工程复现。[R16 缺口试验](hardware/production/r1-layout-reset-r16/README.md)把缺口加宽到约 9.20 mm，重开工程和线上 PCB/SMT DFM 已查，J1 焊盘仍是 R14 坐标、接触比仍约 0.35，装配危险仍有 12 条。[双层中置 USB-C 公开参考](hardware/usb-mid-mount-two-layer-references.md)已有核对。两版都只作诊断，R14 仍是审核基线，**不可下单**。
 
+**七区重排依据：**[原厂参考与实施门槛](hardware/r1-seven-zone-reference-plan.md)逐区列出屏幕、供电、USB、主控、按键、NFC／调试的固定关系和可移动范围。下一步先解决 J1 封装修改的原生工程持久化，再按功能簇整理 USB 扇出；还没有经重开验证的新制造版。
+
 **前版布局与 DFM 基线：**[R7 原生工程、制造文件与检查记录](hardware/production/r1-layout-reset-r7/README.md)从 R4 经 R5、R6 的局部修正继续迭代，保留显示供电分区、电池采样和 USB CC2 保护拓扑。保存重开的原生 DRC、独立连通、板框／天线、Gerber 钻孔与孔环、BOM/CPL 一致性检查通过；最小实际钻孔约 0.30 mm、最小径向孔环 0.1016 mm，未发现小于 0.15 mm 的异网铜对象间距。[嘉立创 R7 PCB/SMT DFM](hardware/production/r1-layout-reset-r7/vendor-dfm-2026-09-25.md)确认 U1 焊脚到孔危险从 2 降为 0，VIA 孔到焊盘危险从 32 降为 30；孔环、阻焊、USB 槽、J1 焊脚模型和 U1 板边危险仍需处理及供应商人工确认，**不可下单**。R5/R6 保留为对照；R2 是较早的低成本基线。
 
 **最新低成本制板候选：**[R2 独立工程与制造检查文件](hardware/production/r1-free-0p30-sense-ring-r2/README.md)继承了 TS/MR 10 kΩ 到地及可关断的电池 ADC 采样，在显示供电、USB 扇出及充电区局部重布。重开工程后原生 DRC 为 0，最小实际钻孔 0.30226 mm、最小径向孔环 0.1016 mm；独立走线/焊盘/过孔审计未发现小于 0.15 mm 的异网铜间距。[新版线上 PCB/SMT DFM](hardware/production/r1-free-0p30-sense-ring-r2/vendor-dfm-2026-09-24.md)仍列孔环、过孔到焊盘、USB 槽及 J1/U1 贴装危险，**尚不可投产**；原 R1 是未投产的制造基准。

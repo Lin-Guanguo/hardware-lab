@@ -2,6 +2,8 @@
 
 ## 当前确定方案
 
+2026-09-25：按七个功能区整理了[器件原厂参考与重排门槛](../hardware/r1-seven-zone-reference-plan.md)。USB、充电／稳压、屏幕供电、主控天线各有不能为整齐而打散的局部关系；按键和普通控制线有更多排布自由度。R17 独立临时工程的单焊盘 API 试验显示：实时坐标可变，但 PCB 文档源没有产生焊盘覆盖记录；文档源写入 API 返回 `false`。试验已在实时页撤回，未导出制造包。下一步需要在封装主数据或受支持的实例覆盖机制中完成可保存的 J1 校正，关闭重开验收后再重布 USB，**目前仍不可下单**。
+
 2026-09-25：[R16 USB 缺口诊断](../hardware/production/r1-layout-reset-r16/README.md)把缺口最窄宽加至约 9.20 mm、内角 R0.20 mm，重开工程后原生 DRC 0、独立连通／NFC／间距／板框／钻孔检查通过。[线上 PCB／SMT DFM](../hardware/production/r1-layout-reset-r16/vendor-dfm-2026-09-25.md)显示焊盘距外型线危险 0，但 J1 接触比仍约 0.35、12 条装配危险未消；孔环、阻焊和槽宽问题仍在。R0.20 加工及装配公差尚未确认，**不可下单**。[双层中置接口参考](../hardware/usb-mid-mount-two-layer-references.md)已整理。
 
 2026-09-25：[R15 USB4500 焊盘诊断](../hardware/production/r1-layout-reset-r15/README.md)当次 Gerber 将 12 个信号焊盘位移 0.29972 mm，[线上 DFM](../hardware/production/r1-layout-reset-r15/vendor-dfm-2026-09-25.md)显示 J1 接触比约 0.35→0.50，同时出现 12 条焊盘到缺口边 0 mm 危险。**事后重开原生工程发现焊盘位移未保存**，当次 Gerber 无法由保存工程复现；先修封装持久化，R15 仅作敏感性诊断，不下单。

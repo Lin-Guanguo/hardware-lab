@@ -6,7 +6,7 @@
 
 **USB 诊断：**[R15 焊盘位移试验](hardware/production/r1-layout-reset-r15/README.md)在当次 Gerber 中把 J1 焊盘移动约 0.30 mm，线上 SMT 接触比约 0.35→0.50，但位移**未保存到重开的原生工程**。[R16 缺口试验](hardware/production/r1-layout-reset-r16/README.md)把缺口加宽到约 9.20 mm，J1 焊盘仍是旧坐标、接触比仍约 0.35。[R17 独立工程](hardware/production/r1-layout-reset-r17/README.md)在封装主数据中移动 12 个焊盘，已保存重开并重跑本地检查与线上 PCB DFM；它新增 12 条 J1 焊盘贴近缺口的原生 DRC 与线上危险。R17 仍是诊断，R14 仍是可复现的 DRC 0 审核基线，**不可下单**。
 
-**七区重排依据：**[原厂参考与实施门槛](hardware/r1-seven-zone-reference-plan.md)逐区列出屏幕、供电、USB、主控、按键、NFC／调试的固定关系和可移动范围。J1 焊盘修改现已能在原生工程中复现；下一步按 GCT 图纸统一 J1 焊盘／槽／缺口／贴片模型基准，明确板边加工条件，再按功能簇整理 USB 扇出。尚无可下单的新版。
+**七区重排依据：**[原厂参考与实施门槛](hardware/r1-seven-zone-reference-plan.md)逐区列出屏幕、供电、USB、主控、按键、NFC／调试的固定关系和可移动范围。J1 焊盘修改现已能在原生工程中复现；[USB4500 与原厂顶部贴装 USB4110 的取舍](hardware/usb-connector-options.md)已列出工艺和外壳高度代价。接口机械基准确定后再按功能簇整理 USB 扇出；尚无可下单的新版。
 
 **前版布局与 DFM 基线：**[R7 原生工程、制造文件与检查记录](hardware/production/r1-layout-reset-r7/README.md)从 R4 经 R5、R6 的局部修正继续迭代，保留显示供电分区、电池采样和 USB CC2 保护拓扑。保存重开的原生 DRC、独立连通、板框／天线、Gerber 钻孔与孔环、BOM/CPL 一致性检查通过；最小实际钻孔约 0.30 mm、最小径向孔环 0.1016 mm，未发现小于 0.15 mm 的异网铜对象间距。[嘉立创 R7 PCB/SMT DFM](hardware/production/r1-layout-reset-r7/vendor-dfm-2026-09-25.md)确认 U1 焊脚到孔危险从 2 降为 0，VIA 孔到焊盘危险从 32 降为 30；孔环、阻焊、USB 槽、J1 焊脚模型和 U1 板边危险仍需处理及供应商人工确认，**不可下单**。R5/R6 保留为对照；R2 是较早的低成本基线。
 
@@ -57,6 +57,7 @@
 | [R15 USB footprint diagnostic](hardware/production/r1-layout-reset-r15/README.md) | 实时焊盘位移未保存到原生工程；上传文件只作敏感性诊断 |
 | [R16 USB notch diagnostic](hardware/production/r1-layout-reset-r16/README.md) | 加宽缺口后重开与线上 DFM；J1 装配危险仍在，不可下单 |
 | [R17 USB land diagnostic](hardware/production/r1-layout-reset-r17/README.md) | 12 个焊盘在原生封装保存重开；板边 DRC 与线上危险新增，待原厂／工艺复核 |
+| [USB connector options](hardware/usb-connector-options.md) | 原厂顶部贴装 USB4110 可避开中置缺口／槽，但名义上需要约 6.3 mm 外壳候选 |
 | [Previous battery-sensing cost candidate](hardware/production/r1-free-0p30-sense/README.md) | 前版线上 DFM 与薄孔环诊断基线 |
 | [Manufacturing files](hardware/production/r1/README.md) | Gerber for bare PCB; BOM and CPL for assembly; PDF, STEP and portable EDA backup |
 | [Design and verification](hardware/pcb-r1-delivery.md) | Design decisions, checks, limits and reproduction commands |

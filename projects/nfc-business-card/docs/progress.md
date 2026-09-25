@@ -2,6 +2,8 @@
 
 ## 当前确定方案
 
+2026-09-25：[R14 独立候选](../hardware/production/r1-layout-reset-r14/README.md)在 R12 上只移动 R1、C1、C8 和 SWDIO 附近四个过孔及短线；R13 的 R7 移孔因产生新焊盘间距危险已撤销。原生工程保存重开后 DRC 0；独立连通、NFC／板框、约 0.30 mm 钻孔、≥0.10 mm 径向孔环与异网 0.15 mm 间距检查通过。本地同网孔到焊盘薄间距的不同过孔 **8→4**；[嘉立创 PCB/SMT DFM](../hardware/production/r1-layout-reset-r14/vendor-dfm-2026-09-25.md)的 VIA 孔到焊盘危险 **20→12**，BOM **29/29** 组匹配。孔环 100、阻焊桥 43、USB 四槽、J1 焊脚相交 12 和 U1 板边 0.07 mm 危险仍在，已列[供应商审核清单](../hardware/production/r1-layout-reset-r14/vendor-dfm-2026-09-25.md#供应商审核清单)；供应商未确认，**不下单**。
+
 2026-09-25：[R12 独立候选](../hardware/production/r1-layout-reset-r12/README.md)从 R10 原生工程重新建立，只移动 R2、Q2 附近两孔和相连短线，保留 R10 顶层丝印。保存重开后原生 DRC 0；独立连通、NFC／板框、0.30 mm 钻孔、≥0.10 mm 径向孔环与异网 0.15 mm 间距检查通过。同网过孔压入焊盘 **2→0**；[嘉立创 PCB/SMT DFM](../hardware/production/r1-layout-reset-r12/vendor-dfm-2026-09-25.md)确认孔落焊盘警告 **4→0**、VIA 孔到焊盘危险 **24→20**，BOM 29/29 组匹配；孔环 100、阻焊桥 43、USB 四槽、J1 焊脚相交 12 和 U1 板边 0.07 mm 危险仍在，供应商未确认，**不下单**。
 
 2026-09-25：[R10 独立候选](../hardware/production/r1-layout-reset-r10/README.md)从 R9 导入，只清理顶层封装外框，保留 D1–D3 阴极标记；铜、孔、装配、板框和天线不变。修正 Gerber 填充边界误计后，顶层外框触及焊盘线段 **3→0**，距焊盘 <0.13 mm 的线段 **78→68**。原生 DRC 0、独立连通、NFC／板框、0.30 mm 钻孔、≥0.10 mm 径向孔环检查通过。R10 Gerber/BOM/CPL 已上传嘉立创，29/29 组器件自动匹配；PCB DFM 的 VIA 孔到焊盘危险为 24，孔环 100、阻焊桥 43、USB 四槽等危险仍在。SMT DFM 后续返回 J1 焊脚相交 12 和 U1 板边 0.07 mm 危险，**不下单**。
@@ -47,6 +49,7 @@
 | R9 过孔局部修正 | [独立工程与制造文件](../hardware/production/r1-layout-reset-r9/README.md)已保存并重开，原生 DRC 0；同网薄孔到焊盘 13→10，压入焊盘 4→2。Gerber 已上传，线上 PCB/SMT 结果尚未读取；继续局部处理并请供应商审核，不可下单。 |
 | R10 顶层封装丝印 | [独立工程与制造文件](../hardware/production/r1-layout-reset-r10/README.md)已保存，原生 DRC 0；修正审计器后触及焊盘铜边的丝印线段 3→0。线上 PCB/SMT DFM 仍有孔环、过孔到焊盘、阻焊、四槽及 J1/U1 装配危险，不可下单。 |
 | R12 两孔局部修正 | [独立工程与制造文件](../hardware/production/r1-layout-reset-r12/README.md)已保存重开，原生 DRC 0；孔落焊盘警告清零、过孔到焊盘危险 24→20。线上 PCB/SMT 仍报孔环、阻焊、四槽及 J1/U1 危险，待进一步局部修改与供应商审核，不可下单。 |
+| R14 四孔局部修正 | [独立工程与制造文件](../hardware/production/r1-layout-reset-r14/README.md)已保存重开，原生 DRC 0；过孔到焊盘危险 20→12，焊盘间距危险未增加。线上 PCB/SMT 其余危险列入供应商审核清单，不可下单。 |
 | Battery | User measures protected pack and wires; nominal 31 × 12 × 3 mm |
 
 No order placed. [Historical progress and experiments](../archive/pre-r1/readmes/projects/nfc-business-card/docs/progress.md) retain earlier findings and resolutions.

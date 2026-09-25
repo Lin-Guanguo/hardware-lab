@@ -15,7 +15,7 @@ from pathlib import Path
 
 
 parser = argparse.ArgumentParser(description=__doc__)
-parser.add_argument("--revision", choices=("r4", "r5", "r6", "r7", "r9", "r10", "r12"), default="r4")
+parser.add_argument("--revision", choices=("r4", "r5", "r6", "r7", "r9", "r10", "r12", "r14"), default="r4")
 revision = parser.parse_args().revision
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]

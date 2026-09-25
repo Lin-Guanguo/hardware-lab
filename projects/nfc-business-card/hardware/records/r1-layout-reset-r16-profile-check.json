@@ -1,0 +1,31 @@
+{
+  "status": "PROFILE_AND_SLOTS_PASS",
+  "closed_contours": 1,
+  "bbox_mm": [
+    1.10000034,
+    1.10000034,
+    82.8999993,
+    50.899999799999996
+  ],
+  "arc_radii_mm": [
+    0.499999,
+    0.500000000001,
+    0.499999,
+    1.999999,
+    1.999999,
+    0.2,
+    0.2,
+    1.999999
+  ],
+  "usb_notch_width_mm": 9.200001919999997,
+  "usb_slot_centerline_lengths_mm": [
+    1.1999969999999962,
+    1.1999969999999962,
+    0.7999989999999997,
+    0.7999989999999997
+  ],
+  "conflicting_mechanical_layer": false,
+  "gerber_sha256": "0d3f58dd9c4ee1cbc194c42bda868e47d1d7279da6d87d06e3094a6207b2150a",
+  "snapshot_sha256": "dcb5a52a70eceee9b24ec9a284d6d26f64e99a764e72cccdc153fd20637d2325",
+  "scope": "Outline and mounting-slot geometry only. Copper connectivity and physical performance require separate checks."
+}

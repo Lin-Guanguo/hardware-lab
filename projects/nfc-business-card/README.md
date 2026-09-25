@@ -4,7 +4,7 @@
 
 **最新独立候选：**[R14 原生工程、制造文件与线上 DFM](hardware/production/r1-layout-reset-r14/README.md)继承 [R12](hardware/production/r1-layout-reset-r12/README.md)，只移动 R1、C1、C8 和 SWDIO 附近四个过孔及短线，器件、板框、天线和 USB 保护未移。保存重开后原生 DRC 0，独立连通、NFC／板框、0.30 mm 钻孔和 ≥0.10 mm 径向孔环检查通过；未发现 <0.15 mm 异网铜对象间距。同网孔壁到焊盘铜边 <0.10 mm 的不同过孔 8→4；嘉立创 VIA 孔到焊盘危险 20→12，焊盘间距危险未增加。孔环、阻焊、USB 槽及 J1/U1 装配危险仍待供应商人工确认，**不可下单**。
 
-**USB 封装诊断：**[R15 独立试验](hardware/production/r1-layout-reset-r15/README.md)按 GCT 原厂图纸修正 J1 信号焊盘相对槽位约 0.30 mm 的偏差。线上 SMT 接触比约 0.35→0.50，但 12 条装配危险仍在；另新增 12 条焊盘到缺口锣边 0 mm 危险，并发现 USB 缺口最窄宽约 8.64 mm，低于原厂推荐的 9.24 mm。需重新推导连接器／缺口的完整机械关系，R15 不替换 R14 审核基线，**不可下单**。
+**USB 诊断：**[R15 焊盘位移试验](hardware/production/r1-layout-reset-r15/README.md)在当次 Gerber 中把 J1 信号焊盘移动约 0.30 mm，线上 SMT 接触比约 0.35→0.50，但焊盘位移**未保存到重开的原生工程**，上传文件不能由该工程复现。[R16 缺口试验](hardware/production/r1-layout-reset-r16/README.md)把缺口加宽到约 9.20 mm，重开工程和线上 PCB/SMT DFM 已查，J1 焊盘仍是 R14 坐标、接触比仍约 0.35，装配危险仍有 12 条。[双层中置 USB-C 公开参考](hardware/usb-mid-mount-two-layer-references.md)已有核对。两版都只作诊断，R14 仍是审核基线，**不可下单**。
 
 **前版布局与 DFM 基线：**[R7 原生工程、制造文件与检查记录](hardware/production/r1-layout-reset-r7/README.md)从 R4 经 R5、R6 的局部修正继续迭代，保留显示供电分区、电池采样和 USB CC2 保护拓扑。保存重开的原生 DRC、独立连通、板框／天线、Gerber 钻孔与孔环、BOM/CPL 一致性检查通过；最小实际钻孔约 0.30 mm、最小径向孔环 0.1016 mm，未发现小于 0.15 mm 的异网铜对象间距。[嘉立创 R7 PCB/SMT DFM](hardware/production/r1-layout-reset-r7/vendor-dfm-2026-09-25.md)确认 U1 焊脚到孔危险从 2 降为 0，VIA 孔到焊盘危险从 32 降为 30；孔环、阻焊、USB 槽、J1 焊脚模型和 U1 板边危险仍需处理及供应商人工确认，**不可下单**。R5/R6 保留为对照；R2 是较早的低成本基线。
 
@@ -52,7 +52,8 @@
 | [R10 latest layout candidate](hardware/production/r1-layout-reset-r10/README.md) | 顶层封装丝印清理，保留阴极标记；本地检查通过，线上 DFM 仍需处理，不可下单 |
 | [R12 latest layout candidate](hardware/production/r1-layout-reset-r12/README.md) | R2、Q2 两孔及短线局部调整；本地和线上 PCB/SMT DFM 已重跑，仍需供应商审核，不可下单 |
 | [R14 latest layout candidate](hardware/production/r1-layout-reset-r14/README.md) | 四个过孔及短线局部调整；本地和线上 PCB/SMT DFM 已重跑，供应商审核清单待答复，不可下单 |
-| [R15 USB footprint diagnostic](hardware/production/r1-layout-reset-r15/README.md) | 原厂焊盘基准修正、PCB/SMT DFM 和缺口宽度复核；证实新的板边风险，仅作诊断 |
+| [R15 USB footprint diagnostic](hardware/production/r1-layout-reset-r15/README.md) | 实时焊盘位移未保存到原生工程；上传文件只作敏感性诊断 |
+| [R16 USB notch diagnostic](hardware/production/r1-layout-reset-r16/README.md) | 加宽缺口后重开与线上 DFM；J1 装配危险仍在，不可下单 |
 | [Previous battery-sensing cost candidate](hardware/production/r1-free-0p30-sense/README.md) | 前版线上 DFM 与薄孔环诊断基线 |
 | [Manufacturing files](hardware/production/r1/README.md) | Gerber for bare PCB; BOM and CPL for assembly; PDF, STEP and portable EDA backup |
 | [Design and verification](hardware/pcb-r1-delivery.md) | Design decisions, checks, limits and reproduction commands |

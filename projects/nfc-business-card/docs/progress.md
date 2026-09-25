@@ -2,7 +2,9 @@
 
 ## 当前确定方案
 
-2026-09-25：[R15 USB4500 封装诊断](../hardware/production/r1-layout-reset-r15/README.md)按 GCT 原厂图纸把 J1 的 12 个信号焊盘相对四槽平移 0.29972 mm，器件、走线、过孔及板框不变。原生 DRC 0，独立连通、NFC、板框和孔环检查通过。[线上 PCB／SMT DFM](../hardware/production/r1-layout-reset-r15/vendor-dfm-2026-09-25.md)显示 VIA 到焊盘危险 12→6、焊盘间距危险 3→2，J1 焊脚／焊盘接触比约 0.35→0.50；但 J1 装配 12 条仍为危险，并新增 12 条焊盘到缺口锣边 0 mm 危险。GCT 推荐缺口宽 9.24 mm、本板最窄约 8.64 mm，须重新推导机械开口。**R15 是诊断候选，不替换 R14 制造审核基线，不下单。**
+2026-09-25：[R16 USB 缺口诊断](../hardware/production/r1-layout-reset-r16/README.md)把缺口最窄宽加至约 9.20 mm、内角 R0.20 mm，重开工程后原生 DRC 0、独立连通／NFC／间距／板框／钻孔检查通过。[线上 PCB／SMT DFM](../hardware/production/r1-layout-reset-r16/vendor-dfm-2026-09-25.md)显示焊盘距外型线危险 0，但 J1 接触比仍约 0.35、12 条装配危险未消；孔环、阻焊和槽宽问题仍在。R0.20 加工及装配公差尚未确认，**不可下单**。[双层中置接口参考](../hardware/usb-mid-mount-two-layer-references.md)已整理。
+
+2026-09-25：[R15 USB4500 焊盘诊断](../hardware/production/r1-layout-reset-r15/README.md)当次 Gerber 将 12 个信号焊盘位移 0.29972 mm，[线上 DFM](../hardware/production/r1-layout-reset-r15/vendor-dfm-2026-09-25.md)显示 J1 接触比约 0.35→0.50，同时出现 12 条焊盘到缺口边 0 mm 危险。**事后重开原生工程发现焊盘位移未保存**，当次 Gerber 无法由保存工程复现；先修封装持久化，R15 仅作敏感性诊断，不下单。
 
 2026-09-25：[R14 独立候选](../hardware/production/r1-layout-reset-r14/README.md)在 R12 上只移动 R1、C1、C8 和 SWDIO 附近四个过孔及短线；R13 的 R7 移孔因产生新焊盘间距危险已撤销。原生工程保存重开后 DRC 0；独立连通、NFC／板框、约 0.30 mm 钻孔、≥0.10 mm 径向孔环与异网 0.15 mm 间距检查通过。本地同网孔到焊盘薄间距的不同过孔 **8→4**；[嘉立创 PCB/SMT DFM](../hardware/production/r1-layout-reset-r14/vendor-dfm-2026-09-25.md)的 VIA 孔到焊盘危险 **20→12**，BOM **29/29** 组匹配。孔环 100、阻焊桥 43、USB 四槽、J1 焊脚相交 12 和 U1 板边 0.07 mm 危险仍在；[根因复盘](../hardware/production/r1-layout-reset-r14/dfm-root-cause-review-2026-09-25.md)将其归并为固定封装、局部过孔及线上图元／贴片模型问题，下一步先做原厂封装和成品层复核，**不下单**。
 
@@ -52,7 +54,7 @@
 | R10 顶层封装丝印 | [独立工程与制造文件](../hardware/production/r1-layout-reset-r10/README.md)已保存，原生 DRC 0；修正审计器后触及焊盘铜边的丝印线段 3→0。线上 PCB/SMT DFM 仍有孔环、过孔到焊盘、阻焊、四槽及 J1/U1 装配危险，不可下单。 |
 | R12 两孔局部修正 | [独立工程与制造文件](../hardware/production/r1-layout-reset-r12/README.md)已保存重开，原生 DRC 0；孔落焊盘警告清零、过孔到焊盘危险 24→20。线上 PCB/SMT 仍报孔环、阻焊、四槽及 J1/U1 危险，待进一步局部修改与供应商审核，不可下单。 |
 | R14 四孔局部修正 | [独立工程与制造文件](../hardware/production/r1-layout-reset-r14/README.md)已保存重开，原生 DRC 0；过孔到焊盘危险 20→12，焊盘间距危险未增加。线上 PCB/SMT 其余危险列入供应商审核清单，不可下单。 |
-| R15 USB 封装诊断 | [独立工程与线上 DFM](../hardware/production/r1-layout-reset-r15/README.md)证实 J1 焊盘相对槽位曾偏约 0.30 mm，修正后 SMT 接触比提高但仍报危险，并暴露 0 mm 锣边距离和缺口宽度问题；不作为下单包。 |
+| R15 USB 封装诊断 | [实时文件与线上 DFM](../hardware/production/r1-layout-reset-r15/README.md)显示焊盘位移会提高网站 SMT 接触比，但改动未持久保存到原生工程；不作为下单包。 |
 | Battery | User measures protected pack and wires; nominal 31 × 12 × 3 mm |
 
 No order placed. [Historical progress and experiments](../archive/pre-r1/readmes/projects/nfc-business-card/docs/progress.md) retain earlier findings and resolutions.

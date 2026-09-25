@@ -2,7 +2,7 @@
 
 ## 当前确定方案
 
-2026-09-25：[R14 独立候选](../hardware/production/r1-layout-reset-r14/README.md)在 R12 上只移动 R1、C1、C8 和 SWDIO 附近四个过孔及短线；R13 的 R7 移孔因产生新焊盘间距危险已撤销。原生工程保存重开后 DRC 0；独立连通、NFC／板框、约 0.30 mm 钻孔、≥0.10 mm 径向孔环与异网 0.15 mm 间距检查通过。本地同网孔到焊盘薄间距的不同过孔 **8→4**；[嘉立创 PCB/SMT DFM](../hardware/production/r1-layout-reset-r14/vendor-dfm-2026-09-25.md)的 VIA 孔到焊盘危险 **20→12**，BOM **29/29** 组匹配。孔环 100、阻焊桥 43、USB 四槽、J1 焊脚相交 12 和 U1 板边 0.07 mm 危险仍在，已列[供应商审核清单](../hardware/production/r1-layout-reset-r14/vendor-dfm-2026-09-25.md#供应商审核清单)；供应商未确认，**不下单**。
+2026-09-25：[R14 独立候选](../hardware/production/r1-layout-reset-r14/README.md)在 R12 上只移动 R1、C1、C8 和 SWDIO 附近四个过孔及短线；R13 的 R7 移孔因产生新焊盘间距危险已撤销。原生工程保存重开后 DRC 0；独立连通、NFC／板框、约 0.30 mm 钻孔、≥0.10 mm 径向孔环与异网 0.15 mm 间距检查通过。本地同网孔到焊盘薄间距的不同过孔 **8→4**；[嘉立创 PCB/SMT DFM](../hardware/production/r1-layout-reset-r14/vendor-dfm-2026-09-25.md)的 VIA 孔到焊盘危险 **20→12**，BOM **29/29** 组匹配。孔环 100、阻焊桥 43、USB 四槽、J1 焊脚相交 12 和 U1 板边 0.07 mm 危险仍在；[根因复盘](../hardware/production/r1-layout-reset-r14/dfm-root-cause-review-2026-09-25.md)将其归并为固定封装、局部过孔及线上图元／贴片模型问题，下一步先做原厂封装和成品层复核，**不下单**。
 
 2026-09-25：[R12 独立候选](../hardware/production/r1-layout-reset-r12/README.md)从 R10 原生工程重新建立，只移动 R2、Q2 附近两孔和相连短线，保留 R10 顶层丝印。保存重开后原生 DRC 0；独立连通、NFC／板框、0.30 mm 钻孔、≥0.10 mm 径向孔环与异网 0.15 mm 间距检查通过。同网过孔压入焊盘 **2→0**；[嘉立创 PCB/SMT DFM](../hardware/production/r1-layout-reset-r12/vendor-dfm-2026-09-25.md)确认孔落焊盘警告 **4→0**、VIA 孔到焊盘危险 **24→20**，BOM 29/29 组匹配；孔环 100、阻焊桥 43、USB 四槽、J1 焊脚相交 12 和 U1 板边 0.07 mm 危险仍在，供应商未确认，**不下单**。
 

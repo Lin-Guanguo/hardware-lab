@@ -4,6 +4,8 @@
 
 **最新独立候选：**[R14 原生工程、制造文件与线上 DFM](hardware/production/r1-layout-reset-r14/README.md)继承 [R12](hardware/production/r1-layout-reset-r12/README.md)，只移动 R1、C1、C8 和 SWDIO 附近四个过孔及短线，器件、板框、天线和 USB 保护未移。保存重开后原生 DRC 0，独立连通、NFC／板框、0.30 mm 钻孔和 ≥0.10 mm 径向孔环检查通过；未发现 <0.15 mm 异网铜对象间距。同网孔壁到焊盘铜边 <0.10 mm 的不同过孔 8→4；嘉立创 VIA 孔到焊盘危险 20→12，焊盘间距危险未增加。孔环、阻焊、USB 槽及 J1/U1 装配危险仍待供应商人工确认，**不可下单**。
 
+**USB 封装诊断：**[R15 独立试验](hardware/production/r1-layout-reset-r15/README.md)按 GCT 原厂图纸修正 J1 信号焊盘相对槽位约 0.30 mm 的偏差。线上 SMT 接触比约 0.35→0.50，但 12 条装配危险仍在；另新增 12 条焊盘到缺口锣边 0 mm 危险，并发现 USB 缺口最窄宽约 8.64 mm，低于原厂推荐的 9.24 mm。需重新推导连接器／缺口的完整机械关系，R15 不替换 R14 审核基线，**不可下单**。
+
 **前版布局与 DFM 基线：**[R7 原生工程、制造文件与检查记录](hardware/production/r1-layout-reset-r7/README.md)从 R4 经 R5、R6 的局部修正继续迭代，保留显示供电分区、电池采样和 USB CC2 保护拓扑。保存重开的原生 DRC、独立连通、板框／天线、Gerber 钻孔与孔环、BOM/CPL 一致性检查通过；最小实际钻孔约 0.30 mm、最小径向孔环 0.1016 mm，未发现小于 0.15 mm 的异网铜对象间距。[嘉立创 R7 PCB/SMT DFM](hardware/production/r1-layout-reset-r7/vendor-dfm-2026-09-25.md)确认 U1 焊脚到孔危险从 2 降为 0，VIA 孔到焊盘危险从 32 降为 30；孔环、阻焊、USB 槽、J1 焊脚模型和 U1 板边危险仍需处理及供应商人工确认，**不可下单**。R5/R6 保留为对照；R2 是较早的低成本基线。
 
 **最新低成本制板候选：**[R2 独立工程与制造检查文件](hardware/production/r1-free-0p30-sense-ring-r2/README.md)继承了 TS/MR 10 kΩ 到地及可关断的电池 ADC 采样，在显示供电、USB 扇出及充电区局部重布。重开工程后原生 DRC 为 0，最小实际钻孔 0.30226 mm、最小径向孔环 0.1016 mm；独立走线/焊盘/过孔审计未发现小于 0.15 mm 的异网铜间距。[新版线上 PCB/SMT DFM](hardware/production/r1-free-0p30-sense-ring-r2/vendor-dfm-2026-09-24.md)仍列孔环、过孔到焊盘、USB 槽及 J1/U1 贴装危险，**尚不可投产**；原 R1 是未投产的制造基准。
@@ -50,6 +52,7 @@
 | [R10 latest layout candidate](hardware/production/r1-layout-reset-r10/README.md) | 顶层封装丝印清理，保留阴极标记；本地检查通过，线上 DFM 仍需处理，不可下单 |
 | [R12 latest layout candidate](hardware/production/r1-layout-reset-r12/README.md) | R2、Q2 两孔及短线局部调整；本地和线上 PCB/SMT DFM 已重跑，仍需供应商审核，不可下单 |
 | [R14 latest layout candidate](hardware/production/r1-layout-reset-r14/README.md) | 四个过孔及短线局部调整；本地和线上 PCB/SMT DFM 已重跑，供应商审核清单待答复，不可下单 |
+| [R15 USB footprint diagnostic](hardware/production/r1-layout-reset-r15/README.md) | 原厂焊盘基准修正、PCB/SMT DFM 和缺口宽度复核；证实新的板边风险，仅作诊断 |
 | [Previous battery-sensing cost candidate](hardware/production/r1-free-0p30-sense/README.md) | 前版线上 DFM 与薄孔环诊断基线 |
 | [Manufacturing files](hardware/production/r1/README.md) | Gerber for bare PCB; BOM and CPL for assembly; PDF, STEP and portable EDA backup |
 | [Design and verification](hardware/pcb-r1-delivery.md) | Design decisions, checks, limits and reproduction commands |

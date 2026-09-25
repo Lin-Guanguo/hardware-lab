@@ -2,7 +2,9 @@
 
 ## 当前确定方案
 
-**最新局部重排候选：**[R7 原生工程、制造文件与检查记录](hardware/production/r1-layout-reset-r7/README.md)从 R4 经 R5、R6 的局部修正继续迭代，保留显示供电分区、电池采样和 USB CC2 保护拓扑。保存重开的原生 DRC、独立连通、板框／天线、Gerber 钻孔与孔环、BOM/CPL 一致性检查通过；最小实际钻孔约 0.30 mm、最小径向孔环 0.1016 mm，未发现小于 0.15 mm 的异网铜对象间距。[嘉立创 R7 PCB/SMT DFM](hardware/production/r1-layout-reset-r7/vendor-dfm-2026-09-25.md)确认 U1 焊脚到孔危险从 2 降为 0，VIA 孔到焊盘危险从 32 降为 30；孔环、阻焊、USB 槽、J1 焊脚模型和 U1 板边危险仍需处理及供应商人工确认，**不可下单**。R5/R6 保留为对照；R2 是较早的低成本基线。
+**最新独立候选：**[R8 原生工程与制造文件](hardware/production/r1-layout-reset-r8/README.md)从 R7 派生，仅隐藏 8 个与焊盘过近的顶层器件位号；原生 DRC 0，导出对比确认铜层、钻孔、板框、阻焊和钢网未变。本地 Gerber 审计中，距焊盘铜边小于 0.13 mm 的顶层文字笔画从 89 降到 0，但封装外框仍有 96 段过近。R8 Gerber 已上传嘉立创，线上分析结果尚未打开；**不可下单**。
+
+**前版布局与 DFM 基线：**[R7 原生工程、制造文件与检查记录](hardware/production/r1-layout-reset-r7/README.md)从 R4 经 R5、R6 的局部修正继续迭代，保留显示供电分区、电池采样和 USB CC2 保护拓扑。保存重开的原生 DRC、独立连通、板框／天线、Gerber 钻孔与孔环、BOM/CPL 一致性检查通过；最小实际钻孔约 0.30 mm、最小径向孔环 0.1016 mm，未发现小于 0.15 mm 的异网铜对象间距。[嘉立创 R7 PCB/SMT DFM](hardware/production/r1-layout-reset-r7/vendor-dfm-2026-09-25.md)确认 U1 焊脚到孔危险从 2 降为 0，VIA 孔到焊盘危险从 32 降为 30；孔环、阻焊、USB 槽、J1 焊脚模型和 U1 板边危险仍需处理及供应商人工确认，**不可下单**。R5/R6 保留为对照；R2 是较早的低成本基线。
 
 **最新低成本制板候选：**[R2 独立工程与制造检查文件](hardware/production/r1-free-0p30-sense-ring-r2/README.md)继承了 TS/MR 10 kΩ 到地及可关断的电池 ADC 采样，在显示供电、USB 扇出及充电区局部重布。重开工程后原生 DRC 为 0，最小实际钻孔 0.30226 mm、最小径向孔环 0.1016 mm；独立走线/焊盘/过孔审计未发现小于 0.15 mm 的异网铜间距。[新版线上 PCB/SMT DFM](hardware/production/r1-free-0p30-sense-ring-r2/vendor-dfm-2026-09-24.md)仍列孔环、过孔到焊盘、USB 槽及 J1/U1 贴装危险，**尚不可投产**；原 R1 是未投产的制造基准。
 

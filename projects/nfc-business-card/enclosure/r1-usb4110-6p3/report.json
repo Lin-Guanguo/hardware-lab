@@ -1,0 +1,77 @@
+{
+  "source_hashes": {
+    "enclosure/r1-rounded-rear-soft-swd254/rear-cover-study.FCStd": "fb44dc39e12c924ea4a28506dfab8d8f8e223ab901a8b5ef04aa8e5667d5d24c",
+    "hardware/production/r1-layout-reset-r21/NFC-Card-R1-Layout-Reset-R21-USB-CC2-gerber.zip": "078cd88ae8e9e47d3374417d5e6647ec074b01f305ba697c781c66cf405cd6b6",
+    "hardware/records/r1-layout-reset-r21-pcb-pins.json": "ff28e7e5898758879c5f383f0bca373bdbd1742946edb91b6deee6b827db9a8e"
+  },
+  "source_unchanged": true,
+  "gerber_board_area_mm2": 3497.5310309377815,
+  "gerber_npth_holes_mm": [
+    [
+      77.22423,
+      28.890011
+    ],
+    [
+      77.22423,
+      23.109987
+    ]
+  ],
+  "old_board_to_r21_volume_delta_mm3": 51.89077958559801,
+  "connector_face_x_mm": 83.50515999999999,
+  "connector_body_box_mm": [
+    75.80515999999999,
+    83.50515999999999,
+    21.53,
+    30.47,
+    1.92,
+    5.18
+  ],
+  "nominal_connector_to_shell_mm": 0.3199999999999976,
+  "nominal_tab_envelope_to_shell_mm": 0.44946000000000197,
+  "mouth_clearance_shell_overlap_mm3": 0,
+  "key_checks": [
+    {
+      "key": "ClearKey1",
+      "travel_mm": 0.49997459994900045,
+      "valid": true,
+      "rest_switch_overlap_mm3": 0.0,
+      "swept_fixed_switch_overlap_mm3": 0.0,
+      "swept_upper_overlap_mm3": 0.0,
+      "swept_board_overlap_mm3": 0.0,
+      "swept_other_component_overlap_mm3": {}
+    },
+    {
+      "key": "ClearKey2",
+      "travel_mm": 0.49997459994900045,
+      "valid": true,
+      "rest_switch_overlap_mm3": 0.0,
+      "swept_fixed_switch_overlap_mm3": 0.0,
+      "swept_upper_overlap_mm3": 0.0,
+      "swept_board_overlap_mm3": 0.0,
+      "swept_other_component_overlap_mm3": {}
+    },
+    {
+      "key": "ClearKey3",
+      "travel_mm": 0.49997459994900045,
+      "valid": true,
+      "rest_switch_overlap_mm3": 0.0,
+      "swept_fixed_switch_overlap_mm3": 0.0,
+      "swept_upper_overlap_mm3": 0.0,
+      "swept_board_overlap_mm3": 0.0,
+      "swept_other_component_overlap_mm3": {}
+    }
+  ],
+  "other_component_shell_intersections_mm3": {},
+  "saved_reopened_valid": true,
+  "step_valid": true,
+  "step_solids": 5,
+  "upper_stl_closed": true,
+  "status": "NOMINAL_GEOMETRY_CANDIDATE_NOT_MANUFACTURING_RELEASE",
+  "limits": [
+    "USB4110 body uses official nominal dimensions in a rectangular envelope, not a manufacturer STEP or plug fit.",
+    "The board reference models the R21 outline and two NPTH locating holes, not the 165 PTH vias.",
+    "The old CAD component positions other than J1/PCB are not refreshed from R21.",
+    "No print tolerance, solder standoff, USB mating plug, shell tab, or locating-peg solid is modeled.",
+    "U1 placement and 0.066 mm board-edge clearance are unchanged."
+  ]
+}

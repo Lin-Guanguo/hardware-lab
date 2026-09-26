@@ -2,7 +2,7 @@
 
 ## 当前确定方案
 
-目前 [R21](production/r1-layout-reset-r21/README.md)是最新可重开的 USB4110 独立候选，原生 DRC 0，[线上 PCB／SMT DFM](production/r1-layout-reset-r21/vendor-dfm-2026-09-26.md)已完成，**仍不可下单**。[R17](production/r1-layout-reset-r17/README.md)证明 USB4500 焊盘位移可以保存重开，但 12 条 J1 装配危险未消，并新增 12 条板边错误。[R18B](production/r1-layout-reset-r18b/README.md)将整颗 J1 换为 USB4110，旧四槽危险 4→0、J1 焊脚／焊盘相交危险 12→0；R19 修正原理图符号同步，R20 清理过孔，R21 简化 CC2。剩余阻焊、U1 装配和外壳问题仍未完成。
+目前 [R21](production/r1-layout-reset-r21/README.md)是最新可重开的 USB4110 PCB 独立候选，原生 DRC 0，[线上 PCB／SMT DFM](production/r1-layout-reset-r21/vendor-dfm-2026-09-26.md)已完成，**仍不可下单**。[R17](production/r1-layout-reset-r17/README.md)证明 USB4500 焊盘位移可以保存重开，但 12 条 J1 装配危险未消，并新增 12 条板边错误。[R18B](production/r1-layout-reset-r18b/README.md)将整颗 J1 换为 USB4110，旧四槽危险 4→0、J1 焊脚／焊盘相交危险 12→0；R19 修正原理图符号同步，R20 清理过孔，R21 简化 CC2。[6.3 mm 外壳几何候选](../enclosure/r1-usb4110-6p3/README.md)已解决名义高度干涉；实际插头/公差、U1 装配和 PCB 阻焊仍未放行。
 
 ## 一手资料与已测量的差异
 
@@ -19,7 +19,7 @@ USB4110 的外壳 SMT 固定与定位孔是**图纸事实**；R21 的四槽与 J
 
 [现有设计参数](r1-design.json)为下壳 0.8 mm、PCB 支撑 0.32 mm、板厚 0.8 mm、上壳 0.8 mm、总高 5.8 mm。因此 PCB 顶面 `0.8+0.32+0.8=1.92 mm`，上壳内表面 `5.8−0.8=5.00 mm`。USB4110 顶面名义 `1.92+3.26=5.18 mm`，与上壳内表面重叠 **0.18 mm**。若目标仍是约 0.30 mm 名义顶部间隙，外壳总高至少需 `1.92+3.26+0.30+0.8=6.28 mm`，可先用约 **6.3 mm** 的独立外壳候选验证。此数值只含名义几何，不含 USB、PCB、支撑和打印公差；实物上可能需要更多余量。
 
-局部让位可能保留外围 5.8 mm 厚度，但端口周围会形成局部鼓包或更薄的上壳，必须用实体 CAD、按键与屏幕包络、打印工艺复核；目前没有该候选。USB4110 只写入 R18B 的独立 BOM，现有 R1/R14 交付版未改。
+独立 [6.3 mm 外壳候选](../enclosure/r1-usb4110-6p3/README.md)按 R21 Gerber 板框与 GCT 名义包络检查，上壳到接口 0.32 mm、端口无交叠，三键全行程几何通过；仍缺连接器 STEP、插头、公差和其它 R21 器件的 CAD 同步。局部让位可能保留外围 5.8 mm 厚度，但端口周围会形成局部鼓包或更薄的上壳，目前没有这条路线的实体候选。USB4110 只写入 R18B 以后独立候选的 BOM，现有 R1/R14 交付版未改。
 
 ## 两条后续路线
 

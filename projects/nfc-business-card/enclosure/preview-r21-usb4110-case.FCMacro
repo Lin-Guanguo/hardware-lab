@@ -1,0 +1,57 @@
+"""Render the isolated USB4110 geometry candidate without saving the model."""
+
+import json
+import os
+import traceback
+from pathlib import Path
+
+import FreeCAD as App
+import FreeCADGui as Gui
+from PySide import QtCore, QtWidgets
+
+
+out = Path(os.environ['NFC_R21_USB4110_CASE_OUT'])
+(out / 'preview-error.txt').unlink(missing_ok=True)
+doc = App.openDocument(str(out / 'r21-usb4110-height-6p3.FCStd'))
+shown = {'RoundedUpperShell', 'InsetRearCover', 'PCB', 'Component_J1',
+         'ScreenNominal', 'ClearKey1', 'ClearKey2', 'ClearKey3'}
+colors = {'RoundedUpperShell': (.72, .85, .92), 'InsetRearCover': (.65, .7, .75),
+          'PCB': (.1, .5, .3), 'Component_J1': (.92, .44, .16),
+          'ScreenNominal': (.24, .27, .31)}
+for obj in doc.Objects:
+    if not hasattr(obj, 'Shape'):
+        continue
+    obj.ViewObject.Visibility = obj.Name in shown
+    obj.ViewObject.ShapeColor = colors.get(obj.Name, (.83, .85, .89))
+    obj.ViewObject.Transparency = 55 if obj.Name == 'RoundedUpperShell' else 0
+    obj.ViewObject.DisplayMode = 'Shaded'
+    obj.ViewObject.Deviation = .05
+view = Gui.activeDocument().activeView()
+
+
+def finish():
+    try:
+        view.viewRight()
+        view.fitAll()
+        view.redraw()
+        view.saveImage(str(out / 'usb-side.png'), 1600, 1000, 'White')
+        (out / 'preview.json').write_text(json.dumps({'status': 'rendered',
+            'limits': 'USB4110 is a rectangular envelope; transparency is only for inspection.'}) + '\n')
+    except Exception:
+        (out / 'preview-error.txt').write_text(traceback.format_exc())
+    QtWidgets.QApplication.instance().quit()
+
+
+def start():
+    try:
+        view.viewAxonometric()
+        view.fitAll()
+        view.redraw()
+        view.saveImage(str(out / 'assembly-iso.png'), 1600, 1000, 'White')
+        QtCore.QTimer.singleShot(1200, finish)
+    except Exception:
+        (out / 'preview-error.txt').write_text(traceback.format_exc())
+        QtWidgets.QApplication.instance().quit()
+
+
+QtCore.QTimer.singleShot(1500, start)

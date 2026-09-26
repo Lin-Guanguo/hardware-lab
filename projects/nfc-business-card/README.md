@@ -2,7 +2,7 @@
 
 ## 当前确定方案
 
-**最新 USB 局部候选：**[R21 独立原生工程、制造文件与 USB 局部图](hardware/production/r1-layout-reset-r21/README.md)继承 R20，只重布 `USB_CC2`。过孔 4→2，铜线中心线长 12.454→8.196 mm；器件和焊盘未动。保存重开后的原生 DRC 0，独立连通、NFC、0.30 mm 钻孔／0.1016 mm 孔环、0.15 mm 异网离散铜间距及 BOM/CPL 对账通过。R21 线上 DFM 尚未获得，D+/D− 与 VBUS 仍有旧扇出，USB4110 外壳适配未完成，**不可下单**。
+**最新 USB 局部候选：**[R21 独立原生工程、制造文件与 USB 局部图](hardware/production/r1-layout-reset-r21/README.md)继承 R20，只重布 `USB_CC2`。过孔 4→2，铜线中心线长 12.454→8.196 mm；器件和焊盘未动。保存重开后的原生 DRC 0，独立连通、NFC、0.30 mm 钻孔／0.1016 mm 孔环、0.15 mm 异网离散铜间距及 BOM/CPL 对账通过。[R21 线上 PCB／SMT DFM](hardware/production/r1-layout-reset-r21/vendor-dfm-2026-09-26.md)已完成：VIA 孔到焊盘危险 0，旧 USB 槽和 J1 焊脚重叠危险 0；焊盘近距、阻焊、U1 装配及 USB4110 外壳适配仍未解决，**不可下单**。
 
 **最新独立候选：**[R20 原生工程、制造文件与检查记录](hardware/production/r1-layout-reset-r20/README.md)在 R19 上只局部移动三个同网过孔及相连短线。保存、关闭、重开后原生 DRC 0；本地审计中同网孔壁到焊盘 <0.10 mm 的三处降为 0，异网离散铜对象无 <0.15 mm 配对，最小钻孔约 0.30 mm、径向孔环 0.1016 mm。R20 Gerber 已上传嘉立创但分析结果页未打开，**线上危险未确认清除**。USB 扇出仍沿用旧绕线，孔环、阻焊、U1 装配及 USB4110 外壳适配仍未放行，**不可下单**。
 
@@ -68,7 +68,7 @@
 | [R18B USB4110 diagnostic](hardware/production/r1-layout-reset-r18b/README.md) | 标准顶部贴装接口、直板边、同版制造文件与线上 PCB／SMT DFM；仍有原生同步、局部工艺和外壳问题，不可下单 |
 | [R19 USB4110 schematic sync](hardware/r1-usb4110-sync-r19.md) | 替换完整官方原理图符号，保存重开后原生 DRC 0；PCB 几何与 R18B 一致，仍不可下单 |
 | [R20 via clearance candidate](hardware/production/r1-layout-reset-r20/README.md) | 局部移动三孔，本地检查通过；Gerber 已上传但 R20 线上 PCB／SMT DFM 尚未读取，不可下单 |
-| [R21 USB CC2 candidate](hardware/production/r1-layout-reset-r21/README.md) | 保留 ESD 布局并删去 CC2 冗余底层绕行，本地检查通过；R21 线上 DFM 未获取，不可下单 |
+| [R21 USB CC2 candidate](hardware/production/r1-layout-reset-r21/README.md) | 保留 ESD 布局并删去 CC2 冗余底层绕行，本地检查与线上 PCB／SMT DFM 已完成；焊盘近距、阻焊、U1 装配及外壳问题待解，不可下单 |
 | [R21 USB fanout review](hardware/r1-usb-routing-review-r21.md) | 按网络比较 CC、D+/D−、VBUS 的过孔和线长，列明下一轮数据对与供电路径门槛 |
 | [USB connector options](hardware/usb-connector-options.md) | 原厂顶部贴装 USB4110 可避开中置缺口／槽，但名义上需要约 6.3 mm 外壳候选 |
 | [Previous battery-sensing cost candidate](hardware/production/r1-free-0p30-sense/README.md) | 前版线上 DFM 与薄孔环诊断基线 |

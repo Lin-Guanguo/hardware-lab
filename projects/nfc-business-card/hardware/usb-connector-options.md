@@ -2,7 +2,7 @@
 
 ## 当前确定方案
 
-目前 [R19](r1-usb4110-sync-r19.md)是最新可重开的 USB4110 独立候选，原生 DRC 0，**仍不可下单**。[R17](production/r1-layout-reset-r17/README.md)证明 USB4500 焊盘位移可以保存重开，但 12 条 J1 装配危险未消，并新增 12 条板边错误。[R18B](production/r1-layout-reset-r18b/README.md)将整颗 J1 换为 USB4110，嘉立创线上 DFM 的旧四槽危险 4→0、J1 焊脚／焊盘相交危险 12→0；R19 修正了原理图符号同步，PCB 几何不变。其余工艺危险、USB 局部布线和外壳仍未完成。
+目前 [R21](production/r1-layout-reset-r21/README.md)是最新可重开的 USB4110 独立候选，原生 DRC 0，[线上 PCB／SMT DFM](production/r1-layout-reset-r21/vendor-dfm-2026-09-26.md)已完成，**仍不可下单**。[R17](production/r1-layout-reset-r17/README.md)证明 USB4500 焊盘位移可以保存重开，但 12 条 J1 装配危险未消，并新增 12 条板边错误。[R18B](production/r1-layout-reset-r18b/README.md)将整颗 J1 换为 USB4110，旧四槽危险 4→0、J1 焊脚／焊盘相交危险 12→0；R19 修正原理图符号同步，R20 清理过孔，R21 简化 CC2。剩余阻焊、U1 装配和外壳问题仍未完成。
 
 ## 一手资料与已测量的差异
 
@@ -13,7 +13,7 @@
 | 嘉立创物料 | [C5354966](https://jlcpcb.com/partdetail/6154270-USB4500_03_0A/C5354966)：网页列为 Standard PCBA、装配难度 High | [C5143397](https://jlcpcb.com/partdetail/5762033-USB4110_GFA/C5143397)：网页列为 Economic/Standard PCBA、装配难度 High；是否有货、费用和当前可贴状态需下单前重新核对 |
 | 对 R1 的影响 | 保留低外形和现有外壳，但板边焊盘、镀铜槽、J1 模型危险必须用实际图纸和供应商工艺审定 | 可能消除中置结构的板边焊盘与窄槽类危险；需换封装、改 J1 周边布线及外壳端口位置／高度，并重新验证机械强度和 SMT 模型 |
 
-USB4110 的外壳 SMT 固定与定位孔是**图纸事实**；R18B 的四槽与 J1 焊脚危险下降是[新版 Gerber 实测的线上结果](production/r1-layout-reset-r18b/vendor-dfm-2026-09-26.md)。嘉立创两颗料号的装配难度均曾显示 High，不能将 USB4110 宣称为已获自动贴片放行。
+USB4110 的外壳 SMT 固定与定位孔是**图纸事实**；R21 的四槽与 J1 焊脚危险保持 0 是[同版 Gerber／BOM／CPL 的线上结果](production/r1-layout-reset-r21/vendor-dfm-2026-09-26.md)。嘉立创两颗料号的装配难度均曾显示 High，不能将 USB4110 宣称为已获自动贴片放行。
 
 ## 外壳高度计算
 

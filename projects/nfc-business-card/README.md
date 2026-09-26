@@ -4,7 +4,7 @@
 
 **最新 USB 局部候选：**[R21 独立原生工程、制造文件与 USB 局部图](hardware/production/r1-layout-reset-r21/README.md)继承 R20，只重布 `USB_CC2`。过孔 4→2，铜线中心线长 12.454→8.196 mm；器件和焊盘未动。保存重开后的原生 DRC 0，独立连通、NFC、0.30 mm 钻孔／0.1016 mm 孔环、0.15 mm 异网离散铜间距及 BOM/CPL 对账通过。[R21 线上 PCB／SMT DFM](hardware/production/r1-layout-reset-r21/vendor-dfm-2026-09-26.md)已完成：VIA 孔到焊盘危险 0，旧 USB 槽和 J1 焊脚重叠危险 0；焊盘近距、阻焊、U1 装配及 USB4110 外壳适配仍未解决，**不可下单**。
 
-**下一步采用布线前门槛：**[R21 七区与 USB 复核](hardware/r1-r21-pre-routing-review.md)区分真实几何、网页模型与已解决项目。U1 的 P1MV2 物料对 `1MV2` 命名封装已按 Raytac 图纸抽查五个焊盘，坐标吻合；原厂本体与 Gerber 板边仅约 0.066 mm，网站 0.07 mm 危险有实际几何依据。[U1 板边方案比较](hardware/r1-r21-u1-edge-decision.md)显示单独内移或扩板 0.5 mm 均不是安全捷径，先试独立可拆工艺边与贴装审核；USB4110 外壳名义高度已有下述候选。再判断 USB 数据及供电是否需要局部重布。
+**下一步采用布线前门槛：**[R21 七区与 USB 复核](hardware/r1-r21-pre-routing-review.md)区分真实几何、网页模型与已解决项目。U1 的 P1MV2 物料对 `1MV2` 命名封装已用 Raytac 官方库核完 **61 个焊盘**，天线禁铜区无铜侵入；原厂本体与 Gerber 板边仅约 0.066 mm，网站 0.07 mm 危险有实际几何依据。[U1 板边方案比较](hardware/r1-r21-u1-edge-decision.md)显示单独内移或扩板 0.5 mm 均不是安全捷径，先试独立可拆工艺边与贴装审核；USB4110 外壳名义高度已有下述候选。再判断 USB 数据及供电是否需要局部重布。
 
 **外壳几何进展：**[R21 USB4110 的 6.3 mm 独立 FreeCAD 候选](enclosure/r1-usb4110-6p3/README.md)从同版 Gerber 重建板框及两颗定位孔，替换旧中置 USB 参考体；原厂名义包络至上壳 0.32 mm，端口无交叠，三键约 0.50 mm 扫掠通过。仍需真实连接器/插头、公差、其它 R21 器件 CAD 同步和 U1 板边处理，**不能作为装配或下单包**。
 

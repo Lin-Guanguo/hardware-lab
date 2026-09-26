@@ -1,0 +1,45 @@
+{
+  "source_sha256": {
+    "hardware/records/r1-layout-reset-r21-pcb-pins.json": "ff28e7e5898758879c5f383f0bca373bdbd1742946edb91b6deee6b827db9a8e",
+    "hardware/production/r1-layout-reset-r21/NFC-Card-R1-Layout-Reset-R21-USB-CC2-gerber.zip": "078cd88ae8e9e47d3374417d5e6647ec074b01f305ba697c781c66cf405cd6b6",
+    "enclosure/r1-usb4110-6p3/r21-usb4110-height-6p3.FCStd": "f8829f0de37eefbdad70b50f178c7e51eff5c4a9f6101d445b1fd3e92d69f3ae"
+  },
+  "raytac_nominal_body_xy_mm": [
+    57.75036,
+    1.166360000000001,
+    68.25036,
+    16.66636
+  ],
+  "r21_board_top_y_mm": 1.1,
+  "nominal_u1_to_board_edge_mm": 0.06636000000000086,
+  "closest_c1_c6_c7_body_top_y_mm": 17.200035560071,
+  "nominal_u1_to_cap_body_gap_mm": 0.5336755600709999,
+  "after_u1_0p5mm_inward_gap_to_caps_mm": 0.03367556007099992,
+  "hypothetical_top_board_extensions": [
+    {
+      "board_top_extension_mm": 0.5,
+      "resulting_u1_nominal_edge_mm": 0.5663600000000009,
+      "case_overlap_mm3": 0.0,
+      "case_min_distance_mm": 2.220446049250313e-16
+    },
+    {
+      "board_top_extension_mm": 1.0,
+      "resulting_u1_nominal_edge_mm": 1.0663600000000009,
+      "case_overlap_mm3": 4.200000000000002,
+      "case_min_distance_mm": 0.0
+    },
+    {
+      "board_top_extension_mm": 2.434,
+      "resulting_u1_nominal_edge_mm": 2.500360000000001,
+      "case_overlap_mm3": 10.080000000000009,
+      "case_min_distance_mm": 0.0
+    }
+  ],
+  "limits": [
+    "Raytac body coordinates use nominal dimensions and five-pad orientation check, not a full 61-pad overlay.",
+    "C1/C6/C7 body boxes come from the prior case CAD; positions match R21 snapshot but are not refreshed R21 3D models.",
+    "Board extensions are rectangular collision probes, not manufacturable outline edits.",
+    "A zero-volume shell contact is not manufacturing clearance.",
+    "A 5 mm temporary panel rail could increase distance to the carrier edge, but assembly acceptance and RF keepout are unverified."
+  ]
+}

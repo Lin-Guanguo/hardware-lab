@@ -2,6 +2,8 @@
 
 ## 当前确定方案
 
+2026-09-26：[R21 布线前复核](../hardware/r1-r21-pre-routing-review.md)冻结同版工程、引脚表与线上 DFM，确认旧 USB 槽、J1 焊脚重叠和 VIA 孔到焊盘危险已清零。U1 `P1MV2` 物料与 `1MV2` 命名封装按 Raytac 图纸抽查五个焊盘，坐标吻合；全焊盘、PCB 天线与贴片模型仍待叠图。接着解决 USB4110 与 5.8 mm 外壳名义约 0.18 mm 的实体冲突，并按实际路径审查数据/充电输入。网页计数或走线外观不再单独触发整板重排。此次只更新复核与门槛，未改 EDA 或制造文件，仍不可下单。
+
 2026-09-26：[R21 USB CC2 局部候选](../hardware/production/r1-layout-reset-r21/README.md)从 R20 仅重布 `USB_CC2`，去除并行底层绕行。过孔 4→2，线长 12.454→8.196 mm；器件、焊盘、原理图网络、天线、板框不变。首次布线产生微小孤立 GND 铜，已在独立试验中修正；最终工程保存重开后原生 DRC 0，独立连通无孤立铜，离散异网 0.15 mm 间距、Gerber 钻孔／孔环、BOM/CPL 检查通过。[线上 R21 PCB／SMT DFM](../hardware/production/r1-layout-reset-r21/vendor-dfm-2026-09-26.md)已完成：网页最小线距 0.15 mm，VIA 孔到焊盘危险 6→0，USB 槽与 J1 焊脚重叠危险 0，BOM 29/29 组匹配；仍有焊盘距焊盘 3、开窗露线 3、阻焊桥 43、U1 板边 0.07 mm 等危险。[逐孔复核](../hardware/r1-usb-routing-review-r21.md)确认 D− 五孔各有几何任务，U5 GND 已有约 2.30 mm 顶层明线到地过孔，向北直连会与 D+ 相交，试布已撤销。下一步先按同版 Gerber／网络定位局部危险、核对 U1 模型与 USB4110 外壳，再决定是否联合重布 D+/D− 和 VBUS；**不可下单**。
 
 2026-09-26：[R20 过孔间距候选](../hardware/production/r1-layout-reset-r20/README.md)在 R19 上局部移动 C23、R7/R9 和 NFC2 附近三个过孔，未移动器件、USB 接口、板框或天线。保存重开后原生 DRC 0，66 个位号／256 个引脚网络一致；独立连通、NFC、Gerber 钻孔／孔环、0.15 mm 异网离散铜间距及 BOM/CPL 检查通过。本地三处同网孔到焊盘 <0.10 mm 配对已消；[Gerber 已上传](../hardware/production/r1-layout-reset-r20/vendor-dfm-2026-09-26.md)，但 R20 线上 PCB／SMT 结果未读到。下一步读取网站结果，再手工简化 USB 扇出并处理剩余阻焊、孔环、装配和外壳问题；**不可下单**。

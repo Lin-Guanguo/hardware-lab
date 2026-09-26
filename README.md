@@ -10,7 +10,7 @@
 | --- | --- | --- |
 | [AI Passport](projects/ai-passport/README.md) | 探索紧凑的可编程胸牌、屏幕按键交互与 NFC 链接 | 2026-09-16 确认已下单，等待到货 |
 | [Image Oracle](projects/image-oracle/README.md) | 用固定算法将摄像头图像映射为答案，默认拍摄熔岩灯 | 2026-09-19 拼接原型完成并验收；后续探索更多传感器，或焊接、定制 PCB 与 3D 打印的紧凑装置 |
-| [Programmable NFC Business Card](projects/nfc-business-card/README.md) | 按键切换身份的薄型 NFC 墨水屏名片 | [R21 USB CC2 候选](projects/nfc-business-card/hardware/production/r1-layout-reset-r21/README.md)将 CC2 过孔 4→2、走线 12.45→8.20 mm，本地 DRC／连通／制造检查通过；线上 R21 DFM、其余 USB 扇出和外壳适配未完成，不可投产。 |
+| [Programmable NFC Business Card](projects/nfc-business-card/README.md) | 按键切换身份的薄型 NFC 墨水屏名片 | [R21 USB CC2 候选](projects/nfc-business-card/hardware/production/r1-layout-reset-r21/README.md)已完成本地及线上 PCB／SMT DFM；[布线前复核](projects/nfc-business-card/hardware/r1-r21-pre-routing-review.md)抽查 U1 焊盘吻合，仍须核实天线/装配及 USB4110 外壳实体冲突，再决定局部重布，不可投产。 |
 
 ## 目录结构
 

@@ -6,6 +6,7 @@ Use the [R1 native project](../../../eda/NFC-Card-R1.eprj2) and [current project
 
 | Files | Purpose |
 | --- | --- |
+| [电路对照评审](r1-circuit-reference-review.md) | NTC 装配、屏幕电容规格、供电与关断验证，以及 muxcard 对照 |
 | [production/r1/](production/r1/README.md) | Frozen vendor exports and portable project |
 | [pcb-r1-delivery.md](pcb-r1-delivery.md) | Current engineering report and checks |
 | [r1-design.json](r1-design.json) | Coordinated dimensional inputs |

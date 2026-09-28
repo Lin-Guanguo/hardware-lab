@@ -1,0 +1,38 @@
+"""Render the standalone key from above and below without saving the CAD."""
+import json
+import os
+import traceback
+from pathlib import Path
+import FreeCAD as App
+import FreeCADGui as Gui
+import Part
+from PySide import QtCore,QtWidgets
+
+out=Path(os.environ['NFC_KEY_RETENTION_OUT'])
+doc=App.newDocument('KeyRetentionPreview')
+obj=doc.addObject('Part::Feature','Key')
+obj.Shape=Part.read(str(out/'key-1.step'))
+obj.ViewObject.ShapeColor=(.64,.81,.86)
+obj.ViewObject.LineColor=(.22,.34,.4)
+obj.ViewObject.DisplayMode='Flat Lines'
+view=Gui.activeDocument().activeView()
+rotation=App.Rotation(App.Vector(0,0,1),35).multiply(App.Rotation(App.Vector(1,0,0),55))
+
+
+def render():
+    try:
+        view.setCameraOrientation(rotation.Q)
+        view.fitAll()
+        view.redraw()
+        view.saveImage(str(out/'key-top.png'),1100,850,'White')
+        view.setCameraOrientation(App.Rotation(App.Vector(1,0,0),180).multiply(rotation).Q)
+        view.fitAll()
+        view.redraw()
+        view.saveImage(str(out/'key-bottom.png'),1100,850,'White')
+        (out/'preview.json').write_text(json.dumps({'status':'rendered','opaque_geometry_preview':True})+'\n')
+    except Exception:
+        (out/'preview-error.txt').write_text(traceback.format_exc())
+    QtWidgets.QApplication.instance().quit()
+
+
+QtCore.QTimer.singleShot(2500,render)

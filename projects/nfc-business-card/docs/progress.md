@@ -14,7 +14,7 @@
 | Control routing cleanup | CE 6 → 4 vias, 39.56 → 32.98 mm; SCL remains four vias and grows 1.70 mm. This step had 818 segments / 153 vias; the subsequent SWD adaptation has 819 / 153. Saved/reopened DRC and independent checks pass. |
 | USB/SWD recovery | R3/R4 corrected to 0 ohm / C21189. [Hardware and recovery review](../hardware/r1-usb-swd-recovery.md): firmware and real USB tests pending; 2.54 mm 5P lands and cover access implemented under user-accepted generic clip assumptions; physical trial fit pending. User selected SWD programmer recovery on 2026-09-24; no hidden RESET switch or opening will be added for R1. |
 | Enclosure | Nominal fit and meshes pass; physical assembly unverified |
-| Packaging optimization | [Height handoff](../enclosure/r1-height-handoff.md) records regional heights and key motion. User deferred thickness/button process; active case remains 5.8 mm. |
+| Packaging optimization | 用户确认按 USB 定厚；[4.8 mm 候选](../enclosure/r1-usb-fit-4.8/README.md)的局部避空、薄键帽、装入与导出检查通过，视觉预览已检查。0.12 mm 安装层、薄壁/键帽与底盖固定待制造验证；电池由用户适配。打包版仍为 5.8 mm。 |
 | Battery B pads | Applied at (32.5,18.7)/(35.5,18.7) mm for upper-right lead exit; native DRC and copper checks pass. Frozen CAD wire/ferrite service volumes need later revision. |
 | Redundant vias | Removed BAT/CC2/3V3 single-layer vias and one dead stub; all remaining vias contact copper on both faces. Audit rejects an injected redundant via. |
 | RF and bring-up | User/agent must test the assembled board; provisional 220 pF tuning capacitors |

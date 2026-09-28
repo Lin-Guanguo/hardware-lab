@@ -1,0 +1,762 @@
+{
+  "status": "USB_FIT_CAD_CANDIDATE_NOT_MANUFACTURING_QUALIFIED",
+  "source_hashes": {
+    "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/enclosure/r1-rounded-rear-soft-swd254/rear-cover-study.FCStd": "fb44dc39e12c924ea4a28506dfab8d8f8e223ab901a8b5ef04aa8e5667d5d24c",
+    "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/artifacts/thin-key-3p2-v4/thin-key-study.FCStd": "f6d24e3144752e884d1832e4f1f3e4604e6b6acfff19d541798ce7129ddb8239"
+  },
+  "outer_nominal_mm": [
+    85.2,
+    53.2,
+    4.8
+  ],
+  "main_cavity_mm": 3.2,
+  "pcb_support_assumption_mm": 0.12,
+  "usb_model_bounds_mm": [
+    76.302574818371,
+    20.224941246701,
+    0.9200214339549775,
+    83.50407925926912,
+    31.775162532341,
+    4.090021433965001
+  ],
+  "usb_relief_xywh_mm": [
+    76.102574818371,
+    20.024941246701,
+    7.60150444089812,
+    11.95022128564
+  ],
+  "usb_relief_depth_mm": 0.1900214339650006,
+  "usb_roof_remaining_mm": 0.6099785660349992,
+  "usb_local_cavity_mm": 3.3900214339650008,
+  "usb_nominal_top_gap_mm": 0.1,
+  "usb_bottom_gap_mm": 0.12002143395497744,
+  "swd_pad_depth_from_rear_mm": 0.92,
+  "battery_reserved_box_mm": [
+    1.5,
+    1.5,
+    0.8,
+    32.5,
+    14,
+    3.2
+  ],
+  "battery_reserved_box_intersections_mm3": {
+    "RoundedUpperShell": 0.0,
+    "InsetRearCover": 0.0,
+    "PCB": 0.0,
+    "Component_C9": 0.0,
+    "Component_C10": 0.0,
+    "Component_C11": 0.0,
+    "Component_C12": 0.0,
+    "Component_C13": 0.0,
+    "Component_C14": 0.0,
+    "Component_C15": 0.0,
+    "Component_C16": 0.0,
+    "Component_C17": 0.0,
+    "Component_C18": 0.0,
+    "Component_C19": 0.0,
+    "Component_C20": 0.0,
+    "Component_C21": 0.0,
+    "Component_C22": 0.0,
+    "Component_C1": 0.0,
+    "Component_C2": 0.0,
+    "Component_C3": 0.0,
+    "Component_C4": 0.0,
+    "Component_C5": 0.0,
+    "Component_C6": 0.0,
+    "Component_C7": 0.0,
+    "Component_C8": 0.0,
+    "Component_C23": 0.0,
+    "Component_C24": 0.0,
+    "Component_R1": 0.0,
+    "Component_R2": 0.0,
+    "Component_R3": 0.0,
+    "Component_R4": 0.0,
+    "Component_R5": 0.0,
+    "Component_R6": 0.0,
+    "Component_R7": 0.0,
+    "Component_R8": 0.0,
+    "Component_R9": 0.0,
+    "Component_R10": 0.0,
+    "Component_R11": 0.0,
+    "Component_R12": 0.0,
+    "Component_R13": 0.0,
+    "Component_R14": 0.0,
+    "Component_R15": 0.0,
+    "Component_R16": 0.0,
+    "Component_R17": 0.0,
+    "Component_R18": 0.0,
+    "Component_U1": 0.0,
+    "Component_U4": 0.0,
+    "Component_D1": 0.0,
+    "Component_D2": 0.0,
+    "Component_D3": 0.0,
+    "Component_U5": 0.0,
+    "Component_U6": 0.0,
+    "Component_U2": 0.0,
+    "Component_J2": 0.0,
+    "Component_U3": 0.0,
+    "Component_Q1": 0.0,
+    "Component_L1": 0.0,
+    "Component_SW1": 0.0,
+    "Component_SW3": 0.0,
+    "Component_SW2": 0.0,
+    "Component_J1": 0.0,
+    "ClearKey1": 0.0,
+    "ClearKey2": 0.0,
+    "ClearKey3": 0.0,
+    "PCBSupport1": 0.0,
+    "PCBSupport2": 0.0,
+    "PCBSupport3": 0.0,
+    "PCBSupport4": 0.0,
+    "PCBSupport5": 0.0,
+    "PCBSupport6": 0.0,
+    "ScreenNominal": 0.0,
+    "ScreenPSA": 0.0
+  },
+  "battery_fit": "User-managed; reserved geometry only, no battery or compression assumption.",
+  "static_intersections_mm3": {
+    "PCB": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_C9": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_C10": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_C11": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_C12": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_C13": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_C14": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_C15": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_C16": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_C17": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_C18": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_C19": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_C20": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_C21": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_C22": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_C1": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_C2": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_C3": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_C4": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_C5": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_C6": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_C7": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_C8": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_C23": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_C24": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_R1": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_R2": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_R3": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_R4": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_R5": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_R6": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_R7": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_R8": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_R9": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_R10": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_R11": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_R12": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_R13": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_R14": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_R15": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_R16": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_R17": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_R18": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_U1": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_U4": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_D1": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_D2": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_D3": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_U5": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_U6": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_U2": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_J2": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_U3": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_Q1": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_L1": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_SW1": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_SW3": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_SW2": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "Component_J1": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "ClearKey1": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "ClearKey2": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "ClearKey3": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "PCBSupport1": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "PCBSupport2": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "PCBSupport3": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "PCBSupport4": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "PCBSupport5": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "PCBSupport6": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "ScreenNominal": {
+      "upper": 0.0,
+      "rear": 0.0
+    },
+    "ScreenPSA": {
+      "upper": 0.0,
+      "rear": 0.0
+    }
+  },
+  "screen_max_intersections_mm3": {
+    "PCB": 0.0,
+    "Component_C9": 0.0,
+    "Component_C10": 0.0,
+    "Component_C11": 0.0,
+    "Component_C12": 0.0,
+    "Component_C13": 0.0,
+    "Component_C14": 0.0,
+    "Component_C15": 0.0,
+    "Component_C16": 0.0,
+    "Component_C17": 0.0,
+    "Component_C18": 0.0,
+    "Component_C19": 0.0,
+    "Component_C20": 0.0,
+    "Component_C21": 0.0,
+    "Component_C22": 0.0,
+    "Component_C1": 0.0,
+    "Component_C2": 0.0,
+    "Component_C3": 0.0,
+    "Component_C4": 0.0,
+    "Component_C5": 0.0,
+    "Component_C6": 0.0,
+    "Component_C7": 0.0,
+    "Component_C8": 0.0,
+    "Component_C23": 0.0,
+    "Component_C24": 0.0,
+    "Component_R1": 0.0,
+    "Component_R2": 0.0,
+    "Component_R3": 0.0,
+    "Component_R4": 0.0,
+    "Component_R5": 0.0,
+    "Component_R6": 0.0,
+    "Component_R7": 0.0,
+    "Component_R8": 0.0,
+    "Component_R9": 0.0,
+    "Component_R10": 0.0,
+    "Component_R11": 0.0,
+    "Component_R12": 0.0,
+    "Component_R13": 0.0,
+    "Component_R14": 0.0,
+    "Component_R15": 0.0,
+    "Component_R16": 0.0,
+    "Component_R17": 0.0,
+    "Component_R18": 0.0,
+    "Component_U1": 0.0,
+    "Component_U4": 0.0,
+    "Component_D1": 0.0,
+    "Component_D2": 0.0,
+    "Component_D3": 0.0,
+    "Component_U5": 0.0,
+    "Component_U6": 0.0,
+    "Component_U2": 0.0,
+    "Component_J2": 0.0,
+    "Component_U3": 0.0,
+    "Component_Q1": 0.0,
+    "Component_L1": 0.0,
+    "Component_SW1": 0.0,
+    "Component_SW3": 0.0,
+    "Component_SW2": 0.0,
+    "Component_J1": 0.0
+  },
+  "straight_insertion_upper_mm3": {
+    "PCB": 0.0,
+    "Component_C9": 0.0,
+    "Component_C10": 0.0,
+    "Component_C11": 0.0,
+    "Component_C12": 0.0,
+    "Component_C13": 0.0,
+    "Component_C14": 0.0,
+    "Component_C15": 0.0,
+    "Component_C16": 0.0,
+    "Component_C17": 0.0,
+    "Component_C18": 0.0,
+    "Component_C19": 0.0,
+    "Component_C20": 0.0,
+    "Component_C21": 0.0,
+    "Component_C22": 0.0,
+    "Component_C1": 0.0,
+    "Component_C2": 0.0,
+    "Component_C3": 0.0,
+    "Component_C4": 0.0,
+    "Component_C5": 0.0,
+    "Component_C6": 0.0,
+    "Component_C7": 0.0,
+    "Component_C8": 0.0,
+    "Component_C23": 0.0,
+    "Component_C24": 0.0,
+    "Component_R1": 0.0,
+    "Component_R2": 0.0,
+    "Component_R3": 0.0,
+    "Component_R4": 0.0,
+    "Component_R5": 0.0,
+    "Component_R6": 0.0,
+    "Component_R7": 0.0,
+    "Component_R8": 0.0,
+    "Component_R9": 0.0,
+    "Component_R10": 0.0,
+    "Component_R11": 0.0,
+    "Component_R12": 0.0,
+    "Component_R13": 0.0,
+    "Component_R14": 0.0,
+    "Component_R15": 0.0,
+    "Component_R16": 0.0,
+    "Component_R17": 0.0,
+    "Component_R18": 0.0,
+    "Component_U1": 0.0,
+    "Component_U4": 0.0,
+    "Component_D1": 0.0,
+    "Component_D2": 0.0,
+    "Component_D3": 0.0,
+    "Component_U5": 0.0,
+    "Component_U6": 0.0,
+    "Component_U2": 0.0,
+    "Component_J2": 0.0,
+    "Component_U3": 0.0,
+    "Component_Q1": 0.0,
+    "Component_L1": 0.0,
+    "Component_SW1": 0.0,
+    "Component_SW3": 0.0,
+    "Component_SW2": 0.0,
+    "Component_J1": 0.0
+  },
+  "keys": [
+    {
+      "key": 1,
+      "contact_gap_mm": 0.049974599949,
+      "checked_translation_mm": 0.499974599949,
+      "flange_to_fixed_body_vertical_gap_mm": 0.07999999999999963,
+      "rest_overlap_mm3": 0.0,
+      "motion_hits_mm3": {
+        "PCB": 0.0,
+        "Component_C9": 0.0,
+        "Component_C10": 0.0,
+        "Component_C11": 0.0,
+        "Component_C12": 0.0,
+        "Component_C13": 0.0,
+        "Component_C14": 0.0,
+        "Component_C15": 0.0,
+        "Component_C16": 0.0,
+        "Component_C17": 0.0,
+        "Component_C18": 0.0,
+        "Component_C19": 0.0,
+        "Component_C20": 0.0,
+        "Component_C21": 0.0,
+        "Component_C22": 0.0,
+        "Component_C1": 0.0,
+        "Component_C2": 0.0,
+        "Component_C3": 0.0,
+        "Component_C4": 0.0,
+        "Component_C5": 0.0,
+        "Component_C6": 0.0,
+        "Component_C7": 0.0,
+        "Component_C8": 0.0,
+        "Component_C23": 0.0,
+        "Component_C24": 0.0,
+        "Component_R1": 0.0,
+        "Component_R2": 0.0,
+        "Component_R3": 0.0,
+        "Component_R4": 0.0,
+        "Component_R5": 0.0,
+        "Component_R6": 0.0,
+        "Component_R7": 0.0,
+        "Component_R8": 0.0,
+        "Component_R9": 0.0,
+        "Component_R10": 0.0,
+        "Component_R11": 0.0,
+        "Component_R12": 0.0,
+        "Component_R13": 0.0,
+        "Component_R14": 0.0,
+        "Component_R15": 0.0,
+        "Component_R16": 0.0,
+        "Component_R17": 0.0,
+        "Component_R18": 0.0,
+        "Component_U1": 0.0,
+        "Component_U4": 0.0,
+        "Component_D1": 0.0,
+        "Component_D2": 0.0,
+        "Component_D3": 0.0,
+        "Component_U5": 0.0,
+        "Component_U6": 0.0,
+        "Component_U2": 0.0,
+        "Component_J2": 0.0,
+        "Component_U3": 0.0,
+        "Component_Q1": 0.0,
+        "Component_L1": 0.0,
+        "Component_SW3": 0.0,
+        "Component_SW2": 0.0,
+        "Component_J1": 0.0,
+        "upper": 0.0,
+        "fixed_switch": 0.0
+      }
+    },
+    {
+      "key": 2,
+      "contact_gap_mm": 0.049974599949,
+      "checked_translation_mm": 0.499974599949,
+      "flange_to_fixed_body_vertical_gap_mm": 0.07999999999999963,
+      "rest_overlap_mm3": 0.0,
+      "motion_hits_mm3": {
+        "PCB": 0.0,
+        "Component_C9": 0.0,
+        "Component_C10": 0.0,
+        "Component_C11": 0.0,
+        "Component_C12": 0.0,
+        "Component_C13": 0.0,
+        "Component_C14": 0.0,
+        "Component_C15": 0.0,
+        "Component_C16": 0.0,
+        "Component_C17": 0.0,
+        "Component_C18": 0.0,
+        "Component_C19": 0.0,
+        "Component_C20": 0.0,
+        "Component_C21": 0.0,
+        "Component_C22": 0.0,
+        "Component_C1": 0.0,
+        "Component_C2": 0.0,
+        "Component_C3": 0.0,
+        "Component_C4": 0.0,
+        "Component_C5": 0.0,
+        "Component_C6": 0.0,
+        "Component_C7": 0.0,
+        "Component_C8": 0.0,
+        "Component_C23": 0.0,
+        "Component_C24": 0.0,
+        "Component_R1": 0.0,
+        "Component_R2": 0.0,
+        "Component_R3": 0.0,
+        "Component_R4": 0.0,
+        "Component_R5": 0.0,
+        "Component_R6": 0.0,
+        "Component_R7": 0.0,
+        "Component_R8": 0.0,
+        "Component_R9": 0.0,
+        "Component_R10": 0.0,
+        "Component_R11": 0.0,
+        "Component_R12": 0.0,
+        "Component_R13": 0.0,
+        "Component_R14": 0.0,
+        "Component_R15": 0.0,
+        "Component_R16": 0.0,
+        "Component_R17": 0.0,
+        "Component_R18": 0.0,
+        "Component_U1": 0.0,
+        "Component_U4": 0.0,
+        "Component_D1": 0.0,
+        "Component_D2": 0.0,
+        "Component_D3": 0.0,
+        "Component_U5": 0.0,
+        "Component_U6": 0.0,
+        "Component_U2": 0.0,
+        "Component_J2": 0.0,
+        "Component_U3": 0.0,
+        "Component_Q1": 0.0,
+        "Component_L1": 0.0,
+        "Component_SW1": 0.0,
+        "Component_SW2": 0.0,
+        "Component_J1": 0.0,
+        "upper": 0.0,
+        "fixed_switch": 0.0
+      }
+    },
+    {
+      "key": 3,
+      "contact_gap_mm": 0.049974599949,
+      "checked_translation_mm": 0.499974599949,
+      "flange_to_fixed_body_vertical_gap_mm": 0.07999999999999963,
+      "rest_overlap_mm3": 0.0,
+      "motion_hits_mm3": {
+        "PCB": 0.0,
+        "Component_C9": 0.0,
+        "Component_C10": 0.0,
+        "Component_C11": 0.0,
+        "Component_C12": 0.0,
+        "Component_C13": 0.0,
+        "Component_C14": 0.0,
+        "Component_C15": 0.0,
+        "Component_C16": 0.0,
+        "Component_C17": 0.0,
+        "Component_C18": 0.0,
+        "Component_C19": 0.0,
+        "Component_C20": 0.0,
+        "Component_C21": 0.0,
+        "Component_C22": 0.0,
+        "Component_C1": 0.0,
+        "Component_C2": 0.0,
+        "Component_C3": 0.0,
+        "Component_C4": 0.0,
+        "Component_C5": 0.0,
+        "Component_C6": 0.0,
+        "Component_C7": 0.0,
+        "Component_C8": 0.0,
+        "Component_C23": 0.0,
+        "Component_C24": 0.0,
+        "Component_R1": 0.0,
+        "Component_R2": 0.0,
+        "Component_R3": 0.0,
+        "Component_R4": 0.0,
+        "Component_R5": 0.0,
+        "Component_R6": 0.0,
+        "Component_R7": 0.0,
+        "Component_R8": 0.0,
+        "Component_R9": 0.0,
+        "Component_R10": 0.0,
+        "Component_R11": 0.0,
+        "Component_R12": 0.0,
+        "Component_R13": 0.0,
+        "Component_R14": 0.0,
+        "Component_R15": 0.0,
+        "Component_R16": 0.0,
+        "Component_R17": 0.0,
+        "Component_R18": 0.0,
+        "Component_U1": 0.0,
+        "Component_U4": 0.0,
+        "Component_D1": 0.0,
+        "Component_D2": 0.0,
+        "Component_D3": 0.0,
+        "Component_U5": 0.0,
+        "Component_U6": 0.0,
+        "Component_U2": 0.0,
+        "Component_J2": 0.0,
+        "Component_U3": 0.0,
+        "Component_Q1": 0.0,
+        "Component_L1": 0.0,
+        "Component_SW1": 0.0,
+        "Component_SW3": 0.0,
+        "Component_J1": 0.0,
+        "upper": 0.0,
+        "fixed_switch": 0.0
+      }
+    }
+  ],
+  "exports": {
+    "RoundedUpperShell": {
+      "stl_closed": true,
+      "step_valid_single_solid": true
+    },
+    "InsetRearCover": {
+      "stl_closed": true,
+      "step_valid_single_solid": true
+    },
+    "ClearKey1": {
+      "stl_closed": true,
+      "step_valid_single_solid": true
+    },
+    "ClearKey2": {
+      "stl_closed": true,
+      "step_valid_single_solid": true
+    },
+    "ClearKey3": {
+      "stl_closed": true,
+      "step_valid_single_solid": true
+    }
+  },
+  "saved_reopen_new_parts_valid": true,
+  "source_unchanged": true,
+  "limits": [
+    "0.12 mm support and 0.4 mm key flange require material/process qualification.",
+    "USB uses a conservative bounding box because its source library BREP is invalid.",
+    "Existing full-height side notch retained; its opening already spans lowered USB.",
+    "Nominal margins do not cover the complete manufacturing tolerance stack.",
+    "Battery fit, actual FPC/wires, closure retention, strength, key return and RF remain unverified.",
+    "Insertion checks upper shell only; screen/keys must be installed first and complete assembly sequence remains untested."
+  ]
+}

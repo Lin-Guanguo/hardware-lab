@@ -1,6 +1,6 @@
 ---
 description: 本机工具链、常驻服务与目录约定：新接手的人或 AI 从零跑起来 + 五分钟自检
-last_updated: 2026-09-23
+last_updated: 2026-09-28
 ---
 
 # 环境与常驻服务
@@ -12,7 +12,8 @@ last_updated: 2026-09-23
 | 组件 | 位置 / 版本 | 用途 |
 | --- | --- | --- |
 | Node.js | `/Users/linguanguo/.nvm/versions/node/v24.19.0/bin/node`（nvm） | 桥接服务、EDA 脚本执行器 |
-| EasyEDA（嘉立创EDA）专业版 | 3.2.203 + **Run API Gateway** 扩展（启用步骤与排障见[软件说明](../projects/nfc-business-card/docs/software.md#客户端与启动命令)） | 原理图/PCB 的唯一编辑环境 |
+| EasyEDA（嘉立创EDA）专业版 | 3.2.203 + **Run API Gateway** 扩展（启用步骤与排障见[软件说明](../projects/nfc-business-card/docs/software.md#客户端与启动命令)） | 当前 NFC 产品原理图/PCB 的编辑环境 |
+| KiCad（备用） | `/Applications/KiCad/KiCad.app` / `kicad-cli` 10.0.6；`.cache/kicad-venv/` 内 Python 3.12.12 + `kicad-python` 0.8.0 | 基础 API/DRC/导出样例通过；[安装、自检与边界](../tools/kicad/README.md)，产品工程未迁移 |
 | FreeCAD | `/Applications/FreeCAD.app/Contents/Resources/bin/freecadcmd`（1.1.3） | 外壳建模、几何/干涉/网格检查、STEP/STL 导出 |
 | Python | `python3`（3.12，pyenv）+ [scripts/requirements.txt](../projects/nfc-business-card/scripts/requirements.txt)（`openpyxl`、`Pillow`、`numpy`） | 快照分析、制造包核对、审查图渲染 |
 

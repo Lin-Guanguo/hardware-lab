@@ -5,6 +5,8 @@ last_updated: 2026-09-20
 
 # 软件与本机环境
 
+**2026-09-28 工具选择：本轮继续嘉立创 EDA，KiCad 作为本轮仍失败后的备用方案。**[引入调研](kicad-fallback-research-2026-09-28.md)记录本机检查、稳定版软件、既有 `kicad-happy` 参考、API 限制和最小迁移验收；KiCad 10.0.6 已由 Homebrew 安装，`kicad-workflow` 与 Python 绑定已准备，基础 API/DRC/导出样例通过，见[工具记录](../../../tools/kicad/README.md)。产品工程未迁移。以下日期记录保留各阶段验证范围。
+
 2026-09-19 用户授权准备建模软件，并确认优先用 Homebrew 管理。**FreeCAD 1.1.3 arm64 已安装并启动，第一份空间研究模型已生成和检查。** 先研究器件排布和厚度；KiCad 与固件工具暂未安装。
 
 2026-09-20 制造与 AI 工作流调研后，优先验证 **EasyEDA Pro 官方 AI API 工具链**。官方 Skill 和本地桥接依赖已在仓库内安装，用户自行安装的专业版 **3.2.203** 已连接 **Run API Gateway 1.0.6**；独立小型原理图通过保存重开、网表连接核对和工程包导出检查。继续使用此组合推进，KiCad 保留为备选；PCB 与制造文件导出尚未验证，详见 [PCBA 与 AI 设计流程调研](pcba-ai-workflow.md)。
@@ -363,7 +365,7 @@ USB 需求加入后，功能样机有两种软件入口：**EN04/XIAO 可先用�
 | 软件 | 当前建议 | 作用与安装范围 |
 | --- | --- | --- |
 | **EasyEDA Pro + 官方 AI API 工具链** | 客户端 3.2.203、Gateway 1.0.6、Skill 1.1.36 已连接 | 独立原理图保存重开、工程导出与网表核对通过；PCB 制造流程待验证 |
-| **KiCad 10.0.6** | EDA 备选，未安装 | 原理图、PCB、ERC/DRC、Gerber/STEP 导出；应用及符号/封装/3D 库会占用磁盘 |
+| **KiCad 10.0.6** | EDA 备选，2026-09-28 已安装并完成基础样例验证 | 原理图、PCB、ERC/DRC、Gerber/STEP 导出；应用及符号/封装/3D 库会占用磁盘 |
 | **FreeCAD 1.1.3 arm64** | 已安装并验证 | 参数化外壳、导入 PCB STEP、机械干涉与加工输出；通过 Homebrew 管理 |
 | **Arduino IDE 或 Arduino CLI + Seeed nRF52 Boards** | EN04/XIAO 原型时二选一 | 官方 NFC 指南验证过 Boards 1.1.13，另需屏幕与 NFC 库；CLI 的实际复现命令尚未验证 |
 | **nRF Util + SDK Manager + nRF Connect SDK v3.4.0 配套工具链** | 决定先做功能验证时安装 | 固件构建、依赖管理与板级开发；含大量源码和工具链，不能只安装一个编译器替代 |

@@ -23,10 +23,11 @@ hardware-lab/
 ├── .agents/
 │   └── skills/
 │       ├── easyeda-api -> ../../upstreams/easyeda-api-skill   <- 外部 Skill（符号链接）
-│       └── pcb-methodology/                                   <- 本仓库自建的方法论总控
+│       ├── pcb-methodology/                                   <- 本仓库自建的方法论总控
+│       └── kicad-workflow/                                    <- KiCad 备用工具执行与审查入口
 ├── upstreams/
 │   ├── easyeda-api-skill/       <- 嘉立创 EDA 官方 API Skill（可调用）
-│   ├── kicad-happy/             <- EMC 规则、公式与监管限值（只读参考）
+│   ├── kicad-happy/             <- EMC 规则参考与按需 KiCad 分析脚本
 │   ├── pcb-skill/               <- 同工具链的流程纪律与 MCP 陷阱（只读参考）
 │   ├── pcba-design-skills/      <- 证据门禁与产物失效模型（只读参考）
 │   ├── hw-review/               <- 逐引脚证据式审查、嘉立创 EDA 解析（只读参考）
@@ -74,6 +75,8 @@ hardware-lab/
 DRC 只证明几何没撞上，不证明设计正确。仓库级 [PCB 设计规则索引](docs/pcb-design-rules.md) 列出 DRC 看不见的规则、阈值、一手来源，以及每条规则对 2 层薄板的适用性；流程、约束层级与电气敏感件门禁见自建 skill [pcb-methodology](.agents/skills/pcb-methodology/SKILL.md)。
 
 外部方法论仓库以 Git submodule 引入 `upstreams/`，按需跟随主线。分两类：可直接调用的 Skill 用符号链接进 `.agents/skills/`；只作参考的上游不加链接、不执行其脚本，由自建总控 skill 引用。上游的规则原文不复制进本仓库，引用时标注仓库、文件与规则编号。
+
+KiCad 备用工具链通过本仓库 [kicad-workflow](.agents/skills/kicad-workflow/SKILL.md) 使用官方 IPC/CLI，并按需调用既有 `kicad-happy` 分析脚本；不全量安装上游流程。安装、自检和独立样例见 [tools/kicad](tools/kicad/README.md)。NFC 名片本轮仍使用嘉立创 EDA。
 
 ## 开始工作
 

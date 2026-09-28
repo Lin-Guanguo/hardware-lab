@@ -66,7 +66,7 @@ DRC 只回答"几何有没有撞上"。它不回答：
 
 ## 该查哪个上游
 
-上游以 Git submodule 固定在 `upstreams/`，按需跟随 main（`git submodule update --remote`）。**只读不装**：这些仓库假设 KiCad/MCP 或各自的目录布局，不接入 `.agents/skills/`，避免与自建桥接冲突、也避免第三方脚本对着我们在乎的设计执行。
+上游以 Git submodule 固定在 `upstreams/`，按需跟随 main（`git submodule update --remote`）。默认作为只读参考，不全量安装其 skill 或工作流。2026-09-28 用户授权准备 KiCad 后，`kicad-happy` 的分析脚本可通过本仓库 [kicad-workflow](../kicad-workflow/SKILL.md) 按需调用；使用范围、已验证版本及工具样例见 [KiCad 工具说明](../../../tools/kicad/README.md)。其他上游继续只读参考。本轮嘉立创 EDA 产品工程不会因此自动迁移。
 
 | 要回答的问题 | 上游 | 读哪里 |
 | --- | --- | --- |

@@ -1,0 +1,270 @@
+{
+  "date": "2026-09-28",
+  "scope": "Disposable two-pad PCB toolchain smoke test; not a product design review",
+  "versions": {
+    "kicad": "10.0.6",
+    "kicad_python": "0.8.0",
+    "python": "3.12.12",
+    "kicad_happy": "a6bba1add1e18b89e3aa0824b9769ed1d9d79174"
+  },
+  "ipc": {
+    "edit": "passed",
+    "save_close_reopen_readback": "passed",
+    "board_size_mm": [
+      20,
+      12
+    ],
+    "footprints": {
+      "J1": [
+        5,
+        5
+      ],
+      "J2": [
+        16,
+        5
+      ]
+    },
+    "track_count": 2,
+    "track_width_mm": 0.3,
+    "track_layers": [
+      "F.Cu",
+      "B.Cu"
+    ],
+    "via_count": 1,
+    "via_diameter_mm": 0.6,
+    "via_drill_mm": 0.3,
+    "net": "TEST"
+  },
+  "native_drc": {
+    "exit_code": 0,
+    "report": {
+      "$schema": "https://schemas.kicad.org/drc.v1.json",
+      "coordinate_units": "mm",
+      "date": "2026-09-28T16:12:11",
+      "ignored_checks": [
+        {
+          "description": "Footprint has no courtyard defined",
+          "key": "missing_courtyard"
+        },
+        {
+          "description": "Track endpoint not centered on via",
+          "key": "track_not_centered_on_via"
+        },
+        {
+          "description": "Tuning profile track geometries",
+          "key": "tuning_profile_track_geometries"
+        },
+        {
+          "description": "Footprint doesn't match symbol's footprint filters",
+          "key": "footprint_filters_mismatch"
+        },
+        {
+          "description": "Footprint component type doesn't match footprint pads",
+          "key": "footprint_type_mismatch"
+        }
+      ],
+      "included_severities": [
+        "error",
+        "warning"
+      ],
+      "kicad_version": "10.0.6",
+      "schematic_parity": [],
+      "source": "ipc-smoke.kicad_pcb",
+      "unconnected_items": [],
+      "violations": []
+    }
+  },
+  "width_fault": {
+    "rule": "(version 1)\n(rule \"Smoke width fault\" (constraint track_width (min 0.5mm)))",
+    "exit_code": 5,
+    "report": {
+      "$schema": "https://schemas.kicad.org/drc.v1.json",
+      "coordinate_units": "mm",
+      "date": "2026-09-28T16:12:11",
+      "ignored_checks": [
+        {
+          "description": "Footprint has no courtyard defined",
+          "key": "missing_courtyard"
+        },
+        {
+          "description": "Track endpoint not centered on via",
+          "key": "track_not_centered_on_via"
+        },
+        {
+          "description": "Tuning profile track geometries",
+          "key": "tuning_profile_track_geometries"
+        },
+        {
+          "description": "Footprint doesn't match symbol's footprint filters",
+          "key": "footprint_filters_mismatch"
+        },
+        {
+          "description": "Footprint component type doesn't match footprint pads",
+          "key": "footprint_type_mismatch"
+        }
+      ],
+      "included_severities": [
+        "error",
+        "warning"
+      ],
+      "kicad_version": "10.0.6",
+      "schematic_parity": [],
+      "source": "cli-fault.kicad_pcb",
+      "unconnected_items": [],
+      "violations": [
+        {
+          "description": "Track width (rule 'Smoke width fault' min width 0.5000 mm; actual 0.3000 mm)",
+          "items": [
+            {
+              "description": "Track [TEST] on F.Cu, length 5.0000 mm",
+              "pos": {
+                "x": 5.0,
+                "y": 5.0
+              },
+              "uuid": "5bdb76a8-1518-465e-8fb2-eb5993accd65"
+            }
+          ],
+          "severity": "error",
+          "type": "track_width"
+        },
+        {
+          "description": "Track width (rule 'Smoke width fault' min width 0.5000 mm; actual 0.3000 mm)",
+          "items": [
+            {
+              "description": "Track [TEST] on B.Cu, length 6.0000 mm",
+              "pos": {
+                "x": 10.0,
+                "y": 5.0
+              },
+              "uuid": "5514bca7-8af9-4efd-a780-ed3a6ed5b003"
+            }
+          ],
+          "severity": "error",
+          "type": "track_width"
+        }
+      ]
+    }
+  },
+  "initial_unconnected": {
+    "runtime": "CLI from installer image, before final Homebrew install",
+    "exit_code": 5,
+    "report": {
+      "$schema": "https://schemas.kicad.org/drc.v1.json",
+      "coordinate_units": "mm",
+      "date": "2026-09-28T15:55:21",
+      "ignored_checks": [
+        {
+          "description": "Footprint has no courtyard defined",
+          "key": "missing_courtyard"
+        },
+        {
+          "description": "Track endpoint not centered on via",
+          "key": "track_not_centered_on_via"
+        },
+        {
+          "description": "Tuning profile track geometries",
+          "key": "tuning_profile_track_geometries"
+        },
+        {
+          "description": "Footprint doesn't match symbol's footprint filters",
+          "key": "footprint_filters_mismatch"
+        },
+        {
+          "description": "Footprint component type doesn't match footprint pads",
+          "key": "footprint_type_mismatch"
+        }
+      ],
+      "included_severities": [
+        "error",
+        "warning"
+      ],
+      "kicad_version": "10.0.6",
+      "schematic_parity": [],
+      "source": "ipc-smoke.kicad_pcb",
+      "unconnected_items": [
+        {
+          "description": "Missing connection between items",
+          "items": [
+            {
+              "description": "PTH pad 1 [TEST] of J1",
+              "pos": {
+                "x": 5.0,
+                "y": 5.0
+              },
+              "uuid": "82377649-0aa8-42bd-86ea-633dce08cdeb"
+            },
+            {
+              "description": "PTH pad 1 [TEST] of J2",
+              "pos": {
+                "x": 15.0,
+                "y": 5.0
+              },
+              "uuid": "0c28465f-857f-40b8-a9fa-e90accb436e7"
+            }
+          ],
+          "severity": "error",
+          "type": "unconnected_items"
+        }
+      ],
+      "violations": []
+    }
+  },
+  "exports": {
+    "gerber_layers": 7,
+    "gerber_x2": false,
+    "drill": "Excellon",
+    "positions": [
+      {
+        "Ref": "J1",
+        "Val": "SmokePad",
+        "Package": "SmokePad",
+        "PosX": "5.000000",
+        "PosY": "-5.000000",
+        "Rot": "0.000000",
+        "Side": "top"
+      },
+      {
+        "Ref": "J2",
+        "Val": "SmokePad",
+        "Package": "SmokePad",
+        "PosX": "16.000000",
+        "PosY": "-5.000000",
+        "Rot": "0.000000",
+        "Side": "top"
+      }
+    ],
+    "factory_upload": "not performed"
+  },
+  "upstream_analysis": {
+    "statistics": {
+      "footprint_count": 2,
+      "front_side": 2,
+      "back_side": 0,
+      "smd_count": 0,
+      "tht_count": 2,
+      "copper_layers_used": 2,
+      "copper_layer_names": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "track_segments": 2,
+      "via_count": 1,
+      "zone_count": 0,
+      "total_track_length_mm": 11.0,
+      "board_width_mm": 20.0,
+      "board_height_mm": 12.0,
+      "board_area_mm2": 240.0,
+      "net_count": 1,
+      "routing_complete": true,
+      "unrouted_net_count": 0
+    },
+    "source_sha256_before_after": "9d49c06a8e34265074c8b68f6d5c7345fbcc22d18d572e88e97bc4dbc39bc226"
+  },
+  "limits": [
+    "No schematic ERC or schematic/PCB parity test",
+    "No product migration or component library mapping",
+    "No NFC, USB, DFM spacing or courtyard fault suite",
+    "DRC defaults include ignored checks listed in report",
+    "No factory file acceptance or assembly rotation verification"
+  ]
+}

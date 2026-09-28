@@ -1,0 +1,73 @@
+{
+  "scope": "Nominal archived geometry only; no manufacturing approval or new PCB.",
+  "datum": "u across connector; v into PCB; origin at midpoint of front mounting slots. mm.",
+  "drawing": {
+    "source": "https://gct.co/connector/usb4500",
+    "revision": "A1, 2023-05-31",
+    "manual_dimension_transcription": {
+      "slot_row_pitch_mm": 4.0,
+      "slot_span_mm": 11.24,
+      "smt_front_mm": 4.6,
+      "smt_rear_mm": 5.7,
+      "notch_sidewall_spacing_mm": 9.24,
+      "pcb_front_mm": -1.6
+    },
+    "limitation": "Undimensioned cutout corner reliefs are not reconstructed."
+  },
+  "revisions": {
+    "R14": {
+      "metrics": {
+        "slot_row_pitch_mm": 4.000500000000002,
+        "slot_span_mm": 11.242040000000003,
+        "smt_front_mm": 4.9009300000000025,
+        "smt_rear_mm": 6.0007499999999965,
+        "notch_back_mm": 4.6002194,
+        "pad_to_notch_gap_mm": 0.30071060000000216,
+        "notch_back_straight_span_mm": 8.642040120000004,
+        "notch_sidewall_spacing_mm": 9.64204066,
+        "pcb_front_mm": -1.4955393000000043,
+        "smt_front_error_from_drawing_mm": 0.3009300000000028
+      },
+      "cpl_j1": {
+        "Mid X": "78.679mm",
+        "Mid Y": "26mm",
+        "Ref X": "78.829mm",
+        "Ref Y": "26mm",
+        "Rotation": "90"
+      },
+      "export_check": "16 copper-flash centers agree within 0.002 mm (snapshot rounding); dimensions and outline vertices within 0.000002 mm",
+      "source_sha256": {
+        "hardware/records/r1-layout-reset-r14-routed-snapshot.json": "8f7d58891d27e4477e57c4f485820d11c92d7eca2b65e904c8ae01c11562da1b",
+        "hardware/production/r1-layout-reset-r14/NFC-Card-R1-Layout-Reset-R14-gerber.zip": "3f6765c9adcc963d7492db85b627a8f821813e2b8bd254b6d7494004ce7b9906",
+        "hardware/production/r1-layout-reset-r14/NFC-Card-R1-Layout-Reset-R14-cpl.csv": "dc403422378ed5fafb2aa2790312a3f0b28c48893ce82016e98c0133a9b0457b"
+      }
+    },
+    "R17": {
+      "metrics": {
+        "slot_row_pitch_mm": 4.000500000000002,
+        "slot_span_mm": 11.242040000000003,
+        "smt_front_mm": 4.601210000000009,
+        "smt_rear_mm": 5.701030000000003,
+        "notch_back_mm": 4.6002194,
+        "pad_to_notch_gap_mm": 0.0009906000000086124,
+        "notch_back_straight_span_mm": 9.200001919999995,
+        "notch_sidewall_spacing_mm": 9.600001119999998,
+        "pcb_front_mm": -1.4955393000000043,
+        "smt_front_error_from_drawing_mm": 0.0012100000000092592
+      },
+      "cpl_j1": {
+        "Mid X": "78.829mm",
+        "Mid Y": "26mm",
+        "Ref X": "78.829mm",
+        "Ref Y": "26mm",
+        "Rotation": "90"
+      },
+      "export_check": "16 copper-flash centers agree within 0.002 mm (snapshot rounding); dimensions and outline vertices within 0.000002 mm",
+      "source_sha256": {
+        "hardware/records/r1-layout-reset-r17-routed-snapshot.json": "a708b1c484146382b8b8e133956c74e14120514bd17811254eb4cc2cc0e8925b",
+        "hardware/production/r1-layout-reset-r17/NFC-Card-R1-Layout-Reset-R17-gerber.zip": "23574931d228bc221aa985c86b629beb2e057571ef2977422e8d2f1dd31cb900",
+        "hardware/production/r1-layout-reset-r17/NFC-Card-R1-Layout-Reset-R17-cpl.csv": "cd53de5e9dac2060cb02be70d192762950c3dd311a6049c5dbfc145e5a8d243e"
+      }
+    }
+  }
+}

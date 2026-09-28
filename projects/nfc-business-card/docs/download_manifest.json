@@ -151,5 +151,55 @@
     "sha256": "915941f107846d09e6f89e3a43c45eb70bd82f0016131a04d119715cfaa50272",
     "status": "downloaded",
     "note": "XUNPU 系列原厂图 REV A，含 24P 型号；LCSC 提供。Poppler 报 XRef 结构警告，但首张可渲染目视核对，原始字节保留。"
+  },
+  {
+    "file": "downloads/tps22919.pdf",
+    "source_url": "https://www.ti.com/lit/ds/symlink/tps22919.pdf",
+    "resolved_url": "https://www.ti.com/lit/ds/symlink/tps22919.pdf",
+    "accessed": "2026-09-28",
+    "bytes": 1454791,
+    "sha256": "743c59b01fb0891d2d0f1faba779161cd2d2b6c18edf68e6d5b3279016240c84",
+    "status": "downloaded",
+    "note": "SLVSEN5B；Rev B，2019-05；布局 §11。"
+  },
+  {
+    "file": "downloads/tpd2eusb30.pdf",
+    "source_url": "https://www.ti.com/lit/ds/symlink/tpd2eusb30.pdf",
+    "resolved_url": "https://www.ti.com/lit/ds/symlink/tpd2eusb30.pdf",
+    "accessed": "2026-09-28",
+    "bytes": 2257950,
+    "sha256": "a2c0dd845043a5bbfe610f673879c29e38649544385dea51dbe0a4c49df39136",
+    "status": "downloaded",
+    "note": "SLVSAC2G；Rev G，2021-06；布局 §10，使用 DRT 三引脚封装。"
+  },
+  {
+    "file": "downloads/ti-usb-esd-slvaf82.pdf",
+    "source_url": "https://www.ti.com/lit/pdf/SLVAF82",
+    "resolved_url": "https://www.ti.com/lit/an/slvaf82b/slvaf82b.pdf?ts=1790577033182",
+    "accessed": "2026-09-28",
+    "bytes": 551124,
+    "sha256": "2316dea63f79810672740f885429ea8ec18e5785ec6e0d0fa92d3c8e637c308a",
+    "status": "downloaded",
+    "note": "SLVAF82B；Rev B，2024-01；USB 保护评估参考，不直接照搬 USB-PD 选型。"
+  },
+  {
+    "file": "downloads/hro-type-c-31-m-13-drawing.pdf",
+    "source_url": "https://atta.szlcsc.com/upload/public/pdf/source/20190321/C223906_97EBC11092760FCA5FB297BEECA53A8E.pdf",
+    "resolved_url": "https://atta.szlcsc.com/upload/public/pdf/source/20190321/C223906_97EBC11092760FCA5FB297BEECA53A8E.pdf",
+    "accessed": "2026-09-28",
+    "bytes": 115116,
+    "sha256": "d32979f707e6665b4f182021c15ea919dadad266476a49f3e94013a50e7ff529",
+    "status": "downloaded",
+    "note": "HRO 原厂图，Rev A，2018-01-12；已有缓存补登记。"
+  },
+  {
+    "file": "downloads/usb4110-drawing.pdf",
+    "source_url": "https://atta.szlcsc.com/upload/public/pdf/source/20221101/AE1FAA4CC10FA45D180B9231EDC7E180.pdf",
+    "resolved_url": "https://atta.szlcsc.com/upload/public/pdf/source/20221101/AE1FAA4CC10FA45D180B9231EDC7E180.pdf",
+    "accessed": "2026-09-28",
+    "bytes": 140543,
+    "sha256": "db01539d03ee7a08cfff89e8733fbe0f49576a368d38f4b623f8749410ce3c48",
+    "status": "downloaded",
+    "note": "GCT 原厂图，Rev B2，2021-12；顶部贴装备选，已有缓存补登记。"
   }
 ]

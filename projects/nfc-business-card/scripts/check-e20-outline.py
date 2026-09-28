@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Check the Gerber profile and USB mounting slots against the native outline."""
+"""Check the Gerber profile and USB mounting slots against the native outline.
+
+Legacy usb_notch_width_mm measures the back straight span, not sidewall spacing.
+For the R14/R17 datum comparison, use review-usb4500-datum.py.
+"""
 import argparse
 import hashlib
 import json

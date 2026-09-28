@@ -1,0 +1,26 @@
+{
+  "status": "VENDOR_DFM_AND_ASSEMBLY_REVIEW_REQUIRED",
+  "project_sha256": "7ef89bc7ff2929e32819a1ca4251fd125648da8437fbb369308c66809251a296",
+  "snapshot_sha256": "3b9fed623064ff4ffb2835357505b878a755ea2f62924cb9b88c5412add61239",
+  "gerber_sha256": "1d932aa6f03211208693efa1729a8832f7445323a892e85a1fb49b7b6182ddbb",
+  "components": 66,
+  "bom_groups": 29,
+  "cpl_components": 66,
+  "maximum_cpl_reference_error_mm": 0.00044061938223001435,
+  "vias": 170,
+  "drill_diameter_counts_mm": {
+    "0.29972": 2,
+    "0.299999": 16,
+    "0.300228": 114,
+    "0.305001": 38
+  },
+  "minimum_via_drill_mm": 0.29972,
+  "minimum_via_hole_gap_mm": 0.30804726663591636,
+  "minimum_radial_annular_ring_mm": 0.07594600000000001,
+  "vias_below_0p10_mm_radial_ring": 97,
+  "usb_plated_slots": 4,
+  "native_drc_errors": 0,
+  "schematic_pcb_component_mismatches": 0,
+  "copper_nfc_profile_checks": "pass",
+  "qualification": "Local geometry only. Sub-0.30 mm drill values and 0.076 mm radial rings require redesign or vendor approval; no manufacturing acceptance is implied."
+}

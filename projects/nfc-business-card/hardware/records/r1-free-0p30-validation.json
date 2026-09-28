@@ -1,0 +1,29 @@
+{
+  "status": "VENDOR_DFM_AND_ASSEMBLY_REVIEW_REQUIRED",
+  "candidate_project_sha256": "c30a058590a2d74f5ae1ecd92254a12bdc4b7a5c8205d725944aa449e65ed244",
+  "original_project_sha256": "c6d729d9f3d906707301966eb84cc700e33301fd37733d93fc89962f554cdbdc",
+  "snapshot_sha256": "4052639b461be632085664d97961fd93669bdf10c3054883066742218cc229e8",
+  "gerber_sha256": "f357b0d512d1933e7631d7a8130a76b8d75d8130fa9f083177b3743fc03c6aed",
+  "native_project_sqlite_quick_check": "ok",
+  "vias": 153,
+  "enlarged_via_drills": 97,
+  "moved_via_nets": [
+    "GND",
+    "USB_CC2"
+  ],
+  "adjusted_trace_nets": [
+    "USB_CC2",
+    "USB_CC2"
+  ],
+  "drill_diameter_counts_mm": {
+    "0.300228": 115,
+    "0.305001": 38
+  },
+  "minimum_via_hole_gap_mm": 0.30804726663591636,
+  "minimum_radial_annular_ring_mm": 0.07594600000000001,
+  "plated_mounting_slots": 4,
+  "native_drc_errors_after_reopen": 0,
+  "independent_copper_and_nfc_checks": "pass",
+  "profile_and_slots": "PROFILE_AND_SLOTS_PASS",
+  "qualification": "The 0.075 mm radial annulus is a deliberate reduction from R1's 0.10 mm target. Native DRC and geometry checks do not constitute vendor acceptance or physical qualification."
+}

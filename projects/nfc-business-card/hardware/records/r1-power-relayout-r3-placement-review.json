@@ -1,0 +1,41 @@
+{
+  "measurement": "Native saved PCB pad-center distances; placement proxies, not traced return-loop measurements or electrical tests.",
+  "pairs": [
+    {
+      "pad_pair": "C9-1 to U4-1",
+      "r2_pad_center_distance_mm": 1.55,
+      "r3_pad_center_distance_mm": 2.15
+    },
+    {
+      "pad_pair": "C9-2 to U4-2",
+      "r2_pad_center_distance_mm": 3.008,
+      "r3_pad_center_distance_mm": 4.049
+    },
+    {
+      "pad_pair": "C10-1 to U4-5",
+      "r2_pad_center_distance_mm": 2.2,
+      "r3_pad_center_distance_mm": 3.577
+    },
+    {
+      "pad_pair": "C10-2 to U4-2",
+      "r2_pad_center_distance_mm": 4.521,
+      "r3_pad_center_distance_mm": 3.578
+    },
+    {
+      "pad_pair": "L1-1 to C10-1",
+      "r2_pad_center_distance_mm": 3.036,
+      "r3_pad_center_distance_mm": 7.374
+    },
+    {
+      "pad_pair": "L1-2 to Q1-3",
+      "r2_pad_center_distance_mm": 1.372,
+      "r3_pad_center_distance_mm": 4.119
+    },
+    {
+      "pad_pair": "C11-1 to L1-2",
+      "r2_pad_center_distance_mm": 4.404,
+      "r3_pad_center_distance_mm": 10.286
+    }
+  ],
+  "conclusion": "R3 spreads several display-power connections; keep as exploratory and restore compact functional grouping before production."
+}

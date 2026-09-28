@@ -1,0 +1,377 @@
+{
+  "api": {
+    "bytes": 99129,
+    "sha256": "c0f7f154d1d7027a285dc063fdb7fa053e64180de249e5b0b2669f38bf556001"
+  },
+  "manual": {
+    "bytes": 99136,
+    "sha256": "4372106192cd50d1bd0117c15449aba5b81be32f288e98e088018bbbdbad8d9e"
+  },
+  "files": {
+    "Drill_PTH_Through.DRL": {
+      "equivalent_within_export_precision": false,
+      "normalized_commands": [
+        186,
+        186
+      ],
+      "max_numeric_delta": 39.7602,
+      "unused_aperture_definitions_ignored": [
+        0,
+        0
+      ],
+      "differences": [
+        {
+          "line": 45,
+          "delta": 10.699999000000005,
+          "left": "X76.499999Y15.05",
+          "right": "X65.8Y12.5"
+        },
+        {
+          "line": 46,
+          "delta": 6.200001,
+          "left": "X65.8Y12.5",
+          "right": "X72.000001Y16.000001"
+        },
+        {
+          "line": 47,
+          "delta": 6.500002,
+          "left": "X72.000001Y16.000001",
+          "right": "X68.6Y9.499999"
+        },
+        {
+          "line": 48,
+          "delta": 7.2000009999999985,
+          "left": "X68.6Y9.499999",
+          "right": "X75.600001Y16.7"
+        },
+        {
+          "line": 49,
+          "delta": 26.200001000000007,
+          "left": "X75.600001Y16.7",
+          "right": "X49.4Y23.500001"
+        },
+        {
+          "line": 50,
+          "delta": 1.9999990000000025,
+          "left": "X49.4Y23.500001",
+          "right": "X51.399999Y23.500001"
+        },
+        {
+          "line": 51,
+          "delta": 4.899998,
+          "left": "X51.399999Y23.500001",
+          "right": "X53.2Y28.399999"
+        },
+        {
+          "line": 52,
+          "delta": 3.900000000000002,
+          "left": "X53.2Y28.399999",
+          "right": "X54.200001Y24.499999"
+        },
+        {
+          "line": 53,
+          "delta": 3.700000000000003,
+          "left": "X54.200001Y24.499999",
+          "right": "X57.900001Y23.299999"
+        },
+        {
+          "line": 54,
+          "delta": 2.6999999999999957,
+          "left": "X57.900001Y23.299999",
+          "right": "X60.600001Y23.299999"
+        }
+      ]
+    },
+    "Drill_PTH_Through_Via.DRL": {
+      "equivalent_within_export_precision": false,
+      "normalized_commands": [
+        180,
+        180
+      ],
+      "max_numeric_delta": 39.7602,
+      "unused_aperture_definitions_ignored": [
+        0,
+        0
+      ],
+      "differences": [
+        {
+          "line": 44,
+          "delta": 10.699999000000005,
+          "left": "X76.499999Y15.05",
+          "right": "X65.8Y12.5"
+        },
+        {
+          "line": 45,
+          "delta": 6.200001,
+          "left": "X65.8Y12.5",
+          "right": "X72.000001Y16.000001"
+        },
+        {
+          "line": 46,
+          "delta": 6.500002,
+          "left": "X72.000001Y16.000001",
+          "right": "X68.6Y9.499999"
+        },
+        {
+          "line": 47,
+          "delta": 7.2000009999999985,
+          "left": "X68.6Y9.499999",
+          "right": "X75.600001Y16.7"
+        },
+        {
+          "line": 48,
+          "delta": 26.200001000000007,
+          "left": "X75.600001Y16.7",
+          "right": "X49.4Y23.500001"
+        },
+        {
+          "line": 49,
+          "delta": 1.9999990000000025,
+          "left": "X49.4Y23.500001",
+          "right": "X51.399999Y23.500001"
+        },
+        {
+          "line": 50,
+          "delta": 4.899998,
+          "left": "X51.399999Y23.500001",
+          "right": "X53.2Y28.399999"
+        },
+        {
+          "line": 51,
+          "delta": 3.900000000000002,
+          "left": "X53.2Y28.399999",
+          "right": "X54.200001Y24.499999"
+        },
+        {
+          "line": 52,
+          "delta": 3.700000000000003,
+          "left": "X54.200001Y24.499999",
+          "right": "X57.900001Y23.299999"
+        },
+        {
+          "line": 53,
+          "delta": 2.6999999999999957,
+          "left": "X57.900001Y23.299999",
+          "right": "X60.600001Y23.299999"
+        }
+      ]
+    },
+    "FlyingProbeTesting.json": {
+      "identical_bytes": true
+    },
+    "Gerber_BoardOutlineLayer.GKO": {
+      "equivalent_within_export_precision": true,
+      "normalized_commands": [
+        24,
+        24
+      ],
+      "max_numeric_delta": 0,
+      "unused_aperture_definitions_ignored": [
+        1,
+        1
+      ],
+      "differences": []
+    },
+    "Gerber_BottomLayer.GBL": {
+      "equivalent_within_export_precision": false,
+      "normalized_commands": [
+        2371,
+        2373
+      ],
+      "max_numeric_delta": 26.200001000000007,
+      "unused_aperture_definitions_ignored": [
+        1,
+        1
+      ],
+      "differences": [
+        {
+          "line_count": [
+            2371,
+            2373
+          ]
+        },
+        {
+          "line": 1850,
+          "delta": 0.2999969999999976,
+          "left": "G01X73.700599Y38.250599D03*",
+          "right": "G01X73.700599Y38.550596D03*"
+        },
+        {
+          "line": 1877,
+          "delta": 0.20000000000000284,
+          "left": "G01X72.425001Y25.174999D03*",
+          "right": "G01X72.625001Y25.274999D03*"
+        },
+        {
+          "line": 1911,
+          "delta": 0.2999989999999997,
+          "left": "G01X78.400001Y16.799999D03*",
+          "right": "G01X78.200001Y16.500000D03*"
+        },
+        {
+          "line": 2146,
+          "delta": 0.20000000000000284,
+          "left": "G01X72.425001Y25.174999D02*",
+          "right": "G01X72.625001Y25.274999D02*"
+        },
+        {
+          "line": 2254,
+          "left": "G01X76.499999Y15.050000D01*",
+          "right": "G54D10*"
+        },
+        {
+          "line": 2255,
+          "left": "G54D10*",
+          "right": "G01X65.800000Y12.500000D02*"
+        },
+        {
+          "line": 2256,
+          "delta": 3.5800009999999958,
+          "left": "G01X65.800000Y12.500000D02*",
+          "right": "G01X69.380001Y15.050000D01*"
+        },
+        {
+          "line": 2257,
+          "delta": 1.0,
+          "left": "G01X69.380001Y15.050000D01*",
+          "right": "G01X70.329999Y16.000001D02*"
+        },
+        {
+          "line": 2258,
+          "delta": 1.6700019999999967,
+          "left": "G01X70.329999Y16.000001D02*",
+          "right": "G01X72.000001Y16.000001D01*"
+        }
+      ]
+    },
+    "Gerber_BottomPasteMaskLayer.GBP": {
+      "equivalent_within_export_precision": true,
+      "normalized_commands": [
+        7,
+        7
+      ],
+      "max_numeric_delta": 0,
+      "unused_aperture_definitions_ignored": [
+        1,
+        1
+      ],
+      "differences": []
+    },
+    "Gerber_BottomSilkscreenLayer.GBO": {
+      "equivalent_within_export_precision": true,
+      "normalized_commands": [
+        183,
+        183
+      ],
+      "max_numeric_delta": 0,
+      "unused_aperture_definitions_ignored": [
+        1,
+        1
+      ],
+      "differences": []
+    },
+    "Gerber_BottomSolderMaskLayer.GBS": {
+      "equivalent_within_export_precision": true,
+      "normalized_commands": [
+        25,
+        25
+      ],
+      "max_numeric_delta": 0,
+      "unused_aperture_definitions_ignored": [
+        1,
+        1
+      ],
+      "differences": []
+    },
+    "Gerber_TopLayer.GTL": {
+      "equivalent_within_export_precision": false,
+      "normalized_commands": [
+        5111,
+        5111
+      ],
+      "max_numeric_delta": 0.2999989999999997,
+      "unused_aperture_definitions_ignored": [
+        1,
+        1
+      ],
+      "differences": [
+        {
+          "line": 4096,
+          "delta": 0.2999969999999976,
+          "left": "G01X73.700599Y38.250599D03*",
+          "right": "G01X73.700599Y38.550596D03*"
+        },
+        {
+          "line": 4123,
+          "delta": 0.20000000000000284,
+          "left": "G01X72.425001Y25.174999D03*",
+          "right": "G01X72.625001Y25.274999D03*"
+        },
+        {
+          "line": 4157,
+          "delta": 0.2999989999999997,
+          "left": "G01X78.400001Y16.799999D03*",
+          "right": "G01X78.200001Y16.500000D03*"
+        },
+        {
+          "line": 4576,
+          "delta": 0.2999969999999976,
+          "left": "G01X73.700599Y38.250599D01*",
+          "right": "G01X73.700599Y38.550596D01*"
+        },
+        {
+          "line": 4895,
+          "delta": 0.2999989999999997,
+          "left": "G01X78.400001Y16.799999D01*",
+          "right": "G01X78.200001Y16.500000D01*"
+        }
+      ]
+    },
+    "Gerber_TopPasteMaskLayer.GTP": {
+      "equivalent_within_export_precision": true,
+      "normalized_commands": [
+        1857,
+        1857
+      ],
+      "max_numeric_delta": 0,
+      "unused_aperture_definitions_ignored": [
+        1,
+        1
+      ],
+      "differences": []
+    },
+    "Gerber_TopSilkscreenLayer.GTO": {
+      "equivalent_within_export_precision": true,
+      "normalized_commands": [
+        1621,
+        1621
+      ],
+      "max_numeric_delta": 0,
+      "unused_aperture_definitions_ignored": [
+        1,
+        1
+      ],
+      "differences": []
+    },
+    "Gerber_TopSolderMaskLayer.GTS": {
+      "equivalent_within_export_precision": true,
+      "normalized_commands": [
+        327,
+        327
+      ],
+      "max_numeric_delta": 0,
+      "unused_aperture_definitions_ignored": [
+        1,
+        1
+      ],
+      "differences": []
+    },
+    "PCB\u4e0b\u5355\u5fc5\u8bfb.txt": {
+      "identical_bytes": true
+    }
+  },
+  "only_api": [],
+  "only_manual": [],
+  "extra_manual_files": {},
+  "ok": false
+}

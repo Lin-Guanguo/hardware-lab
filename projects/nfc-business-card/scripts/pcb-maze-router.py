@@ -10,8 +10,9 @@ pcb_PrimitiveLine / pcb_PrimitiveVia / pcb_PrimitivePad into
 {lines, vias, pads}.  Coordinates in the snapshot are mil; everything printed
 and written by this tool is millimetre.
 
-Design rules used for obstacle inflation (JLCPCB Capability, 1 oz):
-  track-track 0.102 mm, pad/via-track 0.152 mm, board edge 0.300 mm.
+Design rules used for obstacle inflation (project routing targets):
+  track-track 0.150 mm, pad/via-track 0.152 mm, board edge 0.300 mm.
+New vias default to 0.55 mm diameter and 0.30 mm drill.
 
 The tool never edits the project: it writes a routes.json that a separate
 EasyEDA script turns into pcb_PrimitiveLine.create / pcb_PrimitiveVia.create
@@ -31,8 +32,8 @@ ap.add_argument('--width', type=float, default=0.20, help='track width in mm')
 ap.add_argument('--pen', type=int, default=30, help='congestion cost per use')
 ap.add_argument('--out', default='routes.json')
 ap.add_argument('--constraints', help='JSON with outline_mm and keepouts_mm for another layout')
-ap.add_argument('--via-diameter', type=float, default=.30)
-ap.add_argument('--via-hole', type=float, default=.20)
+ap.add_argument('--via-diameter', type=float, default=.55)
+ap.add_argument('--via-hole', type=float, default=.30)
 ap.add_argument('--grid', type=float, default=.1)
 args = ap.parse_args()
 
@@ -48,7 +49,7 @@ GRID = args.grid
 W, H = 84.0, 52.0
 NX, NY = int(W/GRID)+1, int(H/GRID)+1
 PLANE = NY*NX
-CL_TT, CL_PT, CL_VT, CL_VP, CL_EDGE = 0.102, 0.152, 0.152, 0.152, 0.300
+CL_TT, CL_PT, CL_VT, CL_VP, CL_EDGE = 0.150, 0.152, 0.152, 0.152, 0.300
 VIA_OD, VIA_DR = args.via_diameter, args.via_hole
 HW_VIA = VIA_OD/2
 HOLE_CLEARANCE = 0.30        # hole-to-hole; applies to every net, including the one being routed

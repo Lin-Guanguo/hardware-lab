@@ -1,0 +1,46 @@
+{
+  "status": "placement_only_not_for_manufacture",
+  "project_uuid": "8cfda3bb0c808ab6e7fb6f07c4e1904d11640dc021854413bf37cd41cc56a364",
+  "pcb_uuid": "8033127c48771f3b",
+  "sqlite_quick_check": "ok",
+  "saved_reopened_snapshot_matches": {
+    "components": 66,
+    "pads": 266,
+    "lines": 925,
+    "vias": 169,
+    "pours": 2,
+    "poured": 2,
+    "polylines": 8,
+    "regions": 4
+  },
+  "via_rule_mm": {
+    "outer_min": 0.499999,
+    "outer_default": 0.550001,
+    "drill_min": 0.299999,
+    "drill_default": 0.299999
+  },
+  "native_drc_after_reopen": {
+    "clearance_error": {
+      "total": 62,
+      "smd_pad_to_track": 23,
+      "filled_copper_to_smd_pad": 31,
+      "smd_pad_to_via": 4,
+      "hole_to_smd_pad": 4
+    },
+    "connection_error": {
+      "total": 36,
+      "GND": 4,
+      "VDD_3V3": 2,
+      "EPD_VDD": 6,
+      "EPD_EN_TBD": 3,
+      "EPD_SW": 5,
+      "EPD_GDR": 3,
+      "EPD_RESE": 3,
+      "EPD_PUMP": 2,
+      "EPD_VPH": 3,
+      "EPD_VGL": 3,
+      "EPD_VGH": 2
+    }
+  },
+  "note": "Existing R2 copper and pours are stale after component placement; DRC and connectivity errors must be resolved before any manufacturing export."
+}

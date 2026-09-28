@@ -1,0 +1,29 @@
+{
+  "status": "LAYOUT_TRIAL_NOT_FOR_FABRICATION",
+  "project_sha256": "04eb948b0c744d63c355793030d47ff4c98d8961349cd49a95f4029ddec057e5",
+  "snapshot_sha256": "cb94b7edb766f4ac8efb5702103bf84c22f27f1b5569d4a30f30b85622bd026b",
+  "gerber_sha256": "2ab87aff1d24109482330ef27d47b09d122480d35bf87c0e276088d28127478e",
+  "bom_sha256": "fefa28f37ce2731ca34cdade0101c9bfd037c41249601d1d8d2b3c69d664e294",
+  "cpl_sha256": "f066bbbf2b91ddea1a09e09aff27bc0d7d4ceafe1e2f7048e630c51e023a038f",
+  "components": 66,
+  "bom_groups": 29,
+  "cpl_components": 66,
+  "maximum_cpl_reference_error_mm": 0.00044061938223001435,
+  "vias": 142,
+  "drill_diameter_counts_mm": {
+    "0.24892": 1,
+    "0.25": 53,
+    "0.3": 1,
+    "0.30226": 2,
+    "0.3048": 85
+  },
+  "minimum_via_drill_mm": 0.24892,
+  "vias_below_0p30_mm_drill": 54,
+  "minimum_via_hole_gap_mm": 0.3175189374926642,
+  "minimum_radial_annular_ring_mm": 0.10106000000000001,
+  "vias_below_0p10_mm_radial_ring": 0,
+  "different_net_copper_pairs_below_0p15_mm": 0,
+  "usb_plated_slots": 4,
+  "native_drc_errors_after_reopen": 0,
+  "qualification": "Diagnostic export only. Restore all small vias to 0.30 mm and recheck electrical placement and supplier DFM before fabrication."
+}

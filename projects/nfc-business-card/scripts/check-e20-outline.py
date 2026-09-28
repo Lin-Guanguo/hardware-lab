@@ -12,11 +12,16 @@ p=argparse.ArgumentParser(description=__doc__)
 p.add_argument('--gerber',type=Path,required=True)
 p.add_argument('--snapshot',type=Path,required=True)
 p.add_argument('--output',type=Path,required=True)
+p.add_argument('--usb-notch-radius-mm',type=float,default=.5)
+p.add_argument('--usb-notch-width-mm',type=float)
 a=p.parse_args()
 s=json.loads(a.snapshot.read_text())
 profiles=[i for i in s['polylines'] if i['layer']==11]
 assert len(profiles)==1,'Expected one native board outline'
 raw=profiles[0]['polygon']['polygon']
+notch_width=abs(raw[42]-raw[45])*.0254
+if a.usb_notch_width_mm is not None:
+    assert abs(notch_width-a.usb_notch_width_mm)<.002,'Wrong USB notch width'
 expected=[(raw[0]*.0254,raw[1]*.0254)]
 i=2
 while i<len(raw):
@@ -47,7 +52,8 @@ with zipfile.ZipFile(a.gerber) as z:
     assert len(paths)==1 and math.dist(paths[0][0],paths[0][-1])<.002,'Open or duplicate profile'
     assert len(paths[0])==len(expected),'Profile vertex count differs'
     assert all(any(math.dist(e,v)<.002 for v in paths[0])for e in expected),'Profile differs from native outline'
-    assert len(arcs)==8 and all(min(abs(r-.5),abs(r-2))<.002 for r in arcs),'Wrong corner radii'
+    expected_radii=sorted([a.usb_notch_radius_mm]*2+[.5]*3+[2]*3)
+    assert len(arcs)==8 and all(abs(r-e)<.002 for r,e in zip(sorted(arcs),expected_radii)),'Wrong corner radii'
     assert not any(n.endswith('.GME') for n in names),'Unexpected mechanical outline export'
     drill=z.read(next(n for n in names if n.endswith('PTH_Through.DRL'))).decode()
     tools = {m[1]: float(m[2]) for m in re.finditer(r'(T\d+)C([\d.]+)', drill)}
@@ -63,7 +69,8 @@ with zipfile.ZipFile(a.gerber) as z:
     assert len(slots)==4 and all(abs(x-y)<.002 for x,y in zip(sorted(slots),[.8,.8,1.2,1.2]))
 report={'status':'PROFILE_AND_SLOTS_PASS','closed_contours':1,
         'bbox_mm':[min(x for x,y in expected),min(y for x,y in expected),max(x for x,y in expected),max(y for x,y in expected)],
-        'arc_radii_mm':arcs,'usb_slot_centerline_lengths_mm':slots,'conflicting_mechanical_layer':False,
+        'arc_radii_mm':arcs,'usb_notch_width_mm':notch_width,
+        'usb_slot_centerline_lengths_mm':slots,'conflicting_mechanical_layer':False,
         'gerber_sha256':hashlib.sha256(a.gerber.read_bytes()).hexdigest(),
         'snapshot_sha256':hashlib.sha256(a.snapshot.read_bytes()).hexdigest(),
         'scope':'Outline and mounting-slot geometry only. Copper connectivity and physical performance require separate checks.'}

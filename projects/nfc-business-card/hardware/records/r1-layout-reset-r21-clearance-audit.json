@@ -1,0 +1,304 @@
+{
+  "target_mm": 0.15,
+  "scope": "Different-net copper: lines, pads and vias. Same-net via-hole-to-pad: drilled hole to pad copper. Excludes poured copper and solder-mask openings; rounded pad geometry is approximate.",
+  "pair_count_below_target": 0,
+  "net_pair_groups_below_target": 0,
+  "minimum_gap_mm": null,
+  "groups": [],
+  "pairs": [],
+  "same_net_via_hole_to_pad_pairs_below_target": [
+    {
+      "gap_mm": 0.115,
+      "net": "USB_VBUS",
+      "via_index": 104,
+      "pad_index": 11,
+      "via_center_mm": [
+        58.229,
+        17.8498
+      ],
+      "pad_number": "1",
+      "pad_ref": "C1"
+    },
+    {
+      "gap_mm": 0.1167,
+      "net": "VDD_3V3",
+      "via_index": 58,
+      "pad_index": 39,
+      "via_center_mm": [
+        50.6,
+        21.6
+      ],
+      "pad_number": "1",
+      "pad_ref": "R7"
+    },
+    {
+      "gap_mm": 0.117,
+      "net": "VDD_3V3",
+      "via_index": 58,
+      "pad_index": 43,
+      "via_center_mm": [
+        50.6,
+        21.6
+      ],
+      "pad_number": "1",
+      "pad_ref": "R9"
+    },
+    {
+      "gap_mm": 0.1187,
+      "net": "GND",
+      "via_index": 77,
+      "pad_index": 26,
+      "via_center_mm": [
+        71.9792,
+        24.3508
+      ],
+      "pad_number": "2",
+      "pad_ref": "R1"
+    },
+    {
+      "gap_mm": 0.1219,
+      "net": "GND",
+      "via_index": 78,
+      "pad_index": 28,
+      "via_center_mm": [
+        73.6752,
+        28.8011
+      ],
+      "pad_number": "2",
+      "pad_ref": "R2"
+    },
+    {
+      "gap_mm": 0.1257,
+      "net": "BAT_PACK_TBD",
+      "via_index": 131,
+      "pad_index": 244,
+      "via_center_mm": [
+        76.3727,
+        15.05
+      ],
+      "pad_number": "2",
+      "pad_ref": "Q2"
+    },
+    {
+      "gap_mm": 0.1301,
+      "net": "VDD_3V3",
+      "via_index": 68,
+      "pad_index": 23,
+      "via_center_mm": [
+        60.25,
+        17.9
+      ],
+      "pad_number": "1",
+      "pad_ref": "C7"
+    },
+    {
+      "gap_mm": 0.1327,
+      "net": "GND",
+      "via_index": 110,
+      "pad_index": 142,
+      "via_center_mm": [
+        55.44,
+        36.565
+      ],
+      "pad_number": "17",
+      "pad_ref": "J2"
+    },
+    {
+      "gap_mm": 0.143,
+      "net": "GND",
+      "via_index": 70,
+      "pad_index": 129,
+      "via_center_mm": [
+        46.0,
+        20.35
+      ],
+      "pad_number": "11",
+      "pad_ref": "U2"
+    },
+    {
+      "gap_mm": 0.1472,
+      "net": "USB_CC2",
+      "via_index": 7,
+      "pad_index": 222,
+      "via_center_mm": [
+        73.65,
+        25.2501
+      ],
+      "pad_number": "2",
+      "pad_ref": "U6"
+    },
+    {
+      "gap_mm": 0.1472,
+      "net": "GND",
+      "via_index": 86,
+      "pad_index": 134,
+      "via_center_mm": [
+        55.88,
+        17.4042
+      ],
+      "pad_number": "2",
+      "pad_ref": "U3"
+    },
+    {
+      "gap_mm": 0.1475,
+      "net": "GND",
+      "via_index": 94,
+      "pad_index": 230,
+      "via_center_mm": [
+        53.8008,
+        5.9995
+      ],
+      "pad_number": "2",
+      "pad_ref": "C24"
+    },
+    {
+      "gap_mm": 0.1479,
+      "net": "GND",
+      "via_index": 84,
+      "pad_index": 59,
+      "via_center_mm": [
+        68.2504,
+        6.2662
+      ],
+      "pad_number": "2",
+      "pad_ref": "U1"
+    },
+    {
+      "gap_mm": 0.1481,
+      "net": "GND",
+      "via_index": 79,
+      "pad_index": 51,
+      "via_center_mm": [
+        38.0009,
+        3.5492
+      ],
+      "pad_number": "3",
+      "pad_ref": "SW1"
+    },
+    {
+      "gap_mm": 0.1481,
+      "net": "GND",
+      "via_index": 80,
+      "pad_index": 53,
+      "via_center_mm": [
+        44.2011,
+        3.5492
+      ],
+      "pad_number": "4",
+      "pad_ref": "SW1"
+    },
+    {
+      "gap_mm": 0.1481,
+      "net": "GND",
+      "via_index": 81,
+      "pad_index": 55,
+      "via_center_mm": [
+        38.0009,
+        13.4501
+      ],
+      "pad_number": "3",
+      "pad_ref": "SW3"
+    },
+    {
+      "gap_mm": 0.1481,
+      "net": "GND",
+      "via_index": 92,
+      "pad_index": 225,
+      "via_center_mm": [
+        46.4998,
+        7.8494
+      ],
+      "pad_number": "3",
+      "pad_ref": "SW2"
+    },
+    {
+      "gap_mm": 0.1481,
+      "net": "GND",
+      "via_index": 98,
+      "pad_index": 22,
+      "via_center_mm": [
+        60.149,
+        18.6995
+      ],
+      "pad_number": "2",
+      "pad_ref": "C7"
+    },
+    {
+      "gap_mm": 0.1482,
+      "net": "GND",
+      "via_index": 82,
+      "pad_index": 57,
+      "via_center_mm": [
+        44.2011,
+        11.6501
+      ],
+      "pad_number": "4",
+      "pad_ref": "SW3"
+    },
+    {
+      "gap_mm": 0.1482,
+      "net": "GND",
+      "via_index": 83,
+      "pad_index": 58,
+      "via_center_mm": [
+        67.6504,
+        5.6664
+      ],
+      "pad_number": "1",
+      "pad_ref": "U1"
+    },
+    {
+      "gap_mm": 0.1482,
+      "net": "GND",
+      "via_index": 93,
+      "pad_index": 227,
+      "via_center_mm": [
+        52.6999,
+        6.0494
+      ],
+      "pad_number": "4",
+      "pad_ref": "SW2"
+    },
+    {
+      "gap_mm": 0.1488,
+      "net": "GND",
+      "via_index": 74,
+      "pad_index": 16,
+      "via_center_mm": [
+        51.1644,
+        17.1639
+      ],
+      "pad_number": "2",
+      "pad_ref": "C4"
+    },
+    {
+      "gap_mm": 0.1488,
+      "net": "GND",
+      "via_index": 75,
+      "pad_index": 18,
+      "via_center_mm": [
+        51.1644,
+        20.1637
+      ],
+      "pad_number": "2",
+      "pad_ref": "C5"
+    },
+    {
+      "gap_mm": 0.1488,
+      "net": "GND",
+      "via_index": 76,
+      "pad_index": 24,
+      "via_center_mm": [
+        46.7374,
+        15.4647
+      ],
+      "pad_number": "2",
+      "pad_ref": "C8"
+    }
+  ],
+  "same_net_via_hole_to_pad_danger_pairs_below_0p10_mm": 0,
+  "same_net_via_hole_to_pad_danger_distinct_vias": 0,
+  "same_net_via_hole_overlapping_pad_pairs": 0,
+  "snapshot_sha256": "53784aeb473cef247c67a6f81b867715df2f370850b8347a606f2ccfc82ce919",
+  "pins_sha256": "ff28e7e5898758879c5f383f0bca373bdbd1742946edb91b6deee6b827db9a8e"
+}

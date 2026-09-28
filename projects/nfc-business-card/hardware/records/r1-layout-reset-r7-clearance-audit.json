@@ -1,0 +1,385 @@
+{
+  "target_mm": 0.15,
+  "scope": "Different-net copper: lines, pads and vias. Same-net via-hole-to-pad: drilled hole to pad copper. Excludes poured copper and solder-mask openings; rounded pad geometry is approximate.",
+  "pair_count_below_target": 0,
+  "net_pair_groups_below_target": 0,
+  "minimum_gap_mm": null,
+  "groups": [],
+  "pairs": [],
+  "same_net_via_hole_to_pad_pairs_below_target": [
+    {
+      "gap_mm": 0,
+      "net": "GND",
+      "via_index": 79,
+      "pad_index": 28,
+      "via_center_mm": [
+        73.8534,
+        28.8011
+      ],
+      "pad_number": "2"
+    },
+    {
+      "gap_mm": 0,
+      "net": "GND",
+      "via_index": 90,
+      "pad_index": 180,
+      "via_center_mm": [
+        73.7006,
+        38.2506
+      ],
+      "pad_number": "2"
+    },
+    {
+      "gap_mm": 0,
+      "net": "BAT_PACK_TBD",
+      "via_index": 132,
+      "pad_index": 260,
+      "via_center_mm": [
+        76.5,
+        15.05
+      ],
+      "pad_number": "2"
+    },
+    {
+      "gap_mm": 0,
+      "net": "GND",
+      "via_index": 147,
+      "pad_index": 264,
+      "via_center_mm": [
+        78.4,
+        16.8
+      ],
+      "pad_number": "2"
+    },
+    {
+      "gap_mm": 0.0187,
+      "net": "GND",
+      "via_index": 78,
+      "pad_index": 26,
+      "via_center_mm": [
+        72.0792,
+        24.3508
+      ],
+      "pad_number": "2"
+    },
+    {
+      "gap_mm": 0.047,
+      "net": "NFC1_TBD",
+      "via_index": 23,
+      "pad_index": 229,
+      "via_center_mm": [
+        55.9,
+        8.65
+      ],
+      "pad_number": "1"
+    },
+    {
+      "gap_mm": 0.0753,
+      "net": "USB_VBUS",
+      "via_index": 105,
+      "pad_index": 11,
+      "via_center_mm": [
+        58.279,
+        17.8498
+      ],
+      "pad_number": "1"
+    },
+    {
+      "gap_mm": 0.0763,
+      "net": "USB_DM_CONN",
+      "via_index": 1,
+      "pad_index": 236,
+      "via_center_mm": [
+        75.175,
+        26.2509
+      ],
+      "pad_number": "A7"
+    },
+    {
+      "gap_mm": 0.0813,
+      "net": "USB_VBUS",
+      "via_index": 108,
+      "pad_index": 25,
+      "via_center_mm": [
+        45.529,
+        18.0998
+      ],
+      "pad_number": "1"
+    },
+    {
+      "gap_mm": 0.09,
+      "net": "GND",
+      "via_index": 117,
+      "pad_index": 26,
+      "via_center_mm": [
+        72.425,
+        25.175
+      ],
+      "pad_number": "2"
+    },
+    {
+      "gap_mm": 0.0916,
+      "net": "VDD_3V3",
+      "via_index": 59,
+      "pad_index": 39,
+      "via_center_mm": [
+        50.6,
+        21.575
+      ],
+      "pad_number": "1"
+    },
+    {
+      "gap_mm": 0.0962,
+      "net": "NFC1_TBD",
+      "via_index": 67,
+      "pad_index": 9,
+      "via_center_mm": [
+        35.3,
+        30.0
+      ],
+      "pad_number": "NFC2"
+    },
+    {
+      "gap_mm": 0.098,
+      "net": "SWDIO",
+      "via_index": 55,
+      "pad_index": 108,
+      "via_center_mm": [
+        58.3511,
+        7.5161
+      ],
+      "pad_number": "51"
+    },
+    {
+      "gap_mm": 0.1013,
+      "net": "USB_DM_CONN",
+      "via_index": 0,
+      "pad_index": 234,
+      "via_center_mm": [
+        75.15,
+        25.2501
+      ],
+      "pad_number": "B7"
+    },
+    {
+      "gap_mm": 0.1013,
+      "net": "USB_CC2",
+      "via_index": 7,
+      "pad_index": 239,
+      "via_center_mm": [
+        75.15,
+        27.7495
+      ],
+      "pad_number": "B5"
+    },
+    {
+      "gap_mm": 0.1301,
+      "net": "VDD_3V3",
+      "via_index": 69,
+      "pad_index": 23,
+      "via_center_mm": [
+        60.25,
+        17.9
+      ],
+      "pad_number": "1"
+    },
+    {
+      "gap_mm": 0.1327,
+      "net": "GND",
+      "via_index": 111,
+      "pad_index": 142,
+      "via_center_mm": [
+        55.44,
+        36.565
+      ],
+      "pad_number": "17"
+    },
+    {
+      "gap_mm": 0.142,
+      "net": "VDD_3V3",
+      "via_index": 59,
+      "pad_index": 43,
+      "via_center_mm": [
+        50.6,
+        21.575
+      ],
+      "pad_number": "1"
+    },
+    {
+      "gap_mm": 0.143,
+      "net": "GND",
+      "via_index": 71,
+      "pad_index": 129,
+      "via_center_mm": [
+        46.0,
+        20.35
+      ],
+      "pad_number": "11"
+    },
+    {
+      "gap_mm": 0.1472,
+      "net": "USB_CC2",
+      "via_index": 8,
+      "pad_index": 222,
+      "via_center_mm": [
+        73.65,
+        25.2501
+      ],
+      "pad_number": "2"
+    },
+    {
+      "gap_mm": 0.1472,
+      "net": "GND",
+      "via_index": 87,
+      "pad_index": 134,
+      "via_center_mm": [
+        55.88,
+        17.4042
+      ],
+      "pad_number": "2"
+    },
+    {
+      "gap_mm": 0.1475,
+      "net": "GND",
+      "via_index": 95,
+      "pad_index": 230,
+      "via_center_mm": [
+        53.8008,
+        5.9995
+      ],
+      "pad_number": "2"
+    },
+    {
+      "gap_mm": 0.1479,
+      "net": "GND",
+      "via_index": 85,
+      "pad_index": 59,
+      "via_center_mm": [
+        68.2504,
+        6.2662
+      ],
+      "pad_number": "2"
+    },
+    {
+      "gap_mm": 0.1481,
+      "net": "GND",
+      "via_index": 80,
+      "pad_index": 51,
+      "via_center_mm": [
+        38.0009,
+        3.5492
+      ],
+      "pad_number": "3"
+    },
+    {
+      "gap_mm": 0.1481,
+      "net": "GND",
+      "via_index": 81,
+      "pad_index": 53,
+      "via_center_mm": [
+        44.2011,
+        3.5492
+      ],
+      "pad_number": "4"
+    },
+    {
+      "gap_mm": 0.1481,
+      "net": "GND",
+      "via_index": 82,
+      "pad_index": 55,
+      "via_center_mm": [
+        38.0009,
+        13.4501
+      ],
+      "pad_number": "3"
+    },
+    {
+      "gap_mm": 0.1481,
+      "net": "GND",
+      "via_index": 93,
+      "pad_index": 225,
+      "via_center_mm": [
+        46.4998,
+        7.8494
+      ],
+      "pad_number": "3"
+    },
+    {
+      "gap_mm": 0.1481,
+      "net": "GND",
+      "via_index": 99,
+      "pad_index": 22,
+      "via_center_mm": [
+        60.149,
+        18.6995
+      ],
+      "pad_number": "2"
+    },
+    {
+      "gap_mm": 0.1482,
+      "net": "GND",
+      "via_index": 83,
+      "pad_index": 57,
+      "via_center_mm": [
+        44.2011,
+        11.6501
+      ],
+      "pad_number": "4"
+    },
+    {
+      "gap_mm": 0.1482,
+      "net": "GND",
+      "via_index": 84,
+      "pad_index": 58,
+      "via_center_mm": [
+        67.6504,
+        5.6664
+      ],
+      "pad_number": "1"
+    },
+    {
+      "gap_mm": 0.1482,
+      "net": "GND",
+      "via_index": 94,
+      "pad_index": 227,
+      "via_center_mm": [
+        52.6999,
+        6.0494
+      ],
+      "pad_number": "4"
+    },
+    {
+      "gap_mm": 0.1488,
+      "net": "GND",
+      "via_index": 75,
+      "pad_index": 16,
+      "via_center_mm": [
+        51.1644,
+        17.1639
+      ],
+      "pad_number": "2"
+    },
+    {
+      "gap_mm": 0.1488,
+      "net": "GND",
+      "via_index": 76,
+      "pad_index": 18,
+      "via_center_mm": [
+        51.1644,
+        20.1637
+      ],
+      "pad_number": "2"
+    },
+    {
+      "gap_mm": 0.1488,
+      "net": "GND",
+      "via_index": 77,
+      "pad_index": 24,
+      "via_center_mm": [
+        46.7374,
+        15.4647
+      ],
+      "pad_number": "2"
+    }
+  ]
+}

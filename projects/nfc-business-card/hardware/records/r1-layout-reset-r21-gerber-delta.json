@@ -1,0 +1,48 @@
+{
+  "comparison": "R20 to R21",
+  "changed_for_cc2_and_ground_pour": [
+    "Gerber_TopLayer.GTL",
+    "Gerber_BottomLayer.GBL",
+    "Drill_PTH_Through.DRL",
+    "Drill_PTH_Through_Via.DRL"
+  ],
+  "other_manufacturing_layers_equivalent": true,
+  "files": {
+    "Gerber_TopLayer.GTL": {
+      "equivalent_within_export_precision": false
+    },
+    "Gerber_BottomLayer.GBL": {
+      "equivalent_within_export_precision": false
+    },
+    "Gerber_TopSilkscreenLayer.GTO": {
+      "equivalent_within_export_precision": true
+    },
+    "Gerber_BottomSilkscreenLayer.GBO": {
+      "equivalent_within_export_precision": true
+    },
+    "Gerber_TopSolderMaskLayer.GTS": {
+      "equivalent_within_export_precision": true
+    },
+    "Gerber_BottomSolderMaskLayer.GBS": {
+      "equivalent_within_export_precision": true
+    },
+    "Gerber_TopPasteMaskLayer.GTP": {
+      "equivalent_within_export_precision": true
+    },
+    "Gerber_BottomPasteMaskLayer.GBP": {
+      "equivalent_within_export_precision": true
+    },
+    "Gerber_BoardOutlineLayer.GKO": {
+      "equivalent_within_export_precision": true
+    },
+    "Drill_PTH_Through.DRL": {
+      "equivalent_within_export_precision": false
+    },
+    "Drill_NPTH_Through.DRL": {
+      "equivalent_within_export_precision": true
+    },
+    "Drill_PTH_Through_Via.DRL": {
+      "equivalent_within_export_precision": false
+    }
+  }
+}

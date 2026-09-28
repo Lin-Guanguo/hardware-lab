@@ -1,0 +1,40 @@
+{
+  "status": "LOCAL_CHECKS_PASS_VENDOR_REVIEW_REQUIRED",
+  "project_sha256": "2e2982c3d60c19501d96b44e2e7dc26a71db10c3533cfdd9eb1c4e14b97f3764",
+  "snapshot_sha256": "5b9dadc383210c26ab53cb95e80040d77d6bbc94a3af319604b597e3907a93a4",
+  "gerber_sha256": "4faeb0815cba16c8d1f5c5762e4be2d466f350d8a9b1828da44216db9badbb15",
+  "bom_sha256": "fefa28f37ce2731ca34cdade0101c9bfd037c41249601d1d8d2b3c69d664e294",
+  "cpl_sha256": "dc403422378ed5fafb2aa2790312a3f0b28c48893ce82016e98c0133a9b0457b",
+  "components": 66,
+  "bom_groups": 29,
+  "cpl_components": 66,
+  "maximum_cpl_reference_error_mm": 0.0004405795474111037,
+  "vias": 167,
+  "drill_diameter_counts_mm": {
+    "0.299999": 15,
+    "0.30226": 34,
+    "0.3048": 90,
+    "0.305001": 28
+  },
+  "minimum_via_drill_mm": 0.299999,
+  "minimum_via_hole_gap_mm": 0.30395891898599664,
+  "minimum_radial_annular_ring_mm": 0.1016,
+  "vias_below_0p10_mm_radial_ring": 0,
+  "different_net_copper_pairs_below_0p15_mm": 0,
+  "same_net_via_hole_to_pad_pairs_below_0p15_mm": 35,
+  "usb_plated_slots": 4,
+  "cc2_protection_cut_groups": [
+    [
+      "1@(72.85,28.80)",
+      "2@(74.10,25.25)",
+      "via164",
+      "via166"
+    ],
+    [
+      "B5@(75.95,27.75)",
+      "via7",
+      "via8"
+    ]
+  ],
+  "qualification": "Local checks do not establish vendor PCB/SMT DFM approval or physical performance."
+}

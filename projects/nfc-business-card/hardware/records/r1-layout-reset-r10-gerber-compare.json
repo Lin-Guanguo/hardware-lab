@@ -1,0 +1,90 @@
+{
+  "r9_gerber_sha256": "4372106192cd50d1bd0117c15449aba5b81be32f288e98e088018bbbdbad8d9e",
+  "r10_gerber_sha256": "1b360a85259438a18a3ac510971b3d70d03e189e70730c33b6bd45918e583e3d",
+  "r10_only_top_silk_changed": true,
+  "files": {
+    "Drill_PTH_Through.DRL": {
+      "equivalent": true,
+      "commands": [
+        186,
+        186
+      ]
+    },
+    "Drill_PTH_Through_Via.DRL": {
+      "equivalent": true,
+      "commands": [
+        180,
+        180
+      ]
+    },
+    "FlyingProbeTesting.json": {
+      "identical_bytes": true
+    },
+    "Gerber_BoardOutlineLayer.GKO": {
+      "equivalent": true,
+      "commands": [
+        24,
+        24
+      ]
+    },
+    "Gerber_BottomLayer.GBL": {
+      "equivalent": true,
+      "commands": [
+        2373,
+        2373
+      ]
+    },
+    "Gerber_BottomPasteMaskLayer.GBP": {
+      "equivalent": true,
+      "commands": [
+        7,
+        7
+      ]
+    },
+    "Gerber_BottomSilkscreenLayer.GBO": {
+      "equivalent": true,
+      "commands": [
+        183,
+        183
+      ]
+    },
+    "Gerber_BottomSolderMaskLayer.GBS": {
+      "equivalent": true,
+      "commands": [
+        25,
+        25
+      ]
+    },
+    "Gerber_TopLayer.GTL": {
+      "equivalent": true,
+      "commands": [
+        5111,
+        5111
+      ]
+    },
+    "Gerber_TopPasteMaskLayer.GTP": {
+      "equivalent": true,
+      "commands": [
+        1857,
+        1857
+      ]
+    },
+    "Gerber_TopSilkscreenLayer.GTO": {
+      "equivalent": false,
+      "commands": [
+        1621,
+        1270
+      ]
+    },
+    "Gerber_TopSolderMaskLayer.GTS": {
+      "equivalent": true,
+      "commands": [
+        327,
+        327
+      ]
+    },
+    "PCB下单必读.txt": {
+      "identical_bytes": true
+    }
+  }
+}

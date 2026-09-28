@@ -1,0 +1,30 @@
+{
+  "components": 66,
+  "bom_groups": 29,
+  "cpl_components": 66,
+  "vias": 167,
+  "min_drill_mm": 0.3,
+  "min_radial_ring_mm": 0.1016,
+  "via_rings_below_0p10_mm": 0,
+  "j1_cpl": {
+    "Device": "USB4110-GF-A",
+    "Footprint": "USB-C-SMD_TYPE-C-16P-USB4110-GF-A",
+    "Ref X": "78.402mm",
+    "Ref Y": "26mm",
+    "Rotation": "90",
+    "Pins": "16"
+  },
+  "hashes": {
+    "r18b-after-hole-removal-gerber.zip": "e2b22e689e7b72bd35ce6cd3f21b799ebeaf0abb69c31f2d7bc34eac180d83fe",
+    "NFC-Card-R1-Layout-Reset-R18B-USB4110-bom.csv": "45e8b0f49e903e49467941fa57c0a3e454b6c6c02ed9870fa600ec1101ee6be4",
+    "NFC-Card-R1-Layout-Reset-R18B-USB4110-cpl.csv": "79807d080d9202098d0db276c0e82e0154afda400bfa15c34901965f9c81bfad"
+  },
+  "status": "DIAGNOSTIC_NOT_PRODUCTION_READY",
+  "independent_netlist": {
+    "schematic_refs": 66,
+    "pcb_refs": 66,
+    "schematic_pins": 256,
+    "pcb_pins": 256,
+    "pin_net_mismatches": 0
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "source": "https://www.raytac.com/document/act.php?act=1&index_id=30",
+  "official_package": "MDBT50Q / nRF52840 Eagle library, Footprint_Design Guide 230606",
+  "matched_pin_count": 61,
+  "max_pad_center_error_mm": 0.0020855694665905472,
+  "max_pad_width_error_mm": 0.0005600000000000049,
+  "max_pad_height_error_mm": 0.0012200000000000544,
+  "rotation_mismatches_mod_180": [],
+  "official_main_keepout_bounds_mm": [
+    56.75036000000001,
+    0.16636000000000095,
+    69.25036,
+    4.966360000000001
+  ],
+  "official_top_extra_keepout_bounds_mm": [
+    63.70036000000001,
+    4.966360000000001,
+    65.30036000000001,
+    6.166360000000001
+  ],
+  "official_keepout_copper_intrusions": [],
+  "step_body_bbox_mm": [
+    57.75036000000001,
+    1.166359999999998,
+    1.9199999999999977,
+    68.25036000000001,
+    16.666360000000005,
+    3.9200000000000026
+  ],
+  "step_to_case_min_mm": 0.566359999999998,
+  "step_to_case_overlap_mm3": 0.0,
+  "step_to_r21_board_overlap_mm3": 0.0,
+  "step_to_old_cad_cap_min_mm": {
+    "C1": 0.5336755600709999,
+    "C6": 0.5336755600709999,
+    "C7": 0.5336755600709999
+  },
+  "source_sha256": {
+    "raytac_eagle_library_sha256": "aac25cb0acb352ecaf35ade520297f920951b6e510fdce0d0fc9e2b165d6f3da",
+    "raytac_p1mv2_step_sha256": "15a1722e8542aff980a0c2eaf51a34fa9335e64f37d49ba20e8a15a530d5c928",
+    "r21_pins_sha256": "ff28e7e5898758879c5f383f0bca373bdbd1742946edb91b6deee6b827db9a8e",
+    "r21_snapshot_sha256": "53784aeb473cef247c67a6f81b867715df2f370850b8347a606f2ccfc82ce919",
+    "case_sha256": "f8829f0de37eefbdad70b50f178c7e51eff5c4a9f6101d445b1fd3e92d69f3ae",
+    "raytac_official_archive_sha256": "7ff6f11d0185a9db73c7140a4fe7e70b31615539916e60d5c27af8178f9f9fc2"
+  },
+  "limits": [
+    "The STEP is nominal; dimensional tolerances and paste/mask details are not verified.",
+    "C1/C6/C7 and other case components are old CAD bodies, not a full R21 3D update.",
+    "A correct pad overlay and positive shell gap do not approve near-edge SMT assembly."
+  ]
+}

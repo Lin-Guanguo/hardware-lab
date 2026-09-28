@@ -1,0 +1,25 @@
+{
+  "ok": true,
+  "connected_groups_before_cut": 1,
+  "groups_after_cut": [
+    [
+      "1@(55.90,8.00)",
+      "52@(59.25,6.66)",
+      "NFC2@(36.30,30.00)",
+      "via22",
+      "via23",
+      "via78",
+      "via79"
+    ],
+    [
+      "1@(55.90,6.00)",
+      "54@(59.25,5.86)",
+      "NFC1@(36.30,27.00)",
+      "via24",
+      "via25"
+    ]
+  ],
+  "cut_line_index": 706,
+  "scope": "Copper topology only; this does not establish RF resonance or read range.",
+  "bypass_negative_control_passed": true
+}

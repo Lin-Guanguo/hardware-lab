@@ -8,7 +8,7 @@
 
 | 项目 | 用途 | 最近记录的状态 |
 | --- | --- | --- |
-| [AI Passport](projects/ai-passport/README.md) | 探索紧凑的可编程胸牌、屏幕按键交互与 NFC 链接 | 2026-09-16 确认已下单，等待到货 |
+| [AI Passport](projects/ai-passport/README.md) | 探索紧凑的可编程胸牌、屏幕按键交互与 NFC 链接 | 2026-09-28 用户确认 TRAE 版到货；首次 USB 检查尚未识别设备，待排查 |
 | [Image Oracle](projects/image-oracle/README.md) | 用固定算法将摄像头图像映射为答案，默认拍摄熔岩灯 | 2026-09-19 拼接原型完成并验收；后续探索更多传感器，或焊接、定制 PCB 与 3D 打印的紧凑装置 |
 | [Programmable NFC Business Card](projects/nfc-business-card/README.md) | 按键切换身份的薄型 NFC 墨水屏名片 | R1 PCB 与外壳仍待实物验证；2026-09-24 桌面 PN532 已通过 SPI 探测和手机固定网址 NDEF 读取。[桌面程序与记录](projects/nfc-business-card/README.md#pn532-桌面测试程序) |
 

@@ -1,0 +1,124 @@
+{
+  "status": "USB_SIGNAL_ROUTING_CHECKED_FULL_BOARD_AND_RETURN_POURS_INCOMPLETE",
+  "counts": {
+    "components": 66,
+    "component_pins": 256,
+    "pads": 266,
+    "tracks": 149,
+    "vias": 19,
+    "bom_groups": 29
+  },
+  "moved_vs_a": [
+    "R1",
+    "R2",
+    "U5",
+    "U6"
+  ],
+  "unchanged_nfc_outline_keepouts_other_components": true,
+  "complete_signal_nets": [
+    "USB_DP_CONN",
+    "USB_DM_CONN",
+    "USB_DP_MCU",
+    "USB_DM_MCU",
+    "USB_CC1",
+    "USB_CC2"
+  ],
+  "usb_local_ground_connected": true,
+  "new_vias_by_net": {
+    "USB_DM_CONN": 4,
+    "USB_CC2": 2,
+    "GND": 5,
+    "USB_DP_CONN": 2
+  },
+  "new_copper_min_other_net_clearance_mm": 0.2479802000000042,
+  "new_trace_via_min_other_net_clearance_mm": 0.29784040000000545,
+  "new_via_min_other_net_clearance_mm": 0.3010624606443865,
+  "new_via_hole_to_any_smt_pad_min_mm": 0.4494301399999898,
+  "u5_ground_pad_to_first_via_center_mm": 0.9993800050031041,
+  "u6_ground_pad_to_first_via_center_mm": 1.0998600727365202,
+  "native_drc": [
+    {
+      "category": "Clearance Error in the same footprint",
+      "kind": "Board Outline to SMD Pad",
+      "count": 12
+    },
+    {
+      "category": "Connection Error",
+      "kind": "SMD Pad",
+      "count": 188
+    },
+    {
+      "category": "Connection Error",
+      "kind": "SMD Test Point",
+      "count": 8
+    },
+    {
+      "category": "Connection Error",
+      "kind": "TH Pad",
+      "count": 2
+    },
+    {
+      "category": "Connection Error",
+      "kind": "Via",
+      "count": 1
+    },
+    {
+      "category": "Physical Error",
+      "kind": "Via Size",
+      "count": 4
+    }
+  ],
+  "split_or_unrouted_nets": [
+    "BAT_ADC_SENSE",
+    "BAT_DIV_SUPPLY",
+    "BAT_MEAS_EN",
+    "BAT_NTC_TBD",
+    "BAT_PACK_TBD",
+    "BAT_SWITCH_GATE",
+    "CHG_CE_N",
+    "CHG_INT_N",
+    "CHG_PG_N",
+    "CHG_SCL",
+    "CHG_SDA",
+    "EPD_BS0",
+    "EPD_BUSY_TBD",
+    "EPD_CS_N_TBD",
+    "EPD_DC_TBD",
+    "EPD_EN_TBD",
+    "EPD_GDR",
+    "EPD_MOSI_TBD",
+    "EPD_PUMP",
+    "EPD_RESE",
+    "EPD_RESET_N_TBD",
+    "EPD_SCK_TBD",
+    "EPD_SW",
+    "EPD_VCOM",
+    "EPD_VDD",
+    "EPD_VDDL",
+    "EPD_VGH",
+    "EPD_VGL",
+    "EPD_VPH",
+    "EPD_VSNH",
+    "EPD_VSNL1",
+    "EPD_VSNL2",
+    "EPD_VSPH",
+    "EPD_VSPL1",
+    "EPD_VSPL2",
+    "GND",
+    "KEY_NEXT_N",
+    "KEY_OK_N",
+    "KEY_PREV_N",
+    "NRESET",
+    "SWDCLK",
+    "SWDIO",
+    "SYS",
+    "USB_VBUS",
+    "VDD_3V3"
+  ],
+  "open_gates": [
+    "VBUS is unrouted and protection selection remains open.",
+    "Local USB ground is not yet joined to the board ground; continuous return pours remain open.",
+    "Merged cutout, footprint-to-edge acceptance, U1 assembly edge and enclosure tolerances remain open.",
+    "No Gerber solder-mask, online DFM or signal-integrity acceptance is claimed."
+  ]
+}

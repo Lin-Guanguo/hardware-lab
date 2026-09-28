@@ -1,0 +1,710 @@
+{
+  "status": "USB_LOCAL_CONNECTIVITY_CHECKED_FREEZE_BLOCKED",
+  "counts": {
+    "components": 66,
+    "component_pins": 256,
+    "pads": 266,
+    "tracks": 161,
+    "vias": 40,
+    "pours": 2,
+    "bom_groups": 29
+  },
+  "unchanged_vs_b": [
+    "components",
+    "pads",
+    "schematic pin nets",
+    "BOM references",
+    "all signal and NFC copper",
+    "board outlines",
+    "original antenna/screen keepouts",
+    "native rules"
+  ],
+  "complete_nets": [
+    "USB_DP_CONN",
+    "USB_DM_CONN",
+    "USB_DP_MCU",
+    "USB_DM_MCU",
+    "USB_CC1",
+    "USB_CC2",
+    "USB_VBUS"
+  ],
+  "usb_u1_u2_ground_same_physical_component": true,
+  "floating_copper": [],
+  "dead_ends": [],
+  "single_face_vias": [],
+  "pour_unit_calibration": {
+    "1": {
+      "inset_mm": -0.102,
+      "span_ratio": 0.936,
+      "ok": true
+    },
+    "2": {
+      "inset_mm": -0.102,
+      "span_ratio": 0.936,
+      "ok": true
+    }
+  },
+  "antenna_and_screen_keepout_checks": [
+    {
+      "id": "9d23f6bb076fa2f0",
+      "added_foreign_copper_area_mm2": 0.0
+    },
+    {
+      "id": "d49ece88915402a1",
+      "added_foreign_copper_area_mm2": 0.0
+    },
+    {
+      "id": "06377bb1f0a68afa",
+      "added_foreign_copper_area_mm2": 0.0
+    },
+    {
+      "id": "b2c0e16ba8b63dcd",
+      "added_foreign_copper_area_mm2": 0.0
+    }
+  ],
+  "hole_to_smt_copper_mm": {
+    "same_net": {
+      "gap_mm": 0.40955866994768836,
+      "via_mm": [
+        57.90000103999999,
+        18.199999159999997
+      ],
+      "pad": "f41efe6726027056e14"
+    },
+    "different_net": {
+      "gap_mm": 0.49395888000000804,
+      "via_mm": [
+        47.700001119999996,
+        20.599999439999998
+      ],
+      "pad": "ee62f5257cbedd7fe7"
+    }
+  },
+  "minimum_sampled_non_nfc_copper_spacing": [
+    0.19812000000000296,
+    "BAT_PACK_TBD",
+    "CHG_PG_N",
+    1
+  ],
+  "minimum_usb_via_to_other_discrete_copper": [
+    0.2502814399999984,
+    "GND",
+    "USB_DP_CONN",
+    [
+      73.89999952,
+      27.80000028
+    ],
+    "track"
+  ],
+  "via_counts_by_net": {
+    "NFC1_TBD": 6,
+    "USB_DM_CONN": 4,
+    "USB_CC2": 2,
+    "USB_DP_CONN": 2,
+    "USB_VBUS": 4,
+    "GND": 22
+  },
+  "six_data_via_returns": [
+    {
+      "net": "USB_DM_CONN",
+      "xy_mm": [
+        73.69999992,
+        26.24836
+      ],
+      "nearest_ground_via_mm": [
+        73.89999952,
+        27.80000028
+      ],
+      "distance_mm": 1.5644767171545344,
+      "within_1p6mm_review_target": true
+    },
+    {
+      "net": "USB_DM_CONN",
+      "xy_mm": [
+        73.79999972,
+        24.44999936
+      ],
+      "nearest_ground_via_mm": [
+        72.00000078,
+        25.200000399999997
+      ],
+      "distance_mm": 1.9499994215389485,
+      "within_1p6mm_review_target": false
+    },
+    {
+      "net": "USB_DP_CONN",
+      "xy_mm": [
+        68.89999936,
+        26.550559040000003
+      ],
+      "nearest_ground_via_mm": [
+        68.89999936,
+        27.650000579999997
+      ],
+      "distance_mm": 1.0994415399999937,
+      "within_1p6mm_review_target": true
+    },
+    {
+      "net": "USB_DM_CONN",
+      "xy_mm": [
+        68.20000076,
+        25.849519039999997
+      ],
+      "nearest_ground_via_mm": [
+        68.20000076,
+        24.74999876
+      ],
+      "distance_mm": 1.0995202799999966,
+      "within_1p6mm_review_target": true
+    },
+    {
+      "net": "USB_DP_CONN",
+      "xy_mm": [
+        53.79999908,
+        14.20114
+      ],
+      "nearest_ground_via_mm": [
+        53.00000068,
+        13.099999200000001
+      ],
+      "distance_mm": 1.3610688819553545,
+      "within_1p6mm_review_target": true
+    },
+    {
+      "net": "USB_DM_CONN",
+      "xy_mm": [
+        53.79999908,
+        15.69974
+      ],
+      "nearest_ground_via_mm": [
+        54.15000092,
+        16.899999219999998
+      ],
+      "distance_mm": 1.250249368405514,
+      "within_1p6mm_review_target": true
+    }
+  ],
+  "return_projection_diagnostic": [
+    {
+      "net": "USB_DP_CONN",
+      "trace_length_sum_mm": 44.273085527426296,
+      "opposite_ground_projection_mm": 24.392918763264564,
+      "max_sampled_lateral_gap_mm": 1.3164280613388588,
+      "worst_xy_mm": [
+        73.75828724133886,
+        25.30834832187671
+      ]
+    },
+    {
+      "net": "USB_DM_CONN",
+      "trace_length_sum_mm": 38.90151455298672,
+      "opposite_ground_projection_mm": 21.457735499277693,
+      "max_sampled_lateral_gap_mm": 1.4581403400000001,
+      "worst_xy_mm": [
+        73.79999972,
+        26.0233602
+      ]
+    },
+    {
+      "net": "USB_DP_MCU",
+      "trace_length_sum_mm": 2.0000705792546523,
+      "opposite_ground_projection_mm": 2.0000705792546523,
+      "max_sampled_lateral_gap_mm": 0,
+      "worst_xy_mm": null
+    },
+    {
+      "net": "USB_DM_MCU",
+      "trace_length_sum_mm": 2.2609535096585014,
+      "opposite_ground_projection_mm": 2.2609535096585014,
+      "max_sampled_lateral_gap_mm": 0,
+      "worst_xy_mm": null
+    }
+  ],
+  "return_limit": "Connected two-face ground, not an uninterrupted reference plane. Projection includes pad/via antipads; no 95% pass claim or impedance/ESD test claim.",
+  "native_drc": [
+    {
+      "category": "Clearance Error in the same footprint",
+      "kind": "Board Outline to SMD Pad",
+      "count": 12
+    },
+    {
+      "category": "Connection Error",
+      "kind": "SMD Pad",
+      "count": 166
+    },
+    {
+      "category": "Connection Error",
+      "kind": "SMD Test Point",
+      "count": 8
+    },
+    {
+      "category": "Connection Error",
+      "kind": "TH Pad",
+      "count": 2
+    },
+    {
+      "category": "Connection Error",
+      "kind": "Via",
+      "count": 2
+    },
+    {
+      "category": "Physical Error",
+      "kind": "Via Size",
+      "count": 4
+    }
+  ],
+  "split_or_unrouted_nets": [
+    "BAT_ADC_SENSE",
+    "BAT_DIV_SUPPLY",
+    "BAT_MEAS_EN",
+    "BAT_NTC_TBD",
+    "BAT_PACK_TBD",
+    "BAT_SWITCH_GATE",
+    "CHG_CE_N",
+    "CHG_INT_N",
+    "CHG_PG_N",
+    "CHG_SCL",
+    "CHG_SDA",
+    "EPD_BS0",
+    "EPD_BUSY_TBD",
+    "EPD_CS_N_TBD",
+    "EPD_DC_TBD",
+    "EPD_EN_TBD",
+    "EPD_GDR",
+    "EPD_MOSI_TBD",
+    "EPD_PUMP",
+    "EPD_RESE",
+    "EPD_RESET_N_TBD",
+    "EPD_SCK_TBD",
+    "EPD_SW",
+    "EPD_VCOM",
+    "EPD_VDD",
+    "EPD_VDDL",
+    "EPD_VGH",
+    "EPD_VGL",
+    "EPD_VPH",
+    "EPD_VSNH",
+    "EPD_VSNL1",
+    "EPD_VSNL2",
+    "EPD_VSPH",
+    "EPD_VSPL1",
+    "EPD_VSPL2",
+    "GND",
+    "KEY_NEXT_N",
+    "KEY_OK_N",
+    "KEY_PREV_N",
+    "NRESET",
+    "SWDCLK",
+    "SWDIO",
+    "SYS",
+    "VDD_3V3"
+  ],
+  "manufacturing": {
+    "gerber_outline_chains": 2,
+    "closed_outer_and_open_library_notch": true,
+    "library_notch_back_x_mm": 76.898967,
+    "library_notch_sidewall_span_mm": 9.239986000000002,
+    "front_slot_row_x_mm": 81.299035,
+    "library_notch_back_v_mm": 4.4000680000000045,
+    "smt_front_v_mm": 4.600104999999999,
+    "smt_rear_v_mm": 5.700102999999999,
+    "pad_to_library_notch_mm": 0.2000369999999947,
+    "library_back_offset_from_gct_4p6_mm": 0.1999319999999951,
+    "j1_soldermask_min_bridge_mm": 0.09827199999999792,
+    "usb_via_mask_openings": [],
+    "usb_via_hole_to_any_mask_opening_min_mm": 0.35818792071832345,
+    "cpl_j1": {
+      "Mid X": "78.724mm",
+      "Mid Y": "25.999mm",
+      "Ref X": "78.724mm",
+      "Ref Y": "25.999mm",
+      "Rotation": "90"
+    },
+    "j1_pads": [
+      {
+        "number": "B8",
+        "net": "",
+        "x": 76.148931,
+        "y": 24.249482,
+        "bounds": [
+          75.598932,
+          24.0994825,
+          76.69893,
+          24.3994815
+        ],
+        "mask_bounds": [
+          75.54813200000001,
+          24.048682,
+          76.74973,
+          24.450282
+        ],
+        "smt": true
+      },
+      {
+        "number": "A5",
+        "net": "USB_CC1",
+        "x": 76.148931,
+        "y": 24.749354,
+        "bounds": [
+          75.598932,
+          24.5993545,
+          76.69893,
+          24.8993535
+        ],
+        "mask_bounds": [
+          75.54813200000001,
+          24.548554,
+          76.74973,
+          24.950154
+        ],
+        "smt": true
+      },
+      {
+        "number": "B7",
+        "net": "USB_DM_CONN",
+        "x": 76.148931,
+        "y": 25.24948,
+        "bounds": [
+          75.598932,
+          25.0994805,
+          76.69893,
+          25.399479499999998
+        ],
+        "mask_bounds": [
+          75.54813200000001,
+          25.048679999999997,
+          76.74973,
+          25.45028
+        ],
+        "smt": true
+      },
+      {
+        "number": "A6",
+        "net": "USB_DP_CONN",
+        "x": 76.148931,
+        "y": 25.749352,
+        "bounds": [
+          75.598932,
+          25.5993525,
+          76.69893,
+          25.899351499999998
+        ],
+        "mask_bounds": [
+          75.54813200000001,
+          25.548551999999997,
+          76.74973,
+          25.950152
+        ],
+        "smt": true
+      },
+      {
+        "number": "A7",
+        "net": "USB_DM_CONN",
+        "x": 76.148931,
+        "y": 26.249478,
+        "bounds": [
+          75.598932,
+          26.0994785,
+          76.69893,
+          26.3994775
+        ],
+        "mask_bounds": [
+          75.54813200000001,
+          26.048678,
+          76.74973,
+          26.450278
+        ],
+        "smt": true
+      },
+      {
+        "number": "B6",
+        "net": "USB_DP_CONN",
+        "x": 76.148931,
+        "y": 26.74935,
+        "bounds": [
+          75.598932,
+          26.5993505,
+          76.69893,
+          26.8993495
+        ],
+        "mask_bounds": [
+          75.54813200000001,
+          26.54855,
+          76.74973,
+          26.95015
+        ],
+        "smt": true
+      },
+      {
+        "number": "A8",
+        "net": "",
+        "x": 76.148931,
+        "y": 27.249476,
+        "bounds": [
+          75.598932,
+          27.0994765,
+          76.69893,
+          27.3994755
+        ],
+        "mask_bounds": [
+          75.54813200000001,
+          27.048676,
+          76.74973,
+          27.450276000000002
+        ],
+        "smt": true
+      },
+      {
+        "number": "B5",
+        "net": "USB_CC2",
+        "x": 76.148931,
+        "y": 27.749348,
+        "bounds": [
+          75.598932,
+          27.5993485,
+          76.69893,
+          27.8993475
+        ],
+        "mask_bounds": [
+          75.54813200000001,
+          27.548548,
+          76.74973,
+          27.950148000000002
+        ],
+        "smt": true
+      },
+      {
+        "number": "B4A9",
+        "net": "USB_VBUS",
+        "x": 76.148931,
+        "y": 28.399334,
+        "bounds": [
+          75.598932,
+          28.0993345,
+          76.69893,
+          28.699333499999998
+        ],
+        "mask_bounds": [
+          75.54813200000001,
+          28.048535,
+          76.74973,
+          28.750132999999998
+        ],
+        "smt": true
+      },
+      {
+        "number": "B1A12",
+        "net": "GND",
+        "x": 76.148931,
+        "y": 29.199434,
+        "bounds": [
+          75.598932,
+          28.8994345,
+          76.69893,
+          29.4994335
+        ],
+        "mask_bounds": [
+          75.54813200000001,
+          28.848635,
+          76.74973,
+          29.550233
+        ],
+        "smt": true
+      },
+      {
+        "number": "A4B9",
+        "net": "USB_VBUS",
+        "x": 76.148931,
+        "y": 23.599496,
+        "bounds": [
+          75.598932,
+          23.2994965,
+          76.69893,
+          23.899495499999997
+        ],
+        "mask_bounds": [
+          75.54813200000001,
+          23.248697,
+          76.74973,
+          23.950294999999997
+        ],
+        "smt": true
+      },
+      {
+        "number": "A1B12",
+        "net": "GND",
+        "x": 76.148931,
+        "y": 22.799396,
+        "bounds": [
+          75.598932,
+          22.499396500000003,
+          76.69893,
+          23.0993955
+        ],
+        "mask_bounds": [
+          75.54813200000001,
+          22.448597000000003,
+          76.74973,
+          23.150195
+        ],
+        "smt": true
+      },
+      {
+        "number": "20",
+        "net": "GND",
+        "x": 81.299035,
+        "y": 31.619292,
+        "bounds": [
+          80.199037,
+          31.119293000000003,
+          82.399033,
+          32.119291000000004
+        ],
+        "mask_bounds": [
+          80.14902450000001,
+          31.0692805,
+          82.4490455,
+          32.1693035
+        ],
+        "smt": false
+      },
+      {
+        "number": "19",
+        "net": "GND",
+        "x": 81.299035,
+        "y": 20.379284,
+        "bounds": [
+          80.199037,
+          19.879285,
+          82.399033,
+          20.879282999999997
+        ],
+        "mask_bounds": [
+          80.14902450000001,
+          19.8292725,
+          82.4490455,
+          20.9292955
+        ],
+        "smt": false
+      },
+      {
+        "number": "18",
+        "net": "GND",
+        "x": 77.299043,
+        "y": 31.619292,
+        "bounds": [
+          76.399045,
+          31.119293000000003,
+          78.199041,
+          32.119291000000004
+        ],
+        "mask_bounds": [
+          76.349032,
+          31.0692805,
+          78.249054,
+          32.1693035
+        ],
+        "smt": false
+      },
+      {
+        "number": "17",
+        "net": "GND",
+        "x": 77.299043,
+        "y": 20.379284,
+        "bounds": [
+          76.399045,
+          19.879285,
+          78.199041,
+          20.879282999999997
+        ],
+        "mask_bounds": [
+          76.349032,
+          19.8292725,
+          78.249054,
+          20.9292955
+        ],
+        "smt": false
+      }
+    ],
+    "plated_slots": [
+      {
+        "ends_mm": [
+          [
+            80.69896,
+            31.619266
+          ],
+          [
+            81.898957,
+            31.619266
+          ]
+        ],
+        "width_mm": 0.599999,
+        "length_mm": 1.7999959999999962
+      },
+      {
+        "ends_mm": [
+          [
+            80.69896,
+            20.379512
+          ],
+          [
+            81.898957,
+            20.379512
+          ]
+        ],
+        "width_mm": 0.599999,
+        "length_mm": 1.7999959999999962
+      },
+      {
+        "ends_mm": [
+          [
+            76.898993,
+            31.619266
+          ],
+          [
+            77.698991,
+            31.619266
+          ]
+        ],
+        "width_mm": 0.599999,
+        "length_mm": 1.3999970000000022
+      },
+      {
+        "ends_mm": [
+          [
+            76.898993,
+            20.379512
+          ],
+          [
+            77.698991,
+            20.379512
+          ]
+        ],
+        "width_mm": 0.599999,
+        "length_mm": 1.3999970000000022
+      }
+    ]
+  },
+  "open_gates": [
+    "VBUS protection clamp versus U1/U2 ratings not selected; both branches still directly share the unprotected input.",
+    "Battery current ratings and load peak/current-limit policy remain unknown.",
+    "The 1.95 mm local data-to-ground-via distance is a review clue, not a proven defect. Geometric return paths are verified; impedance, ESD and USB performance remain untested.",
+    "Closed manufacturing notch, GCT body fit versus shifted library back edge, corner relief, tolerances and factory acceptance unresolved.",
+    "Four retained NFC lead vias violate the unchanged via-size rule. Full-board routing, online DFM and physical tests remain open."
+  ],
+  "gerber_sha256": {
+    "Drill_PTH_Through.DRL": "b6adeec57d54cb0eeb304717102e2d79a0bea5417057a6362d530ae20598c7d1",
+    "Drill_PTH_Through_Via.DRL": "e73c25d4bc7bfd885d08592aa4e4341c42635ae9390494286cf218f2b61ae999",
+    "FlyingProbeTesting.json": "ad8566217b554b311021c9a1ad878028aba0965aea864778b95ae587e23e26f0",
+    "Gerber_BoardOutlineLayer.GKO": "fcf29d30b9cddf69af5be3701ef18a13fd609c4bd8b9ed19c33c8ab5108472bd",
+    "Gerber_BottomLayer.GBL": "471a27ee33a21c174a55c4d6c81e4f508f81e98aebeea68f094d163943d5f2c2",
+    "Gerber_BottomPasteMaskLayer.GBP": "1770667de5e0d197b92d7999bcd6446385b7e4a03b2b7d07536febec89a3cce2",
+    "Gerber_BottomSilkscreenLayer.GBO": "2b450a5e77f93331d200c181e0a20bc739b0e4298ff95d9a43600b639a2f343e",
+    "Gerber_BottomSolderMaskLayer.GBS": "672f222fbcb4470a144b42c42fe165242ebc140b3174cd7bcb83fefc248b2b32",
+    "Gerber_TopLayer.GTL": "125032906bbce91eb420c0261400e17e954ea0d1b3576421dabcefed9e070f65",
+    "Gerber_TopPasteMaskLayer.GTP": "08bd090df48988f13d4a0c0fc1821ad40b0b04ad9858a9db343705ca339e762c",
+    "Gerber_TopSilkscreenLayer.GTO": "82f2e407b259bd4dcff7c8ee0fd8642e3801e654a38eb229f055f0ae75de9232",
+    "Gerber_TopSolderMaskLayer.GTS": "e9904e9678c4947abcb7326fe1c1bd63b3422ba718c44691069217913717d2d4",
+    "PCB下单必读.txt": "dcb3ee1c645c17a009d70726ad9ab708b68a074556fabcf75a4a059d3b43ec59"
+  }
+}

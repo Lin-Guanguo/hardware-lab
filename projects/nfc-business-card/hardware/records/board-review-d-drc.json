@@ -1,0 +1,793 @@
+{
+  "project": {
+    "uuid": "859b1e5943e253f5bcd58e9ad5433d951b2daa27d38febc2be012f497502b89d",
+    "name": "NFC-Card-R2-Board-Review-D"
+  },
+  "status": "REVIEW_CANDIDATE_NOT_FOR_FABRICATION",
+  "errors": [
+    {
+      "visible": true,
+      "errorType": "Clearance Error",
+      "errorObjType": "Board Outline to SMD Pad",
+      "ruleName": "copperThickness1oz",
+      "ruleTypeName": "Safe Spacing",
+      "obj1": {
+        "typeName": "Board Outline",
+        "suffix": ": e42"
+      },
+      "obj2": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): J1_A1B12"
+      },
+      "layer": "Top Layer",
+      "explanation": {
+        "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+        "param": {
+          "minDistance": "0mil",
+          "shouldBe": ">= 11.8mil",
+          "obj1": "Object 1",
+          "obj2": "object 2",
+          "type": "ClearanceError"
+        },
+        "errData": {
+          "globalIndex": "err0",
+          "position": {
+            "x": 301.964495,
+            "y": 88.5803
+          },
+          "name": "copperThickness1oz",
+          "obj1": "c84e1edb0cfe96f2",
+          "obj1Type": "Board Outline",
+          "obj2": "6203b32f9e70959be37",
+          "obj2Type": "SMD Pad",
+          "minDistance": 0.00040999999998803105,
+          "clearance": 1.1811,
+          "errorType": "Safe Spacing",
+          "layerIds": [
+            1
+          ],
+          "obj1Suffix": ": e42",
+          "obj2Suffix": "(GND): J1_A1B12"
+        }
+      },
+      "objs": [
+        "c84e1edb0cfe96f2",
+        "6203b32f9e70959be37"
+      ],
+      "globalIndex": "err0",
+      "pos": {
+        "x": 301.964495,
+        "y": 88.5803
+      },
+      "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Board Outline to SMD Pad"
+    },
+    {
+      "visible": true,
+      "errorType": "Clearance Error",
+      "errorObjType": "Board Outline to SMD Pad",
+      "ruleName": "copperThickness1oz",
+      "ruleTypeName": "Safe Spacing",
+      "obj1": {
+        "typeName": "Board Outline",
+        "suffix": ": e42"
+      },
+      "obj2": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_DM_CONN): J1_A7"
+      },
+      "layer": "Top Layer",
+      "explanation": {
+        "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+        "param": {
+          "minDistance": "0mil",
+          "shouldBe": ">= 11.8mil",
+          "obj1": "Object 1",
+          "obj2": "object 2",
+          "type": "ClearanceError"
+        },
+        "errData": {
+          "globalIndex": "err1",
+          "position": {
+            "x": 301.964495,
+            "y": 102.75385
+          },
+          "name": "copperThickness1oz",
+          "obj1": "c84e1edb0cfe96f2",
+          "obj1Type": "Board Outline",
+          "obj2": "6203b32f9e70959be30",
+          "obj2Type": "SMD Pad",
+          "minDistance": 0.00040999999998803105,
+          "clearance": 1.1811,
+          "errorType": "Safe Spacing",
+          "layerIds": [
+            1
+          ],
+          "obj1Suffix": ": e42",
+          "obj2Suffix": "(USB_DM_CONN): J1_A7"
+        }
+      },
+      "objs": [
+        "c84e1edb0cfe96f2",
+        "6203b32f9e70959be30"
+      ],
+      "globalIndex": "err1",
+      "pos": {
+        "x": 301.964495,
+        "y": 102.75385
+      },
+      "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Board Outline to SMD Pad"
+    },
+    {
+      "visible": true,
+      "errorType": "Clearance Error",
+      "errorObjType": "Board Outline to SMD Pad",
+      "ruleName": "copperThickness1oz",
+      "ruleTypeName": "Safe Spacing",
+      "obj1": {
+        "typeName": "Board Outline",
+        "suffix": ": e42"
+      },
+      "obj2": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_DP_CONN): J1_A6"
+      },
+      "layer": "Top Layer",
+      "explanation": {
+        "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+        "param": {
+          "minDistance": "0mil",
+          "shouldBe": ">= 11.8mil",
+          "obj1": "Object 1",
+          "obj2": "object 2",
+          "type": "ClearanceError"
+        },
+        "errData": {
+          "globalIndex": "err2",
+          "position": {
+            "x": 301.964495,
+            "y": 100.78485
+          },
+          "name": "copperThickness1oz",
+          "obj1": "c84e1edb0cfe96f2",
+          "obj1Type": "Board Outline",
+          "obj2": "6203b32f9e70959be29",
+          "obj2Type": "SMD Pad",
+          "minDistance": 0.00040999999998803105,
+          "clearance": 1.1811,
+          "errorType": "Safe Spacing",
+          "layerIds": [
+            1
+          ],
+          "obj1Suffix": ": e42",
+          "obj2Suffix": "(USB_DP_CONN): J1_A6"
+        }
+      },
+      "objs": [
+        "c84e1edb0cfe96f2",
+        "6203b32f9e70959be29"
+      ],
+      "globalIndex": "err2",
+      "pos": {
+        "x": 301.964495,
+        "y": 100.78485
+      },
+      "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Board Outline to SMD Pad"
+    },
+    {
+      "visible": true,
+      "errorType": "Clearance Error",
+      "errorObjType": "Board Outline to SMD Pad",
+      "ruleName": "copperThickness1oz",
+      "ruleTypeName": "Safe Spacing",
+      "obj1": {
+        "typeName": "Board Outline",
+        "suffix": ": e42"
+      },
+      "obj2": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_DM_CONN): J1_B7"
+      },
+      "layer": "Top Layer",
+      "explanation": {
+        "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+        "param": {
+          "minDistance": "0mil",
+          "shouldBe": ">= 11.8mil",
+          "obj1": "Object 1",
+          "obj2": "object 2",
+          "type": "ClearanceError"
+        },
+        "errData": {
+          "globalIndex": "err3",
+          "position": {
+            "x": 301.964495,
+            "y": 98.81684999999999
+          },
+          "name": "copperThickness1oz",
+          "obj1": "c84e1edb0cfe96f2",
+          "obj1Type": "Board Outline",
+          "obj2": "6203b32f9e70959be28",
+          "obj2Type": "SMD Pad",
+          "minDistance": 0.00040999999998803105,
+          "clearance": 1.1811,
+          "errorType": "Safe Spacing",
+          "layerIds": [
+            1
+          ],
+          "obj1Suffix": ": e42",
+          "obj2Suffix": "(USB_DM_CONN): J1_B7"
+        }
+      },
+      "objs": [
+        "c84e1edb0cfe96f2",
+        "6203b32f9e70959be28"
+      ],
+      "globalIndex": "err3",
+      "pos": {
+        "x": 301.964495,
+        "y": 98.81684999999999
+      },
+      "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Board Outline to SMD Pad"
+    },
+    {
+      "visible": true,
+      "errorType": "Clearance Error",
+      "errorObjType": "Board Outline to SMD Pad",
+      "ruleName": "copperThickness1oz",
+      "ruleTypeName": "Safe Spacing",
+      "obj1": {
+        "typeName": "Board Outline",
+        "suffix": ": e42"
+      },
+      "obj2": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_VBUS): J1_A4B9"
+      },
+      "layer": "Top Layer",
+      "explanation": {
+        "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+        "param": {
+          "minDistance": "0mil",
+          "shouldBe": ">= 11.8mil",
+          "obj1": "Object 1",
+          "obj2": "object 2",
+          "type": "ClearanceError"
+        },
+        "errData": {
+          "globalIndex": "err4",
+          "position": {
+            "x": 301.964495,
+            "y": 91.7303
+          },
+          "name": "copperThickness1oz",
+          "obj1": "c84e1edb0cfe96f2",
+          "obj1Type": "Board Outline",
+          "obj2": "6203b32f9e70959be36",
+          "obj2Type": "SMD Pad",
+          "minDistance": 0.00040999999998803105,
+          "clearance": 1.1811,
+          "errorType": "Safe Spacing",
+          "layerIds": [
+            1
+          ],
+          "obj1Suffix": ": e42",
+          "obj2Suffix": "(USB_VBUS): J1_A4B9"
+        }
+      },
+      "objs": [
+        "c84e1edb0cfe96f2",
+        "6203b32f9e70959be36"
+      ],
+      "globalIndex": "err4",
+      "pos": {
+        "x": 301.964495,
+        "y": 91.7303
+      },
+      "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Board Outline to SMD Pad"
+    },
+    {
+      "visible": true,
+      "errorType": "Clearance Error",
+      "errorObjType": "Board Outline to SMD Pad",
+      "ruleName": "copperThickness1oz",
+      "ruleTypeName": "Safe Spacing",
+      "obj1": {
+        "typeName": "Board Outline",
+        "suffix": ": e42"
+      },
+      "obj2": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): J1_B1A12"
+      },
+      "layer": "Top Layer",
+      "explanation": {
+        "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+        "param": {
+          "minDistance": "0mil",
+          "shouldBe": ">= 11.8mil",
+          "obj1": "Object 1",
+          "obj2": "object 2",
+          "type": "ClearanceError"
+        },
+        "errData": {
+          "globalIndex": "err5",
+          "position": {
+            "x": 301.964495,
+            "y": 113.7773
+          },
+          "name": "copperThickness1oz",
+          "obj1": "c84e1edb0cfe96f2",
+          "obj1Type": "Board Outline",
+          "obj2": "6203b32f9e70959be35",
+          "obj2Type": "SMD Pad",
+          "minDistance": 0.00040999999998803105,
+          "clearance": 1.1811,
+          "errorType": "Safe Spacing",
+          "layerIds": [
+            1
+          ],
+          "obj1Suffix": ": e42",
+          "obj2Suffix": "(GND): J1_B1A12"
+        }
+      },
+      "objs": [
+        "c84e1edb0cfe96f2",
+        "6203b32f9e70959be35"
+      ],
+      "globalIndex": "err5",
+      "pos": {
+        "x": 301.964495,
+        "y": 113.7773
+      },
+      "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Board Outline to SMD Pad"
+    },
+    {
+      "visible": true,
+      "errorType": "Clearance Error",
+      "errorObjType": "Board Outline to SMD Pad",
+      "ruleName": "copperThickness1oz",
+      "ruleTypeName": "Safe Spacing",
+      "obj1": {
+        "typeName": "Board Outline",
+        "suffix": ": e42"
+      },
+      "obj2": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_VBUS): J1_B4A9"
+      },
+      "layer": "Top Layer",
+      "explanation": {
+        "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+        "param": {
+          "minDistance": "0mil",
+          "shouldBe": ">= 11.8mil",
+          "obj1": "Object 1",
+          "obj2": "object 2",
+          "type": "ClearanceError"
+        },
+        "errData": {
+          "globalIndex": "err6",
+          "position": {
+            "x": 301.964495,
+            "y": 110.62729999999999
+          },
+          "name": "copperThickness1oz",
+          "obj1": "c84e1edb0cfe96f2",
+          "obj1Type": "Board Outline",
+          "obj2": "6203b32f9e70959be34",
+          "obj2Type": "SMD Pad",
+          "minDistance": 0.00040999999998803105,
+          "clearance": 1.1811,
+          "errorType": "Safe Spacing",
+          "layerIds": [
+            1
+          ],
+          "obj1Suffix": ": e42",
+          "obj2Suffix": "(USB_VBUS): J1_B4A9"
+        }
+      },
+      "objs": [
+        "c84e1edb0cfe96f2",
+        "6203b32f9e70959be34"
+      ],
+      "globalIndex": "err6",
+      "pos": {
+        "x": 301.964495,
+        "y": 110.62729999999999
+      },
+      "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Board Outline to SMD Pad"
+    },
+    {
+      "visible": true,
+      "errorType": "Clearance Error",
+      "errorObjType": "Board Outline to SMD Pad",
+      "ruleName": "copperThickness1oz",
+      "ruleTypeName": "Safe Spacing",
+      "obj1": {
+        "typeName": "Board Outline",
+        "suffix": ": e42"
+      },
+      "obj2": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_CC2): J1_B5"
+      },
+      "layer": "Top Layer",
+      "explanation": {
+        "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+        "param": {
+          "minDistance": "0mil",
+          "shouldBe": ">= 11.8mil",
+          "obj1": "Object 1",
+          "obj2": "object 2",
+          "type": "ClearanceError"
+        },
+        "errData": {
+          "globalIndex": "err7",
+          "position": {
+            "x": 301.964495,
+            "y": 108.65885
+          },
+          "name": "copperThickness1oz",
+          "obj1": "c84e1edb0cfe96f2",
+          "obj1Type": "Board Outline",
+          "obj2": "6203b32f9e70959be33",
+          "obj2Type": "SMD Pad",
+          "minDistance": 0.00040999999998803105,
+          "clearance": 1.1811,
+          "errorType": "Safe Spacing",
+          "layerIds": [
+            1
+          ],
+          "obj1Suffix": ": e42",
+          "obj2Suffix": "(USB_CC2): J1_B5"
+        }
+      },
+      "objs": [
+        "c84e1edb0cfe96f2",
+        "6203b32f9e70959be33"
+      ],
+      "globalIndex": "err7",
+      "pos": {
+        "x": 301.964495,
+        "y": 108.65885
+      },
+      "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Board Outline to SMD Pad"
+    },
+    {
+      "visible": true,
+      "errorType": "Clearance Error",
+      "errorObjType": "Board Outline to SMD Pad",
+      "ruleName": "copperThickness1oz",
+      "ruleTypeName": "Safe Spacing",
+      "obj1": {
+        "typeName": "Board Outline",
+        "suffix": ": e42"
+      },
+      "obj2": {
+        "typeName": "SMD Pad",
+        "suffix": ": J1_A8"
+      },
+      "layer": "Top Layer",
+      "explanation": {
+        "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+        "param": {
+          "minDistance": "0mil",
+          "shouldBe": ">= 11.8mil",
+          "obj1": "Object 1",
+          "obj2": "object 2",
+          "type": "ClearanceError"
+        },
+        "errData": {
+          "globalIndex": "err8",
+          "position": {
+            "x": 301.964495,
+            "y": 106.69085000000001
+          },
+          "name": "copperThickness1oz",
+          "obj1": "c84e1edb0cfe96f2",
+          "obj1Type": "Board Outline",
+          "obj2": "6203b32f9e70959be32",
+          "obj2Type": "SMD Pad",
+          "minDistance": 0.00040999999998803105,
+          "clearance": 1.1811,
+          "errorType": "Safe Spacing",
+          "layerIds": [
+            1
+          ],
+          "obj1Suffix": ": e42",
+          "obj2Suffix": ": J1_A8"
+        }
+      },
+      "objs": [
+        "c84e1edb0cfe96f2",
+        "6203b32f9e70959be32"
+      ],
+      "globalIndex": "err8",
+      "pos": {
+        "x": 301.964495,
+        "y": 106.69085000000001
+      },
+      "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Board Outline to SMD Pad"
+    },
+    {
+      "visible": true,
+      "errorType": "Clearance Error",
+      "errorObjType": "Board Outline to SMD Pad",
+      "ruleName": "copperThickness1oz",
+      "ruleTypeName": "Safe Spacing",
+      "obj1": {
+        "typeName": "Board Outline",
+        "suffix": ": e42"
+      },
+      "obj2": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_DP_CONN): J1_B6"
+      },
+      "layer": "Top Layer",
+      "explanation": {
+        "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+        "param": {
+          "minDistance": "0mil",
+          "shouldBe": ">= 11.8mil",
+          "obj1": "Object 1",
+          "obj2": "object 2",
+          "type": "ClearanceError"
+        },
+        "errData": {
+          "globalIndex": "err9",
+          "position": {
+            "x": 301.96449500000006,
+            "y": 104.72185000000002
+          },
+          "name": "copperThickness1oz",
+          "obj1": "c84e1edb0cfe96f2",
+          "obj1Type": "Board Outline",
+          "obj2": "6203b32f9e70959be31",
+          "obj2Type": "SMD Pad",
+          "minDistance": 0.00040999999993118763,
+          "clearance": 1.1811,
+          "errorType": "Safe Spacing",
+          "layerIds": [
+            1
+          ],
+          "obj1Suffix": ": e42",
+          "obj2Suffix": "(USB_DP_CONN): J1_B6"
+        }
+      },
+      "objs": [
+        "c84e1edb0cfe96f2",
+        "6203b32f9e70959be31"
+      ],
+      "globalIndex": "err9",
+      "pos": {
+        "x": 301.96449500000006,
+        "y": 104.72185000000002
+      },
+      "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Board Outline to SMD Pad"
+    },
+    {
+      "visible": true,
+      "errorType": "Clearance Error",
+      "errorObjType": "Board Outline to SMD Pad",
+      "ruleName": "copperThickness1oz",
+      "ruleTypeName": "Safe Spacing",
+      "obj1": {
+        "typeName": "Board Outline",
+        "suffix": ": e42"
+      },
+      "obj2": {
+        "typeName": "SMD Pad",
+        "suffix": ": J1_B8"
+      },
+      "layer": "Top Layer",
+      "explanation": {
+        "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+        "param": {
+          "minDistance": "0mil",
+          "shouldBe": ">= 11.8mil",
+          "obj1": "Object 1",
+          "obj2": "object 2",
+          "type": "ClearanceError"
+        },
+        "errData": {
+          "globalIndex": "err10",
+          "position": {
+            "x": 301.964495,
+            "y": 94.87985
+          },
+          "name": "copperThickness1oz",
+          "obj1": "c84e1edb0cfe96f2",
+          "obj1Type": "Board Outline",
+          "obj2": "6203b32f9e70959be26",
+          "obj2Type": "SMD Pad",
+          "minDistance": 0.00040999999998803105,
+          "clearance": 1.1811,
+          "errorType": "Safe Spacing",
+          "layerIds": [
+            1
+          ],
+          "obj1Suffix": ": e42",
+          "obj2Suffix": ": J1_B8"
+        }
+      },
+      "objs": [
+        "c84e1edb0cfe96f2",
+        "6203b32f9e70959be26"
+      ],
+      "globalIndex": "err10",
+      "pos": {
+        "x": 301.964495,
+        "y": 94.87985
+      },
+      "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Board Outline to SMD Pad"
+    },
+    {
+      "visible": true,
+      "errorType": "Clearance Error",
+      "errorObjType": "Board Outline to SMD Pad",
+      "ruleName": "copperThickness1oz",
+      "ruleTypeName": "Safe Spacing",
+      "obj1": {
+        "typeName": "Board Outline",
+        "suffix": ": e42"
+      },
+      "obj2": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_CC1): J1_A5"
+      },
+      "layer": "Top Layer",
+      "explanation": {
+        "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+        "param": {
+          "minDistance": "0mil",
+          "shouldBe": ">= 11.8mil",
+          "obj1": "Object 1",
+          "obj2": "object 2",
+          "type": "ClearanceError"
+        },
+        "errData": {
+          "globalIndex": "err11",
+          "position": {
+            "x": 301.964495,
+            "y": 96.84785
+          },
+          "name": "copperThickness1oz",
+          "obj1": "c84e1edb0cfe96f2",
+          "obj1Type": "Board Outline",
+          "obj2": "6203b32f9e70959be27",
+          "obj2Type": "SMD Pad",
+          "minDistance": 0.00040999999998803105,
+          "clearance": 1.1811,
+          "errorType": "Safe Spacing",
+          "layerIds": [
+            1
+          ],
+          "obj1Suffix": ": e42",
+          "obj2Suffix": "(USB_CC1): J1_A5"
+        }
+      },
+      "objs": [
+        "c84e1edb0cfe96f2",
+        "6203b32f9e70959be27"
+      ],
+      "globalIndex": "err11",
+      "pos": {
+        "x": 301.964495,
+        "y": 96.84785
+      },
+      "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Board Outline to SMD Pad"
+    },
+    {
+      "visible": true,
+      "errorType": "Clearance Error",
+      "errorObjType": "Board Outline to TH Pad",
+      "ruleName": "copperThickness1oz",
+      "ruleTypeName": "Safe Spacing",
+      "obj1": {
+        "typeName": "Board Outline",
+        "suffix": ": e42"
+      },
+      "obj2": {
+        "typeName": "TH Pad",
+        "suffix": "(GND): J1_18"
+      },
+      "layer": "Top Layer",
+      "explanation": {
+        "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+        "param": {
+          "minDistance": "10.6mil",
+          "shouldBe": ">= 11.8mil",
+          "obj1": "Object 1",
+          "obj2": "object 2",
+          "type": "ClearanceError"
+        },
+        "errData": {
+          "globalIndex": "err12",
+          "position": {
+            "x": 302.26190556586494,
+            "y": 122.0343274407332
+          },
+          "name": "copperThickness1oz",
+          "obj1": "c84e1edb0cfe96f2",
+          "obj1Type": "Board Outline",
+          "obj2": "6203b32f9e70959be60",
+          "obj2Type": "TH Pad",
+          "minDistance": 1.0622345378877478,
+          "clearance": 1.1811,
+          "errorType": "Safe Spacing",
+          "layerIds": [
+            1
+          ],
+          "obj1Suffix": ": e42",
+          "obj2Suffix": "(GND): J1_18"
+        }
+      },
+      "objs": [
+        "c84e1edb0cfe96f2",
+        "6203b32f9e70959be60"
+      ],
+      "globalIndex": "err12",
+      "pos": {
+        "x": 302.26190556586494,
+        "y": 122.0343274407332
+      },
+      "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Board Outline to TH Pad"
+    },
+    {
+      "visible": true,
+      "errorType": "Clearance Error",
+      "errorObjType": "Board Outline to TH Pad",
+      "ruleName": "copperThickness1oz",
+      "ruleTypeName": "Safe Spacing",
+      "obj1": {
+        "typeName": "Board Outline",
+        "suffix": ": e42"
+      },
+      "obj2": {
+        "typeName": "TH Pad",
+        "suffix": "(GND): J1_17"
+      },
+      "layer": "Top Layer",
+      "explanation": {
+        "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+        "param": {
+          "minDistance": "10.6mil",
+          "shouldBe": ">= 11.8mil",
+          "obj1": "Object 1",
+          "obj2": "object 2",
+          "type": "ClearanceError"
+        },
+        "errData": {
+          "globalIndex": "err13",
+          "position": {
+            "x": 302.26190603730845,
+            "y": 82.68448265355912
+          },
+          "name": "copperThickness1oz",
+          "obj1": "c84e1edb0cfe96f2",
+          "obj1Type": "Board Outline",
+          "obj2": "6203b32f9e70959be61",
+          "obj2Type": "TH Pad",
+          "minDistance": 1.0622541494725146,
+          "clearance": 1.1811,
+          "errorType": "Safe Spacing",
+          "layerIds": [
+            1
+          ],
+          "obj1Suffix": ": e42",
+          "obj2Suffix": "(GND): J1_17"
+        }
+      },
+      "objs": [
+        "c84e1edb0cfe96f2",
+        "6203b32f9e70959be61"
+      ],
+      "globalIndex": "err13",
+      "pos": {
+        "x": 302.26190603730845,
+        "y": 82.68448265355912
+      },
+      "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Board Outline to TH Pad"
+    }
+  ]
+}

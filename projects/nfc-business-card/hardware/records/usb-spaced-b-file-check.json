@@ -1,0 +1,49 @@
+{
+  "checked_at": "2026-09-28T16:34:55+08:00",
+  "scope": "File integrity plus identical native geometry/pins/rules after full application restart. Not fabrication approval.",
+  "a_and_r21_unchanged": true,
+  "b_runtime_project": {
+    "uuid": "65eecc1b2d0031bbf557f4be4eb3dfde6bb691ecca548047367322e9041d0958",
+    "name": "NFC-Card-R2-USB-Spaced-B"
+  },
+  "stored_metadata_note": "Closed-file copy inherits A metadata; runtime project is path-derived. Verify B path and actual 149-track/19-via snapshot, not only projects table.",
+  "b_geometry_identical_after_application_restart": true,
+  "files": [
+    {
+      "path": "eda/NFC-Card-R2-USB-Spaced-B.eprj2",
+      "bytes": 5025792,
+      "sha256": "25ccb210f6476c35aede53e15e74561c7cd24e89032b1a0ae3151bfc8b26ae7d",
+      "sqlite_quick_check": "ok",
+      "stored_project_metadata": [
+        [
+          "3b0602d6a2e7fde43c854efd4651a79dfccbc2df0a5e3c821cb7326bfcab2257",
+          "NFC-Card-R2-Midmount-Placement-A"
+        ]
+      ]
+    },
+    {
+      "path": "eda/NFC-Card-R2-Midmount-Placement-A.eprj2",
+      "bytes": 5021696,
+      "sha256": "155d17b1b6267b07987ef2c2a700411aa50e43f4cacbd830b9cc9da28a81fb8d",
+      "sqlite_quick_check": "ok",
+      "stored_project_metadata": [
+        [
+          "3b0602d6a2e7fde43c854efd4651a79dfccbc2df0a5e3c821cb7326bfcab2257",
+          "NFC-Card-R2-Midmount-Placement-A"
+        ]
+      ]
+    },
+    {
+      "path": "eda/NFC-Card-R1-Layout-Reset-R21-USB-CC2.eprj2",
+      "bytes": 5070848,
+      "sha256": "6087305c855a5880a931e7afdcea818e36710dc7234790daf3118332c981dea3",
+      "sqlite_quick_check": "ok",
+      "stored_project_metadata": [
+        [
+          "31100f9979703fec0d44544145de78024fe2d8492f50c378743dd57288888143",
+          "NFC-Card-R1-Layout-Reset-R21-USB-CC2"
+        ]
+      ]
+    }
+  ]
+}

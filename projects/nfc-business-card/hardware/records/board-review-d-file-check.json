@@ -1,0 +1,47 @@
+{
+  "closed_project_check_at": "2026-09-28T20:39:53.652907+08:00",
+  "application_process_before": 21516,
+  "files": {
+    "NFC-Card-R2-Board-Review-D.eprj2": {
+      "sha256": "1ba5a615cd051b29c45f9aaca5ccaa6c15dc469eadf2e713c6bea9a0d9569783",
+      "size": 6012928,
+      "quick_check": "ok"
+    },
+    "NFC-Card-R2-USB-Power-Return-C.eprj2": {
+      "sha256": "7bc06118c8ebc3d15c0c94396b5712219bf4d1c3570885a4d4e8faf1ee925f02",
+      "size": 5091328,
+      "quick_check": "ok"
+    },
+    "NFC-Card-R2-USB-Spaced-B.eprj2": {
+      "sha256": "25ccb210f6476c35aede53e15e74561c7cd24e89032b1a0ae3151bfc8b26ae7d",
+      "size": 5025792,
+      "quick_check": "ok"
+    },
+    "NFC-Card-R2-Midmount-Placement-A.eprj2": {
+      "sha256": "155d17b1b6267b07987ef2c2a700411aa50e43f4cacbd830b9cc9da28a81fb8d",
+      "size": 5021696,
+      "quick_check": "ok"
+    },
+    "NFC-Card-R1-Layout-Reset-R21-USB-CC2.eprj2": {
+      "sha256": "6087305c855a5880a931e7afdcea818e36710dc7234790daf3118332c981dea3",
+      "size": 5070848,
+      "quick_check": "ok"
+    }
+  },
+  "reopened_comparisons": {
+    "components": true,
+    "pads": true,
+    "lines": true,
+    "vias": true,
+    "polylines": true,
+    "regions": true,
+    "strings": true,
+    "netlist": true,
+    "rules": true
+  },
+  "application_process_after": 28037,
+  "reopened_pour_symmetric_difference_mm2": {
+    "GND:1": 1.7270657140568074e-13,
+    "GND:2": 1.1174170080510819e-13
+  }
+}

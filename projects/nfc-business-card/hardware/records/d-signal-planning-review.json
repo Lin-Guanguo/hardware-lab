@@ -1,0 +1,168 @@
+{
+  "source": "projects/nfc-business-card/hardware/records/board-review-d-snapshot.json",
+  "source_sha256": "4f6a393fcc2e34548a7fb194231320a208ed0a6881b205c65bca0dd92d53a044",
+  "method": "Per-layer actual-copper connected components, buffered 0.001 mm as existing audit; via edges; BFS minimum layer transitions between pads. Length is sum of explicit track centrelines, excluding distance inside pads/vias. Straight distance is a geometric lower bound, not a feasible route.",
+  "paths": [
+    {
+      "net": "SWDIO",
+      "minimum_serial_layer_changes_in_existing_copper": 7,
+      "network_track_centerline_length_mm": 68.32518654013862,
+      "pad_center_distance_mm": 44.12892697075695,
+      "ordered_vias_mm": [
+        [
+          79.90000022,
+          40.99999928
+        ],
+        [
+          77.20000054,
+          33.70000118
+        ],
+        [
+          69.5000007,
+          25.200000399999997
+        ],
+        [
+          70.50000124,
+          24.19999986
+        ],
+        [
+          72.30000018,
+          9.900000519999999
+        ],
+        [
+          72.30000018,
+          8.500000779999999
+        ],
+        [
+          58.400000039999995,
+          7.849999539999999
+        ]
+      ]
+    },
+    {
+      "net": "SWDCLK",
+      "minimum_serial_layer_changes_in_existing_copper": 7,
+      "network_track_centerline_length_mm": 78.16384924441294,
+      "pad_center_distance_mm": 44.08620049512545,
+      "ordered_vias_mm": [
+        [
+          69.7000003,
+          48.10000032
+        ],
+        [
+          45.79999984,
+          28.19999948
+        ],
+        [
+          44.999998899999994,
+          26.99999934
+        ],
+        [
+          46.500000979999996,
+          20.79999904
+        ],
+        [
+          46.99999998,
+          13.400001139999999
+        ],
+        [
+          44.999998899999994,
+          11.10000066
+        ],
+        [
+          51.1999992,
+          7.60000004
+        ]
+      ]
+    },
+    {
+      "net": "EPD_RESET_N_TBD",
+      "minimum_serial_layer_changes_in_existing_copper": 6,
+      "network_track_centerline_length_mm": 33.26546358219711,
+      "pad_center_distance_mm": 21.2398955328881,
+      "ordered_vias_mm": [
+        [
+          56.750000799999995,
+          11.99999886
+        ],
+        [
+          54.89999942,
+          11.899999059999999
+        ],
+        [
+          52.00000014,
+          13.70000054
+        ],
+        [
+          49.699999659999996,
+          26.40000054
+        ],
+        [
+          50.300001,
+          28.299999279999998
+        ],
+        [
+          49.99999905999999,
+          32.60000084
+        ]
+      ]
+    }
+  ],
+  "shortcut_probes": [
+    {
+      "net": "SWDIO",
+      "layer": 2,
+      "start_mm": [
+        69.5,
+        25.2
+      ],
+      "end_mm": [
+        70.5,
+        24.2
+      ],
+      "assumed_width_mm": 0.15,
+      "assumed_clearance_mm": 0.2,
+      "foreign_discrete_copper_conflicts": [
+        {
+          "kind": "track",
+          "net": "CHG_SDA",
+          "gap_mm": 0.0
+        }
+      ],
+      "status": "diagnostic only; no EDA edit, refill, or native DRC validation"
+    },
+    {
+      "net": "SWDIO",
+      "layer": 2,
+      "start_mm": [
+        72.3,
+        9.9
+      ],
+      "end_mm": [
+        72.3,
+        8.5
+      ],
+      "assumed_width_mm": 0.15,
+      "assumed_clearance_mm": 0.2,
+      "foreign_discrete_copper_conflicts": [],
+      "status": "diagnostic only; no EDA edit, refill, or native DRC validation"
+    },
+    {
+      "net": "EPD_RESET_N_TBD",
+      "layer": 1,
+      "start_mm": [
+        56.75,
+        12
+      ],
+      "end_mm": [
+        54.9,
+        11.9
+      ],
+      "assumed_width_mm": 0.15,
+      "assumed_clearance_mm": 0.2,
+      "foreign_discrete_copper_conflicts": [],
+      "status": "diagnostic only; no EDA edit, refill, or native DRC validation"
+    }
+  ],
+  "limitation": "Fixed-snapshot analysis only. Shortcut probes inspect foreign discrete tracks/pads/vias; poured copper must be regenerated and return paths/native rules/keepouts independently rechecked before adoption."
+}

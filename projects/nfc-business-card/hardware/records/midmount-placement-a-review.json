@@ -1,0 +1,214 @@
+{
+  "status": "PARTIAL_PLACEMENT_AND_USB_FANOUT_NOT_FOR_FABRICATION",
+  "counts": {
+    "components": 66,
+    "component_pins": 256,
+    "all_pads": 266,
+    "tracks": 98,
+    "vias": 9,
+    "bom_groups": 29
+  },
+  "moved_components": [
+    "R1",
+    "R2",
+    "U4",
+    "C9",
+    "C10",
+    "R13",
+    "Q1",
+    "R14",
+    "R15",
+    "D1",
+    "D2",
+    "D3",
+    "C11",
+    "C12",
+    "C13",
+    "U5",
+    "U6",
+    "Q3",
+    "J1"
+  ],
+  "nfc_geometry_unchanged": true,
+  "battery_debug_pads_unchanged": true,
+  "pin_nets_match": true,
+  "usb_local_three_pad_connectivity": true,
+  "usb_new_copper_min_other_net_clearance_mm": 0.22429089000000602,
+  "usb_new_vias": [
+    {
+      "xy_mm": [
+        74.90000006,
+        25.100000599999998
+      ],
+      "hole_mm": 0.29972,
+      "diameter_mm": 0.59944
+    },
+    {
+      "xy_mm": [
+        74.60000065999999,
+        26.45000044
+      ],
+      "hole_mm": 0.29972,
+      "diameter_mm": 0.59944
+    },
+    {
+      "xy_mm": [
+        72.59999957999999,
+        27.29999874
+      ],
+      "hole_mm": 0.29972,
+      "diameter_mm": 0.59944
+    }
+  ],
+  "usb4500_nominal_datum_mm": {
+    "front_slots_x": 81.29777999999999,
+    "axis_y": 25.99944,
+    "pad_front_v": 4.598579999999996,
+    "pad_rear_v": 5.698579999999995,
+    "slot_span": 11.242040000000003
+  },
+  "named_pad_center_distances": [
+    {
+      "pads": "C9.1 - U4.1",
+      "before_mm": 1.5527712013042985,
+      "after_mm": 1.6853144044954878
+    },
+    {
+      "pads": "C10.1 - U4.6",
+      "before_mm": 2.850288589248463,
+      "after_mm": 2.231803055110388
+    },
+    {
+      "pads": "C10.1 - U4.5",
+      "before_mm": 2.202708736987256,
+      "after_mm": 1.73352534414702
+    },
+    {
+      "pads": "C12.1 - D1.1",
+      "before_mm": 3.079990635959793,
+      "after_mm": 2.7459949280360965
+    },
+    {
+      "pads": "C13.1 - D3.2",
+      "before_mm": 5.047286784837967,
+      "after_mm": 2.9968910942508393
+    },
+    {
+      "pads": "R15.1 - Q1.2",
+      "before_mm": 2.443128810521474,
+      "after_mm": 1.1783218509388627
+    }
+  ],
+  "l1_q1_copper_gap_mm": {
+    "before": 0.1714500000000072,
+    "after": 0.6718300000000142
+  },
+  "l1_q1_mask_gap_estimate_mm": {
+    "before": 0.0694486800000072,
+    "after": 0.5698286800000143
+  },
+  "display_triangle_proxy_mm2_not_routed_loop": {
+    "before": 5.637962917599992,
+    "after": 5.889639833599996
+  },
+  "native_drc_counts": [
+    {
+      "category": "Clearance Error in the same footprint",
+      "kind": "Board Outline to SMD Pad",
+      "count": 12
+    },
+    {
+      "category": "Connection Error",
+      "kind": "SMD Pad",
+      "count": 205
+    },
+    {
+      "category": "Connection Error",
+      "kind": "SMD Test Point",
+      "count": 8
+    },
+    {
+      "category": "Connection Error",
+      "kind": "TH Pad",
+      "count": 4
+    },
+    {
+      "category": "Connection Error",
+      "kind": "Via",
+      "count": 1
+    },
+    {
+      "category": "Physical Error",
+      "kind": "Via Size",
+      "count": 4
+    }
+  ],
+  "unrouted_or_split_nets": [
+    "BAT_ADC_SENSE",
+    "BAT_DIV_SUPPLY",
+    "BAT_MEAS_EN",
+    "BAT_NTC_TBD",
+    "BAT_PACK_TBD",
+    "BAT_SWITCH_GATE",
+    "CHG_CE_N",
+    "CHG_INT_N",
+    "CHG_PG_N",
+    "CHG_SCL",
+    "CHG_SDA",
+    "EPD_BS0",
+    "EPD_BUSY_TBD",
+    "EPD_CS_N_TBD",
+    "EPD_DC_TBD",
+    "EPD_EN_TBD",
+    "EPD_GDR",
+    "EPD_MOSI_TBD",
+    "EPD_PUMP",
+    "EPD_RESE",
+    "EPD_RESET_N_TBD",
+    "EPD_SCK_TBD",
+    "EPD_SW",
+    "EPD_VCOM",
+    "EPD_VDD",
+    "EPD_VDDL",
+    "EPD_VGH",
+    "EPD_VGL",
+    "EPD_VPH",
+    "EPD_VSNH",
+    "EPD_VSNL1",
+    "EPD_VSNL2",
+    "EPD_VSPH",
+    "EPD_VSPL1",
+    "EPD_VSPL2",
+    "GND",
+    "KEY_NEXT_N",
+    "KEY_OK_N",
+    "KEY_PREV_N",
+    "NRESET",
+    "SWDCLK",
+    "SWDIO",
+    "SYS",
+    "USB_CC1",
+    "USB_CC2",
+    "USB_DM_CONN",
+    "USB_DM_MCU",
+    "USB_DP_CONN",
+    "USB_DP_MCU",
+    "USB_VBUS",
+    "VDD_3V3"
+  ],
+  "independent_copper": {
+    "dead_ends": [],
+    "floating_copper": [],
+    "single_layer_or_isolated_vias": [],
+    "screen_unexpected_copper_mm2": {}
+  },
+  "open_gates": [
+    "Merged board outline and connector cutout are not fabrication-ready; footprint e62 remains unapproved.",
+    "USB protection ground, CC, VBUS and downstream data routing are incomplete.",
+    "Four retained NFC lead vias are below the new 0.60 mm outside-diameter target.",
+    "Display placement proxies are not routed current-loop or thermal verification.",
+    "FPC fold, plug insertion, tolerances, process rails and panelization remain unverified.",
+    "J1 imported 3D association is invalid; no synchronized enclosure validation.",
+    "Battery ratings, display peak load and VBUS protection remain open."
+  ]
+}

@@ -2,7 +2,7 @@
 
 ## 当前确定方案
 
-NFC 名片下一轮重新规划，尚未建立新 PCB。当前核对基线为 [R21 原生工程](NFC-Card-R1-Layout-Reset-R21-USB-CC2.eprj2)，只作复制输入与历史对照，不继续在原件上修补。先读[开工核查](../projects/nfc-business-card/docs/pcb-start-readiness-2026-09-28.md)与[项目当前状态](../projects/nfc-business-card/README.md)。[NFC-Card-R1.eprj2](NFC-Card-R1.eprj2)及下列旧候选保留追溯，不能按旧入口误开后当作 R21。
+NFC 名片当前入口为 [NFC-Card-R2-Board-Review-D.eprj2](NFC-Card-R2-Board-Review-D.eprj2)：整板诊断候选，保存重开后全网实铜连通；原生未连接 0、普通几何 0，USB SMT 板边 12、TH 板边 2。**充电器地细颈约 0.029 mm、VBUS 保护、负载和制造边界未闭合，不可制造。**[结果、图册和线上 DFM](../projects/nfc-business-card/hardware/board-review-d.md)已归档。[C](NFC-Card-R2-USB-Power-Return-C.eprj2)、[B](NFC-Card-R2-USB-Spaced-B.eprj2)、[A](NFC-Card-R2-Midmount-Placement-A.eprj2)、[R21](NFC-Card-R1-Layout-Reset-R21-USB-CC2.eprj2)指纹保持，作独立对照。
 
 [NFC-Card-R1-Free-0p30-Sense.eprj2](NFC-Card-R1-Free-0p30-Sense.eprj2) 是新增 TS/MR 电阻、可关断电池采样的独立试验源文件；[对应制造文件与风险](../projects/nfc-business-card/hardware/production/r1-free-0p30-sense/README.md)尚不可投产。先前的 0.30 mm 试验源仍单独保留。
 

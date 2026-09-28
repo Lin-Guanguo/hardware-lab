@@ -1,0 +1,335 @@
+{
+  "method": "Native top traces versus same-version Gerber mask apertures; positive non-intersecting gaps below 0.0801 mm, same and different nets. No EDA changes.",
+  "pairs": [
+    {
+      "pad": [
+        "C3",
+        "1"
+      ],
+      "pad_net": "BAT_PACK_TBD",
+      "mask_center_mm": [
+        48.799976,
+        18.399999
+      ],
+      "gap_mm": 0.07397653000000304,
+      "track_index": 907,
+      "track": {
+        "net": "BAT_PACK_TBD",
+        "layer": 1,
+        "x1": 1897.6378,
+        "y1": 724.4094,
+        "x2": 1897.6378,
+        "y2": 609.7747,
+        "widthMil": 5.9055
+      }
+    },
+    {
+      "pad": [
+        "C7",
+        "1"
+      ],
+      "pad_net": "VDD_3V3",
+      "mask_center_mm": [
+        60.9,
+        17.299976
+      ],
+      "gap_mm": 0.07412850343290012,
+      "track_index": 828,
+      "track": {
+        "net": "VDD_3V3",
+        "layer": 1,
+        "x1": 2425.1969,
+        "y1": 657.4803,
+        "x2": 2421.2598,
+        "y2": 657.4803,
+        "widthMil": 9.8425
+      }
+    },
+    {
+      "pad": [
+        "C7",
+        "1"
+      ],
+      "pad_net": "VDD_3V3",
+      "mask_center_mm": [
+        60.9,
+        17.299976
+      ],
+      "gap_mm": 0.07412850343290012,
+      "track_index": 829,
+      "track": {
+        "net": "VDD_3V3",
+        "layer": 1,
+        "x1": 2362.2047,
+        "y1": 598.4252,
+        "x2": 2421.2598,
+        "y2": 657.4803,
+        "widthMil": 9.8425
+      }
+    },
+    {
+      "pad": [
+        "C7",
+        "1"
+      ],
+      "pad_net": "VDD_3V3",
+      "mask_center_mm": [
+        60.9,
+        17.299976
+      ],
+      "gap_mm": 0.07147129649162035,
+      "track_index": 830,
+      "track": {
+        "net": "VDD_3V3",
+        "layer": 1,
+        "x1": 2421.2598,
+        "y1": 657.4803,
+        "x2": 2429.1339,
+        "y2": 665.3543,
+        "widthMil": 9.8425
+      }
+    },
+    {
+      "pad": [
+        "U1",
+        "2"
+      ],
+      "pad_net": "GND",
+      "mask_center_mm": [
+        67.65099,
+        6.266005
+      ],
+      "gap_mm": 0.07499032999999145,
+      "track_index": 354,
+      "track": {
+        "net": "GND",
+        "layer": 1,
+        "x1": 2618.1102,
+        "y1": 220.4724,
+        "x2": 2641.7323,
+        "y2": 244.0945,
+        "widthMil": 9.8425
+      }
+    },
+    {
+      "pad": [
+        "U1",
+        "53"
+      ],
+      "pad_net": "SWDCLK",
+      "mask_center_mm": [
+        58.351034,
+        6.266005
+      ],
+      "gap_mm": 0.07598397960800078,
+      "track_index": 234,
+      "track": {
+        "net": "SWDCLK",
+        "layer": 1,
+        "x1": 2277.5591,
+        "y1": 259.8425,
+        "x2": 2279.5276,
+        "y2": 259.8425,
+        "widthMil": 5.9055
+      }
+    },
+    {
+      "pad": [
+        "U1",
+        "53"
+      ],
+      "pad_net": "SWDCLK",
+      "mask_center_mm": [
+        58.351034,
+        6.266005
+      ],
+      "gap_mm": 0.005395465931972832,
+      "track_index": 235,
+      "track": {
+        "net": "SWDCLK",
+        "layer": 1,
+        "x1": 2279.5276,
+        "y1": 259.8425,
+        "x2": 2281.4961,
+        "y2": 257.874,
+        "widthMil": 5.9055
+      }
+    },
+    {
+      "pad": [
+        "J2",
+        "8"
+      ],
+      "pad_net": "EPD_BS0",
+      "mask_center_mm": [
+        56.324965,
+        32.010068
+      ],
+      "gap_mm": 0.050023750000001144,
+      "track_index": 616,
+      "track": {
+        "net": "EPD_BS0",
+        "layer": 1,
+        "x1": 2248.0315,
+        "y1": 1259.8425,
+        "x2": 2259.8425,
+        "y2": 1271.6535,
+        "widthMil": 5.9055
+      }
+    },
+    {
+      "pad": [
+        "J2",
+        "4"
+      ],
+      "pad_net": "EPD_VDDL",
+      "mask_center_mm": [
+        56.324965,
+        30.010072
+      ],
+      "gap_mm": 0.050023750000669054,
+      "track_index": 379,
+      "track": {
+        "net": "EPD_VDDL",
+        "layer": 1,
+        "x1": 2248.0315,
+        "y1": 1181.1024,
+        "x2": 2259.8425,
+        "y2": 1169.2913,
+        "widthMil": 5.9055
+      }
+    },
+    {
+      "pad": [
+        "U4",
+        "1"
+      ],
+      "pad_net": "VDD_3V3",
+      "mask_center_mm": [
+        64.850015,
+        31.250039
+      ],
+      "gap_mm": 0.073961649999994,
+      "track_index": 861,
+      "track": {
+        "net": "VDD_3V3",
+        "layer": 1,
+        "x1": 2566.9291,
+        "y1": 1263.7795,
+        "x2": 2555.1181,
+        "y2": 1251.9685,
+        "widthMil": 9.8425
+      }
+    },
+    {
+      "pad": [
+        "R13",
+        "1"
+      ],
+      "pad_net": "EPD_EN_TBD",
+      "mask_center_mm": [
+        67.746636,
+        31.200001
+      ],
+      "gap_mm": 0.04779661300030517,
+      "track_index": 474,
+      "track": {
+        "net": "EPD_EN_TBD",
+        "layer": 1,
+        "x1": 2649.6063,
+        "y1": 1293.3071,
+        "x2": 2649.6063,
+        "y2": 1251.9685,
+        "widthMil": 5.9055
+      }
+    },
+    {
+      "pad": [
+        "C19",
+        "2"
+      ],
+      "pad_net": "GND",
+      "mask_center_mm": [
+        60.069997,
+        39.759999
+      ],
+      "gap_mm": 0.009193310000000565,
+      "track_index": 881,
+      "track": {
+        "net": "GND",
+        "layer": 1,
+        "x1": 2389.7638,
+        "y1": 1531.4961,
+        "x2": 2393.7008,
+        "y2": 1527.5591,
+        "widthMil": 9.8425
+      }
+    },
+    {
+      "pad": [
+        "R20",
+        "1"
+      ],
+      "pad_net": "BAT_ADC_SENSE",
+      "mask_center_mm": [
+        74.099999,
+        14.853364
+      ],
+      "gap_mm": 0.01759783000000148,
+      "track_index": 526,
+      "track": {
+        "net": "BAT_ADC_SENSE",
+        "layer": 1,
+        "x1": 2901.5748,
+        "y1": 606.2992,
+        "x2": 2866.1417,
+        "y2": 606.2992,
+        "widthMil": 5.9055
+      }
+    },
+    {
+      "pad": [
+        "R20",
+        "1"
+      ],
+      "pad_net": "BAT_ADC_SENSE",
+      "mask_center_mm": [
+        74.099999,
+        14.853364
+      ],
+      "gap_mm": 0.017597830000001483,
+      "track_index": 528,
+      "track": {
+        "net": "BAT_ADC_SENSE",
+        "layer": 1,
+        "x1": 2901.5748,
+        "y1": 606.2992,
+        "x2": 2901.5748,
+        "y2": 629.9213,
+        "widthMil": 5.9055
+      }
+    },
+    {
+      "pad": [
+        "Q2",
+        "1"
+      ],
+      "pad_net": "BAT_SWITCH_GATE",
+      "mask_center_mm": [
+        78.949959,
+        15.049985
+      ],
+      "gap_mm": 0.024014729999999318,
+      "track_index": 653,
+      "track": {
+        "net": "BAT_SWITCH_GATE",
+        "layer": 1,
+        "x1": 3122.0472,
+        "y1": 618.1102,
+        "x2": 3133.8583,
+        "y2": 629.9213,
+        "widthMil": 5.9055
+      }
+    }
+  ]
+}

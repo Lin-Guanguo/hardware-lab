@@ -1,0 +1,227 @@
+{
+  "method": "Same-version Gerber copper flashes and paste flashes/positive regions, matched by component pad centre and polygon containment.",
+  "findings": [
+    {
+      "ref": "U2",
+      "pin": "11",
+      "copper_bounds_mm": [
+        45.27042,
+        18.55343,
+        46.169579999999996,
+        20.05457
+      ],
+      "paste_bounds_mm": [
+        45.305420999999996,
+        18.588431,
+        46.134579,
+        20.019568999999997
+      ],
+      "paste_to_copper_area_ratio": 0.8791452471565465
+    },
+    {
+      "ref": "J1",
+      "pin": "B8",
+      "copper_bounds_mm": [
+        75.598932,
+        24.0994825,
+        76.69893,
+        24.3994815
+      ],
+      "paste_bounds_mm": [
+        75.598919,
+        24.099495,
+        76.698917,
+        24.399494
+      ],
+      "paste_to_copper_area_ratio": 1.0
+    },
+    {
+      "ref": "J1",
+      "pin": "A5",
+      "copper_bounds_mm": [
+        75.598932,
+        24.5993545,
+        76.69893,
+        24.8993535
+      ],
+      "paste_bounds_mm": [
+        75.598919,
+        24.599367,
+        76.698917,
+        24.899366
+      ],
+      "paste_to_copper_area_ratio": 1.0
+    },
+    {
+      "ref": "J1",
+      "pin": "B7",
+      "copper_bounds_mm": [
+        75.598932,
+        25.0994805,
+        76.69893,
+        25.399479499999998
+      ],
+      "paste_bounds_mm": [
+        75.598919,
+        25.099493,
+        76.698917,
+        25.399492
+      ],
+      "paste_to_copper_area_ratio": 1.0
+    },
+    {
+      "ref": "J1",
+      "pin": "A6",
+      "copper_bounds_mm": [
+        75.598932,
+        25.5993525,
+        76.69893,
+        25.899351499999998
+      ],
+      "paste_bounds_mm": [
+        75.598919,
+        25.599365,
+        76.698917,
+        25.899364
+      ],
+      "paste_to_copper_area_ratio": 1.0
+    },
+    {
+      "ref": "J1",
+      "pin": "A7",
+      "copper_bounds_mm": [
+        75.598932,
+        26.0994785,
+        76.69893,
+        26.3994775
+      ],
+      "paste_bounds_mm": [
+        75.598919,
+        26.099491,
+        76.698917,
+        26.39949
+      ],
+      "paste_to_copper_area_ratio": 1.0
+    },
+    {
+      "ref": "J1",
+      "pin": "B6",
+      "copper_bounds_mm": [
+        75.598932,
+        26.5993505,
+        76.69893,
+        26.8993495
+      ],
+      "paste_bounds_mm": [
+        75.598919,
+        26.599363,
+        76.698917,
+        26.899362
+      ],
+      "paste_to_copper_area_ratio": 1.0
+    },
+    {
+      "ref": "J1",
+      "pin": "A8",
+      "copper_bounds_mm": [
+        75.598932,
+        27.0994765,
+        76.69893,
+        27.3994755
+      ],
+      "paste_bounds_mm": [
+        75.598919,
+        27.099489,
+        76.698917,
+        27.399488
+      ],
+      "paste_to_copper_area_ratio": 1.0000000000000118
+    },
+    {
+      "ref": "J1",
+      "pin": "B5",
+      "copper_bounds_mm": [
+        75.598932,
+        27.5993485,
+        76.69893,
+        27.8993475
+      ],
+      "paste_bounds_mm": [
+        75.598919,
+        27.599361,
+        76.698917,
+        27.89936
+      ],
+      "paste_to_copper_area_ratio": 1.0000000000000118
+    },
+    {
+      "ref": "J1",
+      "pin": "B4A9",
+      "copper_bounds_mm": [
+        75.598932,
+        28.0993345,
+        76.69893,
+        28.699333499999998
+      ],
+      "paste_bounds_mm": [
+        75.598919,
+        28.099334,
+        76.698917,
+        28.699333
+      ],
+      "paste_to_copper_area_ratio": 1.000000000000006
+    },
+    {
+      "ref": "J1",
+      "pin": "B1A12",
+      "copper_bounds_mm": [
+        75.598932,
+        28.8994345,
+        76.69893,
+        29.4994335
+      ],
+      "paste_bounds_mm": [
+        75.598919,
+        28.899434,
+        76.698917,
+        29.499433
+      ],
+      "paste_to_copper_area_ratio": 1.000000000000006
+    },
+    {
+      "ref": "J1",
+      "pin": "A4B9",
+      "copper_bounds_mm": [
+        75.598932,
+        23.2994965,
+        76.69893,
+        23.899495499999997
+      ],
+      "paste_bounds_mm": [
+        75.598919,
+        23.299496,
+        76.698917,
+        23.899495
+      ],
+      "paste_to_copper_area_ratio": 1.000000000000006
+    },
+    {
+      "ref": "J1",
+      "pin": "A1B12",
+      "copper_bounds_mm": [
+        75.598932,
+        22.499396500000003,
+        76.69893,
+        23.0993955
+      ],
+      "paste_bounds_mm": [
+        75.598919,
+        22.499396,
+        76.698917,
+        23.099395
+      ],
+      "paste_to_copper_area_ratio": 1.000000000000006
+    }
+  ],
+  "interpretation": "J1 paste is 1:1 copper, so web contact ratio 0.50 is not explained by half-size stencil openings. U2 paste ratio matches web 0.88 numerically, but web model geometry is not independently confirmed."
+}

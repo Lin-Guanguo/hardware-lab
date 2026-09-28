@@ -1,0 +1,4031 @@
+{
+  "project": {
+    "uuid": "3b0602d6a2e7fde43c854efd4651a79dfccbc2df0a5e3c821cb7326bfcab2257",
+    "name": "NFC-Card-R2-Midmount-Placement-A"
+  },
+  "status": "PARTIAL_ROUTING_NOT_PASSED",
+  "errors": [
+    {
+      "errorType": "Clearance Error in the same footprint",
+      "errorObjType": "Board Outline to SMD Pad",
+      "ruleName": "copperThickness1oz",
+      "obj1": {
+        "typeName": "Board Outline",
+        "suffix": ": e62"
+      },
+      "obj2": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): J1_A1B12"
+      },
+      "objs": [
+        "6203b32f9e70959be62",
+        "6203b32f9e70959be37"
+      ],
+      "pos": {
+        "x": 302.358065,
+        "y": 88.5803
+      }
+    },
+    {
+      "errorType": "Clearance Error in the same footprint",
+      "errorObjType": "Board Outline to SMD Pad",
+      "ruleName": "copperThickness1oz",
+      "obj1": {
+        "typeName": "Board Outline",
+        "suffix": ": e62"
+      },
+      "obj2": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_DM_CONN): J1_A7"
+      },
+      "objs": [
+        "6203b32f9e70959be62",
+        "6203b32f9e70959be30"
+      ],
+      "pos": {
+        "x": 302.358065,
+        "y": 102.75385
+      }
+    },
+    {
+      "errorType": "Clearance Error in the same footprint",
+      "errorObjType": "Board Outline to SMD Pad",
+      "ruleName": "copperThickness1oz",
+      "obj1": {
+        "typeName": "Board Outline",
+        "suffix": ": e62"
+      },
+      "obj2": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_DP_CONN): J1_A6"
+      },
+      "objs": [
+        "6203b32f9e70959be62",
+        "6203b32f9e70959be29"
+      ],
+      "pos": {
+        "x": 302.358065,
+        "y": 100.78485
+      }
+    },
+    {
+      "errorType": "Clearance Error in the same footprint",
+      "errorObjType": "Board Outline to SMD Pad",
+      "ruleName": "copperThickness1oz",
+      "obj1": {
+        "typeName": "Board Outline",
+        "suffix": ": e62"
+      },
+      "obj2": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_DM_CONN): J1_B7"
+      },
+      "objs": [
+        "6203b32f9e70959be62",
+        "6203b32f9e70959be28"
+      ],
+      "pos": {
+        "x": 302.358065,
+        "y": 98.81684999999999
+      }
+    },
+    {
+      "errorType": "Clearance Error in the same footprint",
+      "errorObjType": "Board Outline to SMD Pad",
+      "ruleName": "copperThickness1oz",
+      "obj1": {
+        "typeName": "Board Outline",
+        "suffix": ": e62"
+      },
+      "obj2": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_VBUS): J1_A4B9"
+      },
+      "objs": [
+        "6203b32f9e70959be62",
+        "6203b32f9e70959be36"
+      ],
+      "pos": {
+        "x": 302.358065,
+        "y": 91.7303
+      }
+    },
+    {
+      "errorType": "Clearance Error in the same footprint",
+      "errorObjType": "Board Outline to SMD Pad",
+      "ruleName": "copperThickness1oz",
+      "obj1": {
+        "typeName": "Board Outline",
+        "suffix": ": e62"
+      },
+      "obj2": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): J1_B1A12"
+      },
+      "objs": [
+        "6203b32f9e70959be62",
+        "6203b32f9e70959be35"
+      ],
+      "pos": {
+        "x": 302.358065,
+        "y": 113.7773
+      }
+    },
+    {
+      "errorType": "Clearance Error in the same footprint",
+      "errorObjType": "Board Outline to SMD Pad",
+      "ruleName": "copperThickness1oz",
+      "obj1": {
+        "typeName": "Board Outline",
+        "suffix": ": e62"
+      },
+      "obj2": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_VBUS): J1_B4A9"
+      },
+      "objs": [
+        "6203b32f9e70959be62",
+        "6203b32f9e70959be34"
+      ],
+      "pos": {
+        "x": 302.358065,
+        "y": 110.62729999999999
+      }
+    },
+    {
+      "errorType": "Clearance Error in the same footprint",
+      "errorObjType": "Board Outline to SMD Pad",
+      "ruleName": "copperThickness1oz",
+      "obj1": {
+        "typeName": "Board Outline",
+        "suffix": ": e62"
+      },
+      "obj2": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_CC2): J1_B5"
+      },
+      "objs": [
+        "6203b32f9e70959be62",
+        "6203b32f9e70959be33"
+      ],
+      "pos": {
+        "x": 302.358065,
+        "y": 108.65885
+      }
+    },
+    {
+      "errorType": "Clearance Error in the same footprint",
+      "errorObjType": "Board Outline to SMD Pad",
+      "ruleName": "copperThickness1oz",
+      "obj1": {
+        "typeName": "Board Outline",
+        "suffix": ": e62"
+      },
+      "obj2": {
+        "typeName": "SMD Pad",
+        "suffix": ": J1_A8"
+      },
+      "objs": [
+        "6203b32f9e70959be62",
+        "6203b32f9e70959be32"
+      ],
+      "pos": {
+        "x": 302.358065,
+        "y": 106.69085000000001
+      }
+    },
+    {
+      "errorType": "Clearance Error in the same footprint",
+      "errorObjType": "Board Outline to SMD Pad",
+      "ruleName": "copperThickness1oz",
+      "obj1": {
+        "typeName": "Board Outline",
+        "suffix": ": e62"
+      },
+      "obj2": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_DP_CONN): J1_B6"
+      },
+      "objs": [
+        "6203b32f9e70959be62",
+        "6203b32f9e70959be31"
+      ],
+      "pos": {
+        "x": 302.358065,
+        "y": 104.72185000000002
+      }
+    },
+    {
+      "errorType": "Clearance Error in the same footprint",
+      "errorObjType": "Board Outline to SMD Pad",
+      "ruleName": "copperThickness1oz",
+      "obj1": {
+        "typeName": "Board Outline",
+        "suffix": ": e62"
+      },
+      "obj2": {
+        "typeName": "SMD Pad",
+        "suffix": ": J1_B8"
+      },
+      "objs": [
+        "6203b32f9e70959be62",
+        "6203b32f9e70959be26"
+      ],
+      "pos": {
+        "x": 302.358065,
+        "y": 94.87985
+      }
+    },
+    {
+      "errorType": "Clearance Error in the same footprint",
+      "errorObjType": "Board Outline to SMD Pad",
+      "ruleName": "copperThickness1oz",
+      "obj1": {
+        "typeName": "Board Outline",
+        "suffix": ": e62"
+      },
+      "obj2": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_CC1): J1_A5"
+      },
+      "objs": [
+        "6203b32f9e70959be62",
+        "6203b32f9e70959be27"
+      ],
+      "pos": {
+        "x": 302.358065,
+        "y": 96.84785
+      }
+    },
+    {
+      "errorType": "Physical Error",
+      "errorObjType": "Via Size",
+      "ruleName": "viaSize",
+      "obj1": {
+        "typeName": "Via",
+        "suffix": "(NFC1_TBD): e23"
+      },
+      "objs": [
+        "00d49d4697a5fbdb"
+      ],
+      "pos": {
+        "x": 235.82676999999998,
+        "y": 26.24
+      }
+    },
+    {
+      "errorType": "Physical Error",
+      "errorObjType": "Via Size",
+      "ruleName": "viaSize",
+      "obj1": {
+        "typeName": "Via",
+        "suffix": "(NFC1_TBD): e24"
+      },
+      "objs": [
+        "b68e40c384ce1172"
+      ],
+      "pos": {
+        "x": 220.07874,
+        "y": 34.488189999999996
+      }
+    },
+    {
+      "errorType": "Physical Error",
+      "errorObjType": "Via Size",
+      "ruleName": "viaSize",
+      "obj1": {
+        "typeName": "Via",
+        "suffix": "(NFC1_TBD): e25"
+      },
+      "objs": [
+        "5d191175d50e50b7"
+      ],
+      "pos": {
+        "x": 235.82676999999998,
+        "y": 23.09
+      }
+    },
+    {
+      "errorType": "Physical Error",
+      "errorObjType": "Via Size",
+      "ruleName": "viaSize",
+      "obj1": {
+        "typeName": "Via",
+        "suffix": "(NFC1_TBD): e26"
+      },
+      "objs": [
+        "a53a66e20214d1fc"
+      ],
+      "pos": {
+        "x": 220.07874,
+        "y": 20.47244
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): U1_1"
+      },
+      "net": "GND",
+      "objs": [
+        "97c6fc7236300ad5e65"
+      ],
+      "pos": {
+        "x": 266.34248,
+        "y": 20.338309999999996
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): U1_2"
+      },
+      "net": "GND",
+      "objs": [
+        "97c6fc7236300ad5e66"
+      ],
+      "pos": {
+        "x": 266.34248,
+        "y": 24.66931
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): U2_5"
+      },
+      "net": "GND",
+      "objs": [
+        "712fd95907922ca7e25"
+      ],
+      "pos": {
+        "x": 184.133,
+        "y": 79.1495
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): U2_11"
+      },
+      "net": "GND",
+      "objs": [
+        "712fd95907922ca7e31"
+      ],
+      "pos": {
+        "x": 180,
+        "y": 75.9995
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): C6_2"
+      },
+      "net": "GND",
+      "objs": [
+        "48d7af77150b10a5e14"
+      ],
+      "pos": {
+        "x": 245.27559000000005,
+        "y": 73.62214
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): C7_2"
+      },
+      "net": "GND",
+      "objs": [
+        "004f9c0de84c5784e14"
+      ],
+      "pos": {
+        "x": 239.76378000000003,
+        "y": 73.62214
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): C18_2"
+      },
+      "net": "GND",
+      "objs": [
+        "db73bf39c99e775de15"
+      ],
+      "pos": {
+        "x": 236.49605,
+        "y": 149.44882
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): C19_2"
+      },
+      "net": "GND",
+      "objs": [
+        "21cd2b2b79576a82e15"
+      ],
+      "pos": {
+        "x": 236.49605,
+        "y": 156.53543
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): C17_2"
+      },
+      "net": "GND",
+      "objs": [
+        "415f7d640d9b690fe15"
+      ],
+      "pos": {
+        "x": 236.49605,
+        "y": 142.3622
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): C16_2"
+      },
+      "net": "GND",
+      "objs": [
+        "6b61270eda6b277ee15"
+      ],
+      "pos": {
+        "x": 236.49605,
+        "y": 135.27559000000002
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): C20_2"
+      },
+      "net": "GND",
+      "objs": [
+        "06213dc17a07118ee15"
+      ],
+      "pos": {
+        "x": 236.49605,
+        "y": 163.62205
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): C21_2"
+      },
+      "net": "GND",
+      "objs": [
+        "755e581c5f6e7c56e15"
+      ],
+      "pos": {
+        "x": 236.49605,
+        "y": 170.70866
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): C22_2"
+      },
+      "net": "GND",
+      "objs": [
+        "8ff0422537e1892de15"
+      ],
+      "pos": {
+        "x": 236.49605,
+        "y": 177.79527000000002
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): R23_2"
+      },
+      "net": "GND",
+      "objs": [
+        "00f6f02323dde595e7"
+      ],
+      "pos": {
+        "x": 300.39369999999997,
+        "y": 74.22584
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "TH Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "TH Pad",
+        "suffix": "(GND): J1_17"
+      },
+      "net": "GND",
+      "objs": [
+        "6203b32f9e70959be61"
+      ],
+      "pos": {
+        "x": 304.32694000000004,
+        "y": 80.23340000000002
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): C14_2"
+      },
+      "net": "GND",
+      "objs": [
+        "300fa1fc6a29f9d4e15"
+      ],
+      "pos": {
+        "x": 236.49605,
+        "y": 114.40944999999999
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): C15_2"
+      },
+      "net": "GND",
+      "objs": [
+        "9667a05a6f04c17ae15"
+      ],
+      "pos": {
+        "x": 236.49605,
+        "y": 122.28345999999999
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): C23_2"
+      },
+      "net": "GND",
+      "objs": [
+        "cc096d468a877507e14"
+      ],
+      "pos": {
+        "x": 214.56683,
+        "y": 31.496059999999996
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): C24_2"
+      },
+      "net": "GND",
+      "objs": [
+        "16febb34495b53cfe14"
+      ],
+      "pos": {
+        "x": 214.56683,
+        "y": 23.62205
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): C1_2"
+      },
+      "net": "GND",
+      "objs": [
+        "f41efe6726027056e14"
+      ],
+      "pos": {
+        "x": 231.88976,
+        "y": 73.62214
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): SW2_4"
+      },
+      "net": "GND",
+      "objs": [
+        "bba4c139526dd808e14"
+      ],
+      "pos": {
+        "x": 207.48059000000003,
+        "y": 27.362190000000002
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): R13_2"
+      },
+      "net": "GND",
+      "objs": [
+        "ef5722fb9675246ee7"
+      ],
+      "pos": {
+        "x": 266.71903999999995,
+        "y": 122.83465000000001
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): U4_2"
+      },
+      "net": "GND",
+      "objs": [
+        "15e08cd34920a892e7"
+      ],
+      "pos": {
+        "x": 257.87402000000003,
+        "y": 123.03165
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): C3_2"
+      },
+      "net": "GND",
+      "objs": [
+        "aeb09fd14540bf14e14"
+      ],
+      "pos": {
+        "x": 196.45679,
+        "y": 76.77165
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): C5_2"
+      },
+      "net": "GND",
+      "objs": [
+        "d5226715eecfb21ae14"
+      ],
+      "pos": {
+        "x": 203.93690999999998,
+        "y": 81.88976
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): R21_1"
+      },
+      "net": "GND",
+      "objs": [
+        "76971840243552c5e8"
+      ],
+      "pos": {
+        "x": 291.73228,
+        "y": 70.28883000000002
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): C9_2"
+      },
+      "net": "GND",
+      "objs": [
+        "7f00cdb9414ac083e15"
+      ],
+      "pos": {
+        "x": 246.063,
+        "y": 116.53542999999999
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): C2_2"
+      },
+      "net": "GND",
+      "objs": [
+        "f8d8043bc5c19bdfe14"
+      ],
+      "pos": {
+        "x": 192.51978,
+        "y": 67.71654
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): C4_2"
+      },
+      "net": "GND",
+      "objs": [
+        "c6eacb169aae3346e14"
+      ],
+      "pos": {
+        "x": 203.93690999999998,
+        "y": 70.07874000000001
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): U5_3"
+      },
+      "net": "GND",
+      "objs": [
+        "1bb9d193d7911ec2e8"
+      ],
+      "pos": {
+        "x": 284.64567,
+        "y": 102.95275999999998
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): U6_3"
+      },
+      "net": "GND",
+      "objs": [
+        "5592d83122350a94e8"
+      ],
+      "pos": {
+        "x": 284.64567,
+        "y": 92.51969
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): J1_B1A12"
+      },
+      "net": "GND",
+      "objs": [
+        "6203b32f9e70959be35"
+      ],
+      "pos": {
+        "x": 299.79894,
+        "y": 114.95840000000001
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "TH Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "TH Pad",
+        "suffix": "(GND): J1_18"
+      },
+      "net": "GND",
+      "objs": [
+        "6203b32f9e70959be60"
+      ],
+      "pos": {
+        "x": 304.3269399999999,
+        "y": 124.4854
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): J1_A1B12"
+      },
+      "net": "GND",
+      "objs": [
+        "6203b32f9e70959be37"
+      ],
+      "pos": {
+        "x": 299.79894,
+        "y": 89.76140000000001
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): U1_33"
+      },
+      "net": "GND",
+      "objs": [
+        "97c6fc7236300ad5e97"
+      ],
+      "pos": {
+        "x": 229.13848000000002,
+        "y": 63.252309999999994
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): R1_2"
+      },
+      "net": "GND",
+      "objs": [
+        "2b5f0d1a05afd7f9e7"
+      ],
+      "pos": {
+        "x": 273.41195,
+        "y": 88.97637999999999
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): C8_2"
+      },
+      "net": "GND",
+      "objs": [
+        "c8d1c85979ca70ade14"
+      ],
+      "pos": {
+        "x": 181.49606,
+        "y": 63.385729999999995
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): U3_2"
+      },
+      "net": "GND",
+      "objs": [
+        "2b2b782584d87e6ee11"
+      ],
+      "pos": {
+        "x": 220,
+        "y": 71.669
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): Q3_2"
+      },
+      "net": "GND",
+      "objs": [
+        "bfd2b7e036b27581e12"
+      ],
+      "pos": {
+        "x": 312.40162999999995,
+        "y": 70.86654000000001
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "TH Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "TH Pad",
+        "suffix": "(GND): J1_19"
+      },
+      "net": "GND",
+      "objs": [
+        "6203b32f9e70959be59"
+      ],
+      "pos": {
+        "x": 320.07493999999997,
+        "y": 80.23340000000002
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): C10_2"
+      },
+      "net": "GND",
+      "objs": [
+        "37bc6256c702f593e15"
+      ],
+      "pos": {
+        "x": 254.72441732283465,
+        "y": 135.4330708661417
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): R2_2"
+      },
+      "net": "GND",
+      "objs": [
+        "384904d4feeb315fe7"
+      ],
+      "pos": {
+        "x": 281.67967,
+        "y": 115.74803
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): R19_2"
+      },
+      "net": "GND",
+      "objs": [
+        "3cf7e653b2618fd4e7"
+      ],
+      "pos": {
+        "x": 208.66142000000002,
+        "y": 95.48568999999999
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): J2_17"
+      },
+      "net": "GND",
+      "objs": [
+        "1c9b89195dc744cee37"
+      ],
+      "pos": {
+        "x": 221.75182999999998,
+        "y": 143.73989
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): U1_55"
+      },
+      "net": "GND",
+      "objs": [
+        "97c6fc7236300ad5e119"
+      ],
+      "pos": {
+        "x": 229.72848000000002,
+        "y": 20.338310000000003
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "TH Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "TH Pad",
+        "suffix": "(GND): J1_20"
+      },
+      "net": "GND",
+      "objs": [
+        "6203b32f9e70959be58"
+      ],
+      "pos": {
+        "x": 320.07493999999997,
+        "y": 124.4854
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): SW3_4"
+      },
+      "net": "GND",
+      "objs": [
+        "d80b5f9a2ffbbb3ee14"
+      ],
+      "pos": {
+        "x": 174.01603000000003,
+        "y": 49.40941
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): R15_2"
+      },
+      "net": "GND",
+      "objs": [
+        "e3a664d5d5a8e388e7"
+      ],
+      "pos": {
+        "x": 287.61166929133856,
+        "y": 152.75590551181102
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): R14_2"
+      },
+      "net": "GND",
+      "objs": [
+        "561c894eaf1c2e04e7"
+      ],
+      "pos": {
+        "x": 282.49356,
+        "y": 135.82677
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): R17_2"
+      },
+      "net": "GND",
+      "objs": [
+        "41d4985966309477e7"
+      ],
+      "pos": {
+        "x": 218.32032999999998,
+        "y": 177.40157
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): SW1_4"
+      },
+      "net": "GND",
+      "objs": [
+        "f005d66b5a5dba5ce14"
+      ],
+      "pos": {
+        "x": 174.01603000000003,
+        "y": 10.433040000000002
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): SW2_3"
+      },
+      "net": "GND",
+      "objs": [
+        "bba4c139526dd808e12"
+      ],
+      "pos": {
+        "x": 183.07059,
+        "y": 27.362190000000002
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): C13_2"
+      },
+      "net": "GND",
+      "objs": [
+        "ed3313061648d06ce15"
+      ],
+      "pos": {
+        "x": 312.59842000000003,
+        "y": 174.01575
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): D2_1"
+      },
+      "net": "GND",
+      "objs": [
+        "44f2ebe1b37bb6ece25"
+      ],
+      "pos": {
+        "x": 309.84261,
+        "y": 152.75590999999997
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): C25_1"
+      },
+      "net": "GND",
+      "objs": [
+        "472d9c93f24ef890e15"
+      ],
+      "pos": {
+        "x": 285.03937,
+        "y": 49.21249999999998
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): U1_15"
+      },
+      "net": "GND",
+      "objs": [
+        "97c6fc7236300ad5e79"
+      ],
+      "pos": {
+        "x": 266.93348000000003,
+        "y": 63.252309999999994
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Test Point",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Test Point",
+        "suffix": "(GND): e0"
+      },
+      "net": "GND",
+      "objs": [
+        "a05fe89439dd95b0"
+      ],
+      "pos": {
+        "x": 259.53000000000003,
+        "y": 190.94
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): C12_2"
+      },
+      "net": "GND",
+      "objs": [
+        "f5a4194ff3544678e15"
+      ],
+      "pos": {
+        "x": 264.96062,
+        "y": 167.32283
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): SW3_3"
+      },
+      "net": "GND",
+      "objs": [
+        "d80b5f9a2ffbbb3ee12"
+      ],
+      "pos": {
+        "x": 149.60603,
+        "y": 49.40941
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(GND): SW1_3"
+      },
+      "net": "GND",
+      "objs": [
+        "f005d66b5a5dba5ce12"
+      ],
+      "pos": {
+        "x": 149.60603,
+        "y": 10.433040000000002
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Test Point",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Test Point",
+        "suffix": "(GND): e6"
+      },
+      "net": "GND",
+      "objs": [
+        "e4832ff51a605b73"
+      ],
+      "pos": {
+        "x": 139.76378,
+        "y": 73.62
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(SYS): C2_1"
+      },
+      "net": "SYS",
+      "objs": [
+        "f8d8043bc5c19bdfe15"
+      ],
+      "pos": {
+        "x": 187.00778,
+        "y": 67.71654
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(SYS): U2_1"
+      },
+      "net": "SYS",
+      "objs": [
+        "712fd95907922ca7e21"
+      ],
+      "pos": {
+        "x": 184.13400000000001,
+        "y": 72.8505
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(SYS): U3_1"
+      },
+      "net": "SYS",
+      "objs": [
+        "2b2b782584d87e6ee9"
+      ],
+      "pos": {
+        "x": 216.26,
+        "y": 71.669
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(SYS): C4_1"
+      },
+      "net": "SYS",
+      "objs": [
+        "c6eacb169aae3346e15"
+      ],
+      "pos": {
+        "x": 209.44890999999998,
+        "y": 70.07874000000001
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(SYS): U3_3"
+      },
+      "net": "SYS",
+      "objs": [
+        "2b2b782584d87e6ee10"
+      ],
+      "pos": {
+        "x": 223.74,
+        "y": 71.669
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(VDD_3V3): U1_30"
+      },
+      "net": "VDD_3V3",
+      "objs": [
+        "97c6fc7236300ad5e94"
+      ],
+      "pos": {
+        "x": 238.58648,
+        "y": 63.252309999999994
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(VDD_3V3): U1_28"
+      },
+      "net": "VDD_3V3",
+      "objs": [
+        "97c6fc7236300ad5e92"
+      ],
+      "pos": {
+        "x": 241.73648,
+        "y": 63.252309999999994
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(VDD_3V3): C7_1"
+      },
+      "net": "VDD_3V3",
+      "objs": [
+        "004f9c0de84c5784e15"
+      ],
+      "pos": {
+        "x": 239.76378000000003,
+        "y": 68.11014
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(VDD_3V3): R5_1"
+      },
+      "net": "VDD_3V3",
+      "objs": [
+        "8c77ec284326c24ae8"
+      ],
+      "pos": {
+        "x": 162.78203,
+        "y": 76.37795
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(VDD_3V3): R6_1"
+      },
+      "net": "VDD_3V3",
+      "objs": [
+        "e022e33fca0ba2a1e8"
+      ],
+      "pos": {
+        "x": 162.78203,
+        "y": 81.88976
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(VDD_3V3): R8_1"
+      },
+      "net": "VDD_3V3",
+      "objs": [
+        "8fd4f31c11f0ec2be8"
+      ],
+      "pos": {
+        "x": 162.78203,
+        "y": 70.86614
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(VDD_3V3): C6_1"
+      },
+      "net": "VDD_3V3",
+      "objs": [
+        "48d7af77150b10a5e15"
+      ],
+      "pos": {
+        "x": 245.27559000000005,
+        "y": 68.11014
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(VDD_3V3): R7_1"
+      },
+      "net": "VDD_3V3",
+      "objs": [
+        "ee62f5257cbedd7fe8"
+      ],
+      "pos": {
+        "x": 197.84789,
+        "y": 82.28346
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(VDD_3V3): R9_1"
+      },
+      "net": "VDD_3V3",
+      "objs": [
+        "c47382482cf66894e8"
+      ],
+      "pos": {
+        "x": 197.84789,
+        "y": 87.79528
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(VDD_3V3): C9_1"
+      },
+      "net": "VDD_3V3",
+      "objs": [
+        "7f00cdb9414ac083e16"
+      ],
+      "pos": {
+        "x": 253.937,
+        "y": 116.53542999999999
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(VDD_3V3): U4_1"
+      },
+      "net": "VDD_3V3",
+      "objs": [
+        "15e08cd34920a892e8"
+      ],
+      "pos": {
+        "x": 255.31502,
+        "y": 123.03165
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(VDD_3V3): C5_1"
+      },
+      "net": "VDD_3V3",
+      "objs": [
+        "d5226715eecfb21ae15"
+      ],
+      "pos": {
+        "x": 209.44890999999998,
+        "y": 81.88976
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(VDD_3V3): U3_5"
+      },
+      "net": "VDD_3V3",
+      "objs": [
+        "2b2b782584d87e6ee7"
+      ],
+      "pos": {
+        "x": 216.26,
+        "y": 80.331
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(VDD_3V3): R11_1"
+      },
+      "net": "VDD_3V3",
+      "objs": [
+        "fb7d177d18393457e8"
+      ],
+      "pos": {
+        "x": 280.52506,
+        "y": 33.85826999999999
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(VDD_3V3): R12_1"
+      },
+      "net": "VDD_3V3",
+      "objs": [
+        "8700c566e756eaa0e8"
+      ],
+      "pos": {
+        "x": 280.52506,
+        "y": 40.944880000000005
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(VDD_3V3): R10_1"
+      },
+      "net": "VDD_3V3",
+      "objs": [
+        "afdb4daf3e938e1ee8"
+      ],
+      "pos": {
+        "x": 280.52506,
+        "y": 26.77165
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Test Point",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Test Point",
+        "suffix": "(VDD_3V3): e1"
+      },
+      "net": "VDD_3V3",
+      "objs": [
+        "947d5c6691b5cae2"
+      ],
+      "pos": {
+        "x": 269.53000000000003,
+        "y": 190.94
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(SWDCLK): U1_53"
+      },
+      "net": "SWDCLK",
+      "objs": [
+        "97c6fc7236300ad5e117"
+      ],
+      "pos": {
+        "x": 229.72848000000002,
+        "y": 24.669310000000007
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Test Point",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Test Point",
+        "suffix": "(SWDCLK): e2"
+      },
+      "net": "SWDCLK",
+      "objs": [
+        "03afabf70c769ea2"
+      ],
+      "pos": {
+        "x": 279.53000000000003,
+        "y": 190.94
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(SWDIO): U1_51"
+      },
+      "net": "SWDIO",
+      "objs": [
+        "97c6fc7236300ad5e115"
+      ],
+      "pos": {
+        "x": 229.72848000000002,
+        "y": 27.81931
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Test Point",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Test Point",
+        "suffix": "(SWDIO): e3"
+      },
+      "net": "SWDIO",
+      "objs": [
+        "fdd5094fe11c0cda"
+      ],
+      "pos": {
+        "x": 289.53000000000003,
+        "y": 190.94
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(NRESET): U1_40"
+      },
+      "net": "NRESET",
+      "objs": [
+        "97c6fc7236300ad5e104"
+      ],
+      "pos": {
+        "x": 233.27148000000003,
+        "y": 48.29131
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Test Point",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Test Point",
+        "suffix": "(NRESET): e4"
+      },
+      "net": "NRESET",
+      "objs": [
+        "b82b1626190e8bd1"
+      ],
+      "pos": {
+        "x": 299.53000000000003,
+        "y": 190.94
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(BAT_PACK_TBD): U2_2"
+      },
+      "net": "BAT_PACK_TBD",
+      "objs": [
+        "712fd95907922ca7e22"
+      ],
+      "pos": {
+        "x": 184.133,
+        "y": 74.4255
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(BAT_PACK_TBD): C3_1"
+      },
+      "net": "BAT_PACK_TBD",
+      "objs": [
+        "aeb09fd14540bf14e15"
+      ],
+      "pos": {
+        "x": 190.94479,
+        "y": 76.77165
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(BAT_PACK_TBD): R22_1"
+      },
+      "net": "BAT_PACK_TBD",
+      "objs": [
+        "65b775f239ee160fe8"
+      ],
+      "pos": {
+        "x": 300.39369999999997,
+        "y": 44.27809000000002
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(BAT_PACK_TBD): Q2_2"
+      },
+      "net": "BAT_PACK_TBD",
+      "objs": [
+        "cc6ee81be1e4375ce9"
+      ],
+      "pos": {
+        "x": 303.34660999999994,
+        "y": 59.25191000000001
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Test Point",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Test Point",
+        "suffix": "(BAT_PACK_TBD): e5"
+      },
+      "net": "BAT_PACK_TBD",
+      "objs": [
+        "08513f3012415e50"
+      ],
+      "pos": {
+        "x": 127.95275999999998,
+        "y": 73.62
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Test Point",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Test Point",
+        "suffix": "(BAT_NTC_TBD): e7"
+      },
+      "net": "BAT_NTC_TBD",
+      "objs": [
+        "a2d51dd7038c685e"
+      ],
+      "pos": {
+        "x": 196.85039,
+        "y": 95.27559
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(BAT_NTC_TBD): R19_1"
+      },
+      "net": "BAT_NTC_TBD",
+      "objs": [
+        "3cf7e653b2618fd4e8"
+      ],
+      "pos": {
+        "x": 208.66142,
+        "y": 89.55369
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(BAT_NTC_TBD): U2_6"
+      },
+      "net": "BAT_NTC_TBD",
+      "objs": [
+        "712fd95907922ca7e26"
+      ],
+      "pos": {
+        "x": 175.86599999999999,
+        "y": 79.1495
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_VBUS): C1_1"
+      },
+      "net": "USB_VBUS",
+      "objs": [
+        "f41efe6726027056e15"
+      ],
+      "pos": {
+        "x": 231.88976,
+        "y": 68.11014
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_VBUS): U1_32"
+      },
+      "net": "USB_VBUS",
+      "objs": [
+        "97c6fc7236300ad5e96"
+      ],
+      "pos": {
+        "x": 232.28748000000002,
+        "y": 63.252309999999994
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_VBUS): U2_10"
+      },
+      "net": "USB_VBUS",
+      "objs": [
+        "712fd95907922ca7e30"
+      ],
+      "pos": {
+        "x": 175.86599999999999,
+        "y": 72.8505
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_VBUS): C8_1"
+      },
+      "net": "USB_VBUS",
+      "objs": [
+        "c8d1c85979ca70ade15"
+      ],
+      "pos": {
+        "x": 181.49606,
+        "y": 68.89773
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_VBUS): J1_A4B9"
+      },
+      "net": "USB_VBUS",
+      "objs": [
+        "6203b32f9e70959be36"
+      ],
+      "pos": {
+        "x": 299.79894,
+        "y": 92.91140000000001
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_VBUS): J1_B4A9"
+      },
+      "net": "USB_VBUS",
+      "objs": [
+        "6203b32f9e70959be34"
+      ],
+      "pos": {
+        "x": 299.79894,
+        "y": 111.8084
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_CC1): R1_1"
+      },
+      "net": "USB_CC1",
+      "objs": [
+        "2b5f0d1a05afd7f9e8"
+      ],
+      "pos": {
+        "x": 279.34395,
+        "y": 88.97637999999999
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_CC1): U6_1"
+      },
+      "net": "USB_CC1",
+      "objs": [
+        "5592d83122350a94e6"
+      ],
+      "pos": {
+        "x": 288.58267,
+        "y": 91.14168999999998
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_CC1): J1_A5"
+      },
+      "net": "USB_CC1",
+      "objs": [
+        "6203b32f9e70959be27"
+      ],
+      "pos": {
+        "x": 299.79894,
+        "y": 97.4384
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_CC2): R2_1"
+      },
+      "net": "USB_CC2",
+      "objs": [
+        "384904d4feeb315fe8"
+      ],
+      "pos": {
+        "x": 287.61167,
+        "y": 115.74803
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_CC2): J1_B5"
+      },
+      "net": "USB_CC2",
+      "objs": [
+        "6203b32f9e70959be33"
+      ],
+      "pos": {
+        "x": 299.79894,
+        "y": 109.24940000000001
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_CC2): U6_2"
+      },
+      "net": "USB_CC2",
+      "objs": [
+        "5592d83122350a94e7"
+      ],
+      "pos": {
+        "x": 288.58267,
+        "y": 93.89769000000001
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_DP_MCU): R3_2"
+      },
+      "net": "USB_DP_MCU",
+      "objs": [
+        "bc4f510a957caa44e7"
+      ],
+      "pos": {
+        "x": 221.86364,
+        "y": 55.90551000000001
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_DP_MCU): U1_35"
+      },
+      "net": "USB_DP_MCU",
+      "objs": [
+        "97c6fc7236300ad5e99"
+      ],
+      "pos": {
+        "x": 229.72848000000002,
+        "y": 56.165310000000005
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_DP_CONN): U5_1"
+      },
+      "net": "USB_DP_CONN",
+      "objs": [
+        "1bb9d193d7911ec2e6"
+      ],
+      "pos": {
+        "x": 288.58267,
+        "y": 101.57475999999997
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_DP_CONN): R3_1"
+      },
+      "net": "USB_DP_CONN",
+      "objs": [
+        "bc4f510a957caa44e8"
+      ],
+      "pos": {
+        "x": 215.93164,
+        "y": 55.90551000000001
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_DM_MCU): R4_2"
+      },
+      "net": "USB_DM_MCU",
+      "objs": [
+        "a80c1c5ae9df8d33e7"
+      ],
+      "pos": {
+        "x": 221.86364,
+        "y": 61.81102
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_DM_MCU): U1_34"
+      },
+      "net": "USB_DM_MCU",
+      "objs": [
+        "97c6fc7236300ad5e98"
+      ],
+      "pos": {
+        "x": 229.72848000000002,
+        "y": 59.315310000000004
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "Via",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "Via",
+        "suffix": "(USB_DM_CONN): e254"
+      },
+      "net": "USB_DM_CONN",
+      "objs": [
+        "f5c6bfc7f329e829"
+      ],
+      "pos": {
+        "x": 285.8267716535433,
+        "y": 107.48031496062993
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(USB_DM_CONN): R4_1"
+      },
+      "net": "USB_DM_CONN",
+      "objs": [
+        "a80c1c5ae9df8d33e8"
+      ],
+      "pos": {
+        "x": 215.93164,
+        "y": 61.81102
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(CHG_SDA): R5_2"
+      },
+      "net": "CHG_SDA",
+      "objs": [
+        "8c77ec284326c24ae7"
+      ],
+      "pos": {
+        "x": 168.71403,
+        "y": 76.37795
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(CHG_SDA): U2_7"
+      },
+      "net": "CHG_SDA",
+      "objs": [
+        "712fd95907922ca7e27"
+      ],
+      "pos": {
+        "x": 175.86599999999999,
+        "y": 77.5745
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(CHG_SDA): U1_19"
+      },
+      "net": "CHG_SDA",
+      "objs": [
+        "97c6fc7236300ad5e83"
+      ],
+      "pos": {
+        "x": 255.90948000000003,
+        "y": 59.709310000000016
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(CHG_SCL): R6_2"
+      },
+      "net": "CHG_SCL",
+      "objs": [
+        "e022e33fca0ba2a1e7"
+      ],
+      "pos": {
+        "x": 168.71403,
+        "y": 81.88976
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(CHG_SCL): U2_8"
+      },
+      "net": "CHG_SCL",
+      "objs": [
+        "712fd95907922ca7e28"
+      ],
+      "pos": {
+        "x": 175.86599999999999,
+        "y": 75.9995
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(CHG_SCL): U1_16"
+      },
+      "net": "CHG_SCL",
+      "objs": [
+        "97c6fc7236300ad5e80"
+      ],
+      "pos": {
+        "x": 263.78348,
+        "y": 63.252309999999994
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(CHG_CE_N): U2_4"
+      },
+      "net": "CHG_CE_N",
+      "objs": [
+        "712fd95907922ca7e24"
+      ],
+      "pos": {
+        "x": 184.133,
+        "y": 77.5745
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(CHG_CE_N): R7_2"
+      },
+      "net": "CHG_CE_N",
+      "objs": [
+        "ee62f5257cbedd7fe7"
+      ],
+      "pos": {
+        "x": 191.91589,
+        "y": 82.28346
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(CHG_CE_N): U1_22"
+      },
+      "net": "CHG_CE_N",
+      "objs": [
+        "97c6fc7236300ad5e86"
+      ],
+      "pos": {
+        "x": 251.18548000000004,
+        "y": 63.252309999999994
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(CHG_INT_N): R8_2"
+      },
+      "net": "CHG_INT_N",
+      "objs": [
+        "8fd4f31c11f0ec2be7"
+      ],
+      "pos": {
+        "x": 168.71403,
+        "y": 70.86614
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(CHG_INT_N): U2_9"
+      },
+      "net": "CHG_INT_N",
+      "objs": [
+        "712fd95907922ca7e29"
+      ],
+      "pos": {
+        "x": 175.86599999999999,
+        "y": 74.4255
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(CHG_INT_N): U1_20"
+      },
+      "net": "CHG_INT_N",
+      "objs": [
+        "97c6fc7236300ad5e84"
+      ],
+      "pos": {
+        "x": 254.33448000000004,
+        "y": 63.252309999999994
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(CHG_PG_N): U2_3"
+      },
+      "net": "CHG_PG_N",
+      "objs": [
+        "712fd95907922ca7e23"
+      ],
+      "pos": {
+        "x": 184.133,
+        "y": 75.9995
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(CHG_PG_N): R9_2"
+      },
+      "net": "CHG_PG_N",
+      "objs": [
+        "c47382482cf66894e7"
+      ],
+      "pos": {
+        "x": 191.91589,
+        "y": 87.79528
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(CHG_PG_N): U1_21"
+      },
+      "net": "CHG_PG_N",
+      "objs": [
+        "97c6fc7236300ad5e85"
+      ],
+      "pos": {
+        "x": 252.76048,
+        "y": 59.70930999999999
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(KEY_PREV_N): U1_3"
+      },
+      "net": "KEY_PREV_N",
+      "objs": [
+        "97c6fc7236300ad5e67"
+      ],
+      "pos": {
+        "x": 266.34248,
+        "y": 27.81931
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(KEY_PREV_N): R10_2"
+      },
+      "net": "KEY_PREV_N",
+      "objs": [
+        "afdb4daf3e938e1ee7"
+      ],
+      "pos": {
+        "x": 274.59306,
+        "y": 26.771650000000008
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(KEY_PREV_N): SW1_1"
+      },
+      "net": "KEY_PREV_N",
+      "objs": [
+        "f005d66b5a5dba5ce11"
+      ],
+      "pos": {
+        "x": 149.60603,
+        "y": 25.000040000000002
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(KEY_PREV_N): SW1_2"
+      },
+      "net": "KEY_PREV_N",
+      "objs": [
+        "f005d66b5a5dba5ce13"
+      ],
+      "pos": {
+        "x": 174.01603000000003,
+        "y": 25.000040000000002
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(KEY_NEXT_N): U1_4"
+      },
+      "net": "KEY_NEXT_N",
+      "objs": [
+        "97c6fc7236300ad5e68"
+      ],
+      "pos": {
+        "x": 266.34248,
+        "y": 34.11831
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(KEY_NEXT_N): R11_2"
+      },
+      "net": "KEY_NEXT_N",
+      "objs": [
+        "fb7d177d18393457e7"
+      ],
+      "pos": {
+        "x": 274.59306,
+        "y": 33.85826999999999
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(KEY_NEXT_N): SW2_1"
+      },
+      "net": "KEY_NEXT_N",
+      "objs": [
+        "bba4c139526dd808e11"
+      ],
+      "pos": {
+        "x": 183.07059,
+        "y": 41.92919
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(KEY_NEXT_N): SW2_2"
+      },
+      "net": "KEY_NEXT_N",
+      "objs": [
+        "bba4c139526dd808e13"
+      ],
+      "pos": {
+        "x": 207.48059000000003,
+        "y": 41.92919
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(KEY_OK_N): U1_5"
+      },
+      "net": "KEY_OK_N",
+      "objs": [
+        "97c6fc7236300ad5e69"
+      ],
+      "pos": {
+        "x": 262.79948,
+        "y": 35.69331
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(KEY_OK_N): R12_2"
+      },
+      "net": "KEY_OK_N",
+      "objs": [
+        "8700c566e756eaa0e7"
+      ],
+      "pos": {
+        "x": 274.59306,
+        "y": 40.944880000000005
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(KEY_OK_N): SW3_1"
+      },
+      "net": "KEY_OK_N",
+      "objs": [
+        "d80b5f9a2ffbbb3ee11"
+      ],
+      "pos": {
+        "x": 149.60603,
+        "y": 63.976409999999994
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(KEY_OK_N): SW3_2"
+      },
+      "net": "KEY_OK_N",
+      "objs": [
+        "d80b5f9a2ffbbb3ee13"
+      ],
+      "pos": {
+        "x": 174.01603000000003,
+        "y": 63.976409999999994
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(BAT_MEAS_EN): R23_1"
+      },
+      "net": "BAT_MEAS_EN",
+      "objs": [
+        "00f6f02323dde595e8"
+      ],
+      "pos": {
+        "x": 300.39369999999997,
+        "y": 68.29383999999999
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(BAT_MEAS_EN): Q3_1"
+      },
+      "net": "BAT_MEAS_EN",
+      "objs": [
+        "bfd2b7e036b27581e13"
+      ],
+      "pos": {
+        "x": 317.51963,
+        "y": 70.86654000000001
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(BAT_MEAS_EN): U1_10"
+      },
+      "net": "BAT_MEAS_EN",
+      "objs": [
+        "97c6fc7236300ad5e74"
+      ],
+      "pos": {
+        "x": 266.34248,
+        "y": 43.56731
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(BAT_ADC_SENSE): R20_1"
+      },
+      "net": "BAT_ADC_SENSE",
+      "objs": [
+        "1aeb2aceaae9a6c9e8"
+      ],
+      "pos": {
+        "x": 291.73228,
+        "y": 58.477810000000034
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(BAT_ADC_SENSE): R21_2"
+      },
+      "net": "BAT_ADC_SENSE",
+      "objs": [
+        "76971840243552c5e7"
+      ],
+      "pos": {
+        "x": 291.73228000000006,
+        "y": 64.35683
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(BAT_ADC_SENSE): C25_2"
+      },
+      "net": "BAT_ADC_SENSE",
+      "objs": [
+        "472d9c93f24ef890e14"
+      ],
+      "pos": {
+        "x": 285.03937,
+        "y": 54.72449999999998
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(BAT_ADC_SENSE): U1_11"
+      },
+      "net": "BAT_ADC_SENSE",
+      "objs": [
+        "97c6fc7236300ad5e75"
+      ],
+      "pos": {
+        "x": 262.79948,
+        "y": 45.14231
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_BUSY_TBD): R18_2"
+      },
+      "net": "EPD_BUSY_TBD",
+      "objs": [
+        "4daafd24bc573353e7"
+      ],
+      "pos": {
+        "x": 218.32032999999998,
+        "y": 188.03149000000002
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_BUSY_TBD): J2_9"
+      },
+      "net": "EPD_BUSY_TBD",
+      "objs": [
+        "1c9b89195dc744cee45"
+      ],
+      "pos": {
+        "x": 221.75182999999998,
+        "y": 127.99189000000001
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_BUSY_TBD): U1_24"
+      },
+      "net": "EPD_BUSY_TBD",
+      "objs": [
+        "97c6fc7236300ad5e88"
+      ],
+      "pos": {
+        "x": 248.03548000000006,
+        "y": 63.252309999999994
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_EN_TBD): U4_3"
+      },
+      "net": "EPD_EN_TBD",
+      "objs": [
+        "15e08cd34920a892e6"
+      ],
+      "pos": {
+        "x": 260.43302000000006,
+        "y": 123.03165
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_EN_TBD): R13_1"
+      },
+      "net": "EPD_EN_TBD",
+      "objs": [
+        "ef5722fb9675246ee8"
+      ],
+      "pos": {
+        "x": 272.65103999999997,
+        "y": 122.83465000000001
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_EN_TBD): U1_27"
+      },
+      "net": "EPD_EN_TBD",
+      "objs": [
+        "97c6fc7236300ad5e91"
+      ],
+      "pos": {
+        "x": 243.31148000000002,
+        "y": 59.70930999999999
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_SCK_TBD): J2_13"
+      },
+      "net": "EPD_SCK_TBD",
+      "objs": [
+        "1c9b89195dc744cee41"
+      ],
+      "pos": {
+        "x": 221.75182999999998,
+        "y": 135.86589000000004
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_SCK_TBD): U1_36"
+      },
+      "net": "EPD_SCK_TBD",
+      "objs": [
+        "97c6fc7236300ad5e100"
+      ],
+      "pos": {
+        "x": 233.27148000000003,
+        "y": 54.59031
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_MOSI_TBD): J2_14"
+      },
+      "net": "EPD_MOSI_TBD",
+      "objs": [
+        "1c9b89195dc744cee40"
+      ],
+      "pos": {
+        "x": 221.75182999999998,
+        "y": 137.83488999999997
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_MOSI_TBD): U1_37"
+      },
+      "net": "EPD_MOSI_TBD",
+      "objs": [
+        "97c6fc7236300ad5e101"
+      ],
+      "pos": {
+        "x": 229.72848000000002,
+        "y": 53.016310000000004
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_CS_N_TBD): J2_12"
+      },
+      "net": "EPD_CS_N_TBD",
+      "objs": [
+        "1c9b89195dc744cee42"
+      ],
+      "pos": {
+        "x": 221.75182999999998,
+        "y": 133.89788999999996
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_CS_N_TBD): U1_38"
+      },
+      "net": "EPD_CS_N_TBD",
+      "objs": [
+        "97c6fc7236300ad5e102"
+      ],
+      "pos": {
+        "x": 233.27148000000003,
+        "y": 51.44131
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_DC_TBD): J2_11"
+      },
+      "net": "EPD_DC_TBD",
+      "objs": [
+        "1c9b89195dc744cee43"
+      ],
+      "pos": {
+        "x": 221.75182999999998,
+        "y": 131.92889000000002
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_DC_TBD): U1_39"
+      },
+      "net": "EPD_DC_TBD",
+      "objs": [
+        "97c6fc7236300ad5e103"
+      ],
+      "pos": {
+        "x": 229.72848000000002,
+        "y": 49.86631
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_RESET_N_TBD): J2_10"
+      },
+      "net": "EPD_RESET_N_TBD",
+      "objs": [
+        "1c9b89195dc744cee44"
+      ],
+      "pos": {
+        "x": 221.75182999999998,
+        "y": 129.96089
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_RESET_N_TBD): U1_41"
+      },
+      "net": "EPD_RESET_N_TBD",
+      "objs": [
+        "97c6fc7236300ad5e105"
+      ],
+      "pos": {
+        "x": 229.72848000000002,
+        "y": 46.71631000000001
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_VCOM): J2_24"
+      },
+      "net": "EPD_VCOM",
+      "objs": [
+        "1c9b89195dc744cee30"
+      ],
+      "pos": {
+        "x": 221.75182999999998,
+        "y": 157.51989000000003
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_VCOM): C22_1"
+      },
+      "net": "EPD_VCOM",
+      "objs": [
+        "8ff0422537e1892de16"
+      ],
+      "pos": {
+        "x": 228.62204999999997,
+        "y": 177.79527000000002
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_VGL): C13_1"
+      },
+      "net": "EPD_VGL",
+      "objs": [
+        "ed3313061648d06ce16"
+      ],
+      "pos": {
+        "x": 304.72442,
+        "y": 174.01575
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_VGL): D3_2"
+      },
+      "net": "EPD_VGL",
+      "objs": [
+        "64f2cff8b86060abe24"
+      ],
+      "pos": {
+        "x": 309.84261,
+        "y": 163.38583
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_VGL): J2_23"
+      },
+      "net": "EPD_VGL",
+      "objs": [
+        "1c9b89195dc744cee31"
+      ],
+      "pos": {
+        "x": 221.75182999999998,
+        "y": 155.55088999999998
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_VGL): C21_1"
+      },
+      "net": "EPD_VGL",
+      "objs": [
+        "755e581c5f6e7c56e16"
+      ],
+      "pos": {
+        "x": 228.62204999999997,
+        "y": 170.70866
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_VSNH): J2_22"
+      },
+      "net": "EPD_VSNH",
+      "objs": [
+        "1c9b89195dc744cee32"
+      ],
+      "pos": {
+        "x": 221.75182999999998,
+        "y": 153.58289000000002
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_VSNH): C20_1"
+      },
+      "net": "EPD_VSNH",
+      "objs": [
+        "06213dc17a07118ee16"
+      ],
+      "pos": {
+        "x": 228.62204999999997,
+        "y": 163.62205
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_VGH): J2_21"
+      },
+      "net": "EPD_VGH",
+      "objs": [
+        "1c9b89195dc744cee33"
+      ],
+      "pos": {
+        "x": 221.75182999999998,
+        "y": 151.61388999999997
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_VGH): R16_2"
+      },
+      "net": "EPD_VGH",
+      "objs": [
+        "1eb73378a3b03936e7"
+      ],
+      "pos": {
+        "x": 280.52506,
+        "y": 173.22835
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_VSPH): J2_20"
+      },
+      "net": "EPD_VSPH",
+      "objs": [
+        "1c9b89195dc744cee34"
+      ],
+      "pos": {
+        "x": 221.75182999999998,
+        "y": 149.64589
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_VSPH): C19_1"
+      },
+      "net": "EPD_VSPH",
+      "objs": [
+        "21cd2b2b79576a82e16"
+      ],
+      "pos": {
+        "x": 228.62204999999997,
+        "y": 156.53543
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_VSNL2): J2_19"
+      },
+      "net": "EPD_VSNL2",
+      "objs": [
+        "1c9b89195dc744cee35"
+      ],
+      "pos": {
+        "x": 221.75182999999998,
+        "y": 147.67688999999996
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_VSNL2): C18_1"
+      },
+      "net": "EPD_VSNL2",
+      "objs": [
+        "db73bf39c99e775de16"
+      ],
+      "pos": {
+        "x": 228.62204999999997,
+        "y": 149.44882
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_VSNL1): J2_18"
+      },
+      "net": "EPD_VSNL1",
+      "objs": [
+        "1c9b89195dc744cee36"
+      ],
+      "pos": {
+        "x": 221.75182999999998,
+        "y": 145.70889
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_VSNL1): C17_1"
+      },
+      "net": "EPD_VSNL1",
+      "objs": [
+        "415f7d640d9b690fe16"
+      ],
+      "pos": {
+        "x": 228.62204999999997,
+        "y": 142.3622
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_VSPL2): J2_16"
+      },
+      "net": "EPD_VSPL2",
+      "objs": [
+        "1c9b89195dc744cee38"
+      ],
+      "pos": {
+        "x": 221.75182999999998,
+        "y": 141.77188999999998
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_VSPL2): C16_1"
+      },
+      "net": "EPD_VSPL2",
+      "objs": [
+        "6b61270eda6b277ee16"
+      ],
+      "pos": {
+        "x": 228.62204999999997,
+        "y": 135.27559000000002
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_VDD): U4_6"
+      },
+      "net": "EPD_VDD",
+      "objs": [
+        "15e08cd34920a892e3"
+      ],
+      "pos": {
+        "x": 255.31502000000003,
+        "y": 130.51164999999997
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_VDD): U4_5"
+      },
+      "net": "EPD_VDD",
+      "objs": [
+        "15e08cd34920a892e4"
+      ],
+      "pos": {
+        "x": 257.8740200000001,
+        "y": 130.51164999999997
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_VDD): C10_1"
+      },
+      "net": "EPD_VDD",
+      "objs": [
+        "37bc6256c702f593e16"
+      ],
+      "pos": {
+        "x": 262.5984173228347,
+        "y": 135.4330708661417
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_VDD): L1_1"
+      },
+      "net": "EPD_VDD",
+      "objs": [
+        "082440fc4d0d2c9ae10"
+      ],
+      "pos": {
+        "x": 258.55153,
+        "y": 145.66929000000002
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_VDD): J2_15"
+      },
+      "net": "EPD_VDD",
+      "objs": [
+        "1c9b89195dc744cee39"
+      ],
+      "pos": {
+        "x": 221.75182999999998,
+        "y": 139.80289
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_VDD): R18_1"
+      },
+      "net": "EPD_VDD",
+      "objs": [
+        "4daafd24bc573353e8"
+      ],
+      "pos": {
+        "x": 212.38832999999997,
+        "y": 188.03149000000002
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_BS0): R17_1"
+      },
+      "net": "EPD_BS0",
+      "objs": [
+        "41d4985966309477e8"
+      ],
+      "pos": {
+        "x": 212.38832999999997,
+        "y": 177.40157
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_BS0): J2_8"
+      },
+      "net": "EPD_BS0",
+      "objs": [
+        "1c9b89195dc744cee46"
+      ],
+      "pos": {
+        "x": 221.75182999999998,
+        "y": 126.02389
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_VSPL1): J2_5"
+      },
+      "net": "EPD_VSPL1",
+      "objs": [
+        "1c9b89195dc744cee49"
+      ],
+      "pos": {
+        "x": 221.75182999999998,
+        "y": 120.11788999999999
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_VSPL1): C15_1"
+      },
+      "net": "EPD_VSPL1",
+      "objs": [
+        "9667a05a6f04c17ae16"
+      ],
+      "pos": {
+        "x": 228.62204999999997,
+        "y": 122.28345999999999
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_VDDL): J2_4"
+      },
+      "net": "EPD_VDDL",
+      "objs": [
+        "1c9b89195dc744cee50"
+      ],
+      "pos": {
+        "x": 221.75182999999998,
+        "y": 118.14989000000003
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_VDDL): C14_1"
+      },
+      "net": "EPD_VDDL",
+      "objs": [
+        "300fa1fc6a29f9d4e16"
+      ],
+      "pos": {
+        "x": 228.62204999999997,
+        "y": 114.40944999999999
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_RESE): Q1_2"
+      },
+      "net": "EPD_RESE",
+      "objs": [
+        "a120f4d878f28638e12"
+      ],
+      "pos": {
+        "x": 282.67755999999997,
+        "y": 148.22829
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_RESE): R15_1"
+      },
+      "net": "EPD_RESE",
+      "objs": [
+        "e3a664d5d5a8e388e8"
+      ],
+      "pos": {
+        "x": 281.67966929133854,
+        "y": 152.75590551181102
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_RESE): J2_3"
+      },
+      "net": "EPD_RESE",
+      "objs": [
+        "1c9b89195dc744cee51"
+      ],
+      "pos": {
+        "x": 221.75182999999998,
+        "y": 116.18088999999998
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_GDR): R14_1"
+      },
+      "net": "EPD_GDR",
+      "objs": [
+        "561c894eaf1c2e04e8"
+      ],
+      "pos": {
+        "x": 276.56156,
+        "y": 135.82677
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_GDR): Q1_1"
+      },
+      "net": "EPD_GDR",
+      "objs": [
+        "a120f4d878f28638e13"
+      ],
+      "pos": {
+        "x": 282.67755999999997,
+        "y": 143.11029
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_GDR): J2_2"
+      },
+      "net": "EPD_GDR",
+      "objs": [
+        "1c9b89195dc744cee52"
+      ],
+      "pos": {
+        "x": 221.75182999999998,
+        "y": 114.21289000000002
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_SW): D1_2"
+      },
+      "net": "EPD_SW",
+      "objs": [
+        "571f19b3cc3b32dee24"
+      ],
+      "pos": {
+        "x": 272.44103,
+        "y": 156.69291
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_SW): C11_1"
+      },
+      "net": "EPD_SW",
+      "objs": [
+        "03f9390dbfddeabbe16"
+      ],
+      "pos": {
+        "x": 278.74017,
+        "y": 158.66142
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_SW): L1_2"
+      },
+      "net": "EPD_SW",
+      "objs": [
+        "082440fc4d0d2c9ae11"
+      ],
+      "pos": {
+        "x": 269.00753000000003,
+        "y": 145.66929000000002
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_SW): Q1_3"
+      },
+      "net": "EPD_SW",
+      "objs": [
+        "a120f4d878f28638e11"
+      ],
+      "pos": {
+        "x": 276.37756,
+        "y": 145.66929
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_VPH): C12_1"
+      },
+      "net": "EPD_VPH",
+      "objs": [
+        "f5a4194ff3544678e16"
+      ],
+      "pos": {
+        "x": 257.08662,
+        "y": 167.32283
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_VPH): D1_1"
+      },
+      "net": "EPD_VPH",
+      "objs": [
+        "571f19b3cc3b32dee25"
+      ],
+      "pos": {
+        "x": 259.05503000000004,
+        "y": 156.69291
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_VPH): R16_1"
+      },
+      "net": "EPD_VPH",
+      "objs": [
+        "1eb73378a3b03936e8"
+      ],
+      "pos": {
+        "x": 274.59306,
+        "y": 173.22835
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_PUMP): D2_2"
+      },
+      "net": "EPD_PUMP",
+      "objs": [
+        "44f2ebe1b37bb6ece24"
+      ],
+      "pos": {
+        "x": 296.45661,
+        "y": 152.75590999999997
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_PUMP): D3_1"
+      },
+      "net": "EPD_PUMP",
+      "objs": [
+        "64f2cff8b86060abe25"
+      ],
+      "pos": {
+        "x": 296.45661,
+        "y": 163.38583
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(EPD_PUMP): C11_2"
+      },
+      "net": "EPD_PUMP",
+      "objs": [
+        "03f9390dbfddeabbe15"
+      ],
+      "pos": {
+        "x": 286.61417,
+        "y": 158.66142
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(BAT_DIV_SUPPLY): R20_2"
+      },
+      "net": "BAT_DIV_SUPPLY",
+      "objs": [
+        "1aeb2aceaae9a6c9e7"
+      ],
+      "pos": {
+        "x": 291.73228,
+        "y": 52.54581000000002
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(BAT_DIV_SUPPLY): Q2_3"
+      },
+      "net": "BAT_DIV_SUPPLY",
+      "objs": [
+        "cc6ee81be1e4375ce10"
+      ],
+      "pos": {
+        "x": 307.08660999999995,
+        "y": 50.19691
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(BAT_SWITCH_GATE): Q2_1"
+      },
+      "net": "BAT_SWITCH_GATE",
+      "objs": [
+        "cc6ee81be1e4375ce11"
+      ],
+      "pos": {
+        "x": 310.8266100000001,
+        "y": 59.25191000000001
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(BAT_SWITCH_GATE): Q3_3"
+      },
+      "net": "BAT_SWITCH_GATE",
+      "objs": [
+        "bfd2b7e036b27581e11"
+      ],
+      "pos": {
+        "x": 314.96063,
+        "y": 64.56654
+      }
+    },
+    {
+      "errorType": "Connection Error",
+      "errorObjType": "SMD Pad",
+      "ruleName": "Common",
+      "obj1": {
+        "typeName": "SMD Pad",
+        "suffix": "(BAT_SWITCH_GATE): R22_2"
+      },
+      "net": "BAT_SWITCH_GATE",
+      "objs": [
+        "65b775f239ee160fe7"
+      ],
+      "pos": {
+        "x": 300.39369999999997,
+        "y": 50.21009000000001
+      }
+    }
+  ]
+}

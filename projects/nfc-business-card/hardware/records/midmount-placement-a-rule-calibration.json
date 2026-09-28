@@ -1,0 +1,116 @@
+{
+  "status": "NEGATIVE_CONTROLS_DETECTED_AND_REMOVED",
+  "clearance_test_mm": 0.15,
+  "clearance_rule_mm": 0.2,
+  "via_test_outside_mm": 0.55,
+  "via_rule_outside_mm": 0.6,
+  "native_errors": [
+    {
+      "visible": true,
+      "errorType": "Clearance Error",
+      "errorObjType": "Track to Track",
+      "ruleName": "copperThickness1oz",
+      "ruleTypeName": "Safe Spacing",
+      "obj1": {
+        "typeName": "Track",
+        "suffix": "(GND): e1833"
+      },
+      "obj2": {
+        "typeName": "Track",
+        "suffix": "(SYS): e1834"
+      },
+      "layer": "Top Layer",
+      "explanation": {
+        "str": "{obj1} to {obj2} distance is {minDistance}, should be {shouldBe}",
+        "param": {
+          "minDistance": "5.9mil",
+          "shouldBe": ">= 7.9mil",
+          "obj1": "Object 1",
+          "obj2": "object 2",
+          "type": "ClearanceError"
+        },
+        "errData": {
+          "globalIndex": "err242",
+          "position": {
+            "x": 177.16535,
+            "y": 110.82677
+          },
+          "name": "copperThickness1oz",
+          "obj1": "556b111905311101",
+          "obj1Type": "Track",
+          "obj2": "14b3ce3fbfe28b77",
+          "obj2Type": "Track",
+          "minDistance": 0.5905499999999865,
+          "clearance": 0.7874,
+          "errorType": "Safe Spacing",
+          "layerIds": [
+            1
+          ],
+          "obj1Suffix": "(GND): e1833",
+          "obj2Suffix": "(SYS): e1834"
+        }
+      },
+      "objs": [
+        "556b111905311101",
+        "14b3ce3fbfe28b77"
+      ],
+      "globalIndex": "err242",
+      "pos": {
+        "x": 177.16535,
+        "y": 110.82677
+      },
+      "parentId": "DRCTab|_|Errors|_|Clearance Error|_|Track to Track"
+    },
+    {
+      "visible": true,
+      "errorType": "Physical Error",
+      "errorObjType": "Via Size",
+      "ruleName": "viaSize",
+      "obj1": {
+        "typeName": "Via",
+        "suffix": "(GND): e251"
+      },
+      "explanation": {
+        "str": "The outer diameter of the via hole of {obj1} is {diameter}, which should be {shouldBe}",
+        "param": {
+          "outerOrInner": "outer",
+          "diameter": "21.7mil",
+          "shouldBe": "23.6mil ~ 393.7mil",
+          "obj1": "object 1",
+          "type": "RadiusError"
+        },
+        "errData": {
+          "globalIndex": "err241",
+          "position": {
+            "x": 181.10236,
+            "y": 118.11024
+          },
+          "name": "viaSize",
+          "obj1": "ca671ea7d0010cf3",
+          "type": true,
+          "radius": 1.082675,
+          "minRadius": 1.1811,
+          "maxRadius": 19.68504,
+          "layerIds": [
+            12
+          ],
+          "isBlind": false
+        }
+      },
+      "objs": [
+        "ca671ea7d0010cf3"
+      ],
+      "globalIndex": "err241",
+      "pos": {
+        "x": 181.10236,
+        "y": 118.11024
+      },
+      "parentId": "DRCTab|_|Errors|_|Physical Error|_|Via Diameter"
+    }
+  ],
+  "removal": {
+    "lines": true,
+    "via": true
+  },
+  "note": "API overwrite returned undefined; source-only rule changes reverted on save. Values were applied in the native rule dialog and verified after reopening."
+}

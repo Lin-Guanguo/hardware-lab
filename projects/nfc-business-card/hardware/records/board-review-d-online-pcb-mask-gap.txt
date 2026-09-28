@@ -1,0 +1,590 @@
+- generic: 嘉立创DFM
+- list:
+  - listitem "撤销(Ctrl+Z)"
+  - listitem "重做(Ctrl+Y)"
+  - listitem "放大(A)"
+  - listitem "缩小(Z)"
+  - listitem "适应选中"
+  - listitem "自适应窗口(K)"
+  - listitem "板子翻转(Shift+F)"
+  - listitem "测量(Ctrl+M)"
+  - listitem "导出分析报告"
+  - listitem "配置自定义规则"
+  - listitem "设置"
+- group "单位":
+  - button "mm"
+  - button "inch"
+- button "切换到浅色主题":
+  - img "切换到浅色主题"
+- button "PCB DFM"
+- button "SMT DFM"
+- button "执行DFM检查"
+- generic: 概述
+- generic: 全部
+- generic: 分析项目
+- generic: 统计
+- generic: 操作
+- generic: 线路层分析
+- generic: 锐角拐线
+- generic: "0"
+- text: ","
+- generic: "1"
+- text: ","
+- generic: "0"
+- button "详情"
+- generic: BGA焊盘
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 孔落在焊盘上
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 走线距板边
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 走线间距
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "20"
+- button "详情"
+- generic: 同网络走线间距
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "36"
+- button "详情"
+- generic: 线距铜皮
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 裸线头
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 线宽
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "100"
+- button "详情"
+- generic: mark点
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 焊盘距外型线
+- generic: "12"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情"
+- generic: 盘到线
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "100"
+- button "详情"
+- generic: 焊盘距焊盘
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "76"
+- button "详情"
+- generic: 盘到铜皮
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: PTH孔到线
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "86"
+- button "详情"
+- generic: 焊盘孔环
+- generic: "0"
+- text: ","
+- generic: "100"
+- text: ","
+- generic: "0"
+- button "详情"
+- generic: 插件焊盘距贴片焊盘
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: VIA孔到焊盘
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 阻焊层分析
+- generic: 阻焊桥
+- generic: "42"
+- text: ","
+- generic: "4"
+- text: ","
+- generic: "4"
+- button "详情"
+- generic: 开窗露线
+- generic: "1"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "32"
+- button "详情"
+- generic: 碎线填充
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 焊盘负开窗
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 丝印层分析
+- generic: 丝印距焊盘
+- generic: "50"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情"
+- generic: 丝印距孔
+- generic: "86"
+- text: ","
+- generic: "2"
+- text: ","
+- generic: "4"
+- button "详情"
+- generic: 丝印线条宽度
+- generic: "5"
+- text: ","
+- generic: "45"
+- text: ","
+- generic: "0"
+- button "详情"
+- generic: 钻孔层分析
+- generic: 不同网络盲埋孔间距
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 丢失PTH孔
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 不同层盲埋孔近孔
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: PTH孔间距
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: Pth无Pad
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 短槽检测
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 测量槽宽
+- generic: "4"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情"
+- generic: 过孔与插件孔的间距
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: Via无Pad
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 无连接过孔
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic "关闭左侧栏"
+- generic "Gerber(5)": Gerber图
+- generic "Gerber(6)": 骨架线框
+- generic "2D(2)": 2D仿真图
+- generic "3D(3)": 3D仿真图
+- generic "关闭右侧栏"
+- banner:
+  - generic: 显示层控制
+  - generic: 11 层
+- button
+- generic: 选中全部
+- generic "Gerber_TopSilkscreenLayer.GTO":
+  - button
+  - generic: 顶层丝印
+- generic "Gerber_TopPasteMaskLayer.GTP":
+  - button
+  - generic: 顶层锡膏
+- generic "Gerber_TopSolderMaskLayer.GTS":
+  - button:
+  - generic: 顶层阻焊
+- generic "Gerber_TopLayer.GTL":
+  - button:
+  - generic: 顶层线路
+- generic "Gerber_BottomLayer.GBL":
+  - button
+  - generic: 底层线路
+- generic "Gerber_BottomSolderMaskLayer.GBS":
+  - button
+  - generic: 底层阻焊
+- generic "Gerber_BottomPasteMaskLayer.GBP":
+  - button
+  - generic: 底层锡膏
+- generic "Gerber_BottomSilkscreenLayer.GBO":
+  - button
+  - generic: 底层丝印
+- generic "Drill_PTH_Through.DRL":
+  - button
+  - generic: 通孔层1
+- generic "Drill_PTH_Through_Via.DRL":
+  - button
+  - generic: 通孔层2
+- generic "Gerber_BoardOutlineLayer.GKO":
+  - button
+  - generic: 外型层
+- generic: "X: 53.38 Y: 21.7 mm"
+- generic: 阻焊层分析 > 开窗露线
+- generic: 检测阻焊开窗距周边走线的安全间距
+- generic: 层
+- generic "Gerber_TopSolderMaskLayer.GTS":
+  - generic: Gerber_TopSolderMaskLayer.GTS
+  - generic: 1, 0, 32
+- table:
+  - rowgroup:
+    - row "序号 全部 值 对象1 对象2":
+      - columnheader "序号"
+      - columnheader "全部":
+        - combobox:
+          - option "全部" [selected]
+          - option "良好"
+          - option "警告"
+          - option "危险"
+      - columnheader "值"
+      - columnheader "对象1"
+      - columnheader "对象2"
+- table:
+  - rowgroup:
+    - row "1 危险 0.07mm r5.90551 i274x.RoundRect.d13":
+      - cell "1"
+      - cell "危险":
+        - generic "危险"
+      - cell "0.07mm"
+      - cell "r5.90551"
+      - cell "i274x.RoundRect.d13"
+    - row "2 良好 0.16mm r9.84252 i274x.RoundRect.d17":
+      - cell "2"
+      - cell "良好":
+        - generic "良好"
+      - cell "0.16mm"
+      - cell "r9.84252"
+      - cell "i274x.RoundRect.d17"
+    - row "3 良好 0.16mm r9.84252 i274x.RoundRect.d17":
+      - cell "3"
+      - cell "良好":
+        - generic "良好"
+      - cell "0.16mm"
+      - cell "r9.84252"
+      - cell "i274x.RoundRect.d17"
+    - row "4 良好 0.16mm r5.90551 i274x.RoundRect.d25":
+      - cell "4"
+      - cell "良好":
+        - generic "良好"
+      - cell "0.16mm"
+      - cell "r5.90551"
+      - cell "i274x.RoundRect.d25"
+    - row "5 良好 0.16mm r5.90551 i274x.RoundRect.d25":
+      - cell "5"
+      - cell "良好":
+        - generic "良好"
+      - cell "0.16mm"
+      - cell "r5.90551"
+      - cell "i274x.RoundRect.d25"
+    - row "6 良好 0.17mm r9.84252 i274x.RoundRect.d17":
+      - cell "6"
+      - cell "良好":
+        - generic "良好"
+      - cell "0.17mm"
+      - cell "r9.84252"
+      - cell "i274x.RoundRect.d17"
+    - row "7 良好 0.17mm r5.90551 i274x.RoundRect.d23":
+      - cell "7"
+      - cell "良好":
+        - generic "良好"
+      - cell "0.17mm"
+      - cell "r5.90551"
+      - cell "i274x.RoundRect.d23"
+    - row "8 良好 0.17mm r5.90551 i274x.RoundRect.d14":
+      - cell "8"
+      - cell "良好":
+        - generic "良好"
+      - cell "0.17mm"
+      - cell "r5.90551"
+      - cell "i274x.RoundRect.d14"
+    - row "9 良好 0.17mm r9.84252 i274x.RoundRect.d13":
+      - cell "9"
+      - cell "良好":
+        - generic "良好"
+      - cell "0.17mm"
+      - cell "r9.84252"
+      - cell "i274x.RoundRect.d13"
+    - row "10 良好 0.17mm r5.90551 i274x.RoundRect.d13":
+      - cell "10"
+      - cell "良好":
+        - generic "良好"
+      - cell "0.17mm"
+      - cell "r5.90551"
+      - cell "i274x.RoundRect.d13"
+    - row "11 良好 0.17mm r5.90551 i274x.RoundRect.d13":
+      - cell "11"
+      - cell "良好":
+        - generic "良好"
+      - cell "0.17mm"
+      - cell "r5.90551"
+      - cell "i274x.RoundRect.d13"
+    - row "12 良好 0.17mm r5.90551 i274x.RoundRect.d16":
+      - cell "12"
+      - cell "良好":
+        - generic "良好"
+      - cell "0.17mm"
+      - cell "r5.90551"
+      - cell "i274x.RoundRect.d16"
+    - row "13 良好 0.17mm r5.90551 i274x.RoundRect.d27":
+      - cell "13"
+      - cell "良好":
+        - generic "良好"
+      - cell "0.17mm"
+      - cell "r5.90551"
+      - cell "i274x.RoundRect.d27"
+    - row "14 良好 0.17mm r5.90551 i274x.RoundRect.d13":
+      - cell "14"
+      - cell "良好":
+        - generic "良好"
+      - cell "0.17mm"
+      - cell "r5.90551"
+      - cell "i274x.RoundRect.d13"
+    - row "15 良好 0.17mm r13.7795 i274x.RoundRect.d10":
+      - cell "15"
+      - cell "良好":
+        - generic "良好"
+      - cell "0.17mm"
+      - cell "r13.7795"
+      - cell "i274x.RoundRect.d10"
+    - row "16 良好 0.17mm r13.7795 i274x.RoundRect.d10":
+      - cell "16"
+      - cell "良好":
+        - generic "良好"
+      - cell "0.17mm"
+      - cell "r13.7795"
+      - cell "i274x.RoundRect.d10"
+    - row "17 良好 0.17mm r5.90551 i274x.RoundRect.d14":
+      - cell "17"
+      - cell "良好":
+        - generic "良好"
+      - cell "0.17mm"
+      - cell "r5.90551"
+      - cell "i274x.RoundRect.d14"
+    - row "18 良好 0.19mm r9.84252 i274x.RoundRect.d25":
+      - cell "18"
+      - cell "良好":
+        - generic "良好"
+      - cell "0.19mm"
+      - cell "r9.84252"
+      - cell "i274x.RoundRect.d25"
+    - row "19 良好 0.19mm r5.90551 i274x.RoundRect.d23":
+      - cell "19"
+      - cell "良好":
+        - generic "良好"
+      - cell "0.19mm"
+      - cell "r5.90551"
+      - cell "i274x.RoundRect.d23"
+    - row "20 良好 0.19mm r5.90551 i274x.RoundRect.d14":
+      - cell "20"
+      - cell "良好":
+        - generic "良好"
+      - cell "0.19mm"
+      - cell "r5.90551"
+      - cell "i274x.RoundRect.d14"
+    - row "21 良好 0.19mm r5.90551 i274x.RoundRect.d16":
+      - cell "21"
+      - cell "良好":
+        - generic "良好"
+      - cell "0.19mm"
+      - cell "r5.90551"
+      - cell "i274x.RoundRect.d16"
+    - row "22 良好 0.19mm r5.90551 i274x.RoundRect.d13":
+      - cell "22"
+      - cell "良好":
+        - generic "良好"
+      - cell "0.19mm"
+      - cell "r5.90551"
+      - cell "i274x.RoundRect.d13"
+    - row "23 良好 0.19mm r5.90551 i274x.RoundRect.d25":
+      - cell "23"
+      - cell "良好":
+        - generic "良好"
+      - cell "0.19mm"
+      - cell "r5.90551"
+      - cell "i274x.RoundRect.d25"
+    - row "24 良好 0.19mm r5.90551 i274x.RoundRect.d25":
+      - cell "24"
+      - cell "良好":
+        - generic "良好"
+      - cell "0.19mm"
+      - cell "r5.90551"
+      - cell "i274x.RoundRect.d25"
+    - row "25 良好 0.2mm r9.84252 i274x.RoundRect.d14":
+      - cell "25"
+      - cell "良好":
+        - generic "良好"
+      - cell "0.2mm"
+      - cell "r9.84252"
+      - cell "i274x.RoundRect.d14"
+    - row "26 良好 0.2mm r23.622 i274x.RoundRect.d12":
+      - cell "26"
+      - cell "良好":
+        - generic "良好"
+      - cell "0.2mm"
+      - cell "r23.622"
+      - cell "i274x.RoundRect.d12"
+    - row "27 良好 0.2mm r23.622 i274x.RoundRect.d12":
+      - cell "27"
+      - cell "良好":
+        - generic "良好"
+      - cell "0.2mm"
+      - cell "r23.622"
+      - cell "i274x.RoundRect.d12"
+    - row "28 良好 0.2mm r23.622 i274x.RoundRect.d12":
+      - cell "28"
+      - cell "良好":
+        - generic "良好"
+      - cell "0.2mm"
+      - cell "r23.622"
+      - cell "i274x.RoundRect.d12"
+    - row "29 良好 0.2mm r5.90551 i274x.RoundRect.d25":
+      - cell "29"
+      - cell "良好":
+        - generic "良好"
+      - cell "0.2mm"
+      - cell "r5.90551"
+      - cell "i274x.RoundRect.d25"
+    - row "30 良好 0.2mm r5.90551 i274x.RoundRect.d25":
+      - cell "30"
+      - cell "良好":
+        - generic "良好"
+      - cell "0.2mm"
+      - cell "r5.90551"
+      - cell "i274x.RoundRect.d25"
+    - row "31 良好 0.2mm r5.90551 i274x.RoundRect.d22":
+      - cell "31"
+      - cell "良好":
+        - generic "良好"
+      - cell "0.2mm"
+      - cell "r5.90551"
+      - cell "i274x.RoundRect.d22"
+    - row "32 良好 0.2mm r5.90551 i274x.RoundRect.d23":
+      - cell "32"
+      - cell "良好":
+        - generic "良好"
+      - cell "0.2mm"
+      - cell "r5.90551"
+      - cell "i274x.RoundRect.d23"
+    - row "33 良好 0.2mm r9.84252 i274x.RoundRect.d18":
+      - cell "33"
+      - cell "良好":
+        - generic "良好"
+      - cell "0.2mm"
+      - cell "r9.84252"
+      - cell "i274x.RoundRect.d18"
+- checkbox "智能显示图层" [checked]
+- text: 智能显示图层
+- checkbox "自动适应视图" [checked]
+- text: 自动适应视图
+- button "第一个"
+- button "上一个"
+- button "下一个"
+- button "最后"
+- button "全部"
+- generic "如果阻焊开窗距周边走线太近，会导致周边走线也会曝露出来，容易氧化或焊接时短路。"
+- generic: 报警值
+- generic: < 0.08mm
+- generic: 危险
+- generic: 0.08mm – 0.15mm
+- generic: 警告
+- generic: ≥ 0.15mm
+- generic: 良好
+- alert

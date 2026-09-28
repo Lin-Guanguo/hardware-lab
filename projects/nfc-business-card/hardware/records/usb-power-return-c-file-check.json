@@ -1,0 +1,59 @@
+{
+  "checked_at": "2026-09-28T17:25:43.162728+08:00",
+  "scope": "Saved-page reopen and full app restart, same-version physical copper audit; not manufacturing approval",
+  "runtime_project": {
+    "uuid": "53006cfb7653a00a8462cb5322b8bf243b84d3b7ddbcc4abbad89751703d51b4",
+    "name": "NFC-Card-R2-USB-Power-Return-C"
+  },
+  "pcb_uuid": "8033127c48771f3b",
+  "initial_app_state": "App was not running; startup page had no open project or unsaved editor. C copied from closed B, hash verified.",
+  "a_b_r21_unchanged": true,
+  "snapshot_identity_fields_after_restart": {
+    "document": true,
+    "components": true,
+    "pads": true,
+    "polylines": true,
+    "regions": true,
+    "pours": true,
+    "poured": false,
+    "strings": true,
+    "lines": true,
+    "vias": true
+  },
+  "pins_equal": true,
+  "rules_equal": true,
+  "netlist_equal": true,
+  "bom_equal": true,
+  "ground_geometry_symmetric_difference_mm2": {
+    "top": 3.2266184990665816e-14,
+    "bottom": 5.403019704578072e-15
+  },
+  "poured_note": "Native fill ordering/floating-point representation changes on reopen; independently reconstructed copper geometry is equivalent. No reference-plane or signal-integrity acceptance inferred.",
+  "stored_metadata_note": "Closed-file copy inherits A metadata; runtime identity is path-derived. Identify C by path, runtime UUID, and actual 161-track/40-via content.",
+  "files": [
+    {
+      "path": "eda/NFC-Card-R2-USB-Power-Return-C.eprj2",
+      "bytes": 5091328,
+      "sha256": "7bc06118c8ebc3d15c0c94396b5712219bf4d1c3570885a4d4e8faf1ee925f02",
+      "sqlite_quick_check": "ok"
+    },
+    {
+      "path": "eda/NFC-Card-R2-USB-Spaced-B.eprj2",
+      "bytes": 5025792,
+      "sha256": "25ccb210f6476c35aede53e15e74561c7cd24e89032b1a0ae3151bfc8b26ae7d",
+      "sqlite_quick_check": "ok"
+    },
+    {
+      "path": "eda/NFC-Card-R2-Midmount-Placement-A.eprj2",
+      "bytes": 5021696,
+      "sha256": "155d17b1b6267b07987ef2c2a700411aa50e43f4cacbd830b9cc9da28a81fb8d",
+      "sqlite_quick_check": "ok"
+    },
+    {
+      "path": "eda/NFC-Card-R1-Layout-Reset-R21-USB-CC2.eprj2",
+      "bytes": 5070848,
+      "sha256": "6087305c855a5880a931e7afdcea818e36710dc7234790daf3118332c981dea3",
+      "sqlite_quick_check": "ok"
+    }
+  ]
+}

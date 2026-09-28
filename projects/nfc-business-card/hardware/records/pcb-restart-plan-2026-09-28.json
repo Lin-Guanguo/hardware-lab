@@ -1,0 +1,226 @@
+{
+  "status": "PLANNING_DRAFT_NOT_A_NATIVE_PCB_CANDIDATE",
+  "sources": {
+    "project": {
+      "path": "eda/NFC-Card-R1-Layout-Reset-R21-USB-CC2.eprj2",
+      "sha256": "6087305c855a5880a931e7afdcea818e36710dc7234790daf3118332c981dea3"
+    },
+    "snapshot": {
+      "path": "projects/nfc-business-card/hardware/records/r1-layout-reset-r21-routed-snapshot.json",
+      "sha256": "53784aeb473cef247c67a6f81b867715df2f370850b8347a606f2ccfc82ce919"
+    },
+    "pins": {
+      "path": "projects/nfc-business-card/hardware/records/r1-layout-reset-r21-pcb-pins.json",
+      "sha256": "ff28e7e5898758879c5f383f0bca373bdbd1742946edb91b6deee6b827db9a8e"
+    },
+    "bom": {
+      "path": "projects/nfc-business-card/hardware/production/r1-layout-reset-r21/NFC-Card-R1-Layout-Reset-R21-USB-CC2-bom.csv",
+      "sha256": "45e8b0f49e903e49467941fa57c0a3e454b6c6c02ed9870fa600ec1101ee6be4"
+    },
+    "enclosure_report": {
+      "path": "projects/nfc-business-card/enclosure/r1-usb-fit-4.8/report.json",
+      "sha256": "a2a89d2deda78206c9b161eba7306eb42343e99802b9f70e093c0244782f525a"
+    },
+    "u1_overlay": {
+      "path": "projects/nfc-business-card/hardware/records/r1-layout-reset-r21-u1-official-overlay.json",
+      "sha256": "03817a53f08a158163bc4a22a6c33d8389360ab2f5935aa996162cb6380e7f1d"
+    }
+  },
+  "baseline": {
+    "project_uuid": "31100f9979703fec0d44544145de78024fe2d8492f50c378743dd57288888143",
+    "project_name": "NFC-Card-R1-Layout-Reset-R21-USB-CC2",
+    "pcb_uuid": "8033127c48771f3b",
+    "components": 66,
+    "pins": 256,
+    "bom_groups": 29,
+    "vias": 165,
+    "board_bounds_mm": [
+      1.10000034,
+      1.10000034,
+      82.8999993,
+      50.899999799999996
+    ],
+    "sqlite_quick_check": "ok",
+    "live_state_checked": false
+  },
+  "retained_mechanical_anchors": {
+    "battery_gauge_xyzwhd_mm": [
+      1.5,
+      1.5,
+      0.8,
+      32.5,
+      14,
+      3.2
+    ],
+    "screen_max_xywh_mm": [
+      1.95,
+      18.25,
+      37.42,
+      31.9
+    ],
+    "screen_source": "enclosure/build-r1-usb-fit.py: screen_max",
+    "screen_nfc_exclusion_xyxy_mm": [
+      0,
+      17,
+      39.62,
+      52
+    ],
+    "keys_xy_mm": {
+      "SW1": [
+        41.10000162,
+        4.50000116
+      ],
+      "SW2": [
+        49.599999860000004,
+        8.80000526
+      ],
+      "SW3": [
+        41.10000162,
+        14.399999139999998
+      ]
+    },
+    "j2_reference_xy_mm": [
+      54.699999819999995,
+      34.260000059999996
+    ],
+    "usb_axis_y_mm": 26,
+    "testpoints_xy_mm": {
+      "TP1": [
+        65.92062,
+        48.49876
+      ],
+      "TP2": [
+        68.46062,
+        48.49876
+      ],
+      "TP3": [
+        71.00062,
+        48.49876
+      ],
+      "TP4": [
+        73.54062,
+        48.49876
+      ],
+      "TP5": [
+        76.08062,
+        48.49876
+      ]
+    }
+  },
+  "user_reported_battery": {
+    "date": "2026-09-28",
+    "received": true,
+    "model": "301030",
+    "thickness_mm": 3,
+    "capacity_original_text": "110毫安",
+    "provisional_capacity_mah": 110,
+    "capacity_unit_verified": false,
+    "rated_charge_current_ma": null,
+    "rated_discharge_current_ma": null,
+    "complete_pack_length_width_mm": null
+  },
+  "proposed_search_windows": [
+    {
+      "id": "A",
+      "label": "主控＋去耦",
+      "bounds_mm": [
+        55,
+        1.1,
+        71,
+        20.5
+      ],
+      "color": "#6da7d2"
+    },
+    {
+      "id": "B",
+      "label": "充电＋稳压",
+      "bounds_mm": [
+        40.5,
+        17.5,
+        58.5,
+        26
+      ],
+      "color": "#e6bc63"
+    },
+    {
+      "id": "C",
+      "label": "USB＋保护",
+      "bounds_mm": [
+        70,
+        20,
+        82.9,
+        32
+      ],
+      "color": "#d68774"
+    },
+    {
+      "id": "D",
+      "label": "屏幕电源",
+      "bounds_mm": [
+        59,
+        32,
+        80.5,
+        46.5
+      ],
+      "color": "#83baa0"
+    },
+    {
+      "id": "E",
+      "label": "电池采样",
+      "bounds_mm": [
+        73,
+        7,
+        81,
+        18.5
+      ],
+      "color": "#b59dce"
+    }
+  ],
+  "ldo_sensitivity_cases": [
+    {
+      "sys_v": 3.8,
+      "load_ma": 100,
+      "ldo_loss_w": 0.05,
+      "jedec_temperature_rise_proxy_c": 9.1
+    },
+    {
+      "sys_v": 4.5,
+      "load_ma": 100,
+      "ldo_loss_w": 0.12,
+      "jedec_temperature_rise_proxy_c": 21.83
+    },
+    {
+      "sys_v": 3.8,
+      "load_ma": 160,
+      "ldo_loss_w": 0.08,
+      "jedec_temperature_rise_proxy_c": 14.55
+    },
+    {
+      "sys_v": 4.5,
+      "load_ma": 160,
+      "ldo_loss_w": 0.192,
+      "jedec_temperature_rise_proxy_c": 34.92
+    },
+    {
+      "sys_v": 3.8,
+      "load_ma": 200,
+      "ldo_loss_w": 0.1,
+      "jedec_temperature_rise_proxy_c": 18.19
+    },
+    {
+      "sys_v": 4.5,
+      "load_ma": 200,
+      "ldo_loss_w": 0.24,
+      "jedec_temperature_rise_proxy_c": 43.66
+    }
+  ],
+  "limits": [
+    "R21 electrical source only; no new same-candidate schematic export or pin-map check.",
+    "R21 straight outline is contextual; USB mid-mount cutout is deliberately not generated.",
+    "Front and back layers use the same top-view projection, not a mirrored rear photograph.",
+    "Search windows are proposed allocations, not verified available area or component placements.",
+    "Display maximum is an old CAD gauge; FPC insertion, bend and assembly tolerance remain open.",
+    "The 4.8 mm enclosure report uses an older USB4500 assembly, not synchronized R21 CAD.",
+    "Power cases are sensitivity calculations, not measured current or a thermal qualification."
+  ]
+}

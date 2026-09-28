@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-09-28T15:59:02+08:00",
+  "scope": "File integrity after native save and application exit; not DRC or DFM acceptance.",
+  "r21_sha256_unchanged": true,
+  "files": [
+    {
+      "path": "eda/NFC-Card-R2-Midmount-Placement-A.eprj2",
+      "bytes": 5021696,
+      "sha256": "155d17b1b6267b07987ef2c2a700411aa50e43f4cacbd830b9cc9da28a81fb8d",
+      "sqlite_quick_check": "ok",
+      "project_identity": [
+        [
+          "3b0602d6a2e7fde43c854efd4651a79dfccbc2df0a5e3c821cb7326bfcab2257",
+          "NFC-Card-R2-Midmount-Placement-A"
+        ]
+      ]
+    },
+    {
+      "path": "eda/NFC-Card-R1-Layout-Reset-R21-USB-CC2.eprj2",
+      "bytes": 5070848,
+      "sha256": "6087305c855a5880a931e7afdcea818e36710dc7234790daf3118332c981dea3",
+      "sqlite_quick_check": "ok",
+      "project_identity": [
+        [
+          "31100f9979703fec0d44544145de78024fe2d8492f50c378743dd57288888143",
+          "NFC-Card-R1-Layout-Reset-R21-USB-CC2"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,387 @@
+{
+  "task_code": "DFMP2609280813",
+  "url": "https://www.jlc-dfm.com/order/smt-dfm-lceda?dfmPcbTaskCode=DFMP2609280813&dfmPcbUploadFileKeyId=627459542952976386&dfmPcbTaskKeyId=627459555076689922",
+  "checked_at": "2026-09-28T21:00:41.448088+08:00",
+  "thickness_mm": 0.8,
+  "pcb_counts": {
+    "锐角拐线": {
+      "danger": 0,
+      "warning": 1,
+      "pass": 0
+    },
+    "BGA焊盘": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 0
+    },
+    "孔落在焊盘上": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 0
+    },
+    "走线距板边": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 0
+    },
+    "走线间距": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 20
+    },
+    "同网络走线间距": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 36
+    },
+    "线距铜皮": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 0
+    },
+    "裸线头": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 0
+    },
+    "线宽": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 100
+    },
+    "mark点": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 0
+    },
+    "焊盘距外型线": {
+      "danger": 12,
+      "warning": 0,
+      "pass": 0
+    },
+    "盘到线": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 100
+    },
+    "焊盘距焊盘": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 76
+    },
+    "盘到铜皮": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 0
+    },
+    "PTH孔到线": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 86
+    },
+    "焊盘孔环": {
+      "danger": 0,
+      "warning": 100,
+      "pass": 0
+    },
+    "插件焊盘距贴片焊盘": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 0
+    },
+    "VIA孔到焊盘": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 0
+    },
+    "阻焊桥": {
+      "danger": 42,
+      "warning": 4,
+      "pass": 4
+    },
+    "开窗露线": {
+      "danger": 1,
+      "warning": 0,
+      "pass": 32
+    },
+    "碎线填充": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 0
+    },
+    "焊盘负开窗": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 0
+    },
+    "丝印距焊盘": {
+      "danger": 50,
+      "warning": 0,
+      "pass": 0
+    },
+    "丝印距孔": {
+      "danger": 86,
+      "warning": 2,
+      "pass": 4
+    },
+    "丝印线条宽度": {
+      "danger": 5,
+      "warning": 45,
+      "pass": 0
+    },
+    "不同网络盲埋孔间距": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 0
+    },
+    "丢失PTH孔": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 0
+    },
+    "不同层盲埋孔近孔": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 0
+    },
+    "PTH孔间距": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 0
+    },
+    "Pth无Pad": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 0
+    },
+    "短槽检测": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 0
+    },
+    "测量槽宽": {
+      "danger": 4,
+      "warning": 0,
+      "pass": 0
+    },
+    "过孔与插件孔的间距": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 0
+    },
+    "Via无Pad": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 0
+    },
+    "无连接过孔": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 0
+    }
+  },
+  "overview": {
+    "layers": 2,
+    "minimum_trace_mm": 0.15,
+    "minimum_gap_mm": 0.2,
+    "minimum_hole_mm": 0.3,
+    "minimum_annulus_mm": 0.15,
+    "website_hole_count": 254
+  },
+  "files": {
+    "board-review-d-diagnostic-gerber.zip": "86b6979d865291f91d32d093bac386b038693ada08e7ba82ed7c9308d4b2659b",
+    "board-review-d-diagnostic-bom.csv": "4b3a32c7d59f29e593ff1fcb57326128c7c2c142bb39b66f085cbf5362ca2308",
+    "board-review-d-diagnostic-cpl.csv": "4ee2a7568e9d00462fcd4227f5e7700cdaf177b2d4a2e4304635609220f7aa2b"
+  },
+  "smt_status": "completed_with_open_findings",
+  "no_order_or_payment": true,
+  "smt_counts": {
+    "元件插件尺寸过大预警": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 0
+    },
+    "元件碰撞预警": {
+      "danger": 0,
+      "warning": 3,
+      "pass": 0
+    },
+    "元件距元件": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 50
+    },
+    "元件距板边的距离": {
+      "danger": 1,
+      "warning": 1,
+      "pass": 0
+    },
+    "元件焊脚到孔的距离": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 0
+    },
+    "元件本体文字预警": {
+      "danger": 0,
+      "warning": 4,
+      "pass": 0
+    },
+    "元件焊盘间距": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 0
+    },
+    "元件与板框相交": {
+      "danger": 0,
+      "warning": 1,
+      "pass": 0
+    },
+    "PIN脚内边界": {
+      "danger": 21,
+      "warning": 0,
+      "pass": 0
+    },
+    "PIN脚左边界": {
+      "danger": 13,
+      "warning": 0,
+      "pass": 0
+    },
+    "PIN脚无焊盘": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 0
+    },
+    "PIN脚外边界": {
+      "danger": 4,
+      "warning": 0,
+      "pass": 0
+    },
+    "PIN脚右边界": {
+      "danger": 11,
+      "warning": 0,
+      "pass": 0
+    },
+    "元件插件尺寸过小预警": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 0
+    },
+    "元件插件孔": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 0
+    },
+    "元件插件重叠预警": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 0
+    },
+    "元件插脚无孔": {
+      "danger": 0,
+      "warning": 0,
+      "pass": 0
+    },
+    "焊脚和焊盘相交区域": {
+      "danger": 12,
+      "warning": 1,
+      "pass": 0
+    }
+  },
+  "smt_checked_at": "2026-09-28T21:12:04.483934+08:00",
+  "matched_bom_groups": 29,
+  "matched_placements": 66,
+  "smt_details": {
+    "contact": [
+      "1 危险 0.5 J1 rect43.307x23.623",
+      "2 危险 0.5 J1 rect43.307x23.623",
+      "3 危险 0.5 J1 rect43.307x11.811",
+      "4 危险 0.5 J1 rect43.307x11.811",
+      "5 危险 0.5 J1 rect43.307x11.811",
+      "6 危险 0.5 J1 rect43.307x11.811",
+      "7 危险 0.5 J1 rect43.307x23.623",
+      "8 危险 0.5 J1 rect43.307x23.623",
+      "9 危险 0.5 J1 rect43.307x11.811",
+      "10 危险 0.5 J1 rect43.307x11.811",
+      "11 危险 0.5 J1 rect43.307x11.811",
+      "12 危险 0.5 J1 rect43.307x11.811",
+      "13 警告 0.88 U2 rect32.644x56.344"
+    ],
+    "edge": [
+      "1 危险 0.07mm U1 r1.9685",
+      "2 警告 0.8mm SW1 r1.9685"
+    ],
+    "collision": [
+      "1 警告 0.09 C1 U1",
+      "2 警告 0.09 C6 U1",
+      "3 警告 0.09 U1 C7"
+    ],
+    "outline": [
+      "1 警告 10.64mm J1 r1.9685"
+    ],
+    "pin-inner": [
+      "1 危险 0.5mm J1 null",
+      "2 危险 0.5mm J1 null",
+      "3 危险 0.5mm J1 null",
+      "4 危险 0.5mm J1 null",
+      "5 危险 0.5mm J1 null",
+      "6 危险 0.5mm J1 null",
+      "7 危险 0.5mm J1 null",
+      "8 危险 0.5mm J1 null",
+      "9 危险 0.5mm J1 null",
+      "10 危险 0.5mm J1 null",
+      "11 危险 0.5mm J1 null",
+      "12 危险 0.5mm J1 null",
+      "13 危险 0mm U1 null",
+      "14 危险 0mm U1 null",
+      "15 危险 0mm U1 null",
+      "16 危险 0mm U1 null",
+      "17 危险 0mm U1 null",
+      "18 危险 0mm U1 null",
+      "19 危险 0mm U1 null",
+      "20 危险 0mm U1 null",
+      "21 危险 0mm U2 null"
+    ],
+    "pin-left": [
+      "1 危险 0mm U1 null",
+      "2 危险 0mm U1 null",
+      "3 危险 0mm U1 null",
+      "4 危险 0mm U1 null",
+      "5 危险 0mm U1 null",
+      "6 危险 0mm U1 null",
+      "7 危险 0mm U1 null",
+      "8 危险 0mm U1 null",
+      "9 危险 0mm U1 null",
+      "10 危险 0mm U1 null",
+      "11 危险 0mm U1 null",
+      "12 危险 0mm U1 null",
+      "13 危险 0mm U2 null"
+    ],
+    "pin-outer": [
+      "1 危险 0mm U1 null",
+      "2 危险 0mm U1 null",
+      "3 危险 0mm U1 null",
+      "4 危险 0mm U1 null"
+    ],
+    "pin-right": [
+      "1 危险 0mm U1 null",
+      "2 危险 0mm U1 null",
+      "3 危险 0mm U1 null",
+      "4 危险 0mm U1 null",
+      "5 危险 0mm U1 null",
+      "6 危险 0mm U1 null",
+      "7 危险 0mm U1 null",
+      "8 危险 0mm U1 null",
+      "9 危险 0mm U1 null",
+      "10 危险 0mm U1 null",
+      "11 危险 0mm U2 null"
+    ],
+    "body-text": [
+      "1 警告 null D1 null",
+      "2 警告 null D2 null",
+      "3 警告 null D3 null",
+      "4 警告 null U1 null"
+    ]
+  },
+  "recovery": "Fresh browser tab restored filechooser; both files uploaded automatically, all 29 groups matched, analysis explicitly run and results read.",
+  "interpretation": "Counts are web rule findings, not independent defect counts or manufacturing acceptance. No models, component placement or rules changed on website."
+}

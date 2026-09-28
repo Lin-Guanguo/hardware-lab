@@ -1,0 +1,43 @@
+{
+  "source_sha256": "b41283e216670f814a63f064995077f8df891c49a579c98a16db24af93236a0c",
+  "method": "Exact per-layer GND polygon unions, conceptual plated centre links, BFS from C8.2 to J1.A1B12. Inward offsets are a diagnostic, not a manufacturing rule or current simulation.",
+  "checks": [
+    {
+      "erosion_mm": 0,
+      "c8_to_j1_connected": true
+    },
+    {
+      "erosion_mm": 0.005,
+      "c8_to_j1_connected": true
+    },
+    {
+      "erosion_mm": 0.01,
+      "c8_to_j1_connected": true
+    },
+    {
+      "erosion_mm": 0.02,
+      "c8_to_j1_connected": false
+    }
+  ],
+  "neck_search_windows": [
+    {
+      "layer": 1,
+      "gap_after_erosion_mm": 0.24963242453611656,
+      "ends_mm": [
+        [
+          60.02607959247355,
+          5.08414024
+        ],
+        [
+          60.27571201700967,
+          5.08414024
+        ]
+      ]
+    }
+  ],
+  "neck_vertical_section_at_x_60p15_mm": {
+    "geometry": "LINESTRING (60.15 5.06414024, 60.15 5.092678274307347)",
+    "width_mm": 0.02853803430734647
+  },
+  "verdict": "Connectivity passes, but the charger return depends on narrow copper. Not accepted as a finished power-return layout."
+}

@@ -6,9 +6,21 @@
 
 **2026-09-28：选定 0.8 mm 中沉 USB-C＋标准型 SMT，重新布局布线。**保持外形及电池、屏幕、NFC 总体布局，继续以 4.8 mm 薄壳为目标，电池由用户适配。确切中沉料号、板边公差、治具和拼板尚待定型；具体方案由代理准备、用户问客服。USB4110 顶部贴装仅保留为备选。
 
-**开工清单已 review，下一步是设计输入包。**[P0–P5 清单](docs/pcb-start-readiness-2026-09-28.md)统一执行顺序、产物、验收条件、原厂参考和旧工具适用性；先完成同版电气基线、机械限制图、工艺／封装表及电源预算，再做独立候选、整体分区和局部试布。已核 TS 电阻、电池采样及 U1 官方 61 焊盘继续复用。直接在 `master` 工作，R21 保留作对照；本轮未修改新 PCB/CAD，现有板仍不可下单。
+**当前为 [Board Review D 整板诊断候选](hardware/board-review-d.md)。**保存并完整重开后，66 位号／256 引脚一致、全网实铜连通；原生未连接 0，普通几何错误 0，USB SMT 板边 12、TH 板边 2。**不能定型或下单：充电器地返回依赖约 0.029 mm 地铜细颈，VBUS 保护／负载预算及工厂接受条件未闭合。**[线上 DFM](hardware/board-review-d.md#线上-dfm)已完成同版 PCB＋SMT 分析，29 组／66 位号匹配；VIA 孔到焊盘危险／警告均为 0，USB 焊脚接触比 0.50 的 12 项危险、U1 板边 0.07 mm 及阻焊／丝印等问题仍在。用户已授权整板诊断及上传分析，没有下单／付款／联系工厂。[A](hardware/midmount-placement-a.md)、[B](hardware/usb-spaced-b.md)、[C](hardware/usb-power-return-c.md)和 R21 文件保留，继续在 `master` 工作。
 
 参考入口：[重新规划范围](docs/pcb-replan-2026-09-28.md)、[国内工艺复核](hardware/jlc-mid-mount-process-review-2026-09-28.md)、[USB4500 共同基准／R14-R17 勘误](hardware/usb4500-datum-review-2026-09-28.md)、[七区原厂关系](hardware/r1-seven-zone-reference-plan.md)、[外部双层板参考](hardware/usb-mid-mount-two-layer-references.md)、[顶部贴装备选](hardware/usb-top-mount-review-2026-09-28.md)、[结构与工艺比较](hardware/usb-connector-options.md)。这些提供设计依据，不代表新封装、薄壳或工厂已验收。
+
+**继续设计的下一步：**先比较 [D 版全局摆放候选](hardware/d-placement-options.md)：充电区成组转向＋NTC 焊盘让位、显示区按接口引脚次序重排，以及屏幕／SWD 跨区通道。离线几何筛查尚不是已布通的新板；先验证供回电，再批量接线，并同步补保护、电流预算、机械和工厂条件。后加的电池电压采样区列为条件性删减备选，尚未删除。不能把连通或 PCB DFM 部分改善当作布线质量与制造通过。
+
+电池最新输入：用户确认 **301030 已到手、厚 3 mm**；“110 毫安”暂按容量 110 mAh 理解，单位、完整包络与允许充放电电流仍需核实。
+
+**布局质量专项：**[D 版三条信号路径评审](hardware/d-signal-planning-review.md)确认 SWDIO／SWDCLK／屏幕复位分别串行换层 7／7／6 次；共同通道规划及两处局部减少换层候选待验证。该记录绑定快照指纹，不代表后续 D 已采纳修改，也不由 DFM 通过替代路径评审。
+
+**后续方法已记录：**[PCB 方法论 skill](../../.agents/skills/pcb-methodology/SKILL.md#把规划落实到几何与阶段检查)新增跨区通道实际试布、每批路线简化／地返回复核，以及连接、布局质量、DFM 分开验收。适用于嘉立创 EDA 和未来 KiCad 尝试；规则已写入，后续执行效果仍需用实际候选验证。
+
+**投厂前判断：**[D 版设计成熟度复核](hardware/d-prototype-readiness-review.md)确认本版仍是诊断候选；局部切断试验复核了 C8 地对细颈的依赖。下一候选需先明确电源条件、验证关键地返回与跨区通道，再做独立设计及同版制造复核，不能仅以告警减少判断可投厂。
+
+**本轮收尾与下一轮准备：**D 保留为诊断基线；旧设计任务已空闲。用户考虑新 session 试用 KiCad，[交接记录与启动 prompt](docs/kicad-next-session-handoff.md)已准备。下一阶段先核对迁移及关键区实际试布，尚未创建 KiCad 产品工程，也未删除电池采样功能。
 
 ## 历史候选与验证记录
 

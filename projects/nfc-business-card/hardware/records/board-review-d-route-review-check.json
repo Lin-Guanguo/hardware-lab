@@ -1,0 +1,22 @@
+{
+  "final_snapshot_sha256": "b41283e216670f814a63f064995077f8df891c49a579c98a16db24af93236a0c",
+  "earlier_review_source_sha256": "4f6a393fcc2e34548a7fb194231320a208ed0a6881b205c65bca0dd92d53a044",
+  "checks": [
+    {
+      "net": "SWDIO",
+      "via_coordinates_match": true,
+      "track_length_matches_mm": 68.32518654013862
+    },
+    {
+      "net": "SWDCLK",
+      "via_coordinates_match": true,
+      "track_length_matches_mm": 78.16384924441294
+    },
+    {
+      "net": "EPD_RESET_N_TBD",
+      "via_coordinates_match": true,
+      "track_length_matches_mm": 33.26546358219711
+    }
+  ],
+  "note": "Confirms the three reviewed signal paths retained their via coordinates and lengths. No proposed simplifications applied."
+}

@@ -1,0 +1,655 @@
+{
+  "source": "hardware/records/board-review-d-snapshot.json",
+  "source_sha256": "b41283e216670f814a63f064995077f8df891c49a579c98a16db24af93236a0c",
+  "status": "OFFLINE_PLACEMENT_HYPOTHESES_NOT_ROUTED",
+  "limitations": [
+    "Pad envelopes only; no verified body/courtyard/height/paste model.",
+    "Existing tracks, vias and pours deliberately excluded: affected routes would need rebuilding.",
+    "No native DRC, return-path, thermal, protection, assembly or manufacturing validation.",
+    "Selected endpoint distances are geometric proxies, not realizable routes or predicted via counts.",
+    "Options are evaluated independently, not as a combined board."
+  ],
+  "options": [
+    {
+      "name": "charger-turn",
+      "refs": [
+        "U2",
+        "C2",
+        "C3",
+        "C8",
+        "R5",
+        "R6",
+        "R7",
+        "R8",
+        "R9"
+      ],
+      "rotation_in_snapshot_xy_degrees": 270,
+      "origin_mm": [
+        45.72,
+        19.304
+      ],
+      "translation_mm": [
+        4,
+        0
+      ],
+      "companion_pad_moves": {
+        "NTC": {
+          "before_mm": [
+            49.9999,
+            24.20112
+          ],
+          "after_mm": [
+            46.5,
+            24.2
+          ]
+        }
+      },
+      "centres_after_mm": {
+        "U2": [
+          49.72,
+          19.304
+        ],
+        "C2": [
+          47.616001159999996,
+          16.82399988
+        ],
+        "C3": [
+          48.81599876,
+          15.52399994
+        ],
+        "C8": [
+          47.21599942,
+          18.924000759999995
+        ],
+        "R5": [
+          51.21599904,
+          23.223999779999996
+        ],
+        "R6": [
+          49.8159993,
+          23.223999779999996
+        ],
+        "R7": [
+          51.31599884,
+          15.52399994
+        ],
+        "R8": [
+          48.41599956,
+          23.223999779999996
+        ],
+        "R9": [
+          52.71600112,
+          15.52399994
+        ]
+      },
+      "min_moved_to_fixed_pad_envelope_gap_mm": 0.6705599999999982,
+      "nearest_pair": [
+        "R7",
+        "C4"
+      ],
+      "inside_outline_with_0p2mm_screen": true,
+      "exclusion_overlap_mm2": 0.0,
+      "max_internal_pad_distance_change_mm": 5.329070518200751e-15,
+      "selected_connections": [
+        {
+          "from": "U2.7",
+          "to": "U1.19",
+          "net": "CHG_SDA",
+          "before_mm": 20.830139065767174,
+          "after_mm": 15.760275650888842
+        },
+        {
+          "from": "U2.8",
+          "to": "U1.16",
+          "net": "CHG_SCL",
+          "before_mm": 22.56276524253177,
+          "after_mm": 17.804083098121055
+        },
+        {
+          "from": "U2.9",
+          "to": "U1.20",
+          "net": "CHG_INT_N",
+          "before_mm": 20.130143402966613,
+          "after_mm": 15.86878841343599
+        },
+        {
+          "from": "U2.3",
+          "to": "U1.21",
+          "net": "CHG_PG_N",
+          "before_mm": 17.916348722772724,
+          "after_mm": 14.806762527007711
+        },
+        {
+          "from": "U2.4",
+          "to": "U1.22",
+          "net": "CHG_CE_N",
+          "before_mm": 17.4172635823197,
+          "after_mm": 13.857541180916616
+        },
+        {
+          "from": "U2.1",
+          "to": "U3.1",
+          "net": "SYS",
+          "before_mm": 8.166521874017114,
+          "after_mm": 6.0103546866719935
+        },
+        {
+          "from": "U2.10",
+          "to": "J1.B4A9",
+          "net": "USB_VBUS",
+          "before_mm": 32.997060227753614,
+          "after_mm": 28.39338798467699
+        },
+        {
+          "from": "U2.6",
+          "to": "R19.1",
+          "net": "BAT_NTC_TBD",
+          "before_mm": 8.737541299221416,
+          "after_mm": 3.4457272373187022
+        }
+      ],
+      "selected_distance_sum_before_mm": 148.75778341735014,
+      "selected_distance_sum_after_mm": 115.9469207790379,
+      "selected_distance_sum_reduction_percent": 22.056568661190067,
+      "minimum_internal_envelope_gap_mm": 0.29971999999999355,
+      "battery_pad_to_U2_BAT_distance_mm": {
+        "before": 14.271203096655865,
+        "after": 16.827791677353268
+      }
+    },
+    {
+      "name": "boost-loose",
+      "refs": [
+        "U4",
+        "C9",
+        "C10",
+        "R13",
+        "L1",
+        "Q1",
+        "R14",
+        "R15",
+        "D1",
+        "D2",
+        "D3",
+        "C11",
+        "C12",
+        "R16",
+        "C13"
+      ],
+      "rotation_in_snapshot_xy_degrees": 0,
+      "origin_mm": [
+        71,
+        37
+      ],
+      "translation_mm": [
+        0.5,
+        -3.5
+      ],
+      "companion_pad_moves": {},
+      "centres_after_mm": {
+        "U4": [
+          66.00000108,
+          28.6999991
+        ],
+        "C9": [
+          64.0,
+          26.099999219999997
+        ],
+        "C10": [
+          66.20000068,
+          30.899999779999995
+        ],
+        "R13": [
+          69.00000016,
+          27.7000011
+        ],
+        "L1": [
+          67.50000062000001,
+          33.49999966
+        ],
+        "Q1": [
+          71.50000023999999,
+          33.49999966
+        ],
+        "R14": [
+          71.50000023999999,
+          30.99999958
+        ],
+        "R15": [
+          72.80000018,
+          35.30000114
+        ],
+        "D1": [
+          67.99999962,
+          36.29999914
+        ],
+        "D2": [
+          77.50000093999999,
+          35.30000114
+        ],
+        "D3": [
+          77.50000093999999,
+          38.000000820000004
+        ],
+        "C11": [
+          72.30000118,
+          36.80000068
+        ],
+        "C12": [
+          66.79999948,
+          38.999998819999995
+        ],
+        "R16": [
+          71.00000124,
+          40.500000899999996
+        ],
+        "C13": [
+          78.90000067999999,
+          40.7000005
+        ]
+      },
+      "min_moved_to_fixed_pad_envelope_gap_mm": 0.5974590839546924,
+      "nearest_pair": [
+        "C10",
+        "R18"
+      ],
+      "inside_outline_with_0p2mm_screen": true,
+      "exclusion_overlap_mm2": 0.0,
+      "max_internal_pad_distance_change_mm": 0.0,
+      "selected_connections": [
+        {
+          "from": "Q1.1",
+          "to": "J2.2",
+          "net": "EPD_GDR",
+          "before_mm": 17.128858509789843,
+          "after_mm": 16.431366767509022
+        },
+        {
+          "from": "R15.1",
+          "to": "J2.3",
+          "net": "EPD_RESE",
+          "before_mm": 17.833805232501565,
+          "after_mm": 16.75492730723712
+        },
+        {
+          "from": "D3.2",
+          "to": "J2.23",
+          "net": "EPD_VGL",
+          "before_mm": 22.4633006183241,
+          "after_mm": 22.924554841243918
+        },
+        {
+          "from": "R16.2",
+          "to": "J2.21",
+          "net": "EPD_VGH",
+          "before_mm": 15.908011686090758,
+          "after_mm": 15.55810386277197
+        },
+        {
+          "from": "U4.1",
+          "to": "U3.5",
+          "net": "VDD_3V3",
+          "before_mm": 14.699060540646798,
+          "after_mm": 12.750020422634615
+        },
+        {
+          "from": "U4.3",
+          "to": "U1.27",
+          "net": "EPD_EN_TBD",
+          "before_mm": 16.66076750539422,
+          "after_mm": 13.485054462952679
+        },
+        {
+          "from": "C10.1",
+          "to": "J2.15",
+          "net": "EPD_VDD",
+          "before_mm": 8.447620729223098,
+          "after_mm": 10.000326793900276
+        }
+      ],
+      "selected_distance_sum_before_mm": 113.14142482197039,
+      "selected_distance_sum_after_mm": 107.9043544582496,
+      "selected_distance_sum_reduction_percent": 4.628782403935069,
+      "minimum_internal_envelope_gap_mm": 0.2667000000000001
+    },
+    {
+      "name": "boost-tight",
+      "refs": [
+        "U4",
+        "C9",
+        "C10",
+        "R13",
+        "L1",
+        "Q1",
+        "R14",
+        "R15",
+        "D1",
+        "D2",
+        "D3",
+        "C11",
+        "C12",
+        "R16",
+        "C13"
+      ],
+      "rotation_in_snapshot_xy_degrees": 0,
+      "origin_mm": [
+        71,
+        37
+      ],
+      "translation_mm": [
+        -0.5,
+        -6
+      ],
+      "companion_pad_moves": {},
+      "centres_after_mm": {
+        "U4": [
+          65.00000108,
+          26.1999991
+        ],
+        "C9": [
+          63.0,
+          23.599999219999997
+        ],
+        "C10": [
+          65.20000068,
+          28.399999779999995
+        ],
+        "R13": [
+          68.00000016,
+          25.2000011
+        ],
+        "L1": [
+          66.50000062000001,
+          30.99999966
+        ],
+        "Q1": [
+          70.50000023999999,
+          30.99999966
+        ],
+        "R14": [
+          70.50000023999999,
+          28.49999958
+        ],
+        "R15": [
+          71.80000018,
+          32.80000114
+        ],
+        "D1": [
+          66.99999962,
+          33.79999914
+        ],
+        "D2": [
+          76.50000093999999,
+          32.80000114
+        ],
+        "D3": [
+          76.50000093999999,
+          35.500000820000004
+        ],
+        "C11": [
+          71.30000118,
+          34.30000068
+        ],
+        "C12": [
+          65.79999948,
+          36.499998819999995
+        ],
+        "R16": [
+          70.00000124,
+          38.000000899999996
+        ],
+        "C13": [
+          77.90000067999999,
+          38.2000005
+        ]
+      },
+      "min_moved_to_fixed_pad_envelope_gap_mm": 0.20521999999998994,
+      "nearest_pair": [
+        "D2",
+        "J1"
+      ],
+      "inside_outline_with_0p2mm_screen": true,
+      "exclusion_overlap_mm2": 0.0,
+      "max_internal_pad_distance_change_mm": 0.0,
+      "selected_connections": [
+        {
+          "from": "Q1.1",
+          "to": "J2.2",
+          "net": "EPD_GDR",
+          "before_mm": 17.128858509789843,
+          "after_mm": 15.036102348959984
+        },
+        {
+          "from": "R15.1",
+          "to": "J2.3",
+          "net": "EPD_RESE",
+          "before_mm": 17.833805232501565,
+          "after_mm": 15.085640492561135
+        },
+        {
+          "from": "D3.2",
+          "to": "J2.23",
+          "net": "EPD_VGL",
+          "before_mm": 22.4633006183241,
+          "after_mm": 22.239125312592666
+        },
+        {
+          "from": "R16.2",
+          "to": "J2.21",
+          "net": "EPD_VGH",
+          "before_mm": 15.908011686090758,
+          "after_mm": 14.439077387589556
+        },
+        {
+          "from": "U4.1",
+          "to": "U3.5",
+          "net": "VDD_3V3",
+          "before_mm": 14.699060540646798,
+          "after_mm": 10.594410827299448
+        },
+        {
+          "from": "U4.3",
+          "to": "U1.27",
+          "net": "EPD_EN_TBD",
+          "before_mm": 16.66076750539422,
+          "after_mm": 10.79274450122859
+        },
+        {
+          "from": "C10.1",
+          "to": "J2.15",
+          "net": "EPD_VDD",
+          "before_mm": 8.447620729223098,
+          "after_mm": 10.609320241410371
+        }
+      ],
+      "selected_distance_sum_before_mm": 113.14142482197039,
+      "selected_distance_sum_after_mm": 98.79642111164175,
+      "selected_distance_sum_reduction_percent": 12.678825401837305,
+      "minimum_internal_envelope_gap_mm": 0.26670000000000016
+    },
+    {
+      "name": "charger-ntc-fixed",
+      "refs": [
+        "U2",
+        "C2",
+        "C3",
+        "C8",
+        "R5",
+        "R6",
+        "R7",
+        "R8",
+        "R9"
+      ],
+      "rotation_in_snapshot_xy_degrees": 270,
+      "origin_mm": [
+        45.72,
+        19.304
+      ],
+      "translation_mm": [
+        1.5,
+        3.5
+      ],
+      "companion_pad_moves": {},
+      "centres_after_mm": {
+        "U2": [
+          47.22,
+          22.804
+        ],
+        "C2": [
+          45.116001159999996,
+          20.32399988
+        ],
+        "C3": [
+          46.31599876,
+          19.02399994
+        ],
+        "C8": [
+          44.71599942,
+          22.424000759999995
+        ],
+        "R5": [
+          48.71599904,
+          26.723999779999996
+        ],
+        "R6": [
+          47.3159993,
+          26.723999779999996
+        ],
+        "R7": [
+          48.81599884,
+          19.02399994
+        ],
+        "R8": [
+          45.91599956,
+          26.723999779999996
+        ],
+        "R9": [
+          50.21600112,
+          19.02399994
+        ]
+      },
+      "min_moved_to_fixed_pad_envelope_gap_mm": 0.7517099999999957,
+      "nearest_pair": [
+        "R9",
+        "C4"
+      ],
+      "inside_outline_with_0p2mm_screen": true,
+      "exclusion_overlap_mm2": 0.0,
+      "max_internal_pad_distance_change_mm": 5.329070518200751e-15,
+      "selected_connections": [
+        {
+          "from": "U2.7",
+          "to": "U1.19",
+          "net": "CHG_SDA",
+          "before_mm": 20.830139065767174,
+          "after_mm": 19.432057240343845
+        },
+        {
+          "from": "U2.8",
+          "to": "U1.16",
+          "net": "CHG_SCL",
+          "before_mm": 22.56276524253177,
+          "after_mm": 21.25790711628969
+        },
+        {
+          "from": "U2.9",
+          "to": "U1.20",
+          "net": "CHG_INT_N",
+          "before_mm": 20.130143402966613,
+          "after_mm": 19.4093813840215
+        },
+        {
+          "from": "U2.3",
+          "to": "U1.21",
+          "net": "CHG_PG_N",
+          "before_mm": 17.916348722772724,
+          "after_mm": 18.214441976936865
+        },
+        {
+          "from": "U2.4",
+          "to": "U1.22",
+          "net": "CHG_CE_N",
+          "before_mm": 17.4172635823197,
+          "after_mm": 17.154451538326718
+        },
+        {
+          "from": "U2.1",
+          "to": "U3.1",
+          "net": "SYS",
+          "before_mm": 8.166521874017114,
+          "after_mm": 9.221207266925518
+        },
+        {
+          "from": "U2.10",
+          "to": "J1.B4A9",
+          "net": "USB_VBUS",
+          "before_mm": 32.997060227753614,
+          "after_mm": 30.074972007441666
+        },
+        {
+          "from": "U2.6",
+          "to": "R19.1",
+          "net": "BAT_NTC_TBD",
+          "before_mm": 8.737541299221416,
+          "after_mm": 5.101174001541207
+        }
+      ],
+      "selected_distance_sum_before_mm": 148.75778341735014,
+      "selected_distance_sum_after_mm": 139.86559253182702,
+      "selected_distance_sum_reduction_percent": 5.9776306699700354,
+      "minimum_internal_envelope_gap_mm": 0.29971999999999355,
+      "battery_pad_to_U2_BAT_distance_mm": {
+        "before": 14.271203096655865,
+        "after": 14.644230015142481
+      }
+    }
+  ],
+  "optional_battery_adc_removal": {
+    "refs": [
+      "Q2",
+      "Q3",
+      "R20",
+      "R21",
+      "R22",
+      "R23",
+      "C25"
+    ],
+    "pad_envelope_bounds_mm": [
+      71.95058,
+      10.84326,
+      81.05012999999998,
+      19.25828
+    ],
+    "pad_envelope_area_mm2": 76.57289524099981,
+    "dedicated_routes": {
+      "BAT_DIV_SUPPLY": {
+        "segments": 5,
+        "vias": 2,
+        "explicit_track_length_mm": 4.079898755680881
+      },
+      "BAT_SWITCH_GATE": {
+        "segments": 4,
+        "vias": 0,
+        "explicit_track_length_mm": 3.1455871013596166
+      },
+      "BAT_MEAS_EN": {
+        "segments": 7,
+        "vias": 3,
+        "explicit_track_length_mm": 16.75252085000162
+      },
+      "BAT_ADC_SENSE": {
+        "segments": 12,
+        "vias": 3,
+        "explicit_track_length_mm": 13.212868245813391
+      }
+    },
+    "remaining_components_if_removed": 59,
+    "limits": [
+      "No removal executed; user described a conditional fallback.",
+      "Bounding rectangle is not entirely reclaimed routing area.",
+      "Shared BAT_PACK_TBD and GND require branch-level editing; their whole nets must not be deleted.",
+      "Loses this external MCU-controlled battery-voltage measurement path; no replacement capability assumed.",
+      "Does not itself repair C8 ground or screen boost routing."
+    ]
+  }
+}

@@ -1,0 +1,368 @@
+{
+  "baseline": "USB-Power-Return-C; READ_ONLY_PREPARATION",
+  "snapshot_sha256": "ea16e450cbc05ed41c3f372eae4539382d1a373d764f900ff7a350f29ae72412",
+  "manufacturing": {
+    "J2": {
+      "copper": {
+        "apertures": 26,
+        "minimum_gap_mm": 0.19987299999999664,
+        "pad_pair": [
+          "11",
+          "10"
+        ]
+      },
+      "mask": {
+        "apertures": 26,
+        "minimum_gap_mm": 0.09984699999999691,
+        "pad_pair": [
+          "11",
+          "10"
+        ]
+      },
+      "paste": {
+        "apertures": 26,
+        "minimum_gap_mm": 0.19987299999999664,
+        "pad_pair": [
+          "11",
+          "10"
+        ]
+      }
+    },
+    "U1": {
+      "copper": {
+        "apertures": 61,
+        "minimum_gap_mm": 0.2999229999999926,
+        "pad_pair": [
+          "11",
+          "12"
+        ]
+      },
+      "mask": {
+        "apertures": 61,
+        "minimum_gap_mm": 0.19792299999998875,
+        "pad_pair": [
+          "11",
+          "12"
+        ]
+      },
+      "paste": {
+        "apertures": 61,
+        "minimum_gap_mm": 0.2999229999999926,
+        "pad_pair": [
+          "11",
+          "12"
+        ]
+      }
+    },
+    "U2": {
+      "copper": {
+        "apertures": 11,
+        "minimum_gap_mm": 0.19979599999999564,
+        "pad_pair": [
+          "2",
+          "3"
+        ]
+      },
+      "mask": {
+        "apertures": 11,
+        "minimum_gap_mm": 0.09779500000000141,
+        "pad_pair": [
+          "2",
+          "3"
+        ]
+      },
+      "paste": {
+        "apertures": 11,
+        "minimum_gap_mm": 0.19979599999999564,
+        "pad_pair": [
+          "2",
+          "3"
+        ]
+      },
+      "exposed_pad": {
+        "copper_bounds_mm": [
+          45.270001,
+          18.5538745,
+          46.169999,
+          20.0538715
+        ],
+        "paste_bounds_mm": [
+          45.270001,
+          18.5538745,
+          46.169999,
+          20.0538715
+        ],
+        "paste_area_ratio": 1.0,
+        "ti_example_mm": [
+          0.85,
+          1.38
+        ],
+        "ti_example_stencil_mm": 0.125,
+        "ti_example_coverage_percent": 88
+      }
+    },
+    "U3": {
+      "copper": {
+        "apertures": 5,
+        "minimum_gap_mm": 0.3499610000000004,
+        "pad_pair": [
+          "3",
+          "2"
+        ]
+      },
+      "mask": {
+        "apertures": 5,
+        "minimum_gap_mm": 0.24993699999999563,
+        "pad_pair": [
+          "3",
+          "2"
+        ]
+      },
+      "paste": {
+        "apertures": 5,
+        "minimum_gap_mm": 0.3499610000000004,
+        "pad_pair": [
+          "3",
+          "2"
+        ]
+      }
+    },
+    "U4": {
+      "copper": {
+        "apertures": 6,
+        "minimum_gap_mm": 0.22999700000001155,
+        "pad_pair": [
+          "2",
+          "1"
+        ]
+      },
+      "mask": {
+        "apertures": 6,
+        "minimum_gap_mm": 0.1279970000000077,
+        "pad_pair": [
+          "2",
+          "1"
+        ]
+      },
+      "paste": {
+        "apertures": 6,
+        "minimum_gap_mm": 0.22999700000001155,
+        "pad_pair": [
+          "2",
+          "1"
+        ]
+      }
+    }
+  },
+  "nfc_vias": [
+    {
+      "xy_mm": [
+        59.89999957999999,
+        6.664959999999999
+      ],
+      "outer_mm": 0.508,
+      "drill_mm": 0.30479999999999996,
+      "hole_to_smt_mm": 0.19729957999999928,
+      "nearest_pad": "U1.52",
+      "outer_0p6_foreign_gap_mm": 0.9649605132205723
+    },
+    {
+      "xy_mm": [
+        55.89999996,
+        8.760000259999998
+      ],
+      "outer_mm": 0.508,
+      "drill_mm": 0.30479999999999996,
+      "hole_to_smt_mm": 0.15702025999999947,
+      "nearest_pad": "C23.1",
+      "outer_0p6_foreign_gap_mm": 0.7459905548284524
+    },
+    {
+      "xy_mm": [
+        59.89999957999999,
+        5.86486
+      ],
+      "outer_mm": 0.508,
+      "drill_mm": 0.30479999999999996,
+      "hole_to_smt_mm": 0.19729957999999928,
+      "nearest_pad": "U1.54",
+      "outer_0p6_foreign_gap_mm": 0.965334846677662
+    },
+    {
+      "xy_mm": [
+        55.89999996,
+        5.19999976
+      ],
+      "outer_mm": 0.508,
+      "drill_mm": 0.30479999999999996,
+      "hole_to_smt_mm": 0.19750023999999922,
+      "nearest_pad": "C24.1",
+      "outer_0p6_foreign_gap_mm": 0.7590017496411148
+    }
+  ],
+  "power_sensitivity_not_ratings": [
+    {
+      "screen_ma_assumed": 50,
+      "mcu_other_ma_assumed": 25,
+      "rail_ma": 75.0,
+      "margin_to_200ma": 125.0,
+      "margin_to_160ma_goal": 85.0,
+      "battery_c_rate_at_110mah": 0.6818181818181818,
+      "battery_fet_drop_mv_at_0p14ohm": 10.5,
+      "usb_5v_battery_3p3v_charge_55ma_assumed": [
+        {
+          "sys_v": 3.8,
+          "u2_w": 0.18350000000000002,
+          "u3_w": 0.0375,
+          "sum_w": 0.22100000000000003,
+          "input_ma_without_iq_or_usb_phy": 130.0
+        },
+        {
+          "sys_v": 4.5,
+          "u2_w": 0.131,
+          "u3_w": 0.09000000000000001,
+          "sum_w": 0.22100000000000003,
+          "input_ma_without_iq_or_usb_phy": 130.0
+        }
+      ]
+    },
+    {
+      "screen_ma_assumed": 100,
+      "mcu_other_ma_assumed": 25,
+      "rail_ma": 125.0,
+      "margin_to_200ma": 75.0,
+      "margin_to_160ma_goal": 35.0,
+      "battery_c_rate_at_110mah": 1.1363636363636365,
+      "battery_fet_drop_mv_at_0p14ohm": 17.5,
+      "usb_5v_battery_3p3v_charge_55ma_assumed": [
+        {
+          "sys_v": 3.8,
+          "u2_w": 0.24350000000000002,
+          "u3_w": 0.0625,
+          "sum_w": 0.30600000000000005,
+          "input_ma_without_iq_or_usb_phy": 180.0
+        },
+        {
+          "sys_v": 4.5,
+          "u2_w": 0.15600000000000003,
+          "u3_w": 0.15000000000000002,
+          "sum_w": 0.30600000000000005,
+          "input_ma_without_iq_or_usb_phy": 180.0
+        }
+      ]
+    },
+    {
+      "screen_ma_assumed": 150,
+      "mcu_other_ma_assumed": 25,
+      "rail_ma": 175.0,
+      "margin_to_200ma": 25.0,
+      "margin_to_160ma_goal": -15.0,
+      "battery_c_rate_at_110mah": 1.5909090909090908,
+      "battery_fet_drop_mv_at_0p14ohm": 24.5,
+      "usb_5v_battery_3p3v_charge_55ma_assumed": [
+        {
+          "sys_v": 3.8,
+          "u2_w": 0.30350000000000005,
+          "u3_w": 0.0875,
+          "sum_w": 0.391,
+          "input_ma_without_iq_or_usb_phy": 229.99999999999997
+        },
+        {
+          "sys_v": 4.5,
+          "u2_w": 0.181,
+          "u3_w": 0.21000000000000002,
+          "sum_w": 0.391,
+          "input_ma_without_iq_or_usb_phy": 229.99999999999997
+        }
+      ]
+    },
+    {
+      "screen_ma_assumed": 200,
+      "mcu_other_ma_assumed": 25,
+      "rail_ma": 225.0,
+      "margin_to_200ma": -25.0,
+      "margin_to_160ma_goal": -65.0,
+      "battery_c_rate_at_110mah": 2.0454545454545454,
+      "battery_fet_drop_mv_at_0p14ohm": 31.500000000000007,
+      "usb_5v_battery_3p3v_charge_55ma_assumed": [
+        {
+          "sys_v": 3.8,
+          "u2_w": 0.3635000000000001,
+          "u3_w": 0.1125,
+          "sum_w": 0.4760000000000001,
+          "input_ma_without_iq_or_usb_phy": 280.0
+        },
+        {
+          "sys_v": 4.5,
+          "u2_w": 0.20600000000000002,
+          "u3_w": 0.2700000000000001,
+          "sum_w": 0.4760000000000001,
+          "input_ma_without_iq_or_usb_phy": 280.0
+        }
+      ]
+    }
+  ],
+  "c_vbus_copper_estimate": {
+    "rho_ohm_mm": 1.724e-05,
+    "thickness_mm_assumed": 0.035,
+    "via_plating_mm_assumed": 0.02,
+    "u1_path_ohm": 0.02626116288995141,
+    "u2_path_ohm": 0.03625216292817989,
+    "u2_drop_mv_at_0p3a": 10.875648878453967,
+    "u2_trace_loss_w_at_0p3a": 0.00326269466353619,
+    "limits": "Single chosen upper VBUS path, excludes connector/cable/return/temperature; not ampacity or a complete load-flow solution."
+  },
+  "display_named_pin_distances_mm": [
+    {
+      "from": "C9.1",
+      "to": "U4.1",
+      "distance": 1.6853144044954878
+    },
+    {
+      "from": "C10.1",
+      "to": "U4.6",
+      "distance": 2.231803055110388
+    },
+    {
+      "from": "C10.1",
+      "to": "L1.1",
+      "distance": 2.7970013606718185
+    },
+    {
+      "from": "L1.2",
+      "to": "Q1.3",
+      "distance": 1.8719800000000077
+    },
+    {
+      "from": "Q1.2",
+      "to": "R15.1",
+      "distance": 1.1783218509388627
+    },
+    {
+      "from": "Q1.1",
+      "to": "J2.2",
+      "distance": 17.128858509789843
+    },
+    {
+      "from": "R15.1",
+      "to": "J2.3",
+      "distance": 17.833805232501565
+    },
+    {
+      "from": "C14.1",
+      "to": "J2.4",
+      "distance": 1.9868012487412954
+    },
+    {
+      "from": "C22.1",
+      "to": "J2.24",
+      "distance": 5.438657229022616
+    }
+  ],
+  "limits": [
+    "No power measurement.",
+    "No complete 3D fit or FPC bend verification.",
+    "C mask and paste counts do not approve stencil process.",
+    "NFC feed via expansion needs same-net solderability review and rerouting."
+  ]
+}

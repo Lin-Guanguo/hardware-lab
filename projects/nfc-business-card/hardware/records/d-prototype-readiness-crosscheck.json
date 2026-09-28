@@ -1,0 +1,39 @@
+{
+  "source": "projects/nfc-business-card/hardware/records/board-review-d-snapshot.json",
+  "source_sha256": "b41283e216670f814a63f064995077f8df891c49a579c98a16db24af93236a0c",
+  "method": "Read-only recomputation with check-r1-copper.audit; exact GND polygon unions from copper(); plated via/through-hole pad centres join layer components; BFS from C8.2. Repeat after subtracting a small box from top copper only, without editing the EDA project.",
+  "independent_audit": {
+    "ok": true,
+    "split_nets": 0,
+    "dead_ends": 0,
+    "floating_copper": 0,
+    "single_layer_or_isolated_vias": 0
+  },
+  "hypothetical_top_cut_box_mm": [
+    60.14,
+    5.05,
+    60.16,
+    5.11
+  ],
+  "baseline_connected_from_C8_2": {
+    "J1.B1A12": true,
+    "J1.A1B12": true,
+    "J1.20": true,
+    "J1.19": true,
+    "J1.18": true,
+    "J1.17": true,
+    "U2.5": true,
+    "U2.11": true
+  },
+  "after_local_cut_connected_from_C8_2": {
+    "J1.B1A12": false,
+    "J1.A1B12": false,
+    "J1.20": false,
+    "J1.19": false,
+    "J1.18": false,
+    "J1.17": false,
+    "U2.5": false,
+    "U2.11": false
+  },
+  "limitation": "Hypothetical geometry cut proves dependence on this connection in the saved snapshot; it is not a measurement, fabricated defect, current-flow simulation, or proof that the complete charger ground is isolated in the unmodified board."
+}

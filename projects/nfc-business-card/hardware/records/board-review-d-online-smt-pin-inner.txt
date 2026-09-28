@@ -1,0 +1,382 @@
+- generic: 嘉立创DFM
+- list:
+  - listitem "撤销(Ctrl+Z)"
+  - listitem "重做(Ctrl+Y)"
+  - listitem "放大(A)"
+  - listitem "缩小(Z)"
+  - listitem "适应选中"
+  - listitem "自适应窗口(K)"
+  - listitem "板子翻转(Shift+F)"
+  - listitem "整体逆时针旋转"
+  - listitem "整体顺时针旋转"
+  - listitem "逆时针旋转(Space)"
+  - listitem "独立顺时针旋转"
+  - listitem "上下镜像"
+  - listitem "左右镜像"
+  - listitem "自动对齐"
+  - listitem "测量(Ctrl+M)"
+  - listitem "导出分析报告"
+  - listitem "设置"
+  - listitem "导出装配图"
+- group "单位":
+  - button "mm"
+  - button "inch"
+- button "切换到浅色主题":
+  - img "切换到浅色主题"
+- button "PCB DFM"
+- button "SMT DFM"
+- button "执行DFM检查"
+- button "BOM匹配"
+- generic: 分析项目
+- generic: 统计
+- generic: 操作
+- generic: 元件插件尺寸过大预警
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 元件碰撞预警
+- generic: "0"
+- text: ","
+- generic: "3"
+- text: ","
+- generic: "0"
+- button "详情"
+- generic: 元件距元件
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "50"
+- button "详情"
+- generic: 元件距板边的距离
+- generic: "1"
+- text: ","
+- generic: "1"
+- text: ","
+- generic: "0"
+- button "详情"
+- generic: 元件焊脚到孔的距离
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 元件本体文字预警
+- generic: "0"
+- text: ","
+- generic: "4"
+- text: ","
+- generic: "0"
+- button "详情"
+- generic: 元件焊盘间距
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 元件与板框相交
+- generic: "0"
+- text: ","
+- generic: "1"
+- text: ","
+- generic: "0"
+- button "详情"
+- generic: PIN脚内边界
+- generic: "21"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [active]
+- generic: PIN脚左边界
+- generic: "13"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情"
+- generic: PIN脚无焊盘
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: PIN脚外边界
+- generic: "4"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情"
+- generic: PIN脚右边界
+- generic: "11"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情"
+- generic: 元件插件尺寸过小预警
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 元件插件孔
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 元件插件重叠预警
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 元件插脚无孔
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 焊脚和焊盘相交区域
+- generic: "12"
+- text: ","
+- generic: "1"
+- text: ","
+- generic: "0"
+- button "详情"
+- generic "关闭左侧栏"
+- checkbox "选中顶层器件"
+- text: 选中顶层器件
+- checkbox "选中底层器件"
+- text: 选中底层器件
+- button "导出图片"
+- generic "Gerber(5)": Gerber图
+- generic "Gerber(6)": 骨架线框
+- generic "2D(2)": 2D仿真图
+- generic "3D(3)": 3D仿真图
+- generic: 顶层
+- generic: 底层
+- generic "关闭右侧栏"
+- banner:
+  - generic: 显示层控制
+  - generic: 3 层
+- table:
+  - rowgroup:
+    - row "编辑 内容":
+      - columnheader
+      - columnheader "编辑"
+      - columnheader "内容"
+- table:
+  - rowgroup:
+    - row "引脚标识":
+      - cell
+      - cell
+      - cell "引脚标识"
+- table:
+  - rowgroup:
+    - row "方向标识":
+      - cell
+      - cell
+      - cell "方向标识"
+- table:
+  - rowgroup:
+    - row "模型位号":
+      - cell
+      - cell
+      - cell "模型位号"
+- generic: "X: 67.05 Y: 24.66 mm"
+- generic: 元件组装分析 > PIN脚内边界
+- generic: 测量l元件引脚边界是否超出了焊盘边界
+- generic: 层
+- generic "component_+_top":
+  - generic: component_+_top
+  - generic: 21, 0, 0
+- table:
+  - rowgroup:
+    - row "序号 全部 值 对象1 对象2":
+      - columnheader "序号"
+      - columnheader "全部":
+        - combobox:
+          - option "全部" [selected]
+          - option "良好"
+          - option "警告"
+          - option "危险"
+      - columnheader "值"
+      - columnheader "对象1"
+      - columnheader "对象2"
+- table:
+  - rowgroup:
+    - row "1 危险 0.5mm J1 null":
+      - cell "1"
+      - cell "危险":
+        - generic "危险"
+      - cell "0.5mm"
+      - cell "J1"
+      - cell "null"
+    - row "2 危险 0.5mm J1 null":
+      - cell "2"
+      - cell "危险":
+        - generic "危险"
+      - cell "0.5mm"
+      - cell "J1"
+      - cell "null"
+    - row "3 危险 0.5mm J1 null":
+      - cell "3"
+      - cell "危险":
+        - generic "危险"
+      - cell "0.5mm"
+      - cell "J1"
+      - cell "null"
+    - row "4 危险 0.5mm J1 null":
+      - cell "4"
+      - cell "危险":
+        - generic "危险"
+      - cell "0.5mm"
+      - cell "J1"
+      - cell "null"
+    - row "5 危险 0.5mm J1 null":
+      - cell "5"
+      - cell "危险":
+        - generic "危险"
+      - cell "0.5mm"
+      - cell "J1"
+      - cell "null"
+    - row "6 危险 0.5mm J1 null":
+      - cell "6"
+      - cell "危险":
+        - generic "危险"
+      - cell "0.5mm"
+      - cell "J1"
+      - cell "null"
+    - row "7 危险 0.5mm J1 null":
+      - cell "7"
+      - cell "危险":
+        - generic "危险"
+      - cell "0.5mm"
+      - cell "J1"
+      - cell "null"
+    - row "8 危险 0.5mm J1 null":
+      - cell "8"
+      - cell "危险":
+        - generic "危险"
+      - cell "0.5mm"
+      - cell "J1"
+      - cell "null"
+    - row "9 危险 0.5mm J1 null":
+      - cell "9"
+      - cell "危险":
+        - generic "危险"
+      - cell "0.5mm"
+      - cell "J1"
+      - cell "null"
+    - row "10 危险 0.5mm J1 null":
+      - cell "10"
+      - cell "危险":
+        - generic "危险"
+      - cell "0.5mm"
+      - cell "J1"
+      - cell "null"
+    - row "11 危险 0.5mm J1 null":
+      - cell "11"
+      - cell "危险":
+        - generic "危险"
+      - cell "0.5mm"
+      - cell "J1"
+      - cell "null"
+    - row "12 危险 0.5mm J1 null":
+      - cell "12"
+      - cell "危险":
+        - generic "危险"
+      - cell "0.5mm"
+      - cell "J1"
+      - cell "null"
+    - row "13 危险 0mm U1 null":
+      - cell "13"
+      - cell "危险":
+        - generic "危险"
+      - cell "0mm"
+      - cell "U1"
+      - cell "null"
+    - row "14 危险 0mm U1 null":
+      - cell "14"
+      - cell "危险":
+        - generic "危险"
+      - cell "0mm"
+      - cell "U1"
+      - cell "null"
+    - row "15 危险 0mm U1 null":
+      - cell "15"
+      - cell "危险":
+        - generic "危险"
+      - cell "0mm"
+      - cell "U1"
+      - cell "null"
+    - row "16 危险 0mm U1 null":
+      - cell "16"
+      - cell "危险":
+        - generic "危险"
+      - cell "0mm"
+      - cell "U1"
+      - cell "null"
+    - row "17 危险 0mm U1 null":
+      - cell "17"
+      - cell "危险":
+        - generic "危险"
+      - cell "0mm"
+      - cell "U1"
+      - cell "null"
+    - row "18 危险 0mm U1 null":
+      - cell "18"
+      - cell "危险":
+        - generic "危险"
+      - cell "0mm"
+      - cell "U1"
+      - cell "null"
+    - row "19 危险 0mm U1 null":
+      - cell "19"
+      - cell "危险":
+        - generic "危险"
+      - cell "0mm"
+      - cell "U1"
+      - cell "null"
+    - row "20 危险 0mm U1 null":
+      - cell "20"
+      - cell "危险":
+        - generic "危险"
+      - cell "0mm"
+      - cell "U1"
+      - cell "null"
+    - row "21 危险 0mm U2 null":
+      - cell "21"
+      - cell "危险":
+        - generic "危险"
+      - cell "0mm"
+      - cell "U2"
+      - cell "null"
+- checkbox "智能显示图层" [checked]
+- text: 智能显示图层
+- checkbox "自动适应视图" [checked]
+- text: 自动适应视图
+- button "第一个"
+- button "上一个"
+- button "下一个"
+- button "最后"
+- button "全部"
+- generic "本项检测引脚内侧边缘是否会超出焊盘边缘，元件引脚焊接区域超出焊盘，影响焊接品质，如果是特殊设计可忽略。"
+- generic: 报警值
+- generic: 危险
+- generic: 警告
+- generic: 良好
+- alert

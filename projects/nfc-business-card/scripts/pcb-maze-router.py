@@ -23,6 +23,8 @@ for the true numbers.
 import argparse, json, math, sys, time
 import numpy as np
 from collections import defaultdict
+from shapely.geometry import LineString, Point, box
+from shapely.strtree import STRtree
 
 ap = argparse.ArgumentParser(description=__doc__)
 ap.add_argument('--dump', required=True)
@@ -35,6 +37,9 @@ ap.add_argument('--constraints', help='JSON with outline_mm and keepouts_mm for 
 ap.add_argument('--via-diameter', type=float, default=.55)
 ap.add_argument('--via-hole', type=float, default=.30)
 ap.add_argument('--grid', type=float, default=.1)
+ap.add_argument('--clearance', type=float, help='Override copper clearance for this candidate')
+ap.add_argument('--source-pad-only', action='store_true', help='Start each route at the named pad, for Kelvin branches')
+ap.add_argument('--hole-to-smt', type=float, default=.15, help='All-net hole-wall to SMT pad clearance')
 args = ap.parse_args()
 
 DUMP_PATH = args.dump
@@ -50,6 +55,8 @@ W, H = 84.0, 52.0
 NX, NY = int(W/GRID)+1, int(H/GRID)+1
 PLANE = NY*NX
 CL_TT, CL_PT, CL_VT, CL_VP, CL_EDGE = 0.150, 0.152, 0.152, 0.152, 0.300
+if args.clearance is not None:
+    CL_TT = CL_PT = CL_VT = CL_VP = args.clearance
 VIA_OD, VIA_DR = args.via_diameter, args.via_hole
 HW_VIA = VIA_OD/2
 HOLE_CLEARANCE = 0.30        # hole-to-hole; applies to every net, including the one being routed
@@ -141,11 +148,11 @@ def build(net_keep, hw_track, hw_via):
         if p['net'] == net_keep:
             # Keep new drill holes outside their own SMD lands too.
             for L in pad_layers(p):
-                for yy, xx in cells([p], VIA_DR/2 + .15): vi[L, yy, xx] = True
+                for yy, xx in cells([p], VIA_DR/2 + args.hole_to_smt): vi[L, yy, xx] = True
             continue
         for L in pad_layers(p):
             for yy, xx in cells([p], CL_PT + hw_track): tr[L, yy, xx] = True
-            for yy, xx in cells([p], CL_VP + hw_via):   vi[L, yy, xx] = True
+            for yy, xx in cells([p], max(CL_VP + hw_via, VIA_DR/2 + args.hole_to_smt)): vi[L, yy, xx] = True
     for l in lines:
         if l['net'] == net_keep: continue
         for yy, xx in cells([l], CL_TT + hw_track): tr[l['layer']-1, yy, xx] = True
@@ -200,42 +207,37 @@ class DSU:
         if ra!=rb: s.p[rb]=ra
 
 def components(net):
-    ls=[l for l in lines if l['net']==net]; vs=[v for v in vias if v['net']==net]; ps=[p for p in pads if p['net']==net]
-    NL,NV,NP=len(ls),len(vs),len(ps); dsu=DSU(NL+NV+NP)
-    for i in range(NL):
-        a=ls[i]
-        for j in range(i+1,NL):
-            b=ls[j]
-            if a['layer']!=b['layer']: continue
-            if seg_int((a['x1'],a['y1'],a['x2'],a['y2']),(b['x1'],b['y1'],b['x2'],b['y2'])): dsu.u(i,j); continue
-            if seg_pt_dist(a['x1'],a['y1'],b['x1'],b['y1'],b['x2'],b['y2'])<0.06: dsu.u(i,j); continue
-            if seg_pt_dist(a['x2'],a['y2'],b['x1'],b['y1'],b['x2'],b['y2'])<0.06: dsu.u(i,j)
-    for k,v in enumerate(vs):
-        for i,a in enumerate(ls):
-            if seg_pt_dist(v['x'],v['y'],a['x1'],a['y1'],a['x2'],a['y2'])<=v['rad']+0.02: dsu.u(NL+k,i)
-        for pi,p in enumerate(ps):
-            if p['x0']-0.02<=v['x']<=p['x1']+0.02 and p['y0']-0.02<=v['y']<=p['y1']+0.02: dsu.u(NL+k,NL+NV+pi)
-    for pi,p in enumerate(ps):
-        for i,a in enumerate(ls):
-            if (a['layer']-1) not in pad_layers(p): continue
-            hit=False
-            if p['x0']<=a['x1']<=p['x1'] and p['y0']<=a['y1']<=p['y1']: hit=True
-            if p['x0']<=a['x2']<=p['x1'] and p['y0']<=a['y2']<=p['y1']: hit=True
-            if not hit:
-                for e in ((p['x0'],p['y0'],p['x1'],p['y0']),(p['x0'],p['y1'],p['x1'],p['y1']),
-                          (p['x0'],p['y0'],p['x0'],p['y1']),(p['x1'],p['y0'],p['x1'],p['y1'])):
-                    if seg_int((a['x1'],a['y1'],a['x2'],a['y2']),e): hit=True; break
-            if hit: dsu.u(NL+NV+pi,i)
-    for i in range(NP):
-        for j in range(i+1,NP):
-            a,b=ps[i],ps[j]
-            if not (set(pad_layers(a)) & set(pad_layers(b))): continue
-            if a['x0']<b['x1'] and b['x0']<a['x1'] and a['y0']<b['y1'] and b['y0']<a['y1']: dsu.u(NL+NV+i,NL+NV+j)
-    g=defaultdict(list)
-    for i,l in enumerate(ls): g[dsu.f(i)].append(('line',l))
-    for k,v in enumerate(vs): g[dsu.f(NL+k)].append(('via',v))
-    for pi,p in enumerate(ps): g[dsu.f(NL+NV+pi)].append(('pad',p))
-    return list(g.values())
+    items = [('line', l) for l in lines if l['net'] == net]
+    items += [('via', v) for v in vias if v['net'] == net]
+    items += [('pad', p) for p in pads if p['net'] == net]
+    dsu = DSU(len(items))
+    by_layer = defaultdict(list)
+    for i, (kind, it) in enumerate(items):
+        if kind == 'line':
+            shape = LineString([(it['x1'], it['y1']), (it['x2'], it['y2'])]).buffer(it['hw'])
+            layers = [it['layer']-1]
+        elif kind == 'via':
+            shape = Point(it['x'], it['y']).buffer(it['rad'])
+            layers = [0, 1]
+        else:
+            shape = box(it['x0'], it['y0'], it['x1'], it['y1'])
+            if it.get('ell'):
+                shape = Point(it['cx'], it['cy']).buffer((it['x1']-it['x0'])/2)
+            layers = pad_layers(it)
+        for layer in layers:
+            by_layer[layer].append((i, shape))
+    # Copper contact is determined by widths, not a fixed centre-line distance.
+    for entries in by_layer.values():
+        shapes = [shape for _, shape in entries]
+        tree = STRtree(shapes)
+        for local, (i, shape) in enumerate(entries):
+            for j in tree.query(shape.buffer(.001)):
+                if j > local and shape.distance(shapes[j]) <= .001:
+                    dsu.u(i, entries[j][0])
+    groups = defaultdict(list)
+    for i, item in enumerate(items):
+        groups[dsu.f(i)].append(item)
+    return list(groups.values())
 
 def group_mask(group):
     m=np.zeros((2,NY,NX),bool)
@@ -294,7 +296,7 @@ def route(src_mask, goal_mask, track_free, via_free, usage=None, PEN=30):
                 if not good.any(): continue
                 l2,qx,qy,sl,sx,sy = l2[good],qx[good],qy[good],sl[good],sx[good],sy[good]
                 extra = (usage[l2,qy,qx]*PEN) if usage is not None else 0
-                dnew = cur + w + extra
+                dnew = np.broadcast_to(cur + w + extra, qx.shape)
                 better = dnew < dist[l2,qy,qx]
                 if not better.any(): continue
                 l2,qx,qy,sl,sx,sy,dnew = l2[better],qx[better],qy[better],sl[better],sx[better],sy[better],dnew[better]
@@ -313,13 +315,18 @@ def route(src_mask, goal_mask, track_free, via_free, usage=None, PEN=30):
                 good=via_free[1-sl,qy,qx]&via_free[sl,qy,qx]
                 if not good.any(): continue
                 qx,qy=qx[good],qy[good]
-                better=(cur+VIA_COST)<dist[1-sl,qy,qx]
+                via_extra = ((usage[0,qy,qx] + usage[1,qy,qx])*PEN) if usage is not None else 0
+                dnew = cur + VIA_COST + via_extra
+                better=dnew<dist[1-sl,qy,qx]
                 if not better.any(): continue
                 qx,qy=qx[better],qy[better]
-                dist[1-sl,qy,qx]=cur+VIA_COST
+                dnew = np.broadcast_to(dnew, better.shape)[better]
+                dist[1-sl,qy,qx]=dnew
                 pred[1-sl,qy,qx]=(sl*PLANE+qy.astype(np.int64)*NX+qx).astype(np.int32)
-                buckets[cur+VIA_COST].append(((1-sl)*PLANE+qy.astype(np.int64)*NX+qx).astype(np.int32))
-                maxd=max(maxd,cur+VIA_COST)
+                for value in np.unique(dnew):
+                    same = dnew == value
+                    buckets[int(value)].append(((1-sl)*PLANE+qy[same].astype(np.int64)*NX+qx[same]).astype(np.int32))
+                    maxd=max(maxd,int(value))
         if hit is None:
             dd=np.where(dist.reshape(-1)[Gflat]<=(1<<30),dist.reshape(-1)[Gflat],1<<30)
             dmin=dist[G[:,0],G[:,1],G[:,2]].min() if G.size else 1<<30
@@ -426,7 +433,9 @@ def find_pad(x,y):
 
 TASKS = json.load(open(TASKS_PATH))
 out=[]
-for net, srcpt, goals in TASKS:
+for task in TASKS:
+    net, srcpt, goals = task[:3]
+    HW_TRACK = (task[3] if len(task) > 3 else args.width) / 2
     t0=time.time()
     comps = components(net)
     sp,_ = find_pad(*srcpt)
@@ -435,7 +444,7 @@ for net, srcpt, goals in TASKS:
         if any(k=='pad' and it['id']==sp['id'] for k,it in c): src_comp=c
     if src_comp is None:
         print(net, 'SOURCE PAD NOT FOUND', flush=True); continue
-    srcmask = group_mask(src_comp)
+    srcmask = group_mask([('pad', sp)] if args.source_pad_only else src_comp)
     tf, vf = build(net, HW_TRACK, HW_VIA)
     rec={'net':net,'segments':[],'vias':[],'status':[]}
     for gp in goals:
@@ -447,7 +456,7 @@ for net, srcpt, goals in TASKS:
         goalmask = group_mask(goal_group)
         p = route(srcmask, goalmask, tf, vf, usage=USAGE, PEN=PEN_DEFAULT)
         if p is None:
-            rec['status'].append(['FAIL', list(gp)]); continue
+            rec['status'].append(['FAIL', list(gp), {'free_source_cells': int((srcmask & tf).sum()), 'free_goal_cells': int((goalmask & tf).sum())}]); continue
         segs, vlist = path_to_items(p, net)
         rec['segments'] += segs; rec['vias'] += vlist
         rec['status'].append(['OK', list(gp), len(segs), len(vlist)])
@@ -467,6 +476,8 @@ for net, srcpt, goals in TASKS:
             vias.append(v)
             ob={'x0':v['x']-v['rad'],'y0':v['y']-v['rad'],'x1':v['x']+v['rad'],'y1':v['y']+v['rad'],'ell':True}
             for yy,xx in cells([ob],0.0): srcmask[:,yy,xx]=True
+        # Later branches must also clear holes created for this net.
+        tf, vf = build(net, HW_TRACK, HW_VIA)
     rec['secs']=round(time.time()-t0,1)
     out.append(rec)
     print(net, rec['status'], rec['secs'], flush=True)

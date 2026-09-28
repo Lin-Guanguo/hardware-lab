@@ -4,6 +4,7 @@
 
 The [R1 index](../README.md) defines current geometry and release status. Older dimensions or layout proposals in background notes are historical context.
 
+- [PCB 重新规划（2026-09-28）](pcb-replan-2026-09-28.md)：在 `master` 从新布局开始，保留已知设计依据，首轮验证关键区域可布线性。
 - [Progress](progress.md): current gates and required physical work.
 - [Delivery](../hardware/pcb-r1-delivery.md): evidence, limits and check commands.
 - [Software](software.md): EDA bridge and FreeCAD runtime.

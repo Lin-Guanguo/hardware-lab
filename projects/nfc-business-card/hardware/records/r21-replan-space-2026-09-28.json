@@ -1,0 +1,49 @@
+{
+  "source": "projects/nfc-business-card/hardware/records/r1-layout-reset-r21-routed-snapshot.json",
+  "source_sha256": "53784aeb473cef247c67a6f81b867715df2f370850b8347a606f2ccfc82ce919",
+  "method": "Native layer-11 outline parsed with pour_geometry.parse_path at 0.0254 mm/mil; Shapely intersections of recorded exclusion boundaries. Areas are geometric planning envelopes, not free placement area.",
+  "board_bounds_mm": [
+    1.10000034,
+    1.10000034,
+    82.8999993,
+    50.899999799999996
+  ],
+  "board_envelope_width_height_mm": [
+    81.79999896000001,
+    49.799999459999995
+  ],
+  "board_area_mm2": 3497.515560928221,
+  "prior_gerber_board_area_mm2": 3497.5310309377815,
+  "screen_nfc_exclusion_bounds_mm": [
+    0.0,
+    16.999999019999997,
+    39.6199995,
+    52.00000014
+  ],
+  "screen_nfc_overlap_board_mm2": 1294.3416675158408,
+  "right_electronics_envelope_bounds_mm": [
+    39.6199995,
+    1.10000034,
+    82.8999993,
+    50.899999799999996
+  ],
+  "right_electronics_envelope_area_mm2": 2153.6170661711694,
+  "right_envelope_after_recorded_ble_copper_exclusions_mm2": 2101.2440611601696,
+  "component_count": 66,
+  "component_prefix_counts": {
+    "C": 25,
+    "R": 23,
+    "SW": 3,
+    "U": 6,
+    "J": 2,
+    "L": 1,
+    "Q": 3,
+    "D": 3
+  },
+  "limits": [
+    "No component courtyard/body, FPC fold, mounting/assembly/tool access, signal/power/return channel or tolerance deduction; no free-area or routability claim.",
+    "Recorded copper exclusions are planning context, not universally interchangeable with body-placement keepouts.",
+    "Native arcs are sampled by the existing parser; compare area against the independent saved Gerber/CAD report.",
+    "Offline R21 snapshot only; no live EDA changes or new DRC/DFM execution."
+  ]
+}

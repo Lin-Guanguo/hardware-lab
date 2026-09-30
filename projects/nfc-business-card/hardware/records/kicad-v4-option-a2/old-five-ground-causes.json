@@ -1,0 +1,151 @@
+[
+  {
+    "pad": "C3.2",
+    "island_area_mm2": 2.742127,
+    "island_bounds_mm": [
+      175.75,
+      102.49999999999999,
+      178.8245,
+      105.947066
+    ],
+    "thermal_violation": true,
+    "boundary_nets": {
+      "SYS": [
+        "C2.1",
+        "3b6d5e58-0c4f-4267-84d8-67f030bae827",
+        "6ac4cd7e-83f6-4b46-9c74-cda7f4e5fbe2",
+        "ffcc60a7-69e9-4f2c-99e7-c3b405c3c89d"
+      ],
+      "BAT_PACK_TBD": [
+        "C3.1",
+        "29bb97fc-7f2d-4e28-9815-2fac2a561ae8",
+        "870c5101-077c-4ffd-9356-d14d9cbdb01e",
+        "b066a026-6467-4773-a4a4-592576f57c3d",
+        "66978436-d277-4ad6-bd1d-fce27859eacd"
+      ]
+    }
+  },
+  {
+    "pad": "C4.2",
+    "island_area_mm2": 3.154202,
+    "island_bounds_mm": [
+      173.75,
+      103.025157,
+      174.9745,
+      107.10000000000001
+    ],
+    "thermal_violation": false,
+    "boundary_nets": {
+      "CHG_CE_N": [
+        "R7.2",
+        "8d617520-a304-4534-8eec-017a087bacf0",
+        "c9653aa8-fd32-4887-a3de-aa5b904c0568"
+      ],
+      "SYS": [
+        "847407f0-b7e7-436a-b278-b2b4e3ee316a",
+        "fa09df0a-4d51-426a-ae8b-3433f727455d"
+      ]
+    }
+  },
+  {
+    "pad": "U3.2",
+    "island_area_mm2": 0.607162,
+    "island_bounds_mm": [
+      172.0819,
+      107.5,
+      173.1,
+      108.1
+    ],
+    "thermal_violation": false,
+    "boundary_nets": {
+      "BAT_NTC_TBD": [
+        "ffe55957-6352-4306-8d92-b322e0d71c18"
+      ]
+    }
+  },
+  {
+    "pad": "R19.2",
+    "island_area_mm2": 3.154202,
+    "island_bounds_mm": [
+      173.75,
+      103.025157,
+      174.9745,
+      107.10000000000001
+    ],
+    "thermal_violation": false,
+    "boundary_nets": {
+      "CHG_CE_N": [
+        "R7.2",
+        "8d617520-a304-4534-8eec-017a087bacf0",
+        "c9653aa8-fd32-4887-a3de-aa5b904c0568"
+      ],
+      "SYS": [
+        "847407f0-b7e7-436a-b278-b2b4e3ee316a",
+        "fa09df0a-4d51-426a-ae8b-3433f727455d"
+      ]
+    }
+  },
+  {
+    "pad": "R14.2",
+    "island_area_mm2": 16.905279,
+    "island_bounds_mm": [
+      167.111479,
+      92.8388,
+      171.337555,
+      100.6895
+    ],
+    "thermal_violation": false,
+    "boundary_nets": {
+      "EPD_GDR": [
+        "R14.1",
+        "06b6e2a8-262a-4889-b4a1-e2154f146bda",
+        "5aa73c3b-6bb6-4513-9592-67ca8f62ad53",
+        "8fbb977b-45a1-4fda-a33d-324a9be43260"
+      ],
+      "EPD_SW": [
+        "L1.2",
+        "D1.2",
+        "06f4d7cc-fe01-4f3f-86f1-7d2f837fe977",
+        "2d62fd71-7be9-4ae2-81c1-30f79809b364",
+        "4cdb09e5-181b-4641-a013-f73df78d20e1",
+        "6acea1be-a8d5-4daa-abd3-b65f620fd72c"
+      ],
+      "EPD_RESE": [
+        "J2.3"
+      ],
+      "EPD_VDDL": [
+        "J2.4"
+      ],
+      "EPD_VSPL1": [
+        "J2.5"
+      ],
+      "unconnected-(J2-Pad6)": [
+        "J2.6"
+      ],
+      "unconnected-(J2-Pad7)": [
+        "J2.7"
+      ],
+      "EPD_BS0": [
+        "J2.8"
+      ],
+      "EPD_VDD": [
+        "00a59bf9-2237-467a-a792-ed9d46389580",
+        "24e767f9-6af3-4ab9-bff9-a7d80786d765",
+        "767bc3d8-f0b4-4817-b2d8-1d693dc86959"
+      ],
+      "EPD_BUSY_TBD": [
+        "b14eb31a-fc32-4fdf-89b3-44c3fd7a85fd",
+        "84048680-48e9-44b0-954d-507903f0f1da"
+      ],
+      "EPD_RESET_N_TBD": [
+        "25de8af6-0e5c-45f1-8f4b-3c3e66220fc4",
+        "d86ad0b8-adea-47ab-b779-dd1a955efe98",
+        "b215c745-8919-4f22-b2d2-193c4ae43058"
+      ],
+      "EPD_SCK_TBD": [
+        "c90695c7-eb9b-4972-97e3-6a4d77263017",
+        "0f606c1d-e75a-49bc-95c4-b14bc7ca68c5"
+      ]
+    }
+  }
+]

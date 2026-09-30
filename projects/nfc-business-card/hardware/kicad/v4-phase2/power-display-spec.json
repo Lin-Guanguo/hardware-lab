@@ -1,0 +1,440 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "description": "LDO decoupling, supply crossings and complete display boost loops after six-signal coexistence",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase2/power-display-ipc.json",
+  "vias": [],
+  "paths": [
+    {
+      "name": "LDO input bypass",
+      "net": "SYS",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "C4.1",
+        "U3.1"
+      ],
+      "bounds": [
+        156,
+        85,
+        186,
+        115
+      ]
+    },
+    {
+      "name": "LDO enable strap",
+      "net": "SYS",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "U3.1",
+        "U3.3"
+      ],
+      "bounds": [
+        156,
+        85,
+        186,
+        115
+      ]
+    },
+    {
+      "name": "LDO output bypass",
+      "net": "VDD_3V3",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "U3.5",
+        "C5.1"
+      ],
+      "bounds": [
+        156,
+        85,
+        186,
+        115
+      ]
+    },
+    {
+      "name": "MCU reservoir",
+      "net": "VDD_3V3",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "C5.1",
+        "C6.1"
+      ],
+      "bounds": [
+        156,
+        85,
+        186,
+        115
+      ]
+    },
+    {
+      "name": "MCU high frequency bypass",
+      "net": "VDD_3V3",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "C6.1",
+        "C7.1"
+      ],
+      "bounds": [
+        156,
+        85,
+        186,
+        115
+      ]
+    },
+    {
+      "name": "MCU VDDH",
+      "net": "VDD_3V3",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "C7.1",
+        "U1.30"
+      ],
+      "bounds": [
+        156,
+        85,
+        186,
+        115
+      ]
+    },
+    {
+      "name": "MCU VDD",
+      "net": "VDD_3V3",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "C6.1",
+        "U1.28"
+      ],
+      "bounds": [
+        156,
+        85,
+        186,
+        115
+      ]
+    },
+    {
+      "name": "USB VBUS bypass",
+      "net": "USB_VBUS",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "C1.1",
+        "U1.32"
+      ],
+      "bounds": [
+        156,
+        85,
+        186,
+        115
+      ]
+    },
+    {
+      "name": "boost input",
+      "net": "EPD_VDD",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "C10.1",
+        "L1.1"
+      ],
+      "bounds": [
+        156,
+        85,
+        186,
+        115
+      ]
+    },
+    {
+      "name": "boost switch",
+      "net": "EPD_SW",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "L1.2",
+        "Q1.3"
+      ],
+      "bounds": [
+        156,
+        85,
+        186,
+        115
+      ]
+    },
+    {
+      "name": "switch sense",
+      "net": "EPD_RESE",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "Q1.2",
+        "R15.1"
+      ],
+      "bounds": [
+        156,
+        85,
+        186,
+        115
+      ]
+    },
+    {
+      "name": "sense return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "R15.2",
+        "C10.2"
+      ],
+      "bounds": [
+        156,
+        85,
+        186,
+        115
+      ]
+    },
+    {
+      "name": "off-state diode",
+      "net": "EPD_SW",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "L1.2",
+        "D1.2"
+      ],
+      "bounds": [
+        156,
+        85,
+        186,
+        115
+      ]
+    },
+    {
+      "name": "off-state output",
+      "net": "EPD_VPH",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "D1.1",
+        "C12.1"
+      ],
+      "bounds": [
+        156,
+        85,
+        186,
+        115
+      ]
+    },
+    {
+      "name": "off-state return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "C12.2",
+        "C10.2"
+      ],
+      "bounds": [
+        156,
+        85,
+        186,
+        115
+      ]
+    },
+    {
+      "name": "pump coupling",
+      "net": "EPD_SW",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "D1.2",
+        "C11.1"
+      ],
+      "bounds": [
+        156,
+        85,
+        186,
+        115
+      ]
+    },
+    {
+      "name": "pump rectifier",
+      "net": "EPD_PUMP",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "C11.2",
+        "D2.2"
+      ],
+      "bounds": [
+        156,
+        85,
+        186,
+        115
+      ]
+    },
+    {
+      "name": "pump negative diode",
+      "net": "EPD_PUMP",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "D2.2",
+        "D3.1"
+      ],
+      "bounds": [
+        156,
+        85,
+        186,
+        115
+      ]
+    },
+    {
+      "name": "pump clamp return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "D2.1",
+        "C12.2"
+      ],
+      "bounds": [
+        156,
+        85,
+        186,
+        115
+      ]
+    },
+    {
+      "name": "negative output",
+      "net": "EPD_VGL",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "D3.2",
+        "C13.1"
+      ],
+      "bounds": [
+        156,
+        85,
+        186,
+        115
+      ]
+    },
+    {
+      "name": "negative return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "C13.2",
+        "D2.1"
+      ],
+      "bounds": [
+        156,
+        85,
+        186,
+        115
+      ]
+    },
+    {
+      "name": "EPD load switch bridge",
+      "net": "EPD_VDD",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "U4.6",
+        "U4.5"
+      ],
+      "bounds": [
+        156,
+        85,
+        186,
+        115
+      ]
+    },
+    {
+      "name": "EPD switch output bypass",
+      "net": "EPD_VDD",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "U4.6",
+        "C10.1"
+      ],
+      "bounds": [
+        156,
+        85,
+        186,
+        115
+      ]
+    },
+    {
+      "name": "EPD input bypass",
+      "net": "VDD_3V3",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "C9.1",
+        "U4.1"
+      ],
+      "bounds": [
+        156,
+        85,
+        186,
+        115
+      ]
+    },
+    {
+      "name": "LDO input return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "C4.2",
+        "U3.2"
+      ],
+      "bounds": [
+        156,
+        85,
+        186,
+        115
+      ]
+    },
+    {
+      "name": "LDO output return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "C5.2",
+        "U3.2"
+      ],
+      "bounds": [
+        156,
+        85,
+        186,
+        115
+      ]
+    },
+    {
+      "name": "U4 input return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "C9.2",
+        "U4.2"
+      ],
+      "bounds": [
+        156,
+        85,
+        186,
+        115
+      ]
+    }
+  ]
+}

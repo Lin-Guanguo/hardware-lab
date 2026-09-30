@@ -1,0 +1,22 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4/NFC-Card-V4.kicad_pcb",
+  "description": "Align diode polarity with the switching node and clear pump routing",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4/placement-03-ipc.json",
+  "placements": {
+    "D1": [
+      173.5,
+      96.5,
+      0
+    ],
+    "C11": [
+      178,
+      97.5,
+      0
+    ],
+    "R16": [
+      180,
+      87,
+      0
+    ]
+  }
+}

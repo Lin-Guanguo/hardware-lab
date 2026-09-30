@@ -1,0 +1,5 @@
+(version 1)
+
+# Minimums mirror the frozen D constraint record; no exclusions.
+(rule "D copper clearance" (constraint clearance (min 0.2mm)))
+(rule "D board-edge clearance" (constraint edge_clearance (min 0.3mm)))

@@ -2,9 +2,11 @@
 
 ## 当前确定方案
 
-KiCad 是已获用户授权准备的备用工具链。NFC 名片本轮继续使用嘉立创 EDA；安装工具不代表迁移产品工程。设计方法见 [pcb-methodology](../../.agents/skills/pcb-methodology/SKILL.md)，KiCad 执行入口为 [kicad-workflow](../../.agents/skills/kicad-workflow/SKILL.md)。
+2026-09-29，NFC 名片第四版已获用户明确授权使用 KiCad，完成[原生迁移与关键区试布](../../projects/nfc-business-card/hardware/kicad-v4-phase1.md)。嘉立创 D 保留作独立诊断对照；其它项目不自动迁移。设计方法见 [pcb-methodology](../../.agents/skills/pcb-methodology/SKILL.md)，KiCad 执行入口为 [kicad-workflow](../../.agents/skills/kicad-workflow/SKILL.md)。
 
 2026-09-28 已安装 **KiCad 10.0.6**，初始化官方库并启用 IPC；仓库虚拟环境为 Python 3.12.12 / `kicad-python` 0.8.0。独立样例的 API 编辑、保存关闭重开、原生 DRC 和文件导出均已验证，详细范围见下方记录。
+
+本轮沿用现有版本自检，没有重装或升级。真实导入新增限制：`kicad-python 0.8.0` 移动／旋转本次 EasyEDA Pro 导入的含圆弧 `fp_poly` 后曾改变局部图形，必须核对封装库差异；本轮关闭编辑器后恢复不变量并经重开验证。全局标签转换须包含 `Intersheetrefs` 属性，并通过原生保存规范化。不能只用基础样例的成功推断复杂导入完全兼容。
 
 ## 安装与恢复
 

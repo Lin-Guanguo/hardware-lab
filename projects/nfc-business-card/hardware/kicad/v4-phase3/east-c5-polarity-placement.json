@@ -1,0 +1,12 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase3/NFC-Card-V4.kicad_pcb",
+  "description": "Align C5 power/ground with C6 bank and U3 input/output escape directions",
+  "placements": {
+    "C5": [
+      173.5,
+      111.2,
+      90
+    ]
+  },
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase3/east-c5-polarity-placement.json"
+}

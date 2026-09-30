@@ -1,0 +1,111 @@
+{
+  "status": "Unselected geometry/threshold comparison; not a manufacturing project",
+  "source": "https://www.ti.com/lit/ds/symlink/tps25947.pdf",
+  "drawing": "4225183/A RPW0010A, 08/2019, PDF page 73",
+  "footprint_sha256": "6a393ccf290e86030a083e21fe752c56b17310be85639b48d48fff878ed54971",
+  "pad_count": 10,
+  "minimum_interpad_gap_mm": 0.19999999999999993,
+  "static_windows": {
+    "OVLO": {
+      "minimum_V": 5.252748904545456,
+      "maximum_V": 5.454250597147147,
+      "resistors_ohm": [
+        34500,
+        10000
+      ],
+      "resistor_tolerance": 0.001,
+      "pin_leakage_A": 1e-07
+    },
+    "UVLO": {
+      "minimum_V": 3.9787405518181815,
+      "maximum_V": 4.129685192822822,
+      "resistors_ohm": [
+        23700,
+        10000
+      ],
+      "resistor_tolerance": 0.001,
+      "pin_leakage_A": 1e-07
+    }
+  },
+  "parts": [
+    {
+      "ref": "U7",
+      "x_mm": 178,
+      "y_mm": 86,
+      "courtyard_width_mm": 2.9,
+      "courtyard_height_mm": 2.9,
+      "value": "TPS259470LRPWR"
+    },
+    {
+      "ref": "C26",
+      "x_mm": 176,
+      "y_mm": 83.5,
+      "courtyard_width_mm": 3.1,
+      "courtyard_height_mm": 1.85,
+      "value": "1uF 50V"
+    },
+    {
+      "ref": "C27",
+      "x_mm": 179.5,
+      "y_mm": 83.5,
+      "courtyard_width_mm": 2.5,
+      "courtyard_height_mm": 1.55,
+      "value": "4.7uF 16V"
+    },
+    {
+      "ref": "R24",
+      "x_mm": 171,
+      "y_mm": 84,
+      "courtyard_width_mm": 2.5,
+      "courtyard_height_mm": 1.55,
+      "value": "23.7k 0.1%"
+    },
+    {
+      "ref": "R25",
+      "x_mm": 173.6,
+      "y_mm": 84,
+      "courtyard_width_mm": 2.5,
+      "courtyard_height_mm": 1.55,
+      "value": "10k 0.1%"
+    },
+    {
+      "ref": "R26",
+      "x_mm": 171,
+      "y_mm": 86,
+      "courtyard_width_mm": 2.5,
+      "courtyard_height_mm": 1.55,
+      "value": "34.5k 0.1%"
+    },
+    {
+      "ref": "R27",
+      "x_mm": 173.6,
+      "y_mm": 86,
+      "courtyard_width_mm": 2.5,
+      "courtyard_height_mm": 1.55,
+      "value": "10k 0.1%"
+    },
+    {
+      "ref": "R28",
+      "x_mm": 181.8,
+      "y_mm": 86,
+      "courtyard_width_mm": 2.5,
+      "courtyard_height_mm": 1.55,
+      "value": "6.65k"
+    },
+    {
+      "ref": "C28",
+      "x_mm": 184.5,
+      "y_mm": 86,
+      "courtyard_width_mm": 2.5,
+      "courtyard_height_mm": 1.55,
+      "value": "3.3nF"
+    }
+  ],
+  "limitations": [
+    "OVLO response has a typical value only; transient overshoot is unbounded here",
+    "Divider tolerances exclude temperature drift; choose qualified MPNs before use",
+    "Passive courtyards are conservative occupancy envelopes, not new selected footprints",
+    "Mask 0.05 and full pad paste are candidate settings; stencil DFM not validated",
+    "No routing or USB inrush compliance claim"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "description": "Group CC pulldowns and reserve separate feed crossings without narrowing rules",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase2/feed-crossing-group-ipc.json",
+  "placements": {
+    "R1": [
+      183,
+      107.8,
+      180
+    ],
+    "R2": [
+      183,
+      109.4,
+      180
+    ],
+    "R13": [
+      180.5,
+      111.3,
+      0
+    ]
+  },
+  "remove_trial_ids": [
+    "12561ae4-508e-4d27-a621-b31ca819af03",
+    "733da99f-3b97-4052-817a-c5abad5b21d7",
+    "8eaa7ab0-2f35-40a8-8b5b-4f4feae7de9f",
+    "97db070d-e2d3-4153-bdd4-8c3a30649799",
+    "ae16951a-2f08-4fca-a363-6f6ae4063cdc",
+    "c19b4dca-5cb8-4993-95ae-d41b26d90292",
+    "c994d8e7-8f82-41f8-ada8-2f1572a5535d",
+    "da1f6a90-3e97-4300-9bcd-50a71d97110b"
+  ]
+}

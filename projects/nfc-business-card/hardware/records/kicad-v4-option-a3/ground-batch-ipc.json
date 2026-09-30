@@ -1,0 +1,22 @@
+{
+  "plan": "projects/nfc-business-card/hardware/kicad/v4-option-a3-local/ground-batch-plan.json",
+  "board": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4-option-a3-local/NFC-Card-V4.kicad_pcb",
+  "before": {
+    "tracks": 666,
+    "vias": 88
+  },
+  "after": {
+    "tracks": 666,
+    "vias": 96
+  },
+  "created_ids": [
+    "e2edfb45-6d76-4668-a6e9-e8922b95cbab",
+    "c26a14dd-0557-4a38-9b27-dc1415f21332",
+    "c71820b5-2125-449e-905a-bd8970b2222e",
+    "8fdcca88-2d1a-436b-9c71-b7dc026d3313",
+    "fca2c25d-f739-496b-91d5-0d38357a7d96",
+    "aa28b5ec-bf98-4e85-b9bb-1d054d260ba5",
+    "d0a98b56-b11e-4e0a-997c-ebc407d70506",
+    "29e77d57-13df-49c6-9f22-7c7c8f5b0807"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "source": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4-option-a/NFC-Card-V4.kicad_pcb",
+  "source_before_sha256": "7d5fb18f53a93bb830bb7dc2141376a30a330b3641eeefb14abf0cb2696c7ed0",
+  "source_after_sha256": "7d5fb18f53a93bb830bb7dc2141376a30a330b3641eeefb14abf0cb2696c7ed0",
+  "live_copy_sha256": "7d5fb18f53a93bb830bb7dc2141376a30a330b3641eeefb14abf0cb2696c7ed0",
+  "baseline_files": 527,
+  "method": "IPC SaveCopyOfDocument, source remains open and unchanged"
+}

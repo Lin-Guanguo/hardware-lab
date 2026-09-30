@@ -1,0 +1,73 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-option-a3-local/NFC-Card-V4.kicad_pcb",
+  "description": "Reject TS/PG crossing batch because it isolates C4 ground; restore original PG corridor",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-option-a3/ts-pg-rollback-ipc.json",
+  "remove_trial_ids": [
+    "f602b415-df52-4eb9-87f9-ed58401201c7",
+    "8587ba61-c415-4f70-9395-4382877f1a3b",
+    "4b674fc6-5140-490d-be01-f37ad92cd450",
+    "dc70d438-8317-4ea3-9d50-0d6d064ca95d",
+    "2b9800a2-c23a-478a-994d-7c8f8cf3749b",
+    "01e4922c-fb2d-4dff-9ca7-d7472b2cb207",
+    "60d80eae-d35c-46eb-9d08-8ca8eaa2b4b5",
+    "e92e8da6-9f04-4508-9504-8e0402412146",
+    "927899f3-e5be-4e1e-a628-552f8b8d2950",
+    "a52f711f-9a05-428c-b7f6-a42fbd42dca9",
+    "9b487d45-a696-4287-8637-8a3fc4ab6a24",
+    "9d12d705-b2f1-41bc-8ff4-265b7d5bc809",
+    "06eae7e1-6d06-4706-b336-e4127be9d0fa",
+    "8f9ead48-fdd1-4708-9b4a-5a831567b054",
+    "c3cd32b1-1291-413e-b1a1-cb8e433e6898",
+    "6be38aa0-b650-4511-9e12-40bb7d5bc0a3"
+  ],
+  "routes": [
+    {
+      "name": "Restore PG after rejected return regression",
+      "net": "CHG_PG_N",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          177,
+          105.5
+        ],
+        [
+          176.7,
+          105.8
+        ]
+      ]
+    },
+    {
+      "name": "Restore PG after rejected return regression",
+      "net": "CHG_PG_N",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          176.7,
+          105.8
+        ],
+        [
+          172.8,
+          105.8
+        ]
+      ]
+    },
+    {
+      "name": "Restore PG after rejected return regression",
+      "net": "CHG_PG_N",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          172.8,
+          105.8
+        ],
+        [
+          172.8,
+          114.899
+        ]
+      ]
+    }
+  ]
+}

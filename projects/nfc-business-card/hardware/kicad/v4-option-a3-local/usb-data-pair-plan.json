@@ -1,0 +1,202 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-option-a3-local/NFC-Card-V4.kicad_pcb",
+  "description": "A3 jointly repair only USB data trunk and adjacent display-supply crossing",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-option-a3/usb-data-pair-ipc.json",
+  "remove_trial_ids": [
+    "6cf75d89-fd4a-4fa2-96f4-b6f7b401e716",
+    "99c0e6c2-5c51-47f2-a412-fcaaf7cce651",
+    "f61031f1-3316-44ee-aacb-5d0a5b2e5ec0",
+    "f758aa30-c070-4843-9b0c-8da1f331dce9",
+    "cddcacac-7974-4218-9bbe-af7e607f29e9",
+    "e4b7f295-895a-45b3-9a5d-4deb1aef21c0",
+    "bbeb1954-cf69-4476-9332-dc45b12063e5",
+    "66bd8585-e07b-4e5f-986f-4cf4f28cf68b",
+    "66400e71-11d5-4689-bf98-6e1afe7cec16",
+    "e64e7b6e-eadf-4b4d-bb8e-a64a4573e89c",
+    "d3c952e5-19c6-46f8-8e23-03dd18ddfc2c",
+    "1a9770af-9c08-4a38-b18e-debcb78b8448",
+    "7c924363-e823-479a-b626-11493d2c682b",
+    "ab1ed541-36fa-4899-aeb9-555cb7a6f8d4",
+    "ab1e49a8-6d80-4716-aa61-2d3c02847930"
+  ],
+  "routes": [
+    {
+      "name": "Display 3V3 crossing shifted north to allocate USB pair",
+      "net": "VDD_3V3",
+      "layer": "B.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          167.6,
+          101.4
+        ],
+        [
+          168,
+          101
+        ],
+        [
+          179.2,
+          101
+        ],
+        [
+          179.6,
+          101.4
+        ]
+      ]
+    },
+    {
+      "name": "USB_DM_CONN joint local data pair",
+      "net": "USB_DM_CONN",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          180.0,
+          104.15
+        ],
+        [
+          179.1465,
+          103.2965
+        ],
+        [
+          179.1465,
+          103.0
+        ]
+      ],
+      "length_mm": 1.504
+    },
+    {
+      "name": "USB_DM_CONN joint local data pair",
+      "net": "USB_DM_CONN",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          179.1465,
+          103.0
+        ],
+        [
+          178.2465,
+          102.1
+        ],
+        [
+          168.9465,
+          102.1
+        ],
+        [
+          165.2465,
+          105.8
+        ],
+        [
+          165.2465,
+          107.5
+        ],
+        [
+          166.8465,
+          109.1
+        ],
+        [
+          166.8465,
+          111.3
+        ]
+      ],
+      "length_mm": 21.968
+    },
+    {
+      "name": "USB_DM_CONN joint local data pair",
+      "net": "USB_DM_CONN",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          166.8465,
+          111.3
+        ],
+        [
+          164.1465,
+          114.0
+        ],
+        [
+          164.1465,
+          114.6
+        ]
+      ],
+      "length_mm": 4.418
+    }
+  ],
+  "vias": [
+    {
+      "net": "USB_DM_CONN",
+      "at": [
+        179.1465,
+        102.99999999999999
+      ]
+    },
+    {
+      "net": "USB_DM_CONN",
+      "at": [
+        166.84650000000002,
+        111.3
+      ]
+    }
+  ],
+  "failures": [
+    {
+      "reason": "No path in assigned corridor",
+      "start": [
+        180.0,
+        103.45
+      ],
+      "end": [
+        164.1465,
+        116.2
+      ],
+      "visited": 15800,
+      "closest_reached": {
+        "layer": "F.Cu",
+        "point": [
+          162.94650000000001,
+          110.7
+        ],
+        "distance": 5.629387178015025
+      },
+      "direct_blockers": [
+        {
+          "name": "R4.1",
+          "net": "USB_DM_CONN",
+          "kind": "pad"
+        },
+        {
+          "name": "ed8ae29b-e83a-4682-9486-ff87cd4b0063",
+          "net": "VDD_3V3",
+          "kind": "track"
+        },
+        {
+          "name": "53346f32-d577-4a12-b7a7-e1fe74cd3f81",
+          "net": "GND",
+          "kind": "track"
+        },
+        {
+          "name": "642f6427-eb96-49db-8aff-2258d0c74bd8",
+          "net": "GND",
+          "kind": "track"
+        },
+        {
+          "name": "88d7ee2d-d949-4b12-864d-ed58ab2f1842",
+          "net": "KEY_OK_N",
+          "kind": "track"
+        },
+        {
+          "name": "ee1d5da0-0fd2-4639-a66d-7a6b0dac9682",
+          "net": "KEY_OK_N",
+          "kind": "track"
+        },
+        {
+          "name": "USB_DM_CONN joint local data pair",
+          "net": "USB_DM_CONN",
+          "kind": "track"
+        }
+      ]
+    }
+  ]
+}

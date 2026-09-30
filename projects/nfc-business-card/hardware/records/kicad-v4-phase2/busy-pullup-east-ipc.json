@@ -1,0 +1,13 @@
+{
+  "plan": "projects/nfc-business-card/hardware/kicad/v4-phase2/busy-pullup-east.json",
+  "board": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "before": {
+    "tracks": 315,
+    "vias": 60
+  },
+  "after": {
+    "tracks": 311,
+    "vias": 59
+  },
+  "created_ids": []
+}

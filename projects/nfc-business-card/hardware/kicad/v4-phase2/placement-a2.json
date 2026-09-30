@@ -1,0 +1,62 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "description": "Complete option A group and assembly clearance before routing",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase2/placement-a2-ipc.json",
+  "placements": {
+    "C5": [
+      171.5,
+      108.0,
+      180
+    ],
+    "C1": [
+      168.8,
+      111.5,
+      90
+    ],
+    "C6": [
+      172.3,
+      111.5,
+      90
+    ],
+    "C7": [
+      170.6,
+      111.5,
+      90
+    ],
+    "C4": [
+      178.6,
+      109.65,
+      0
+    ],
+    "R1": [
+      183.6,
+      106.8,
+      0
+    ],
+    "R2": [
+      183.6,
+      108.5,
+      0
+    ],
+    "R3": [
+      165.6,
+      115.8,
+      0
+    ],
+    "R4": [
+      165.6,
+      114.3,
+      0
+    ],
+    "R14": [
+      174.2,
+      106,
+      0
+    ],
+    "C19": [
+      175.2,
+      87.2,
+      0
+    ]
+  }
+}

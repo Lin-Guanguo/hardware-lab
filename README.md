@@ -8,7 +8,7 @@
 
 | 项目 | 用途 | 最近记录的状态 |
 | --- | --- | --- |
-| [AI Passport](projects/ai-passport/README.md) | 探索紧凑的可编程胸牌、屏幕按键交互与 NFC 链接 | 2026-09-28 TRAE 版到货并开机；USB 日志读取成功，观察到 BLE 连接和时间同步 |
+| [AI Passport](projects/ai-passport/README.md) | 探索紧凑的可编程胸牌、屏幕按键交互与 NFC 链接 | 2026-09-29 完成原厂 `trae_card 1.2.2` 的 8 MB 备份及设备校验，尚未更换固件 |
 | [Image Oracle](projects/image-oracle/README.md) | 用固定算法将摄像头图像映射为答案，默认拍摄熔岩灯 | 2026-09-19 拼接原型完成并验收；后续探索更多传感器，或焊接、定制 PCB 与 3D 打印的紧凑装置 |
 | [Programmable NFC Business Card](projects/nfc-business-card/README.md) | 按键切换身份的薄型 NFC 墨水屏名片 | 2026-09-28 决定在 `master` [重新规划 PCB](projects/nfc-business-card/docs/pcb-replan-2026-09-28.md)，DFM 约束前置，先验证新布局与关键区域试布；R21 和 6.3 mm 外壳候选保留作对照，尚不可投产。[PN532 桌面实测](projects/nfc-business-card/README.md#pn532-桌面测试程序)另行保留。 |
 
@@ -44,7 +44,8 @@ hardware-lab/
 │   └── wiring-diagrams.md
 └── projects/
     ├── ai-passport/
-    │   └── README.md
+    │   ├── README.md
+    │   └── docs/             <- 出厂固件备份与恢复记录
     ├── image-oracle/
     │   ├── README.md
     │   ├── firmware/

@@ -1,0 +1,104 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-option-a3-local/NFC-Card-V4.kicad_pcb",
+  "description": "A3 jointly orient CC terminations toward U6 and establish their common local ground",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-option-a3/cc-pair-ipc.json",
+  "placements": {
+    "R2": [
+      181.8,
+      111.8,
+      180
+    ]
+  },
+  "remove_trial_ids": [
+    "1563ad5e-c95d-40aa-81cb-be3803b48f0e",
+    "32d64312-82d3-4f39-9320-3845b251ccab",
+    "416ec01f-5d86-4dd2-a97d-0d9ec21eee42",
+    "44f1cdaa-6e48-47c1-aa12-11439f835e87",
+    "97aa4bdd-8ba1-4e24-9928-f5d376edf0bb",
+    "b7473542-3b6c-4eac-b0ba-8c76611c0cfc",
+    "c5e5fb93-e298-42bb-845c-af65db175d64"
+  ],
+  "routes": [
+    {
+      "name": "CC2 direct approach to rotated R2",
+      "net": "USB_CC2",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          184.5,
+          108.05000000000001
+        ],
+        [
+          184.9317,
+          108.4817
+        ],
+        [
+          184.9317,
+          109.7644
+        ],
+        [
+          183.7824,
+          110.9137
+        ],
+        [
+          183.4398,
+          110.9137
+        ],
+        [
+          182.5535,
+          111.8
+        ]
+      ]
+    },
+    {
+      "name": "CC resistor shared local return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          181.7465,
+          110.2
+        ],
+        [
+          181.3,
+          110.6465
+        ],
+        [
+          181.3,
+          111.5465
+        ],
+        [
+          181.0465,
+          111.8
+        ]
+      ]
+    },
+    {
+      "name": "CC return to existing two-face stitch",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          181.0465,
+          111.8
+        ],
+        [
+          181.0465,
+          112.2
+        ],
+        [
+          181.6465,
+          112.8
+        ],
+        [
+          182.55,
+          112.8
+        ]
+      ]
+    }
+  ],
+  "failures": []
+}

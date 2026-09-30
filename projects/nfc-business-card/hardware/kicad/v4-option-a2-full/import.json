@@ -1,0 +1,12 @@
+{
+  "session_sha256": "3c36fb5771d96055dc200b1a783ed43f670da089a710cc1b30a57f151a099321",
+  "source_sha256": "191f719d8a69f05f68454ece5e7320912e3764ab06a2c93474592e52fc43aafa",
+  "placement_unchanged": true,
+  "preserved_native_nets": [
+    "GND",
+    "NFC1_TBD"
+  ],
+  "native_RF_objects_retained": 80,
+  "native_preserved_copper_objects": 113,
+  "minimum_non_RF_track_width_mm": 0.15
+}

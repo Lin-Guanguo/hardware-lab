@@ -1,0 +1,171 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-option-a3-local/NFC-Card-V4.kicad_pcb",
+  "description": "A3 move TS resistor and NTC reserve to the charger side of PG, retaining the existing PG and supply returns",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-option-a3/ts-group-ipc.json",
+  "placements": {
+    "R19": [
+      175.35,
+      110.9,
+      90
+    ],
+    "NTC": [
+      174.5,
+      104.75,
+      0
+    ]
+  },
+  "remove_trial_ids": [
+    "2c8b0f57-6796-4c86-9c90-8edfc483550e",
+    "63c470ba-1454-4c9b-931f-61dfa0aaa3fe",
+    "8099451a-f300-4b5a-9e15-72ab5beeb6c6",
+    "aca06429-ad0e-4381-b4bf-d24fb82a6a23",
+    "c6578b4f-f9ba-4411-8c19-97a61bd39f36"
+  ],
+  "routes": [
+    {
+      "name": "TS local resistor on charger side",
+      "net": "BAT_NTC_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          176.2,
+          109.05
+        ],
+        [
+          176.2,
+          111.4
+        ],
+        [
+          175.9465,
+          111.6535
+        ],
+        [
+          175.35,
+          111.65350000000001
+        ]
+      ]
+    },
+    {
+      "name": "NTC reserve to charger direct corridor",
+      "net": "BAT_NTC_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          174.5,
+          104.75
+        ],
+        [
+          175.4,
+          105.65
+        ],
+        [
+          175.4,
+          108.25
+        ],
+        [
+          176.2,
+          109.05
+        ]
+      ]
+    },
+    {
+      "name": "R19 local return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          175.35,
+          110.1465
+        ],
+        [
+          175.35,
+          110.1035
+        ],
+        [
+          174.5465,
+          109.3
+        ]
+      ]
+    }
+  ],
+  "vias": [
+    {
+      "name": "R19 local ground return",
+      "net": "GND",
+      "at": [
+        174.5465,
+        109.3
+      ]
+    }
+  ],
+  "failures": [
+    [
+      "TS local resistor on charger side",
+      "e3d1cb5a-3b89-48f0-86c6-c998555cbecf",
+      "CHG_SDA"
+    ],
+    [
+      "TS local resistor on charger side",
+      "978ab0f5-d3b5-47bb-8711-c0b192fbe2ff",
+      "CHG_INT_N"
+    ],
+    [
+      "TS local resistor on charger side",
+      "407381d9-6948-4b23-9df2-ff41acc8c9c2",
+      "CHG_SDA"
+    ],
+    [
+      "TS local resistor on charger side",
+      "6bfd4af8-5111-4db1-a0ff-342c7f48b5ef",
+      "CHG_INT_N"
+    ],
+    [
+      "NTC reserve to charger direct corridor",
+      "1e0891b3-a1c5-407f-985e-361d7ca44de5",
+      "CHG_CE_N"
+    ],
+    [
+      "NTC reserve to charger direct corridor",
+      "815e67a2-ed13-4709-803b-d901061eec6b",
+      "CHG_CE_N"
+    ],
+    [
+      "NTC reserve to charger direct corridor",
+      "daf1d7c8-2b0a-4348-83b2-37cb8cfe21e7",
+      "CHG_CE_N"
+    ],
+    [
+      "NTC reserve to charger direct corridor",
+      "bc103bc0-95e5-4eaf-abb8-f31b256792b3",
+      "CHG_CE_N"
+    ],
+    [
+      "R19.1",
+      "978ab0f5-d3b5-47bb-8711-c0b192fbe2ff",
+      "CHG_INT_N"
+    ],
+    [
+      "R19.1",
+      "6bfd4af8-5111-4db1-a0ff-342c7f48b5ef",
+      "CHG_INT_N"
+    ],
+    [
+      "R19.2",
+      "e3d1cb5a-3b89-48f0-86c6-c998555cbecf",
+      "CHG_SDA"
+    ],
+    [
+      "R19.2",
+      "407381d9-6948-4b23-9df2-ff41acc8c9c2",
+      "CHG_SDA"
+    ],
+    [
+      "NTC.1",
+      "1e0891b3-a1c5-407f-985e-361d7ca44de5",
+      "CHG_CE_N"
+    ]
+  ]
+}

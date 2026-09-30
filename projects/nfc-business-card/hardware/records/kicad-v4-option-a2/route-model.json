@@ -1,0 +1,11 @@
+{
+  "fixed_RF_items": 80,
+  "modifiable_other_items": 125,
+  "planes": "Native intent retained to prevent unnecessary GND tree routing; not evidence of actual ground continuity",
+  "clearance_um": 205,
+  "via_um": [
+    600,
+    300
+  ],
+  "one_joint_run_max_passes": 6
+}

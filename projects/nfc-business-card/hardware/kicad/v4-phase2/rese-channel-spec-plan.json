@@ -1,0 +1,58 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "description": "Keep six display signals and a two-via local RESE crossing in one explicit channel plan",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase2/rese-channel-ipc.json",
+  "routes": [
+    {
+      "name": "CS outer lane",
+      "net": "EPD_CS_N_TBD",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          168.1,
+          95.9
+        ],
+        [
+          168.6,
+          94.8
+        ],
+        [
+          169,
+          94.5
+        ],
+        [
+          169.3,
+          94.5
+        ],
+        [
+          169.7,
+          94.7
+        ],
+        [
+          171.8,
+          98.2
+        ],
+        [
+          174.5,
+          101
+        ],
+        [
+          175.1,
+          112.3
+        ],
+        [
+          175,
+          112.7
+        ],
+        [
+          170.4,
+          117
+        ]
+      ],
+      "length_mm": 28.452
+    }
+  ],
+  "vias": [],
+  "failures": []
+}

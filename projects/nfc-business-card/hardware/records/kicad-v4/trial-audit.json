@@ -1,0 +1,267 @@
+{
+  "path_metrics": [
+    {
+      "start": "C8.1",
+      "end": "U2.10",
+      "D": {
+        "length_mm": 2.356,
+        "serial_layer_changes": 0
+      },
+      "V4": {
+        "length_mm": 1.965,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "C8.2",
+      "end": "U2.11",
+      "D": null,
+      "V4": {
+        "length_mm": 2.617,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "C2.1",
+      "end": "U2.1",
+      "D": {
+        "length_mm": 2.034,
+        "serial_layer_changes": 0
+      },
+      "V4": {
+        "length_mm": 2.219,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "C3.1",
+      "end": "U2.2",
+      "D": {
+        "length_mm": 2.161,
+        "serial_layer_changes": 0
+      },
+      "V4": {
+        "length_mm": 2.35,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "C3.1",
+      "end": "BP.1",
+      "D": {
+        "length_mm": 38.241,
+        "serial_layer_changes": 8
+      },
+      "V4": {
+        "length_mm": 17.917,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "J1.A4B9",
+      "end": "C8.1",
+      "D": {
+        "length_mm": 36.443,
+        "serial_layer_changes": 2
+      },
+      "V4": {
+        "length_mm": 29.509,
+        "serial_layer_changes": 2
+      }
+    },
+    {
+      "start": "L1.2",
+      "end": "Q1.3",
+      "D": {
+        "length_mm": 1.871,
+        "serial_layer_changes": 0
+      },
+      "V4": {
+        "length_mm": 3.54,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "C10.1",
+      "end": "L1.1",
+      "D": {
+        "length_mm": 3.003,
+        "serial_layer_changes": 0
+      },
+      "V4": {
+        "length_mm": 1.938,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "Q1.2",
+      "end": "R15.1",
+      "D": {
+        "length_mm": 1.177,
+        "serial_layer_changes": 0
+      },
+      "V4": {
+        "length_mm": 1.678,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "R15.2",
+      "end": "C10.2",
+      "D": {
+        "length_mm": 10.183,
+        "serial_layer_changes": 2
+      },
+      "V4": {
+        "length_mm": 2.269,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "J2.2",
+      "end": "Q1.1",
+      "D": {
+        "length_mm": 24.725,
+        "serial_layer_changes": 0
+      },
+      "V4": {
+        "length_mm": 10.854,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "J2.3",
+      "end": "Q1.2",
+      "D": {
+        "length_mm": 22.949,
+        "serial_layer_changes": 2
+      },
+      "V4": {
+        "length_mm": 13.28,
+        "serial_layer_changes": 2
+      }
+    },
+    {
+      "start": "U1.51",
+      "end": "TP4.1",
+      "D": {
+        "length_mm": 69.172,
+        "serial_layer_changes": 7
+      },
+      "V4": {
+        "length_mm": 45.941,
+        "serial_layer_changes": 1
+      }
+    },
+    {
+      "start": "U1.53",
+      "end": "TP3.1",
+      "D": {
+        "length_mm": 79.747,
+        "serial_layer_changes": 7
+      },
+      "V4": {
+        "length_mm": 46.127,
+        "serial_layer_changes": 1
+      }
+    },
+    {
+      "start": "U1.37",
+      "end": "J2.14",
+      "D": {
+        "length_mm": 33.172,
+        "serial_layer_changes": 4
+      },
+      "V4": {
+        "length_mm": 26.185,
+        "serial_layer_changes": 2
+      }
+    },
+    {
+      "start": "U1.41",
+      "end": "J2.10",
+      "D": {
+        "length_mm": 33.819,
+        "serial_layer_changes": 6
+      },
+      "V4": null
+    }
+  ],
+  "metric_scope": "Saved track centerline plus pad-center attachments; zones excluded from shortest paths. Layer changes counted along the path, not across the whole net.",
+  "parts": 66,
+  "pads": 266,
+  "tracks": 174,
+  "vias": 22,
+  "boost_conduction_loop": {
+    "D": {
+      "projected_area_mm2": 11.505,
+      "external_centerline_mm": 16.234,
+      "serial_layer_changes": 2,
+      "simple_polygon": false
+    },
+    "V4": {
+      "projected_area_mm2": 15.346,
+      "external_centerline_mm": 9.425,
+      "serial_layer_changes": 0,
+      "simple_polygon": true
+    }
+  },
+  "boost_loop_scope": "C10-L1-Q1-R15-C10 on-state conduction loop; straight internal component links, projected XY area. Does not model parasitics or prove the D1/C12 and D2/D3 charge-pump commutation loops.",
+  "paste_comparison": {
+    "top_openings": 256,
+    "bottom_openings": 2,
+    "source_area_mm2": 189.20323365339573,
+    "kicad_area_mm2": 189.2032247734379,
+    "symmetric_difference_mm2": 0.00012095970376584991,
+    "hausdorff_mm": 7.071067919620142e-07,
+    "bottom_symmetric_difference_mm2": 2.1332482447178328e-14
+  },
+  "ground_to_U2_EP": {
+    "C8.2": true,
+    "C2.2": true,
+    "C3.2": true,
+    "C10.2": true,
+    "C12.2": true,
+    "C13.2": true,
+    "R15.2": true,
+    "BN.1": true,
+    "J1.17": true,
+    "J1.18": true,
+    "J1.19": true,
+    "J1.20": true,
+    "U1.33": true,
+    "TP1.1": true
+  },
+  "ground_components": {
+    "F.Cu": [
+      956.35719,
+      654.12338
+    ],
+    "B.Cu": [
+      1676.12857,
+      41.44922
+    ]
+  },
+  "ground_components_not_reaching_U2_EP": [],
+  "reference_plane_gaps": [
+    {
+      "net": "SWDIO",
+      "bottom_length_mm": 45.105,
+      "outside_top_ground_mm": 18.13,
+      "largest_segment_gap_mm": 4.95
+    },
+    {
+      "net": "SWDCLK",
+      "bottom_length_mm": 44.571,
+      "outside_top_ground_mm": 18.407,
+      "largest_segment_gap_mm": 2.915
+    },
+    {
+      "net": "EPD_MOSI_TBD",
+      "bottom_length_mm": 22.642,
+      "outside_top_ground_mm": 6.923,
+      "largest_segment_gap_mm": 2.206
+    }
+  ],
+  "independent_external_copper_clearance_failures": []
+}

@@ -1,0 +1,22 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase3/NFC-Card-V4.kicad_pcb",
+  "description": "Reserve all three key GPIO escapes jointly by moving their pull-ups 2 mm east within the component area",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase3/key-pullups-apply.json",
+  "placements": {
+    "R10": [
+      182.5,
+      123.2,
+      0
+    ],
+    "R11": [
+      182.5,
+      121.4,
+      0
+    ],
+    "R12": [
+      182.5,
+      119.6,
+      0
+    ]
+  }
+}

@@ -1,0 +1,5119 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-29T17:59:31",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "j2-witness.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [VDD_3V3] of R5 on Top Layer",
+                    "pos": {
+                        "x": 151.0465,
+                        "y": 108.8
+                    },
+                    "uuid": "154c5a24-c3ce-4fda-8633-c22d0315bab1"
+                },
+                {
+                    "description": "Pad 1 [VDD_3V3] of R8 on Top Layer",
+                    "pos": {
+                        "x": 153.0465,
+                        "y": 106.4
+                    },
+                    "uuid": "5833a2c0-983a-476a-81e1-f34ce450160d"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [VDD_3V3] of R5 on Top Layer",
+                    "pos": {
+                        "x": 151.0465,
+                        "y": 108.8
+                    },
+                    "uuid": "154c5a24-c3ce-4fda-8633-c22d0315bab1"
+                },
+                {
+                    "description": "Pad 1 [VDD_3V3] of R6 on Top Layer",
+                    "pos": {
+                        "x": 154.2465,
+                        "y": 111.4
+                    },
+                    "uuid": "f92e4165-e339-4572-8656-a5cd09b0a811"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [VDD_3V3] of R8 on Top Layer",
+                    "pos": {
+                        "x": 153.0465,
+                        "y": 106.4
+                    },
+                    "uuid": "5833a2c0-983a-476a-81e1-f34ce450160d"
+                },
+                {
+                    "description": "Pad 1 [VDD_3V3] of R9 on Top Layer",
+                    "pos": {
+                        "x": 151.0465,
+                        "y": 103.8
+                    },
+                    "uuid": "3a0d40c8-d431-45a4-bdea-d02fb202fb4a"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [VDD_3V3] of R6 on Top Layer",
+                    "pos": {
+                        "x": 154.2465,
+                        "y": 111.4
+                    },
+                    "uuid": "f92e4165-e339-4572-8656-a5cd09b0a811"
+                },
+                {
+                    "description": "Pad 1 [VDD_3V3] of R7 on Top Layer",
+                    "pos": {
+                        "x": 158.2465,
+                        "y": 113.5
+                    },
+                    "uuid": "01697217-1799-4f8a-82f7-2632cbcc8787"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [VDD_3V3] of R7 on Top Layer",
+                    "pos": {
+                        "x": 158.2465,
+                        "y": 113.5
+                    },
+                    "uuid": "01697217-1799-4f8a-82f7-2632cbcc8787"
+                },
+                {
+                    "description": "Track [VDD_3V3] on Top Layer, length 1.7330 mm",
+                    "pos": {
+                        "x": 170.601,
+                        "y": 112.201
+                    },
+                    "uuid": "06ff71e8-5e1f-4dea-8f09-8d5105881c9e"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [VDD_3V3] on Top Layer, length 0.8471 mm",
+                    "pos": {
+                        "x": 172.0,
+                        "y": 112.2
+                    },
+                    "uuid": "a38b7e7e-e85f-4b22-abb5-7487206ff24c"
+                },
+                {
+                    "description": "Pad 1 [VDD_3V3] of C5 on Top Layer",
+                    "pos": {
+                        "x": 173.5,
+                        "y": 111.9
+                    },
+                    "uuid": "d022f76e-8046-415d-858f-cd0116cecda7"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [VDD_3V3] on Top Layer, length 0.7500 mm",
+                    "pos": {
+                        "x": 174.35,
+                        "y": 111.05
+                    },
+                    "uuid": "a7200ef8-4358-4d30-9ad3-44a81420a363"
+                },
+                {
+                    "description": "Pad 1 [VDD_3V3] of R12 on Top Layer",
+                    "pos": {
+                        "x": 183.2535,
+                        "y": 119.6
+                    },
+                    "uuid": "8aca8911-cc2b-47d4-aecb-3d74be5db10a"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [VDD_3V3] of U4 on Top Layer",
+                    "pos": {
+                        "x": 180.25,
+                        "y": 101.05
+                    },
+                    "uuid": "33f7a666-5aff-4a34-97f1-0b49c53abba9"
+                },
+                {
+                    "description": "Track [VDD_3V3] on Top Layer, length 0.7500 mm",
+                    "pos": {
+                        "x": 174.35,
+                        "y": 111.05
+                    },
+                    "uuid": "a7200ef8-4358-4d30-9ad3-44a81420a363"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [VDD_3V3] of C9 on Top Layer",
+                    "pos": {
+                        "x": 180.8,
+                        "y": 97.8
+                    },
+                    "uuid": "727c2da6-f40e-4816-bf52-f5075af90f35"
+                },
+                {
+                    "description": "Pad 1 [VDD_3V3] of TP2 on Bottom Layer",
+                    "pos": {
+                        "x": 178.4605,
+                        "y": 81.501
+                    },
+                    "uuid": "970801ce-0a11-4fcc-9dcf-f04b3da01059"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [VDD_3V3] of R11 on Top Layer",
+                    "pos": {
+                        "x": 183.2535,
+                        "y": 121.4
+                    },
+                    "uuid": "85de62c3-5904-4ce1-b9bd-f9f3acd096cd"
+                },
+                {
+                    "description": "Pad 1 [VDD_3V3] of R12 on Top Layer",
+                    "pos": {
+                        "x": 183.2535,
+                        "y": 119.6
+                    },
+                    "uuid": "8aca8911-cc2b-47d4-aecb-3d74be5db10a"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [VDD_3V3] of R10 on Top Layer",
+                    "pos": {
+                        "x": 183.2535,
+                        "y": 123.2
+                    },
+                    "uuid": "626424bc-4ed2-4995-b029-01ea755ee52a"
+                },
+                {
+                    "description": "Pad 1 [VDD_3V3] of R11 on Top Layer",
+                    "pos": {
+                        "x": 183.2535,
+                        "y": 121.4
+                    },
+                    "uuid": "85de62c3-5904-4ce1-b9bd-f9f3acd096cd"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone [GND] on Top Layer, priority 499",
+                    "pos": {
+                        "x": 147.0075,
+                        "y": 128.59
+                    },
+                    "uuid": "95bc0dc0-91c3-4eff-96c3-85420b2c6a03"
+                },
+                {
+                    "description": "Pad 1 [GND] of BN on Top Layer",
+                    "pos": {
+                        "x": 145.5,
+                        "y": 111.3005
+                    },
+                    "uuid": "81610735-aacd-4c76-995d-4c3629de1bf7"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone [GND] on Top Layer, priority 499",
+                    "pos": {
+                        "x": 147.0075,
+                        "y": 128.59
+                    },
+                    "uuid": "95bc0dc0-91c3-4eff-96c3-85420b2c6a03"
+                },
+                {
+                    "description": "Zone [GND] on Top Layer, priority 499",
+                    "pos": {
+                        "x": 147.0075,
+                        "y": 128.59
+                    },
+                    "uuid": "95bc0dc0-91c3-4eff-96c3-85420b2c6a03"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [GND] of R14 on Top Layer",
+                    "pos": {
+                        "x": 168.9965,
+                        "y": 103.4
+                    },
+                    "uuid": "018113a2-19d7-4b32-b7a2-8ebaca09457a"
+                },
+                {
+                    "description": "Zone [GND] on Top Layer, priority 499",
+                    "pos": {
+                        "x": 147.0075,
+                        "y": 128.59
+                    },
+                    "uuid": "95bc0dc0-91c3-4eff-96c3-85420b2c6a03"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [GND] of U4 on Top Layer",
+                    "pos": {
+                        "x": 180.25,
+                        "y": 100.4
+                    },
+                    "uuid": "2a3da7b1-3920-4c9b-bdf7-a108b62ece50"
+                },
+                {
+                    "description": "Zone [GND] on Top Layer, priority 499",
+                    "pos": {
+                        "x": 147.0075,
+                        "y": 128.59
+                    },
+                    "uuid": "95bc0dc0-91c3-4eff-96c3-85420b2c6a03"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone [GND] on Top Layer, priority 499",
+                    "pos": {
+                        "x": 147.0075,
+                        "y": 128.59
+                    },
+                    "uuid": "95bc0dc0-91c3-4eff-96c3-85420b2c6a03"
+                },
+                {
+                    "description": "Zone [GND] on Top Layer, priority 499",
+                    "pos": {
+                        "x": 147.0075,
+                        "y": 128.59
+                    },
+                    "uuid": "95bc0dc0-91c3-4eff-96c3-85420b2c6a03"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone [GND] on Top Layer, priority 499",
+                    "pos": {
+                        "x": 147.0075,
+                        "y": 128.59
+                    },
+                    "uuid": "95bc0dc0-91c3-4eff-96c3-85420b2c6a03"
+                },
+                {
+                    "description": "Zone [GND] on Top Layer, priority 499",
+                    "pos": {
+                        "x": 147.0075,
+                        "y": 128.59
+                    },
+                    "uuid": "95bc0dc0-91c3-4eff-96c3-85420b2c6a03"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [BAT_ADC_SENSE] on Top Layer, length 0.9510 mm",
+                    "pos": {
+                        "x": 176.751,
+                        "y": 118.534
+                    },
+                    "uuid": "ffc3fbbf-a5d5-4dc3-8089-c3e03b6dcf61"
+                },
+                {
+                    "description": "Pad 2 [BAT_ADC_SENSE] of C25 on Top Layer",
+                    "pos": {
+                        "x": 182.4,
+                        "y": 116.1
+                    },
+                    "uuid": "0b7e34b0-eb96-47d7-873d-e4c0752560f5"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [BAT_ADC_SENSE] of C25 on Top Layer",
+                    "pos": {
+                        "x": 182.4,
+                        "y": 116.1
+                    },
+                    "uuid": "0b7e34b0-eb96-47d7-873d-e4c0752560f5"
+                },
+                {
+                    "description": "Pad 1 [BAT_ADC_SENSE] of R20 on Top Layer",
+                    "pos": {
+                        "x": 184.1,
+                        "y": 115.1465
+                    },
+                    "uuid": "b578474e-288f-4322-8a83-72f4a662b34d"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [BAT_ADC_SENSE] of R20 on Top Layer",
+                    "pos": {
+                        "x": 184.1,
+                        "y": 115.1465
+                    },
+                    "uuid": "b578474e-288f-4322-8a83-72f4a662b34d"
+                },
+                {
+                    "description": "Pad 2 [BAT_ADC_SENSE] of R21 on Top Layer",
+                    "pos": {
+                        "x": 184.1,
+                        "y": 113.6535
+                    },
+                    "uuid": "e0d2a0bc-4662-4047-8e6e-2ddf0d4a338f"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [BAT_DIV_SUPPLY] of R20 on Top Layer",
+                    "pos": {
+                        "x": 184.1,
+                        "y": 116.6535
+                    },
+                    "uuid": "ca3301e1-794d-4c64-b7fb-d9408db9a475"
+                },
+                {
+                    "description": "Pad 3 [BAT_DIV_SUPPLY] of Q2 on Top Layer",
+                    "pos": {
+                        "x": 188.0,
+                        "y": 117.25
+                    },
+                    "uuid": "cfaf866f-eedf-4a05-89d0-fc9887b51e43"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [CHG_SDA] of R5 on Top Layer",
+                    "pos": {
+                        "x": 152.5535,
+                        "y": 108.8
+                    },
+                    "uuid": "639837b3-8fa6-415d-a500-a905e992726a"
+                },
+                {
+                    "description": "Track [CHG_SDA] on Top Layer, length 1.3500 mm",
+                    "pos": {
+                        "x": 158.6,
+                        "y": 109.65
+                    },
+                    "uuid": "b7adfb34-9a15-4456-9a5e-52413eb9df8d"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [CHG_SDA] on Top Layer, length 1.4849 mm",
+                    "pos": {
+                        "x": 164.0,
+                        "y": 109.5
+                    },
+                    "uuid": "98ad5d9e-cf58-4c73-9276-bc285997c05a"
+                },
+                {
+                    "description": "Track [CHG_SDA] on Top Layer, length 1.3500 mm",
+                    "pos": {
+                        "x": 158.6,
+                        "y": 109.65
+                    },
+                    "uuid": "b7adfb34-9a15-4456-9a5e-52413eb9df8d"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Via [CHG_SDA] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 175.2,
+                        "y": 108.1
+                    },
+                    "uuid": "8c11c6c8-9195-4ddc-bbb1-2ce9b74721d1"
+                },
+                {
+                    "description": "Pad 19 [CHG_SDA] of U1 on Top Layer",
+                    "pos": {
+                        "x": 175.001,
+                        "y": 114.834
+                    },
+                    "uuid": "7f2ec018-4d5a-4007-902b-6690a21c953c"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Via [CHG_PG_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 158.5,
+                        "y": 106.2
+                    },
+                    "uuid": "7e6cfa03-2644-4087-9108-cf44f96afc13"
+                },
+                {
+                    "description": "Pad 2 [CHG_PG_N] of R9 on Top Layer",
+                    "pos": {
+                        "x": 152.5535,
+                        "y": 103.8
+                    },
+                    "uuid": "c77badaa-2053-46fc-87d3-0d1f5f6b75cf"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [CHG_PG_N] on Top Layer, length 1.9799 mm",
+                    "pos": {
+                        "x": 164.0,
+                        "y": 110.7
+                    },
+                    "uuid": "acb32a1b-d9bb-47b9-86d9-041d6bea9503"
+                },
+                {
+                    "description": "Track [CHG_PG_N] on Top Layer, length 0.8500 mm",
+                    "pos": {
+                        "x": 159.0,
+                        "y": 107.55
+                    },
+                    "uuid": "33364ce4-02f5-442a-bc11-b8cc8c92dce8"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 21 [CHG_PG_N] of U1 on Top Layer",
+                    "pos": {
+                        "x": 174.201,
+                        "y": 114.834
+                    },
+                    "uuid": "f9e16539-c043-4ea0-90ab-a091753d2b0c"
+                },
+                {
+                    "description": "Via [CHG_PG_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 174.0,
+                        "y": 108.9
+                    },
+                    "uuid": "f00857c7-a64e-4743-a3e6-436b6c4cdb10"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 3 [SYS] of U3 on Top Layer",
+                    "pos": {
+                        "x": 177.3,
+                        "y": 109.15
+                    },
+                    "uuid": "88cd1ad9-f8d5-4853-9ca7-062974646070"
+                },
+                {
+                    "description": "Track [SYS] on Top Layer, length 2.4042 mm",
+                    "pos": {
+                        "x": 161.5,
+                        "y": 105.2
+                    },
+                    "uuid": "06a71f0c-6dd3-4091-8e08-d92b31f02bed"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [BAT_PACK_TBD] on Top Layer, length 2.4500 mm",
+                    "pos": {
+                        "x": 159.4,
+                        "y": 105.1
+                    },
+                    "uuid": "bf90d082-5b4e-40b1-ac7a-ec7da9b191b6"
+                },
+                {
+                    "description": "Pad 1 [BAT_PACK_TBD] of BP on Top Layer",
+                    "pos": {
+                        "x": 142.5,
+                        "y": 111.3005
+                    },
+                    "uuid": "5a7cd7de-0805-47c2-acaf-587d87ac9028"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [BAT_PACK_TBD] on Top Layer, length 2.4500 mm",
+                    "pos": {
+                        "x": 159.4,
+                        "y": 105.1
+                    },
+                    "uuid": "bf90d082-5b4e-40b1-ac7a-ec7da9b191b6"
+                },
+                {
+                    "description": "Pad 2 [BAT_PACK_TBD] of Q2 on Top Layer",
+                    "pos": {
+                        "x": 187.05,
+                        "y": 114.95
+                    },
+                    "uuid": "ec4a0865-b87d-49da-9611-cdff66a91e85"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [BAT_PACK_TBD] of R22 on Top Layer",
+                    "pos": {
+                        "x": 186.3,
+                        "y": 120.5535
+                    },
+                    "uuid": "7d5ee7fa-2aec-4d06-ae90-8555b48239b2"
+                },
+                {
+                    "description": "Pad 2 [BAT_PACK_TBD] of Q2 on Top Layer",
+                    "pos": {
+                        "x": 187.05,
+                        "y": 114.95
+                    },
+                    "uuid": "ec4a0865-b87d-49da-9611-cdff66a91e85"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [CHG_CE_N] of R7 on Top Layer",
+                    "pos": {
+                        "x": 159.7535,
+                        "y": 113.5
+                    },
+                    "uuid": "c2a89a63-c5a2-49bf-8cb5-d47a9a152721"
+                },
+                {
+                    "description": "Track [CHG_CE_N] on Top Layer, length 0.6500 mm",
+                    "pos": {
+                        "x": 158.6,
+                        "y": 107.55
+                    },
+                    "uuid": "cb9625d8-45ca-4609-8fd6-9a2ee9b293f1"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Via [CHG_CE_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 164.0,
+                        "y": 108.3
+                    },
+                    "uuid": "bf8b3164-7441-4675-867a-77dcdad608eb"
+                },
+                {
+                    "description": "Track [CHG_CE_N] on Top Layer, length 0.6500 mm",
+                    "pos": {
+                        "x": 158.6,
+                        "y": 107.55
+                    },
+                    "uuid": "cb9625d8-45ca-4609-8fd6-9a2ee9b293f1"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [CHG_CE_N] on Top Layer, length 6.7000 mm",
+                    "pos": {
+                        "x": 169.5,
+                        "y": 107.1
+                    },
+                    "uuid": "945a6393-9771-4d9c-91e2-95ce49ce1ce4"
+                },
+                {
+                    "description": "Via [CHG_CE_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 174.1,
+                        "y": 112.9
+                    },
+                    "uuid": "43796ff6-29ce-4f1a-b2ee-d5c38271db82"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [BAT_NTC_TBD] on Top Layer, length 0.2171 mm",
+                    "pos": {
+                        "x": 156.9535,
+                        "y": 109.8
+                    },
+                    "uuid": "4c18701e-be27-40ae-97f0-2dfad68d0e40"
+                },
+                {
+                    "description": "Track [BAT_NTC_TBD] on Top Layer, length 0.9500 mm",
+                    "pos": {
+                        "x": 157.5,
+                        "y": 110.35
+                    },
+                    "uuid": "b02e3dea-5007-476f-aeaf-27941c1da7c2"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [CHG_SCL] on Top Layer, length 0.5657 mm",
+                    "pos": {
+                        "x": 159.0,
+                        "y": 110.9
+                    },
+                    "uuid": "216a53b6-8fdc-47f6-9733-f88a88421e19"
+                },
+                {
+                    "description": "Pad 2 [CHG_SCL] of R6 on Top Layer",
+                    "pos": {
+                        "x": 155.7535,
+                        "y": 111.4
+                    },
+                    "uuid": "fbec2fc3-56a0-48b6-ac17-e09e5b35f6e4"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Via [CHG_SCL] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 164.0,
+                        "y": 105.9
+                    },
+                    "uuid": "6d993c02-c81f-4845-85f2-4672f3e0ac15"
+                },
+                {
+                    "description": "Track [CHG_SCL] on Top Layer, length 1.2500 mm",
+                    "pos": {
+                        "x": 159.0,
+                        "y": 109.65
+                    },
+                    "uuid": "d878cb99-dd76-469c-aaa9-31010b6fd0b0"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Via [CHG_SCL] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 177.0,
+                        "y": 112.95
+                    },
+                    "uuid": "22ad79bb-0033-4705-9a61-894cec9e419f"
+                },
+                {
+                    "description": "Track [CHG_SCL] on Top Layer, length 12.5000 mm",
+                    "pos": {
+                        "x": 164.0,
+                        "y": 105.9
+                    },
+                    "uuid": "8f4e1170-007b-444a-9a90-2b2032449fe5"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [CHG_INT_N] on Top Layer, length 0.3500 mm",
+                    "pos": {
+                        "x": 159.4,
+                        "y": 109.65
+                    },
+                    "uuid": "e87207f0-8487-4dbb-b1e9-d860eabdcd54"
+                },
+                {
+                    "description": "Via [CHG_INT_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 155.9,
+                        "y": 106.4
+                    },
+                    "uuid": "f11b0af2-525a-4fe7-8358-a57e6af5faa7"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Via [CHG_INT_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 160.3,
+                        "y": 110.8
+                    },
+                    "uuid": "a1de545a-aa84-4737-975f-98ec1c1e2f3c"
+                },
+                {
+                    "description": "Via [CHG_INT_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 164.0,
+                        "y": 107.1
+                    },
+                    "uuid": "b46f1a6c-2018-4e67-bbc3-4ca3397df31f"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Via [CHG_INT_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 175.4,
+                        "y": 112.7
+                    },
+                    "uuid": "63712b7e-b04e-4c1a-898f-88805db7b602"
+                },
+                {
+                    "description": "Track [CHG_INT_N] on Top Layer, length 7.5500 mm",
+                    "pos": {
+                        "x": 169.35,
+                        "y": 106.4
+                    },
+                    "uuid": "95761b9f-8857-4a6a-801c-6e7003bbfbdd"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Via [USB_VBUS] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 162.8,
+                        "y": 110.3
+                    },
+                    "uuid": "5d89d623-119e-4229-a868-918f2ca1878d"
+                },
+                {
+                    "description": "Via [USB_VBUS] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 167.7,
+                        "y": 112.2
+                    },
+                    "uuid": "a27303fe-6857-4a8d-ae8f-442cd239f86e"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Via [USB_VBUS] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 185.0,
+                        "y": 106.35
+                    },
+                    "uuid": "5a06d050-b715-45d8-9994-e9621ffc94e6"
+                },
+                {
+                    "description": "Track [USB_VBUS] on Top Layer, length 1.5330 mm",
+                    "pos": {
+                        "x": 169.001,
+                        "y": 112.401
+                    },
+                    "uuid": "2b08ed43-63bc-4a3d-a610-65fb14cf1089"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [USB_VBUS] on Top Layer, length 0.6485 mm",
+                    "pos": {
+                        "x": 186.149,
+                        "y": 101.6005
+                    },
+                    "uuid": "fa99953d-8bf8-40ac-b73a-c074eac00b44"
+                },
+                {
+                    "description": "Track [USB_VBUS] on Top Layer, length 1.0985 mm",
+                    "pos": {
+                        "x": 186.0985,
+                        "y": 106.35
+                    },
+                    "uuid": "df2da031-dce6-4a79-8581-526cf0a640df"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Via [EPD_EN_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 179.3,
+                        "y": 98.7
+                    },
+                    "uuid": "abf11bb7-0bf9-439f-9f99-14cafac83564"
+                },
+                {
+                    "description": "Pad 1 [EPD_EN_TBD] of R13 on Top Layer",
+                    "pos": {
+                        "x": 176.3465,
+                        "y": 96.6
+                    },
+                    "uuid": "4dbb6d1e-0c6b-4110-9d9a-0b1f8e23e7b7"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [EPD_EN_TBD] on Top Layer, length 1.3435 mm",
+                    "pos": {
+                        "x": 180.25,
+                        "y": 99.75
+                    },
+                    "uuid": "d2e5fc00-5872-4802-9307-1d965481c981"
+                },
+                {
+                    "description": "Track [EPD_EN_TBD] on Top Layer, length 1.0670 mm",
+                    "pos": {
+                        "x": 171.801,
+                        "y": 114.834
+                    },
+                    "uuid": "1b13cac3-ae13-486d-8eb4-984eba0083c7"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 15 [EPD_VDD] of J2 on Top Layer",
+                    "pos": {
+                        "x": 166.325,
+                        "y": 94.49
+                    },
+                    "uuid": "67503289-3e75-4c0b-a860-4ed654976e03"
+                },
+                {
+                    "description": "Track [EPD_VDD] on Top Layer, length 2.1720 mm",
+                    "pos": {
+                        "x": 176.3,
+                        "y": 100.5
+                    },
+                    "uuid": "7975052e-ac0e-4edc-aeb9-b562e63556f6"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [EPD_VDD] of R18 on Top Layer",
+                    "pos": {
+                        "x": 169.1465,
+                        "y": 91.9
+                    },
+                    "uuid": "08177f5f-c468-4bf7-9a2f-fda1158b3c6b"
+                },
+                {
+                    "description": "Pad 15 [EPD_VDD] of J2 on Top Layer",
+                    "pos": {
+                        "x": 166.325,
+                        "y": 94.49
+                    },
+                    "uuid": "67503289-3e75-4c0b-a860-4ed654976e03"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [BAT_SWITCH_GATE] of R22 on Top Layer",
+                    "pos": {
+                        "x": 186.3,
+                        "y": 119.0465
+                    },
+                    "uuid": "095d4633-555f-4756-9e76-730eda2a3ef5"
+                },
+                {
+                    "description": "Pad 1 [BAT_SWITCH_GATE] of Q2 on Top Layer",
+                    "pos": {
+                        "x": 188.95,
+                        "y": 114.95
+                    },
+                    "uuid": "8b66a3ae-050b-48e7-a049-0af0a25f216c"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [BAT_SWITCH_GATE] of Q2 on Top Layer",
+                    "pos": {
+                        "x": 188.95,
+                        "y": 114.95
+                    },
+                    "uuid": "8b66a3ae-050b-48e7-a049-0af0a25f216c"
+                },
+                {
+                    "description": "Pad 3 [BAT_SWITCH_GATE] of Q3 on Top Layer",
+                    "pos": {
+                        "x": 190.0,
+                        "y": 113.3
+                    },
+                    "uuid": "9d8b3e08-a5db-4132-b759-306669af1b98"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [EPD_VGL] on Top Layer, length 0.7000 mm",
+                    "pos": {
+                        "x": 181.7,
+                        "y": 91.0
+                    },
+                    "uuid": "b8a5cc0a-602d-4102-873e-c87666001627"
+                },
+                {
+                    "description": "Track [EPD_VGL] on Top Layer, length 0.7000 mm",
+                    "pos": {
+                        "x": 165.625,
+                        "y": 90.49
+                    },
+                    "uuid": "4fea8df5-cadf-4bb6-8c36-78aa669e3dce"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [EPD_VPH] of R16 on Top Layer",
+                    "pos": {
+                        "x": 174.7465,
+                        "y": 89.9
+                    },
+                    "uuid": "e062b0f5-f703-4c18-a9a2-f16d92cab0db"
+                },
+                {
+                    "description": "Track [EPD_VPH] on Top Layer, length 0.9000 mm",
+                    "pos": {
+                        "x": 173.0,
+                        "y": 93.1
+                    },
+                    "uuid": "00f0ed6c-5e1e-442e-b559-92d27d249018"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 21 [EPD_VGH] of J2 on Top Layer",
+                    "pos": {
+                        "x": 166.325,
+                        "y": 91.49
+                    },
+                    "uuid": "e59edf6d-0e10-4ed0-9661-c09fd4316d52"
+                },
+                {
+                    "description": "Pad 2 [EPD_VGH] of R16 on Top Layer",
+                    "pos": {
+                        "x": 176.2535,
+                        "y": 89.9
+                    },
+                    "uuid": "eb0be0d3-52da-47b8-ada5-344db07a44a7"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [KEY_OK_N] of R12 on Top Layer",
+                    "pos": {
+                        "x": 181.7465,
+                        "y": 119.6
+                    },
+                    "uuid": "818ec451-77be-41db-b159-a0909d50075b"
+                },
+                {
+                    "description": "Pad 5 [KEY_OK_N] of U1 on Top Layer",
+                    "pos": {
+                        "x": 176.751,
+                        "y": 120.934
+                    },
+                    "uuid": "a0cb74a4-b1cb-43e7-b844-1c95d003a503"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [EPD_BS0] of R17 on Top Layer",
+                    "pos": {
+                        "x": 153.4465,
+                        "y": 100.8
+                    },
+                    "uuid": "444f6341-7255-46af-892f-b43001f11072"
+                },
+                {
+                    "description": "Pad 8 [EPD_BS0] of J2 on Top Layer",
+                    "pos": {
+                        "x": 166.325,
+                        "y": 97.99
+                    },
+                    "uuid": "852d8507-5f08-486a-a8bf-1032929189c2"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [EPD_BUSY_TBD] on Bottom Layer, length 12.8000 mm",
+                    "pos": {
+                        "x": 167.4,
+                        "y": 111.1
+                    },
+                    "uuid": "8dce09f9-6738-4027-9d10-506ae9e78903"
+                },
+                {
+                    "description": "Via [EPD_BUSY_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 173.0,
+                        "y": 113.0
+                    },
+                    "uuid": "64d37bcc-74ee-4642-8305-e3d26312a91c"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Via [EPD_BUSY_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 169.2,
+                        "y": 98.3
+                    },
+                    "uuid": "121311dc-97e2-480d-972c-994cfeb1b54d"
+                },
+                {
+                    "description": "Pad 2 [EPD_BUSY_TBD] of R18 on Top Layer",
+                    "pos": {
+                        "x": 170.6535,
+                        "y": 91.9
+                    },
+                    "uuid": "9f0c46e7-ed8d-4411-a2b3-97d131a60706"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [KEY_PREV_N] of R10 on Top Layer",
+                    "pos": {
+                        "x": 181.7465,
+                        "y": 123.2
+                    },
+                    "uuid": "a2953788-3dec-45e8-9ee3-2a20302adb0b"
+                },
+                {
+                    "description": "Track [KEY_PREV_N] on Top Layer, length 0.2348 mm",
+                    "pos": {
+                        "x": 177.651,
+                        "y": 122.934
+                    },
+                    "uuid": "f5c6c296-a44f-42ae-8a31-c3ffaec8d5d1"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [KEY_NEXT_N] on Top Layer, length 0.9419 mm",
+                    "pos": {
+                        "x": 177.651,
+                        "y": 121.334
+                    },
+                    "uuid": "b59678a2-93eb-41b6-8b49-27dc99683a78"
+                },
+                {
+                    "description": "Pad 2 [KEY_NEXT_N] of R11 on Top Layer",
+                    "pos": {
+                        "x": 181.7465,
+                        "y": 121.4
+                    },
+                    "uuid": "f18f0bee-c07e-4d4a-b1c4-1ceb78d930d2"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [BAT_MEAS_EN] of R23 on Top Layer",
+                    "pos": {
+                        "x": 186.3,
+                        "y": 112.6535
+                    },
+                    "uuid": "76cf6349-fa98-4014-9367-c1508af6090d"
+                },
+                {
+                    "description": "Pad 10 [BAT_MEAS_EN] of U1 on Top Layer",
+                    "pos": {
+                        "x": 177.651,
+                        "y": 118.934
+                    },
+                    "uuid": "b1c83d65-618d-4d1f-b998-8fcf2f26e7ac"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [BAT_MEAS_EN] of Q3 on Top Layer",
+                    "pos": {
+                        "x": 190.65,
+                        "y": 111.7
+                    },
+                    "uuid": "b191e054-2058-464a-ae8f-0db5f017464c"
+                },
+                {
+                    "description": "Pad 1 [BAT_MEAS_EN] of R23 on Top Layer",
+                    "pos": {
+                        "x": 186.3,
+                        "y": 112.6535
+                    },
+                    "uuid": "76cf6349-fa98-4014-9367-c1508af6090d"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Via [USB_DP_CONN] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 178.9,
+                        "y": 103.0
+                    },
+                    "uuid": "ed0b15c9-bd21-41e4-9a8e-fd7820b77c69"
+                },
+                {
+                    "description": "Track [USB_DP_CONN] on Top Layer, length 1.1000 mm",
+                    "pos": {
+                        "x": 164.1465,
+                        "y": 116.2
+                    },
+                    "uuid": "41d5731c-7e04-408d-bcaa-44a2690b53c4"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [EPD_RESET_N_TBD] on Bottom Layer, length 13.6000 mm",
+                    "pos": {
+                        "x": 167.0,
+                        "y": 111.1
+                    },
+                    "uuid": "cb8835f0-646e-44b1-bfec-b74ff5c71f4d"
+                },
+                {
+                    "description": "Via [EPD_RESET_N_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 166.9,
+                        "y": 118.134
+                    },
+                    "uuid": "3c514d0e-1d17-4a12-b598-6fae04af87ce"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [EPD_DC_TBD] on Bottom Layer, length 14.4000 mm",
+                    "pos": {
+                        "x": 166.6,
+                        "y": 111.1
+                    },
+                    "uuid": "6d5a0962-5e33-4b84-b3db-1c914c94d8c3"
+                },
+                {
+                    "description": "Via [EPD_DC_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 166.9,
+                        "y": 117.334
+                    },
+                    "uuid": "816c3ba5-10e7-4cf4-b3c0-fe722f37f327"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [EPD_CS_N_TBD] on Bottom Layer, length 15.2000 mm",
+                    "pos": {
+                        "x": 166.2,
+                        "y": 111.1
+                    },
+                    "uuid": "1183879b-cba6-40fb-9dd3-b24b6804f27b"
+                },
+                {
+                    "description": "Track [EPD_CS_N_TBD] on Top Layer, length 1.9150 mm",
+                    "pos": {
+                        "x": 169.285,
+                        "y": 116.9
+                    },
+                    "uuid": "50a5f38b-6a36-4b69-9b6f-ffed30cfe568"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [EPD_SCK_TBD] on Top Layer, length 1.5150 mm",
+                    "pos": {
+                        "x": 169.685,
+                        "y": 115.7
+                    },
+                    "uuid": "81bc7445-55ba-4e5a-9685-00b4fdb05795"
+                },
+                {
+                    "description": "Track [EPD_SCK_TBD] on Bottom Layer, length 16.0000 mm",
+                    "pos": {
+                        "x": 165.8,
+                        "y": 111.1
+                    },
+                    "uuid": "caa0372f-4ef6-4301-867e-0f3083b07c9d"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [EPD_MOSI_TBD] on Bottom Layer, length 16.8000 mm",
+                    "pos": {
+                        "x": 165.4,
+                        "y": 111.1
+                    },
+                    "uuid": "bbf17f83-9ea1-4361-9a0c-ee49d3ada8b7"
+                },
+                {
+                    "description": "Via [EPD_MOSI_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 166.9,
+                        "y": 116.534
+                    },
+                    "uuid": "3c23a23a-fe48-44db-bfb2-365f1805c639"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Via [NRESET] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 172.3,
+                        "y": 118.1
+                    },
+                    "uuid": "862a31cb-9f3a-4e86-9b59-e6e4028c92f4"
+                },
+                {
+                    "description": "Via [NRESET] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 184.8,
+                        "y": 108.6
+                    },
+                    "uuid": "de57d95f-ab55-49de-b7a0-08a84b4f758c"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [NRESET] of TP5 on Bottom Layer",
+                    "pos": {
+                        "x": 186.0805,
+                        "y": 81.501
+                    },
+                    "uuid": "7f6d487e-2ada-4bc5-8ca7-f9766e910953"
+                },
+                {
+                    "description": "Track [NRESET] on Top Layer, length 0.9899 mm",
+                    "pos": {
+                        "x": 182.7,
+                        "y": 101.9
+                    },
+                    "uuid": "7871fbea-bc6f-4cd2-906b-4ca13b2f4567"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Via [SWDIO] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 182.3,
+                        "y": 100.8
+                    },
+                    "uuid": "315dbc64-2d01-4335-a6e5-4e2a6479659a"
+                },
+                {
+                    "description": "Pad 1 [SWDIO] of TP4 on Bottom Layer",
+                    "pos": {
+                        "x": 183.5405,
+                        "y": 81.501
+                    },
+                    "uuid": "b7817d07-c7d2-4f2e-abbd-4a33ba5c71c0"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [SWDIO] on Top Layer, length 5.5000 mm",
+                    "pos": {
+                        "x": 182.3,
+                        "y": 106.3
+                    },
+                    "uuid": "28522508-fd93-4d77-b85a-3c51af99dfe5"
+                },
+                {
+                    "description": "Via [SWDIO] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 167.2,
+                        "y": 118.95
+                    },
+                    "uuid": "2f5c1b7f-e6f9-4e1d-82bc-c99c5b96a3a3"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [SWDCLK] on Top Layer, length 0.9899 mm",
+                    "pos": {
+                        "x": 166.6,
+                        "y": 119.4
+                    },
+                    "uuid": "9441a405-8a2a-43d1-aa0b-528d77b96a68"
+                },
+                {
+                    "description": "Track [SWDCLK] on Top Layer, length 1.4142 mm",
+                    "pos": {
+                        "x": 180.8,
+                        "y": 105.5
+                    },
+                    "uuid": "688fb646-2033-4ff5-a751-af8cc0fbda28"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [SWDCLK] of TP3 on Bottom Layer",
+                    "pos": {
+                        "x": 181.0005,
+                        "y": 81.501
+                    },
+                    "uuid": "27db070a-6975-45ed-9cbe-42be08179738"
+                },
+                {
+                    "description": "Via [SWDCLK] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 181.5,
+                        "y": 102.0
+                    },
+                    "uuid": "d048fa81-0617-4c48-b8ae-4529b9a21ac6"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [USB_DM_CONN] on Top Layer, length 1.1000 mm",
+                    "pos": {
+                        "x": 164.1465,
+                        "y": 114.6
+                    },
+                    "uuid": "60a3c131-0c5f-478c-b678-66509efa499a"
+                },
+                {
+                    "description": "Track [USB_DM_CONN] on Bottom Layer, length 0.4250 mm",
+                    "pos": {
+                        "x": 179.2005,
+                        "y": 104.9005
+                    },
+                    "uuid": "618a3403-be6b-42c7-a13b-43a2371ab479"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": [
+        {
+            "description": "Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1472 mm)",
+            "items": [
+                {
+                    "description": "Via [NFC1_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 144.9,
+                        "y": 100.0
+                    },
+                    "uuid": "3726ba4a-eedf-4c87-a62f-5929cba7508a"
+                }
+            ],
+            "severity": "error",
+            "type": "annular_width"
+        },
+        {
+            "description": "Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1485 mm)",
+            "items": [
+                {
+                    "description": "Via [NFC1_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 141.4,
+                        "y": 100.5
+                    },
+                    "uuid": "a955d647-5571-4d34-a182-e04d73d770bd"
+                }
+            ],
+            "severity": "error",
+            "type": "annular_width"
+        },
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint R13",
+                    "pos": {
+                        "x": 177.1,
+                        "y": 96.6
+                    },
+                    "uuid": "ae127ea6-f460-4749-95a9-44c786c5aaf1"
+                },
+                {
+                    "description": "Footprint C11",
+                    "pos": {
+                        "x": 175.0,
+                        "y": 96.55
+                    },
+                    "uuid": "f69017e9-c914-46ef-8ab8-fac56241d5c5"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "Board edge clearance violation (rule 'D board-edge clearance' clearance 0.3000 mm; actual 0.2698 mm)",
+            "items": [
+                {
+                    "description": "Arc on Multi-Layer",
+                    "pos": {
+                        "x": 186.699,
+                        "y": 108.6205
+                    },
+                    "uuid": "4ca1daab-1596-4960-9a72-dcfce606bf93"
+                },
+                {
+                    "description": "PTH pad 17 [GND] of J1",
+                    "pos": {
+                        "x": 187.299,
+                        "y": 109.6205
+                    },
+                    "uuid": "4cc36591-6b81-4421-bc0c-996d432d4281"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (rule 'D board-edge clearance' clearance 0.3000 mm; actual 0.2698 mm)",
+            "items": [
+                {
+                    "description": "Arc on Multi-Layer",
+                    "pos": {
+                        "x": 186.699,
+                        "y": 99.3805
+                    },
+                    "uuid": "38f40402-b051-4fe2-b19f-a17280fb09dd"
+                },
+                {
+                    "description": "PTH pad 18 [GND] of J1",
+                    "pos": {
+                        "x": 187.299,
+                        "y": 98.3805
+                    },
+                    "uuid": "a788b429-ec88-4a59-9785-3c089199b91d"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (rule 'D board-edge clearance' clearance 0.3000 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Segment on Multi-Layer",
+                    "pos": {
+                        "x": 186.699,
+                        "y": 99.6305
+                    },
+                    "uuid": "31373a54-57fb-4347-b7e4-2fd0d6d9caaf"
+                },
+                {
+                    "description": "Pad A1B12 [GND] of J1 on Top Layer",
+                    "pos": {
+                        "x": 186.149,
+                        "y": 107.2005
+                    },
+                    "uuid": "94364e3a-61c8-4911-a5ea-f21014739670"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (rule 'D board-edge clearance' clearance 0.3000 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Segment on Multi-Layer",
+                    "pos": {
+                        "x": 186.699,
+                        "y": 99.6305
+                    },
+                    "uuid": "31373a54-57fb-4347-b7e4-2fd0d6d9caaf"
+                },
+                {
+                    "description": "Pad A4B9 [USB_VBUS] of J1 on Top Layer",
+                    "pos": {
+                        "x": 186.149,
+                        "y": 106.4005
+                    },
+                    "uuid": "49fa8a66-c05e-4350-b40e-46c438f17ca5"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (rule 'D board-edge clearance' clearance 0.3000 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Segment on Multi-Layer",
+                    "pos": {
+                        "x": 186.699,
+                        "y": 99.6305
+                    },
+                    "uuid": "31373a54-57fb-4347-b7e4-2fd0d6d9caaf"
+                },
+                {
+                    "description": "Pad A5 [USB_CC1] of J1 on Top Layer",
+                    "pos": {
+                        "x": 186.149,
+                        "y": 105.2505
+                    },
+                    "uuid": "6e0c2c98-770a-4dbe-bff4-68609299a98f"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (rule 'D board-edge clearance' clearance 0.3000 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Segment on Multi-Layer",
+                    "pos": {
+                        "x": 186.699,
+                        "y": 99.6305
+                    },
+                    "uuid": "31373a54-57fb-4347-b7e4-2fd0d6d9caaf"
+                },
+                {
+                    "description": "Pad A6 [USB_DP_CONN] of J1 on Top Layer",
+                    "pos": {
+                        "x": 186.149,
+                        "y": 104.2505
+                    },
+                    "uuid": "f7f3e01c-f81c-4bcf-bf7d-7f5a73aea47d"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (rule 'D board-edge clearance' clearance 0.3000 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Segment on Multi-Layer",
+                    "pos": {
+                        "x": 186.699,
+                        "y": 99.6305
+                    },
+                    "uuid": "31373a54-57fb-4347-b7e4-2fd0d6d9caaf"
+                },
+                {
+                    "description": "Pad A7 [USB_DM_CONN] of J1 on Top Layer",
+                    "pos": {
+                        "x": 186.149,
+                        "y": 103.7505
+                    },
+                    "uuid": "3389f5de-fca3-4583-a23b-3031b8807cfe"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (rule 'D board-edge clearance' clearance 0.3000 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Segment on Multi-Layer",
+                    "pos": {
+                        "x": 186.699,
+                        "y": 99.6305
+                    },
+                    "uuid": "31373a54-57fb-4347-b7e4-2fd0d6d9caaf"
+                },
+                {
+                    "description": "Pad A8 [unconnected-(J1-SBU1-PadA8)] of J1 on Top Layer",
+                    "pos": {
+                        "x": 186.149,
+                        "y": 102.7505
+                    },
+                    "uuid": "b6248572-e586-41b3-9e3c-8452d6d5ed7f"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (rule 'D board-edge clearance' clearance 0.3000 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Segment on Multi-Layer",
+                    "pos": {
+                        "x": 186.699,
+                        "y": 99.6305
+                    },
+                    "uuid": "31373a54-57fb-4347-b7e4-2fd0d6d9caaf"
+                },
+                {
+                    "description": "Pad B1A12 [GND] of J1 on Top Layer",
+                    "pos": {
+                        "x": 186.149,
+                        "y": 100.8005
+                    },
+                    "uuid": "71b215d6-2614-4ec9-8c9c-f863819fbd39"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (rule 'D board-edge clearance' clearance 0.3000 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Segment on Multi-Layer",
+                    "pos": {
+                        "x": 186.699,
+                        "y": 99.6305
+                    },
+                    "uuid": "31373a54-57fb-4347-b7e4-2fd0d6d9caaf"
+                },
+                {
+                    "description": "Pad B4A9 [USB_VBUS] of J1 on Top Layer",
+                    "pos": {
+                        "x": 186.149,
+                        "y": 101.6005
+                    },
+                    "uuid": "8f79046c-68a7-43bc-b9ca-874c46eff549"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (rule 'D board-edge clearance' clearance 0.3000 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Segment on Multi-Layer",
+                    "pos": {
+                        "x": 186.699,
+                        "y": 99.6305
+                    },
+                    "uuid": "31373a54-57fb-4347-b7e4-2fd0d6d9caaf"
+                },
+                {
+                    "description": "Pad B5 [USB_CC2] of J1 on Top Layer",
+                    "pos": {
+                        "x": 186.149,
+                        "y": 102.2505
+                    },
+                    "uuid": "38cfff7e-9b37-45cf-bbae-d09323cae1f3"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (rule 'D board-edge clearance' clearance 0.3000 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Segment on Multi-Layer",
+                    "pos": {
+                        "x": 186.699,
+                        "y": 99.6305
+                    },
+                    "uuid": "31373a54-57fb-4347-b7e4-2fd0d6d9caaf"
+                },
+                {
+                    "description": "Pad B6 [USB_DP_CONN] of J1 on Top Layer",
+                    "pos": {
+                        "x": 186.149,
+                        "y": 103.2505
+                    },
+                    "uuid": "da658e12-0b71-41ee-bf2b-d15a045abb77"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (rule 'D board-edge clearance' clearance 0.3000 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Segment on Multi-Layer",
+                    "pos": {
+                        "x": 186.699,
+                        "y": 99.6305
+                    },
+                    "uuid": "31373a54-57fb-4347-b7e4-2fd0d6d9caaf"
+                },
+                {
+                    "description": "Pad B7 [USB_DM_CONN] of J1 on Top Layer",
+                    "pos": {
+                        "x": 186.149,
+                        "y": 104.7505
+                    },
+                    "uuid": "f81b7f34-5947-419d-bad9-946fea31ca06"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (rule 'D board-edge clearance' clearance 0.3000 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Segment on Multi-Layer",
+                    "pos": {
+                        "x": 186.699,
+                        "y": 99.6305
+                    },
+                    "uuid": "31373a54-57fb-4347-b7e4-2fd0d6d9caaf"
+                },
+                {
+                    "description": "Pad B8 [unconnected-(J1-SBU2-PadB8)] of J1 on Top Layer",
+                    "pos": {
+                        "x": 186.149,
+                        "y": 105.7505
+                    },
+                    "uuid": "77ddccc5-55e2-4835-ab07-ed31ef0c6822"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Thermal relief connection to zone incomplete (layer Top Layer; zone min spoke count 2; actual 1)",
+            "items": [
+                {
+                    "description": "Zone [GND] on Top Layer, priority 499",
+                    "pos": {
+                        "x": 147.0075,
+                        "y": 128.59
+                    },
+                    "uuid": "95bc0dc0-91c3-4eff-96c3-85420b2c6a03"
+                },
+                {
+                    "description": "Pad 5 [GND] of U2 on Top Layer",
+                    "pos": {
+                        "x": 158.2,
+                        "y": 107.55
+                    },
+                    "uuid": "844ad891-d60a-48ef-a124-ea2a0dcd4271"
+                }
+            ],
+            "severity": "error",
+            "type": "starved_thermal"
+        },
+        {
+            "description": "Thermal relief connection to zone incomplete (layer Top Layer; zone min spoke count 2; actual 1)",
+            "items": [
+                {
+                    "description": "Zone [GND] on Top Layer, priority 499",
+                    "pos": {
+                        "x": 147.0075,
+                        "y": 128.59
+                    },
+                    "uuid": "95bc0dc0-91c3-4eff-96c3-85420b2c6a03"
+                },
+                {
+                    "description": "Pad 2 [GND] of U4 on Top Layer",
+                    "pos": {
+                        "x": 180.25,
+                        "y": 100.4
+                    },
+                    "uuid": "2a3da7b1-3920-4c9b-bdf7-a108b62ece50"
+                }
+            ],
+            "severity": "error",
+            "type": "starved_thermal"
+        },
+        {
+            "description": "Thermal relief connection to zone incomplete (layer Top Layer; zone min spoke count 2; actual 1)",
+            "items": [
+                {
+                    "description": "Zone [GND] on Top Layer, priority 499",
+                    "pos": {
+                        "x": 147.0075,
+                        "y": 128.59
+                    },
+                    "uuid": "95bc0dc0-91c3-4eff-96c3-85420b2c6a03"
+                },
+                {
+                    "description": "Pad 2 [GND] of R1 on Top Layer",
+                    "pos": {
+                        "x": 182.2465,
+                        "y": 107.8
+                    },
+                    "uuid": "f2e62e0d-8fad-4e91-bc32-2ce7127db174"
+                }
+            ],
+            "severity": "error",
+            "type": "starved_thermal"
+        },
+        {
+            "description": "Thermal relief connection to zone incomplete (layer Top Layer; zone min spoke count 2; actual 1)",
+            "items": [
+                {
+                    "description": "Zone [GND] on Top Layer, priority 499",
+                    "pos": {
+                        "x": 147.0075,
+                        "y": 128.59
+                    },
+                    "uuid": "95bc0dc0-91c3-4eff-96c3-85420b2c6a03"
+                },
+                {
+                    "description": "Pad A1B12 [GND] of J1 on Top Layer",
+                    "pos": {
+                        "x": 186.149,
+                        "y": 107.2005
+                    },
+                    "uuid": "94364e3a-61c8-4911-a5ea-f21014739670"
+                }
+            ],
+            "severity": "error",
+            "type": "starved_thermal"
+        },
+        {
+            "description": "Thermal relief connection to zone incomplete (layer Top Layer; zone min spoke count 2; actual 1)",
+            "items": [
+                {
+                    "description": "Zone [GND] on Top Layer, priority 499",
+                    "pos": {
+                        "x": 147.0075,
+                        "y": 128.59
+                    },
+                    "uuid": "95bc0dc0-91c3-4eff-96c3-85420b2c6a03"
+                },
+                {
+                    "description": "Pad B1A12 [GND] of J1 on Top Layer",
+                    "pos": {
+                        "x": 186.149,
+                        "y": 100.8005
+                    },
+                    "uuid": "71b215d6-2614-4ec9-8c9c-f863819fbd39"
+                }
+            ],
+            "severity": "error",
+            "type": "starved_thermal"
+        },
+        {
+            "description": "Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5995 mm)",
+            "items": [
+                {
+                    "description": "Via [NFC1_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 144.9,
+                        "y": 100.0
+                    },
+                    "uuid": "3726ba4a-eedf-4c87-a62f-5929cba7508a"
+                }
+            ],
+            "severity": "error",
+            "type": "via_diameter"
+        },
+        {
+            "description": "Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5995 mm)",
+            "items": [
+                {
+                    "description": "Via [NFC1_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 141.4,
+                        "y": 100.5
+                    },
+                    "uuid": "a955d647-5571-4d34-a182-e04d73d770bd"
+                }
+            ],
+            "severity": "error",
+            "type": "via_diameter"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [BAT_ADC_SENSE] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 175.8,
+                        "y": 118.534
+                    },
+                    "uuid": "2348632e-2e79-4832-8a2d-cdc86e03e9a1"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [CHG_SDA] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 175.0,
+                        "y": 115.8
+                    },
+                    "uuid": "1b0af656-3460-425a-ab97-b6a0b7fe4331"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [CHG_SDA] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 164.0,
+                        "y": 109.5
+                    },
+                    "uuid": "70b22bae-5c5c-4df4-b1c1-3d51266ad31f"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [CHG_SDA] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 175.2,
+                        "y": 108.1
+                    },
+                    "uuid": "8c11c6c8-9195-4ddc-bbb1-2ce9b74721d1"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [CHG_SDA] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 158.4,
+                        "y": 111.2
+                    },
+                    "uuid": "e95c7608-a6d3-4c9b-80a4-a559640fcfc3"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [CHG_PG_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 164.0,
+                        "y": 110.7
+                    },
+                    "uuid": "0bb09ae4-55dd-45ec-b99e-a9775ecc9cb9"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [CHG_PG_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 158.5,
+                        "y": 106.2
+                    },
+                    "uuid": "7e6cfa03-2644-4087-9108-cf44f96afc13"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [CHG_PG_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 174.1,
+                        "y": 115.7
+                    },
+                    "uuid": "cf975678-3a73-4d25-864c-f0afaa0a5ccd"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [CHG_PG_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 174.0,
+                        "y": 108.9
+                    },
+                    "uuid": "f00857c7-a64e-4743-a3e6-436b6c4cdb10"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [BAT_PACK_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 160.5,
+                        "y": 103.2
+                    },
+                    "uuid": "b48c3a86-b5f3-44d9-a848-a7d5cc16c0fe"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [CHG_CE_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 176.2,
+                        "y": 107.1
+                    },
+                    "uuid": "0cce50a9-100a-4ccc-81eb-b6dfefc2d0ac"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [CHG_CE_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 157.5,
+                        "y": 106.9
+                    },
+                    "uuid": "2febcf54-5efe-4bf1-946f-deff77036aac"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [CHG_CE_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 174.1,
+                        "y": 112.9
+                    },
+                    "uuid": "43796ff6-29ce-4f1a-b2ee-d5c38271db82"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [CHG_CE_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 164.0,
+                        "y": 108.3
+                    },
+                    "uuid": "bf8b3164-7441-4675-867a-77dcdad608eb"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [BAT_NTC_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 157.5,
+                        "y": 111.3
+                    },
+                    "uuid": "1fe61b74-387c-411f-a455-2e958154b70a"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [BAT_NTC_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 156.0,
+                        "y": 103.3
+                    },
+                    "uuid": "f48f539b-3d6a-4c2f-93dc-bfc0f55eec19"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [CHG_SCL] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 177.0,
+                        "y": 112.95
+                    },
+                    "uuid": "22ad79bb-0033-4705-9a61-894cec9e419f"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [CHG_SCL] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 178.2,
+                        "y": 105.1
+                    },
+                    "uuid": "453007fc-b4fc-4fc3-ac04-612c10f49f90"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [CHG_SCL] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 164.0,
+                        "y": 105.9
+                    },
+                    "uuid": "6d993c02-c81f-4845-85f2-4672f3e0ac15"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [CHG_SCL] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 159.4,
+                        "y": 111.3
+                    },
+                    "uuid": "cc0683a3-fbde-4186-beb3-e3a67702ee71"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [CHG_INT_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 177.2,
+                        "y": 106.1
+                    },
+                    "uuid": "16df2d8b-d479-43ec-ac6f-b1dc7fa9e85b"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [CHG_INT_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 175.4,
+                        "y": 112.7
+                    },
+                    "uuid": "63712b7e-b04e-4c1a-898f-88805db7b602"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [CHG_INT_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 160.3,
+                        "y": 110.8
+                    },
+                    "uuid": "a1de545a-aa84-4737-975f-98ec1c1e2f3c"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [CHG_INT_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 164.0,
+                        "y": 107.1
+                    },
+                    "uuid": "b46f1a6c-2018-4e67-bbc3-4ca3397df31f"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [CHG_INT_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 155.9,
+                        "y": 106.4
+                    },
+                    "uuid": "f11b0af2-525a-4fe7-8358-a57e6af5faa7"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [USB_VBUS] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 185.0,
+                        "y": 106.35
+                    },
+                    "uuid": "5a06d050-b715-45d8-9994-e9621ffc94e6"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [USB_VBUS] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 162.8,
+                        "y": 110.3
+                    },
+                    "uuid": "5d89d623-119e-4229-a868-918f2ca1878d"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [USB_VBUS] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 184.8,
+                        "y": 100.9
+                    },
+                    "uuid": "8b58be17-b959-4e7d-ac68-c8a05a0a49ac"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [USB_VBUS] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 167.7,
+                        "y": 112.2
+                    },
+                    "uuid": "a27303fe-6857-4a8d-ae8f-442cd239f86e"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [EPD_EN_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 179.3,
+                        "y": 98.7
+                    },
+                    "uuid": "abf11bb7-0bf9-439f-9f99-14cafac83564"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [EPD_EN_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 172.4,
+                        "y": 116.5
+                    },
+                    "uuid": "aeb1bf81-3c2f-47e9-9a10-5e159553f835"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [USB_CC2] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 181.0,
+                        "y": 106.35
+                    },
+                    "uuid": "63e20e8b-9365-4b4b-9906-1a7b585510e4"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [USB_CC2] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 185.0,
+                        "y": 102.2505
+                    },
+                    "uuid": "86c74faf-be59-40aa-ba3e-19f3b83432a7"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [EPD_BUSY_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 173.0,
+                        "y": 113.0
+                    },
+                    "uuid": "64d37bcc-74ee-4642-8305-e3d26312a91c"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [EPD_BUSY_TBD] on Bottom Layer, length 12.8000 mm",
+                    "pos": {
+                        "x": 167.4,
+                        "y": 111.1
+                    },
+                    "uuid": "8dce09f9-6738-4027-9d10-506ae9e78903"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [USB_DP_CONN] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 183.3,
+                        "y": 104.2505
+                    },
+                    "uuid": "2dfed808-2f88-462a-be16-83013bf52de5"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [USB_DP_CONN] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 163.0465,
+                        "y": 116.2
+                    },
+                    "uuid": "c2a5cbff-de67-4038-ab61-7a671ed5491f"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [EPD_RESET_N_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 166.9,
+                        "y": 118.134
+                    },
+                    "uuid": "3c514d0e-1d17-4a12-b598-6fae04af87ce"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [EPD_RESET_N_TBD] on Bottom Layer, length 13.6000 mm",
+                    "pos": {
+                        "x": 167.0,
+                        "y": 111.1
+                    },
+                    "uuid": "cb8835f0-646e-44b1-bfec-b74ff5c71f4d"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [EPD_DC_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 166.9,
+                        "y": 117.334
+                    },
+                    "uuid": "816c3ba5-10e7-4cf4-b3c0-fe722f37f327"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [EPD_DC_TBD] on Bottom Layer, length 14.4000 mm",
+                    "pos": {
+                        "x": 166.6,
+                        "y": 111.1
+                    },
+                    "uuid": "6d5a0962-5e33-4b84-b3db-1c914c94d8c3"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [EPD_CS_N_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 171.2,
+                        "y": 116.9
+                    },
+                    "uuid": "d0d1b8f4-2ceb-4a59-89eb-41016b1b4436"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [EPD_CS_N_TBD] on Bottom Layer, length 15.2000 mm",
+                    "pos": {
+                        "x": 166.2,
+                        "y": 111.1
+                    },
+                    "uuid": "1183879b-cba6-40fb-9dd3-b24b6804f27b"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [EPD_SCK_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 171.2,
+                        "y": 115.7
+                    },
+                    "uuid": "77f553f9-f973-4368-8d90-4a6e933ecacd"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [EPD_SCK_TBD] on Bottom Layer, length 16.0000 mm",
+                    "pos": {
+                        "x": 165.8,
+                        "y": 111.1
+                    },
+                    "uuid": "caa0372f-4ef6-4301-867e-0f3083b07c9d"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [EPD_MOSI_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 166.9,
+                        "y": 116.534
+                    },
+                    "uuid": "3c23a23a-fe48-44db-bfb2-365f1805c639"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [EPD_MOSI_TBD] on Bottom Layer, length 16.8000 mm",
+                    "pos": {
+                        "x": 165.4,
+                        "y": 111.1
+                    },
+                    "uuid": "bbf17f83-9ea1-4361-9a0c-ee49d3ada8b7"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [NRESET] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 183.4,
+                        "y": 101.2
+                    },
+                    "uuid": "51fe35c8-395c-45e4-abbe-b2784df11f64"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [NRESET] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 172.3,
+                        "y": 118.1
+                    },
+                    "uuid": "862a31cb-9f3a-4e86-9b59-e6e4028c92f4"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [NRESET] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 184.8,
+                        "y": 108.6
+                    },
+                    "uuid": "de57d95f-ab55-49de-b7a0-08a84b4f758c"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [SWDIO] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 182.8,
+                        "y": 106.8
+                    },
+                    "uuid": "1b6f1457-709f-4b5e-b815-b3ea0bae082f"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [SWDIO] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 167.2,
+                        "y": 118.95
+                    },
+                    "uuid": "2f5c1b7f-e6f9-4e1d-82bc-c99c5b96a3a3"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [SWDIO] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 182.3,
+                        "y": 100.8
+                    },
+                    "uuid": "315dbc64-2d01-4335-a6e5-4e2a6479659a"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [SWDCLK] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 165.9,
+                        "y": 118.7
+                    },
+                    "uuid": "2e85dc85-d669-4990-9994-353ace3ab6b7"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [SWDCLK] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 180.8,
+                        "y": 105.5
+                    },
+                    "uuid": "64bdf0dc-da4f-49b5-9afb-5e1ff71033c5"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [SWDCLK] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 181.5,
+                        "y": 102.0
+                    },
+                    "uuid": "d048fa81-0617-4c48-b8ae-4529b9a21ac6"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [USB_DM_CONN] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 163.0465,
+                        "y": 114.6
+                    },
+                    "uuid": "923a5a42-b526-4fad-8da6-7314792bf22b"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint C5",
+                    "pos": {
+                        "x": 173.5,
+                        "y": 111.2
+                    },
+                    "uuid": "08903fae-64d1-400a-bba3-1da1dca18e37"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint R20",
+                    "pos": {
+                        "x": 184.1,
+                        "y": 115.9
+                    },
+                    "uuid": "09118bdf-8082-4fef-a4c3-c18c9e5d3ef0"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint R5",
+                    "pos": {
+                        "x": 151.8,
+                        "y": 108.8
+                    },
+                    "uuid": "0cc8bf94-024a-44fa-915d-d0021daf78e8"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint R9",
+                    "pos": {
+                        "x": 151.8,
+                        "y": 103.8
+                    },
+                    "uuid": "0e4053f9-1a49-440c-aeeb-228b19f342e0"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint C2",
+                    "pos": {
+                        "x": 162.2,
+                        "y": 105.2
+                    },
+                    "uuid": "0fe077de-5ac7-4fa6-862d-270b6f82da95"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint U2",
+                    "pos": {
+                        "x": 159.0,
+                        "y": 108.6
+                    },
+                    "uuid": "1e9b46ba-242b-4eab-b320-668cb7c857ec"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint R21",
+                    "pos": {
+                        "x": 184.1,
+                        "y": 112.9
+                    },
+                    "uuid": "20989467-e1a0-44f9-98db-eb25b3c30271"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint C4",
+                    "pos": {
+                        "x": 179.5,
+                        "y": 111.1
+                    },
+                    "uuid": "230f812a-044f-4717-acef-36da63bb7b27"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint U4",
+                    "pos": {
+                        "x": 179.3,
+                        "y": 100.4
+                    },
+                    "uuid": "23536a3c-bb1f-4388-89a1-bb0819a7a111"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint R1",
+                    "pos": {
+                        "x": 183.0,
+                        "y": 107.8
+                    },
+                    "uuid": "2501b057-a94c-4e6d-a48d-19c482381083"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint R22",
+                    "pos": {
+                        "x": 186.3,
+                        "y": 119.8
+                    },
+                    "uuid": "2a099ca8-3622-46ce-800f-274739e5040f"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint C13",
+                    "pos": {
+                        "x": 184.0,
+                        "y": 93.0
+                    },
+                    "uuid": "2e003589-f093-49e9-b022-457183b04f7f"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint C10",
+                    "pos": {
+                        "x": 176.8,
+                        "y": 101.0
+                    },
+                    "uuid": "30bd49c9-06eb-4d96-b325-2376257af552"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint C15",
+                    "pos": {
+                        "x": 158.5,
+                        "y": 98.6
+                    },
+                    "uuid": "3b80ee88-64b1-4ef6-ba3e-b55571f5e663"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint R7",
+                    "pos": {
+                        "x": 159.0,
+                        "y": 113.5
+                    },
+                    "uuid": "3cfbe636-2017-4710-a957-3d884e477dda"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint C22",
+                    "pos": {
+                        "x": 158.5,
+                        "y": 83.2
+                    },
+                    "uuid": "3ea09001-1663-429b-8d27-10bab0733a9b"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint R16",
+                    "pos": {
+                        "x": 175.5,
+                        "y": 89.9
+                    },
+                    "uuid": "42dc3395-d1fc-4563-84a5-42429722808d"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint D3",
+                    "pos": {
+                        "x": 180.0,
+                        "y": 91.0
+                    },
+                    "uuid": "4648b630-8ea2-48ff-bc17-299dfed59296"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint C19",
+                    "pos": {
+                        "x": 158.5,
+                        "y": 89.8
+                    },
+                    "uuid": "46707551-634c-45d5-96a3-c90695a1473a"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint C9",
+                    "pos": {
+                        "x": 181.8,
+                        "y": 97.8
+                    },
+                    "uuid": "4910bd57-a5b1-4209-af6e-1615be00e944"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint C24",
+                    "pos": {
+                        "x": 165.2,
+                        "y": 124.0
+                    },
+                    "uuid": "4ea8ffbe-7dbe-4e33-904a-bc46695cbb84"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint C6",
+                    "pos": {
+                        "x": 172.0,
+                        "y": 111.5
+                    },
+                    "uuid": "57e1b9ee-aef8-4591-a6fb-0af451608b0a"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint SW3",
+                    "pos": {
+                        "x": 151.1,
+                        "y": 115.6
+                    },
+                    "uuid": "582f4acf-6201-45b0-bef5-521fd58b7469"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint C20",
+                    "pos": {
+                        "x": 158.5,
+                        "y": 87.6
+                    },
+                    "uuid": "5d4763b2-2691-4988-b60e-f0c7afa7cda8"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint C18",
+                    "pos": {
+                        "x": 158.5,
+                        "y": 92.0
+                    },
+                    "uuid": "5d64c5fc-005c-4d40-a5a8-c70b38381ea3"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint C25",
+                    "pos": {
+                        "x": 182.4,
+                        "y": 116.8
+                    },
+                    "uuid": "5d7f7cb7-20c2-4571-87ef-04e9cdf54ea6"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint BP",
+                    "pos": {
+                        "x": 142.5,
+                        "y": 111.3005
+                    },
+                    "uuid": "60eafd61-63d4-46bf-a4d6-0e00ecce1df0"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint R2",
+                    "pos": {
+                        "x": 183.0,
+                        "y": 109.4
+                    },
+                    "uuid": "63d85c68-3ffd-495e-b787-0705598b418c"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint R17",
+                    "pos": {
+                        "x": 154.2,
+                        "y": 100.8
+                    },
+                    "uuid": "640114fa-371b-4fdf-ba79-b07f3eeccd8d"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint C8",
+                    "pos": {
+                        "x": 161.6,
+                        "y": 109.6
+                    },
+                    "uuid": "65127ce1-6d15-4829-9640-c1d618c88c82"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint C16",
+                    "pos": {
+                        "x": 158.5,
+                        "y": 96.4
+                    },
+                    "uuid": "6aee8991-3196-496f-96b6-4e879ad2cffe"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint C1",
+                    "pos": {
+                        "x": 168.8,
+                        "y": 111.5
+                    },
+                    "uuid": "6c90ebde-44ca-40b0-a069-63301a24005f"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint C7",
+                    "pos": {
+                        "x": 170.6,
+                        "y": 111.5
+                    },
+                    "uuid": "6efac59c-9a7a-4614-88da-1545a0b4b2ce"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint R14",
+                    "pos": {
+                        "x": 169.75,
+                        "y": 103.4
+                    },
+                    "uuid": "76d341da-30cb-46d0-bfdc-1eff982a262e"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint R18",
+                    "pos": {
+                        "x": 169.9,
+                        "y": 91.9
+                    },
+                    "uuid": "7a4e0bf0-d351-4610-ae11-6eee0a64843b"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint Q1",
+                    "pos": {
+                        "x": 172.8,
+                        "y": 104.0
+                    },
+                    "uuid": "7e772843-0efd-4377-9dac-75aacb5f361b"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint R8",
+                    "pos": {
+                        "x": 153.8,
+                        "y": 106.4
+                    },
+                    "uuid": "812f519d-0c6c-4a97-b80c-8413f9e19037"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint R10",
+                    "pos": {
+                        "x": 182.5,
+                        "y": 123.2
+                    },
+                    "uuid": "8a68cb63-1a93-455d-9d29-19f8ec9a7bb9"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint SW2",
+                    "pos": {
+                        "x": 159.6,
+                        "y": 121.2
+                    },
+                    "uuid": "8ec2ff59-d6e1-4f43-965f-7216d154704c"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint R12",
+                    "pos": {
+                        "x": 182.5,
+                        "y": 119.6
+                    },
+                    "uuid": "917e95c8-56da-43a5-8464-78b43c1f5cf4"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint C3",
+                    "pos": {
+                        "x": 159.4,
+                        "y": 104.4
+                    },
+                    "uuid": "93d2b3e3-70db-4a71-968d-c627bffa3365"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint Q3",
+                    "pos": {
+                        "x": 190.0,
+                        "y": 112.5
+                    },
+                    "uuid": "9ac8834a-d865-4464-9a48-58e2b7f720ba"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint R19",
+                    "pos": {
+                        "x": 156.2,
+                        "y": 109.8
+                    },
+                    "uuid": "a569b967-fd0e-4ccb-a02f-f12c1761b84c"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint D2",
+                    "pos": {
+                        "x": 179.6,
+                        "y": 94.5
+                    },
+                    "uuid": "a93b5341-5091-4b66-a938-dcc66a46ffcf"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint C12",
+                    "pos": {
+                        "x": 174.0,
+                        "y": 92.2
+                    },
+                    "uuid": "aa6dda31-b6a1-4e37-9252-8dcf6124c2c5"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint R3",
+                    "pos": {
+                        "x": 164.9,
+                        "y": 116.2
+                    },
+                    "uuid": "ad5c3fb1-9b2f-4a4f-b0ff-82db46cd7c11"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint R13",
+                    "pos": {
+                        "x": 177.1,
+                        "y": 96.6
+                    },
+                    "uuid": "ae127ea6-f460-4749-95a9-44c786c5aaf1"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint C21",
+                    "pos": {
+                        "x": 158.5,
+                        "y": 85.4
+                    },
+                    "uuid": "b59b0b3c-4d2b-46ae-95b4-ac09f4df48f1"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint U3",
+                    "pos": {
+                        "x": 176.2,
+                        "y": 110.1
+                    },
+                    "uuid": "bf9b3707-07e1-4a53-92b2-5eac7c9a8a8f"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint BN",
+                    "pos": {
+                        "x": 145.5,
+                        "y": 111.3005
+                    },
+                    "uuid": "c6d00353-3fff-4ee9-98c2-4261f06de76a"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint L1",
+                    "pos": {
+                        "x": 172.8,
+                        "y": 100.5
+                    },
+                    "uuid": "cbaa55e1-7cd2-4085-a499-ce4c179cb6f2"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint D1",
+                    "pos": {
+                        "x": 172.0,
+                        "y": 95.8
+                    },
+                    "uuid": "ce31d4c6-1429-4f36-9851-b0c8ebe94f8a"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint C14",
+                    "pos": {
+                        "x": 158.5,
+                        "y": 100.8
+                    },
+                    "uuid": "d2140d1c-74c6-4e22-83ce-59b64f10bfe0"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint R23",
+                    "pos": {
+                        "x": 186.3,
+                        "y": 111.9
+                    },
+                    "uuid": "d28e6723-6979-47d5-9433-af6708a60e3c"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint R6",
+                    "pos": {
+                        "x": 155.0,
+                        "y": 111.4
+                    },
+                    "uuid": "d3518a7c-f57d-47ae-a312-e43daa3718ca"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint U6",
+                    "pos": {
+                        "x": 180.5,
+                        "y": 107.8
+                    },
+                    "uuid": "d46849fe-fb60-4832-bdf5-604b869766d0"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint R11",
+                    "pos": {
+                        "x": 182.5,
+                        "y": 121.4
+                    },
+                    "uuid": "d5dad41d-9012-4e0f-8025-7664fcb75562"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint J2",
+                    "pos": {
+                        "x": 164.7,
+                        "y": 95.74
+                    },
+                    "uuid": "d7168818-40e9-4cdb-aafa-a1d7049073b4"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint C17",
+                    "pos": {
+                        "x": 158.5,
+                        "y": 94.2
+                    },
+                    "uuid": "da4d3513-5376-4c6e-9ded-3b449d56d66e"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint U1",
+                    "pos": {
+                        "x": 173.001,
+                        "y": 119.384
+                    },
+                    "uuid": "e02ab56c-98d1-47f6-a687-178e5e54a53f"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint C23",
+                    "pos": {
+                        "x": 165.2,
+                        "y": 122.0
+                    },
+                    "uuid": "e05d7d15-3649-42b5-a45f-170383b216d5"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint Q2",
+                    "pos": {
+                        "x": 188.0,
+                        "y": 116.1
+                    },
+                    "uuid": "e0c7cd2d-660f-49a3-a399-ad5dfd3c60da"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint U5",
+                    "pos": {
+                        "x": 180.5,
+                        "y": 103.8
+                    },
+                    "uuid": "e360f77f-33f0-4115-a7b9-d6043ac5c161"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint J1",
+                    "pos": {
+                        "x": 188.724,
+                        "y": 104.0005
+                    },
+                    "uuid": "e9ac05ec-6669-42b7-bd8f-8386908008c8"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint R4",
+                    "pos": {
+                        "x": 164.9,
+                        "y": 114.6
+                    },
+                    "uuid": "e9edbae2-ccfc-4bdd-a477-3d160b0930ab"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint C11",
+                    "pos": {
+                        "x": 175.0,
+                        "y": 96.55
+                    },
+                    "uuid": "f69017e9-c914-46ef-8ab8-fac56241d5c5"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint NTC",
+                    "pos": {
+                        "x": 155.0,
+                        "y": 104.0
+                    },
+                    "uuid": "fa31e89a-dbc0-4abd-8825-66876a4326f1"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint SW1",
+                    "pos": {
+                        "x": 151.1,
+                        "y": 125.5
+                    },
+                    "uuid": "fb3b8582-3847-4e6e-8d0f-fa6d34337d5c"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint R15",
+                    "pos": {
+                        "x": 175.8,
+                        "y": 104.2
+                    },
+                    "uuid": "fcc77eef-2fb2-46b1-86bd-b75cf623df9f"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint TP1",
+                    "pos": {
+                        "x": 175.9205,
+                        "y": 81.501
+                    },
+                    "uuid": "18a3b12f-fd46-4244-a92b-c3bcba65f245"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint NFC1",
+                    "pos": {
+                        "x": 146.3,
+                        "y": 103.0
+                    },
+                    "uuid": "66c87c0b-9759-4068-bcc0-77121d2513ba"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint TP3",
+                    "pos": {
+                        "x": 181.0005,
+                        "y": 81.501
+                    },
+                    "uuid": "6b48b4c5-9b73-442d-8813-f5ea4f9e1c80"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint TP5",
+                    "pos": {
+                        "x": 186.0805,
+                        "y": 81.501
+                    },
+                    "uuid": "a78d673f-b148-4c6f-843b-35c56f0bc165"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint NFC2",
+                    "pos": {
+                        "x": 146.3,
+                        "y": 100.0
+                    },
+                    "uuid": "edff7aad-6f0d-499f-81ec-55e29f4838ee"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint TP2",
+                    "pos": {
+                        "x": 178.4605,
+                        "y": 81.501
+                    },
+                    "uuid": "f7f75013-fab3-4a71-a50f-26f8b805d8da"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint TP4",
+                    "pos": {
+                        "x": 183.5405,
+                        "y": 81.501
+                    },
+                    "uuid": "fb2bc15c-3c6c-40cb-a8b4-32fe0dc3eff5"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.6300 mm)",
+            "items": [
+                {
+                    "description": "PCB text 'B+' on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 140.3,
+                        "y": 111.3
+                    },
+                    "uuid": "3e901d9e-40bb-4dad-a2ca-29db5807bc54"
+                }
+            ],
+            "severity": "warning",
+            "type": "text_height"
+        },
+        {
+            "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.6300 mm)",
+            "items": [
+                {
+                    "description": "PCB text 'B-' on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 147.4,
+                        "y": 111.3
+                    },
+                    "uuid": "fc8718d9-6d2a-4bee-afca-a0772cf919e8"
+                }
+            ],
+            "severity": "warning",
+            "type": "text_height"
+        },
+        {
+            "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7000 mm)",
+            "items": [
+                {
+                    "description": "PCB text 'GND' on Bottom Silkscreen Layer",
+                    "pos": {
+                        "x": 175.9205,
+                        "y": 83.2
+                    },
+                    "uuid": "d240ae44-63c6-4f0f-840d-5e84b2852d16"
+                }
+            ],
+            "severity": "warning",
+            "type": "text_height"
+        },
+        {
+            "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7000 mm)",
+            "items": [
+                {
+                    "description": "PCB text '3V3' on Bottom Silkscreen Layer",
+                    "pos": {
+                        "x": 178.4605,
+                        "y": 83.2
+                    },
+                    "uuid": "cc8a6ac2-301d-4b21-aaa5-99794f275df8"
+                }
+            ],
+            "severity": "warning",
+            "type": "text_height"
+        },
+        {
+            "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7000 mm)",
+            "items": [
+                {
+                    "description": "PCB text 'CLK' on Bottom Silkscreen Layer",
+                    "pos": {
+                        "x": 181.0005,
+                        "y": 83.2
+                    },
+                    "uuid": "ad643973-68cb-460f-851c-bad4e5277e9d"
+                }
+            ],
+            "severity": "warning",
+            "type": "text_height"
+        },
+        {
+            "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7000 mm)",
+            "items": [
+                {
+                    "description": "PCB text 'DIO' on Bottom Silkscreen Layer",
+                    "pos": {
+                        "x": 183.5405,
+                        "y": 83.2
+                    },
+                    "uuid": "4743eecf-3e6c-4443-8ec6-ded4f81d8559"
+                }
+            ],
+            "severity": "warning",
+            "type": "text_height"
+        },
+        {
+            "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7000 mm)",
+            "items": [
+                {
+                    "description": "PCB text 'RST' on Bottom Silkscreen Layer",
+                    "pos": {
+                        "x": 186.0805,
+                        "y": 83.2
+                    },
+                    "uuid": "64883902-aad0-4e41-9c5b-73feb9a97fdf"
+                }
+            ],
+            "severity": "warning",
+            "type": "text_height"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of C2 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 160.81,
+                        "y": 105.5995
+                    },
+                    "uuid": "78723fe1-55a3-46cd-924d-ebe3fcc1529d"
+                },
+                {
+                    "description": "Arc of C3 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 160.480852,
+                        "y": 104.800852
+                    },
+                    "uuid": "e0bdc9a5-92e0-4658-977e-d8b00d0251a3"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of C2 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 160.81,
+                        "y": 105.5995
+                    },
+                    "uuid": "78723fe1-55a3-46cd-924d-ebe3fcc1529d"
+                },
+                {
+                    "description": "Segment of C3 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 160.79,
+                        "y": 104.0005
+                    },
+                    "uuid": "e8118681-41f3-4f2c-84df-004bdb9f6cbb"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Arc of C2 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 161.119148,
+                        "y": 104.799148
+                    },
+                    "uuid": "d1f24488-5bd7-48f7-84e5-085e91fbd898"
+                },
+                {
+                    "description": "Arc of C3 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 160.480852,
+                        "y": 104.800852
+                    },
+                    "uuid": "e0bdc9a5-92e0-4658-977e-d8b00d0251a3"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Arc of C2 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 161.119148,
+                        "y": 104.799148
+                    },
+                    "uuid": "d1f24488-5bd7-48f7-84e5-085e91fbd898"
+                },
+                {
+                    "description": "Segment of C3 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 160.79,
+                        "y": 104.0005
+                    },
+                    "uuid": "e8118681-41f3-4f2c-84df-004bdb9f6cbb"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of C6 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.29,
+                        "y": 111.78
+                    },
+                    "uuid": "8d6c6a31-a79d-4a08-82a4-1766357294cb"
+                },
+                {
+                    "description": "Arc of C7 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 170.9995,
+                        "y": 112.58
+                    },
+                    "uuid": "978aeb4d-f75c-4167-a9d4-ecf76c9b325c"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of C6 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.29,
+                        "y": 111.78
+                    },
+                    "uuid": "8d6c6a31-a79d-4a08-82a4-1766357294cb"
+                },
+                {
+                    "description": "Segment of C7 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.3095,
+                        "y": 111.78
+                    },
+                    "uuid": "c2c57f9d-ec8c-4829-972f-cef0ec56c694"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Arc of C6 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.599148,
+                        "y": 112.580852
+                    },
+                    "uuid": "34bd6584-7f3d-4f71-baca-1acbc950e8af"
+                },
+                {
+                    "description": "Arc of C7 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 170.9995,
+                        "y": 112.58
+                    },
+                    "uuid": "978aeb4d-f75c-4167-a9d4-ecf76c9b325c"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Arc of C6 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.599148,
+                        "y": 112.580852
+                    },
+                    "uuid": "34bd6584-7f3d-4f71-baca-1acbc950e8af"
+                },
+                {
+                    "description": "Segment of C7 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.3095,
+                        "y": 111.78
+                    },
+                    "uuid": "c2c57f9d-ec8c-4829-972f-cef0ec56c694"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of C5 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 172.79,
+                        "y": 111.479998
+                    },
+                    "uuid": "5f842e61-d1e2-43df-8d80-396d61edb383"
+                },
+                {
+                    "description": "Segment of C6 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 172.7095,
+                        "y": 111.78
+                    },
+                    "uuid": "bce45ec2-ad80-48db-b334-3a6d0381b5b2"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Arc of C5 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 173.099148,
+                        "y": 112.280852
+                    },
+                    "uuid": "1ef7b6aa-08ea-49a3-95b6-711322437748"
+                },
+                {
+                    "description": "Segment of C6 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 172.7095,
+                        "y": 111.78
+                    },
+                    "uuid": "bce45ec2-ad80-48db-b334-3a6d0381b5b2"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Arc of C6 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 172.3995,
+                        "y": 112.58
+                    },
+                    "uuid": "053e8d23-f680-447e-bddb-d69f4179e8e3"
+                },
+                {
+                    "description": "Arc of C5 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 173.099148,
+                        "y": 112.280852
+                    },
+                    "uuid": "1ef7b6aa-08ea-49a3-95b6-711322437748"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Arc of C7 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.0,
+                        "y": 110.42
+                    },
+                    "uuid": "6edfbd06-3b9e-4872-a034-0f1e1625070d"
+                },
+                {
+                    "description": "Arc of C6 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.60085,
+                        "y": 110.42035
+                    },
+                    "uuid": "cf25a100-a65c-4974-bb5f-b6a45e59927f"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of C7 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.31,
+                        "y": 111.2195
+                    },
+                    "uuid": "b768b264-2251-4aa0-97db-563f321afdda"
+                },
+                {
+                    "description": "Arc of C6 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.60085,
+                        "y": 110.42035
+                    },
+                    "uuid": "cf25a100-a65c-4974-bb5f-b6a45e59927f"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of C6 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.2905,
+                        "y": 111.2195
+                    },
+                    "uuid": "2150eae6-a86b-49bd-a026-30b68567c521"
+                },
+                {
+                    "description": "Arc of C7 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.0,
+                        "y": 110.42
+                    },
+                    "uuid": "6edfbd06-3b9e-4872-a034-0f1e1625070d"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Arc of C5 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 173.10086,
+                        "y": 110.12035
+                    },
+                    "uuid": "6c5452e9-f20f-49d6-a7b3-83a9d3e518db"
+                },
+                {
+                    "description": "Arc of C6 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 172.4,
+                        "y": 110.42
+                    },
+                    "uuid": "d0d079a5-368c-42e7-90aa-7f213e3666c1"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of C6 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 172.71,
+                        "y": 111.2195
+                    },
+                    "uuid": "0129363d-3277-4e94-9347-12c8459054fb"
+                },
+                {
+                    "description": "Segment of C5 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 172.7905,
+                        "y": 110.9195
+                    },
+                    "uuid": "260a0748-430c-4066-8cb0-57872ac0430c"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of C5 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 172.7905,
+                        "y": 110.9195
+                    },
+                    "uuid": "260a0748-430c-4066-8cb0-57872ac0430c"
+                },
+                {
+                    "description": "Arc of C6 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 172.4,
+                        "y": 110.42
+                    },
+                    "uuid": "d0d079a5-368c-42e7-90aa-7f213e3666c1"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of C6 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.2905,
+                        "y": 111.2195
+                    },
+                    "uuid": "2150eae6-a86b-49bd-a026-30b68567c521"
+                },
+                {
+                    "description": "Segment of C7 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.31,
+                        "y": 111.2195
+                    },
+                    "uuid": "b768b264-2251-4aa0-97db-563f321afdda"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of C12 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 173.599,
+                        "y": 93.1035
+                    },
+                    "uuid": "3546585d-4ad4-45bd-b400-e802da1d6d86"
+                },
+                {
+                    "description": "Segment of D1 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.365,
+                        "y": 93.133
+                    },
+                    "uuid": "ed28afdd-f8b5-4b5a-9503-902e6428ac69"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Arc of C12 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 172.188999,
+                        "y": 92.951001
+                    },
+                    "uuid": "9e98c7af-9508-4ab6-8e31-daa453776c23"
+                },
+                {
+                    "description": "Segment of D1 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.365,
+                        "y": 93.133
+                    },
+                    "uuid": "ed28afdd-f8b5-4b5a-9503-902e6428ac69"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of L1 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.276,
+                        "y": 98.595
+                    },
+                    "uuid": "832e3d1d-6eab-4095-bae0-54f3d66436ee"
+                },
+                {
+                    "description": "Arc of C11 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 174.248999,
+                        "y": 98.361001
+                    },
+                    "uuid": "8d8a320f-db36-4a3e-a24e-ffdcf24cfd1f"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of L1 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.276,
+                        "y": 98.595
+                    },
+                    "uuid": "832e3d1d-6eab-4095-bae0-54f3d66436ee"
+                },
+                {
+                    "description": "Segment of C11 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 175.751,
+                        "y": 98.5135
+                    },
+                    "uuid": "c6712a14-ec35-4464-98ab-16b8ce1655b2"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of L1 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 174.324,
+                        "y": 98.595
+                    },
+                    "uuid": "6b7c35e8-496a-446c-9030-63a12127b9ab"
+                },
+                {
+                    "description": "Arc of C11 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 174.248999,
+                        "y": 98.361001
+                    },
+                    "uuid": "8d8a320f-db36-4a3e-a24e-ffdcf24cfd1f"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of L1 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 174.324,
+                        "y": 98.595
+                    },
+                    "uuid": "6b7c35e8-496a-446c-9030-63a12127b9ab"
+                },
+                {
+                    "description": "Segment of C11 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 175.751,
+                        "y": 98.5135
+                    },
+                    "uuid": "c6712a14-ec35-4464-98ab-16b8ce1655b2"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TP2",
+                    "pos": {
+                        "x": 178.4605,
+                        "y": 81.501
+                    },
+                    "uuid": "526e8277-5200-4dac-8152-848aed5f45f5"
+                },
+                {
+                    "description": "Reference field of TP1",
+                    "pos": {
+                        "x": 175.9205,
+                        "y": 81.501
+                    },
+                    "uuid": "b75fbc7e-43d4-450c-acf3-cd729b0a8f9f"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TP3",
+                    "pos": {
+                        "x": 181.0005,
+                        "y": 81.501
+                    },
+                    "uuid": "421393d4-6042-4ee5-babc-39d59db54051"
+                },
+                {
+                    "description": "Reference field of TP2",
+                    "pos": {
+                        "x": 178.4605,
+                        "y": 81.501
+                    },
+                    "uuid": "526e8277-5200-4dac-8152-848aed5f45f5"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TP4",
+                    "pos": {
+                        "x": 183.5405,
+                        "y": 81.501
+                    },
+                    "uuid": "1cfae42b-b5a3-42c0-b4ff-fb945f90e664"
+                },
+                {
+                    "description": "Reference field of TP5",
+                    "pos": {
+                        "x": 186.0805,
+                        "y": 81.501
+                    },
+                    "uuid": "bf585056-6499-4a50-9511-20c9d2792f36"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TP4",
+                    "pos": {
+                        "x": 183.5405,
+                        "y": 81.501
+                    },
+                    "uuid": "1cfae42b-b5a3-42c0-b4ff-fb945f90e664"
+                },
+                {
+                    "description": "Reference field of TP3",
+                    "pos": {
+                        "x": 181.0005,
+                        "y": 81.501
+                    },
+                    "uuid": "421393d4-6042-4ee5-babc-39d59db54051"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of BP",
+                    "pos": {
+                        "x": 142.5,
+                        "y": 111.3005
+                    },
+                    "uuid": "4121cb56-67af-483f-9979-ab97104344ff"
+                },
+                {
+                    "description": "Pad 1 [BAT_PACK_TBD] of BP on Top Layer",
+                    "pos": {
+                        "x": 142.5,
+                        "y": 111.3005
+                    },
+                    "uuid": "5a7cd7de-0805-47c2-acaf-587d87ac9028"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of BN",
+                    "pos": {
+                        "x": 145.5,
+                        "y": 111.3005
+                    },
+                    "uuid": "57d343d3-47c1-49e9-8bf2-605985eaac19"
+                },
+                {
+                    "description": "Pad 1 [GND] of BN on Top Layer",
+                    "pos": {
+                        "x": 145.5,
+                        "y": 111.3005
+                    },
+                    "uuid": "81610735-aacd-4c76-995d-4c3629de1bf7"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of NTC",
+                    "pos": {
+                        "x": 155.0,
+                        "y": 104.0
+                    },
+                    "uuid": "be2f63b9-b1a4-4adb-b406-2f4923859e31"
+                },
+                {
+                    "description": "Pad 1 [BAT_NTC_TBD] of NTC on Top Layer",
+                    "pos": {
+                        "x": 155.0,
+                        "y": 104.0
+                    },
+                    "uuid": "c276592e-5fa4-42c1-ad36-8938f4865750"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of C11 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 175.9035,
+                        "y": 96.149
+                    },
+                    "uuid": "a6d482c1-99f9-4ade-80c7-10743c1fa0a3"
+                },
+                {
+                    "description": "Pad 1 [EPD_EN_TBD] of R13 on Top Layer",
+                    "pos": {
+                        "x": 176.3465,
+                        "y": 96.6
+                    },
+                    "uuid": "4dbb6d1e-0c6b-4110-9d9a-0b1f8e23e7b7"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Segment of C11 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 175.9035,
+                        "y": 96.951
+                    },
+                    "uuid": "8c6fbbe9-4e9c-455d-aeb1-1e9dec091f62"
+                },
+                {
+                    "description": "Pad 1 [EPD_EN_TBD] of R13 on Top Layer",
+                    "pos": {
+                        "x": 176.3465,
+                        "y": 96.6
+                    },
+                    "uuid": "4dbb6d1e-0c6b-4110-9d9a-0b1f8e23e7b7"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        }
+    ]
+}

@@ -1,0 +1,284 @@
+{
+  "scope": "Native saved fill plus explicit copper. Erosion is a diagnostic, not an impedance or fabrication limit.",
+  "boards": [
+    {
+      "path": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4-option-a-integration-rejected/NFC-Card-V4.kicad_pcb",
+      "five_pads": {
+        "C3.2": false,
+        "C4.2": false,
+        "U3.2": false,
+        "R19.2": false,
+        "R14.2": false
+      },
+      "local_returns": []
+    },
+    {
+      "path": "projects/nfc-business-card/hardware/kicad/v4-option-a2-west/NFC-Card-V4.kicad_pcb",
+      "five_pads": {
+        "C3.2": true,
+        "C4.2": true,
+        "U3.2": true,
+        "R19.2": true,
+        "R14.2": true
+      },
+      "local_returns": [
+        {
+          "name": "LDO bypass",
+          "window_mm": [
+            165,
+            104,
+            175.5,
+            110.5
+          ],
+          "seed": "U3.2",
+          "erosion_radius_mm": 0,
+          "reachable": {
+            "C4.2": true,
+            "C5.2": true
+          }
+        },
+        {
+          "name": "LDO bypass",
+          "window_mm": [
+            165,
+            104,
+            175.5,
+            110.5
+          ],
+          "seed": "U3.2",
+          "erosion_radius_mm": 0.05,
+          "reachable": {
+            "C4.2": true,
+            "C5.2": true
+          }
+        },
+        {
+          "name": "LDO bypass",
+          "window_mm": [
+            165,
+            104,
+            175.5,
+            110.5
+          ],
+          "seed": "U3.2",
+          "erosion_radius_mm": 0.075,
+          "reachable": {
+            "C4.2": true,
+            "C5.2": true
+          }
+        },
+        {
+          "name": "LDO bypass",
+          "window_mm": [
+            165,
+            104,
+            175.5,
+            110.5
+          ],
+          "seed": "U3.2",
+          "erosion_radius_mm": 0.095,
+          "reachable": {
+            "C4.2": true,
+            "C5.2": true
+          }
+        },
+        {
+          "name": "Charger bypass",
+          "window_mm": [
+            169,
+            101,
+            182,
+            110.1
+          ],
+          "seed": "U2.11",
+          "erosion_radius_mm": 0,
+          "reachable": {
+            "C3.2": true,
+            "C8.2": true,
+            "C2.2": true,
+            "R19.2": true
+          }
+        },
+        {
+          "name": "Charger bypass",
+          "window_mm": [
+            169,
+            101,
+            182,
+            110.1
+          ],
+          "seed": "U2.11",
+          "erosion_radius_mm": 0.05,
+          "reachable": {
+            "C3.2": true,
+            "C8.2": true,
+            "C2.2": true,
+            "R19.2": true
+          }
+        },
+        {
+          "name": "Charger bypass",
+          "window_mm": [
+            169,
+            101,
+            182,
+            110.1
+          ],
+          "seed": "U2.11",
+          "erosion_radius_mm": 0.075,
+          "reachable": {
+            "C3.2": true,
+            "C8.2": true,
+            "C2.2": true,
+            "R19.2": true
+          }
+        },
+        {
+          "name": "Charger bypass",
+          "window_mm": [
+            169,
+            101,
+            182,
+            110.1
+          ],
+          "seed": "U2.11",
+          "erosion_radius_mm": 0.095,
+          "reachable": {
+            "C3.2": true,
+            "C8.2": true,
+            "C2.2": true,
+            "R19.2": true
+          }
+        },
+        {
+          "name": "Display rail return",
+          "window_mm": [
+            165,
+            94,
+            185.1,
+            110.5
+          ],
+          "seed": "U3.2",
+          "erosion_radius_mm": 0,
+          "reachable": {
+            "C9.2": true,
+            "U4.2": true
+          }
+        },
+        {
+          "name": "Display rail return",
+          "window_mm": [
+            165,
+            94,
+            185.1,
+            110.5
+          ],
+          "seed": "U3.2",
+          "erosion_radius_mm": 0.05,
+          "reachable": {
+            "C9.2": true,
+            "U4.2": true
+          }
+        },
+        {
+          "name": "Display rail return",
+          "window_mm": [
+            165,
+            94,
+            185.1,
+            110.5
+          ],
+          "seed": "U3.2",
+          "erosion_radius_mm": 0.075,
+          "reachable": {
+            "C9.2": true,
+            "U4.2": true
+          }
+        },
+        {
+          "name": "Display rail return",
+          "window_mm": [
+            165,
+            94,
+            185.1,
+            110.5
+          ],
+          "seed": "U3.2",
+          "erosion_radius_mm": 0.095,
+          "reachable": {
+            "C9.2": true,
+            "U4.2": true
+          }
+        },
+        {
+          "name": "MCU bypass",
+          "window_mm": [
+            164.5,
+            109,
+            178.5,
+            115.2
+          ],
+          "seed": "C7.2",
+          "erosion_radius_mm": 0,
+          "reachable": {
+            "C1.2": false,
+            "C6.2": true,
+            "U1.33": false,
+            "U1.15": false
+          }
+        },
+        {
+          "name": "MCU bypass",
+          "window_mm": [
+            164.5,
+            109,
+            178.5,
+            115.2
+          ],
+          "seed": "C7.2",
+          "erosion_radius_mm": 0.05,
+          "reachable": {
+            "C1.2": false,
+            "C6.2": true,
+            "U1.33": false,
+            "U1.15": false
+          }
+        },
+        {
+          "name": "MCU bypass",
+          "window_mm": [
+            164.5,
+            109,
+            178.5,
+            115.2
+          ],
+          "seed": "C7.2",
+          "erosion_radius_mm": 0.075,
+          "reachable": {
+            "C1.2": false,
+            "C6.2": true,
+            "U1.33": false,
+            "U1.15": false
+          }
+        },
+        {
+          "name": "MCU bypass",
+          "window_mm": [
+            164.5,
+            109,
+            178.5,
+            115.2
+          ],
+          "seed": "C7.2",
+          "erosion_radius_mm": 0.095,
+          "reachable": {
+            "C1.2": false,
+            "C6.2": true,
+            "U1.33": false,
+            "U1.15": false
+          }
+        }
+      ]
+    }
+  ]
+}

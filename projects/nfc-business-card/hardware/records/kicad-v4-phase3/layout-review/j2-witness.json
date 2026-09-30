@@ -1,0 +1,142 @@
+{
+  "scope": "Static six-lane B.Cu channel and J2 north fanout ONLY. MCU south approaches removed and NOT proven. No placement changes or candidate adoption.",
+  "source_spec": "projects/nfc-business-card/hardware/kicad/v4-phase3/wholeboard-orthogonal-lanes-spec.json",
+  "model_sha256": "9b894658e011cd712ce633ec29f50c1372578cd1046f7da46c40f34bf4044737",
+  "retained_local_request_count": 118,
+  "witness": [
+    {
+      "name": "U1.37 to J2.14 north",
+      "net": "EPD_MOSI_TBD",
+      "points": [
+        [
+          165.4,
+          111.1
+        ],
+        [
+          165.4,
+          94.3
+        ],
+        [
+          168.1,
+          94.3
+        ]
+      ],
+      "uuids": [
+        "bbf17f83-9ea1-4361-9a0c-ee49d3ada8b7",
+        "7ac7d9e3-da62-41eb-bfe0-c73c4691fc38"
+      ]
+    },
+    {
+      "name": "U1.36 to J2.13 north",
+      "net": "EPD_SCK_TBD",
+      "points": [
+        [
+          165.8,
+          111.1
+        ],
+        [
+          165.8,
+          95.1
+        ],
+        [
+          169.2,
+          95.1
+        ]
+      ],
+      "uuids": [
+        "caa0372f-4ef6-4301-867e-0f3083b07c9d",
+        "41a4708f-efb2-4b35-b5d1-975a5459bc9e"
+      ]
+    },
+    {
+      "name": "U1.38 to J2.12 north",
+      "net": "EPD_CS_N_TBD",
+      "points": [
+        [
+          166.2,
+          111.1
+        ],
+        [
+          166.2,
+          95.9
+        ],
+        [
+          168.1,
+          95.9
+        ]
+      ],
+      "uuids": [
+        "1183879b-cba6-40fb-9dd3-b24b6804f27b",
+        "45e6a87c-02b2-4ae9-beef-5a88d65cf5bc"
+      ]
+    },
+    {
+      "name": "U1.39 to J2.11 north",
+      "net": "EPD_DC_TBD",
+      "points": [
+        [
+          166.6,
+          111.1
+        ],
+        [
+          166.6,
+          96.7
+        ],
+        [
+          167.7,
+          96.7
+        ]
+      ],
+      "uuids": [
+        "6d5a0962-5e33-4b84-b3db-1c914c94d8c3",
+        "89a12d40-0a04-4074-9fd0-1d3a6533ed73"
+      ]
+    },
+    {
+      "name": "U1.41 to J2.10 north",
+      "net": "EPD_RESET_N_TBD",
+      "points": [
+        [
+          167.0,
+          111.1
+        ],
+        [
+          167.0,
+          97.5
+        ],
+        [
+          168.1,
+          97.5
+        ]
+      ],
+      "uuids": [
+        "cb8835f0-646e-44b1-bfec-b74ff5c71f4d",
+        "ecaa74e6-cdc9-43d0-aca6-2e9de8d898fa"
+      ]
+    },
+    {
+      "name": "U1.24 to J2.9 north",
+      "net": "EPD_BUSY_TBD",
+      "points": [
+        [
+          167.4,
+          111.1
+        ],
+        [
+          167.4,
+          98.3
+        ],
+        [
+          169.2,
+          98.3
+        ]
+      ],
+      "uuids": [
+        "8dce09f9-6738-4027-9d10-506ae9e78903",
+        "b0e72330-4ac8-4dbb-9d99-b17f0c1a150c"
+      ]
+    }
+  ],
+  "route_search_executed": false,
+  "production_board_modified": false
+}

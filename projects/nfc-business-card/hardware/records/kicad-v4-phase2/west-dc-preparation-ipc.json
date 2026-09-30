@@ -1,0 +1,13 @@
+{
+  "plan": "projects/nfc-business-card/hardware/kicad/v4-phase2/west-dc-preparation.json",
+  "board": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "before": {
+    "tracks": 248,
+    "vias": 49
+  },
+  "after": {
+    "tracks": 229,
+    "vias": 46
+  },
+  "created_ids": []
+}

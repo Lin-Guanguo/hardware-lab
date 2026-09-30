@@ -1,0 +1,18 @@
+{
+  "plan": "projects/nfc-business-card/hardware/kicad/v4-phase2/busy-pullup-local-spec-plan.json",
+  "board": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "before": {
+    "tracks": 311,
+    "vias": 59
+  },
+  "after": {
+    "tracks": 315,
+    "vias": 59
+  },
+  "created_ids": [
+    "46bf1cba-dbc7-4cf5-9aaf-090e88741015",
+    "c87b8182-ad9c-410b-8df5-0b39430d6fe6",
+    "b6981ebc-9ddf-4bbd-98d6-34a9476ed766",
+    "e0939569-762d-4b28-8f8a-2b3cfdc03263"
+  ]
+}

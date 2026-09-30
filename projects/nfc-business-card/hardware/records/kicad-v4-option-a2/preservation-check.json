@@ -1,0 +1,11 @@
+{
+  "checked_files": 527,
+  "modified": [],
+  "includes": [
+    "projects/nfc-business-card/hardware/kicad/v4-phase2/display-bus-coexist-spec.json",
+    "projects/nfc-business-card/hardware/kicad/v4-phase2/busy-pullup-east.json",
+    "projects/nfc-business-card/hardware/kicad/v4-phase2/dc-crossing-spec-plan.json",
+    "projects/nfc-business-card/hardware/kicad/v4-phase2/display-outputs-d-spec.json",
+    "projects/nfc-business-card/hardware/kicad/v4-phase2/rese-channel-spec.json"
+  ]
+}

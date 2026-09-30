@@ -1,0 +1,12 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase3/NFC-Card-V4.kicad_pcb",
+  "description": "Place R13 above the measured U4 courtyard after rejecting the overlap at its southwest corner",
+  "placements": {
+    "R13": [
+      180,
+      97,
+      0
+    ]
+  },
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase3/r13-enable-placement-corrected.json"
+}

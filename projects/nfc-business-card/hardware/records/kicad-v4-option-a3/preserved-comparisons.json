@@ -1,0 +1,8 @@
+{
+  "files": 622,
+  "identical": true,
+  "manifests": [
+    "projects/nfc-business-card/hardware/records/kicad-v4-option-a2/baseline-files.json",
+    "projects/nfc-business-card/hardware/records/kicad-v4-option-a3/baseline-files.json"
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "scope": "Static six-lane B.Cu channel and J2 north fanout ONLY. MCU south approaches removed and NOT proven. No placement changes or candidate adoption.",
+  "source_failure": {
+    "name": "U1.41 to J2.10 north",
+    "reason": "No path in assigned corridor",
+    "start": [
+      167.0,
+      99.9
+    ],
+    "end": [
+      168.1,
+      97.5
+    ],
+    "visited": 113,
+    "closest_reached": {
+      "layer": "B.Cu",
+      "point": [
+        167.0,
+        99.89999999999999
+      ],
+      "distance": 2.640075756488807
+    },
+    "direct_blockers": [
+      {
+        "name": "U1.36 to J2.13 north",
+        "net": "EPD_SCK_TBD",
+        "kind": "track"
+      },
+      {
+        "name": "U1.39 to J2.11 south",
+        "net": "EPD_DC_TBD",
+        "kind": "track"
+      },
+      {
+        "name": "U1.39 to J2.11 north via",
+        "net": "EPD_DC_TBD",
+        "kind": "via"
+      },
+      {
+        "name": "U1.39 to J2.11 north",
+        "net": "EPD_DC_TBD",
+        "kind": "track"
+      }
+    ]
+  },
+  "DC_south_detour": [
+    {
+      "name": "U1.39 to J2.11 south",
+      "net": "EPD_DC_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          166.9,
+          117.334
+        ],
+        [
+          165.534,
+          117.334
+        ],
+        [
+          164.9,
+          116.7
+        ],
+        [
+          164.9,
+          113.0
+        ],
+        [
+          168.0,
+          109.9
+        ]
+      ],
+      "length_mm": 10.347
+    },
+    {
+      "name": "U1.39 to J2.11 south",
+      "net": "EPD_DC_TBD",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          168.0,
+          109.9
+        ],
+        [
+          168.0,
+          99.9
+        ],
+        [
+          167.6,
+          99.5
+        ],
+        [
+          166.8,
+          99.5
+        ],
+        [
+          166.6,
+          99.7
+        ],
+        [
+          166.6,
+          111.1
+        ]
+      ],
+      "length_mm": 23.049
+    }
+  ],
+  "DC_south_length_mm": 33.396,
+  "native_witness_violations": {
+    "track_dangling": 6
+  },
+  "native_all_violations": {
+    "annular_width": 2,
+    "courtyards_overlap": 1,
+    "copper_edge_clearance": 14,
+    "starved_thermal": 5,
+    "via_diameter": 2,
+    "via_dangling": 51,
+    "track_dangling": 6,
+    "lib_footprint_issues": 76,
+    "text_height": 7,
+    "silk_overlap": 28,
+    "silk_over_copper": 5
+  },
+  "native_unconnected_items": 74,
+  "minimum_clearances": [
+    {
+      "name": "U1.37 to J2.14 north",
+      "minimum_foreign_copper_gap_mm": 0.25,
+      "nearest_object": "41a4708f-efb2-4b35-b5d1-975a5459bc9e"
+    },
+    {
+      "name": "U1.36 to J2.13 north",
+      "minimum_foreign_copper_gap_mm": 0.25,
+      "nearest_object": "1183879b-cba6-40fb-9dd3-b24b6804f27b"
+    },
+    {
+      "name": "U1.38 to J2.12 north",
+      "minimum_foreign_copper_gap_mm": 0.25,
+      "nearest_object": "caa0372f-4ef6-4301-867e-0f3083b07c9d"
+    },
+    {
+      "name": "U1.39 to J2.11 north",
+      "minimum_foreign_copper_gap_mm": 0.25,
+      "nearest_object": "cb8835f0-646e-44b1-bfec-b74ff5c71f4d"
+    },
+    {
+      "name": "U1.41 to J2.10 north",
+      "minimum_foreign_copper_gap_mm": 0.25,
+      "nearest_object": "8dce09f9-6738-4027-9d10-506ae9e78903"
+    },
+    {
+      "name": "U1.24 to J2.9 north",
+      "minimum_foreign_copper_gap_mm": 0.25,
+      "nearest_object": "cb8835f0-646e-44b1-bfec-b74ff5c71f4d"
+    }
+  ],
+  "witness_board_sha256": "e19b759aa447aaf928b26bfae897d5d749d9f654e1dee6f2b95dc5d6dce61b6f",
+  "conclusion": "J2 north six-lane geometry is feasible after jointly replacing the greedy fanouts. The original frozen route set really blocks RESET, but the search failure does not prove insufficient J2 area. MCU south approaches and return quality are NOT proven."
+}

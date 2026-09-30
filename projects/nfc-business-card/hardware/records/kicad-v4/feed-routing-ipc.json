@@ -1,0 +1,37 @@
+{
+  "plan": "projects/nfc-business-card/hardware/kicad/v4/feed-routing-spec-plan.json",
+  "board": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4/NFC-Card-V4.kicad_pcb",
+  "before": {
+    "tracks": 136,
+    "vias": 13
+  },
+  "after": {
+    "tracks": 154,
+    "vias": 18
+  },
+  "created_ids": [
+    "51df4c30-be42-41e3-81f0-87de9ecfce7d",
+    "71a777c4-357b-4010-9f83-e56e9b9fd6ec",
+    "b968fe2d-61dd-4993-882e-f6d7e4864e99",
+    "5c844250-5530-41dd-a2ab-089ff6a3c9eb",
+    "14fe09ac-4d83-49f2-bd4d-143481dc957e",
+    "ed66dd3d-3c72-4ff5-b413-c1e0d82736ca",
+    "49ef45ea-0d61-4330-b822-1adc200f37a3",
+    "45ec6283-3bef-4026-a47b-79654d46f7c7",
+    "aba207d1-ce1f-4c4c-9b3c-72b3009372dd",
+    "144e3dd8-4f32-481d-8d16-ae0285baf7ba",
+    "9cd741a9-f750-428e-8ddd-4f1fa6685681",
+    "48f235b5-4b7b-4f3d-838a-4d2aa2d689e0",
+    "b08f5876-c5f8-48a5-9198-f31adb0fc106",
+    "d70b3a7d-ed86-43dc-81c5-9dcf7bfe6903",
+    "bf17ed01-6c52-4950-a767-fb007a1e6605",
+    "aa5a19be-1ebe-41c4-9ad3-cb46b0364768",
+    "9804d592-b473-4912-9b86-d198436106d9",
+    "79cb07df-1838-4e83-8bed-90c937f2c660",
+    "0f836dbc-cb67-4796-b72b-e2c6a7773faa",
+    "a7f5033b-7152-4d7d-b201-b9b8dd605048",
+    "c7a7f687-0232-4108-bb10-4f7b2bffbf30",
+    "b9a29f07-5e44-43ad-8e70-1dce4856e98d",
+    "c9577209-2c83-405d-8d2d-b32c03e5a028"
+  ]
+}

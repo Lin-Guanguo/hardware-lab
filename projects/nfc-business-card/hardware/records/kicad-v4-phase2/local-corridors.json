@@ -1,0 +1,209 @@
+{
+  "scope": "Exact copper union clipped to display region; erosion is geometric sensitivity only, not an impedance or thermal guarantee. Ground vias linked at their centers on both faces.",
+  "display_window_mm": [
+    155.8,
+    82.0,
+    185.5,
+    105.8
+  ],
+  "channels": {
+    "EPD_SCK_TBD": {
+      "widths_mm": [
+        0.15
+      ],
+      "vias_mm": [
+        [
+          169.2,
+          95.1
+        ],
+        [
+          170.4,
+          116.1
+        ]
+      ]
+    },
+    "EPD_MOSI_TBD": {
+      "widths_mm": [
+        0.15
+      ],
+      "vias_mm": [
+        [
+          167.4,
+          116.6
+        ],
+        [
+          168.1,
+          94.3
+        ]
+      ]
+    },
+    "EPD_CS_N_TBD": {
+      "widths_mm": [
+        0.15
+      ],
+      "vias_mm": [
+        [
+          170.4,
+          117.0
+        ],
+        [
+          168.1,
+          95.9
+        ]
+      ]
+    },
+    "EPD_DC_TBD": {
+      "widths_mm": [
+        0.15
+      ],
+      "vias_mm": [
+        [
+          164.0,
+          115.5
+        ],
+        [
+          164.0,
+          96.49
+        ]
+      ]
+    },
+    "EPD_RESET_N_TBD": {
+      "widths_mm": [
+        0.15
+      ],
+      "vias_mm": [
+        [
+          168.1,
+          97.5
+        ],
+        [
+          167.2,
+          118.5
+        ]
+      ]
+    },
+    "EPD_BUSY_TBD": {
+      "widths_mm": [
+        0.15
+      ],
+      "vias_mm": [
+        [
+          169.2,
+          98.3
+        ],
+        [
+          174.5,
+          112.3
+        ]
+      ]
+    },
+    "USB_VBUS": {
+      "widths_mm": [
+        0.15,
+        0.3,
+        0.4,
+        0.45
+      ],
+      "vias_mm": [
+        [
+          183.8,
+          106.2
+        ],
+        [
+          168.7,
+          108.8
+        ],
+        [
+          163.4,
+          105.8
+        ],
+        [
+          160.5,
+          110.5
+        ],
+        [
+          168.7,
+          107.0
+        ],
+        [
+          184.7,
+          101.6
+        ]
+      ]
+    },
+    "VDD_3V3": {
+      "widths_mm": [
+        0.3
+      ],
+      "vias_mm": [
+        [
+          177.5,
+          112.3
+        ],
+        [
+          178.4,
+          102.2
+        ]
+      ]
+    }
+  },
+  "ground_sensitivity": [
+    {
+      "erosion_radius_mm": 0,
+      "reachable_to_C10_ground_within_window": {
+        "C12.2": true,
+        "D2.1": true,
+        "C13.2": true,
+        "R15.2": true,
+        "J2.17": true,
+        "C14.2": true,
+        "C15.2": true,
+        "C16.2": true,
+        "C17.2": true,
+        "C18.2": true,
+        "C19.2": true,
+        "C20.2": true,
+        "C21.2": true,
+        "C22.2": true
+      }
+    },
+    {
+      "erosion_radius_mm": 0.1,
+      "reachable_to_C10_ground_within_window": {
+        "C12.2": false,
+        "D2.1": false,
+        "C13.2": false,
+        "R15.2": true,
+        "J2.17": false,
+        "C14.2": false,
+        "C15.2": false,
+        "C16.2": false,
+        "C17.2": false,
+        "C18.2": false,
+        "C19.2": false,
+        "C20.2": false,
+        "C21.2": false,
+        "C22.2": false
+      }
+    },
+    {
+      "erosion_radius_mm": 0.2,
+      "reachable_to_C10_ground_within_window": {
+        "C12.2": false,
+        "D2.1": false,
+        "C13.2": false,
+        "R15.2": false,
+        "J2.17": false,
+        "C14.2": false,
+        "C15.2": false,
+        "C16.2": false,
+        "C17.2": false,
+        "C18.2": false,
+        "C19.2": false,
+        "C20.2": false,
+        "C21.2": false,
+        "C22.2": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,539 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4/NFC-Card-V4.kicad_pcb",
+  "description": "Trial charger local returns and complete display switching loop",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4/power-routing-ipc.json",
+  "vias": [
+    {
+      "net": "EPD_RESE",
+      "at": [
+        167.8,
+        100.4
+      ]
+    },
+    {
+      "net": "EPD_RESE",
+      "at": [
+        175,
+        105.5
+      ]
+    },
+    {
+      "net": "GND",
+      "at": [
+        162,
+        104.6
+      ]
+    },
+    {
+      "net": "GND",
+      "at": [
+        156,
+        105.5
+      ]
+    },
+    {
+      "net": "GND",
+      "at": [
+        160.35,
+        108.4
+      ]
+    },
+    {
+      "net": "GND",
+      "at": [
+        176.5,
+        92.6
+      ]
+    },
+    {
+      "net": "GND",
+      "at": [
+        177.15,
+        103
+      ]
+    }
+  ],
+  "paths": [
+    {
+      "name": "C8 to charger IN",
+      "net": "USB_VBUS",
+      "through": [
+        "U2.10",
+        [
+          160.4,
+          109.65
+        ]
+      ],
+      "width": 0.15,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "C8 input branch",
+      "net": "USB_VBUS",
+      "through": [
+        [
+          160.4,
+          109.65
+        ],
+        "C8.1"
+      ],
+      "width": 0.45,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "C8 local ground to EP",
+      "net": "GND",
+      "through": [
+        "C8.2",
+        "U2.11"
+      ],
+      "width": 0.4,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "Charger ground pin to EP",
+      "net": "GND",
+      "through": [
+        "U2.5",
+        "U2.11"
+      ],
+      "width": 0.15,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "SYS pin escape",
+      "net": "SYS",
+      "through": [
+        "U2.1",
+        [
+          160.4,
+          107.55
+        ]
+      ],
+      "width": 0.15,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "SYS local bypass",
+      "net": "SYS",
+      "through": [
+        [
+          160.4,
+          107.55
+        ],
+        "C2.1"
+      ],
+      "width": 0.45,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "BAT pin escape",
+      "net": "BAT_PACK_TBD",
+      "through": [
+        "U2.2",
+        [
+          159.4,
+          106.7
+        ]
+      ],
+      "width": 0.15,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "BAT local bypass",
+      "net": "BAT_PACK_TBD",
+      "through": [
+        [
+          159.4,
+          106.7
+        ],
+        "C3.1"
+      ],
+      "width": 0.45,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "BAT branch to contact",
+      "net": "BAT_PACK_TBD",
+      "through": [
+        "C3.1",
+        "BP.1"
+      ],
+      "width": 0.5,
+      "layer": "F.Cu",
+      "bounds": [
+        140,
+        103,
+        161,
+        113
+      ]
+    },
+    {
+      "name": "SYS to regulator bypass",
+      "net": "SYS",
+      "through": [
+        "C2.1",
+        "C4.1"
+      ],
+      "width": 0.45,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "Regulator input",
+      "net": "SYS",
+      "through": [
+        "C4.1",
+        "U3.1"
+      ],
+      "width": 0.3,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "Regulator EN",
+      "net": "SYS",
+      "through": [
+        "U3.1",
+        "U3.3"
+      ],
+      "width": 0.2,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "Regulator output bypass",
+      "net": "VDD_3V3",
+      "through": [
+        "U3.5",
+        "C5.1"
+      ],
+      "width": 0.3,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "Inductor input",
+      "net": "EPD_VDD",
+      "through": [
+        "C10.1",
+        "L1.1"
+      ],
+      "width": 0.5,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "Switch drain",
+      "net": "EPD_SW",
+      "through": [
+        "L1.2",
+        "Q1.3"
+      ],
+      "width": 0.5,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "Sense resistor",
+      "net": "EPD_RESE",
+      "through": [
+        "Q1.2",
+        "R15.1"
+      ],
+      "width": 0.3,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "Boost local return",
+      "net": "GND",
+      "through": [
+        "R15.2",
+        "C10.2"
+      ],
+      "width": 0.5,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "Boost diode switched node",
+      "net": "EPD_SW",
+      "through": [
+        "L1.2",
+        "D1.2"
+      ],
+      "width": 0.5,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "Pump capacitor switched node",
+      "net": "EPD_SW",
+      "through": [
+        "D1.2",
+        "C11.1"
+      ],
+      "width": 0.35,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "Positive boost reservoir",
+      "net": "EPD_VPH",
+      "through": [
+        "D1.1",
+        "C12.1"
+      ],
+      "width": 0.4,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "Pump charge diode",
+      "net": "EPD_PUMP",
+      "through": [
+        "C11.2",
+        "D2.2"
+      ],
+      "width": 0.35,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "Negative boost diode",
+      "net": "EPD_PUMP",
+      "through": [
+        "D2.2",
+        "D3.1"
+      ],
+      "width": 0.35,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "Negative reservoir",
+      "net": "EPD_VGL",
+      "through": [
+        "D3.2",
+        "C13.1"
+      ],
+      "width": 0.35,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "D2 return",
+      "net": "GND",
+      "through": [
+        "D2.1",
+        "C13.2"
+      ],
+      "width": 0.4,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "Load switch output",
+      "net": "EPD_VDD",
+      "through": [
+        "U4.6",
+        "C10.1"
+      ],
+      "width": 0.4,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "Load switch discharge",
+      "net": "EPD_VDD",
+      "through": [
+        "U4.5",
+        "U4.6"
+      ],
+      "width": 0.2,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "Load switch input bypass",
+      "net": "VDD_3V3",
+      "through": [
+        "C9.1",
+        "U4.1"
+      ],
+      "width": 0.4,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "Load switch return",
+      "net": "GND",
+      "through": [
+        "C9.2",
+        "U4.2"
+      ],
+      "width": 0.25,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "GDR corridor below boost group",
+      "net": "EPD_GDR",
+      "through": [
+        "J2.2",
+        [
+          167.6,
+          102
+        ],
+        [
+          168.5,
+          105.5
+        ],
+        [
+          172.4,
+          105.5
+        ],
+        "Q1.1"
+      ],
+      "width": 0.15,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "RESE connector escape",
+      "net": "EPD_RESE",
+      "through": [
+        "J2.3",
+        [
+          167.8,
+          100.4
+        ]
+      ],
+      "width": 0.15,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "RESE corridor",
+      "net": "EPD_RESE",
+      "through": [
+        [
+          167.8,
+          100.4
+        ],
+        [
+          175,
+          105.5
+        ]
+      ],
+      "width": 0.2,
+      "layer": "B.Cu"
+    },
+    {
+      "name": "RESE sense escape",
+      "net": "EPD_RESE",
+      "through": [
+        "R15.1",
+        [
+          175,
+          105.5
+        ]
+      ],
+      "width": 0.15,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "C2 ground stitch",
+      "net": "GND",
+      "through": [
+        "C2.2",
+        [
+          162,
+          104.6
+        ]
+      ],
+      "width": 0.3,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "C3 ground stitch",
+      "net": "GND",
+      "through": [
+        "C3.2",
+        [
+          156,
+          105.5
+        ]
+      ],
+      "width": 0.3,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "U2 ground stitch",
+      "net": "GND",
+      "through": [
+        "U2.11",
+        [
+          160.35,
+          108.4
+        ]
+      ],
+      "width": 0.3,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "C12 ground stitch",
+      "net": "GND",
+      "through": [
+        "C12.2",
+        [
+          176.5,
+          92.6
+        ]
+      ],
+      "width": 0.3,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "C10 ground stitch",
+      "net": "GND",
+      "through": [
+        "C10.2",
+        [
+          177.15,
+          103
+        ]
+      ],
+      "width": 0.3,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "SYS local bottom return",
+      "net": "GND",
+      "through": [
+        [
+          162,
+          104.6
+        ],
+        [
+          160.35,
+          108.4
+        ]
+      ],
+      "width": 0.5,
+      "layer": "B.Cu"
+    },
+    {
+      "name": "BAT local bottom return",
+      "net": "GND",
+      "through": [
+        [
+          156,
+          105.5
+        ],
+        [
+          160.35,
+          108.4
+        ]
+      ],
+      "width": 0.5,
+      "layer": "B.Cu"
+    },
+    {
+      "name": "Reservoir local bottom return",
+      "net": "GND",
+      "through": [
+        [
+          176.5,
+          92.6
+        ],
+        [
+          177.15,
+          103
+        ]
+      ],
+      "width": 0.5,
+      "layer": "B.Cu"
+    }
+  ]
+}

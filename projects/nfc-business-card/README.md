@@ -2,25 +2,27 @@
 
 ## 当前确定方案
 
-**工具选择：本轮继续嘉立创 EDA；若仍不能完成，再转向 KiCad。**[KiCad 引入调研](docs/kicad-fallback-research-2026-09-28.md)已记录软件、skill 和迁移验证步骤，KiCad 10.0.6 已安装，独立样例验证通过；[工具入口](../../tools/kicad/README.md)已准备，产品工程尚未切换。
+**2026-09-30 最新：A4 联合布局／GPIO 试验被否决，后续仍以 A3 为起点。** [A4 评审、同版冲突图及下一方案条件](hardware/v4-option-a4-review.md)、[完整失败工程](hardware/kicad/v4-option-a4-joint/README.md)、[原厂引脚核查与固件接口](hardware/v4-a4-firmware-interface.md)。GPIO 重分配已同步并通过 ERC 0／parity 0／256 引脚对账；但显式布线及一次联合修正仍有真实束内交叉、电源碰地和支路缺线。完整原生 DRC **311（269 error／42 warning）**、未连接 **10**、必要 GND **60/61**，不是可接受设计。保存重开及重复完整 DRC 一致，1298 个旧对照文件未改。
 
-**2026-09-28：选定 0.8 mm 中沉 USB-C＋标准型 SMT，重新布局布线。**保持外形及电池、屏幕、NFC 总体布局，继续以 4.8 mm 薄壳为目标，电池由用户适配。确切中沉料号、板边公差、治具和拼板尚待定型；具体方案由代理准备、用户问客服。USB4110 顶部贴装仅保留为备选。
+屏幕束端点顺序错误与 USB/VBUS 交叉均有几何证据，不能归因双层必然不可布；充电西移还拉长了五控制线和 VBUS。停止继续修补 A4，不因它要求删采样、改机械或加层。未进入整板收尾／最终制造导出／本版 DFM；原有电气与制造待办全部保留。
 
-**当前为 [Board Review D 整板诊断候选](hardware/board-review-d.md)。**保存并完整重开后，66 位号／256 引脚一致、全网实铜连通；原生未连接 0，普通几何错误 0，USB SMT 板边 12、TH 板边 2。**不能定型或下单：充电器地返回依赖约 0.029 mm 地铜细颈，VBUS 保护／负载预算及工厂接受条件未闭合。**[线上 DFM](hardware/board-review-d.md#线上-dfm)已完成同版 PCB＋SMT 分析，29 组／66 位号匹配；VIA 孔到焊盘危险／警告均为 0，USB 焊脚接触比 0.50 的 12 项危险、U1 板边 0.07 mm 及阻焊／丝印等问题仍在。用户已授权整板诊断及上传分析，没有下单／付款／联系工厂。[A](hardware/midmount-placement-a.md)、[B](hardware/usb-spaced-b.md)、[C](hardware/usb-power-return-c.md)和 R21 文件保留，继续在 `master` 工作。
+### A3 对照
 
-参考入口：[重新规划范围](docs/pcb-replan-2026-09-28.md)、[国内工艺复核](hardware/jlc-mid-mount-process-review-2026-09-28.md)、[USB4500 共同基准／R14-R17 勘误](hardware/usb4500-datum-review-2026-09-28.md)、[七区原厂关系](hardware/r1-seven-zone-reference-plan.md)、[外部双层板参考](hardware/usb-mid-mount-two-layer-references.md)、[顶部贴装备选](hardware/usb-top-mount-review-2026-09-28.md)、[结构与工艺比较](hardware/usb-connector-options.md)。这些提供设计依据，不代表新封装、薄壳或工厂已验收。
+**2026-09-29 最新：A3 已恢复必要地连接，整板信号仍未完成。**入口：[A3 局部修复报告、前后图与阻塞对象](hardware/v4-option-a3-review.md)、[另存原生候选](hardware/kicad/v4-option-a3-local/README.md)。从 A2 的实际十个地分量出发，修复 C3、MCU、USB、J2、按键及采样地，61 个必要地焊盘连通，GND 未连接 **9→0**；其它 7 项仍未连接，**ERC 0／parity 0／DRC 58**。TS/PG 虽接通却切断 C4 地的方案已撤回，其余失败局部模型未应用；没有整板自动重布。U1.15 返回绕行与显示窄颈敏感性仍待改善，不能以全网地连通宣布回流通过。
 
-**继续设计的下一步：**先比较 [D 版全局摆放候选](hardware/d-placement-options.md)：充电区成组转向＋NTC 焊盘让位、显示区按接口引脚次序重排，以及屏幕／SWD 跨区通道。离线几何筛查尚不是已布通的新板；先验证供回电，再批量接线，并同步补保护、电流预算、机械和工厂条件。后加的电池电压采样区列为条件性删减备选，尚未删除。不能把连通或 PCB DFM 部分改善当作布线质量与制造通过。
+[A2 供回电与合并失败记录](hardware/v4-option-a2-review.md)、[旧 A 局部与失败记录](hardware/v4-option-a-review.md)、D、V4 第一／第二阶段及 phase3 全部保留；622 个对照文件指纹未变。A3 保存重开一致，并由 A2 原生增量重新生成验证副本，铜对象／填铜一致。下一步最小范围是 U2 控制逃逸＋TS/VBUS/BUSY、USB 入口＋R3/R4 数据对、J2 CS/SCK 的局部联合修复；没有证明需改板框或删除采样。未达到清零门槛，未进行最终丝印收尾、制造包或 A3 线上 PCB/SMT DFM，旧结果不作为本版放行。
 
-电池最新输入：用户确认 **301030 已到手、厚 3 mm**；“110 毫安”暂按容量 110 mAh 理解，单位、完整包络与允许充放电电流仍需核实。
+### 第二阶段对照
 
-**布局质量专项：**[D 版三条信号路径评审](hardware/d-signal-planning-review.md)确认 SWDIO／SWDCLK／屏幕复位分别串行换层 7／7／6 次；共同通道规划及两处局部减少换层候选待验证。该记录绑定快照指纹，不代表后续 D 已采纳修改，也不由 DFM 通过替代路径评审。
+**2026-09-29：第四版第二阶段已完成联合通道试布、电气输入核查及本版国内 PCB／SMT DFM 诊断，仍未达到整板详细布线门槛。**第二阶段保存入口是 [KiCad V4 phase2](hardware/kicad/v4-phase2/README.md)，完整结论与顶底层图见 [第二阶段报告](hardware/kicad-v4-phase2.md)。继续在 `master`；[V4 第一阶段](hardware/kicad-v4-phase1.md)与[嘉立创 D](hardware/board-review-d.md)冻结保留。
 
-**后续方法已记录：**[PCB 方法论 skill](../../.agents/skills/pcb-methodology/SKILL.md#把规划落实到几何与阶段检查)新增跨区通道实际试布、每批路线简化／地返回复核，以及连接、布局质量、DFM 分开验收。适用于嘉立创 EDA 和未来 KiCad 尝试；规则已写入，后续执行效果仍需用实际候选验证。
+**同一候选中已接通六根屏幕信号、USB 数据和关键供电，并补齐显示关断、充电泵和输出电容连接。**315 段／59 孔；ERC 0、DRC 41、49 个未连接、原理图／PCB 一致性问题 0。新增 courtyard 重叠、热辐条不足和游离地铜已消除；但 SCK 对面地仍有 5.120 mm 缺口，USB D− 仍有 3.100 mm 缺口，SWD 西侧试布与固定 NFC 匹配区冲突。下一步必须共同重排 MCU 入口、USB／LDO 组和参考地，不能锁死这批铜继续逐条补孔。
 
-**投厂前判断：**[D 版设计成熟度复核](hardware/d-prototype-readiness-review.md)确认本版仍是诊断候选；局部切断试验复核了 C8 地对细颈的依赖。下一候选需先明确电源条件、验证关键地返回与跨区通道，再做独立设计及同版制造复核，不能仅以告警减少判断可投厂。
+**设计输入已按实际型号查原厂资料。**[页码、适用条件、计算、料号候选及真正缺失的信息](hardware/v4-design-inputs.md)已集中记录：U3 全轨 200 mA／低电压压差、VBUS 未被现有 ESD 保护、C3 有效容量余量与 C1 参考值偏离都未被当作通过。301030 已到货，用户确认厚 3 mm、带保护板、标称 3.7 V、最高充电 4.2 V；额定充放电电流仍未知，商品宣传与容量不能替代额定值。
 
-**本轮收尾与下一轮准备：**D 保留为诊断基线；旧设计任务已空闲。用户考虑新 session 试用 KiCad，[交接记录与启动 prompt](docs/kicad-next-session-handoff.md)已准备。下一阶段先核对迁移及关键区实际试布，尚未创建 KiCad 产品工程，也未删除电池采样功能。
+**本版制造链路已实际运行，不能投厂。**[V4 phase2 同版 DFM](hardware/records/kicad-v4-phase2/dfm-final/README.md)已上传本版 Gerber／钻孔／BOM／CPL，完成 29 组／66 件匹配及 PCB/SMT 检查；59 圆孔、4 镀铜槽、258 锡膏开口核对。USB 接触比、槽宽、近边铜、U1 板边及阻焊危险仍在；这不是旧 D 铜线诊断结果，也不能覆盖原生 49 项缺线。
+
+保持双层 **0.8 mm**、当前 USB4500 中沉方向、**4.8 mm 外壳目标**、既定屏幕／电池／按键／调试／天线基准及完整电池采样功能。未改料号、机械约束或功能，未下单、付款、烧录、联系供应商或 push。工具与可复现操作见 [KiCad 入口](../../tools/kicad/README.md)；[旧交接](docs/kicad-next-session-handoff.md)保留为历史背景。
 
 ## 历史候选与验证记录
 

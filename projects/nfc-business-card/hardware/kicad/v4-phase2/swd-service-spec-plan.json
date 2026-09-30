@@ -1,0 +1,128 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "description": "Prove simultaneous SWD service lanes after removing the transverse display-bias branch",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase2/swd-service-ipc.json",
+  "routes": [
+    {
+      "name": "SWDIO MCU escape",
+      "net": "SWDIO",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          168.351,
+          122.934
+        ],
+        [
+          165,
+          122.9
+        ]
+      ],
+      "length_mm": 3.351
+    }
+  ],
+  "vias": [
+    {
+      "net": "GND",
+      "at": [
+        182.7,
+        82.8
+      ]
+    },
+    {
+      "net": "GND",
+      "at": [
+        179.73,
+        81.5
+      ]
+    }
+  ],
+  "failures": [
+    {
+      "via": {
+        "net": "SWDIO",
+        "at": [
+          165,
+          122.9
+        ]
+      },
+      "copper": [
+        "C23.2",
+        "7954c55b-681a-4ca7-af14-73715c784c2b"
+      ],
+      "smt_drill_gap": [
+        "C23.2"
+      ]
+    },
+    {
+      "via": {
+        "net": "SWDCLK",
+        "at": [
+          165.8,
+          123.8
+        ]
+      },
+      "copper": [
+        "C24.1",
+        "3d229f41-6299-4b8a-8481-2e9e1d84c7f2"
+      ],
+      "smt_drill_gap": [
+        "C24.1"
+      ]
+    },
+    {
+      "via": {
+        "net": "GND",
+        "at": [
+          166.2,
+          121.6
+        ]
+      },
+      "copper": [
+        "C23.1",
+        "b0fe9751-3a37-4cb8-b9cb-42b237fc794d",
+        "47660b85-6259-4495-8396-87d0373f0d60",
+        "23f25faa-1063-499a-86c8-b742c53e4f28"
+      ],
+      "smt_drill_gap": [
+        "C23.1"
+      ]
+    },
+    {
+      "path": "SWDCLK MCU escape",
+      "reason": "Endpoint blocked",
+      "start": [
+        168.351,
+        123.734
+      ],
+      "end": [
+        165.8,
+        123.8
+      ]
+    },
+    {
+      "path": "SWDIO service lane",
+      "reason": "Endpoint blocked",
+      "start": [
+        165,
+        122.9
+      ],
+      "end": [
+        165,
+        88
+      ]
+    },
+    {
+      "path": "SWDCLK service lane",
+      "reason": "No path in assigned corridor",
+      "start": [
+        165.8,
+        123.8
+      ],
+      "end": [
+        165.8,
+        89
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4/NFC-Card-V4.kicad_pcb",
+  "description": "Move provisional VBUS feed to top layer to reserve the shared bottom signal corridor",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4/feed-reset-ipc.json",
+  "remove_trial_ids": [
+    "f6b82ef3-2d60-4ee2-9afc-8f2dfa074c64",
+    "06a446d5-94c6-4304-be51-ea27a65fceb4",
+    "b4b5f58c-1bac-4cb6-ad1c-f01ecdbd76b6",
+    "8eb1d371-d4ee-4741-aa7c-bd6ed76d9d60",
+    "7058394e-d695-4ec6-a68e-e28ce8d93d81",
+    "9b1ff768-2f78-4ce7-8986-2d167a8fb802",
+    "b9cb86a5-71b1-4d6c-8320-430acc8f7db1",
+    "22a3f54b-c281-4e39-92c5-756b36e98b21",
+    "c7299489-02a9-4b79-86a0-4a4f1ef96173",
+    "235737c7-f803-48b2-b1b5-955a55289068",
+    "0a34eb71-a0d4-4d83-8ac4-bb0d09f9d59c"
+  ]
+}

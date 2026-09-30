@@ -1,0 +1,63 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-option-a3-local/NFC-Card-V4.kicad_pcb",
+  "description": "A3 provide C25 explicit left and lower connections at the unchanged 0.5 mm thermal width",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-option-a3/c25-return-width-ipc.json",
+  "remove_trial_ids": [
+    "f5cb22c6-c13c-4858-afa0-f6b504d48df3",
+    "4841d031-2b76-4a9a-9d16-09f8c1339c41",
+    "c387f39d-5619-42f3-b21a-f6880293b57e",
+    "53a2679b-5266-4030-b393-f1dc1cb5b72d",
+    "822585e1-4d0a-4327-9db2-94fa643ff8d1"
+  ],
+  "routes": [
+    {
+      "name": "C25 left return at existing thermal width",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.5,
+      "points": [
+        [
+          182.8,
+          117.5
+        ],
+        [
+          182.05,
+          117.5
+        ],
+        [
+          182.05,
+          118.5
+        ],
+        [
+          182.2,
+          118.65
+        ]
+      ]
+    },
+    {
+      "name": "C25 lower return at existing thermal width",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.5,
+      "points": [
+        [
+          182.8,
+          117.5
+        ],
+        [
+          182.8,
+          118.0
+        ],
+        [
+          182.2,
+          118.6
+        ],
+        [
+          182.2,
+          118.65
+        ]
+      ]
+    }
+  ],
+  "failures": []
+}

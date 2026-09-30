@@ -1,0 +1,1281 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-option-a2-full/NFC-Card-V4.kicad_pcb",
+  "description": "A2 apply individually verified successful paths from the joint batch; six rejected requests remain explicit",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-option-a2/full-successful-batch-ipc.json",
+  "routes": [
+    {
+      "name": "USB DP",
+      "net": "USB_DP_CONN",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          180.0,
+          103.45
+        ],
+        [
+          179.55,
+          103.0
+        ],
+        [
+          179.2465,
+          103.0
+        ]
+      ],
+      "length_mm": 0.94
+    },
+    {
+      "name": "USB DP",
+      "net": "USB_DP_CONN",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          179.2465,
+          103.0
+        ],
+        [
+          178.3465,
+          102.1
+        ],
+        [
+          168.9465,
+          102.1
+        ],
+        [
+          165.2465,
+          105.8
+        ],
+        [
+          165.2465,
+          107.5
+        ],
+        [
+          166.8465,
+          109.1
+        ],
+        [
+          166.8465,
+          111.3
+        ]
+      ],
+      "length_mm": 22.068
+    },
+    {
+      "name": "USB DP",
+      "net": "USB_DP_CONN",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          166.8465,
+          111.3
+        ],
+        [
+          164.8465,
+          113.3
+        ],
+        [
+          164.8465,
+          115.2
+        ],
+        [
+          164.1465,
+          115.9
+        ],
+        [
+          164.1465,
+          116.2
+        ]
+      ],
+      "length_mm": 6.018
+    },
+    {
+      "name": "VBUS connector pair",
+      "net": "USB_VBUS",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          186.149,
+          106.4005
+        ],
+        [
+          185.249,
+          106.4005
+        ],
+        [
+          183.949,
+          105.1005
+        ],
+        [
+          183.949,
+          104.9005
+        ]
+      ],
+      "length_mm": 2.938
+    },
+    {
+      "name": "VBUS connector pair",
+      "net": "USB_VBUS",
+      "layer": "B.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          183.949,
+          104.9005
+        ],
+        [
+          183.949,
+          103.1005
+        ],
+        [
+          184.949,
+          102.1005
+        ]
+      ],
+      "length_mm": 3.214
+    },
+    {
+      "name": "VBUS connector pair",
+      "net": "USB_VBUS",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          184.949,
+          102.1005
+        ],
+        [
+          185.449,
+          101.6005
+        ],
+        [
+          186.149,
+          101.6005
+        ]
+      ],
+      "length_mm": 1.407
+    },
+    {
+      "name": "VBUS charger branch",
+      "net": "USB_VBUS",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          183.949,
+          105.1005
+        ],
+        [
+          183.949,
+          105.751
+        ],
+        [
+          181.0,
+          108.7
+        ],
+        [
+          180.2,
+          108.7
+        ]
+      ],
+      "length_mm": 5.621
+    },
+    {
+      "name": "VBUS MCU branch",
+      "net": "USB_VBUS",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          178.45,
+          109.7
+        ],
+        [
+          178.45,
+          109.65
+        ],
+        [
+          178.4,
+          109.6
+        ]
+      ],
+      "length_mm": 0.121
+    },
+    {
+      "name": "VBUS MCU branch",
+      "net": "USB_VBUS",
+      "layer": "B.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          178.4,
+          109.6
+        ],
+        [
+          175.8,
+          109.6
+        ],
+        [
+          174.4,
+          111.0
+        ],
+        [
+          174.4,
+          111.2
+        ]
+      ],
+      "length_mm": 4.78
+    },
+    {
+      "name": "VBUS MCU branch",
+      "net": "USB_VBUS",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          174.4,
+          111.2
+        ],
+        [
+          173.8,
+          111.2
+        ],
+        [
+          172.5,
+          112.5
+        ],
+        [
+          172.1,
+          112.5
+        ]
+      ],
+      "length_mm": 2.838
+    },
+    {
+      "name": "VBUS MCU branch",
+      "net": "USB_VBUS",
+      "layer": "B.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          172.1,
+          112.5
+        ],
+        [
+          169.9,
+          112.5
+        ]
+      ],
+      "length_mm": 2.2
+    },
+    {
+      "name": "VBUS MCU branch",
+      "net": "USB_VBUS",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          169.9,
+          112.5
+        ],
+        [
+          169.801,
+          112.401
+        ],
+        [
+          169.001,
+          112.401
+        ]
+      ],
+      "length_mm": 0.94
+    },
+    {
+      "name": "MCU rail to pullups",
+      "net": "VDD_3V3",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          168.0,
+          109.4567
+        ],
+        [
+          168.2535,
+          109.7102
+        ],
+        [
+          168.2535,
+          109.8
+        ]
+      ],
+      "length_mm": 0.448
+    },
+    {
+      "name": "MCU rail to pullups",
+      "net": "VDD_3V3",
+      "layer": "B.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          168.2535,
+          109.8
+        ],
+        [
+          169.2535,
+          110.8
+        ],
+        [
+          169.2535,
+          112.8
+        ],
+        [
+          172.0535,
+          115.6
+        ],
+        [
+          172.5535,
+          115.6
+        ],
+        [
+          172.8535,
+          115.9
+        ]
+      ],
+      "length_mm": 8.298
+    },
+    {
+      "name": "MCU rail to pullups",
+      "net": "VDD_3V3",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          172.8535,
+          115.9
+        ],
+        [
+          173.9535,
+          117.0
+        ],
+        [
+          176.9535,
+          117.0
+        ],
+        [
+          177.1535,
+          116.8
+        ],
+        [
+          180.3535,
+          116.8
+        ],
+        [
+          181.1535,
+          116.0
+        ]
+      ],
+      "length_mm": 9.17
+    },
+    {
+      "name": "EPD EN",
+      "net": "EPD_EN_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          171.801,
+          116.2
+        ],
+        [
+          173.251,
+          117.65
+        ],
+        [
+          175.75,
+          117.65
+        ]
+      ],
+      "length_mm": 4.55
+    },
+    {
+      "name": "EPD EN",
+      "net": "EPD_EN_TBD",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          175.75,
+          117.65
+        ],
+        [
+          177.95,
+          115.45
+        ]
+      ],
+      "length_mm": 3.111
+    },
+    {
+      "name": "EPD EN",
+      "net": "EPD_EN_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          177.95,
+          115.45
+        ],
+        [
+          178.15,
+          115.25
+        ],
+        [
+          179.95,
+          115.25
+        ],
+        [
+          180.35,
+          114.85
+        ],
+        [
+          180.35,
+          110.25
+        ],
+        [
+          182.35,
+          108.25
+        ]
+      ],
+      "length_mm": 10.077
+    },
+    {
+      "name": "EPD EN",
+      "net": "EPD_EN_TBD",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          182.35,
+          108.25
+        ],
+        [
+          182.35,
+          104.35
+        ],
+        [
+          183.45,
+          103.25
+        ],
+        [
+          183.45,
+          98.45
+        ],
+        [
+          184.25,
+          97.65
+        ],
+        [
+          184.25,
+          97.05
+        ],
+        [
+          181.25,
+          94.05
+        ]
+      ],
+      "length_mm": 16.23
+    },
+    {
+      "name": "EPD EN",
+      "net": "EPD_EN_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          181.25,
+          94.05
+        ],
+        [
+          180.5828,
+          94.7172
+        ],
+        [
+          180.25,
+          94.7172
+        ]
+      ],
+      "length_mm": 1.276
+    },
+    {
+      "name": "SWD CLK",
+      "net": "SWDCLK",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          168.351,
+          123.734
+        ],
+        [
+          166.9335,
+          123.734
+        ],
+        [
+          166.0005,
+          122.801
+        ],
+        [
+          165.4005,
+          122.801
+        ],
+        [
+          165.2005,
+          122.601
+        ],
+        [
+          165.2005,
+          121.401
+        ],
+        [
+          164.1005,
+          120.301
+        ]
+      ],
+      "length_mm": 6.375
+    },
+    {
+      "name": "SWD CLK",
+      "net": "SWDCLK",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          164.1005,
+          120.301
+        ],
+        [
+          163.9005,
+          120.301
+        ],
+        [
+          158.3005,
+          114.701
+        ],
+        [
+          158.3005,
+          88.101
+        ],
+        [
+          165.8005,
+          80.601
+        ],
+        [
+          180.1005,
+          80.601
+        ],
+        [
+          181.0005,
+          81.501
+        ]
+      ],
+      "length_mm": 60.899
+    },
+    {
+      "name": "ADC enable",
+      "net": "BAT_MEAS_EN",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          177.651,
+          118.934
+        ],
+        [
+          177.9315,
+          118.6535
+        ],
+        [
+          180.2,
+          118.6535
+        ],
+        [
+          180.4,
+          118.8535
+        ],
+        [
+          180.4,
+          119.9535
+        ],
+        [
+          180.6,
+          120.1535
+        ],
+        [
+          181.7,
+          120.1535
+        ],
+        [
+          183.7,
+          118.1535
+        ],
+        [
+          183.7,
+          116.1535
+        ],
+        [
+          184.0,
+          115.8535
+        ],
+        [
+          185.1,
+          115.8535
+        ],
+        [
+          186.3002,
+          114.6533
+        ],
+        [
+          186.3002,
+          113.0535
+        ],
+        [
+          186.7002,
+          112.6535
+        ]
+      ],
+      "length_mm": 15.646
+    },
+    {
+      "name": "ADC sense",
+      "net": "BAT_ADC_SENSE",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          176.751,
+          118.534
+        ],
+        [
+          173.566,
+          118.534
+        ],
+        [
+          172.5,
+          119.6
+        ]
+      ],
+      "length_mm": 4.693
+    },
+    {
+      "name": "ADC sense",
+      "net": "BAT_ADC_SENSE",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          172.5,
+          119.6
+        ],
+        [
+          173.6,
+          120.7
+        ],
+        [
+          178.6,
+          120.7
+        ]
+      ],
+      "length_mm": 6.556
+    },
+    {
+      "name": "ADC sense",
+      "net": "BAT_ADC_SENSE",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          178.6,
+          120.7
+        ],
+        [
+          182.0,
+          120.7
+        ],
+        [
+          183.3,
+          119.4
+        ]
+      ],
+      "length_mm": 5.238
+    },
+    {
+      "name": "ADC sense",
+      "net": "BAT_ADC_SENSE",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          183.3,
+          119.4
+        ],
+        [
+          182.4,
+          118.5
+        ]
+      ],
+      "length_mm": 1.273
+    },
+    {
+      "name": "ADC sense",
+      "net": "BAT_ADC_SENSE",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          182.4,
+          118.5
+        ],
+        [
+          182.0,
+          118.1
+        ],
+        [
+          182.0,
+          116.9
+        ],
+        [
+          182.8,
+          116.1
+        ]
+      ],
+      "length_mm": 2.897
+    },
+    {
+      "name": "TS pad",
+      "net": "BAT_NTC_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          169.7465,
+          104.3
+        ],
+        [
+          169.7465,
+          102.3465
+        ],
+        [
+          169.0,
+          101.6
+        ]
+      ],
+      "length_mm": 3.009
+    }
+  ],
+  "vias": [
+    {
+      "net": "USB_DP_CONN",
+      "at": [
+        179.2465,
+        103.0
+      ]
+    },
+    {
+      "net": "USB_DP_CONN",
+      "at": [
+        166.84650000000002,
+        111.3
+      ]
+    },
+    {
+      "net": "USB_VBUS",
+      "at": [
+        183.949,
+        104.90050000000001
+      ]
+    },
+    {
+      "net": "USB_VBUS",
+      "at": [
+        184.949,
+        102.1005
+      ]
+    },
+    {
+      "net": "USB_VBUS",
+      "at": [
+        178.4,
+        109.6
+      ]
+    },
+    {
+      "net": "USB_VBUS",
+      "at": [
+        174.4,
+        111.2
+      ]
+    },
+    {
+      "net": "USB_VBUS",
+      "at": [
+        172.1,
+        112.5
+      ]
+    },
+    {
+      "net": "USB_VBUS",
+      "at": [
+        169.9,
+        112.5
+      ]
+    },
+    {
+      "net": "VDD_3V3",
+      "at": [
+        168.2535,
+        109.8
+      ]
+    },
+    {
+      "net": "VDD_3V3",
+      "at": [
+        172.85350000000003,
+        115.89999999999999
+      ]
+    },
+    {
+      "net": "EPD_EN_TBD",
+      "at": [
+        175.75,
+        117.65
+      ]
+    },
+    {
+      "net": "EPD_EN_TBD",
+      "at": [
+        177.95000000000002,
+        115.45
+      ]
+    },
+    {
+      "net": "EPD_EN_TBD",
+      "at": [
+        182.35000000000002,
+        108.25
+      ]
+    },
+    {
+      "net": "EPD_EN_TBD",
+      "at": [
+        181.25,
+        94.05
+      ]
+    },
+    {
+      "net": "SWDCLK",
+      "at": [
+        164.10049999999998,
+        120.30100000000002
+      ]
+    },
+    {
+      "net": "BAT_ADC_SENSE",
+      "at": [
+        172.5,
+        119.6
+      ]
+    },
+    {
+      "net": "BAT_ADC_SENSE",
+      "at": [
+        178.6,
+        120.69999999999999
+      ]
+    },
+    {
+      "net": "BAT_ADC_SENSE",
+      "at": [
+        183.3,
+        119.39999999999999
+      ]
+    },
+    {
+      "net": "BAT_ADC_SENSE",
+      "at": [
+        182.4,
+        118.5
+      ]
+    }
+  ],
+  "unresolved_requests": [
+    {
+      "name": "USB DM",
+      "reason": "No path in assigned corridor",
+      "start": [
+        180.0,
+        104.14999999999999
+      ],
+      "end": [
+        164.1465,
+        114.6
+      ],
+      "visited": 36030,
+      "closest_reached": {
+        "layer": "F.Cu",
+        "point": [
+          165.2465,
+          113.8
+        ],
+        "distance": 1.360147050873538
+      },
+      "direct_blockers": [
+        {
+          "name": "USB DP",
+          "net": "USB_DP_CONN",
+          "kind": "track"
+        }
+      ]
+    },
+    {
+      "name": "CC1",
+      "reason": "No path in assigned corridor",
+      "start": [
+        186.149,
+        105.2505
+      ],
+      "end": [
+        184.5,
+        108.75
+      ],
+      "visited": 23,
+      "closest_reached": {
+        "layer": "F.Cu",
+        "point": [
+          185.29999999999998,
+          105.85
+        ],
+        "distance": 3.0083217912982656
+      },
+      "direct_blockers": [
+        {
+          "name": "U6.2",
+          "net": "USB_CC2",
+          "kind": "pad"
+        },
+        {
+          "name": "1563ad5e-c95d-40aa-81cb-be3803b48f0e",
+          "net": "USB_CC2",
+          "kind": "track"
+        },
+        {
+          "name": "32d64312-82d3-4f39-9320-3845b251ccab",
+          "net": "USB_CC2",
+          "kind": "track"
+        },
+        {
+          "name": "VBUS connector pair",
+          "net": "USB_VBUS",
+          "kind": "track"
+        }
+      ]
+    },
+    {
+      "name": "CC2",
+      "reason": "No path in assigned corridor",
+      "start": [
+        186.149,
+        102.2505
+      ],
+      "end": [
+        184.5,
+        108.05000000000001
+      ],
+      "visited": 8,
+      "closest_reached": {
+        "layer": "F.Cu",
+        "point": [
+          185.6,
+          102.25000000000001
+        ],
+        "distance": 5.9033888572581725
+      },
+      "direct_blockers": [
+        {
+          "name": "J1.A7",
+          "net": "USB_DM_CONN",
+          "kind": "pad"
+        },
+        {
+          "name": "J1.A8",
+          "net": "unconnected-(J1-SBU1-PadA8)",
+          "kind": "pad"
+        },
+        {
+          "name": "J1.B6",
+          "net": "USB_DP_CONN",
+          "kind": "pad"
+        },
+        {
+          "name": "5ead6714-227c-4c40-b5d6-5534524e7b91",
+          "net": "USB_DP_CONN",
+          "kind": "track"
+        },
+        {
+          "name": "6d15ddfd-61a2-4799-98be-c340548e87b1",
+          "net": "USB_DP_CONN",
+          "kind": "track"
+        },
+        {
+          "name": "e5bb470c-c644-4f05-a176-2866858d0412",
+          "net": "USB_DP_CONN",
+          "kind": "track"
+        },
+        {
+          "name": "17af0db4-15fb-4f15-967c-888fca1da0a5",
+          "net": "USB_DM_CONN",
+          "kind": "track"
+        },
+        {
+          "name": "382aa388-c5eb-4cf9-beca-fa9554701774",
+          "net": "USB_DM_CONN",
+          "kind": "track"
+        },
+        {
+          "name": "8190abbf-e884-4b20-b472-ddea1ef4c787",
+          "net": "USB_DM_CONN",
+          "kind": "track"
+        },
+        {
+          "name": "9af5ad0f-e8e1-4f34-90e9-49ec69c28e56",
+          "net": "USB_DM_CONN",
+          "kind": "track"
+        },
+        {
+          "name": "08c4ce61-b3b5-4448-95f9-cf57826ffa24",
+          "net": "USB_DM_CONN",
+          "kind": "via"
+        },
+        {
+          "name": "5bf05dcf-7bde-402c-a160-d8ee8da198ad",
+          "net": "USB_DM_CONN",
+          "kind": "via"
+        },
+        {
+          "name": "VBUS connector pair",
+          "net": "USB_VBUS",
+          "kind": "track"
+        }
+      ]
+    },
+    {
+      "name": "CS",
+      "reason": "No path in assigned corridor",
+      "start": [
+        169.251,
+        116.934
+      ],
+      "end": [
+        166.325,
+        95.99
+      ],
+      "visited": 5232,
+      "closest_reached": {
+        "layer": "B.Cu",
+        "point": [
+          164.42499999999998,
+          98.58999999999999
+        ],
+        "distance": 3.2202484376209224
+      },
+      "direct_blockers": [
+        {
+          "name": "30c6f010-0a0b-4dc3-becd-366ba1e625e1",
+          "net": "EPD_SCK_TBD",
+          "kind": "track"
+        }
+      ]
+    },
+    {
+      "name": "BUSY",
+      "reason": "No path in assigned corridor",
+      "start": [
+        173.001,
+        113.934
+      ],
+      "end": [
+        166.325,
+        97.49
+      ],
+      "visited": 145,
+      "closest_reached": {
+        "layer": "F.Cu",
+        "point": [
+          173.22499999999997,
+          112.38999999999999
+        ],
+        "distance": 16.42010962204575
+      },
+      "direct_blockers": [
+        {
+          "name": "C6.1",
+          "net": "VDD_3V3",
+          "kind": "pad"
+        },
+        {
+          "name": "C6.2",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "name": "R19.1",
+          "net": "BAT_NTC_TBD",
+          "kind": "pad"
+        },
+        {
+          "name": "U3.1",
+          "net": "SYS",
+          "kind": "pad"
+        },
+        {
+          "name": "U3.2",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "name": "J2.5",
+          "net": "EPD_VSPL1",
+          "kind": "pad"
+        },
+        {
+          "name": "J2.6",
+          "net": "unconnected-(J2-Pad6)",
+          "kind": "pad"
+        },
+        {
+          "name": "J2.7",
+          "net": "unconnected-(J2-Pad7)",
+          "kind": "pad"
+        },
+        {
+          "name": "J2.8",
+          "net": "EPD_BS0",
+          "kind": "pad"
+        },
+        {
+          "name": "NTC.1",
+          "net": "BAT_NTC_TBD",
+          "kind": "pad"
+        },
+        {
+          "name": "13f9d7f8-a06f-4b5b-bc39-8e0ac0902919",
+          "net": "VDD_3V3",
+          "kind": "track"
+        },
+        {
+          "name": "753e2453-4aef-42a2-ade2-3c46f4b89b1b",
+          "net": "VDD_3V3",
+          "kind": "track"
+        },
+        {
+          "name": "ae3f34cf-651d-4efc-9677-54ef22d7d322",
+          "net": "VDD_3V3",
+          "kind": "track"
+        },
+        {
+          "name": "34e93d35-7cb3-4ba8-94f2-494043b2f505",
+          "net": "GND",
+          "kind": "track"
+        },
+        {
+          "name": "63c470ba-1454-4c9b-931f-61dfa0aaa3fe",
+          "net": "GND",
+          "kind": "track"
+        },
+        {
+          "name": "8099451a-f300-4b5a-9e15-72ab5beeb6c6",
+          "net": "GND",
+          "kind": "track"
+        },
+        {
+          "name": "b773d78b-7676-4aea-a271-512c4fa2aea7",
+          "net": "GND",
+          "kind": "track"
+        },
+        {
+          "name": "8510ff57-5575-4f4b-b84d-81e721f91263",
+          "net": "SYS",
+          "kind": "track"
+        },
+        {
+          "name": "c10cf36d-e85f-4f29-8b6d-e142c4293b9a",
+          "net": "SYS",
+          "kind": "track"
+        },
+        {
+          "name": "7ce33912-406f-43b9-882a-f01b89d86f80",
+          "net": "EPD_BS0",
+          "kind": "track"
+        },
+        {
+          "name": "4320b818-ea98-4eef-a08c-94c81bb92eb9",
+          "net": "EPD_RESE",
+          "kind": "track"
+        },
+        {
+          "name": "71335b0d-dca7-4cd9-a197-7c6de64ae494",
+          "net": "EPD_RESE",
+          "kind": "track"
+        },
+        {
+          "name": "71c3bc7f-4d4c-4ac5-a8cb-0518b8db03e5",
+          "net": "VDD_3V3",
+          "kind": "via"
+        },
+        {
+          "name": "20cd8b88-45cb-48d3-89a9-b129dbec5d41",
+          "net": "GND",
+          "kind": "via"
+        },
+        {
+          "name": "016ba446-8507-4521-9e6f-62d951791743",
+          "net": "EPD_RESE",
+          "kind": "via"
+        },
+        {
+          "name": "VBUS MCU branch",
+          "net": "USB_VBUS",
+          "kind": "track"
+        }
+      ]
+    },
+    {
+      "name": "TS resistor",
+      "reason": "No path in assigned corridor",
+      "start": [
+        176.2,
+        109.05
+      ],
+      "end": [
+        169.7465,
+        104.3
+      ],
+      "visited": 1494,
+      "closest_reached": {
+        "layer": "B.Cu",
+        "point": [
+          173.2465,
+          106.8
+        ],
+        "distance": 4.301162633521313
+      },
+      "direct_blockers": [
+        {
+          "name": "50f98cc2-3177-403d-9dc9-3644567261f5",
+          "net": "CHG_PG_N",
+          "kind": "track"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+- generic: 嘉立创DFM
+- list:
+  - listitem "撤销(Ctrl+Z)"
+  - listitem "重做(Ctrl+Y)"
+  - listitem "放大(A)"
+  - listitem "缩小(Z)"
+  - listitem "适应选中"
+  - listitem "自适应窗口(K)"
+  - listitem "板子翻转(Shift+F)"
+  - listitem "测量(Ctrl+M)"
+  - listitem "导出分析报告"
+  - listitem "配置自定义规则"
+  - listitem "设置"
+- group "单位":
+  - button "mm"
+  - button "inch"
+- button "切换到浅色主题":
+  - img "切换到浅色主题"
+- button "PCB DFM"
+- button "SMT DFM"
+- button "执行DFM检查"
+- generic: 概述
+- generic: 全部
+- table:
+  - rowgroup:
+    - row "项目 分析结果 操作":
+      - columnheader "项目"
+      - columnheader "分析结果"
+      - columnheader "操作"
+  - rowgroup:
+    - row "板子层数 2层":
+      - cell "板子层数"
+      - cell "2层"
+      - cell
+    - row "板子厚度 0.8 mm":
+      - cell "板子厚度"
+      - cell "0.8 mm":
+        - combobox:
+          - option "0.4"
+          - option "0.6"
+          - option "0.8" [selected]
+          - option "1"
+          - option "1.2"
+          - option "1.6"
+          - option "2"
+        - text: mm
+      - cell
+    - row "表面工艺 有铅喷锡,绿色,白色":
+      - cell "表面工艺"
+      - cell "有铅喷锡,绿色,白色":
+        - button "有铅喷锡,绿色,白色"
+      - cell
+    - row "板子尺寸 8.18x4.98cm 查看":
+      - cell "板子尺寸"
+      - cell "8.18x4.98cm"
+      - cell "查看":
+        - button "查看"
+    - row "最小线宽 0.15mm 查看":
+      - cell "最小线宽"
+      - cell "0.15mm"
+      - cell "查看":
+        - button "查看"
+    - row "最小线距 0.2mm 查看":
+      - cell "最小线距"
+      - cell "0.2mm"
+      - cell "查看":
+        - button "查看"
+    - row "最小孔径 0.3mm 查看":
+      - cell "最小孔径"
+      - cell "0.3mm"
+      - cell "查看":
+        - button "查看"
+    - row "最小孔环 0.15mm 查看":
+      - cell "最小孔环"
+      - cell "0.15mm"
+      - cell "查看":
+        - button "查看"
+    - row "孔数 115个 查看":
+      - cell "孔数"
+      - cell "115个"
+      - cell "查看":
+        - button "查看"
+    - row "孔密度 2.82万个/m^2":
+      - cell "孔密度"
+      - cell "2.82万个/m^2"
+      - cell
+    - row "锣程长度 67.73m/m^2":
+      - cell "锣程长度"
+      - cell "67.73m/m^2"
+      - cell
+    - row "半孔板 无":
+      - cell "半孔板"
+      - cell "无"
+      - cell
+    - row "沉金面积 239.99mm^2":
+      - cell "沉金面积"
+      - cell "239.99mm^2"
+      - cell
+    - row "沉金百分比 6.97%":
+      - cell "沉金百分比"
+      - cell "6.97%"
+      - cell
+    - row "金手指 无":
+      - cell "金手指"
+      - cell "无"
+      - cell
+    - row "飞针点数 270":
+      - cell "飞针点数"
+      - cell "270"
+      - cell
+    - row "焊接点数 258个":
+      - cell "焊接点数"
+      - cell "258个"
+      - cell
+    - row "插贴碰撞 查看":
+      - cell "插贴碰撞"
+      - cell
+      - cell "查看":
+        - button "查看" [disabled]
+    - row "PIN脚间距 0.4mm 查看":
+      - cell "PIN脚间距"
+      - cell "0.4mm"
+      - cell "查看":
+        - button "查看"
+    - row "最小贴装 U5 查看":
+      - cell "最小贴装"
+      - cell "U5"
+      - cell "查看":
+        - button "查看"
+    - row "元件间距 0.8mm 查看":
+      - cell "元件间距"
+      - cell "0.8mm"
+      - cell "查看":
+        - button "查看"
+- generic "关闭左侧栏"
+- generic "Gerber(5)": Gerber图
+- generic "Gerber(6)": 骨架线框
+- generic "2D(2)": 2D仿真图
+- generic "3D(3)": 3D仿真图
+- generic "关闭右侧栏"
+- banner:
+  - generic: 显示层控制
+  - generic: 10 层
+- button:
+- generic: 选中全部
+- generic "NFC-Card-V4-Top Silkscreen Layer.gto":
+  - button:
+  - generic: 顶层丝印
+- generic "NFC-Card-V4-Top Paste Mask Layer.gtp":
+  - button:
+  - generic: 顶层锡膏
+- generic "NFC-Card-V4-Top Solder Mask Layer.gts":
+  - button:
+  - generic: 顶层阻焊
+- generic "NFC-Card-V4-Top Layer.gtl":
+  - button:
+  - generic: 顶层线路
+- generic "NFC-Card-V4-Bottom Layer.gbl":
+  - button:
+  - generic: 底层线路
+- generic "NFC-Card-V4-Bottom Solder Mask Layer.gbs":
+  - button:
+  - generic: 底层阻焊
+- generic "NFC-Card-V4-Bottom Paste Mask Layer.gbp":
+  - button:
+  - generic: 底层锡膏
+- generic "NFC-Card-V4-Bottom Silkscreen Layer.gbo":
+  - button:
+  - generic: 底层丝印
+- generic "NFC-Card-V4-PTH.drl":
+  - button:
+  - generic: 通孔层
+- generic "NFC-Card-V4-Multi-Layer.gm1":
+  - button:
+  - generic: 外型层
+- generic: "X: 63.11 Y: 40.35 mm"
+- alert

@@ -1,0 +1,30 @@
+{
+  "status": "EXPLICIT PLAN ERROR, NOT ROUTER FAILURE OR SPACE INFEASIBILITY",
+  "crossings": [
+    {
+      "a": "ba206704-10c6-40ea-85ac-00b94e4ce5d4",
+      "a_points": [
+        [
+          172.201,
+          112.5
+        ],
+        [
+          172.201,
+          97.991
+        ]
+      ],
+      "b": "17f45d43-1d93-4c16-8afb-2064f10bec49",
+      "b_points": [
+        [
+          173.001,
+          99.591
+        ],
+        [
+          168.2,
+          94.79
+        ]
+      ],
+      "intersection_wkt": "POINT (172.201 98.79099999999998)"
+    }
+  ]
+}

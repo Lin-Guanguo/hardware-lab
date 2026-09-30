@@ -9,7 +9,7 @@ description: 在本仓库安装、自检和操作 KiCad，运行原生 ERC/DRC�
 
 先读 [工具说明](../../../tools/kicad/README.md) 获取本机验证版本、命令和边界。从仓库根目录运行命令；运行时在被忽略的 `.cache/kicad-venv/`，不使用全局 pip。硬件设计判断仍用 [pcb-methodology](../pcb-methodology/SKILL.md)，工具通过不代表电气、机械或制造放行。
 
-NFC 名片本轮仍以嘉立创 EDA 为编辑来源；KiCad 已准备不等于项目已迁移。操作前核对用户选定的工程和当前磁盘/未保存状态。
+操作前以用户当前选择和项目 README 为准，核对工程身份及磁盘／未保存状态。NFC 名片 V4 已明确授权 KiCad 独立候选，嘉立创 D 冻结作对照；工具链已准备不等于其它项目自动迁移。
 
 ## 原生操作
 

@@ -1,0 +1,19 @@
+{
+  "plan": "projects/nfc-business-card/hardware/kicad/v4-option-a3-local/adc-north-plan.json",
+  "board": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4-option-a3-local/NFC-Card-V4.kicad_pcb",
+  "before": {
+    "tracks": 666,
+    "vias": 96
+  },
+  "after": {
+    "tracks": 666,
+    "vias": 96
+  },
+  "created_ids": [
+    "4345f0ed-f761-4695-ae05-e58c0e02d930",
+    "d4ed0010-4328-4310-be18-0d07457309e4",
+    "14534fd9-d792-4b0c-8a1d-fd4dbb8a9068",
+    "a7254589-3217-457f-ae55-bb65cbc19125",
+    "12aec772-7b38-4f8b-9aa3-8ddd09567414"
+  ]
+}

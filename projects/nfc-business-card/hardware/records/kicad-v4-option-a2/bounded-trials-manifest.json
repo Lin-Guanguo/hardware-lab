@@ -1,0 +1,15 @@
+{
+  "purpose": "Rejected bounded trials; no manufacturing release",
+  "files": {
+    "joint.dsn": "d757d681fd454f0709cd080b38d59e9d3a8823f6f2332583ff6f99c816642a1d",
+    "joint.ses": "c43bbff347a2477b5f37b6c7177842390c4dc153e56b72f9c21cd20a868854a5",
+    "joint.log": "617318d5ee7fe0c393f9cf6d2f22aa7a662bb19ea1c495f895332609d22c51e5",
+    "west-joint.dsn": "4f0fa4f017f0762557cbf24217b715f8c58652ecfe26cd54f4104340df07d331",
+    "west-joint.ses": "3c36fb5771d96055dc200b1a783ed43f670da089a710cc1b30a57f151a099321",
+    "west-joint.log": "c0ac66e12806fa2e7de1146e91cca2f165dd141b42130046f22ff47535fcc309",
+    "west-joint-native/NFC-Card-V4.kicad_pcb": "9ed307ce7c1fc29291cea0a5b13f0f2d8c458aec5130dc358c8f62b39d88d8af",
+    "power-first-long-output-rejected.kicad_pcb": "bf7f1cd1e79da6ee8f6bf82e3b678d1ece899e784b8fa7a072d6bb0bd8e5c087",
+    "mcu-return-model.kicad_pcb": "d5f8412acef0525291ee4f012d179e158120332f97b707923b41fea73f1e27fb",
+    "full-remaining.log": "9144cdf77c830f14d1473d8755c14c65f30b6b225cb077c24e8ed1e59251252c"
+  }
+}

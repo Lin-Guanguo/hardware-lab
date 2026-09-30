@@ -1,0 +1,4984 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-30T02:01:53",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "NFC-Card-V4.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone [GND] on Top Layer, priority 499",
+                    "pos": {
+                        "x": 147.0075,
+                        "y": 128.59
+                    },
+                    "uuid": "95bc0dc0-91c3-4eff-96c3-85420b2c6a03"
+                },
+                {
+                    "description": "Zone [GND] on Top Layer, priority 499",
+                    "pos": {
+                        "x": 147.0075,
+                        "y": 128.59
+                    },
+                    "uuid": "95bc0dc0-91c3-4eff-96c3-85420b2c6a03"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [CHG_SDA] of R5 on Top Layer",
+                    "pos": {
+                        "x": 152.4535,
+                        "y": 103.5
+                    },
+                    "uuid": "639837b3-8fa6-415d-a500-a905e992726a"
+                },
+                {
+                    "description": "Track [CHG_SDA] on Top Layer, length 2.5500 mm",
+                    "pos": {
+                        "x": 157.6,
+                        "y": 108.35
+                    },
+                    "uuid": "815c2e3d-aa90-4ccf-a7b2-5d9a7a300bab"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [CHG_PG_N] of R9 on Top Layer",
+                    "pos": {
+                        "x": 152.4535,
+                        "y": 109.2
+                    },
+                    "uuid": "c77badaa-2053-46fc-87d3-0d1f5f6b75cf"
+                },
+                {
+                    "description": "Track [CHG_PG_N] on Top Layer, length 0.9500 mm",
+                    "pos": {
+                        "x": 158.0,
+                        "y": 106.25
+                    },
+                    "uuid": "08fbb732-e441-4bdd-bae9-cb46a139b335"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [BAT_PACK_TBD] on Top Layer, length 1.6500 mm",
+                    "pos": {
+                        "x": 158.4,
+                        "y": 106.25
+                    },
+                    "uuid": "69dd9413-c652-403c-a423-14f606ecc1c9"
+                },
+                {
+                    "description": "Pad 2 [BAT_PACK_TBD] of Q2 on Top Layer",
+                    "pos": {
+                        "x": 187.45,
+                        "y": 114.95
+                    },
+                    "uuid": "ec4a0865-b87d-49da-9611-cdff66a91e85"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [BAT_PACK_TBD] of R22 on Top Layer",
+                    "pos": {
+                        "x": 186.7,
+                        "y": 120.5535
+                    },
+                    "uuid": "7d5ee7fa-2aec-4d06-ae90-8555b48239b2"
+                },
+                {
+                    "description": "Pad 2 [BAT_PACK_TBD] of Q2 on Top Layer",
+                    "pos": {
+                        "x": 187.45,
+                        "y": 114.95
+                    },
+                    "uuid": "ec4a0865-b87d-49da-9611-cdff66a91e85"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [CHG_SCL] on Top Layer, length 1.6500 mm",
+                    "pos": {
+                        "x": 158.0,
+                        "y": 108.35
+                    },
+                    "uuid": "93fc7faf-bbc6-44b1-bab3-deea24547d2a"
+                },
+                {
+                    "description": "Pad 2 [CHG_SCL] of R6 on Top Layer",
+                    "pos": {
+                        "x": 152.4535,
+                        "y": 105.4
+                    },
+                    "uuid": "fbec2fc3-56a0-48b6-ac17-e09e5b35f6e4"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [CHG_INT_N] on Top Layer, length 1.8500 mm",
+                    "pos": {
+                        "x": 158.4,
+                        "y": 108.35
+                    },
+                    "uuid": "93976966-f462-4f4b-8453-8cc9aa96c61b"
+                },
+                {
+                    "description": "Pad 2 [CHG_INT_N] of R8 on Top Layer",
+                    "pos": {
+                        "x": 152.4535,
+                        "y": 107.3
+                    },
+                    "uuid": "38f7128e-091b-4196-b993-98da0e28765c"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad A5 [USB_CC1] of J1 on Top Layer",
+                    "pos": {
+                        "x": 186.149,
+                        "y": 105.2505
+                    },
+                    "uuid": "6e0c2c98-770a-4dbe-bff4-68609299a98f"
+                },
+                {
+                    "description": "Track [USB_CC1] on Top Layer, length 0.2035 mm",
+                    "pos": {
+                        "x": 184.5,
+                        "y": 108.9535
+                    },
+                    "uuid": "f038e90c-08a5-45b1-8d1b-b77aa39eca93"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [USB_CC2] on Top Layer, length 0.6105 mm",
+                    "pos": {
+                        "x": 184.5,
+                        "y": 108.05
+                    },
+                    "uuid": "6220e98b-aee3-4cd1-905c-59fd6bbf33ec"
+                },
+                {
+                    "description": "Pad B5 [USB_CC2] of J1 on Top Layer",
+                    "pos": {
+                        "x": 186.149,
+                        "y": 102.2505
+                    },
+                    "uuid": "38cfff7e-9b37-45cf-bbae-d09323cae1f3"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [EPD_BUSY_TBD] on Bottom Layer, length 1.0090 mm",
+                    "pos": {
+                        "x": 170.991,
+                        "y": 97.49
+                    },
+                    "uuid": "181c5f43-7ff8-481b-a1bc-55781c54aa11"
+                },
+                {
+                    "description": "Pad 2 [EPD_BUSY_TBD] of R18 on Top Layer",
+                    "pos": {
+                        "x": 170.6535,
+                        "y": 87.9
+                    },
+                    "uuid": "9f0c46e7-ed8d-4411-a2b3-97d131a60706"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": [
+        {
+            "description": "Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1472 mm)",
+            "items": [
+                {
+                    "description": "Via [NFC1_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 144.9,
+                        "y": 100.0
+                    },
+                    "uuid": "3726ba4a-eedf-4c87-a62f-5929cba7508a"
+                }
+            ],
+            "severity": "error",
+            "type": "annular_width"
+        },
+        {
+            "description": "Annular width (board setup constraints min annular width 0.1500 mm; actual 0.1485 mm)",
+            "items": [
+                {
+                    "description": "Via [NFC1_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 141.4,
+                        "y": 100.5
+                    },
+                    "uuid": "a955d647-5571-4d34-a182-e04d73d770bd"
+                }
+            ],
+            "severity": "error",
+            "type": "annular_width"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [VDD_3V3] on Top Layer, length 2.5000 mm",
+                    "pos": {
+                        "x": 164.2,
+                        "y": 110.8
+                    },
+                    "uuid": "105c6eb9-ec12-4c00-bd13-8eff4da74790"
+                },
+                {
+                    "description": "Track [GND] on Top Layer, length 5.7269 mm",
+                    "pos": {
+                        "x": 163.1005,
+                        "y": 111.3005
+                    },
+                    "uuid": "642f6427-eb96-49db-8aff-2258d0c74bd8"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Items shorting two nets (nets VDD_3V3 and KEY_PREV_N)",
+            "items": [
+                {
+                    "description": "Track [VDD_3V3] on Top Layer, length 2.2535 mm",
+                    "pos": {
+                        "x": 156.7,
+                        "y": 112.8
+                    },
+                    "uuid": "08208372-a904-4bf6-b2c2-93fc44f23180"
+                },
+                {
+                    "description": "Pad 2 [KEY_PREV_N] of R10 on Top Layer",
+                    "pos": {
+                        "x": 156.7,
+                        "y": 113.5465
+                    },
+                    "uuid": "a2953788-3dec-45e8-9ee3-2a20302adb0b"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets VDD_3V3 and GND)",
+            "items": [
+                {
+                    "description": "Track [VDD_3V3] on Top Layer, length 1.1314 mm",
+                    "pos": {
+                        "x": 165.0,
+                        "y": 110.0
+                    },
+                    "uuid": "195180ed-6e0d-47e7-9135-372e2521e4fe"
+                },
+                {
+                    "description": "Track [GND] on Top Layer, length 5.7269 mm",
+                    "pos": {
+                        "x": 163.1005,
+                        "y": 111.3005
+                    },
+                    "uuid": "642f6427-eb96-49db-8aff-2258d0c74bd8"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [VDD_3V3] on Top Layer, length 0.6500 mm",
+                    "pos": {
+                        "x": 165.0,
+                        "y": 109.35
+                    },
+                    "uuid": "2fc062ae-ede9-4b50-afb2-39177a7e5ce1"
+                },
+                {
+                    "description": "Track [GND] on Top Layer, length 5.7269 mm",
+                    "pos": {
+                        "x": 163.1005,
+                        "y": 111.3005
+                    },
+                    "uuid": "642f6427-eb96-49db-8aff-2258d0c74bd8"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Items shorting two nets (nets VDD_3V3 and GND)",
+            "items": [
+                {
+                    "description": "Track [VDD_3V3] on Top Layer, length 2.1213 mm",
+                    "pos": {
+                        "x": 165.0,
+                        "y": 109.35
+                    },
+                    "uuid": "3e2769c1-2e5e-4f28-adc4-d061ba9273da"
+                },
+                {
+                    "description": "Track [GND] on Top Layer, length 5.7269 mm",
+                    "pos": {
+                        "x": 163.1005,
+                        "y": 111.3005
+                    },
+                    "uuid": "642f6427-eb96-49db-8aff-2258d0c74bd8"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [GND] on Top Layer, length 5.7269 mm",
+                    "pos": {
+                        "x": 163.1005,
+                        "y": 111.3005
+                    },
+                    "uuid": "642f6427-eb96-49db-8aff-2258d0c74bd8"
+                },
+                {
+                    "description": "Track [VDD_3V3] on Top Layer, length 0.9000 mm",
+                    "pos": {
+                        "x": 165.0,
+                        "y": 109.35
+                    },
+                    "uuid": "91046b0a-547a-4e73-9e2f-db95126bf6e9"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Items shorting two nets (nets GND and VDD_3V3)",
+            "items": [
+                {
+                    "description": "Track [GND] on Top Layer, length 5.7269 mm",
+                    "pos": {
+                        "x": 163.1005,
+                        "y": 111.3005
+                    },
+                    "uuid": "642f6427-eb96-49db-8aff-2258d0c74bd8"
+                },
+                {
+                    "description": "Track [VDD_3V3] on Top Layer, length 1.5000 mm",
+                    "pos": {
+                        "x": 163.5,
+                        "y": 109.35
+                    },
+                    "uuid": "af8d8bc7-3964-4592-91b5-0a3cc99ec504"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets USB_VBUS and VDD_3V3)",
+            "items": [
+                {
+                    "description": "Track [USB_VBUS] on Top Layer, length 1.2000 mm",
+                    "pos": {
+                        "x": 162.0,
+                        "y": 109.5
+                    },
+                    "uuid": "44509157-7cea-47a0-89ac-aa96c1b9444d"
+                },
+                {
+                    "description": "Via [VDD_3V3] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 161.7,
+                        "y": 110.8
+                    },
+                    "uuid": "7f83207c-0c5e-4e39-97b7-61bcfdd9449b"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.0432 mm)",
+            "items": [
+                {
+                    "description": "Via [VDD_3V3] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 156.7,
+                        "y": 112.8
+                    },
+                    "uuid": "1943a49d-f4be-40ee-95ff-9d270acb5d95"
+                },
+                {
+                    "description": "Pad 2 [KEY_PREV_N] of R10 on Top Layer",
+                    "pos": {
+                        "x": 156.7,
+                        "y": 113.5465
+                    },
+                    "uuid": "a2953788-3dec-45e8-9ee3-2a20302adb0b"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.0505 mm)",
+            "items": [
+                {
+                    "description": "Via [VDD_3V3] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 150.2,
+                        "y": 109.2
+                    },
+                    "uuid": "7f8de2ce-526b-4bda-a6c1-e7a38dafcc79"
+                },
+                {
+                    "description": "Track [BAT_PACK_TBD] on Top Layer, length 7.5995 mm",
+                    "pos": {
+                        "x": 144.0,
+                        "y": 109.8005
+                    },
+                    "uuid": "a65321af-8449-4fca-ab05-52c0529c307b"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.0860 mm)",
+            "items": [
+                {
+                    "description": "Track [USB_DP_CONN] on Top Layer, length 1.1465 mm",
+                    "pos": {
+                        "x": 164.7,
+                        "y": 110.6
+                    },
+                    "uuid": "45c9178a-d663-4091-9a64-451f5609a74d"
+                },
+                {
+                    "description": "Via [VDD_3V3] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 165.0,
+                        "y": 110.25
+                    },
+                    "uuid": "a598e1b2-e9f7-4db5-abd1-da4cd0eb3e70"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.1575 mm)",
+            "items": [
+                {
+                    "description": "Track [SYS] on Top Layer, length 0.9500 mm",
+                    "pos": {
+                        "x": 170.2,
+                        "y": 108.4
+                    },
+                    "uuid": "9831b1e7-6946-49ae-8d44-99778e193b10"
+                },
+                {
+                    "description": "Via [VDD_3V3] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 169.6,
+                        "y": 109.55
+                    },
+                    "uuid": "c6f83d32-48ce-4952-926f-b96ba4eec5d5"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [SWDCLK] on Bottom Layer, length 26.6000 mm",
+                    "pos": {
+                        "x": 158.3005,
+                        "y": 114.701
+                    },
+                    "uuid": "706bb412-02ed-4be2-83e8-530eb25e4648"
+                },
+                {
+                    "description": "Track [CHG_SDA] on Bottom Layer, length 4.6796 mm",
+                    "pos": {
+                        "x": 157.6,
+                        "y": 112.1
+                    },
+                    "uuid": "d539518f-5da3-44ab-ae00-bc504d64b5ab"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Items shorting two nets (nets VDD_3V3 and BAT_PACK_TBD)",
+            "items": [
+                {
+                    "description": "Pad 1 [VDD_3V3] of R9 on Top Layer",
+                    "pos": {
+                        "x": 150.9465,
+                        "y": 109.2
+                    },
+                    "uuid": "3a0d40c8-d431-45a4-bdea-d02fb202fb4a"
+                },
+                {
+                    "description": "Track [BAT_PACK_TBD] on Top Layer, length 7.5995 mm",
+                    "pos": {
+                        "x": 144.0,
+                        "y": 109.8005
+                    },
+                    "uuid": "a65321af-8449-4fca-ab05-52c0529c307b"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.0303 mm)",
+            "items": [
+                {
+                    "description": "Via [CHG_INT_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 166.8507,
+                        "y": 116.9015
+                    },
+                    "uuid": "1d887ad8-4e21-40b0-a546-1b1e81e800d8"
+                },
+                {
+                    "description": "Via [CHG_CE_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 167.0905,
+                        "y": 117.4844
+                    },
+                    "uuid": "cbd7f6eb-88c6-4d6f-be27-ead3cdd55935"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.0571 mm)",
+            "items": [
+                {
+                    "description": "Track [KEY_PREV_N] on Bottom Layer, length 0.4818 mm",
+                    "pos": {
+                        "x": 165.0214,
+                        "y": 111.5394
+                    },
+                    "uuid": "91578819-5c9a-436b-a96a-cd47f666e81f"
+                },
+                {
+                    "description": "Track [USB_DP_CONN] on Bottom Layer, length 1.0035 mm",
+                    "pos": {
+                        "x": 165.7035,
+                        "y": 111.7465
+                    },
+                    "uuid": "cbe33ebd-fdfa-446c-ba85-378f3c17eb5a"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets VDD_3V3 and USB_VBUS)",
+            "items": [
+                {
+                    "description": "Via [VDD_3V3] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 161.7,
+                        "y": 110.8
+                    },
+                    "uuid": "7f83207c-0c5e-4e39-97b7-61bcfdd9449b"
+                },
+                {
+                    "description": "Track [USB_VBUS] on Bottom Layer, length 21.2000 mm",
+                    "pos": {
+                        "x": 162.0,
+                        "y": 111.0
+                    },
+                    "uuid": "db80bcde-bf58-439c-95cc-86cb1fdc39af"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [USB_DP_CONN] on Bottom Layer, length 1.0035 mm",
+                    "pos": {
+                        "x": 165.7035,
+                        "y": 111.7465
+                    },
+                    "uuid": "cbe33ebd-fdfa-446c-ba85-378f3c17eb5a"
+                },
+                {
+                    "description": "Track [KEY_PREV_N] on Bottom Layer, length 0.9320 mm",
+                    "pos": {
+                        "x": 165.0214,
+                        "y": 112.4714
+                    },
+                    "uuid": "d42c10aa-f303-4479-8f32-6170b6ab8032"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [USB_DM_CONN] on Bottom Layer, length 10.7431 mm",
+                    "pos": {
+                        "x": 174.4,
+                        "y": 104.15
+                    },
+                    "uuid": "e0a67138-0e25-4759-8ec1-23463ef79446"
+                },
+                {
+                    "description": "Track [VDD_3V3] on Bottom Layer, length 3.9000 mm",
+                    "pos": {
+                        "x": 165.0,
+                        "y": 110.25
+                    },
+                    "uuid": "f570286e-bda3-47e1-a9f5-80a7e673d2c5"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.0750 mm)",
+            "items": [
+                {
+                    "description": "Track [USB_DM_CONN] on Bottom Layer, length 1.1465 mm",
+                    "pos": {
+                        "x": 166.5,
+                        "y": 111.7465
+                    },
+                    "uuid": "45a4e72f-d231-4c6c-b1e3-ba5476c46038"
+                },
+                {
+                    "description": "Track [VDD_3V3] on Bottom Layer, length 3.9000 mm",
+                    "pos": {
+                        "x": 165.0,
+                        "y": 110.25
+                    },
+                    "uuid": "f570286e-bda3-47e1-a9f5-80a7e673d2c5"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.0493 mm)",
+            "items": [
+                {
+                    "description": "Via [VDD_3V3] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 169.6,
+                        "y": 109.55
+                    },
+                    "uuid": "c6f83d32-48ce-4952-926f-b96ba4eec5d5"
+                },
+                {
+                    "description": "Track [USB_DM_CONN] on Bottom Layer, length 10.7431 mm",
+                    "pos": {
+                        "x": 174.4,
+                        "y": 104.15
+                    },
+                    "uuid": "e0a67138-0e25-4759-8ec1-23463ef79446"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.0303 mm)",
+            "items": [
+                {
+                    "description": "Via [CHG_INT_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 166.8507,
+                        "y": 116.9015
+                    },
+                    "uuid": "1d887ad8-4e21-40b0-a546-1b1e81e800d8"
+                },
+                {
+                    "description": "Via [CHG_CE_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 167.0905,
+                        "y": 117.4844
+                    },
+                    "uuid": "cbd7f6eb-88c6-4d6f-be27-ead3cdd55935"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets USB_DP_CONN and VDD_3V3)",
+            "items": [
+                {
+                    "description": "Via [USB_DP_CONN] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 164.7,
+                        "y": 110.6
+                    },
+                    "uuid": "43f39a80-0275-477d-bd2a-abf607796372"
+                },
+                {
+                    "description": "Via [VDD_3V3] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 165.0,
+                        "y": 110.25
+                    },
+                    "uuid": "a598e1b2-e9f7-4db5-abd1-da4cd0eb3e70"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets USB_DM_CONN and VDD_3V3)",
+            "items": [
+                {
+                    "description": "Via [USB_DM_CONN] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 166.5,
+                        "y": 110.6
+                    },
+                    "uuid": "2831355a-18c4-43b4-94f9-59aefc3e4532"
+                },
+                {
+                    "description": "Track [VDD_3V3] on Bottom Layer, length 3.9000 mm",
+                    "pos": {
+                        "x": 165.0,
+                        "y": 110.25
+                    },
+                    "uuid": "f570286e-bda3-47e1-a9f5-80a7e673d2c5"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [SWDCLK] on Bottom Layer, length 26.6000 mm",
+                    "pos": {
+                        "x": 158.3005,
+                        "y": 114.701
+                    },
+                    "uuid": "706bb412-02ed-4be2-83e8-530eb25e4648"
+                },
+                {
+                    "description": "Track [VDD_3V3] on Bottom Layer, length 5.5465 mm",
+                    "pos": {
+                        "x": 158.7,
+                        "y": 110.8
+                    },
+                    "uuid": "a4b424e3-c695-42c0-9c39-0d2b9f20caf1"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [USB_DM_CONN] on Bottom Layer, length 10.7431 mm",
+                    "pos": {
+                        "x": 174.4,
+                        "y": 104.15
+                    },
+                    "uuid": "e0a67138-0e25-4759-8ec1-23463ef79446"
+                },
+                {
+                    "description": "Track [EPD_MOSI_TBD] on Bottom Layer, length 11.0000 mm",
+                    "pos": {
+                        "x": 172.201,
+                        "y": 112.5
+                    },
+                    "uuid": "fb1c319f-d012-4bfb-9c5c-1461e0d1c9bf"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.1328 mm)",
+            "items": [
+                {
+                    "description": "Track [EPD_SCK_TBD] on Bottom Layer, length 9.0651 mm",
+                    "pos": {
+                        "x": 173.001,
+                        "y": 101.9
+                    },
+                    "uuid": "79740ce9-b2ff-4eb5-9a1b-ec7a8c1b448c"
+                },
+                {
+                    "description": "Track [EPD_MOSI_TBD] on Bottom Layer, length 9.2065 mm",
+                    "pos": {
+                        "x": 172.201,
+                        "y": 101.5
+                    },
+                    "uuid": "ed04254e-30f3-4220-ba3f-4e18672d5b8d"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [EPD_SCK_TBD] on Bottom Layer, length 10.6000 mm",
+                    "pos": {
+                        "x": 173.001,
+                        "y": 112.5
+                    },
+                    "uuid": "d354926f-d184-443c-a266-8a160261dd9e"
+                },
+                {
+                    "description": "Track [USB_DM_CONN] on Bottom Layer, length 10.7431 mm",
+                    "pos": {
+                        "x": 174.4,
+                        "y": 104.15
+                    },
+                    "uuid": "e0a67138-0e25-4759-8ec1-23463ef79446"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.1328 mm)",
+            "items": [
+                {
+                    "description": "Track [EPD_SCK_TBD] on Bottom Layer, length 2.2090 mm",
+                    "pos": {
+                        "x": 166.591,
+                        "y": 95.49
+                    },
+                    "uuid": "289d8188-ab0c-41fe-a57e-109f49106b73"
+                },
+                {
+                    "description": "Track [EPD_MOSI_TBD] on Bottom Layer, length 9.2065 mm",
+                    "pos": {
+                        "x": 172.201,
+                        "y": 101.5
+                    },
+                    "uuid": "ed04254e-30f3-4220-ba3f-4e18672d5b8d"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.1328 mm)",
+            "items": [
+                {
+                    "description": "Track [EPD_CS_N_TBD] on Bottom Layer, length 2.1090 mm",
+                    "pos": {
+                        "x": 167.491,
+                        "y": 95.99
+                    },
+                    "uuid": "25451600-5ec2-4e2f-b3c3-42a99808e9e6"
+                },
+                {
+                    "description": "Track [EPD_SCK_TBD] on Bottom Layer, length 9.0651 mm",
+                    "pos": {
+                        "x": 173.001,
+                        "y": 101.9
+                    },
+                    "uuid": "79740ce9-b2ff-4eb5-9a1b-ec7a8c1b448c"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.1328 mm)",
+            "items": [
+                {
+                    "description": "Track [EPD_CS_N_TBD] on Bottom Layer, length 8.9237 mm",
+                    "pos": {
+                        "x": 173.801,
+                        "y": 102.3
+                    },
+                    "uuid": "0da06124-91f4-407c-90f7-ac58ce98fd2d"
+                },
+                {
+                    "description": "Track [EPD_SCK_TBD] on Bottom Layer, length 9.0651 mm",
+                    "pos": {
+                        "x": 173.001,
+                        "y": 101.9
+                    },
+                    "uuid": "79740ce9-b2ff-4eb5-9a1b-ec7a8c1b448c"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.1328 mm)",
+            "items": [
+                {
+                    "description": "Track [EPD_CS_N_TBD] on Bottom Layer, length 8.9237 mm",
+                    "pos": {
+                        "x": 173.801,
+                        "y": 102.3
+                    },
+                    "uuid": "0da06124-91f4-407c-90f7-ac58ce98fd2d"
+                },
+                {
+                    "description": "Track [EPD_DC_TBD] on Bottom Layer, length 8.7823 mm",
+                    "pos": {
+                        "x": 174.601,
+                        "y": 102.7
+                    },
+                    "uuid": "d363e051-0ba3-44ec-8e8b-0f96a3dbef6c"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.1250 mm)",
+            "items": [
+                {
+                    "description": "Via [EPD_SCK_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 168.8,
+                        "y": 95.49
+                    },
+                    "uuid": "287a0504-6431-47c9-a6b8-d2e68e758c98"
+                },
+                {
+                    "description": "Track [EPD_CS_N_TBD] on Top Layer, length 3.2750 mm",
+                    "pos": {
+                        "x": 169.6,
+                        "y": 95.99
+                    },
+                    "uuid": "5bd9f421-4120-4d30-96de-d58603b30460"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.1328 mm)",
+            "items": [
+                {
+                    "description": "Track [EPD_CS_N_TBD] on Bottom Layer, length 8.9237 mm",
+                    "pos": {
+                        "x": 173.801,
+                        "y": 102.3
+                    },
+                    "uuid": "0da06124-91f4-407c-90f7-ac58ce98fd2d"
+                },
+                {
+                    "description": "Track [EPD_DC_TBD] on Bottom Layer, length 2.0090 mm",
+                    "pos": {
+                        "x": 168.391,
+                        "y": 96.49
+                    },
+                    "uuid": "9ef1f628-d721-4d8c-91e8-4680839f33ca"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [EPD_CS_N_TBD] on Bottom Layer, length 10.2000 mm",
+                    "pos": {
+                        "x": 173.801,
+                        "y": 112.5
+                    },
+                    "uuid": "635503e4-fdb0-4c86-ba4b-207302175f44"
+                },
+                {
+                    "description": "Track [USB_DM_CONN] on Bottom Layer, length 10.7431 mm",
+                    "pos": {
+                        "x": 174.4,
+                        "y": 104.15
+                    },
+                    "uuid": "e0a67138-0e25-4759-8ec1-23463ef79446"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.0220 mm)",
+            "items": [
+                {
+                    "description": "Via [EPD_DC_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 170.4,
+                        "y": 96.49
+                    },
+                    "uuid": "34d91ae9-ee5f-418a-a1c7-b87cc0b5bb5a"
+                },
+                {
+                    "description": "Pad 2 [EPD_SW] of L1 on Top Layer",
+                    "pos": {
+                        "x": 171.472,
+                        "y": 96.5
+                    },
+                    "uuid": "38feaec8-c353-4054-975e-36bc7f58ef21"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.1250 mm)",
+            "items": [
+                {
+                    "description": "Via [EPD_MOSI_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 168.0,
+                        "y": 94.99
+                    },
+                    "uuid": "bd9f8f11-8c2b-40d1-939e-52023dffa3ba"
+                },
+                {
+                    "description": "Track [EPD_SCK_TBD] on Top Layer, length 2.4750 mm",
+                    "pos": {
+                        "x": 168.8,
+                        "y": 95.49
+                    },
+                    "uuid": "d093ad7d-63a1-4724-b132-e2f3a5d8efa9"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [USB_DM_CONN] on Bottom Layer, length 4.6000 mm",
+                    "pos": {
+                        "x": 179.0,
+                        "y": 104.15
+                    },
+                    "uuid": "2d4087eb-769c-47c3-8ed7-cfa7658aeca0"
+                },
+                {
+                    "description": "Track [EPD_DC_TBD] on Bottom Layer, length 9.8000 mm",
+                    "pos": {
+                        "x": 174.601,
+                        "y": 112.5
+                    },
+                    "uuid": "7cf6896a-145a-4878-a6a5-830d0b5aa755"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.1250 mm)",
+            "items": [
+                {
+                    "description": "Track [EPD_DC_TBD] on Top Layer, length 4.0750 mm",
+                    "pos": {
+                        "x": 170.4,
+                        "y": 96.49
+                    },
+                    "uuid": "bbe71e3a-5637-4eb5-bda7-7c9f6682adac"
+                },
+                {
+                    "description": "Via [EPD_CS_N_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 169.6,
+                        "y": 95.99
+                    },
+                    "uuid": "bf8cdd02-a884-423e-b136-75c98d86dced"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [USB_DM_CONN] on Bottom Layer, length 4.6000 mm",
+                    "pos": {
+                        "x": 179.0,
+                        "y": 104.15
+                    },
+                    "uuid": "2d4087eb-769c-47c3-8ed7-cfa7658aeca0"
+                },
+                {
+                    "description": "Track [EPD_RESET_N_TBD] on Bottom Layer, length 13.0010 mm",
+                    "pos": {
+                        "x": 176.2,
+                        "y": 114.901
+                    },
+                    "uuid": "6fb6c2c4-696c-43d4-8772-c25caf5dfd99"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.1250 mm)",
+            "items": [
+                {
+                    "description": "Via [EPD_DC_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 170.4,
+                        "y": 96.49
+                    },
+                    "uuid": "34d91ae9-ee5f-418a-a1c7-b87cc0b5bb5a"
+                },
+                {
+                    "description": "Track [EPD_RESET_N_TBD] on Top Layer, length 4.8750 mm",
+                    "pos": {
+                        "x": 171.2,
+                        "y": 96.99
+                    },
+                    "uuid": "7cb0eeee-5b37-44c4-8fe0-75f57048498d"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.1780 mm)",
+            "items": [
+                {
+                    "description": "Pad 2 [EPD_SW] of L1 on Top Layer",
+                    "pos": {
+                        "x": 171.472,
+                        "y": 96.5
+                    },
+                    "uuid": "38feaec8-c353-4054-975e-36bc7f58ef21"
+                },
+                {
+                    "description": "Via [EPD_RESET_N_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 171.2,
+                        "y": 96.99
+                    },
+                    "uuid": "a0051371-ea88-48b1-9034-98129a2e2e61"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [EPD_RESET_N_TBD] on Bottom Layer, length 13.0010 mm",
+                    "pos": {
+                        "x": 176.2,
+                        "y": 114.901
+                    },
+                    "uuid": "6fb6c2c4-696c-43d4-8772-c25caf5dfd99"
+                },
+                {
+                    "description": "Track [USB_DP_CONN] on Bottom Layer, length 5.0000 mm",
+                    "pos": {
+                        "x": 179.0,
+                        "y": 103.45
+                    },
+                    "uuid": "d78dcc5f-58ba-4593-bda2-c2530c9e3fc5"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.1860 mm)",
+            "items": [
+                {
+                    "description": "Track [USB_DP_CONN] on Bottom Layer, length 1.1465 mm",
+                    "pos": {
+                        "x": 164.7,
+                        "y": 111.7465
+                    },
+                    "uuid": "7c73487e-cbf4-4970-90ab-f8736c3a3cb0"
+                },
+                {
+                    "description": "Track [VDD_3V3] on Bottom Layer, length 3.9000 mm",
+                    "pos": {
+                        "x": 165.0,
+                        "y": 110.25
+                    },
+                    "uuid": "f570286e-bda3-47e1-a9f5-80a7e673d2c5"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.1000 mm)",
+            "items": [
+                {
+                    "description": "Via [USB_DM_CONN] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 179.0,
+                        "y": 104.15
+                    },
+                    "uuid": "8cfdc5e4-c472-4e1f-a4bf-924a5d5e9559"
+                },
+                {
+                    "description": "Via [USB_DP_CONN] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 179.0,
+                        "y": 103.45
+                    },
+                    "uuid": "9373c5a7-ac7b-4e88-94ca-fd2dc8620408"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [USB_DP_CONN] on Bottom Layer, length 11.7330 mm",
+                    "pos": {
+                        "x": 174.0,
+                        "y": 103.45
+                    },
+                    "uuid": "3d8d4e48-6ff9-4ab8-b799-0bd1d22fa16b"
+                },
+                {
+                    "description": "Track [VDD_3V3] on Bottom Layer, length 3.9000 mm",
+                    "pos": {
+                        "x": 165.0,
+                        "y": 110.25
+                    },
+                    "uuid": "f570286e-bda3-47e1-a9f5-80a7e673d2c5"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.0857 mm)",
+            "items": [
+                {
+                    "description": "Via [USB_DP_CONN] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 164.7,
+                        "y": 110.6
+                    },
+                    "uuid": "43f39a80-0275-477d-bd2a-abf607796372"
+                },
+                {
+                    "description": "Track [GND] on Top Layer, length 5.7269 mm",
+                    "pos": {
+                        "x": 163.1005,
+                        "y": 111.3005
+                    },
+                    "uuid": "642f6427-eb96-49db-8aff-2258d0c74bd8"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.1000 mm)",
+            "items": [
+                {
+                    "description": "Via [USB_DM_CONN] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 179.0,
+                        "y": 104.15
+                    },
+                    "uuid": "8cfdc5e4-c472-4e1f-a4bf-924a5d5e9559"
+                },
+                {
+                    "description": "Via [USB_DP_CONN] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 179.0,
+                        "y": 103.45
+                    },
+                    "uuid": "9373c5a7-ac7b-4e88-94ca-fd2dc8620408"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets USB_DP_CONN and VDD_3V3)",
+            "items": [
+                {
+                    "description": "Via [USB_DP_CONN] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 164.7,
+                        "y": 110.6
+                    },
+                    "uuid": "43f39a80-0275-477d-bd2a-abf607796372"
+                },
+                {
+                    "description": "Track [VDD_3V3] on Bottom Layer, length 3.9000 mm",
+                    "pos": {
+                        "x": 165.0,
+                        "y": 110.25
+                    },
+                    "uuid": "f570286e-bda3-47e1-a9f5-80a7e673d2c5"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets VDD_3V3 and USB_DP_CONN)",
+            "items": [
+                {
+                    "description": "Track [VDD_3V3] on Top Layer, length 1.1314 mm",
+                    "pos": {
+                        "x": 165.0,
+                        "y": 110.0
+                    },
+                    "uuid": "195180ed-6e0d-47e7-9135-372e2521e4fe"
+                },
+                {
+                    "description": "Track [USB_DP_CONN] on Top Layer, length 1.1465 mm",
+                    "pos": {
+                        "x": 164.7,
+                        "y": 110.6
+                    },
+                    "uuid": "45c9178a-d663-4091-9a64-451f5609a74d"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets KEY_PREV_N and USB_DP_CONN)",
+            "items": [
+                {
+                    "description": "Track [KEY_PREV_N] on Bottom Layer, length 0.4835 mm",
+                    "pos": {
+                        "x": 164.6807,
+                        "y": 111.1987
+                    },
+                    "uuid": "597b2f35-7aea-4f8c-9814-157eb97b5130"
+                },
+                {
+                    "description": "Track [USB_DP_CONN] on Bottom Layer, length 1.1465 mm",
+                    "pos": {
+                        "x": 164.7,
+                        "y": 111.7465
+                    },
+                    "uuid": "7c73487e-cbf4-4970-90ab-f8736c3a3cb0"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [VDD_3V3] on Top Layer, length 2.2535 mm",
+                    "pos": {
+                        "x": 156.7,
+                        "y": 112.8
+                    },
+                    "uuid": "08208372-a904-4bf6-b2c2-93fc44f23180"
+                },
+                {
+                    "description": "Track [KEY_NEXT_N] on Top Layer, length 1.6645 mm",
+                    "pos": {
+                        "x": 156.1954,
+                        "y": 114.3201
+                    },
+                    "uuid": "190b5c29-b9fc-407b-933f-5708163266c6"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [VDD_3V3] on Top Layer, length 2.2535 mm",
+                    "pos": {
+                        "x": 156.7,
+                        "y": 112.8
+                    },
+                    "uuid": "08208372-a904-4bf6-b2c2-93fc44f23180"
+                },
+                {
+                    "description": "Track [KEY_PREV_N] on Top Layer, length 0.7137 mm",
+                    "pos": {
+                        "x": 156.7,
+                        "y": 113.5465
+                    },
+                    "uuid": "99c35a13-d011-4aa2-a4cf-dde030e552eb"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [VDD_3V3] on Top Layer, length 2.2535 mm",
+                    "pos": {
+                        "x": 156.7,
+                        "y": 112.8
+                    },
+                    "uuid": "08208372-a904-4bf6-b2c2-93fc44f23180"
+                },
+                {
+                    "description": "Track [KEY_PREV_N] on Top Layer, length 0.6850 mm",
+                    "pos": {
+                        "x": 156.7,
+                        "y": 113.5465
+                    },
+                    "uuid": "4d87ba73-5d27-4811-aa22-85afa39bc638"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.0854 mm)",
+            "items": [
+                {
+                    "description": "Via [EPD_RESET_N_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 171.2,
+                        "y": 96.99
+                    },
+                    "uuid": "a0051371-ea88-48b1-9034-98129a2e2e61"
+                },
+                {
+                    "description": "Track [EPD_SW] on Top Layer, length 2.4720 mm",
+                    "pos": {
+                        "x": 171.472,
+                        "y": 96.5
+                    },
+                    "uuid": "fca59306-f095-4da5-9a63-348cf2a4ad29"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [EPD_RESE] on Bottom Layer, length 8.9420 mm",
+                    "pos": {
+                        "x": 176.4862,
+                        "y": 100.1782
+                    },
+                    "uuid": "304c2b14-fd4d-4da1-85ff-2f2fb6395b48"
+                },
+                {
+                    "description": "Track [EPD_RESET_N_TBD] on Bottom Layer, length 6.9438 mm",
+                    "pos": {
+                        "x": 176.2,
+                        "y": 101.9
+                    },
+                    "uuid": "a8f982b0-4f3f-4655-a94a-75aad6a62428"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Items shorting two nets (nets EPD_SW and EPD_RESET_N_TBD)",
+            "items": [
+                {
+                    "description": "Track [EPD_SW] on Top Layer, length 2.9720 mm",
+                    "pos": {
+                        "x": 171.472,
+                        "y": 96.5
+                    },
+                    "uuid": "622d745d-a410-49b8-96eb-5265426e0f2f"
+                },
+                {
+                    "description": "Via [EPD_RESET_N_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 171.2,
+                        "y": 96.99
+                    },
+                    "uuid": "a0051371-ea88-48b1-9034-98129a2e2e61"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [VDD_3V3] on Top Layer, length 2.2535 mm",
+                    "pos": {
+                        "x": 156.7,
+                        "y": 112.8
+                    },
+                    "uuid": "08208372-a904-4bf6-b2c2-93fc44f23180"
+                },
+                {
+                    "description": "Track [KEY_PREV_N] on Top Layer, length 2.3727 mm",
+                    "pos": {
+                        "x": 156.7,
+                        "y": 112.8615
+                    },
+                    "uuid": "7b8fbb65-9687-4c32-81e7-d24432836b30"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.1026 mm)",
+            "items": [
+                {
+                    "description": "Track [VDD_3V3] on Top Layer, length 10.1823 mm",
+                    "pos": {
+                        "x": 172.0,
+                        "y": 106.6
+                    },
+                    "uuid": "2653ddae-73be-44ac-a9d0-5b1bdcd52b1f"
+                },
+                {
+                    "description": "Track [EPD_RESE] on Top Layer, length 1.3664 mm",
+                    "pos": {
+                        "x": 178.0595,
+                        "y": 99.9712
+                    },
+                    "uuid": "defc2ea5-f133-40aa-82d8-b85f4512ce80"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.1026 mm)",
+            "items": [
+                {
+                    "description": "Track [VDD_3V3] on Top Layer, length 10.1823 mm",
+                    "pos": {
+                        "x": 172.0,
+                        "y": 106.6
+                    },
+                    "uuid": "2653ddae-73be-44ac-a9d0-5b1bdcd52b1f"
+                },
+                {
+                    "description": "Track [EPD_RESE] on Top Layer, length 1.3683 mm",
+                    "pos": {
+                        "x": 177.092,
+                        "y": 100.9387
+                    },
+                    "uuid": "acf8d39d-aa0f-4d65-a46b-a591bbe152f1"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.1669 mm)",
+            "items": [
+                {
+                    "description": "Via [EPD_RESET_N_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 171.2,
+                        "y": 96.99
+                    },
+                    "uuid": "a0051371-ea88-48b1-9034-98129a2e2e61"
+                },
+                {
+                    "description": "Track [EPD_BUSY_TBD] on Bottom Layer, length 8.4994 mm",
+                    "pos": {
+                        "x": 177.001,
+                        "y": 103.5
+                    },
+                    "uuid": "da466437-b260-4da4-a1bf-7550d19d27a5"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.1026 mm)",
+            "items": [
+                {
+                    "description": "Track [EPD_RESE] on Top Layer, length 1.1293 mm",
+                    "pos": {
+                        "x": 175.9627,
+                        "y": 100.9387
+                    },
+                    "uuid": "05a84233-0ee8-4ad1-a095-ea9ebe4a613f"
+                },
+                {
+                    "description": "Track [VDD_3V3] on Top Layer, length 10.1823 mm",
+                    "pos": {
+                        "x": 172.0,
+                        "y": 106.6
+                    },
+                    "uuid": "2653ddae-73be-44ac-a9d0-5b1bdcd52b1f"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [EPD_BUSY_TBD] on Bottom Layer, length 1.0090 mm",
+                    "pos": {
+                        "x": 170.991,
+                        "y": 97.49
+                    },
+                    "uuid": "181c5f43-7ff8-481b-a1bc-55781c54aa11"
+                },
+                {
+                    "description": "Track [EPD_RESET_N_TBD] on Bottom Layer, length 6.9438 mm",
+                    "pos": {
+                        "x": 176.2,
+                        "y": 101.9
+                    },
+                    "uuid": "a8f982b0-4f3f-4655-a94a-75aad6a62428"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Items shorting two nets (nets EPD_BUSY_TBD and EPD_SW)",
+            "items": [
+                {
+                    "description": "Via [EPD_BUSY_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 172.0,
+                        "y": 97.49
+                    },
+                    "uuid": "2da515a6-bd83-4c72-bfee-2b2bc2b3e4a4"
+                },
+                {
+                    "description": "Pad 2 [EPD_SW] of L1 on Top Layer",
+                    "pos": {
+                        "x": 171.472,
+                        "y": 96.5
+                    },
+                    "uuid": "38feaec8-c353-4054-975e-36bc7f58ef21"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.1250 mm)",
+            "items": [
+                {
+                    "description": "Track [EPD_BUSY_TBD] on Top Layer, length 5.6750 mm",
+                    "pos": {
+                        "x": 172.0,
+                        "y": 97.49
+                    },
+                    "uuid": "43f40d0e-e5d4-463b-ac1c-2d6a09ceb337"
+                },
+                {
+                    "description": "Via [EPD_RESET_N_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 171.2,
+                        "y": 96.99
+                    },
+                    "uuid": "a0051371-ea88-48b1-9034-98129a2e2e61"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets EPD_BUSY_TBD and USB_DP_CONN)",
+            "items": [
+                {
+                    "description": "Track [EPD_BUSY_TBD] on Bottom Layer, length 9.0000 mm",
+                    "pos": {
+                        "x": 177.001,
+                        "y": 112.5
+                    },
+                    "uuid": "38daefd2-b1f2-4ee5-912a-8f7d2ce72e61"
+                },
+                {
+                    "description": "Track [USB_DP_CONN] on Bottom Layer, length 5.0000 mm",
+                    "pos": {
+                        "x": 179.0,
+                        "y": 103.45
+                    },
+                    "uuid": "d78dcc5f-58ba-4593-bda2-c2530c9e3fc5"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets EPD_BUSY_TBD and EPD_RESET_N_TBD)",
+            "items": [
+                {
+                    "description": "Via [EPD_BUSY_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 172.0,
+                        "y": 97.49
+                    },
+                    "uuid": "2da515a6-bd83-4c72-bfee-2b2bc2b3e4a4"
+                },
+                {
+                    "description": "Track [EPD_RESET_N_TBD] on Bottom Layer, length 6.9438 mm",
+                    "pos": {
+                        "x": 176.2,
+                        "y": 101.9
+                    },
+                    "uuid": "a8f982b0-4f3f-4655-a94a-75aad6a62428"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets USB_DP_CONN and KEY_OK_N)",
+            "items": [
+                {
+                    "description": "Track [USB_DP_CONN] on Top Layer, length 1.1465 mm",
+                    "pos": {
+                        "x": 164.7,
+                        "y": 110.6
+                    },
+                    "uuid": "45c9178a-d663-4091-9a64-451f5609a74d"
+                },
+                {
+                    "description": "Via [KEY_OK_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 164.4381,
+                        "y": 111.7804
+                    },
+                    "uuid": "bbf39831-0683-4849-8aca-9c613bc585ea"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.1141 mm)",
+            "items": [
+                {
+                    "description": "Track [KEY_OK_N] on Bottom Layer, length 0.7845 mm",
+                    "pos": {
+                        "x": 164.4381,
+                        "y": 112.5649
+                    },
+                    "uuid": "1bde1775-8580-4511-a362-7f32c5fb0176"
+                },
+                {
+                    "description": "Track [USB_DP_CONN] on Bottom Layer, length 1.0035 mm",
+                    "pos": {
+                        "x": 165.7035,
+                        "y": 111.7465
+                    },
+                    "uuid": "cbe33ebd-fdfa-446c-ba85-378f3c17eb5a"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets KEY_OK_N and USB_DP_CONN)",
+            "items": [
+                {
+                    "description": "Via [KEY_OK_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 164.4381,
+                        "y": 111.7804
+                    },
+                    "uuid": "bbf39831-0683-4849-8aca-9c613bc585ea"
+                },
+                {
+                    "description": "Track [USB_DP_CONN] on Bottom Layer, length 1.0035 mm",
+                    "pos": {
+                        "x": 165.7035,
+                        "y": 111.7465
+                    },
+                    "uuid": "cbe33ebd-fdfa-446c-ba85-378f3c17eb5a"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.1141 mm)",
+            "items": [
+                {
+                    "description": "Track [USB_DP_CONN] on Top Layer, length 1.1465 mm",
+                    "pos": {
+                        "x": 164.7,
+                        "y": 110.6
+                    },
+                    "uuid": "45c9178a-d663-4091-9a64-451f5609a74d"
+                },
+                {
+                    "description": "Track [KEY_OK_N] on Top Layer, length 1.2609 mm",
+                    "pos": {
+                        "x": 163.5465,
+                        "y": 112.672
+                    },
+                    "uuid": "ee1d5da0-0fd2-4639-a66d-7a6b0dac9682"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets USB_DM_CONN and USB_VBUS)",
+            "items": [
+                {
+                    "description": "Via [USB_DM_CONN] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 166.5,
+                        "y": 110.6
+                    },
+                    "uuid": "2831355a-18c4-43b4-94f9-59aefc3e4532"
+                },
+                {
+                    "description": "Track [USB_VBUS] on Bottom Layer, length 4.7000 mm",
+                    "pos": {
+                        "x": 166.7,
+                        "y": 111.0
+                    },
+                    "uuid": "77df89a1-480f-4343-ae76-324a2a894c46"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets USB_DM_CONN and USB_VBUS)",
+            "items": [
+                {
+                    "description": "Track [USB_DM_CONN] on Bottom Layer, length 1.0607 mm",
+                    "pos": {
+                        "x": 184.8,
+                        "y": 105.05
+                    },
+                    "uuid": "c3a3b38a-bbdc-4e9c-ba68-82ded1134687"
+                },
+                {
+                    "description": "Track [USB_VBUS] on Bottom Layer, length 2.4042 mm",
+                    "pos": {
+                        "x": 182.8,
+                        "y": 104.7005
+                    },
+                    "uuid": "ea955c01-639d-4198-90ed-7acd3bbab2ab"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets USB_DM_CONN and USB_VBUS)",
+            "items": [
+                {
+                    "description": "Via [USB_DM_CONN] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 166.5,
+                        "y": 110.6
+                    },
+                    "uuid": "2831355a-18c4-43b4-94f9-59aefc3e4532"
+                },
+                {
+                    "description": "Track [USB_VBUS] on Bottom Layer, length 21.2000 mm",
+                    "pos": {
+                        "x": 162.0,
+                        "y": 111.0
+                    },
+                    "uuid": "db80bcde-bf58-439c-95cc-86cb1fdc39af"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [EPD_EN_TBD] on Bottom Layer, length 4.8000 mm",
+                    "pos": {
+                        "x": 183.45,
+                        "y": 103.25
+                    },
+                    "uuid": "0a4d8cff-8ecd-47b4-92cd-29888a7829ee"
+                },
+                {
+                    "description": "Track [USB_VBUS] on Bottom Layer, length 1.4142 mm",
+                    "pos": {
+                        "x": 183.8,
+                        "y": 101.1005
+                    },
+                    "uuid": "1bf56585-194c-4f4b-b4d2-ab577b1a7d11"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [USB_VBUS] on Bottom Layer, length 2.6000 mm",
+                    "pos": {
+                        "x": 182.8,
+                        "y": 102.1005
+                    },
+                    "uuid": "1eeee7f9-64f6-49da-8e8a-7ceff1d893f2"
+                },
+                {
+                    "description": "Track [EPD_EN_TBD] on Bottom Layer, length 1.5556 mm",
+                    "pos": {
+                        "x": 182.35,
+                        "y": 104.35
+                    },
+                    "uuid": "32320a3a-9ca5-476f-a19a-c4b0671273f2"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Items shorting two nets (nets USB_DM_CONN and USB_VBUS)",
+            "items": [
+                {
+                    "description": "Via [USB_DM_CONN] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 166.5,
+                        "y": 110.6
+                    },
+                    "uuid": "2831355a-18c4-43b4-94f9-59aefc3e4532"
+                },
+                {
+                    "description": "Track [USB_VBUS] on Bottom Layer, length 2.5456 mm",
+                    "pos": {
+                        "x": 168.5,
+                        "y": 112.8
+                    },
+                    "uuid": "c5965916-3628-4214-9b25-ccd618483920"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets USB_VBUS and VDD_3V3)",
+            "items": [
+                {
+                    "description": "Track [USB_VBUS] on Bottom Layer, length 0.3000 mm",
+                    "pos": {
+                        "x": 162.0,
+                        "y": 110.7
+                    },
+                    "uuid": "5ec9d0cb-c71f-43e0-a6a9-1b96deb5d6ca"
+                },
+                {
+                    "description": "Track [VDD_3V3] on Bottom Layer, length 3.0000 mm",
+                    "pos": {
+                        "x": 161.7,
+                        "y": 110.8
+                    },
+                    "uuid": "7be06f3d-0206-449e-bd78-47d23aaabe3a"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets EPD_EN_TBD and USB_VBUS)",
+            "items": [
+                {
+                    "description": "Track [EPD_EN_TBD] on Bottom Layer, length 4.8000 mm",
+                    "pos": {
+                        "x": 183.45,
+                        "y": 103.25
+                    },
+                    "uuid": "0a4d8cff-8ecd-47b4-92cd-29888a7829ee"
+                },
+                {
+                    "description": "Via [USB_VBUS] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 183.8,
+                        "y": 101.1005
+                    },
+                    "uuid": "36294b95-3473-41c8-b0f9-dee4018993a5"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets VDD_3V3 and USB_VBUS)",
+            "items": [
+                {
+                    "description": "Track [VDD_3V3] on Top Layer, length 2.5000 mm",
+                    "pos": {
+                        "x": 164.2,
+                        "y": 110.8
+                    },
+                    "uuid": "105c6eb9-ec12-4c00-bd13-8eff4da74790"
+                },
+                {
+                    "description": "Via [USB_VBUS] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 162.0,
+                        "y": 110.7
+                    },
+                    "uuid": "993dfcc9-25b4-438d-961c-f0256f5b09f5"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets GND and USB_VBUS)",
+            "items": [
+                {
+                    "description": "Pad 2 [GND] of C5 on Top Layer",
+                    "pos": {
+                        "x": 162.1,
+                        "y": 109.35
+                    },
+                    "uuid": "f6d96c44-0c91-4c9a-ab2b-131e54577450"
+                },
+                {
+                    "description": "Track [USB_VBUS] on Top Layer, length 1.6971 mm",
+                    "pos": {
+                        "x": 160.8,
+                        "y": 108.3
+                    },
+                    "uuid": "f9919279-5d5e-42e5-aa21-c7c70f9e7dbb"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets VDD_3V3 and USB_VBUS)",
+            "items": [
+                {
+                    "description": "Track [VDD_3V3] on Bottom Layer, length 3.0000 mm",
+                    "pos": {
+                        "x": 161.7,
+                        "y": 110.8
+                    },
+                    "uuid": "7be06f3d-0206-449e-bd78-47d23aaabe3a"
+                },
+                {
+                    "description": "Via [USB_VBUS] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 162.0,
+                        "y": 110.7
+                    },
+                    "uuid": "993dfcc9-25b4-438d-961c-f0256f5b09f5"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets USB_VBUS and GND)",
+            "items": [
+                {
+                    "description": "Track [USB_VBUS] on Top Layer, length 1.2000 mm",
+                    "pos": {
+                        "x": 162.0,
+                        "y": 109.5
+                    },
+                    "uuid": "44509157-7cea-47a0-89ac-aa96c1b9444d"
+                },
+                {
+                    "description": "Pad 2 [GND] of C5 on Top Layer",
+                    "pos": {
+                        "x": 162.1,
+                        "y": 109.35
+                    },
+                    "uuid": "f6d96c44-0c91-4c9a-ab2b-131e54577450"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [VDD_3V3] on Bottom Layer, length 3.0000 mm",
+                    "pos": {
+                        "x": 161.7,
+                        "y": 110.8
+                    },
+                    "uuid": "7be06f3d-0206-449e-bd78-47d23aaabe3a"
+                },
+                {
+                    "description": "Track [CHG_INT_N] on Bottom Layer, length 3.5000 mm",
+                    "pos": {
+                        "x": 159.2,
+                        "y": 110.2
+                    },
+                    "uuid": "e65d0f0f-4a8a-4f28-b44d-e73d43f8b857"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [GND] on Top Layer, length 2.3000 mm",
+                    "pos": {
+                        "x": 159.9,
+                        "y": 107.4
+                    },
+                    "uuid": "861638e2-c44e-488c-88b5-8cd0dc8254f3"
+                },
+                {
+                    "description": "Track [USB_VBUS] on Top Layer, length 0.9000 mm",
+                    "pos": {
+                        "x": 160.8,
+                        "y": 107.4
+                    },
+                    "uuid": "e1a52acd-9ee0-4fdf-8039-7e91dc447868"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [SWDIO] on Bottom Layer, length 16.4393 mm",
+                    "pos": {
+                        "x": 163.143,
+                        "y": 116.2284
+                    },
+                    "uuid": "2bc51be6-7d32-4344-abf1-c852d39ece63"
+                },
+                {
+                    "description": "Track [CHG_INT_N] on Bottom Layer, length 4.4492 mm",
+                    "pos": {
+                        "x": 159.2,
+                        "y": 113.7
+                    },
+                    "uuid": "420964b5-dbf8-4524-ab1b-e3932a179f19"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [GND] on Top Layer, length 2.3000 mm",
+                    "pos": {
+                        "x": 159.9,
+                        "y": 107.4
+                    },
+                    "uuid": "861638e2-c44e-488c-88b5-8cd0dc8254f3"
+                },
+                {
+                    "description": "Track [USB_VBUS] on Top Layer, length 0.5500 mm",
+                    "pos": {
+                        "x": 160.8,
+                        "y": 107.95
+                    },
+                    "uuid": "877df96a-683a-4b65-856a-c2ed457cbc30"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.1505 mm)",
+            "items": [
+                {
+                    "description": "Track [SWDCLK] on Bottom Layer, length 26.6000 mm",
+                    "pos": {
+                        "x": 158.3005,
+                        "y": 114.701
+                    },
+                    "uuid": "706bb412-02ed-4be2-83e8-530eb25e4648"
+                },
+                {
+                    "description": "Track [CHG_SCL] on Bottom Layer, length 1.3000 mm",
+                    "pos": {
+                        "x": 158.0,
+                        "y": 110.0
+                    },
+                    "uuid": "cab5834b-6eea-48a2-942f-1924d54d98cc"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.0722 mm)",
+            "items": [
+                {
+                    "description": "Via [CHG_SCL] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 158.0,
+                        "y": 110.0
+                    },
+                    "uuid": "6151a577-a521-4f4c-802b-ae941fc5c0ea"
+                },
+                {
+                    "description": "Track [CHG_INT_N] on Top Layer, length 0.8000 mm",
+                    "pos": {
+                        "x": 158.4,
+                        "y": 110.2
+                    },
+                    "uuid": "afb250fb-f499-412f-bc32-b24ac3426d63"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets CHG_INT_N and CHG_CE_N)",
+            "items": [
+                {
+                    "description": "Via [CHG_INT_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 166.8507,
+                        "y": 116.9015
+                    },
+                    "uuid": "1d887ad8-4e21-40b0-a546-1b1e81e800d8"
+                },
+                {
+                    "description": "Track [CHG_CE_N] on Bottom Layer, length 4.2206 mm",
+                    "pos": {
+                        "x": 164.1061,
+                        "y": 114.5
+                    },
+                    "uuid": "8d7ac7ca-97d6-4873-b5bf-c78f24eb7e49"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.1250 mm)",
+            "items": [
+                {
+                    "description": "Track [VDD_3V3] on Bottom Layer, length 3.0000 mm",
+                    "pos": {
+                        "x": 161.7,
+                        "y": 110.8
+                    },
+                    "uuid": "7be06f3d-0206-449e-bd78-47d23aaabe3a"
+                },
+                {
+                    "description": "Via [CHG_INT_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 159.2,
+                        "y": 110.2
+                    },
+                    "uuid": "b6d10908-3f8b-4bfb-9b86-77b7aaceca77"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [USB_DM_CONN] on Bottom Layer, length 0.3035 mm",
+                    "pos": {
+                        "x": 166.8035,
+                        "y": 111.7465
+                    },
+                    "uuid": "27075b10-ab4b-411e-8e06-bbf8d763cf88"
+                },
+                {
+                    "description": "Track [CHG_SCL] on Bottom Layer, length 6.8363 mm",
+                    "pos": {
+                        "x": 166.066,
+                        "y": 111.3
+                    },
+                    "uuid": "cdbdf619-5609-4acf-996f-51357dbc7a49"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.0683 mm)",
+            "items": [
+                {
+                    "description": "Track [BAT_NTC_TBD] on Top Layer, length 1.5535 mm",
+                    "pos": {
+                        "x": 153.0,
+                        "y": 110.0535
+                    },
+                    "uuid": "c56ed920-ad23-4620-8e71-c83cc90fbaa2"
+                },
+                {
+                    "description": "Pad 2 [CHG_PG_N] of R9 on Top Layer",
+                    "pos": {
+                        "x": 152.4535,
+                        "y": 109.2
+                    },
+                    "uuid": "c77badaa-2053-46fc-87d3-0d1f5f6b75cf"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets KEY_PREV_N and CHG_SCL)",
+            "items": [
+                {
+                    "description": "Track [KEY_PREV_N] on Bottom Layer, length 0.4835 mm",
+                    "pos": {
+                        "x": 164.6807,
+                        "y": 111.1987
+                    },
+                    "uuid": "597b2f35-7aea-4f8c-9814-157eb97b5130"
+                },
+                {
+                    "description": "Track [CHG_SCL] on Bottom Layer, length 8.0660 mm",
+                    "pos": {
+                        "x": 158.0,
+                        "y": 111.3
+                    },
+                    "uuid": "817bf94d-cc9a-47a8-85fb-be00f906a369"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets GND and BAT_NTC_TBD)",
+            "items": [
+                {
+                    "description": "Track [GND] on Top Layer, length 17.6005 mm",
+                    "pos": {
+                        "x": 145.5,
+                        "y": 111.3005
+                    },
+                    "uuid": "53346f32-d577-4a12-b7a7-e1fe74cd3f81"
+                },
+                {
+                    "description": "Track [BAT_NTC_TBD] on Top Layer, length 0.9242 mm",
+                    "pos": {
+                        "x": 156.1535,
+                        "y": 110.4
+                    },
+                    "uuid": "ddcda549-0997-4389-8139-c5a09bb55e7f"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets CHG_SCL and SWDCLK)",
+            "items": [
+                {
+                    "description": "Via [CHG_SCL] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 158.0,
+                        "y": 110.0
+                    },
+                    "uuid": "6151a577-a521-4f4c-802b-ae941fc5c0ea"
+                },
+                {
+                    "description": "Track [SWDCLK] on Bottom Layer, length 26.6000 mm",
+                    "pos": {
+                        "x": 158.3005,
+                        "y": 114.701
+                    },
+                    "uuid": "706bb412-02ed-4be2-83e8-530eb25e4648"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.0926 mm)",
+            "items": [
+                {
+                    "description": "Track [CHG_INT_N] on Bottom Layer, length 4.5276 mm",
+                    "pos": {
+                        "x": 163.6492,
+                        "y": 113.7
+                    },
+                    "uuid": "62fed72a-92e4-4eb7-8c9b-b5c8dac16433"
+                },
+                {
+                    "description": "Track [CHG_CE_N] on Bottom Layer, length 8.3526 mm",
+                    "pos": {
+                        "x": 155.7535,
+                        "y": 114.5
+                    },
+                    "uuid": "9ae75b89-f200-4b57-a1c2-af2ec86e4eed"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.0926 mm)",
+            "items": [
+                {
+                    "description": "Track [CHG_INT_N] on Bottom Layer, length 4.5276 mm",
+                    "pos": {
+                        "x": 163.6492,
+                        "y": 113.7
+                    },
+                    "uuid": "62fed72a-92e4-4eb7-8c9b-b5c8dac16433"
+                },
+                {
+                    "description": "Track [CHG_CE_N] on Bottom Layer, length 4.2206 mm",
+                    "pos": {
+                        "x": 164.1061,
+                        "y": 114.5
+                    },
+                    "uuid": "8d7ac7ca-97d6-4873-b5bf-c78f24eb7e49"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets GND and BAT_NTC_TBD)",
+            "items": [
+                {
+                    "description": "Track [GND] on Top Layer, length 17.6005 mm",
+                    "pos": {
+                        "x": 145.5,
+                        "y": 111.3005
+                    },
+                    "uuid": "53346f32-d577-4a12-b7a7-e1fe74cd3f81"
+                },
+                {
+                    "description": "Track [BAT_NTC_TBD] on Top Layer, length 1.4142 mm",
+                    "pos": {
+                        "x": 154.0,
+                        "y": 111.0535
+                    },
+                    "uuid": "db91e1fb-d57b-4add-ab04-8928ca07c13c"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [CHG_CE_N] on Bottom Layer, length 9.6000 mm",
+                    "pos": {
+                        "x": 155.7535,
+                        "y": 104.9
+                    },
+                    "uuid": "8c8fb6e7-50d5-4ed4-8365-3a7b7fda17f3"
+                },
+                {
+                    "description": "Track [VDD_3V3] on Bottom Layer, length 5.5465 mm",
+                    "pos": {
+                        "x": 158.7,
+                        "y": 110.8
+                    },
+                    "uuid": "a4b424e3-c695-42c0-9c39-0d2b9f20caf1"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Items shorting two nets (nets GND and BAT_NTC_TBD)",
+            "items": [
+                {
+                    "description": "Track [GND] on Top Layer, length 17.6005 mm",
+                    "pos": {
+                        "x": 145.5,
+                        "y": 111.3005
+                    },
+                    "uuid": "53346f32-d577-4a12-b7a7-e1fe74cd3f81"
+                },
+                {
+                    "description": "Track [BAT_NTC_TBD] on Top Layer, length 1.5000 mm",
+                    "pos": {
+                        "x": 155.5,
+                        "y": 111.0535
+                    },
+                    "uuid": "a0e64b63-98ce-406a-9e84-871bc41d5b57"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.0250 mm)",
+            "items": [
+                {
+                    "description": "Via [CHG_PG_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 158.0,
+                        "y": 105.3
+                    },
+                    "uuid": "5aa16b3f-6d26-4885-9241-f0ee750bb1c8"
+                },
+                {
+                    "description": "Track [BAT_PACK_TBD] on Top Layer, length 1.6500 mm",
+                    "pos": {
+                        "x": 158.4,
+                        "y": 106.25
+                    },
+                    "uuid": "69dd9413-c652-403c-a423-14f606ecc1c9"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets BAT_PACK_TBD and BAT_NTC_TBD)",
+            "items": [
+                {
+                    "description": "Track [BAT_PACK_TBD] on Top Layer, length 7.9203 mm",
+                    "pos": {
+                        "x": 151.5995,
+                        "y": 109.8005
+                    },
+                    "uuid": "6189ed94-0863-44bf-8e0b-966bd85ffbed"
+                },
+                {
+                    "description": "Track [BAT_NTC_TBD] on Top Layer, length 1.4142 mm",
+                    "pos": {
+                        "x": 153.0,
+                        "y": 108.5
+                    },
+                    "uuid": "b9123cf8-ce24-49eb-b0d6-f229b07ac96d"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.1500 mm)",
+            "items": [
+                {
+                    "description": "Track [CHG_CE_N] on Top Layer, length 0.4500 mm",
+                    "pos": {
+                        "x": 157.6,
+                        "y": 106.25
+                    },
+                    "uuid": "2937064d-5b8a-4ee5-8370-6c17626ef17a"
+                },
+                {
+                    "description": "Track [GND] on Top Layer, length 1.0500 mm",
+                    "pos": {
+                        "x": 157.2,
+                        "y": 106.25
+                    },
+                    "uuid": "c7a8cf81-8a61-4a60-8942-48f270829dd9"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [VDD_3V3] on Top Layer, length 8.5000 mm",
+                    "pos": {
+                        "x": 163.5,
+                        "y": 106.6
+                    },
+                    "uuid": "2aab5a23-c524-4759-a915-2ea1418528ce"
+                },
+                {
+                    "description": "Track [SYS] on Top Layer, length 3.1000 mm",
+                    "pos": {
+                        "x": 170.2,
+                        "y": 105.3
+                    },
+                    "uuid": "dfe764b4-0f70-44bd-a2df-383088367efe"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Items shorting two nets (nets GND and SYS)",
+            "items": [
+                {
+                    "description": "Track [GND] on Top Layer, length 5.7269 mm",
+                    "pos": {
+                        "x": 163.1005,
+                        "y": 111.3005
+                    },
+                    "uuid": "642f6427-eb96-49db-8aff-2258d0c74bd8"
+                },
+                {
+                    "description": "Track [SYS] on Top Layer, length 3.0000 mm",
+                    "pos": {
+                        "x": 170.2,
+                        "y": 107.45
+                    },
+                    "uuid": "ca62fa5f-c228-4801-822a-ffe5ea20615d"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.1505 mm)",
+            "items": [
+                {
+                    "description": "Track [SWDCLK] on Bottom Layer, length 26.6000 mm",
+                    "pos": {
+                        "x": 158.3005,
+                        "y": 114.701
+                    },
+                    "uuid": "706bb412-02ed-4be2-83e8-530eb25e4648"
+                },
+                {
+                    "description": "Track [CHG_PG_N] on Bottom Layer, length 7.6000 mm",
+                    "pos": {
+                        "x": 158.0,
+                        "y": 105.3
+                    },
+                    "uuid": "a6ae7368-692c-4360-be96-bb38786811d4"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [CHG_PG_N] on Bottom Layer, length 8.6660 mm",
+                    "pos": {
+                        "x": 158.0,
+                        "y": 112.9
+                    },
+                    "uuid": "d2d1175d-c8d6-4e2c-804e-f642a17241e8"
+                },
+                {
+                    "description": "Track [KEY_PREV_N] on Bottom Layer, length 5.4634 mm",
+                    "pos": {
+                        "x": 163.8564,
+                        "y": 112.4877
+                    },
+                    "uuid": "d9d8c164-1a1c-414e-ae82-baec1884b2d2"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Items shorting two nets (nets VDD_3V3 and SYS)",
+            "items": [
+                {
+                    "description": "Track [VDD_3V3] on Top Layer, length 1.0000 mm",
+                    "pos": {
+                        "x": 169.6,
+                        "y": 109.55
+                    },
+                    "uuid": "2cd01ef3-9f4f-4ad5-97cd-745332de0928"
+                },
+                {
+                    "description": "Track [SYS] on Top Layer, length 3.0000 mm",
+                    "pos": {
+                        "x": 170.2,
+                        "y": 109.35
+                    },
+                    "uuid": "c830d1a0-3e27-4724-bd6c-e314a3ffac6f"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets CHG_SDA and VDD_3V3)",
+            "items": [
+                {
+                    "description": "Track [CHG_SDA] on Bottom Layer, length 1.2000 mm",
+                    "pos": {
+                        "x": 157.6,
+                        "y": 110.9
+                    },
+                    "uuid": "999d3f05-2a08-4ffd-b729-c3fa4e40e477"
+                },
+                {
+                    "description": "Track [VDD_3V3] on Bottom Layer, length 5.5465 mm",
+                    "pos": {
+                        "x": 158.7,
+                        "y": 110.8
+                    },
+                    "uuid": "a4b424e3-c695-42c0-9c39-0d2b9f20caf1"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.0172 mm)",
+            "items": [
+                {
+                    "description": "Via [CHG_INT_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 166.8507,
+                        "y": 116.9015
+                    },
+                    "uuid": "1d887ad8-4e21-40b0-a546-1b1e81e800d8"
+                },
+                {
+                    "description": "Track [CHG_SDA] on Bottom Layer, length 6.2706 mm",
+                    "pos": {
+                        "x": 162.2796,
+                        "y": 112.1
+                    },
+                    "uuid": "27ccf4f3-2cf4-4b9c-9e38-59d65b509329"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets CHG_PG_N and SWDCLK)",
+            "items": [
+                {
+                    "description": "Via [CHG_PG_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 158.0,
+                        "y": 105.3
+                    },
+                    "uuid": "5aa16b3f-6d26-4885-9241-f0ee750bb1c8"
+                },
+                {
+                    "description": "Track [SWDCLK] on Bottom Layer, length 26.6000 mm",
+                    "pos": {
+                        "x": 158.3005,
+                        "y": 114.701
+                    },
+                    "uuid": "706bb412-02ed-4be2-83e8-530eb25e4648"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.0172 mm)",
+            "items": [
+                {
+                    "description": "Via [CHG_SDA] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 166.7136,
+                        "y": 116.534
+                    },
+                    "uuid": "59a32346-9d3c-483e-b16f-030b196902af"
+                },
+                {
+                    "description": "Track [CHG_INT_N] on Top Layer, length 0.4861 mm",
+                    "pos": {
+                        "x": 166.8507,
+                        "y": 116.9015
+                    },
+                    "uuid": "e17074b6-eda7-41db-94d9-b0e26c8677b4"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.0305 mm)",
+            "items": [
+                {
+                    "description": "Via [CHG_SDA] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 166.7136,
+                        "y": 116.534
+                    },
+                    "uuid": "59a32346-9d3c-483e-b16f-030b196902af"
+                },
+                {
+                    "description": "Track [CHG_CE_N] on Bottom Layer, length 4.2206 mm",
+                    "pos": {
+                        "x": 164.1061,
+                        "y": 114.5
+                    },
+                    "uuid": "8d7ac7ca-97d6-4873-b5bf-c78f24eb7e49"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets CHG_SDA and GND)",
+            "items": [
+                {
+                    "description": "Via [CHG_SDA] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 157.6,
+                        "y": 110.9
+                    },
+                    "uuid": "1a5c62c7-ffbd-49b7-927e-49fe247a44e0"
+                },
+                {
+                    "description": "Track [GND] on Top Layer, length 17.6005 mm",
+                    "pos": {
+                        "x": 145.5,
+                        "y": 111.3005
+                    },
+                    "uuid": "53346f32-d577-4a12-b7a7-e1fe74cd3f81"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets CHG_INT_N and CHG_SDA)",
+            "items": [
+                {
+                    "description": "Via [CHG_INT_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 166.8507,
+                        "y": 116.9015
+                    },
+                    "uuid": "1d887ad8-4e21-40b0-a546-1b1e81e800d8"
+                },
+                {
+                    "description": "Track [CHG_SDA] on Top Layer, length 1.6374 mm",
+                    "pos": {
+                        "x": 166.7136,
+                        "y": 116.534
+                    },
+                    "uuid": "35c65981-9a51-4f97-b2d4-b22c754b8cd1"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets CHG_SDA and VDD_3V3)",
+            "items": [
+                {
+                    "description": "Via [CHG_SDA] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 157.6,
+                        "y": 110.9
+                    },
+                    "uuid": "1a5c62c7-ffbd-49b7-927e-49fe247a44e0"
+                },
+                {
+                    "description": "Track [VDD_3V3] on Bottom Layer, length 5.5465 mm",
+                    "pos": {
+                        "x": 158.7,
+                        "y": 110.8
+                    },
+                    "uuid": "a4b424e3-c695-42c0-9c39-0d2b9f20caf1"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.0755 mm)",
+            "items": [
+                {
+                    "description": "Track [GND] on Top Layer, length 17.6005 mm",
+                    "pos": {
+                        "x": 145.5,
+                        "y": 111.3005
+                    },
+                    "uuid": "53346f32-d577-4a12-b7a7-e1fe74cd3f81"
+                },
+                {
+                    "description": "Track [CHG_SDA] on Top Layer, length 2.5500 mm",
+                    "pos": {
+                        "x": 157.6,
+                        "y": 108.35
+                    },
+                    "uuid": "815c2e3d-aa90-4ccf-a7b2-5d9a7a300bab"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [SWDIO] on Bottom Layer, length 16.4393 mm",
+                    "pos": {
+                        "x": 163.143,
+                        "y": 116.2284
+                    },
+                    "uuid": "2bc51be6-7d32-4344-abf1-c852d39ece63"
+                },
+                {
+                    "description": "Track [GND] on Bottom Layer, length 1.5556 mm",
+                    "pos": {
+                        "x": 162.2,
+                        "y": 107.3
+                    },
+                    "uuid": "b0d0f239-ec7f-41ae-98c6-12e6d91ad371"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [GND] on Bottom Layer, length 4.0000 mm",
+                    "pos": {
+                        "x": 155.6,
+                        "y": 107.3
+                    },
+                    "uuid": "00e726b9-3675-44a4-8f47-3e9f75cb1ba5"
+                },
+                {
+                    "description": "Track [SWDCLK] on Bottom Layer, length 26.6000 mm",
+                    "pos": {
+                        "x": 158.3005,
+                        "y": 114.701
+                    },
+                    "uuid": "706bb412-02ed-4be2-83e8-530eb25e4648"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Items shorting two nets (nets SWDIO and GND)",
+            "items": [
+                {
+                    "description": "Track [SWDIO] on Bottom Layer, length 16.4393 mm",
+                    "pos": {
+                        "x": 163.143,
+                        "y": 116.2284
+                    },
+                    "uuid": "2bc51be6-7d32-4344-abf1-c852d39ece63"
+                },
+                {
+                    "description": "Track [GND] on Bottom Layer, length 4.7500 mm",
+                    "pos": {
+                        "x": 163.3,
+                        "y": 108.4
+                    },
+                    "uuid": "5cff0d4c-fdf2-41f6-832a-ca78f765cbd7"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets GND and CHG_CE_N)",
+            "items": [
+                {
+                    "description": "Track [GND] on Bottom Layer, length 1.4142 mm",
+                    "pos": {
+                        "x": 154.6,
+                        "y": 106.3
+                    },
+                    "uuid": "2a10d147-5742-4eeb-82ff-12077f2feb5c"
+                },
+                {
+                    "description": "Track [CHG_CE_N] on Bottom Layer, length 9.6000 mm",
+                    "pos": {
+                        "x": 155.7535,
+                        "y": 104.9
+                    },
+                    "uuid": "8c8fb6e7-50d5-4ed4-8365-3a7b7fda17f3"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.1000 mm)",
+            "items": [
+                {
+                    "description": "Via [GND] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 165.5,
+                        "y": 108.65
+                    },
+                    "uuid": "67a34e08-8462-4a86-aad4-0bc9f9ed3b60"
+                },
+                {
+                    "description": "Pad 5 [VDD_3V3] of U3 on Top Layer",
+                    "pos": {
+                        "x": 165.0,
+                        "y": 109.35
+                    },
+                    "uuid": "fb128784-ad23-4f43-8005-a4dad3eaa632"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.1939 mm)",
+            "items": [
+                {
+                    "description": "Track [EPD_CS_N_TBD] on Bottom Layer, length 8.9237 mm",
+                    "pos": {
+                        "x": 173.801,
+                        "y": 102.3
+                    },
+                    "uuid": "0da06124-91f4-407c-90f7-ac58ce98fd2d"
+                },
+                {
+                    "description": "Via [GND] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 168.9965,
+                        "y": 98.3
+                    },
+                    "uuid": "757c9c9b-b6d6-412c-a18c-086dd6660a7d"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.0500 mm)",
+            "items": [
+                {
+                    "description": "Via [GND] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 167.7,
+                        "y": 110.8
+                    },
+                    "uuid": "7630e523-5150-4eae-8af7-f85c5514e5d5"
+                },
+                {
+                    "description": "Track [VDD_3V3] on Bottom Layer, length 3.9000 mm",
+                    "pos": {
+                        "x": 165.0,
+                        "y": 110.25
+                    },
+                    "uuid": "f570286e-bda3-47e1-a9f5-80a7e673d2c5"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (rule 'D copper clearance' clearance 0.2000 mm; actual 0.1250 mm)",
+            "items": [
+                {
+                    "description": "Track [GND] on Top Layer, length 1.0500 mm",
+                    "pos": {
+                        "x": 157.2,
+                        "y": 106.25
+                    },
+                    "uuid": "c7a8cf81-8a61-4a60-8942-48f270829dd9"
+                },
+                {
+                    "description": "Pad 4 [CHG_CE_N] of U2 on Top Layer",
+                    "pos": {
+                        "x": 157.6,
+                        "y": 106.25
+                    },
+                    "uuid": "eaa19536-bc0d-45c8-9895-a503a472f2e1"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets USB_VBUS and GND)",
+            "items": [
+                {
+                    "description": "Pad 1 [USB_VBUS] of C8 on Top Layer",
+                    "pos": {
+                        "x": 160.8,
+                        "y": 107.4
+                    },
+                    "uuid": "3eebd7e6-0c44-4e9c-adf3-d10291235c2d"
+                },
+                {
+                    "description": "Track [GND] on Top Layer, length 2.3000 mm",
+                    "pos": {
+                        "x": 159.9,
+                        "y": 107.4
+                    },
+                    "uuid": "861638e2-c44e-488c-88b5-8cd0dc8254f3"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets GND and SYS)",
+            "items": [
+                {
+                    "description": "Track [GND] on Top Layer, length 5.7269 mm",
+                    "pos": {
+                        "x": 163.1005,
+                        "y": 111.3005
+                    },
+                    "uuid": "642f6427-eb96-49db-8aff-2258d0c74bd8"
+                },
+                {
+                    "description": "Pad 3 [SYS] of U3 on Top Layer",
+                    "pos": {
+                        "x": 167.2,
+                        "y": 107.45
+                    },
+                    "uuid": "88cd1ad9-f8d5-4853-9ca7-062974646070"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Pad 2 [EPD_SW] of L1 on Top Layer",
+                    "pos": {
+                        "x": 171.472,
+                        "y": 96.5
+                    },
+                    "uuid": "38feaec8-c353-4054-975e-36bc7f58ef21"
+                },
+                {
+                    "description": "Via [EPD_RESET_N_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 171.2,
+                        "y": 96.99
+                    },
+                    "uuid": "a0051371-ea88-48b1-9034-98129a2e2e61"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1720 mm)",
+            "items": [
+                {
+                    "description": "Pad 2 [EPD_SW] of L1 on Top Layer",
+                    "pos": {
+                        "x": 171.472,
+                        "y": 96.5
+                    },
+                    "uuid": "38feaec8-c353-4054-975e-36bc7f58ef21"
+                },
+                {
+                    "description": "Via [EPD_DC_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 170.4,
+                        "y": 96.49
+                    },
+                    "uuid": "34d91ae9-ee5f-418a-a1c7-b87cc0b5bb5a"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Pad 2 [EPD_SW] of L1 on Top Layer",
+                    "pos": {
+                        "x": 171.472,
+                        "y": 96.5
+                    },
+                    "uuid": "38feaec8-c353-4054-975e-36bc7f58ef21"
+                },
+                {
+                    "description": "Via [EPD_BUSY_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 172.0,
+                        "y": 97.49
+                    },
+                    "uuid": "2da515a6-bd83-4c72-bfee-2b2bc2b3e4a4"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Pad 1 [USB_DP_CONN] of R3 on Top Layer",
+                    "pos": {
+                        "x": 164.7,
+                        "y": 111.7465
+                    },
+                    "uuid": "436ecdcd-eb4b-4685-b00a-d3f1f5d8dfc8"
+                },
+                {
+                    "description": "Via [KEY_OK_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 164.4381,
+                        "y": 111.7804
+                    },
+                    "uuid": "bbf39831-0683-4849-8aca-9c613bc585ea"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1933 mm)",
+            "items": [
+                {
+                    "description": "Pad 2 [KEY_PREV_N] of R10 on Top Layer",
+                    "pos": {
+                        "x": 156.7,
+                        "y": 113.5465
+                    },
+                    "uuid": "a2953788-3dec-45e8-9ee3-2a20302adb0b"
+                },
+                {
+                    "description": "Via [VDD_3V3] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 156.7,
+                        "y": 112.8
+                    },
+                    "uuid": "1943a49d-f4be-40ee-95ff-9d270acb5d95"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (rule 'D board-edge clearance' clearance 0.3000 mm; actual 0.2698 mm)",
+            "items": [
+                {
+                    "description": "Arc on Multi-Layer",
+                    "pos": {
+                        "x": 186.699,
+                        "y": 108.6205
+                    },
+                    "uuid": "4ca1daab-1596-4960-9a72-dcfce606bf93"
+                },
+                {
+                    "description": "PTH pad 17 [GND] of J1",
+                    "pos": {
+                        "x": 187.299,
+                        "y": 109.6205
+                    },
+                    "uuid": "4cc36591-6b81-4421-bc0c-996d432d4281"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (rule 'D board-edge clearance' clearance 0.3000 mm; actual 0.2698 mm)",
+            "items": [
+                {
+                    "description": "Arc on Multi-Layer",
+                    "pos": {
+                        "x": 186.699,
+                        "y": 99.3805
+                    },
+                    "uuid": "38f40402-b051-4fe2-b19f-a17280fb09dd"
+                },
+                {
+                    "description": "PTH pad 18 [GND] of J1",
+                    "pos": {
+                        "x": 187.299,
+                        "y": 98.3805
+                    },
+                    "uuid": "a788b429-ec88-4a59-9785-3c089199b91d"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (rule 'D board-edge clearance' clearance 0.3000 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Segment on Multi-Layer",
+                    "pos": {
+                        "x": 186.699,
+                        "y": 99.6305
+                    },
+                    "uuid": "31373a54-57fb-4347-b7e4-2fd0d6d9caaf"
+                },
+                {
+                    "description": "Pad A1B12 [GND] of J1 on Top Layer",
+                    "pos": {
+                        "x": 186.149,
+                        "y": 107.2005
+                    },
+                    "uuid": "94364e3a-61c8-4911-a5ea-f21014739670"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (rule 'D board-edge clearance' clearance 0.3000 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Segment on Multi-Layer",
+                    "pos": {
+                        "x": 186.699,
+                        "y": 99.6305
+                    },
+                    "uuid": "31373a54-57fb-4347-b7e4-2fd0d6d9caaf"
+                },
+                {
+                    "description": "Pad A4B9 [USB_VBUS] of J1 on Top Layer",
+                    "pos": {
+                        "x": 186.149,
+                        "y": 106.4005
+                    },
+                    "uuid": "49fa8a66-c05e-4350-b40e-46c438f17ca5"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (rule 'D board-edge clearance' clearance 0.3000 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Segment on Multi-Layer",
+                    "pos": {
+                        "x": 186.699,
+                        "y": 99.6305
+                    },
+                    "uuid": "31373a54-57fb-4347-b7e4-2fd0d6d9caaf"
+                },
+                {
+                    "description": "Pad A5 [USB_CC1] of J1 on Top Layer",
+                    "pos": {
+                        "x": 186.149,
+                        "y": 105.2505
+                    },
+                    "uuid": "6e0c2c98-770a-4dbe-bff4-68609299a98f"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (rule 'D board-edge clearance' clearance 0.3000 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Segment on Multi-Layer",
+                    "pos": {
+                        "x": 186.699,
+                        "y": 99.6305
+                    },
+                    "uuid": "31373a54-57fb-4347-b7e4-2fd0d6d9caaf"
+                },
+                {
+                    "description": "Pad A6 [USB_DP_CONN] of J1 on Top Layer",
+                    "pos": {
+                        "x": 186.149,
+                        "y": 104.2505
+                    },
+                    "uuid": "f7f3e01c-f81c-4bcf-bf7d-7f5a73aea47d"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (rule 'D board-edge clearance' clearance 0.3000 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Segment on Multi-Layer",
+                    "pos": {
+                        "x": 186.699,
+                        "y": 99.6305
+                    },
+                    "uuid": "31373a54-57fb-4347-b7e4-2fd0d6d9caaf"
+                },
+                {
+                    "description": "Pad A7 [USB_DM_CONN] of J1 on Top Layer",
+                    "pos": {
+                        "x": 186.149,
+                        "y": 103.7505
+                    },
+                    "uuid": "3389f5de-fca3-4583-a23b-3031b8807cfe"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (rule 'D board-edge clearance' clearance 0.3000 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Segment on Multi-Layer",
+                    "pos": {
+                        "x": 186.699,
+                        "y": 99.6305
+                    },
+                    "uuid": "31373a54-57fb-4347-b7e4-2fd0d6d9caaf"
+                },
+                {
+                    "description": "Pad A8 [unconnected-(J1-SBU1-PadA8)] of J1 on Top Layer",
+                    "pos": {
+                        "x": 186.149,
+                        "y": 102.7505
+                    },
+                    "uuid": "b6248572-e586-41b3-9e3c-8452d6d5ed7f"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (rule 'D board-edge clearance' clearance 0.3000 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Segment on Multi-Layer",
+                    "pos": {
+                        "x": 186.699,
+                        "y": 99.6305
+                    },
+                    "uuid": "31373a54-57fb-4347-b7e4-2fd0d6d9caaf"
+                },
+                {
+                    "description": "Pad B1A12 [GND] of J1 on Top Layer",
+                    "pos": {
+                        "x": 186.149,
+                        "y": 100.8005
+                    },
+                    "uuid": "71b215d6-2614-4ec9-8c9c-f863819fbd39"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (rule 'D board-edge clearance' clearance 0.3000 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Segment on Multi-Layer",
+                    "pos": {
+                        "x": 186.699,
+                        "y": 99.6305
+                    },
+                    "uuid": "31373a54-57fb-4347-b7e4-2fd0d6d9caaf"
+                },
+                {
+                    "description": "Pad B4A9 [USB_VBUS] of J1 on Top Layer",
+                    "pos": {
+                        "x": 186.149,
+                        "y": 101.6005
+                    },
+                    "uuid": "8f79046c-68a7-43bc-b9ca-874c46eff549"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (rule 'D board-edge clearance' clearance 0.3000 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Segment on Multi-Layer",
+                    "pos": {
+                        "x": 186.699,
+                        "y": 99.6305
+                    },
+                    "uuid": "31373a54-57fb-4347-b7e4-2fd0d6d9caaf"
+                },
+                {
+                    "description": "Pad B5 [USB_CC2] of J1 on Top Layer",
+                    "pos": {
+                        "x": 186.149,
+                        "y": 102.2505
+                    },
+                    "uuid": "38cfff7e-9b37-45cf-bbae-d09323cae1f3"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (rule 'D board-edge clearance' clearance 0.3000 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Segment on Multi-Layer",
+                    "pos": {
+                        "x": 186.699,
+                        "y": 99.6305
+                    },
+                    "uuid": "31373a54-57fb-4347-b7e4-2fd0d6d9caaf"
+                },
+                {
+                    "description": "Pad B6 [USB_DP_CONN] of J1 on Top Layer",
+                    "pos": {
+                        "x": 186.149,
+                        "y": 103.2505
+                    },
+                    "uuid": "da658e12-0b71-41ee-bf2b-d15a045abb77"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (rule 'D board-edge clearance' clearance 0.3000 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Segment on Multi-Layer",
+                    "pos": {
+                        "x": 186.699,
+                        "y": 99.6305
+                    },
+                    "uuid": "31373a54-57fb-4347-b7e4-2fd0d6d9caaf"
+                },
+                {
+                    "description": "Pad B7 [USB_DM_CONN] of J1 on Top Layer",
+                    "pos": {
+                        "x": 186.149,
+                        "y": 104.7505
+                    },
+                    "uuid": "f81b7f34-5947-419d-bad9-946fea31ca06"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Board edge clearance violation (rule 'D board-edge clearance' clearance 0.3000 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Segment on Multi-Layer",
+                    "pos": {
+                        "x": 186.699,
+                        "y": 99.6305
+                    },
+                    "uuid": "31373a54-57fb-4347-b7e4-2fd0d6d9caaf"
+                },
+                {
+                    "description": "Pad B8 [unconnected-(J1-SBU2-PadB8)] of J1 on Top Layer",
+                    "pos": {
+                        "x": 186.149,
+                        "y": 105.7505
+                    },
+                    "uuid": "77ddccc5-55e2-4835-ab07-ed31ef0c6822"
+                }
+            ],
+            "severity": "error",
+            "type": "copper_edge_clearance"
+        },
+        {
+            "description": "Thermal relief connection to zone incomplete (layer Top Layer; zone min spoke count 2; actual 1)",
+            "items": [
+                {
+                    "description": "Zone [GND] on Top Layer, priority 499",
+                    "pos": {
+                        "x": 147.0075,
+                        "y": 128.59
+                    },
+                    "uuid": "95bc0dc0-91c3-4eff-96c3-85420b2c6a03"
+                },
+                {
+                    "description": "Pad 2 [GND] of C14 on Top Layer",
+                    "pos": {
+                        "x": 157.5,
+                        "y": 100.8
+                    },
+                    "uuid": "219842c7-d28e-4a79-9521-6bd81ef00a59"
+                }
+            ],
+            "severity": "error",
+            "type": "starved_thermal"
+        },
+        {
+            "description": "Thermal relief connection to zone incomplete (layer Top Layer; zone min spoke count 2; actual 1)",
+            "items": [
+                {
+                    "description": "Zone [GND] on Top Layer, priority 499",
+                    "pos": {
+                        "x": 147.0075,
+                        "y": 128.59
+                    },
+                    "uuid": "95bc0dc0-91c3-4eff-96c3-85420b2c6a03"
+                },
+                {
+                    "description": "Pad 33 [GND] of U1 on Top Layer",
+                    "pos": {
+                        "x": 168.201,
+                        "y": 113.934
+                    },
+                    "uuid": "469112e8-5488-4b8d-a1f5-e9d6107f6812"
+                }
+            ],
+            "severity": "error",
+            "type": "starved_thermal"
+        },
+        {
+            "description": "Thermal relief connection to zone incomplete (layer Top Layer; zone min spoke count 2; actual 1)",
+            "items": [
+                {
+                    "description": "Zone [GND] on Top Layer, priority 499",
+                    "pos": {
+                        "x": 147.0075,
+                        "y": 128.59
+                    },
+                    "uuid": "95bc0dc0-91c3-4eff-96c3-85420b2c6a03"
+                },
+                {
+                    "description": "Pad 2 [GND] of C23 on Top Layer",
+                    "pos": {
+                        "x": 164.5,
+                        "y": 122.0
+                    },
+                    "uuid": "60801b14-6579-443a-a4dc-8ff9d447622e"
+                }
+            ],
+            "severity": "error",
+            "type": "starved_thermal"
+        },
+        {
+            "description": "Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5995 mm)",
+            "items": [
+                {
+                    "description": "Via [NFC1_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 144.9,
+                        "y": 100.0
+                    },
+                    "uuid": "3726ba4a-eedf-4c87-a62f-5929cba7508a"
+                }
+            ],
+            "severity": "error",
+            "type": "via_diameter"
+        },
+        {
+            "description": "Via diameter (board setup constraints min diameter 0.6000 mm; actual 0.5995 mm)",
+            "items": [
+                {
+                    "description": "Via [NFC1_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 141.4,
+                        "y": 100.5
+                    },
+                    "uuid": "a955d647-5571-4d34-a182-e04d73d770bd"
+                }
+            ],
+            "severity": "error",
+            "type": "via_diameter"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [VDD_3V3] on Top Layer, length 2.2535 mm",
+                    "pos": {
+                        "x": 156.7,
+                        "y": 112.8
+                    },
+                    "uuid": "08208372-a904-4bf6-b2c2-93fc44f23180"
+                },
+                {
+                    "description": "Pad 2 [KEY_PREV_N] of R10 on Top Layer",
+                    "pos": {
+                        "x": 156.7,
+                        "y": 113.5465
+                    },
+                    "uuid": "a2953788-3dec-45e8-9ee3-2a20302adb0b"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [EPD_BUSY_TBD] on Top Layer, length 5.6750 mm",
+                    "pos": {
+                        "x": 172.0,
+                        "y": 97.49
+                    },
+                    "uuid": "43f40d0e-e5d4-463b-ac1c-2d6a09ceb337"
+                },
+                {
+                    "description": "Pad 2 [EPD_SW] of L1 on Top Layer",
+                    "pos": {
+                        "x": 171.472,
+                        "y": 96.5
+                    },
+                    "uuid": "38feaec8-c353-4054-975e-36bc7f58ef21"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Via [EPD_BUSY_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 172.0,
+                        "y": 97.49
+                    },
+                    "uuid": "2da515a6-bd83-4c72-bfee-2b2bc2b3e4a4"
+                },
+                {
+                    "description": "Pad 2 [EPD_SW] of L1 on Top Layer",
+                    "pos": {
+                        "x": 171.472,
+                        "y": 96.5
+                    },
+                    "uuid": "38feaec8-c353-4054-975e-36bc7f58ef21"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [BAT_PACK_TBD] on Top Layer, length 7.9203 mm",
+                    "pos": {
+                        "x": 151.5995,
+                        "y": 109.8005
+                    },
+                    "uuid": "6189ed94-0863-44bf-8e0b-966bd85ffbed"
+                },
+                {
+                    "description": "Pad 1 [BAT_NTC_TBD] of NTC on Top Layer",
+                    "pos": {
+                        "x": 154.0,
+                        "y": 107.5
+                    },
+                    "uuid": "c276592e-5fa4-42c1-ad36-8938f4865750"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [KEY_OK_N] on Top Layer, length 1.2609 mm",
+                    "pos": {
+                        "x": 163.5465,
+                        "y": 112.672
+                    },
+                    "uuid": "ee1d5da0-0fd2-4639-a66d-7a6b0dac9682"
+                },
+                {
+                    "description": "Pad 1 [USB_DP_CONN] of R3 on Top Layer",
+                    "pos": {
+                        "x": 164.7,
+                        "y": 111.7465
+                    },
+                    "uuid": "436ecdcd-eb4b-4685-b00a-d3f1f5d8dfc8"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [BAT_PACK_TBD] on Top Layer, length 7.9203 mm",
+                    "pos": {
+                        "x": 151.5995,
+                        "y": 109.8005
+                    },
+                    "uuid": "6189ed94-0863-44bf-8e0b-966bd85ffbed"
+                },
+                {
+                    "description": "Pad 2 [CHG_PG_N] of R9 on Top Layer",
+                    "pos": {
+                        "x": 152.4535,
+                        "y": 109.2
+                    },
+                    "uuid": "c77badaa-2053-46fc-87d3-0d1f5f6b75cf"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Via [KEY_OK_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 164.4381,
+                        "y": 111.7804
+                    },
+                    "uuid": "bbf39831-0683-4849-8aca-9c613bc585ea"
+                },
+                {
+                    "description": "Pad 1 [USB_DP_CONN] of R3 on Top Layer",
+                    "pos": {
+                        "x": 164.7,
+                        "y": 111.7465
+                    },
+                    "uuid": "436ecdcd-eb4b-4685-b00a-d3f1f5d8dfc8"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [BAT_PACK_TBD] on Top Layer, length 7.9203 mm",
+                    "pos": {
+                        "x": 151.5995,
+                        "y": 109.8005
+                    },
+                    "uuid": "6189ed94-0863-44bf-8e0b-966bd85ffbed"
+                },
+                {
+                    "description": "Pad 2 [CHG_CE_N] of R7 on Top Layer",
+                    "pos": {
+                        "x": 155.7535,
+                        "y": 104.9
+                    },
+                    "uuid": "c2a89a63-c5a2-49bf-8cb5-d47a9a152721"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [BAT_PACK_TBD] on Top Layer, length 7.5995 mm",
+                    "pos": {
+                        "x": 144.0,
+                        "y": 109.8005
+                    },
+                    "uuid": "a65321af-8449-4fca-ab05-52c0529c307b"
+                },
+                {
+                    "description": "Pad 1 [VDD_3V3] of R9 on Top Layer",
+                    "pos": {
+                        "x": 150.9465,
+                        "y": 109.2
+                    },
+                    "uuid": "3a0d40c8-d431-45a4-bdea-d02fb202fb4a"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Via [VDD_3V3] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 156.7,
+                        "y": 112.8
+                    },
+                    "uuid": "1943a49d-f4be-40ee-95ff-9d270acb5d95"
+                },
+                {
+                    "description": "Pad 2 [KEY_PREV_N] of R10 on Top Layer",
+                    "pos": {
+                        "x": 156.7,
+                        "y": 113.5465
+                    },
+                    "uuid": "a2953788-3dec-45e8-9ee3-2a20302adb0b"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [EPD_RESET_N_TBD] on Top Layer, length 4.8750 mm",
+                    "pos": {
+                        "x": 171.2,
+                        "y": 96.99
+                    },
+                    "uuid": "7cb0eeee-5b37-44c4-8fe0-75f57048498d"
+                },
+                {
+                    "description": "Pad 2 [EPD_SW] of L1 on Top Layer",
+                    "pos": {
+                        "x": 171.472,
+                        "y": 96.5
+                    },
+                    "uuid": "38feaec8-c353-4054-975e-36bc7f58ef21"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Via [EPD_RESET_N_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 171.2,
+                        "y": 96.99
+                    },
+                    "uuid": "a0051371-ea88-48b1-9034-98129a2e2e61"
+                },
+                {
+                    "description": "Pad 2 [EPD_SW] of L1 on Top Layer",
+                    "pos": {
+                        "x": 171.472,
+                        "y": 96.5
+                    },
+                    "uuid": "38feaec8-c353-4054-975e-36bc7f58ef21"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [USB_VBUS] on Top Layer, length 1.2000 mm",
+                    "pos": {
+                        "x": 162.0,
+                        "y": 109.5
+                    },
+                    "uuid": "44509157-7cea-47a0-89ac-aa96c1b9444d"
+                },
+                {
+                    "description": "Pad 2 [GND] of C5 on Top Layer",
+                    "pos": {
+                        "x": 162.1,
+                        "y": 109.35
+                    },
+                    "uuid": "f6d96c44-0c91-4c9a-ab2b-131e54577450"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Via [EPD_DC_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 170.4,
+                        "y": 96.49
+                    },
+                    "uuid": "34d91ae9-ee5f-418a-a1c7-b87cc0b5bb5a"
+                },
+                {
+                    "description": "Pad 2 [EPD_SW] of L1 on Top Layer",
+                    "pos": {
+                        "x": 171.472,
+                        "y": 96.5
+                    },
+                    "uuid": "38feaec8-c353-4054-975e-36bc7f58ef21"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [GND] on Top Layer, length 5.7269 mm",
+                    "pos": {
+                        "x": 163.1005,
+                        "y": 111.3005
+                    },
+                    "uuid": "642f6427-eb96-49db-8aff-2258d0c74bd8"
+                },
+                {
+                    "description": "Pad 3 [SYS] of U3 on Top Layer",
+                    "pos": {
+                        "x": 167.2,
+                        "y": 107.45
+                    },
+                    "uuid": "88cd1ad9-f8d5-4853-9ca7-062974646070"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [USB_VBUS] on Top Layer, length 1.6971 mm",
+                    "pos": {
+                        "x": 160.8,
+                        "y": 108.3
+                    },
+                    "uuid": "f9919279-5d5e-42e5-aa21-c7c70f9e7dbb"
+                },
+                {
+                    "description": "Pad 2 [GND] of C5 on Top Layer",
+                    "pos": {
+                        "x": 162.1,
+                        "y": 109.35
+                    },
+                    "uuid": "f6d96c44-0c91-4c9a-ab2b-131e54577450"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [GND] on Top Layer, length 5.7269 mm",
+                    "pos": {
+                        "x": 163.1005,
+                        "y": 111.3005
+                    },
+                    "uuid": "642f6427-eb96-49db-8aff-2258d0c74bd8"
+                },
+                {
+                    "description": "Pad 5 [VDD_3V3] of U3 on Top Layer",
+                    "pos": {
+                        "x": 165.0,
+                        "y": 109.35
+                    },
+                    "uuid": "fb128784-ad23-4f43-8005-a4dad3eaa632"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [GND] on Top Layer, length 2.3000 mm",
+                    "pos": {
+                        "x": 159.9,
+                        "y": 107.4
+                    },
+                    "uuid": "861638e2-c44e-488c-88b5-8cd0dc8254f3"
+                },
+                {
+                    "description": "Pad 1 [USB_VBUS] of C8 on Top Layer",
+                    "pos": {
+                        "x": 160.8,
+                        "y": 107.4
+                    },
+                    "uuid": "3eebd7e6-0c44-4e9c-adf3-d10291235c2d"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [VDD_3V3] on Bottom Layer, length 5.0930 mm",
+                    "pos": {
+                        "x": 150.9465,
+                        "y": 108.593
+                    },
+                    "uuid": "2436cc6d-5734-494f-8571-0f8b1394931a"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Via is not connected or connected on only one layer",
+            "items": [
+                {
+                    "description": "Via [EPD_EN_TBD] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 171.801,
+                        "y": 116.2
+                    },
+                    "uuid": "016ca662-ca4b-4dcc-8a65-bcd84ec64256"
+                }
+            ],
+            "severity": "warning",
+            "type": "via_dangling"
+        },
+        {
+            "description": "Drilled hole too close to other hole (board setup constraints min 0.2500 mm; actual 0.0162 mm)",
+            "items": [
+                {
+                    "description": "Via [VDD_3V3] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 161.7,
+                        "y": 110.8
+                    },
+                    "uuid": "7f83207c-0c5e-4e39-97b7-61bcfdd9449b"
+                },
+                {
+                    "description": "Via [USB_VBUS] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 162.0,
+                        "y": 110.7
+                    },
+                    "uuid": "993dfcc9-25b4-438d-961c-f0256f5b09f5"
+                }
+            ],
+            "severity": "warning",
+            "type": "hole_to_hole"
+        },
+        {
+            "description": "Drilled hole too close to other hole (board setup constraints min 0.2500 mm; actual 0.1610 mm)",
+            "items": [
+                {
+                    "description": "Via [USB_DP_CONN] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 164.7,
+                        "y": 110.6
+                    },
+                    "uuid": "43f39a80-0275-477d-bd2a-abf607796372"
+                },
+                {
+                    "description": "Via [VDD_3V3] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 165.0,
+                        "y": 110.25
+                    },
+                    "uuid": "a598e1b2-e9f7-4db5-abd1-da4cd0eb3e70"
+                }
+            ],
+            "severity": "warning",
+            "type": "hole_to_hole"
+        },
+        {
+            "description": "Drilled hole too close to other hole (board setup constraints min 0.2500 mm; actual 0.0922 mm)",
+            "items": [
+                {
+                    "description": "Via [CHG_INT_N] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 166.8507,
+                        "y": 116.9015
+                    },
+                    "uuid": "1d887ad8-4e21-40b0-a546-1b1e81e800d8"
+                },
+                {
+                    "description": "Via [CHG_SDA] on Top Layer - Bottom Layer",
+                    "pos": {
+                        "x": 166.7136,
+                        "y": 116.534
+                    },
+                    "uuid": "59a32346-9d3c-483e-b16f-030b196902af"
+                }
+            ],
+            "severity": "warning",
+            "type": "hole_to_hole"
+        },
+        {
+            "description": "Footprint 'C0603' does not match copy in library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint C5",
+                    "pos": {
+                        "x": 162.8,
+                        "y": 109.35
+                    },
+                    "uuid": "08903fae-64d1-400a-bba3-1da1dca18e37"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'R0603_R10' does not match copy in library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint R10",
+                    "pos": {
+                        "x": 156.7,
+                        "y": 114.3
+                    },
+                    "uuid": "8a68cb63-1a93-455d-9d29-19f8ec9a7bb9"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'R0603_R12' does not match copy in library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint R12",
+                    "pos": {
+                        "x": 161.0,
+                        "y": 114.5
+                    },
+                    "uuid": "917e95c8-56da-43a5-8464-78b43c1f5cf4"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'R0603_R3' does not match copy in library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint R3",
+                    "pos": {
+                        "x": 164.7,
+                        "y": 112.5
+                    },
+                    "uuid": "ad5c3fb1-9b2f-4a4f-b0ff-82db46cd7c11"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'R0603_R13' does not match copy in library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint R13",
+                    "pos": {
+                        "x": 180.0,
+                        "y": 93.0
+                    },
+                    "uuid": "ae127ea6-f460-4749-95a9-44c786c5aaf1"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'R0603_R11' does not match copy in library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint R11",
+                    "pos": {
+                        "x": 159.0,
+                        "y": 115.5
+                    },
+                    "uuid": "d5dad41d-9012-4e0f-8025-7664fcb75562"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'R0603_R4' does not match copy in library 'NFC_V4'",
+            "items": [
+                {
+                    "description": "Footprint R4",
+                    "pos": {
+                        "x": 166.5,
+                        "y": 112.5
+                    },
+                    "uuid": "e9edbae2-ccfc-4bdd-a477-3d160b0930ab"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.6300 mm)",
+            "items": [
+                {
+                    "description": "PCB text 'B+' on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 140.3,
+                        "y": 111.3
+                    },
+                    "uuid": "3e901d9e-40bb-4dad-a2ca-29db5807bc54"
+                }
+            ],
+            "severity": "warning",
+            "type": "text_height"
+        },
+        {
+            "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.6300 mm)",
+            "items": [
+                {
+                    "description": "PCB text 'B-' on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 147.4,
+                        "y": 111.3
+                    },
+                    "uuid": "fc8718d9-6d2a-4bee-afca-a0772cf919e8"
+                }
+            ],
+            "severity": "warning",
+            "type": "text_height"
+        },
+        {
+            "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7000 mm)",
+            "items": [
+                {
+                    "description": "PCB text 'GND' on Bottom Silkscreen Layer",
+                    "pos": {
+                        "x": 175.9205,
+                        "y": 83.2
+                    },
+                    "uuid": "d240ae44-63c6-4f0f-840d-5e84b2852d16"
+                }
+            ],
+            "severity": "warning",
+            "type": "text_height"
+        },
+        {
+            "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7000 mm)",
+            "items": [
+                {
+                    "description": "PCB text '3V3' on Bottom Silkscreen Layer",
+                    "pos": {
+                        "x": 178.4605,
+                        "y": 83.2
+                    },
+                    "uuid": "cc8a6ac2-301d-4b21-aaa5-99794f275df8"
+                }
+            ],
+            "severity": "warning",
+            "type": "text_height"
+        },
+        {
+            "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7000 mm)",
+            "items": [
+                {
+                    "description": "PCB text 'CLK' on Bottom Silkscreen Layer",
+                    "pos": {
+                        "x": 181.0005,
+                        "y": 83.2
+                    },
+                    "uuid": "ad643973-68cb-460f-851c-bad4e5277e9d"
+                }
+            ],
+            "severity": "warning",
+            "type": "text_height"
+        },
+        {
+            "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7000 mm)",
+            "items": [
+                {
+                    "description": "PCB text 'DIO' on Bottom Silkscreen Layer",
+                    "pos": {
+                        "x": 183.5405,
+                        "y": 83.2
+                    },
+                    "uuid": "4743eecf-3e6c-4443-8ec6-ded4f81d8559"
+                }
+            ],
+            "severity": "warning",
+            "type": "text_height"
+        },
+        {
+            "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7000 mm)",
+            "items": [
+                {
+                    "description": "PCB text 'RST' on Bottom Silkscreen Layer",
+                    "pos": {
+                        "x": 186.0805,
+                        "y": 83.2
+                    },
+                    "uuid": "64883902-aad0-4e41-9c5b-73feb9a97fdf"
+                }
+            ],
+            "severity": "warning",
+            "type": "text_height"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of C12 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 173.599,
+                        "y": 89.1035
+                    },
+                    "uuid": "3546585d-4ad4-45bd-b400-e802da1d6d86"
+                },
+                {
+                    "description": "Segment of D1 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.365,
+                        "y": 89.133
+                    },
+                    "uuid": "ed28afdd-f8b5-4b5a-9503-902e6428ac69"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Arc of C12 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 172.188999,
+                        "y": 88.951001
+                    },
+                    "uuid": "9e98c7af-9508-4ab6-8e31-daa453776c23"
+                },
+                {
+                    "description": "Segment of D1 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.365,
+                        "y": 89.133
+                    },
+                    "uuid": "ed28afdd-f8b5-4b5a-9503-902e6428ac69"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of L1 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.276,
+                        "y": 94.595
+                    },
+                    "uuid": "832e3d1d-6eab-4095-bae0-54f3d66436ee"
+                },
+                {
+                    "description": "Arc of C11 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 174.248999,
+                        "y": 94.361001
+                    },
+                    "uuid": "8d8a320f-db36-4a3e-a24e-ffdcf24cfd1f"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of L1 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 174.324,
+                        "y": 94.595
+                    },
+                    "uuid": "6b7c35e8-496a-446c-9030-63a12127b9ab"
+                },
+                {
+                    "description": "Arc of C11 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 174.248999,
+                        "y": 94.361001
+                    },
+                    "uuid": "8d8a320f-db36-4a3e-a24e-ffdcf24cfd1f"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TP2",
+                    "pos": {
+                        "x": 178.4605,
+                        "y": 81.501
+                    },
+                    "uuid": "526e8277-5200-4dac-8152-848aed5f45f5"
+                },
+                {
+                    "description": "Reference field of TP1",
+                    "pos": {
+                        "x": 175.9205,
+                        "y": 81.501
+                    },
+                    "uuid": "b75fbc7e-43d4-450c-acf3-cd729b0a8f9f"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of C6 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.39,
+                        "y": 111.13
+                    },
+                    "uuid": "8d6c6a31-a79d-4a08-82a4-1766357294cb"
+                },
+                {
+                    "description": "Segment of C7 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.3095,
+                        "y": 111.13
+                    },
+                    "uuid": "c2c57f9d-ec8c-4829-972f-cef0ec56c694"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of C6 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.39,
+                        "y": 111.13
+                    },
+                    "uuid": "8d6c6a31-a79d-4a08-82a4-1766357294cb"
+                },
+                {
+                    "description": "Arc of C7 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 170.9995,
+                        "y": 111.93
+                    },
+                    "uuid": "978aeb4d-f75c-4167-a9d4-ecf76c9b325c"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Arc of C6 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.699148,
+                        "y": 111.930852
+                    },
+                    "uuid": "34bd6584-7f3d-4f71-baca-1acbc950e8af"
+                },
+                {
+                    "description": "Segment of C7 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.3095,
+                        "y": 111.13
+                    },
+                    "uuid": "c2c57f9d-ec8c-4829-972f-cef0ec56c694"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Arc of C6 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.699148,
+                        "y": 111.930852
+                    },
+                    "uuid": "34bd6584-7f3d-4f71-baca-1acbc950e8af"
+                },
+                {
+                    "description": "Arc of C7 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 170.9995,
+                        "y": 111.93
+                    },
+                    "uuid": "978aeb4d-f75c-4167-a9d4-ecf76c9b325c"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of C6 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.3905,
+                        "y": 110.5695
+                    },
+                    "uuid": "2150eae6-a86b-49bd-a026-30b68567c521"
+                },
+                {
+                    "description": "Segment of C7 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.31,
+                        "y": 110.5695
+                    },
+                    "uuid": "b768b264-2251-4aa0-97db-563f321afdda"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of C6 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.3905,
+                        "y": 110.5695
+                    },
+                    "uuid": "2150eae6-a86b-49bd-a026-30b68567c521"
+                },
+                {
+                    "description": "Arc of C7 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.0,
+                        "y": 109.77
+                    },
+                    "uuid": "6edfbd06-3b9e-4872-a034-0f1e1625070d"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of C7 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.31,
+                        "y": 110.5695
+                    },
+                    "uuid": "b768b264-2251-4aa0-97db-563f321afdda"
+                },
+                {
+                    "description": "Arc of C6 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.70085,
+                        "y": 109.77035
+                    },
+                    "uuid": "cf25a100-a65c-4974-bb5f-b6a45e59927f"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of L1 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 171.276,
+                        "y": 94.595
+                    },
+                    "uuid": "832e3d1d-6eab-4095-bae0-54f3d66436ee"
+                },
+                {
+                    "description": "Segment of C11 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 175.751,
+                        "y": 94.5135
+                    },
+                    "uuid": "c6712a14-ec35-4464-98ab-16b8ce1655b2"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of L1 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 174.324,
+                        "y": 94.595
+                    },
+                    "uuid": "6b7c35e8-496a-446c-9030-63a12127b9ab"
+                },
+                {
+                    "description": "Segment of C11 on Top Silkscreen Layer",
+                    "pos": {
+                        "x": 175.751,
+                        "y": 94.5135
+                    },
+                    "uuid": "c6712a14-ec35-4464-98ab-16b8ce1655b2"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TP4",
+                    "pos": {
+                        "x": 183.5405,
+                        "y": 81.501
+                    },
+                    "uuid": "1cfae42b-b5a3-42c0-b4ff-fb945f90e664"
+                },
+                {
+                    "description": "Reference field of TP3",
+                    "pos": {
+                        "x": 181.0005,
+                        "y": 81.501
+                    },
+                    "uuid": "421393d4-6042-4ee5-babc-39d59db54051"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TP4",
+                    "pos": {
+                        "x": 183.5405,
+                        "y": 81.501
+                    },
+                    "uuid": "1cfae42b-b5a3-42c0-b4ff-fb945f90e664"
+                },
+                {
+                    "description": "Reference field of TP5",
+                    "pos": {
+                        "x": 186.0805,
+                        "y": 81.501
+                    },
+                    "uuid": "bf585056-6499-4a50-9511-20c9d2792f36"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Reference field of TP3",
+                    "pos": {
+                        "x": 181.0005,
+                        "y": 81.501
+                    },
+                    "uuid": "421393d4-6042-4ee5-babc-39d59db54051"
+                },
+                {
+                    "description": "Reference field of TP2",
+                    "pos": {
+                        "x": 178.4605,
+                        "y": 81.501
+                    },
+                    "uuid": "526e8277-5200-4dac-8152-848aed5f45f5"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of BP",
+                    "pos": {
+                        "x": 142.5,
+                        "y": 111.3005
+                    },
+                    "uuid": "4121cb56-67af-483f-9979-ab97104344ff"
+                },
+                {
+                    "description": "Pad 1 [BAT_PACK_TBD] of BP on Top Layer",
+                    "pos": {
+                        "x": 142.5,
+                        "y": 111.3005
+                    },
+                    "uuid": "5a7cd7de-0805-47c2-acaf-587d87ac9028"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of NTC",
+                    "pos": {
+                        "x": 154.0,
+                        "y": 107.5
+                    },
+                    "uuid": "be2f63b9-b1a4-4adb-b406-2f4923859e31"
+                },
+                {
+                    "description": "Pad 2 [CHG_INT_N] of R8 on Top Layer",
+                    "pos": {
+                        "x": 152.4535,
+                        "y": 107.3
+                    },
+                    "uuid": "38f7128e-091b-4196-b993-98da0e28765c"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of NTC",
+                    "pos": {
+                        "x": 154.0,
+                        "y": 107.5
+                    },
+                    "uuid": "be2f63b9-b1a4-4adb-b406-2f4923859e31"
+                },
+                {
+                    "description": "Pad 1 [BAT_NTC_TBD] of NTC on Top Layer",
+                    "pos": {
+                        "x": 154.0,
+                        "y": 107.5
+                    },
+                    "uuid": "c276592e-5fa4-42c1-ad36-8938f4865750"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Reference field of BN",
+                    "pos": {
+                        "x": 145.5,
+                        "y": 111.3005
+                    },
+                    "uuid": "57d343d3-47c1-49e9-8bf2-605985eaac19"
+                },
+                {
+                    "description": "Pad 1 [GND] of BN on Top Layer",
+                    "pos": {
+                        "x": 145.5,
+                        "y": 111.3005
+                    },
+                    "uuid": "81610735-aacd-4c76-995d-4c3629de1bf7"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        }
+    ]
+}

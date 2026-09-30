@@ -1,0 +1,37 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-option-a3-local/NFC-Card-V4.kicad_pcb",
+  "description": "A3 connect C25 ground through the area released by its ADC branch",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-option-a3/adc-ground-ipc.json",
+  "routes": [
+    {
+      "name": "C25 explicit return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          182.8,
+          117.5
+        ],
+        [
+          182.2,
+          118.1
+        ],
+        [
+          182.2,
+          118.65
+        ]
+      ]
+    }
+  ],
+  "vias": [
+    {
+      "name": "C25 actual two-face stitch",
+      "net": "GND",
+      "at": [
+        182.2,
+        118.65
+      ]
+    }
+  ]
+}

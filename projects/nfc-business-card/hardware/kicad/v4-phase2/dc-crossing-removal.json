@@ -1,0 +1,22 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "description": "Open a shared top-layer power/control crossing by moving the DC transition west of the display bottom bundle",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase2/dc-crossing-removal-ipc.json",
+  "placements": {
+    "R14": [
+      170,
+      104.5,
+      90
+    ]
+  },
+  "remove_trial_ids": [
+    "0d984076-862e-49ad-94e8-02a0f3df5d9f",
+    "162deb83-5fbd-42af-a472-ad2ee2dfcb72",
+    "1bad7dfe-1e1b-47ae-8b41-5d0542ab8731",
+    "3c3c0b99-2729-441d-a289-e859bece8cb2",
+    "3e1bc3a5-9a73-4cf0-aad2-0eeb075ef291",
+    "aee20738-dfc5-43b6-bdad-6fcfff8ca884",
+    "b9207813-ea74-4c67-8ea6-e31894e78d3d",
+    "e5859fda-c10d-455a-96ab-1ca6a5bc4fcf"
+  ]
+}

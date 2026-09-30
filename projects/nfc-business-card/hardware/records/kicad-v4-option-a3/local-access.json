@@ -1,0 +1,1605 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-option-a3-local/NFC-Card-V4.kicad_pcb",
+  "sha256": "ab66cc15f4c938ee7a722bb5656f242f5f31c8664d6fb8d4bf1fa949a21c7259",
+  "scope": "Continuous buffered geometry on both layers; no grid or assigned route corridor. Existing unrelated copper remains. A positive result does not provide an octilinear route, prove return quality, or close DRC. A negative result concerns this copper arrangement, not board area or immutable placement.",
+  "trace_mm": 0.15,
+  "clearance_mm": 0.2,
+  "via_mm": [
+    0.6,
+    0.3
+  ],
+  "smd_drill_clearance_mm": 0.4,
+  "results": [
+    {
+      "source": "U2.6",
+      "target": "R19.1",
+      "net": "BAT_NTC_TBD",
+      "source_free_area_mm2": 9.360379950318805,
+      "source_free_bounds_mm": [
+        170.51139610306788,
+        106.65,
+        176.651,
+        112.21768665003526
+      ],
+      "source_new_via_area_mm2": 0.7832417021189663,
+      "target_reachable_with_current_other_copper": false,
+      "layer_transitions": [],
+      "source_boundary_objects": [
+        {
+          "id": "U2.5",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "id": "U2.7",
+          "net": "CHG_SDA",
+          "kind": "pad"
+        },
+        {
+          "id": "U2.11",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "id": "C4.1",
+          "net": "SYS",
+          "kind": "pad"
+        },
+        {
+          "id": "C6.1",
+          "net": "VDD_3V3",
+          "kind": "pad"
+        },
+        {
+          "id": "C6.2",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "id": "C7.1",
+          "net": "VDD_3V3",
+          "kind": "pad"
+        },
+        {
+          "id": "C7.2",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "id": "U3.1",
+          "net": "SYS",
+          "kind": "pad"
+        },
+        {
+          "id": "3cfddc6b-f0e2-4535-b02d-48456bbe8795",
+          "net": "VDD_3V3",
+          "kind": "track"
+        },
+        {
+          "id": "d812ef10-5e94-458a-9507-89c76cddc242",
+          "net": "VDD_3V3",
+          "kind": "track"
+        },
+        {
+          "id": "34e93d35-7cb3-4ba8-94f2-494043b2f505",
+          "net": "GND",
+          "kind": "track"
+        },
+        {
+          "id": "3eadc967-cce4-4ec7-8555-dff64c148797",
+          "net": "GND",
+          "kind": "track"
+        },
+        {
+          "id": "efeca7b4-88bb-4da1-9a16-1cd1a1f1edee",
+          "net": "GND",
+          "kind": "track"
+        },
+        {
+          "id": "02e69b53-e780-4f7f-b614-84efa9ecd0b1",
+          "net": "CHG_SDA",
+          "kind": "track"
+        },
+        {
+          "id": "e3d1cb5a-3b89-48f0-86c6-c998555cbecf",
+          "net": "CHG_SDA",
+          "kind": "track"
+        },
+        {
+          "id": "4e5670ef-bea3-4881-a969-54d8af12b57f",
+          "net": "SYS",
+          "kind": "track"
+        },
+        {
+          "id": "8510ff57-5575-4f4b-b84d-81e721f91263",
+          "net": "SYS",
+          "kind": "track"
+        },
+        {
+          "id": "eaf070cf-d7f0-4584-ae89-ae4452b60672",
+          "net": "SYS",
+          "kind": "track"
+        },
+        {
+          "id": "daf1d7c8-2b0a-4348-83b2-37cb8cfe21e7",
+          "net": "CHG_CE_N",
+          "kind": "track"
+        },
+        {
+          "id": "abb7289d-1c24-48f1-8b99-ea23a2ffd74c",
+          "net": "CHG_SCL",
+          "kind": "track"
+        },
+        {
+          "id": "3215b7f5-fac7-4a3b-8d20-347b5971e3c5",
+          "net": "CHG_INT_N",
+          "kind": "track"
+        },
+        {
+          "id": "5f6a4ed6-df51-4dc2-91b5-573ff21d6344",
+          "net": "CHG_INT_N",
+          "kind": "track"
+        },
+        {
+          "id": "978ab0f5-d3b5-47bb-8711-c0b192fbe2ff",
+          "net": "CHG_INT_N",
+          "kind": "track"
+        },
+        {
+          "id": "4da455e2-9c1f-4e44-b503-ca002d05b061",
+          "net": "USB_VBUS",
+          "kind": "track"
+        },
+        {
+          "id": "6f8a60a5-1dbb-4ede-8d12-f16ce84da29f",
+          "net": "USB_VBUS",
+          "kind": "track"
+        },
+        {
+          "id": "463859f1-cd71-4bb2-a3ac-bcf4b30bc7ad",
+          "net": "GND",
+          "kind": "via"
+        },
+        {
+          "id": "407381d9-6948-4b23-9df2-ff41acc8c9c2",
+          "net": "CHG_SDA",
+          "kind": "via"
+        },
+        {
+          "id": "bc103bc0-95e5-4eaf-abb8-f31b256792b3",
+          "net": "CHG_CE_N",
+          "kind": "via"
+        },
+        {
+          "id": "d5365dc9-0503-41f1-a4a7-add1e2d79139",
+          "net": "CHG_CE_N",
+          "kind": "via"
+        },
+        {
+          "id": "6bfd4af8-5111-4db1-a0ff-342c7f48b5ef",
+          "net": "CHG_INT_N",
+          "kind": "via"
+        },
+        {
+          "id": "b6c149b5-6972-4eb8-9e38-f5771ab05971",
+          "net": "USB_VBUS",
+          "kind": "via"
+        }
+      ]
+    },
+    {
+      "source": "J1.A5",
+      "target": "U6.1",
+      "net": "USB_CC1",
+      "source_free_area_mm2": 0.2589126886718294,
+      "source_free_bounds_mm": [
+        185.00216486199662,
+        105.10000000000001,
+        186.324,
+        105.91004898958768
+      ],
+      "source_new_via_area_mm2": 0.0,
+      "target_reachable_with_current_other_copper": false,
+      "layer_transitions": [],
+      "source_boundary_objects": [
+        {
+          "id": "J1.B7",
+          "net": "USB_DM_CONN",
+          "kind": "pad"
+        },
+        {
+          "id": "J1.B8",
+          "net": "unconnected-(J1-SBU2-PadB8)",
+          "kind": "pad"
+        },
+        {
+          "id": "0f801243-f02b-428e-b85c-b226bd9f13ab",
+          "net": "USB_VBUS",
+          "kind": "track"
+        },
+        {
+          "id": "17af0db4-15fb-4f15-967c-888fca1da0a5",
+          "net": "USB_DM_CONN",
+          "kind": "track"
+        },
+        {
+          "id": "5bf05dcf-7bde-402c-a160-d8ee8da198ad",
+          "net": "USB_DM_CONN",
+          "kind": "via"
+        }
+      ]
+    },
+    {
+      "source": "J1.B5",
+      "target": "U6.2",
+      "net": "USB_CC2",
+      "source_free_area_mm2": 0.12495762678891444,
+      "source_free_bounds_mm": [
+        185.46037824998692,
+        102.16398532529186,
+        186.324,
+        102.36306309165933
+      ],
+      "source_new_via_area_mm2": 0.0,
+      "target_reachable_with_current_other_copper": false,
+      "layer_transitions": [],
+      "source_boundary_objects": [
+        {
+          "id": "J1.A8",
+          "net": "unconnected-(J1-SBU1-PadA8)",
+          "kind": "pad"
+        },
+        {
+          "id": "J1.B4A9",
+          "net": "USB_VBUS",
+          "kind": "pad"
+        },
+        {
+          "id": "10c6337f-1eb8-44de-a60b-6561f5e2d107",
+          "net": "USB_VBUS",
+          "kind": "via"
+        }
+      ]
+    },
+    {
+      "source": "U1.24",
+      "target": "J2.9",
+      "net": "EPD_BUSY_TBD",
+      "source_free_area_mm2": 1.4865995082748817,
+      "source_free_bounds_mm": [
+        171.776,
+        112.30535579670983,
+        173.451,
+        114.34537039794992
+      ],
+      "source_new_via_area_mm2": 0.0,
+      "target_reachable_with_current_other_copper": false,
+      "layer_transitions": [],
+      "source_boundary_objects": [
+        {
+          "id": "U1.22",
+          "net": "CHG_CE_N",
+          "kind": "pad"
+        },
+        {
+          "id": "U1.23",
+          "net": "unconnected-(U1-P0.07{slash}TRACECLK-Pad23)",
+          "kind": "pad"
+        },
+        {
+          "id": "U1.25",
+          "net": "unconnected-(U1-P1.08-Pad25)",
+          "kind": "pad"
+        },
+        {
+          "id": "U1.26",
+          "net": "unconnected-(U1-P1.09{slash}TRACEDATA3-Pad26)",
+          "kind": "pad"
+        },
+        {
+          "id": "U1.28",
+          "net": "VDD_3V3",
+          "kind": "pad"
+        },
+        {
+          "id": "ef4f1e97-2768-4deb-91c4-e38e7e155fc2",
+          "net": "VDD_3V3",
+          "kind": "track"
+        },
+        {
+          "id": "04871e6a-2181-4f86-bdc3-8403c04ff2cd",
+          "net": "CHG_CE_N",
+          "kind": "track"
+        },
+        {
+          "id": "4da455e2-9c1f-4e44-b503-ca002d05b061",
+          "net": "USB_VBUS",
+          "kind": "track"
+        },
+        {
+          "id": "6e17724c-c205-4408-ab59-c8a0792bfe70",
+          "net": "USB_VBUS",
+          "kind": "track"
+        },
+        {
+          "id": "d5365dc9-0503-41f1-a4a7-add1e2d79139",
+          "net": "CHG_CE_N",
+          "kind": "via"
+        },
+        {
+          "id": "1a8eab21-d27b-4835-80ce-d570387a78f6",
+          "net": "USB_VBUS",
+          "kind": "via"
+        }
+      ]
+    },
+    {
+      "source": "J2.12",
+      "target": "U1.38",
+      "net": "EPD_CS_N_TBD",
+      "source_free_area_mm2": 1942.54349246144,
+      "source_free_bounds_mm": [
+        111.475,
+        79.475,
+        192.525,
+        112.325
+      ],
+      "source_new_via_area_mm2": 1316.5042701280731,
+      "target_reachable_with_current_other_copper": true,
+      "layer_transitions": [
+        {
+          "new_via_witness_mm": [
+            157.7055,
+            102.04499999999999
+          ],
+          "endpoint_distance_sum_mm": 29.374635136133016
+        },
+        {
+          "new_via_witness_mm": [
+            161.27845931341923,
+            118.52041638303122
+          ],
+          "endpoint_distance_sum_mm": 31.21752702964463
+        },
+        {
+          "new_via_witness_mm": [
+            168.40703672963923,
+            118.904
+          ],
+          "endpoint_distance_sum_mm": 25.15156485467353
+        },
+        {
+          "new_via_witness_mm": [
+            170.8443,
+            119.13575706961198
+          ],
+          "endpoint_distance_sum_mm": 26.300617782511875
+        }
+      ],
+      "source_boundary_objects": [
+        {
+          "id": "U4.1",
+          "net": "VDD_3V3",
+          "kind": "pad"
+        },
+        {
+          "id": "U4.2",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "id": "U4.3",
+          "net": "EPD_EN_TBD",
+          "kind": "pad"
+        },
+        {
+          "id": "U4.4",
+          "net": "unconnected-(U4-NC-Pad4)",
+          "kind": "pad"
+        },
+        {
+          "id": "U4.5",
+          "net": "EPD_VDD",
+          "kind": "pad"
+        },
+        {
+          "id": "U4.6",
+          "net": "EPD_VDD",
+          "kind": "pad"
+        },
+        {
+          "id": "C13.1",
+          "net": "EPD_VGL",
+          "kind": "pad"
+        },
+        {
+          "id": "C13.2",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "id": "C10.1",
+          "net": "EPD_VDD",
+          "kind": "pad"
+        },
+        {
+          "id": "C10.2",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "id": "C15.1",
+          "net": "EPD_VSPL1",
+          "kind": "pad"
+        },
+        {
+          "id": "C15.2",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "id": "R7.1",
+          "net": "VDD_3V3",
+          "kind": "pad"
+        },
+        {
+          "id": "C22.1",
+          "net": "EPD_VCOM",
+          "kind": "pad"
+        },
+        {
+          "id": "C22.2",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "id": "R16.1",
+          "net": "EPD_VPH",
+          "kind": "pad"
+        },
+        {
+          "id": "R16.2",
+          "net": "EPD_VGH",
+          "kind": "pad"
+        },
+        {
+          "id": "D3.1",
+          "net": "EPD_PUMP",
+          "kind": "pad"
+        },
+        {
+          "id": "D3.2",
+          "net": "EPD_VGL",
+          "kind": "pad"
+        },
+        {
+          "id": "C19.1",
+          "net": "EPD_VSPH",
+          "kind": "pad"
+        },
+        {
+          "id": "C19.2",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "id": "C9.1",
+          "net": "VDD_3V3",
+          "kind": "pad"
+        },
+        {
+          "id": "C9.2",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "id": "C20.1",
+          "net": "EPD_VSNH",
+          "kind": "pad"
+        },
+        {
+          "id": "C20.2",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "id": "C18.1",
+          "net": "EPD_VSNL2",
+          "kind": "pad"
+        },
+        {
+          "id": "C18.2",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "id": "BP.1",
+          "net": "BAT_PACK_TBD",
+          "kind": "pad"
+        },
+        {
+          "id": "R17.1",
+          "net": "EPD_BS0",
+          "kind": "pad"
+        },
+        {
+          "id": "R17.2",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "id": "C16.1",
+          "net": "EPD_VSPL2",
+          "kind": "pad"
+        },
+        {
+          "id": "C16.2",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "id": "R14.1",
+          "net": "EPD_GDR",
+          "kind": "pad"
+        },
+        {
+          "id": "R14.2",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "id": "R18.1",
+          "net": "EPD_VDD",
+          "kind": "pad"
+        },
+        {
+          "id": "R18.2",
+          "net": "EPD_BUSY_TBD",
+          "kind": "pad"
+        },
+        {
+          "id": "Q1.1",
+          "net": "EPD_GDR",
+          "kind": "pad"
+        },
+        {
+          "id": "Q1.2",
+          "net": "EPD_RESE",
+          "kind": "pad"
+        },
+        {
+          "id": "Q1.3",
+          "net": "EPD_SW",
+          "kind": "pad"
+        },
+        {
+          "id": "D2.1",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "id": "D2.2",
+          "net": "EPD_PUMP",
+          "kind": "pad"
+        },
+        {
+          "id": "C12.1",
+          "net": "EPD_VPH",
+          "kind": "pad"
+        },
+        {
+          "id": "C12.2",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "id": "R13.1",
+          "net": "EPD_EN_TBD",
+          "kind": "pad"
+        },
+        {
+          "id": "R13.2",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "id": "C21.1",
+          "net": "EPD_VGL",
+          "kind": "pad"
+        },
+        {
+          "id": "C21.2",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "id": "BN.1",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "id": "L1.1",
+          "net": "EPD_VDD",
+          "kind": "pad"
+        },
+        {
+          "id": "L1.2",
+          "net": "EPD_SW",
+          "kind": "pad"
+        },
+        {
+          "id": "D1.1",
+          "net": "EPD_VPH",
+          "kind": "pad"
+        },
+        {
+          "id": "D1.2",
+          "net": "EPD_SW",
+          "kind": "pad"
+        },
+        {
+          "id": "C14.1",
+          "net": "EPD_VDDL",
+          "kind": "pad"
+        },
+        {
+          "id": "C14.2",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "id": "J2.1",
+          "net": "unconnected-(J2-Pad1)",
+          "kind": "pad"
+        },
+        {
+          "id": "J2.5",
+          "net": "EPD_VSPL1",
+          "kind": "pad"
+        },
+        {
+          "id": "J2.6",
+          "net": "unconnected-(J2-Pad6)",
+          "kind": "pad"
+        },
+        {
+          "id": "J2.7",
+          "net": "unconnected-(J2-Pad7)",
+          "kind": "pad"
+        },
+        {
+          "id": "J2.8",
+          "net": "EPD_BS0",
+          "kind": "pad"
+        },
+        {
+          "id": "J2.9",
+          "net": "EPD_BUSY_TBD",
+          "kind": "pad"
+        },
+        {
+          "id": "J2.10",
+          "net": "EPD_RESET_N_TBD",
+          "kind": "pad"
+        },
+        {
+          "id": "J2.11",
+          "net": "EPD_DC_TBD",
+          "kind": "pad"
+        },
+        {
+          "id": "J2.13",
+          "net": "EPD_SCK_TBD",
+          "kind": "pad"
+        },
+        {
+          "id": "J2.14",
+          "net": "EPD_MOSI_TBD",
+          "kind": "pad"
+        },
+        {
+          "id": "J2.21",
+          "net": "EPD_VGH",
+          "kind": "pad"
+        },
+        {
+          "id": "J2.22",
+          "net": "EPD_VSNH",
+          "kind": "pad"
+        },
+        {
+          "id": "J2.25",
+          "net": "unconnected-(J2-Pad25)",
+          "kind": "pad"
+        },
+        {
+          "id": "J2.26",
+          "net": "unconnected-(J2-Pad26)",
+          "kind": "pad"
+        },
+        {
+          "id": "C17.1",
+          "net": "EPD_VSNL1",
+          "kind": "pad"
+        },
+        {
+          "id": "C17.2",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "id": "J1.18",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "id": "J1.20",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "id": "J1.B1A12",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "id": "J1.B4A9",
+          "net": "USB_VBUS",
+          "kind": "pad"
+        },
+        {
+          "id": "C11.1",
+          "net": "EPD_SW",
+          "kind": "pad"
+        },
+        {
+          "id": "C11.2",
+          "net": "EPD_PUMP",
+          "kind": "pad"
+        },
+        {
+          "id": "R15.1",
+          "net": "EPD_RESE",
+          "kind": "pad"
+        },
+        {
+          "id": "R15.2",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "id": "13f9d7f8-a06f-4b5b-bc39-8e0ac0902919",
+          "net": "VDD_3V3",
+          "kind": "track"
+        },
+        {
+          "id": "144f41fc-603e-40c0-a13c-49e7f976539d",
+          "net": "VDD_3V3",
+          "kind": "track"
+        },
+        {
+          "id": "8e7443be-4d93-456f-8801-0381f6b5229a",
+          "net": "VDD_3V3",
+          "kind": "track"
+        },
+        {
+          "id": "ae3f34cf-651d-4efc-9677-54ef22d7d322",
+          "net": "VDD_3V3",
+          "kind": "track"
+        },
+        {
+          "id": "c3595260-bdf7-47f4-b6ef-264c0f877e39",
+          "net": "VDD_3V3",
+          "kind": "track"
+        },
+        {
+          "id": "d7f8e08b-5990-41ed-9094-cca03d7a3042",
+          "net": "VDD_3V3",
+          "kind": "track"
+        },
+        {
+          "id": "fe694174-be8a-4c79-aff8-b60e2f407da9",
+          "net": "VDD_3V3",
+          "kind": "track"
+        },
+        {
+          "id": "49e1fa10-924f-4197-92d1-e1336dee4842",
+          "net": "GND",
+          "kind": "track"
+        },
+        {
+          "id": "53346f32-d577-4a12-b7a7-e1fe74cd3f81",
+          "net": "GND",
+          "kind": "track"
+        },
+        {
+          "id": "642f6427-eb96-49db-8aff-2258d0c74bd8",
+          "net": "GND",
+          "kind": "track"
+        },
+        {
+          "id": "ebb57ae5-536b-442a-a0a3-628a9d7131a8",
+          "net": "GND",
+          "kind": "track"
+        },
+        {
+          "id": "24497fe4-8b35-447c-8a27-70994d683da2",
+          "net": "SYS",
+          "kind": "track"
+        },
+        {
+          "id": "4ea63eb0-bfad-4fcb-b035-8674c1d075f5",
+          "net": "SYS",
+          "kind": "track"
+        },
+        {
+          "id": "ee18c9bd-96c6-4e74-86e6-ed6b4e3a7008",
+          "net": "SYS",
+          "kind": "track"
+        },
+        {
+          "id": "26e52744-6000-47ba-9e59-fc36099645e3",
+          "net": "BAT_PACK_TBD",
+          "kind": "track"
+        },
+        {
+          "id": "48b0b9f5-7a62-402e-bcd3-c287eb1f3436",
+          "net": "BAT_PACK_TBD",
+          "kind": "track"
+        },
+        {
+          "id": "690d8761-21ed-4fbe-84d3-4b64057b46c4",
+          "net": "BAT_PACK_TBD",
+          "kind": "track"
+        },
+        {
+          "id": "c4e8f2cf-968f-469a-825a-b9c6c6bfb7da",
+          "net": "USB_VBUS",
+          "kind": "track"
+        },
+        {
+          "id": "da66ddd6-4e78-4475-b9a2-1c150790e983",
+          "net": "USB_VBUS",
+          "kind": "track"
+        },
+        {
+          "id": "0323718c-c8ac-44f6-9f70-512e3623e49c",
+          "net": "EPD_EN_TBD",
+          "kind": "track"
+        },
+        {
+          "id": "38b90246-bf24-4bb6-9d8b-e941ee19cd60",
+          "net": "EPD_EN_TBD",
+          "kind": "track"
+        },
+        {
+          "id": "6bf3b494-47a6-4586-a903-2d6884f1ad14",
+          "net": "EPD_EN_TBD",
+          "kind": "track"
+        },
+        {
+          "id": "8b7f8198-8fc2-434a-a5b6-1bff26258999",
+          "net": "EPD_EN_TBD",
+          "kind": "track"
+        },
+        {
+          "id": "d4edf57b-8ef7-4bf2-b16b-8248ee03d871",
+          "net": "EPD_EN_TBD",
+          "kind": "track"
+        },
+        {
+          "id": "e3a3b344-1f6c-4121-b58d-e37b7e2addba",
+          "net": "EPD_EN_TBD",
+          "kind": "track"
+        },
+        {
+          "id": "0757c632-c5d6-4ed2-826e-783dbbd6eaa1",
+          "net": "EPD_VDD",
+          "kind": "track"
+        },
+        {
+          "id": "1d7c0af8-8719-4d88-a95a-afbaa11a4d4b",
+          "net": "EPD_VDD",
+          "kind": "track"
+        },
+        {
+          "id": "1fe4664c-c2fb-4bf5-bd41-c1d033f17abe",
+          "net": "EPD_VDD",
+          "kind": "track"
+        },
+        {
+          "id": "2bf5e554-ba32-4455-8bb7-b03ebf93238d",
+          "net": "EPD_VDD",
+          "kind": "track"
+        },
+        {
+          "id": "33be280b-2622-42d7-ac82-465d712c1d68",
+          "net": "EPD_VDD",
+          "kind": "track"
+        },
+        {
+          "id": "46e1b6b6-11c0-48e0-8598-d780668ac964",
+          "net": "EPD_VDD",
+          "kind": "track"
+        },
+        {
+          "id": "81e384ac-7093-4a21-bc27-175fa9ed837e",
+          "net": "EPD_VDD",
+          "kind": "track"
+        },
+        {
+          "id": "b67006fa-8ca5-40db-b091-90c112d93053",
+          "net": "EPD_VDD",
+          "kind": "track"
+        },
+        {
+          "id": "b76469c8-ea7c-4453-baf3-97937cb79643",
+          "net": "EPD_VDD",
+          "kind": "track"
+        },
+        {
+          "id": "c22d44cf-3472-445b-8236-561529cb60b3",
+          "net": "EPD_VDD",
+          "kind": "track"
+        },
+        {
+          "id": "ca05133a-c092-4b92-a0eb-659ba7673ee1",
+          "net": "EPD_VDD",
+          "kind": "track"
+        },
+        {
+          "id": "d157cc27-ae85-47d5-8d37-5cd3fd7896e3",
+          "net": "EPD_VDD",
+          "kind": "track"
+        },
+        {
+          "id": "d2cc32e8-c734-4c4d-b372-c7cbdff6f048",
+          "net": "EPD_VDD",
+          "kind": "track"
+        },
+        {
+          "id": "eb51e4bc-b2c9-4c7d-a917-6f0d25e0a332",
+          "net": "EPD_VDD",
+          "kind": "track"
+        },
+        {
+          "id": "041ca70e-ebb3-4bd3-af07-a3060d2d7934",
+          "net": "EPD_VGL",
+          "kind": "track"
+        },
+        {
+          "id": "10dea6d9-1d69-4458-84b4-b574758b1034",
+          "net": "EPD_VGL",
+          "kind": "track"
+        },
+        {
+          "id": "31fa360f-0619-4159-8012-748a7f3ce9c5",
+          "net": "EPD_VGL",
+          "kind": "track"
+        },
+        {
+          "id": "32e00adf-94ae-4ac3-a6ed-a139c250a7c2",
+          "net": "EPD_VGL",
+          "kind": "track"
+        },
+        {
+          "id": "39bfbb31-0023-4116-96a1-2102c5b93b77",
+          "net": "EPD_VGL",
+          "kind": "track"
+        },
+        {
+          "id": "6976998b-1fa9-445e-bdf0-f7172c676d50",
+          "net": "EPD_VGL",
+          "kind": "track"
+        },
+        {
+          "id": "6f756913-45f9-4167-8193-db3388f8a27a",
+          "net": "EPD_VGL",
+          "kind": "track"
+        },
+        {
+          "id": "7bf97148-9eaf-446d-96e8-2be2b308c061",
+          "net": "EPD_VGL",
+          "kind": "track"
+        },
+        {
+          "id": "994bb079-0709-4221-8ab8-88c692ffa9b8",
+          "net": "EPD_VGL",
+          "kind": "track"
+        },
+        {
+          "id": "9d9e7af2-d472-435b-b11d-2a7bad11e61d",
+          "net": "EPD_VGL",
+          "kind": "track"
+        },
+        {
+          "id": "9fd18fa9-ad01-44a2-8872-d42da38b245a",
+          "net": "EPD_VGL",
+          "kind": "track"
+        },
+        {
+          "id": "a61bd8c9-7d3a-4c1b-87a0-07c5ef9d7e9d",
+          "net": "EPD_VGL",
+          "kind": "track"
+        },
+        {
+          "id": "b0190218-89eb-4406-ac93-4b30df8ed7de",
+          "net": "EPD_VGL",
+          "kind": "track"
+        },
+        {
+          "id": "c8efa98e-6a5d-42ef-8336-9c710b4b94df",
+          "net": "EPD_VGL",
+          "kind": "track"
+        },
+        {
+          "id": "dd36a860-3457-4fab-832f-2119fae62bbe",
+          "net": "EPD_VGL",
+          "kind": "track"
+        },
+        {
+          "id": "efb995d0-8786-4490-a3d1-75480dc1d2c4",
+          "net": "EPD_VGL",
+          "kind": "track"
+        },
+        {
+          "id": "fbad2ac0-7631-45e1-8026-87eee63f4dd6",
+          "net": "EPD_VGL",
+          "kind": "track"
+        },
+        {
+          "id": "2c09dba8-bf2b-43a1-a4b3-4a48bdb51743",
+          "net": "EPD_VSPL1",
+          "kind": "track"
+        },
+        {
+          "id": "b94a7510-878f-42da-9d9a-f32ebd57e180",
+          "net": "EPD_VSPL1",
+          "kind": "track"
+        },
+        {
+          "id": "b047ae71-7d5d-4de5-aba4-b2aaac669101",
+          "net": "EPD_VCOM",
+          "kind": "track"
+        },
+        {
+          "id": "eaf8797c-2783-4591-8789-a2caacaf8460",
+          "net": "EPD_VCOM",
+          "kind": "track"
+        },
+        {
+          "id": "f6f7dcc9-97ea-4d91-8730-0dbf949bddd2",
+          "net": "EPD_VCOM",
+          "kind": "track"
+        },
+        {
+          "id": "306f4d16-f148-406c-b036-c00e2329df36",
+          "net": "EPD_VPH",
+          "kind": "track"
+        },
+        {
+          "id": "34bff26c-cb38-4b19-95bd-f03a6f49f29a",
+          "net": "EPD_VPH",
+          "kind": "track"
+        },
+        {
+          "id": "50e9e493-c96b-4eed-8dd7-c6b28af1e6ba",
+          "net": "EPD_VPH",
+          "kind": "track"
+        },
+        {
+          "id": "59a1f151-6d31-4760-99a5-ced88df72c36",
+          "net": "EPD_VPH",
+          "kind": "track"
+        },
+        {
+          "id": "983b72cb-7ab4-4eeb-b405-10fab3be874d",
+          "net": "EPD_VPH",
+          "kind": "track"
+        },
+        {
+          "id": "df4ceb13-445d-4124-bda4-c2fd82235148",
+          "net": "EPD_VPH",
+          "kind": "track"
+        },
+        {
+          "id": "7155e26e-da0c-413b-8d40-c0d0cb164629",
+          "net": "EPD_VGH",
+          "kind": "track"
+        },
+        {
+          "id": "8de34d7e-cfb3-4c4a-ae53-bafeaf274364",
+          "net": "EPD_VGH",
+          "kind": "track"
+        },
+        {
+          "id": "f220195c-24f4-46b1-bb5b-3641f56aa692",
+          "net": "EPD_VGH",
+          "kind": "track"
+        },
+        {
+          "id": "fe300b40-0052-4ca5-a388-d970ae4b9ff1",
+          "net": "EPD_VGH",
+          "kind": "track"
+        },
+        {
+          "id": "07be3f99-6a4b-4885-932d-c6f57046f38a",
+          "net": "EPD_PUMP",
+          "kind": "track"
+        },
+        {
+          "id": "b6c268f1-73e9-4142-9fb7-994c3dc7b036",
+          "net": "EPD_PUMP",
+          "kind": "track"
+        },
+        {
+          "id": "bd80c337-e873-4d3c-b187-701ac7677df3",
+          "net": "EPD_PUMP",
+          "kind": "track"
+        },
+        {
+          "id": "68561320-c403-4c60-971e-9f66f2253b9e",
+          "net": "EPD_VSPH",
+          "kind": "track"
+        },
+        {
+          "id": "7ce909ab-f933-45d4-94c1-69a5f4f0858f",
+          "net": "EPD_VSPH",
+          "kind": "track"
+        },
+        {
+          "id": "9ab28e80-b2b8-4de9-b577-925fc267398c",
+          "net": "EPD_VSPH",
+          "kind": "track"
+        },
+        {
+          "id": "cd12c91d-e272-43be-8c02-786d76e2b308",
+          "net": "EPD_VSPH",
+          "kind": "track"
+        },
+        {
+          "id": "23b176cf-0c59-483c-ae16-94853d3fae22",
+          "net": "NFC1_TBD",
+          "kind": "track"
+        },
+        {
+          "id": "99e6053a-4367-4f93-b7f9-3abef92fa04c",
+          "net": "NFC1_TBD",
+          "kind": "track"
+        },
+        {
+          "id": "1d538f8d-3405-4da0-94cc-5f3dc7be5e06",
+          "net": "EPD_VSNH",
+          "kind": "track"
+        },
+        {
+          "id": "57884acf-72c0-46c6-a9f0-ab08f61e7f37",
+          "net": "EPD_VSNH",
+          "kind": "track"
+        },
+        {
+          "id": "60c84b9f-bf45-46e7-ad51-866f859ecd88",
+          "net": "EPD_VSNH",
+          "kind": "track"
+        },
+        {
+          "id": "63a9872c-517e-497d-b80a-2d8272176c94",
+          "net": "EPD_VSNH",
+          "kind": "track"
+        },
+        {
+          "id": "7643c41c-1aa2-4863-8bc5-81b4f4c13b7d",
+          "net": "EPD_VSNH",
+          "kind": "track"
+        },
+        {
+          "id": "dad39857-25cc-4edf-a4d5-2b7bc15f8056",
+          "net": "EPD_VSNH",
+          "kind": "track"
+        },
+        {
+          "id": "dfdcb491-32ba-4a8e-babf-803f27d2f41c",
+          "net": "EPD_VSNH",
+          "kind": "track"
+        },
+        {
+          "id": "edc6e4c0-6e92-41ff-be45-fbb7484b27d2",
+          "net": "EPD_VSNH",
+          "kind": "track"
+        },
+        {
+          "id": "bb528734-3842-4bf4-8fdd-02628c23ae9f",
+          "net": "EPD_BS0",
+          "kind": "track"
+        },
+        {
+          "id": "be538f5e-8a3c-416c-ba71-ce6028880a17",
+          "net": "EPD_BS0",
+          "kind": "track"
+        },
+        {
+          "id": "e01d91b7-04db-4c72-8145-84f06ddd103f",
+          "net": "EPD_BS0",
+          "kind": "track"
+        },
+        {
+          "id": "eb9f8eb5-172c-4927-a94c-8f706f259dd2",
+          "net": "EPD_BS0",
+          "kind": "track"
+        },
+        {
+          "id": "14d81955-6d97-4016-a1c5-b4b20631cc16",
+          "net": "EPD_VSPL2",
+          "kind": "track"
+        },
+        {
+          "id": "948fc1da-bdf0-40e2-968f-b01122420564",
+          "net": "EPD_VSPL2",
+          "kind": "track"
+        },
+        {
+          "id": "04e6ffc4-d535-42c5-b398-71a0f99110c9",
+          "net": "EPD_GDR",
+          "kind": "track"
+        },
+        {
+          "id": "12fdf29f-84e8-4e7b-9223-9bd2d680acb2",
+          "net": "EPD_GDR",
+          "kind": "track"
+        },
+        {
+          "id": "23b508a6-83d6-431c-8bd1-7bbc7c61efca",
+          "net": "EPD_GDR",
+          "kind": "track"
+        },
+        {
+          "id": "7cc1bacf-21c5-4c6e-b5c8-3b75f8f37c74",
+          "net": "EPD_GDR",
+          "kind": "track"
+        },
+        {
+          "id": "c6fe5a1e-f902-46de-ad8f-3de50e1a4d48",
+          "net": "EPD_GDR",
+          "kind": "track"
+        },
+        {
+          "id": "c8477e81-b9a2-4af3-9a5a-0ff62cbf35f3",
+          "net": "EPD_GDR",
+          "kind": "track"
+        },
+        {
+          "id": "d18460c0-4ccd-4c2a-b6c3-f983d82bb4fc",
+          "net": "EPD_GDR",
+          "kind": "track"
+        },
+        {
+          "id": "e1973e97-32e2-44c1-96e0-2b95b88c4eb1",
+          "net": "EPD_GDR",
+          "kind": "track"
+        },
+        {
+          "id": "05157013-aa3a-40da-80b7-f64c872ef021",
+          "net": "EPD_RESE",
+          "kind": "track"
+        },
+        {
+          "id": "05a84233-0ee8-4ad1-a095-ea9ebe4a613f",
+          "net": "EPD_RESE",
+          "kind": "track"
+        },
+        {
+          "id": "36fe4b1c-112b-4ad2-9812-423fc11b71d1",
+          "net": "EPD_RESE",
+          "kind": "track"
+        },
+        {
+          "id": "4abe5efd-5b51-4c91-b7c1-bf60e4828e2e",
+          "net": "EPD_RESE",
+          "kind": "track"
+        },
+        {
+          "id": "5a3ecd99-dd9f-40aa-be06-5495263615f2",
+          "net": "EPD_RESE",
+          "kind": "track"
+        },
+        {
+          "id": "895be5b7-3f1b-4d99-b793-531ab41a30f0",
+          "net": "EPD_RESE",
+          "kind": "track"
+        },
+        {
+          "id": "acf8d39d-aa0f-4d65-a46b-a591bbe152f1",
+          "net": "EPD_RESE",
+          "kind": "track"
+        },
+        {
+          "id": "defc2ea5-f133-40aa-82d8-b85f4512ce80",
+          "net": "EPD_RESE",
+          "kind": "track"
+        },
+        {
+          "id": "622d745d-a410-49b8-96eb-5265426e0f2f",
+          "net": "EPD_SW",
+          "kind": "track"
+        },
+        {
+          "id": "860efb42-ea99-4c6b-82ef-561296d4cbfb",
+          "net": "EPD_SW",
+          "kind": "track"
+        },
+        {
+          "id": "a4871a93-9f6b-44a3-b63e-d899ddd80de3",
+          "net": "EPD_SW",
+          "kind": "track"
+        },
+        {
+          "id": "e6a62525-d908-4d3f-bf8b-5feeb6032034",
+          "net": "EPD_SW",
+          "kind": "track"
+        },
+        {
+          "id": "fca59306-f095-4da5-9a63-348cf2a4ad29",
+          "net": "EPD_SW",
+          "kind": "track"
+        },
+        {
+          "id": "6cf75d89-fd4a-4fa2-96f4-b6f7b401e716",
+          "net": "USB_DP_CONN",
+          "kind": "track"
+        },
+        {
+          "id": "99c0e6c2-5c51-47f2-a412-fcaaf7cce651",
+          "net": "USB_DP_CONN",
+          "kind": "track"
+        },
+        {
+          "id": "a8571728-aa9b-4cc9-8779-262333df37b9",
+          "net": "USB_DP_CONN",
+          "kind": "track"
+        },
+        {
+          "id": "ad21c8f4-7681-4bf6-a3f9-c810e6c483f9",
+          "net": "USB_DP_CONN",
+          "kind": "track"
+        },
+        {
+          "id": "be1efc95-06cc-43cd-82f1-8b57a274c2d6",
+          "net": "USB_DP_CONN",
+          "kind": "track"
+        },
+        {
+          "id": "72b3cc0e-16e1-47e6-b19f-fa172a581e5c",
+          "net": "EPD_VDDL",
+          "kind": "track"
+        },
+        {
+          "id": "a664fef0-79e2-46fd-9cdd-77312bb0cccc",
+          "net": "EPD_VDDL",
+          "kind": "track"
+        },
+        {
+          "id": "d16318cb-3833-4737-815e-ae017aab3ee4",
+          "net": "EPD_VDDL",
+          "kind": "track"
+        },
+        {
+          "id": "5222b39f-f93f-46bb-ae83-a77f2a4aa3cd",
+          "net": "EPD_VSNL1",
+          "kind": "track"
+        },
+        {
+          "id": "b36adc88-6973-46af-9bca-f4e1a095034d",
+          "net": "EPD_VSNL1",
+          "kind": "track"
+        },
+        {
+          "id": "55d02d10-ec22-4cfa-a741-bfc9c3b29dcd",
+          "net": "SWDIO",
+          "kind": "track"
+        },
+        {
+          "id": "814715aa-49a4-402f-809c-09f21b359242",
+          "net": "SWDIO",
+          "kind": "track"
+        },
+        {
+          "id": "30d41491-8978-4259-bb38-d7d04185f932",
+          "net": "VDD_3V3",
+          "kind": "via"
+        },
+        {
+          "id": "71c3bc7f-4d4c-4ac5-a8cb-0518b8db03e5",
+          "net": "VDD_3V3",
+          "kind": "via"
+        },
+        {
+          "id": "526ab89a-61ec-4e49-9e9d-b3cb6b1c682a",
+          "net": "GND",
+          "kind": "via"
+        },
+        {
+          "id": "67a34e08-8462-4a86-aad4-0bc9f9ed3b60",
+          "net": "GND",
+          "kind": "via"
+        },
+        {
+          "id": "757c9c9b-b6d6-412c-a18c-086dd6660a7d",
+          "net": "GND",
+          "kind": "via"
+        },
+        {
+          "id": "7e4784e9-6036-427d-b907-9d110c5f64f0",
+          "net": "GND",
+          "kind": "via"
+        },
+        {
+          "id": "ec5de635-d564-4e95-a006-42ca3a6d5f33",
+          "net": "GND",
+          "kind": "via"
+        },
+        {
+          "id": "d42773e0-39a0-41fa-9766-1723e6371d25",
+          "net": "BAT_PACK_TBD",
+          "kind": "via"
+        },
+        {
+          "id": "10c6337f-1eb8-44de-a60b-6561f5e2d107",
+          "net": "USB_VBUS",
+          "kind": "via"
+        },
+        {
+          "id": "d560c583-3298-435f-9589-a5ca2a1494e7",
+          "net": "EPD_EN_TBD",
+          "kind": "via"
+        },
+        {
+          "id": "1731f856-6794-4e3c-ad05-b0e90ffb48b0",
+          "net": "EPD_VDD",
+          "kind": "via"
+        },
+        {
+          "id": "aecae048-7f72-48b6-8432-371977994cc6",
+          "net": "EPD_VDD",
+          "kind": "via"
+        },
+        {
+          "id": "27995948-3ddd-4519-934f-04352942c841",
+          "net": "EPD_VCOM",
+          "kind": "via"
+        },
+        {
+          "id": "e469d770-354f-498c-8686-679409b9603b",
+          "net": "EPD_VCOM",
+          "kind": "via"
+        },
+        {
+          "id": "817515da-2125-4afc-b88f-d96792f32a72",
+          "net": "EPD_VGH",
+          "kind": "via"
+        },
+        {
+          "id": "f085468c-8617-49d7-aeae-d42ebf59ae9d",
+          "net": "EPD_VGH",
+          "kind": "via"
+        },
+        {
+          "id": "3726ba4a-eedf-4c87-a62f-5929cba7508a",
+          "net": "NFC1_TBD",
+          "kind": "via"
+        },
+        {
+          "id": "a955d647-5571-4d34-a182-e04d73d770bd",
+          "net": "NFC1_TBD",
+          "kind": "via"
+        },
+        {
+          "id": "4ae5b951-4893-479a-8d64-33fe3244fb5d",
+          "net": "EPD_GDR",
+          "kind": "via"
+        },
+        {
+          "id": "ea5512cf-17f8-41a8-abed-d2af9c233253",
+          "net": "EPD_GDR",
+          "kind": "via"
+        },
+        {
+          "id": "016ba446-8507-4521-9e6f-62d951791743",
+          "net": "EPD_RESE",
+          "kind": "via"
+        },
+        {
+          "id": "f09575b7-9296-49bc-837b-2a8f1f858d89",
+          "net": "EPD_RESE",
+          "kind": "via"
+        },
+        {
+          "id": "7c924363-e823-479a-b626-11493d2c682b",
+          "net": "USB_DP_CONN",
+          "kind": "via"
+        },
+        {
+          "id": "446355ce-c8b5-4b91-a144-8cca758affe4",
+          "net": "EPD_SCK_TBD",
+          "kind": "via"
+        },
+        {
+          "id": "1e3cafe8-5cc2-4707-b747-ce5d3e68152a",
+          "net": "SWDIO",
+          "kind": "via"
+        },
+        {
+          "id": "5a8e2764-e85b-446b-8d75-4ef39d0f5564",
+          "net": "SWDIO",
+          "kind": "via"
+        }
+      ]
+    },
+    {
+      "source": "R4.1",
+      "target": "U5.2",
+      "net": "USB_DM_CONN",
+      "source_free_area_mm2": 4.261986677608677,
+      "source_free_bounds_mm": [
+        161.19501043370775,
+        113.29747887383508,
+        164.4965618901735,
+        116.6069
+      ],
+      "source_new_via_area_mm2": 0.0,
+      "target_reachable_with_current_other_copper": false,
+      "layer_transitions": [],
+      "source_boundary_objects": [
+        {
+          "id": "R3.1",
+          "net": "USB_DP_CONN",
+          "kind": "pad"
+        },
+        {
+          "id": "29e03d4d-659d-4f3f-9198-992ef602523d",
+          "net": "VDD_3V3",
+          "kind": "track"
+        },
+        {
+          "id": "3abb5f95-d374-42a2-9cd2-9a3a2ce77526",
+          "net": "VDD_3V3",
+          "kind": "track"
+        },
+        {
+          "id": "49db0b25-33b1-4b1a-8638-a1d71fa76591",
+          "net": "VDD_3V3",
+          "kind": "track"
+        },
+        {
+          "id": "ed8ae29b-e83a-4682-9486-ff87cd4b0063",
+          "net": "VDD_3V3",
+          "kind": "track"
+        },
+        {
+          "id": "66400e71-11d5-4689-bf98-6e1afe7cec16",
+          "net": "USB_DP_CONN",
+          "kind": "track"
+        },
+        {
+          "id": "d3c952e5-19c6-46f8-8e23-03dd18ddfc2c",
+          "net": "USB_DP_CONN",
+          "kind": "track"
+        },
+        {
+          "id": "e64e7b6e-eadf-4b4d-bb8e-a64a4573e89c",
+          "net": "USB_DP_CONN",
+          "kind": "track"
+        },
+        {
+          "id": "3a2cafb9-5a8e-45d1-95b0-3600c2311907",
+          "net": "EPD_MOSI_TBD",
+          "kind": "track"
+        },
+        {
+          "id": "af1b5b56-684d-45c8-bc10-43db1e11c867",
+          "net": "EPD_MOSI_TBD",
+          "kind": "via"
+        }
+      ]
+    }
+  ]
+}

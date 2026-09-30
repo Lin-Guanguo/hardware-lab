@@ -1,0 +1,56 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-29T14:19:28",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.6",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/380ad5a3-8eb2-49fc-af4c-72ec64842382",
+            "violations": []
+        },
+        {
+            "path": "/01 USB and power/",
+            "uuid_path": "/380ad5a3-8eb2-49fc-af4c-72ec64842382/3e66ddaa-50ee-4203-9f5f-d42f09003d1c",
+            "violations": []
+        },
+        {
+            "path": "/02 MCU and controls/",
+            "uuid_path": "/380ad5a3-8eb2-49fc-af4c-72ec64842382/b4f166ce-a08d-4e4b-8d6d-1c7a972ad2b2",
+            "violations": []
+        },
+        {
+            "path": "/03 Display power and connector/",
+            "uuid_path": "/380ad5a3-8eb2-49fc-af4c-72ec64842382/e42874ab-d32a-4f7b-9177-e53dc62ffb7c",
+            "violations": []
+        },
+        {
+            "path": "/04 USB ESD and interfaces/",
+            "uuid_path": "/380ad5a3-8eb2-49fc-af4c-72ec64842382/2911d89d-0e5a-4d46-b5a7-df9bc3ddb760",
+            "violations": []
+        }
+    ],
+    "source": "NFC-Card-V4.kicad_sch"
+}

@@ -1,0 +1,62 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "description": "Place display output bypasses in J2 pin order on its west side, outside the screen and NFC exclusions",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase2/display-cap-west-ipc.json",
+  "placements": {
+    "C22": [
+      158.5,
+      83.2,
+      180
+    ],
+    "C21": [
+      158.5,
+      85.4,
+      180
+    ],
+    "C20": [
+      158.5,
+      87.6,
+      180
+    ],
+    "C19": [
+      158.5,
+      89.8,
+      180
+    ],
+    "C18": [
+      158.5,
+      92,
+      180
+    ],
+    "C17": [
+      158.5,
+      94.2,
+      180
+    ],
+    "C16": [
+      158.5,
+      96.4,
+      180
+    ],
+    "C15": [
+      158.5,
+      98.6,
+      180
+    ],
+    "C14": [
+      158.5,
+      100.8,
+      180
+    ],
+    "R18": [
+      153,
+      96.5,
+      -90
+    ],
+    "R16": [
+      175.5,
+      89.9,
+      0
+    ]
+  }
+}

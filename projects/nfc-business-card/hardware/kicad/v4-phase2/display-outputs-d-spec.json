@@ -1,0 +1,730 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "description": "Connect the complete J2 output-bypass bank and BUSY bias with retained native spacing",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase2/display-outputs-ipc.json",
+  "paths": [
+    {
+      "name": "C22.1 to J2.24",
+      "net": "EPD_VCOM",
+      "layer": "F.Cu",
+      "width": 0.2,
+      "through": [
+        "C22.1",
+        "J2.24"
+      ],
+      "bounds": [
+        150,
+        81,
+        186,
+        104
+      ]
+    },
+    {
+      "name": "C21.1 to J2.23",
+      "net": "EPD_VGL",
+      "layer": "F.Cu",
+      "width": 0.2,
+      "through": [
+        "C21.1",
+        "J2.23"
+      ],
+      "bounds": [
+        150,
+        81,
+        186,
+        104
+      ]
+    },
+    {
+      "name": "C20.1 to J2.22",
+      "net": "EPD_VSNH",
+      "layer": "F.Cu",
+      "width": 0.2,
+      "through": [
+        "C20.1",
+        "J2.22"
+      ],
+      "bounds": [
+        150,
+        81,
+        186,
+        104
+      ]
+    },
+    {
+      "name": "C19.1 to J2.20",
+      "net": "EPD_VSPH",
+      "layer": "F.Cu",
+      "width": 0.2,
+      "through": [
+        "C19.1",
+        "J2.20"
+      ],
+      "bounds": [
+        150,
+        81,
+        186,
+        104
+      ]
+    },
+    {
+      "name": "C18.1 to J2.19",
+      "net": "EPD_VSNL2",
+      "layer": "F.Cu",
+      "width": 0.2,
+      "through": [
+        "C18.1",
+        "J2.19"
+      ],
+      "bounds": [
+        150,
+        81,
+        186,
+        104
+      ]
+    },
+    {
+      "name": "C17.1 to J2.18",
+      "net": "EPD_VSNL1",
+      "layer": "F.Cu",
+      "width": 0.2,
+      "through": [
+        "C17.1",
+        "J2.18"
+      ],
+      "bounds": [
+        150,
+        81,
+        186,
+        104
+      ]
+    },
+    {
+      "name": "C16.1 to J2.16",
+      "net": "EPD_VSPL2",
+      "layer": "F.Cu",
+      "width": 0.2,
+      "through": [
+        "C16.1",
+        "J2.16"
+      ],
+      "bounds": [
+        150,
+        81,
+        186,
+        104
+      ]
+    },
+    {
+      "name": "C15.1 to J2.5",
+      "net": "EPD_VSPL1",
+      "layer": "F.Cu",
+      "width": 0.2,
+      "through": [
+        "C15.1",
+        "J2.5"
+      ],
+      "bounds": [
+        150,
+        81,
+        186,
+        104
+      ]
+    },
+    {
+      "name": "C14.1 to J2.4",
+      "net": "EPD_VDDL",
+      "layer": "F.Cu",
+      "width": 0.2,
+      "through": [
+        "C14.1",
+        "J2.4"
+      ],
+      "bounds": [
+        150,
+        81,
+        186,
+        104
+      ]
+    },
+    {
+      "name": "C12.1 to R16.1",
+      "net": "EPD_VPH",
+      "layer": "F.Cu",
+      "width": 0.2,
+      "through": [
+        "C12.1",
+        "R16.1"
+      ],
+      "bounds": [
+        150,
+        81,
+        186,
+        104
+      ]
+    },
+    {
+      "name": "R16.2 to J2.21",
+      "net": "EPD_VGH",
+      "layer": "F.Cu",
+      "width": 0.2,
+      "through": [
+        "R16.2",
+        "J2.21"
+      ],
+      "bounds": [
+        150,
+        81,
+        186,
+        104
+      ]
+    },
+    {
+      "name": "C13.1 to J2.23",
+      "net": "EPD_VGL",
+      "layer": "F.Cu",
+      "width": 0.2,
+      "through": [
+        "C13.1",
+        "J2.23"
+      ],
+      "bounds": [
+        150,
+        81,
+        186,
+        104
+      ]
+    },
+    {
+      "name": "J2.9 to R18.2",
+      "net": "EPD_BUSY_TBD",
+      "layer": "F.Cu",
+      "width": 0.2,
+      "through": [
+        "J2.9",
+        "R18.2"
+      ],
+      "bounds": [
+        150,
+        81,
+        186,
+        104
+      ]
+    },
+    {
+      "name": "J2.17 to C17.2",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.2,
+      "through": [
+        "J2.17",
+        "C17.2"
+      ],
+      "bounds": [
+        150,
+        81,
+        186,
+        104
+      ]
+    },
+    {
+      "name": "C14 ground bus",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "C14.2",
+        "C15.2"
+      ],
+      "bounds": [
+        155,
+        81,
+        159,
+        102
+      ]
+    },
+    {
+      "name": "C16 ground bus",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "C16.2",
+        "C17.2"
+      ],
+      "bounds": [
+        155,
+        81,
+        159,
+        102
+      ]
+    },
+    {
+      "name": "C17 ground bus",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "C17.2",
+        "C18.2"
+      ],
+      "bounds": [
+        155,
+        81,
+        159,
+        102
+      ]
+    },
+    {
+      "name": "C18 ground bus",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "C18.2",
+        "C19.2"
+      ],
+      "bounds": [
+        155,
+        81,
+        159,
+        102
+      ]
+    },
+    {
+      "name": "C19 ground bus",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "C19.2",
+        "C20.2"
+      ],
+      "bounds": [
+        155,
+        81,
+        159,
+        102
+      ]
+    },
+    {
+      "name": "C20 ground bus",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "C20.2",
+        "C21.2"
+      ],
+      "bounds": [
+        155,
+        81,
+        159,
+        102
+      ]
+    },
+    {
+      "name": "C21 ground bus",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "C21.2",
+        "C22.2"
+      ],
+      "bounds": [
+        155,
+        81,
+        159,
+        102
+      ]
+    },
+    {
+      "name": "C22.2 ground stitch",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "C22.2",
+        [
+          155.8,
+          84.5
+        ]
+      ],
+      "bounds": [
+        154,
+        81,
+        159,
+        102
+      ]
+    },
+    {
+      "name": "C17.2 ground stitch",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "C17.2",
+        [
+          155.8,
+          93
+        ]
+      ],
+      "bounds": [
+        154,
+        81,
+        159,
+        102
+      ]
+    },
+    {
+      "name": "C14.2 ground stitch",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "C14.2",
+        [
+          155.8,
+          102.2
+        ]
+      ],
+      "bounds": [
+        154,
+        81,
+        159,
+        104
+      ]
+    },
+    {
+      "name": "EPD supply FPC escape",
+      "net": "EPD_VDD",
+      "layer": "F.Cu",
+      "width": 0.2,
+      "through": [
+        "J2.15",
+        [
+          168.2,
+          93.3
+        ]
+      ],
+      "bounds": [
+        150,
+        81,
+        186,
+        108
+      ]
+    },
+    {
+      "name": "EPD supply from switch",
+      "net": "EPD_VDD",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "U4.6",
+        [
+          179.1,
+          98.2
+        ]
+      ],
+      "bounds": [
+        150,
+        81,
+        186,
+        108
+      ]
+    },
+    {
+      "name": "EPD supply corridor",
+      "net": "EPD_VDD",
+      "layer": "B.Cu",
+      "width": 0.3,
+      "through": [
+        [
+          179.1,
+          98.2
+        ],
+        [
+          169.8,
+          93.3
+        ],
+        [
+          168.2,
+          93.3
+        ]
+      ],
+      "bounds": [
+        150,
+        81,
+        186,
+        108
+      ]
+    },
+    {
+      "name": "BUSY pullup rail",
+      "net": "EPD_VDD",
+      "layer": "B.Cu",
+      "width": 0.2,
+      "through": [
+        [
+          168.2,
+          93.3
+        ],
+        [
+          151.5,
+          95.75
+        ]
+      ],
+      "bounds": [
+        150,
+        81,
+        186,
+        108
+      ]
+    },
+    {
+      "name": "BUSY pullup endpoint",
+      "net": "EPD_VDD",
+      "layer": "F.Cu",
+      "width": 0.2,
+      "through": [
+        [
+          151.5,
+          95.75
+        ],
+        "R18.1"
+      ],
+      "bounds": [
+        150,
+        81,
+        186,
+        108
+      ]
+    },
+    {
+      "name": "BS0 FPC escape",
+      "net": "EPD_BS0",
+      "layer": "F.Cu",
+      "width": 0.2,
+      "through": [
+        "J2.8",
+        [
+          163,
+          98.3
+        ]
+      ],
+      "bounds": [
+        150,
+        81,
+        186,
+        108
+      ]
+    },
+    {
+      "name": "BS0 static strap",
+      "net": "EPD_BS0",
+      "layer": "B.Cu",
+      "width": 0.2,
+      "through": [
+        [
+          163,
+          98.3
+        ],
+        [
+          152.3,
+          100.8
+        ]
+      ],
+      "bounds": [
+        150,
+        81,
+        186,
+        108
+      ]
+    },
+    {
+      "name": "BS0 resistor escape",
+      "net": "EPD_BS0",
+      "layer": "F.Cu",
+      "width": 0.2,
+      "through": [
+        [
+          152.3,
+          100.8
+        ],
+        "R17.1"
+      ],
+      "bounds": [
+        150,
+        81,
+        186,
+        108
+      ]
+    },
+    {
+      "name": "BS0 ground return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "through": [
+        "R17.2",
+        "C14.2"
+      ],
+      "bounds": [
+        150,
+        81,
+        186,
+        108
+      ]
+    },
+    {
+      "name": "GDR control",
+      "net": "EPD_GDR",
+      "layer": "F.Cu",
+      "width": 0.2,
+      "through": [
+        "J2.2",
+        "R14.1",
+        "Q1.1"
+      ],
+      "bounds": [
+        150,
+        81,
+        186,
+        108
+      ]
+    },
+    {
+      "name": "RESE left escape",
+      "net": "EPD_RESE",
+      "layer": "F.Cu",
+      "width": 0.2,
+      "through": [
+        "J2.3",
+        [
+          170,
+          102.5
+        ]
+      ],
+      "bounds": [
+        150,
+        81,
+        186,
+        108
+      ]
+    },
+    {
+      "name": "RESE crosses SW locally",
+      "net": "EPD_RESE",
+      "layer": "B.Cu",
+      "width": 0.2,
+      "through": [
+        [
+          170,
+          102.5
+        ],
+        [
+          172.6,
+          102.8
+        ]
+      ],
+      "bounds": [
+        169,
+        101,
+        174,
+        104
+      ]
+    },
+    {
+      "name": "RESE source endpoint",
+      "net": "EPD_RESE",
+      "layer": "F.Cu",
+      "width": 0.2,
+      "through": [
+        [
+          172.6,
+          102.8
+        ],
+        "Q1.2"
+      ],
+      "bounds": [
+        172,
+        101,
+        175,
+        105
+      ]
+    }
+  ],
+  "vias": [
+    {
+      "net": "GND",
+      "at": [
+        155.8,
+        84.5
+      ]
+    },
+    {
+      "net": "GND",
+      "at": [
+        155.8,
+        93.0
+      ]
+    },
+    {
+      "net": "GND",
+      "at": [
+        155.8,
+        102.2
+      ]
+    },
+    {
+      "net": "EPD_VDD",
+      "at": [
+        168.2,
+        93.3
+      ]
+    },
+    {
+      "net": "EPD_VDD",
+      "at": [
+        151.5,
+        95.75
+      ]
+    },
+    {
+      "net": "EPD_VDD",
+      "at": [
+        179.1,
+        98.2
+      ]
+    },
+    {
+      "net": "EPD_BS0",
+      "at": [
+        163,
+        98.3
+      ]
+    },
+    {
+      "net": "EPD_BS0",
+      "at": [
+        152.3,
+        100.8
+      ]
+    },
+    {
+      "net": "EPD_RESE",
+      "at": [
+        170,
+        102.5
+      ]
+    },
+    {
+      "net": "EPD_RESE",
+      "at": [
+        172.6,
+        102.8
+      ]
+    }
+  ]
+}

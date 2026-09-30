@@ -1,0 +1,32 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-option-a3-local/NFC-Card-V4.kicad_pcb",
+  "description": "A3 supply an explicit second C25 return at the cleared pad edge, retaining thermal rules",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-option-a3/c25-thermal-ipc.json",
+  "routes": [
+    {
+      "name": "C25 second explicit return through left pad edge",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          182.8,
+          117.5
+        ],
+        [
+          182,
+          117.5
+        ],
+        [
+          182,
+          118.45
+        ],
+        [
+          182.2,
+          118.65
+        ]
+      ]
+    }
+  ],
+  "failures": []
+}

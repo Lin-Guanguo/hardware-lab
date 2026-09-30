@@ -1,0 +1,1455 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase3/NFC-Card-V4.kicad_pcb",
+  "description": "Phase3 octilinear joint critical channels including SWD, screen, USB and local power loops",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase3/critical-apply.json",
+  "paths": [
+    {
+      "name": "C8.1 to U2.10",
+      "net": "USB_VBUS",
+      "width": 0.15,
+      "through": [
+        "C8.1",
+        "U2.10"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "C8.2 to U2.11",
+      "net": "GND",
+      "width": 0.3,
+      "through": [
+        "C8.2",
+        "U2.11"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "U2.5 to U2.11",
+      "net": "GND",
+      "width": 0.15,
+      "through": [
+        "U2.5",
+        "U2.11"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "C2.1 to U2.1",
+      "net": "SYS",
+      "width": 0.15,
+      "through": [
+        "C2.1",
+        "U2.1"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "C3.1 to U2.2",
+      "net": "BAT_PACK_TBD",
+      "width": 0.15,
+      "through": [
+        "C3.1",
+        "U2.2"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "C4.1 to U3.1",
+      "net": "SYS",
+      "width": 0.3,
+      "through": [
+        "C4.1",
+        "U3.1"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "U3.1 to U3.3",
+      "net": "SYS",
+      "width": 0.25,
+      "through": [
+        "U3.1",
+        "U3.3"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "C4.2 to U3.2",
+      "net": "GND",
+      "width": 0.3,
+      "through": [
+        "C4.2",
+        "U3.2"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "C5.1 to U3.5",
+      "net": "VDD_3V3",
+      "width": 0.3,
+      "through": [
+        "C5.1",
+        "U3.5"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "C5.2 to U3.2",
+      "net": "GND",
+      "width": 0.3,
+      "through": [
+        "C5.2",
+        "U3.2"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "C1.1 to U1.32",
+      "net": "USB_VBUS",
+      "width": 0.3,
+      "through": [
+        "C1.1",
+        "U1.32"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "C7.1 to U1.30",
+      "net": "VDD_3V3",
+      "width": 0.3,
+      "through": [
+        "C7.1",
+        "U1.30"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "C6.1 to U1.28",
+      "net": "VDD_3V3",
+      "width": 0.3,
+      "through": [
+        "C6.1",
+        "U1.28"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "C7.1 to C6.1",
+      "net": "VDD_3V3",
+      "width": 0.3,
+      "through": [
+        "C7.1",
+        "C6.1"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "C6.1 to C5.1",
+      "net": "VDD_3V3",
+      "width": 0.3,
+      "through": [
+        "C6.1",
+        "C5.1"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "C10.1 to L1.1",
+      "net": "EPD_VDD",
+      "width": 0.3,
+      "through": [
+        "C10.1",
+        "L1.1"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "L1.2 to Q1.3",
+      "net": "EPD_SW",
+      "width": 0.3,
+      "through": [
+        "L1.2",
+        "Q1.3"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "Q1.2 to R15.1",
+      "net": "EPD_RESE",
+      "width": 0.3,
+      "through": [
+        "Q1.2",
+        "R15.1"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "R15.2 to C10.2",
+      "net": "GND",
+      "width": 0.35,
+      "through": [
+        "R15.2",
+        "C10.2"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "L1.2 to D1.2",
+      "net": "EPD_SW",
+      "width": 0.3,
+      "through": [
+        "L1.2",
+        "D1.2"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "D1.1 to C12.1",
+      "net": "EPD_VPH",
+      "width": 0.3,
+      "through": [
+        "D1.1",
+        "C12.1"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "D1.2 to C11.1",
+      "net": "EPD_SW",
+      "width": 0.3,
+      "through": [
+        "D1.2",
+        "C11.1"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "C11.2 to D2.2",
+      "net": "EPD_PUMP",
+      "width": 0.3,
+      "through": [
+        "C11.2",
+        "D2.2"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "D2.2 to D3.1",
+      "net": "EPD_PUMP",
+      "width": 0.3,
+      "through": [
+        "D2.2",
+        "D3.1"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "D3.2 to C13.1",
+      "net": "EPD_VGL",
+      "width": 0.3,
+      "through": [
+        "D3.2",
+        "C13.1"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "U4.1 to C9.1",
+      "net": "VDD_3V3",
+      "width": 0.3,
+      "through": [
+        "U4.1",
+        "C9.1"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "U4.5 to U4.6",
+      "net": "EPD_VDD",
+      "width": 0.3,
+      "through": [
+        "U4.5",
+        "U4.6"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "U4.6 to C10.1",
+      "net": "EPD_VDD",
+      "width": 0.3,
+      "through": [
+        "U4.6",
+        "C10.1"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "J2.2 to Q1.1",
+      "net": "EPD_GDR",
+      "width": 0.15,
+      "through": [
+        "J2.2",
+        "Q1.1"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "Q1.1 to R14.1",
+      "net": "EPD_GDR",
+      "width": 0.15,
+      "through": [
+        "Q1.1",
+        "R14.1"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "U1.34 to R4.2",
+      "net": "USB_DM_MCU",
+      "width": 0.15,
+      "through": [
+        "U1.34",
+        "R4.2"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "bounds": [
+        163,
+        112.5,
+        171,
+        118
+      ]
+    },
+    {
+      "name": "U1.35 to R3.2",
+      "net": "USB_DP_MCU",
+      "width": 0.15,
+      "through": [
+        "U1.35",
+        "R3.2"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "bounds": [
+        163,
+        112.5,
+        171,
+        118
+      ]
+    },
+    {
+      "name": "J1.A4B9 to J1.B4A9",
+      "net": "USB_VBUS",
+      "width": 0.3,
+      "through": [
+        "J1.A4B9",
+        "J1.B4A9"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "J1.A4B9 to C8.1",
+      "net": "USB_VBUS",
+      "width": 0.35,
+      "through": [
+        "J1.A4B9",
+        "C8.1"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "C8.1 to C1.1",
+      "net": "USB_VBUS",
+      "width": 0.3,
+      "through": [
+        "C8.1",
+        "C1.1"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "C2.1 to C4.1",
+      "net": "SYS",
+      "width": 0.3,
+      "through": [
+        "C2.1",
+        "C4.1"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "C3.1 to BP.1",
+      "net": "BAT_PACK_TBD",
+      "width": 0.35,
+      "through": [
+        "C3.1",
+        "BP.1"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "C5.1 to C9.1",
+      "net": "VDD_3V3",
+      "width": 0.3,
+      "through": [
+        "C5.1",
+        "C9.1"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "J2.3 to Q1.2",
+      "net": "EPD_RESE",
+      "width": 0.15,
+      "through": [
+        "J2.3",
+        "Q1.2"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "C14.1 to J2.4",
+      "net": "EPD_VDDL",
+      "width": 0.2,
+      "through": [
+        "C14.1",
+        "J2.4"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "C15.1 to J2.5",
+      "net": "EPD_VSPL1",
+      "width": 0.2,
+      "through": [
+        "C15.1",
+        "J2.5"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "C16.1 to J2.16",
+      "net": "EPD_VSPL2",
+      "width": 0.2,
+      "through": [
+        "C16.1",
+        "J2.16"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "C17.1 to J2.18",
+      "net": "EPD_VSNL1",
+      "width": 0.2,
+      "through": [
+        "C17.1",
+        "J2.18"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "C18.1 to J2.19",
+      "net": "EPD_VSNL2",
+      "width": 0.2,
+      "through": [
+        "C18.1",
+        "J2.19"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "C19.1 to J2.20",
+      "net": "EPD_VSPH",
+      "width": 0.2,
+      "through": [
+        "C19.1",
+        "J2.20"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "C20.1 to J2.22",
+      "net": "EPD_VSNH",
+      "width": 0.2,
+      "through": [
+        "C20.1",
+        "J2.22"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "C21.1 to J2.23",
+      "net": "EPD_VGL",
+      "width": 0.2,
+      "through": [
+        "C21.1",
+        "J2.23"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "C22.1 to J2.24",
+      "net": "EPD_VCOM",
+      "width": 0.2,
+      "through": [
+        "C22.1",
+        "J2.24"
+      ],
+      "layers": [
+        "F.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "C12.1 to R16.1",
+      "net": "EPD_VPH",
+      "width": 0.2,
+      "through": [
+        "C12.1",
+        "R16.1"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "R16.2 to J2.21",
+      "net": "EPD_VGH",
+      "width": 0.2,
+      "through": [
+        "R16.2",
+        "J2.21"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "C13.1 to J2.23",
+      "net": "EPD_VGL",
+      "width": 0.2,
+      "through": [
+        "C13.1",
+        "J2.23"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "U4.6 to J2.15",
+      "net": "EPD_VDD",
+      "width": 0.2,
+      "through": [
+        "U4.6",
+        "J2.15"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "R18.1 to J2.15",
+      "net": "EPD_VDD",
+      "width": 0.2,
+      "through": [
+        "R18.1",
+        "J2.15"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "R18.2 to J2.9",
+      "net": "EPD_BUSY_TBD",
+      "width": 0.2,
+      "through": [
+        "R18.2",
+        "J2.9"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu"
+    },
+    {
+      "name": "U1.51 escape",
+      "net": "SWDIO",
+      "width": 0.15,
+      "through": [
+        "U1.51",
+        [
+          167.1,
+          122.934
+        ]
+      ],
+      "layer": "F.Cu"
+    },
+    {
+      "name": "U1.51 to TP4.1",
+      "net": "SWDIO",
+      "width": 0.15,
+      "through": [
+        [
+          167.1,
+          122.934
+        ],
+        "TP4.1"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "B.Cu",
+      "end_layer": "B.Cu",
+      "bounds": [
+        162.8,
+        80.5,
+        187,
+        125
+      ]
+    },
+    {
+      "name": "U1.53 escape",
+      "net": "SWDCLK",
+      "width": 0.15,
+      "through": [
+        "U1.53",
+        [
+          167.1,
+          123.734
+        ]
+      ],
+      "layer": "F.Cu"
+    },
+    {
+      "name": "U1.53 to TP3.1",
+      "net": "SWDCLK",
+      "width": 0.15,
+      "through": [
+        [
+          167.1,
+          123.734
+        ],
+        "TP3.1"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "B.Cu",
+      "end_layer": "B.Cu",
+      "bounds": [
+        162.8,
+        80.5,
+        187,
+        125
+      ]
+    },
+    {
+      "name": "U1.40 escape",
+      "net": "NRESET",
+      "width": 0.15,
+      "through": [
+        "U1.40",
+        [
+          170.4,
+          117.85
+        ]
+      ],
+      "layer": "F.Cu"
+    },
+    {
+      "name": "U1.40 to TP5.1",
+      "net": "NRESET",
+      "width": 0.15,
+      "through": [
+        [
+          170.4,
+          117.85
+        ],
+        "TP5.1"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "B.Cu",
+      "end_layer": "B.Cu",
+      "bounds": [
+        162.8,
+        80.5,
+        187,
+        125
+      ]
+    },
+    {
+      "name": "U1.36 escape",
+      "net": "EPD_SCK_TBD",
+      "width": 0.15,
+      "through": [
+        "U1.36",
+        [
+          170.4,
+          116.134
+        ]
+      ],
+      "layer": "F.Cu"
+    },
+    {
+      "name": "U1.36 to J2.13",
+      "net": "EPD_SCK_TBD",
+      "width": 0.15,
+      "through": [
+        [
+          170.4,
+          116.134
+        ],
+        "J2.13"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "B.Cu",
+      "end_layer": "F.Cu",
+      "bounds": [
+        160.5,
+        92,
+        180,
+        120
+      ]
+    },
+    {
+      "name": "U1.37 escape",
+      "net": "EPD_MOSI_TBD",
+      "width": 0.15,
+      "through": [
+        "U1.37",
+        [
+          166.9,
+          116.534
+        ]
+      ],
+      "layer": "F.Cu"
+    },
+    {
+      "name": "U1.37 to J2.14",
+      "net": "EPD_MOSI_TBD",
+      "width": 0.15,
+      "through": [
+        [
+          166.9,
+          116.534
+        ],
+        "J2.14"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "B.Cu",
+      "end_layer": "F.Cu",
+      "bounds": [
+        160.5,
+        92,
+        180,
+        120
+      ]
+    },
+    {
+      "name": "U1.38 escape",
+      "net": "EPD_CS_N_TBD",
+      "width": 0.15,
+      "through": [
+        "U1.38",
+        [
+          170.4,
+          117.0
+        ]
+      ],
+      "layer": "F.Cu"
+    },
+    {
+      "name": "U1.38 to J2.12",
+      "net": "EPD_CS_N_TBD",
+      "width": 0.15,
+      "through": [
+        [
+          170.4,
+          117.0
+        ],
+        "J2.12"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "B.Cu",
+      "end_layer": "F.Cu",
+      "bounds": [
+        160.5,
+        92,
+        180,
+        120
+      ]
+    },
+    {
+      "name": "U1.39 escape",
+      "net": "EPD_DC_TBD",
+      "width": 0.15,
+      "through": [
+        "U1.39",
+        [
+          166.9,
+          117.334
+        ]
+      ],
+      "layer": "F.Cu"
+    },
+    {
+      "name": "U1.39 to J2.11",
+      "net": "EPD_DC_TBD",
+      "width": 0.15,
+      "through": [
+        [
+          166.9,
+          117.334
+        ],
+        "J2.11"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "B.Cu",
+      "end_layer": "F.Cu",
+      "bounds": [
+        160.5,
+        92,
+        180,
+        120
+      ]
+    },
+    {
+      "name": "U1.41 escape",
+      "net": "EPD_RESET_N_TBD",
+      "width": 0.15,
+      "through": [
+        "U1.41",
+        [
+          166.9,
+          118.134
+        ]
+      ],
+      "layer": "F.Cu"
+    },
+    {
+      "name": "U1.41 to J2.10",
+      "net": "EPD_RESET_N_TBD",
+      "width": 0.15,
+      "through": [
+        [
+          166.9,
+          118.134
+        ],
+        "J2.10"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "B.Cu",
+      "end_layer": "F.Cu",
+      "bounds": [
+        160.5,
+        92,
+        180,
+        120
+      ]
+    },
+    {
+      "name": "U1.24 escape",
+      "net": "EPD_BUSY_TBD",
+      "width": 0.15,
+      "through": [
+        "U1.24",
+        [
+          173.001,
+          112.4
+        ]
+      ],
+      "layer": "F.Cu"
+    },
+    {
+      "name": "U1.24 to J2.9",
+      "net": "EPD_BUSY_TBD",
+      "width": 0.15,
+      "through": [
+        [
+          173.001,
+          112.4
+        ],
+        "J2.9"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "B.Cu",
+      "end_layer": "F.Cu",
+      "bounds": [
+        160.5,
+        92,
+        180,
+        120
+      ]
+    },
+    {
+      "name": "R3.1 to U5.1",
+      "net": "USB_DP_CONN",
+      "width": 0.15,
+      "through": [
+        "R3.1",
+        "U5.1"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "bounds": [
+        162,
+        101.5,
+        183,
+        118
+      ]
+    },
+    {
+      "name": "R4.1 to U5.2",
+      "net": "USB_DM_CONN",
+      "width": 0.15,
+      "through": [
+        "R4.1",
+        "U5.2"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "bounds": [
+        162,
+        101.5,
+        183,
+        118
+      ]
+    },
+    {
+      "name": "J1.A6 to J1.B6",
+      "net": "USB_DP_CONN",
+      "width": 0.15,
+      "through": [
+        "J1.A6",
+        "J1.B6"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "bounds": [
+        178,
+        99.5,
+        186.4,
+        110.5
+      ]
+    },
+    {
+      "name": "J1.A7 escape",
+      "net": "USB_DM_CONN",
+      "width": 0.15,
+      "through": [
+        "J1.A7",
+        [
+          184.85,
+          103.65
+        ]
+      ],
+      "layer": "F.Cu"
+    },
+    {
+      "name": "J1.B7 escape",
+      "net": "USB_DM_CONN",
+      "width": 0.15,
+      "through": [
+        "J1.B7",
+        [
+          184.85,
+          104.85
+        ]
+      ],
+      "layer": "F.Cu"
+    },
+    {
+      "name": "J1.A7 to J1.B7",
+      "net": "USB_DM_CONN",
+      "width": 0.15,
+      "through": [
+        [
+          184.85,
+          103.65
+        ],
+        [
+          184.85,
+          104.85
+        ]
+      ],
+      "layers": [
+        "B.Cu"
+      ],
+      "start_layer": "B.Cu",
+      "end_layer": "B.Cu",
+      "bounds": [
+        178,
+        99.5,
+        186.4,
+        110.5
+      ]
+    },
+    {
+      "name": "J1.A6 to U5.1",
+      "net": "USB_DP_CONN",
+      "width": 0.15,
+      "through": [
+        "J1.A6",
+        "U5.1"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "bounds": [
+        178,
+        99.5,
+        186.4,
+        110.5
+      ]
+    },
+    {
+      "name": "J1.A7 to U5.2",
+      "net": "USB_DM_CONN",
+      "width": 0.15,
+      "through": [
+        [
+          184.85,
+          103.65
+        ],
+        "U5.2"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "B.Cu",
+      "end_layer": "F.Cu",
+      "bounds": [
+        178,
+        99.5,
+        186.4,
+        110.5
+      ]
+    },
+    {
+      "name": "J1.A5 to U6.1",
+      "net": "USB_CC1",
+      "width": 0.15,
+      "through": [
+        "J1.A5",
+        "U6.1"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "bounds": [
+        178,
+        99.5,
+        186.4,
+        110.5
+      ]
+    },
+    {
+      "name": "J1.B5 to U6.2",
+      "net": "USB_CC2",
+      "width": 0.15,
+      "through": [
+        "J1.B5",
+        "U6.2"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "bounds": [
+        178,
+        99.5,
+        186.4,
+        110.5
+      ]
+    },
+    {
+      "name": "U6.1 to R1.1",
+      "net": "USB_CC1",
+      "width": 0.15,
+      "through": [
+        "U6.1",
+        "R1.1"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "bounds": [
+        178,
+        99.5,
+        186.4,
+        110.5
+      ]
+    },
+    {
+      "name": "U6.2 to R2.1",
+      "net": "USB_CC2",
+      "width": 0.15,
+      "through": [
+        "U6.2",
+        "R2.1"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "bounds": [
+        178,
+        99.5,
+        186.4,
+        110.5
+      ]
+    }
+  ],
+  "vias": [
+    {
+      "name": "U1.36 escape",
+      "net": "EPD_SCK_TBD",
+      "at": [
+        170.4,
+        116.134
+      ]
+    },
+    {
+      "name": "U1.37 escape",
+      "net": "EPD_MOSI_TBD",
+      "at": [
+        166.9,
+        116.534
+      ]
+    },
+    {
+      "name": "U1.38 escape",
+      "net": "EPD_CS_N_TBD",
+      "at": [
+        170.4,
+        117.0
+      ]
+    },
+    {
+      "name": "U1.39 escape",
+      "net": "EPD_DC_TBD",
+      "at": [
+        166.9,
+        117.334
+      ]
+    },
+    {
+      "name": "U1.41 escape",
+      "net": "EPD_RESET_N_TBD",
+      "at": [
+        166.9,
+        118.134
+      ]
+    },
+    {
+      "name": "U1.24 escape",
+      "net": "EPD_BUSY_TBD",
+      "at": [
+        173.001,
+        112.4
+      ]
+    },
+    {
+      "name": "U1.51 escape",
+      "net": "SWDIO",
+      "at": [
+        167.1,
+        122.934
+      ]
+    },
+    {
+      "name": "U1.53 escape",
+      "net": "SWDCLK",
+      "at": [
+        167.1,
+        123.734
+      ]
+    },
+    {
+      "name": "U1.40 escape",
+      "net": "NRESET",
+      "at": [
+        170.4,
+        117.85
+      ]
+    },
+    {
+      "name": "J1.A7 escape",
+      "net": "USB_DM_CONN",
+      "at": [
+        184.85,
+        103.65
+      ]
+    },
+    {
+      "name": "J1.B7 escape",
+      "net": "USB_DM_CONN",
+      "at": [
+        184.85,
+        104.85
+      ]
+    }
+  ]
+}

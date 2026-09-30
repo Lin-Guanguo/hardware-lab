@@ -1,0 +1,17 @@
+{
+  "plan": "projects/nfc-business-card/hardware/kicad/v4-option-a3-local/ts-pg-rollback-plan.json",
+  "board": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4-option-a3-local/NFC-Card-V4.kicad_pcb",
+  "before": {
+    "tracks": 680,
+    "vias": 101
+  },
+  "after": {
+    "tracks": 671,
+    "vias": 97
+  },
+  "created_ids": [
+    "9839fcf9-a88a-4770-b5b4-7ebdb9aa7755",
+    "845ab434-cdc7-46de-90af-d78b20694d83",
+    "3aba8e42-700f-4bdd-969c-51cd12834510"
+  ]
+}

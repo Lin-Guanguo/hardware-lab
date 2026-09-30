@@ -1,0 +1,29 @@
+{
+  "copper_thickness_mm_assumed": 0.035,
+  "resistivity_ohm_mm2_per_mm_assumed_20C": 1.724e-05,
+  "BAT_lengths_mm_by_width": {
+    ".5": 39.757711383239204,
+    ".35": 1.8071067811865476,
+    ".15": 1.2156854249492381
+  },
+  "BN_explicit_length_mm": 23.327357820829853,
+  "BAT_trace_ohms": 0.04570233095849346,
+  "BN_explicit_trace_ohms": 0.022980779933206096,
+  "excluded": [
+    "via barrels",
+    "ground pours",
+    "contacts",
+    "temperature and process tolerances"
+  ],
+  "not_a_loop_resistance_upper_bound": true,
+  "current_examples_not_load_limits": {
+    "0.1": {
+      "drop_V_known_traces": 0.0068683110891699555,
+      "power_W_known_traces": 0.0006868311089169957
+    },
+    "0.2": {
+      "drop_V_known_traces": 0.013736622178339911,
+      "power_W_known_traces": 0.002747324435667983
+    }
+  }
+}

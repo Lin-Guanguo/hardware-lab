@@ -1,0 +1,23 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-option-a2/NFC-Card-V4.kicad_pcb",
+  "description": "A2 jointly free MCU control columns with local supply capacitor arrangement",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-option-a2/mcu-cap-group-ipc.json",
+  "remove_trial_ids": [],
+  "placements": {
+    "C6": [
+      171.8,
+      111.3,
+      180
+    ],
+    "C7": [
+      168.8,
+      109,
+      90
+    ],
+    "R19": [
+      172.5,
+      105.8,
+      0
+    ]
+  }
+}

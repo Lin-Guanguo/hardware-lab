@@ -1,0 +1,103 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "description": "DC uses one intentional bottom-layer crossing to share the power/control corridor",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase2/dc-crossing-ipc.json",
+  "vias": [
+    {
+      "net": "EPD_DC_TBD",
+      "at": [
+        166.3,
+        105.8
+      ]
+    },
+    {
+      "net": "EPD_DC_TBD",
+      "at": [
+        166.3,
+        109.6
+      ]
+    }
+  ],
+  "paths": [
+    {
+      "name": "DC upper",
+      "net": "EPD_DC_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "through": [
+        "J2.11",
+        [
+          170,
+          96.49
+        ],
+        [
+          170,
+          99
+        ],
+        [
+          167.3,
+          99
+        ],
+        [
+          167.3,
+          105
+        ],
+        [
+          166.3,
+          105.8
+        ]
+      ],
+      "bounds": [
+        164.5,
+        94,
+        171,
+        119
+      ]
+    },
+    {
+      "name": "DC crossing",
+      "net": "EPD_DC_TBD",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "through": [
+        [
+          166.3,
+          105.8
+        ],
+        [
+          166.3,
+          109.6
+        ]
+      ],
+      "bounds": [
+        164.5,
+        94,
+        171,
+        119
+      ]
+    },
+    {
+      "name": "DC lower",
+      "net": "EPD_DC_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "through": [
+        [
+          166.3,
+          109.6
+        ],
+        [
+          167.3,
+          110.3
+        ],
+        "U1.39"
+      ],
+      "bounds": [
+        164.5,
+        94,
+        171,
+        119
+      ]
+    }
+  ]
+}

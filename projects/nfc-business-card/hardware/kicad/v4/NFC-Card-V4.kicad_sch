@@ -1,0 +1,203 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "380ad5a3-8eb2-49fc-af4c-72ec64842382")
+	(paper "A4")
+	(title_block
+		(title "NFC Card V4 - phase 1 diagnostic")
+		(rev "V4 trial")
+		(comment 1 "NOT FOR FABRICATION - See kicad-v4-phase1.md")
+	)
+	(lib_symbols)
+	(sheet
+		(at 150 95)
+		(size 100 30)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "2911d89d-0e5a-4d46-b5a7-df9bc3ddb760")
+		(property "Sheetname" "04 USB ESD and interfaces"
+			(at 150 93 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "4_04 USB ESD and interfaces.kicad_sch"
+			(at 150 127 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "NFC-Card-V4"
+				(path "/380ad5a3-8eb2-49fc-af4c-72ec64842382"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 25 35)
+		(size 100 30)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "3e66ddaa-50ee-4203-9f5f-d42f09003d1c")
+		(property "Sheetname" "01 USB and power"
+			(at 25 33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "1_01 USB and power.kicad_sch"
+			(at 25 67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "NFC-Card-V4"
+				(path "/380ad5a3-8eb2-49fc-af4c-72ec64842382"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 150 35)
+		(size 100 30)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "b4f166ce-a08d-4e4b-8d6d-1c7a972ad2b2")
+		(property "Sheetname" "02 MCU and controls"
+			(at 150 33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "2_02 MCU and controls.kicad_sch"
+			(at 150 67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "NFC-Card-V4"
+				(path "/380ad5a3-8eb2-49fc-af4c-72ec64842382"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 25 95)
+		(size 100 30)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "e42874ab-d32a-4f7b-9177-e53dc62ffb7c")
+		(property "Sheetname" "03 Display power and connector"
+			(at 25 93 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "3_03 Display power and connector.kicad_sch"
+			(at 25 127 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "NFC-Card-V4"
+				(path "/380ad5a3-8eb2-49fc-af4c-72ec64842382"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

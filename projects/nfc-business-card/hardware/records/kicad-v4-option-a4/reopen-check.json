@@ -1,0 +1,10 @@
+{
+  "same_all_track_drc_items": true,
+  "counts": [
+    311,
+    10,
+    0
+  ],
+  "pcb_sha256": "caa488d45bfb44a3bc4dd0092b906b1e300a670136f19ad4009812d8d1afaa3c",
+  "native_project_files_byte_identical_after_gui_reopen_save": true
+}

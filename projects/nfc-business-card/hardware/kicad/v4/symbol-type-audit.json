@@ -1,0 +1,1290 @@
+[
+  {
+    "symbol": "TPD2EUSB30DRTR",
+    "pin": "1",
+    "name": "D+",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "TPD2EUSB30DRTR",
+    "pin": "2",
+    "name": "D-",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "TPD2EUSB30DRTR",
+    "pin": "3",
+    "name": "GND",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "0603WAF0000T5E",
+    "pin": "1",
+    "name": "1",
+    "imported": "input",
+    "type": "passive"
+  },
+  {
+    "symbol": "0603WAF0000T5E",
+    "pin": "2",
+    "name": "2",
+    "imported": "input",
+    "type": "passive"
+  },
+  {
+    "symbol": "0603WAF1002T5E",
+    "pin": "1",
+    "name": "1",
+    "imported": "input",
+    "type": "passive"
+  },
+  {
+    "symbol": "0603WAF1002T5E",
+    "pin": "2",
+    "name": "2",
+    "imported": "input",
+    "type": "passive"
+  },
+  {
+    "symbol": "0603WAF1003T5E",
+    "pin": "1",
+    "name": "1",
+    "imported": "input",
+    "type": "passive"
+  },
+  {
+    "symbol": "0603WAF1003T5E",
+    "pin": "2",
+    "name": "2",
+    "imported": "input",
+    "type": "passive"
+  },
+  {
+    "symbol": "0603WAF220KT5E",
+    "pin": "1",
+    "name": "1",
+    "imported": "input",
+    "type": "passive"
+  },
+  {
+    "symbol": "0603WAF220KT5E",
+    "pin": "2",
+    "name": "2",
+    "imported": "input",
+    "type": "passive"
+  },
+  {
+    "symbol": "0603WAF300KT5E",
+    "pin": "1",
+    "name": "1",
+    "imported": "input",
+    "type": "passive"
+  },
+  {
+    "symbol": "0603WAF300KT5E",
+    "pin": "2",
+    "name": "2",
+    "imported": "input",
+    "type": "passive"
+  },
+  {
+    "symbol": "CL21B105KBFNNNE",
+    "pin": "1",
+    "name": "1",
+    "imported": "input",
+    "type": "passive"
+  },
+  {
+    "symbol": "CL21B105KBFNNNE",
+    "pin": "2",
+    "name": "2",
+    "imported": "input",
+    "type": "passive"
+  },
+  {
+    "symbol": "CL21B475KAFNNNE",
+    "pin": "1",
+    "name": "1",
+    "imported": "input",
+    "type": "passive"
+  },
+  {
+    "symbol": "CL21B475KAFNNNE",
+    "pin": "2",
+    "name": "2",
+    "imported": "input",
+    "type": "passive"
+  },
+  {
+    "symbol": "FPC-05FB-24PH20",
+    "pin": "1",
+    "name": "1",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "FPC-05FB-24PH20",
+    "pin": "2",
+    "name": "2",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "FPC-05FB-24PH20",
+    "pin": "3",
+    "name": "3",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "FPC-05FB-24PH20",
+    "pin": "4",
+    "name": "4",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "FPC-05FB-24PH20",
+    "pin": "5",
+    "name": "5",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "FPC-05FB-24PH20",
+    "pin": "6",
+    "name": "6",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "FPC-05FB-24PH20",
+    "pin": "7",
+    "name": "7",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "FPC-05FB-24PH20",
+    "pin": "8",
+    "name": "8",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "FPC-05FB-24PH20",
+    "pin": "9",
+    "name": "9",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "FPC-05FB-24PH20",
+    "pin": "10",
+    "name": "10",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "FPC-05FB-24PH20",
+    "pin": "11",
+    "name": "11",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "FPC-05FB-24PH20",
+    "pin": "12",
+    "name": "12",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "FPC-05FB-24PH20",
+    "pin": "13",
+    "name": "13",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "FPC-05FB-24PH20",
+    "pin": "14",
+    "name": "14",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "FPC-05FB-24PH20",
+    "pin": "15",
+    "name": "15",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "FPC-05FB-24PH20",
+    "pin": "16",
+    "name": "16",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "FPC-05FB-24PH20",
+    "pin": "17",
+    "name": "17",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "FPC-05FB-24PH20",
+    "pin": "18",
+    "name": "18",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "FPC-05FB-24PH20",
+    "pin": "19",
+    "name": "19",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "FPC-05FB-24PH20",
+    "pin": "20",
+    "name": "20",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "FPC-05FB-24PH20",
+    "pin": "21",
+    "name": "21",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "FPC-05FB-24PH20",
+    "pin": "22",
+    "name": "22",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "FPC-05FB-24PH20",
+    "pin": "23",
+    "name": "23",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "FPC-05FB-24PH20",
+    "pin": "24",
+    "name": "24",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "FPC-05FB-24PH20",
+    "pin": "25",
+    "name": "25",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "FPC-05FB-24PH20",
+    "pin": "26",
+    "name": "26",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "MBR0530T1G",
+    "pin": "1",
+    "name": "C",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "MBR0530T1G",
+    "pin": "2",
+    "name": "A",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "NRH3010T470MN",
+    "pin": "1",
+    "name": "1",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "NRH3010T470MN",
+    "pin": "2",
+    "name": "2",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "SI1308EDL-T1-GE3",
+    "pin": "1",
+    "name": "G",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "SI1308EDL-T1-GE3",
+    "pin": "2",
+    "name": "S",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "SI1308EDL-T1-GE3",
+    "pin": "3",
+    "name": "D",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "TPS22919DCKT",
+    "pin": "1",
+    "name": "IN",
+    "imported": "unspecified",
+    "type": "power_in"
+  },
+  {
+    "symbol": "TPS22919DCKT",
+    "pin": "2",
+    "name": "GND",
+    "imported": "unspecified",
+    "type": "power_in"
+  },
+  {
+    "symbol": "TPS22919DCKT",
+    "pin": "3",
+    "name": "ON",
+    "imported": "unspecified",
+    "type": "input"
+  },
+  {
+    "symbol": "TPS22919DCKT",
+    "pin": "4",
+    "name": "NC",
+    "imported": "unspecified",
+    "type": "no_connect"
+  },
+  {
+    "symbol": "TPS22919DCKT",
+    "pin": "5",
+    "name": "QOD",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "TPS22919DCKT",
+    "pin": "6",
+    "name": "VOUT",
+    "imported": "unspecified",
+    "type": "power_out"
+  },
+  {
+    "symbol": "0603WAF1002T5E",
+    "pin": "1",
+    "name": "1",
+    "imported": "input",
+    "type": "passive"
+  },
+  {
+    "symbol": "0603WAF1002T5E",
+    "pin": "2",
+    "name": "2",
+    "imported": "input",
+    "type": "passive"
+  },
+  {
+    "symbol": "0603WAF1004T5E",
+    "pin": "1",
+    "name": "1",
+    "imported": "input",
+    "type": "passive"
+  },
+  {
+    "symbol": "0603WAF1004T5E",
+    "pin": "2",
+    "name": "2",
+    "imported": "input",
+    "type": "passive"
+  },
+  {
+    "symbol": "0603WAF5101T5E",
+    "pin": "1",
+    "name": "1",
+    "imported": "input",
+    "type": "passive"
+  },
+  {
+    "symbol": "0603WAF5101T5E",
+    "pin": "2",
+    "name": "2",
+    "imported": "input",
+    "type": "passive"
+  },
+  {
+    "symbol": "AO3401A",
+    "pin": "1",
+    "name": "G",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "AO3401A",
+    "pin": "2",
+    "name": "S",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "AO3401A",
+    "pin": "3",
+    "name": "D",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "BQ25186DLHR_C44639442",
+    "pin": "1",
+    "name": "SYS",
+    "imported": "unspecified",
+    "type": "power_out"
+  },
+  {
+    "symbol": "BQ25186DLHR_C44639442",
+    "pin": "2",
+    "name": "BAT",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "BQ25186DLHR_C44639442",
+    "pin": "3",
+    "name": "PG#/GPO",
+    "imported": "unspecified",
+    "type": "open_collector"
+  },
+  {
+    "symbol": "BQ25186DLHR_C44639442",
+    "pin": "4",
+    "name": "CE#",
+    "imported": "unspecified",
+    "type": "input"
+  },
+  {
+    "symbol": "BQ25186DLHR_C44639442",
+    "pin": "5",
+    "name": "GND",
+    "imported": "unspecified",
+    "type": "power_in"
+  },
+  {
+    "symbol": "BQ25186DLHR_C44639442",
+    "pin": "6",
+    "name": "TS/MR",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "BQ25186DLHR_C44639442",
+    "pin": "7",
+    "name": "SDA",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "BQ25186DLHR_C44639442",
+    "pin": "8",
+    "name": "SCL",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "BQ25186DLHR_C44639442",
+    "pin": "9",
+    "name": "INT#",
+    "imported": "unspecified",
+    "type": "open_collector"
+  },
+  {
+    "symbol": "BQ25186DLHR_C44639442",
+    "pin": "10",
+    "name": "IN",
+    "imported": "unspecified",
+    "type": "power_in"
+  },
+  {
+    "symbol": "BQ25186DLHR_C44639442",
+    "pin": "11",
+    "name": "THERMAL",
+    "imported": "unspecified",
+    "type": "power_in"
+  },
+  {
+    "symbol": "CC0603KRX7R9BB104",
+    "pin": "1",
+    "name": "1",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "CC0603KRX7R9BB104",
+    "pin": "2",
+    "name": "2",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "CL10A106KP8NNNC",
+    "pin": "1",
+    "name": "1",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "CL10A106KP8NNNC",
+    "pin": "2",
+    "name": "2",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "CL10A225KO8NNNC",
+    "pin": "1",
+    "name": "1",
+    "imported": "input",
+    "type": "passive"
+  },
+  {
+    "symbol": "CL10A225KO8NNNC",
+    "pin": "2",
+    "name": "2",
+    "imported": "input",
+    "type": "passive"
+  },
+  {
+    "symbol": "Ground-GND",
+    "pin": "1",
+    "name": "GND",
+    "imported": "power_in",
+    "type": "power_in"
+  },
+  {
+    "symbol": "RMC0603271%N",
+    "pin": "1",
+    "name": "1",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "RMC0603271%N",
+    "pin": "2",
+    "name": "2",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "SI1308EDL-T1-GE3",
+    "pin": "1",
+    "name": "G",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "SI1308EDL-T1-GE3",
+    "pin": "2",
+    "name": "S",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "SI1308EDL-T1-GE3",
+    "pin": "3",
+    "name": "D",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "TPS7A0233DBVR",
+    "pin": "1",
+    "name": "IN",
+    "imported": "unspecified",
+    "type": "power_in"
+  },
+  {
+    "symbol": "TPS7A0233DBVR",
+    "pin": "2",
+    "name": "GND",
+    "imported": "unspecified",
+    "type": "power_in"
+  },
+  {
+    "symbol": "TPS7A0233DBVR",
+    "pin": "3",
+    "name": "EN",
+    "imported": "unspecified",
+    "type": "input"
+  },
+  {
+    "symbol": "TPS7A0233DBVR",
+    "pin": "4",
+    "name": "NC",
+    "imported": "unspecified",
+    "type": "no_connect"
+  },
+  {
+    "symbol": "TPS7A0233DBVR",
+    "pin": "5",
+    "name": "OUT",
+    "imported": "unspecified",
+    "type": "power_out"
+  },
+  {
+    "symbol": "USB4500-03-0-A",
+    "pin": "17",
+    "name": "17",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "USB4500-03-0-A",
+    "pin": "18",
+    "name": "18",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "USB4500-03-0-A",
+    "pin": "19",
+    "name": "19",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "USB4500-03-0-A",
+    "pin": "20",
+    "name": "20",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "USB4500-03-0-A",
+    "pin": "A1B12",
+    "name": "GND",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "USB4500-03-0-A",
+    "pin": "A4B9",
+    "name": "VBUS",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "USB4500-03-0-A",
+    "pin": "A5",
+    "name": "CC1",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "USB4500-03-0-A",
+    "pin": "A6",
+    "name": "DP1",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "USB4500-03-0-A",
+    "pin": "A7",
+    "name": "DN1",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "USB4500-03-0-A",
+    "pin": "A8",
+    "name": "SBU1",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "USB4500-03-0-A",
+    "pin": "B1A12",
+    "name": "GND",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "USB4500-03-0-A",
+    "pin": "B4A9",
+    "name": "VBUS",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "USB4500-03-0-A",
+    "pin": "B5",
+    "name": "CC2",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "USB4500-03-0-A",
+    "pin": "B6",
+    "name": "DP2",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "USB4500-03-0-A",
+    "pin": "B7",
+    "name": "DN2",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "USB4500-03-0-A",
+    "pin": "B8",
+    "name": "SBU2",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "0603WAF1002T5E",
+    "pin": "1",
+    "name": "1",
+    "imported": "input",
+    "type": "passive"
+  },
+  {
+    "symbol": "0603WAF1002T5E",
+    "pin": "2",
+    "name": "2",
+    "imported": "input",
+    "type": "passive"
+  },
+  {
+    "symbol": "CC0603KRX7R9BB104",
+    "pin": "1",
+    "name": "1",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "CC0603KRX7R9BB104",
+    "pin": "2",
+    "name": "2",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "CL10A106KP8NNNC",
+    "pin": "1",
+    "name": "1",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "CL10A106KP8NNNC",
+    "pin": "2",
+    "name": "2",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "CL10A475KO8NNNC",
+    "pin": "1",
+    "name": "1",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "CL10A475KO8NNNC",
+    "pin": "2",
+    "name": "2",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "GRM1885C1H221JA01D",
+    "pin": "1",
+    "name": "1",
+    "imported": "input",
+    "type": "passive"
+  },
+  {
+    "symbol": "GRM1885C1H221JA01D",
+    "pin": "2",
+    "name": "2",
+    "imported": "input",
+    "type": "passive"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "1",
+    "name": "GND",
+    "imported": "unspecified",
+    "type": "power_in"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "2",
+    "name": "GND",
+    "imported": "unspecified",
+    "type": "power_in"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "3",
+    "name": "P1.10",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "4",
+    "name": "P1.11",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "5",
+    "name": "P1.12",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "6",
+    "name": "P1.13",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "7",
+    "name": "P1.14",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "8",
+    "name": "P1.15",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "9",
+    "name": "P0.03/AIN1",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "10",
+    "name": "P0.29/AIN5",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "11",
+    "name": "P0.02/AIN0",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "12",
+    "name": "P0.31/AIN7",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "13",
+    "name": "P0.28/AIN4",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "14",
+    "name": "P0.30/AIN",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "15",
+    "name": "GND",
+    "imported": "unspecified",
+    "type": "power_in"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "16",
+    "name": "P0.27",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "17",
+    "name": "P0.00/XL1",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "18",
+    "name": "P0.01/XL2",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "19",
+    "name": "P0.26",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "20",
+    "name": "P0.04/AIN2",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "21",
+    "name": "P0.05/AIN3",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "22",
+    "name": "P0.06",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "23",
+    "name": "P0.07/TRACECLK",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "24",
+    "name": "P0.08",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "25",
+    "name": "P1.08",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "26",
+    "name": "P1.09/TRACEDATA3",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "27",
+    "name": "P0.11/TRACEDATA2",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "28",
+    "name": "VDD",
+    "imported": "unspecified",
+    "type": "power_in"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "29",
+    "name": "P0.12/TRACEDATA1",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "30",
+    "name": "VDDH",
+    "imported": "unspecified",
+    "type": "power_in"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "31",
+    "name": "DCCH",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "32",
+    "name": "VBUS",
+    "imported": "unspecified",
+    "type": "power_in"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "33",
+    "name": "GND",
+    "imported": "unspecified",
+    "type": "power_in"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "34",
+    "name": "D-",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "35",
+    "name": "D+",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "36",
+    "name": "P0.14",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "37",
+    "name": "P0.13",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "38",
+    "name": "P0.16",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "39",
+    "name": "P0.15",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "40",
+    "name": "P0.18/nRESET",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "41",
+    "name": "P0.17",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "42",
+    "name": "P0.19",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "43",
+    "name": "P0.21",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "44",
+    "name": "P0.20",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "45",
+    "name": "P0.23",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "46",
+    "name": "P0.22",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "47",
+    "name": "P1.00/TRACEDATA0",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "48",
+    "name": "P0.24",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "49",
+    "name": "P0.25",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "50",
+    "name": "P1.02",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "51",
+    "name": "SWDIO",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "52",
+    "name": "P0.09/NFC1",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "53",
+    "name": "SWDCLK",
+    "imported": "unspecified",
+    "type": "input"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "54",
+    "name": "P0.10/NFC2",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "55",
+    "name": "GND",
+    "imported": "unspecified",
+    "type": "power_in"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "56",
+    "name": "P1.04",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "57",
+    "name": "P1.06",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "58",
+    "name": "P1.07",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "59",
+    "name": "P1.05",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "60",
+    "name": "P1.03",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "MDBT50Q-P1MV2",
+    "pin": "61",
+    "name": "P1.01",
+    "imported": "unspecified",
+    "type": "bidirectional"
+  },
+  {
+    "symbol": "SKQGABE010",
+    "pin": "1",
+    "name": "1",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "SKQGABE010",
+    "pin": "2",
+    "name": "2",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "SKQGABE010",
+    "pin": "3",
+    "name": "3",
+    "imported": "unspecified",
+    "type": "passive"
+  },
+  {
+    "symbol": "SKQGABE010",
+    "pin": "4",
+    "name": "4",
+    "imported": "unspecified",
+    "type": "passive"
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "plan": "projects/nfc-business-card/hardware/kicad/v4-phase2/west-dc-spec-plan.json",
+  "board": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "before": {
+    "tracks": 229,
+    "vias": 46
+  },
+  "after": {
+    "tracks": 241,
+    "vias": 49
+  },
+  "created_ids": [
+    "84864c1e-cf5a-4678-a1d9-5ba72f83f6c7",
+    "f3407a97-53c4-4f46-953a-5705a96f856a",
+    "d30c7e82-07d3-4647-b5be-d5a9772cc058",
+    "00bf0cab-3691-4fd4-a617-b7d4ff5cd4c7",
+    "6d437128-464a-450e-a85b-bee6412bed0a",
+    "c33f5389-afd6-41fb-a178-9a8b9855f310",
+    "e682b4fe-dbba-4af5-a978-37d823d0c191",
+    "c2b9b45b-246d-4cbf-b79a-0d5c51542dcc",
+    "c95711e7-e752-44a0-9f81-461ac0c7f356",
+    "722f3a9a-6e6c-4506-9c1d-eff7c708d9e5",
+    "6bf7e2c2-0c92-47f2-8b8a-479ec6c9db3b",
+    "729351f3-2bbd-49b6-83dc-c081bb5abb58",
+    "6293c290-3e97-4ca3-b965-5c73f19874aa",
+    "1607e6bd-af73-4ac6-9731-2bb8f59c1aa3",
+    "9df87af1-56b5-4bf6-a4b0-20955065b4ae"
+  ]
+}

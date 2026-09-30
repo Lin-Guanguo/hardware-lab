@@ -1,0 +1,17 @@
+{
+  "plan": "projects/nfc-business-card/hardware/kicad/v4-option-a3-local/c25-thermal-plan.json",
+  "board": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4-option-a3-local/NFC-Card-V4.kicad_pcb",
+  "before": {
+    "tracks": 668,
+    "vias": 97
+  },
+  "after": {
+    "tracks": 671,
+    "vias": 97
+  },
+  "created_ids": [
+    "c387f39d-5619-42f3-b21a-f6880293b57e",
+    "53a2679b-5266-4030-b393-f1dc1cb5b72d",
+    "822585e1-4d0a-4327-9db2-94fa643ff8d1"
+  ]
+}

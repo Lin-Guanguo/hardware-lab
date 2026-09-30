@@ -1,0 +1,62 @@
+id,net,from,x1_mm,y1_mm,to,x2_mm,y2_mm
+A01,GND,Pad 1 [GND] of BN on Top Layer,145.5,111.3005,"Zone [GND] on Top Layer, priority 499",147.0075,128.59
+A02,GND,Pad 5 [GND] of U2 on Top Layer,158.2,107.55,"Zone [GND] on Top Layer, priority 499",147.0075,128.59
+A03,GND,"Zone [GND] on Top Layer, priority 499",147.0075,128.59,"Zone [GND] on Top Layer, priority 499",147.0075,128.59
+A04,GND,"Zone [GND] on Top Layer, priority 499",147.0075,128.59,Pad 2 [GND] of U4 on Top Layer,180.25,100.4
+A05,GND,"Zone [GND] on Top Layer, priority 499",147.0075,128.59,"Zone [GND] on Top Layer, priority 499",147.0075,128.59
+A06,BAT_ADC_SENSE,"Track [BAT_ADC_SENSE] on Top Layer, length 0.9510 mm",176.751,118.534,Pad 2 [BAT_ADC_SENSE] of C25 on Top Layer,182.4,116.1
+A07,BAT_ADC_SENSE,Pad 2 [BAT_ADC_SENSE] of C25 on Top Layer,182.4,116.1,Pad 1 [BAT_ADC_SENSE] of R20 on Top Layer,184.1,115.1465
+A08,BAT_ADC_SENSE,Pad 1 [BAT_ADC_SENSE] of R20 on Top Layer,184.1,115.1465,Pad 2 [BAT_ADC_SENSE] of R21 on Top Layer,184.1,113.6535
+A09,BAT_DIV_SUPPLY,Pad 2 [BAT_DIV_SUPPLY] of R20 on Top Layer,184.1,116.6535,Pad 3 [BAT_DIV_SUPPLY] of Q2 on Top Layer,188.0,117.25
+A10,CHG_SDA,"Track [CHG_SDA] on Top Layer, length 11.0500 mm",165.0,105.5,Pad 7 [CHG_SDA] of U2 on Top Layer,158.6,109.65
+A11,CHG_SDA,Pad 19 [CHG_SDA] of U1 on Top Layer,175.001,114.834,Via [CHG_SDA] on Top Layer - Bottom Layer,178.2,107.65
+A12,CHG_PG_N,"Track [CHG_PG_N] on Top Layer, length 9.1300 mm",165.0,106.58,"Track [CHG_PG_N] on Top Layer, length 0.8500 mm",159.0,107.55
+A13,CHG_PG_N,"Track [CHG_PG_N] on Top Layer, length 1.5650 mm",174.201,114.834,Via [CHG_PG_N] on Top Layer - Bottom Layer,175.2,107.65
+A14,CHG_CE_N,"Track [CHG_CE_N] on Top Layer, length 8.0000 mm",165.0,106.94,"Track [CHG_CE_N] on Bottom Layer, length 2.8465 mm",160.9535,110.3535
+A15,CHG_CE_N,"Track [CHG_CE_N] on Top Layer, length 0.4900 mm",173.71,107.65,"Track [CHG_CE_N] on Top Layer, length 0.7350 mm",174.1,113.635
+A16,BAT_NTC_TBD,Pad 1 [BAT_NTC_TBD] of NTC on Top Layer,155.0,104.0,Pad 1 [BAT_NTC_TBD] of R19 on Top Layer,156.9535,109.8
+A17,BAT_NTC_TBD,Pad 1 [BAT_NTC_TBD] of R19 on Top Layer,156.9535,109.8,"Track [BAT_NTC_TBD] on Top Layer, length 0.9899 mm",158.2,109.65
+A18,CHG_SCL,"Track [CHG_SCL] on Top Layer, length 9.7700 mm",165.0,106.22,"Track [CHG_SCL] on Top Layer, length 1.2500 mm",159.0,109.65
+A19,CHG_SCL,"Track [CHG_SCL] on Top Layer, length 0.9830 mm",177.0,113.933,"Track [CHG_SCL] on Top Layer, length 2.0223 mm",174.77,106.22
+A20,CHG_INT_N,"Track [CHG_INT_N] on Top Layer, length 10.4100 mm",165.0,105.86,"Track [CHG_INT_N] on Top Layer, length 0.3500 mm",159.4,109.65
+A21,CHG_INT_N,"Track [CHG_INT_N] on Top Layer, length 1.1300 mm",174.601,113.499,"Track [CHG_INT_N] on Top Layer, length 2.5314 mm",175.41,105.86
+A22,EPD_EN_TBD,"Track [EPD_EN_TBD] on Top Layer, length 0.0014 mm",171.801,114.834,"Track [EPD_EN_TBD] on Top Layer, length 0.7778 mm",180.25,99.75
+A23,EPD_EN_TBD,Pad 1 [EPD_EN_TBD] of R13 on Top Layer,179.2465,97.0,"Track [EPD_EN_TBD] on Top Layer, length 0.7000 mm",179.7,99.2
+A24,EPD_VDD,Pad 15 [EPD_VDD] of J2 on Top Layer,166.325,94.49,"Track [EPD_VDD] on Top Layer, length 2.1720 mm",176.3,100.5
+A25,EPD_VDD,Pad 1 [EPD_VDD] of R18 on Top Layer,169.1465,91.9,Pad 15 [EPD_VDD] of J2 on Top Layer,166.325,94.49
+A26,USB_CC1,Pad 1 [USB_CC1] of U6 on Top Layer,181.0,108.15,Pad 1 [USB_CC1] of R1 on Top Layer,183.7535,107.8
+A27,USB_CC1,"Track [USB_CC1] on Top Layer, length 0.2828 mm",185.2,105.2505,Pad 1 [USB_CC1] of R1 on Top Layer,183.7535,107.8
+A28,BAT_SWITCH_GATE,Pad 2 [BAT_SWITCH_GATE] of R22 on Top Layer,186.3,119.0465,Pad 1 [BAT_SWITCH_GATE] of Q2 on Top Layer,188.95,114.95
+A29,BAT_SWITCH_GATE,Pad 1 [BAT_SWITCH_GATE] of Q2 on Top Layer,188.95,114.95,Pad 3 [BAT_SWITCH_GATE] of Q3 on Top Layer,190.0,113.3
+A30,EPD_VGL,"Track [EPD_VGL] on Top Layer, length 0.7000 mm",181.7,91.0,"Track [EPD_VGL] on Top Layer, length 0.7000 mm",165.625,90.49
+A31,EPD_VPH,Pad 1 [EPD_VPH] of R16 on Top Layer,174.7465,89.9,"Track [EPD_VPH] on Top Layer, length 0.9000 mm",173.0,93.1
+A32,EPD_VGH,Pad 21 [EPD_VGH] of J2 on Top Layer,166.325,91.49,Pad 2 [EPD_VGH] of R16 on Top Layer,176.2535,89.9
+A33,KEY_OK_N,"Track [KEY_OK_N] on Top Layer, length 0.7071 mm",154.7,114.25,Pad 1 [KEY_OK_N] of SW3 on Top Layer,148.0,113.75
+A34,KEY_OK_N,"Track [KEY_OK_N] on Top Layer, length 0.4243 mm",170.5,121.4,Via [KEY_OK_N] on Top Layer - Bottom Layer,164.5,117.7
+A35,KEY_OK_N,"Track [KEY_OK_N] on Top Layer, length 0.6590 mm",176.751,120.934,Pad 2 [KEY_OK_N] of R12 on Top Layer,181.7465,119.6
+A36,USB_CC2,Pad 2 [USB_CC2] of U6 on Top Layer,181.0,107.45,Pad 1 [USB_CC2] of R2 on Top Layer,183.7535,109.4
+A37,USB_CC2,"Track [USB_CC2] on Top Layer, length 1.1490 mm",186.149,102.2505,Pad 2 [USB_CC2] of U6 on Top Layer,181.0,107.45
+A38,EPD_BS0,Pad 1 [EPD_BS0] of R17 on Top Layer,153.4465,100.8,Pad 8 [EPD_BS0] of J2 on Top Layer,166.325,97.99
+A39,EPD_BUSY_TBD,"Track [EPD_BUSY_TBD] on Top Layer, length 1.4000 mm",167.8,98.3,Pad 2 [EPD_BUSY_TBD] of R18 on Top Layer,170.6535,91.9
+A40,EPD_RESE,Pad 3 [EPD_RESE] of J2 on Top Layer,166.325,100.49,"Track [EPD_RESE] on Top Layer, length 0.5965 mm",173.6,103.35
+A41,KEY_PREV_N,Pad 1 [KEY_PREV_N] of SW1 on Top Layer,148.0,123.65,"Track [KEY_PREV_N] on Top Layer, length 0.2000 mm",154.2,123.45
+A42,KEY_PREV_N,"Track [KEY_PREV_N] on Top Layer, length 0.1500 mm",162.5,117.7,"Track [KEY_PREV_N] on Top Layer, length 6.0850 mm",177.485,123.1
+A43,KEY_PREV_N,Pad 2 [KEY_PREV_N] of R10 on Top Layer,181.7465,123.2,"Track [KEY_PREV_N] on Top Layer, length 0.2348 mm",177.651,122.934
+A44,KEY_NEXT_N,Pad 1 [KEY_NEXT_N] of SW2 on Top Layer,156.5,119.35,"Track [KEY_NEXT_N] on Top Layer, length 0.8500 mm",162.7,118.5
+A45,KEY_NEXT_N,"Track [KEY_NEXT_N] on Top Layer, length 5.5850 mm",176.985,122.0,"Track [KEY_NEXT_N] on Top Layer, length 1.1314 mm",163.5,117.7
+A46,KEY_NEXT_N,"Track [KEY_NEXT_N] on Top Layer, length 0.9419 mm",177.651,121.334,Pad 2 [KEY_NEXT_N] of R11 on Top Layer,181.7465,121.4
+A47,BAT_MEAS_EN,Pad 1 [BAT_MEAS_EN] of R23 on Top Layer,186.3,112.6535,Pad 10 [BAT_MEAS_EN] of U1 on Top Layer,177.651,118.934
+A48,BAT_MEAS_EN,Pad 1 [BAT_MEAS_EN] of Q3 on Top Layer,190.65,111.7,Pad 1 [BAT_MEAS_EN] of R23 on Top Layer,186.3,112.6535
+A49,USB_DP_CONN,"Track [USB_DP_CONN] on Top Layer, length 0.6500 mm",179.55,103.0,Pad 1 [USB_DP_CONN] of R3 on Top Layer,164.1465,116.2
+A50,USB_DP_CONN,"Track [USB_DP_CONN] on Top Layer, length 1.3000 mm",184.6,103.0005,"Track [USB_DP_CONN] on Top Layer, length 0.6364 mm",180.0,103.45
+A51,USB_DP_CONN,"Track [USB_DP_CONN] on Top Layer, length 2.8490 mm",186.149,104.2505,"Track [USB_DP_CONN] on Top Layer, length 1.2990 mm",186.149,103.2505
+A52,EPD_RESET_N_TBD,"Track [EPD_RESET_N_TBD] on Top Layer, length 1.4510 mm",168.351,118.134,"Track [EPD_RESET_N_TBD] on Top Layer, length 0.5000 mm",167.6,97.5
+A53,EPD_DC_TBD,"Track [EPD_DC_TBD] on Top Layer, length 1.4510 mm",168.351,117.334,"Track [EPD_DC_TBD] on Top Layer, length 0.2970 mm",167.49,96.49
+A54,EPD_CS_N_TBD,"Track [EPD_CS_N_TBD] on Top Layer, length 0.0933 mm",169.251,116.934,"Track [EPD_CS_N_TBD] on Top Layer, length 0.1273 mm",168.01,95.99
+A55,EPD_SCK_TBD,"Track [EPD_SCK_TBD] on Top Layer, length 1.2850 mm",166.325,95.49,"Track [EPD_SCK_TBD] on Top Layer, length 1.1490 mm",169.251,116.134
+A56,EPD_MOSI_TBD,"Track [EPD_MOSI_TBD] on Top Layer, length 1.4510 mm",168.351,116.534,"Track [EPD_MOSI_TBD] on Top Layer, length 1.0850 mm",166.325,94.99
+A57,NRESET,Pad 1 [NRESET] of TP5 on Bottom Layer,186.0805,81.501,"Track [NRESET] on Top Layer, length 0.1640 mm",170.284,117.734
+A58,SWDIO,Pad 1 [SWDIO] of TP4 on Bottom Layer,183.5405,81.501,"Track [SWDIO] on Top Layer, length 2.8330 mm",167.2,121.783
+A59,SWDCLK,Pad 1 [SWDCLK] of TP3 on Bottom Layer,181.0005,81.501,"Track [SWDCLK] on Top Layer, length 0.9899 mm",166.6,119.4
+A60,USB_DM_CONN,"Track [USB_DM_CONN] on Top Layer, length 0.6500 mm",179.55,104.6,Pad 1 [USB_DM_CONN] of R4 on Top Layer,164.1465,114.6
+A61,USB_DM_CONN,"Track [USB_DM_CONN] on Bottom Layer, length 1.3000 mm",184.3,103.6005,"Track [USB_DM_CONN] on Top Layer, length 0.6364 mm",180.0,104.15

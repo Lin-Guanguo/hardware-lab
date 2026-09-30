@@ -1,0 +1,146 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-option-a3-local/NFC-Card-V4.kicad_pcb",
+  "description": "A3 connect seven loaded ground components with eight explicitly checked stitching locations",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-option-a3/ground-batch-ipc.json",
+  "routes": [],
+  "vias": [
+    {
+      "name": "C3-U5 return bridge",
+      "net": "GND",
+      "at": [
+        181.2,
+        106.65
+      ],
+      "before_surface_groups": {
+        "F.Cu": [
+          0
+        ],
+        "B.Cu": [
+          4
+        ]
+      }
+    },
+    {
+      "name": "MCU pin15 local return",
+      "net": "GND",
+      "at": [
+        178.69,
+        113.04
+      ],
+      "before_surface_groups": {
+        "F.Cu": [
+          5
+        ],
+        "B.Cu": [
+          0
+        ]
+      }
+    },
+    {
+      "name": "USB lower shell CC return",
+      "net": "GND",
+      "at": [
+        185.5,
+        113.48
+      ],
+      "before_surface_groups": {
+        "F.Cu": [
+          1
+        ],
+        "B.Cu": [
+          0
+        ]
+      }
+    },
+    {
+      "name": "MCU south/east return",
+      "net": "GND",
+      "at": [
+        184.12,
+        119.44
+      ],
+      "before_surface_groups": {
+        "F.Cu": [
+          1
+        ],
+        "B.Cu": [
+          0
+        ]
+      }
+    },
+    {
+      "name": "Keys and NFC matching return",
+      "net": "GND",
+      "at": [
+        161.41,
+        120.36
+      ],
+      "before_surface_groups": {
+        "F.Cu": [
+          2
+        ],
+        "B.Cu": [
+          0
+        ]
+      }
+    },
+    {
+      "name": "SW3 upper ground return",
+      "net": "GND",
+      "at": [
+        153.82,
+        114.91
+      ],
+      "before_surface_groups": {
+        "F.Cu": [
+          3
+        ],
+        "B.Cu": [
+          0
+        ]
+      }
+    },
+    {
+      "name": "CC2 resistor return",
+      "net": "GND",
+      "at": [
+        182.55,
+        112.8
+      ],
+      "before_surface_groups": {
+        "F.Cu": [
+          6
+        ],
+        "B.Cu": [
+          0
+        ]
+      }
+    },
+    {
+      "name": "J2 pin17 local return",
+      "net": "GND",
+      "at": [
+        167.49,
+        93.35
+      ],
+      "before_surface_groups": {
+        "F.Cu": [
+          7
+        ],
+        "B.Cu": [
+          0
+        ]
+      }
+    }
+  ],
+  "pending_pad_repairs": [
+    [
+      "C25.1",
+      "no direct local witness"
+    ],
+    [
+      "R1.2",
+      "no direct local witness"
+    ]
+  ]
+}

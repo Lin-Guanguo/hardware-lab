@@ -1,0 +1,34 @@
+{
+  "fixed_nets": [
+    "NFC1_TBD",
+    "GND"
+  ],
+  "all_signal_power_wires_modifiable": true,
+  "counts": {
+    "VDD_3V3": 18,
+    "GND": 32,
+    "CHG_SDA": 8,
+    "CHG_PG_N": 13,
+    "SYS": 18,
+    "BAT_PACK_TBD": 10,
+    "CHG_CE_N": 8,
+    "CHG_SCL": 5,
+    "CHG_INT_N": 14,
+    "USB_VBUS": 5,
+    "EPD_EN_TBD": 2,
+    "EPD_VDD": 5,
+    "EPD_VGL": 3,
+    "EPD_VPH": 2,
+    "EPD_PUMP": 3,
+    "NFC1_TBD": 80,
+    "EPD_RESE": 1,
+    "EPD_SW": 5,
+    "USB_DP_CONN": 6,
+    "EPD_CS_N_TBD": 2,
+    "EPD_SCK_TBD": 2,
+    "NRESET": 2,
+    "USB_DM_CONN": 12
+  },
+  "ground_model": "Preserve explicit native return copper through DSN/SES; plane intent is not native-fill connectivity proof",
+  "new_geometry": "West regulator and USB/CC group, complete USB fanout and four inward MCU exits"
+}

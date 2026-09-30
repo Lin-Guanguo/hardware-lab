@@ -1,0 +1,37 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-option-a3-local/NFC-Card-V4.kicad_pcb",
+  "description": "A3 bounded local connection check: ts-local",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-option-a3/ts-local-ipc.json",
+  "routes": [],
+  "vias": [],
+  "failures": [
+    {
+      "name": "TS local charger to resistor",
+      "reason": "No path in assigned corridor",
+      "start": [
+        176.2,
+        109.05
+      ],
+      "end": [
+        169.7465,
+        104.3
+      ],
+      "visited": 1494,
+      "closest_reached": {
+        "layer": "B.Cu",
+        "point": [
+          173.2465,
+          106.8
+        ],
+        "distance": 4.301162633521313
+      },
+      "direct_blockers": [
+        {
+          "name": "50f98cc2-3177-403d-9dc9-3644567261f5",
+          "net": "CHG_PG_N",
+          "kind": "track"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "source_sha256": "c2e70a964cc8b4850bd4bb8f1027148edceec1493e024230bf05a1192b410715",
+  "candidate_sha256": "ab66cc15f4c938ee7a722bb5656f242f5f31c8664d6fb8d4bf1fa949a21c7259",
+  "replayed_sha256": "b852cf7ee43e4ef73fd43624ca8856fd5271e0ee97ebce660a84e955bf569cd8",
+  "identical_copper_objects": true,
+  "filled_ground_difference_mm2": {
+    "F.Cu": 0,
+    "B.Cu": 0
+  },
+  "drc": 58,
+  "unconnected": 7,
+  "parity": 0
+}

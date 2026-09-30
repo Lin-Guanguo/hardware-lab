@@ -1,0 +1,172 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4/NFC-Card-V4.kicad_pcb",
+  "description": "Shared display and SWD corridors with fixed endpoint layer transitions",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4/signal-routing-ipc.json",
+  "vias": [
+    {
+      "net": "EPD_MOSI_TBD",
+      "at": [
+        167.5,
+        116.3
+      ]
+    },
+    {
+      "net": "EPD_MOSI_TBD",
+      "at": [
+        168.7,
+        94
+      ]
+    },
+    {
+      "net": "SWDCLK",
+      "at": [
+        167.5,
+        122.5
+      ]
+    },
+    {
+      "net": "SWDIO",
+      "at": [
+        168.3,
+        122.1
+      ]
+    }
+  ],
+  "paths": [
+    {
+      "name": "MOSI MCU escape",
+      "net": "EPD_MOSI_TBD",
+      "through": [
+        "U1.37",
+        [
+          167.5,
+          116.3
+        ]
+      ],
+      "width": 0.15,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "MOSI J2 escape",
+      "net": "EPD_MOSI_TBD",
+      "through": [
+        "J2.14",
+        [
+          168.7,
+          94
+        ]
+      ],
+      "width": 0.15,
+      "layer": "F.Cu",
+      "bounds": [
+        165,
+        93.3,
+        169.2,
+        99
+      ]
+    },
+    {
+      "name": "MOSI shared corridor",
+      "net": "EPD_MOSI_TBD",
+      "through": [
+        [
+          167.5,
+          116.3
+        ],
+        [
+          168.7,
+          94
+        ]
+      ],
+      "width": 0.15,
+      "layer": "B.Cu",
+      "bounds": [
+        160,
+        92,
+        172,
+        124
+      ]
+    },
+    {
+      "name": "SWDCLK MCU escape",
+      "net": "SWDCLK",
+      "through": [
+        "U1.53",
+        [
+          167.5,
+          122.5
+        ]
+      ],
+      "width": 0.15,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "SWDCLK shared corridor",
+      "net": "SWDCLK",
+      "through": [
+        [
+          167.5,
+          122.5
+        ],
+        [
+          171.1,
+          110
+        ],
+        [
+          180.3,
+          83
+        ],
+        "TP3.1"
+      ],
+      "width": 0.15,
+      "layer": "B.Cu",
+      "bounds": [
+        163,
+        80,
+        186,
+        125
+      ]
+    },
+    {
+      "name": "SWDIO MCU escape",
+      "net": "SWDIO",
+      "through": [
+        "U1.51",
+        [
+          168.3,
+          122.1
+        ]
+      ],
+      "width": 0.15,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "SWDIO shared corridor",
+      "net": "SWDIO",
+      "through": [
+        [
+          168.3,
+          122.1
+        ],
+        [
+          171.8,
+          110
+        ],
+        [
+          181.0,
+          83
+        ],
+        "TP4.1"
+      ],
+      "width": 0.15,
+      "layer": "B.Cu",
+      "bounds": [
+        163,
+        80,
+        186,
+        125
+      ]
+    }
+  ],
+  "deferred": "RESET, SCK, CS and DC remain unrouted. Adding the local VBUS bottom crossing blocked the earlier four-signal corridor; repartition the LDO/feed and fanout before detailed routing."
+}

@@ -1,0 +1,27 @@
+{
+  "plan": "projects/nfc-business-card/hardware/kicad/v4-phase2/dc-crossing-spec-plan.json",
+  "board": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "before": {
+    "tracks": 210,
+    "vias": 38
+  },
+  "after": {
+    "tracks": 221,
+    "vias": 40
+  },
+  "created_ids": [
+    "f9900a28-972a-4dfa-bfcb-f93c48b22038",
+    "97cdddf3-a787-46c6-a4ff-dceb55f0d30c",
+    "adbb768a-217c-4a5b-b165-a734d07084a0",
+    "d94576aa-63e7-454d-aa43-a01a5cb18685",
+    "d4c8a47d-fe54-42b2-889e-664089e74818",
+    "a624a235-7a0e-485f-b897-d83dad3e2a15",
+    "19917152-c4b9-44eb-b670-df55e5dd9139",
+    "a6355c6c-ea50-4c48-ab84-11ef7c0fdc4b",
+    "6920e357-3552-48ab-8ef1-98b539643012",
+    "5d71cd21-e2d5-4f6a-a8f2-9c740c804e7e",
+    "d53e767d-58d3-4693-a662-c919d025d194",
+    "b2848390-3c01-48ba-8552-d4c2d6aa3cd9",
+    "426c1e84-00d3-4cd5-abf6-9214b6f1fe56"
+  ]
+}

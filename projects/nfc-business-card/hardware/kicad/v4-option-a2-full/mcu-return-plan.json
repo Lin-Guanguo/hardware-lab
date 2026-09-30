@@ -1,0 +1,178 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-option-a2-full/NFC-Card-V4.kicad_pcb",
+  "description": "Joint MCU capacitor relocation and local ground bar; remove old power loop around isolated ground",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-option-a2/full-mcu-return-ipc.json",
+  "placements": {
+    "C6": [
+      172.1,
+      110.85,
+      90
+    ],
+    "C7": [
+      170.6,
+      110.85,
+      90
+    ]
+  },
+  "remove_trial_ids": [
+    "24c67ea6-7178-442c-a27c-5b1d7c132dbf",
+    "4e69fa29-3cf6-43eb-865b-9e123c5bb4d2",
+    "81c64bdd-8634-488c-bb72-4533f7238258",
+    "8573a060-0072-4b10-862a-5ca359a9400e",
+    "8d31d7e2-6037-4bc5-a1f0-e060afe269cc",
+    "e3b1f7bf-dcfc-492c-a90f-a1b3e3ac5148",
+    "eb14c290-81a9-400f-8ee9-6d4eae8cca5b",
+    "f6201532-5ce3-4ce8-9ebe-c1934732086b",
+    "fb882c0b-c739-4882-bfa5-16a6b6547ef6",
+    "013eae26-8d5f-496a-9ad7-92c796def672",
+    "04c2a80b-069d-439f-af85-b5dd77cd0e16",
+    "1324688d-ac94-4724-8fc3-ef55a474d9e5",
+    "2625255e-8456-452a-a5d5-18f7a3e66798",
+    "6a73cd0a-17cf-4dc0-a7f1-747e93578d60",
+    "8c6a3e6a-0faf-491c-882d-495541cfa64d",
+    "a76d8b12-d298-482d-8fad-07f956924dc9",
+    "d97d8b59-c246-4004-9fae-7f0a3d16a707",
+    "4544757a-4e4b-4fb7-a558-5f60111bb5a0",
+    "e602177f-1071-4dc6-94e2-e06b6fe76a24",
+    "05ade111-0a4c-4549-9fca-fb31d60a5be9",
+    "7b6fad43-225a-4e6a-afee-44626c1f49cf",
+    "902116bb-13aa-479f-9a1f-7ee78db219fb",
+    "99bfdb1e-f33d-46af-bae6-3a9c5ee74744",
+    "a1e1ac13-f85e-43c6-969a-1f200e480266",
+    "c0a3d702-3823-4d9c-8321-017e50e5cc20",
+    "c3d37361-7ad2-4593-9e8f-1f9e7bcd8d2a",
+    "cf3c5527-8902-46eb-b411-558937555c81",
+    "fdc25b6f-7c9a-4f1f-bbaf-3b36ba621b65",
+    "393308ba-4c7f-41d3-b3b8-bf9c3ebda367",
+    "63e8db62-f1be-4794-a232-4053166d0328",
+    "71693cee-72ad-4e9b-80b3-bd04247febc9",
+    "9ef151ac-7bec-4fab-8ec3-f8e59a65e311",
+    "a0beeedb-1d26-4a2c-aa9f-9622dd388fcc",
+    "b1590200-784f-411c-b5d5-8491397dbffa",
+    "e6e35fdf-dcd3-4ef4-a39a-a4206a6a0df2",
+    "8ecdf829-89b4-4dcb-a27a-82546f9b2406",
+    "fcbfbf60-f466-4d35-b049-73a44340968c",
+    "2d843de9-3d33-437f-85c1-cf64fa61111a",
+    "b7d37a9c-13b5-496e-99d0-80d299da5bc4",
+    "c2ad0b81-d30a-4d2c-86ad-45a62daa6ec1"
+  ],
+  "routes": [
+    {
+      "name": "MCU supply branch shifted with capacitors",
+      "net": "VDD_3V3",
+      "layer": "F.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          169.75,
+          108.9
+        ],
+        [
+          169.75,
+          110.7
+        ],
+        [
+          170.6,
+          111.55
+        ],
+        [
+          172.1,
+          111.55
+        ]
+      ]
+    },
+    {
+      "name": "C6 served pad28",
+      "net": "VDD_3V3",
+      "layer": "F.Cu",
+      "width": 0.2,
+      "points": [
+        [
+          172.1,
+          111.55
+        ],
+        [
+          171.401,
+          112.249
+        ],
+        [
+          171.401,
+          113.934
+        ]
+      ]
+    },
+    {
+      "name": "C7 served pad30",
+      "net": "VDD_3V3",
+      "layer": "F.Cu",
+      "width": 0.2,
+      "points": [
+        [
+          170.601,
+          111.55
+        ],
+        [
+          170.601,
+          113.934
+        ]
+      ]
+    },
+    {
+      "name": "MCU decoupling local ground bar",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          172.1,
+          110.14999999999999
+        ],
+        [
+          170.6,
+          110.14999999999999
+        ],
+        [
+          170.6,
+          109.15
+        ]
+      ]
+    },
+    {
+      "name": "VBUS decoupling return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          168.8,
+          110.8
+        ],
+        [
+          167.7,
+          110.8
+        ]
+      ]
+    }
+  ],
+  "vias": [
+    {
+      "net": "GND",
+      "at": [
+        170.6,
+        109.15
+      ]
+    },
+    {
+      "net": "GND",
+      "at": [
+        167.7,
+        110.8
+      ]
+    }
+  ],
+  "failures": [],
+  "ripup_nets_for_joint_replan": [
+    "BAT_NTC_TBD",
+    "EPD_BUSY_TBD"
+  ]
+}

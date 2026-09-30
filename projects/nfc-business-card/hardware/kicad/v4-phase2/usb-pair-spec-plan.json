@@ -1,0 +1,465 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "description": "USB duplicate-pad fanout through U5 ESD and matched series pair, with explicit layer transitions",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase2/usb-pair-ipc.json",
+  "routes": [
+    {
+      "name": "USB DP A face",
+      "net": "USB_DP_CONN",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          186.149,
+          104.2505
+        ],
+        [
+          183.8,
+          104.25
+        ],
+        [
+          183.8,
+          102.7
+        ],
+        [
+          185.4,
+          103.1
+        ],
+        [
+          185.5,
+          103.2
+        ],
+        [
+          186.149,
+          103.2505
+        ]
+      ],
+      "length_mm": 6.341
+    },
+    {
+      "name": "USB DP ESD entry",
+      "net": "USB_DP_CONN",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          183.8,
+          102.7
+        ],
+        [
+          180.0,
+          103.45
+        ]
+      ],
+      "length_mm": 3.873
+    },
+    {
+      "name": "USB DM A face",
+      "net": "USB_DM_CONN",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          186.149,
+          103.7505
+        ],
+        [
+          185.1,
+          103.7
+        ],
+        [
+          184.8,
+          103.55
+        ]
+      ],
+      "length_mm": 1.386
+    },
+    {
+      "name": "USB DM B face",
+      "net": "USB_DM_CONN",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          186.149,
+          104.7505
+        ],
+        [
+          185.2,
+          104.8
+        ],
+        [
+          184.8,
+          105.05
+        ]
+      ],
+      "length_mm": 1.422
+    },
+    {
+      "name": "USB DM duplicate junction",
+      "net": "USB_DM_CONN",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          184.8,
+          103.55
+        ],
+        [
+          184.8,
+          105.05
+        ],
+        [
+          183,
+          105.8
+        ]
+      ],
+      "length_mm": 3.45
+    },
+    {
+      "name": "USB DM ESD entry",
+      "net": "USB_DM_CONN",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          183,
+          105.8
+        ],
+        [
+          180,
+          105.8
+        ],
+        [
+          180.0,
+          104.15
+        ]
+      ],
+      "length_mm": 4.65
+    },
+    {
+      "name": "USB ESD local return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          181.0,
+          103.8
+        ],
+        [
+          181,
+          104.8
+        ]
+      ],
+      "length_mm": 1.0
+    },
+    {
+      "name": "USB_DP_CONN protected escape",
+      "net": "USB_DP_CONN",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          180.0,
+          103.45
+        ],
+        [
+          179,
+          103
+        ]
+      ],
+      "length_mm": 1.097
+    },
+    {
+      "name": "USB_DP_CONN series feed",
+      "net": "USB_DP_CONN",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          179,
+          103
+        ],
+        [
+          183,
+          113
+        ]
+      ],
+      "length_mm": 10.77
+    },
+    {
+      "name": "USB_DP_CONN resistor entry",
+      "net": "USB_DP_CONN",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          183,
+          113
+        ],
+        [
+          181.7535,
+          113.0
+        ]
+      ],
+      "length_mm": 1.246
+    },
+    {
+      "name": "USB_DM_CONN protected escape",
+      "net": "USB_DM_CONN",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          180.0,
+          104.15
+        ],
+        [
+          179,
+          104.6
+        ]
+      ],
+      "length_mm": 1.097
+    },
+    {
+      "name": "USB_DM_CONN series feed",
+      "net": "USB_DM_CONN",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          179,
+          104.6
+        ],
+        [
+          183,
+          114.6
+        ]
+      ],
+      "length_mm": 10.77
+    },
+    {
+      "name": "USB_DM_CONN resistor entry",
+      "net": "USB_DM_CONN",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          183,
+          114.6
+        ],
+        [
+          181.7535,
+          114.6
+        ]
+      ],
+      "length_mm": 1.246
+    },
+    {
+      "name": "USB DM MCU escape",
+      "net": "USB_DM_MCU",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          168.351,
+          114.934
+        ],
+        [
+          169.4,
+          114.8
+        ]
+      ],
+      "length_mm": 1.058
+    },
+    {
+      "name": "USB DP MCU escape",
+      "net": "USB_DP_MCU",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          168.351,
+          115.734
+        ],
+        [
+          169.5,
+          115.5
+        ],
+        [
+          170.8,
+          115.5
+        ],
+        [
+          171.9,
+          116.6
+        ]
+      ],
+      "length_mm": 4.028
+    },
+    {
+      "name": "USB DM MCU bus",
+      "net": "USB_DM_MCU",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          169.4,
+          114.8
+        ],
+        [
+          169.4,
+          117.9
+        ],
+        [
+          175.9,
+          116.1
+        ],
+        [
+          179.1,
+          114.6
+        ]
+      ],
+      "length_mm": 13.379
+    },
+    {
+      "name": "USB DP MCU bus",
+      "net": "USB_DP_MCU",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          171.9,
+          116.6
+        ],
+        [
+          179.1,
+          113
+        ]
+      ],
+      "length_mm": 8.05
+    },
+    {
+      "name": "USB DM series MCU side",
+      "net": "USB_DM_MCU",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          179.1,
+          114.6
+        ],
+        [
+          180.2465,
+          114.6
+        ]
+      ],
+      "length_mm": 1.147
+    },
+    {
+      "name": "USB DP series MCU side",
+      "net": "USB_DP_MCU",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          179.1,
+          113
+        ],
+        [
+          180.2465,
+          113.0
+        ]
+      ],
+      "length_mm": 1.147
+    }
+  ],
+  "vias": [
+    {
+      "net": "USB_DM_CONN",
+      "at": [
+        184.8,
+        103.55
+      ]
+    },
+    {
+      "net": "USB_DM_CONN",
+      "at": [
+        184.8,
+        105.05
+      ]
+    },
+    {
+      "net": "USB_DM_CONN",
+      "at": [
+        183,
+        105.8
+      ]
+    },
+    {
+      "net": "USB_DM_CONN",
+      "at": [
+        179,
+        104.6
+      ]
+    },
+    {
+      "net": "USB_DM_CONN",
+      "at": [
+        183,
+        114.6
+      ]
+    },
+    {
+      "net": "USB_DP_CONN",
+      "at": [
+        179,
+        103
+      ]
+    },
+    {
+      "net": "USB_DP_CONN",
+      "at": [
+        183,
+        113
+      ]
+    },
+    {
+      "net": "USB_DM_MCU",
+      "at": [
+        169.4,
+        114.8
+      ]
+    },
+    {
+      "net": "USB_DM_MCU",
+      "at": [
+        179.1,
+        114.6
+      ]
+    },
+    {
+      "net": "USB_DP_MCU",
+      "at": [
+        171.9,
+        116.6
+      ]
+    },
+    {
+      "net": "USB_DP_MCU",
+      "at": [
+        179.1,
+        113
+      ]
+    },
+    {
+      "net": "GND",
+      "at": [
+        181,
+        104.8
+      ]
+    }
+  ],
+  "failures": []
+}

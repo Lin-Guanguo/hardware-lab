@@ -1,0 +1,27 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-option-a3-local/NFC-Card-V4.kicad_pcb",
+  "description": "A3 bounded local connection check: ts-local",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-option-a3/ts-local-ipc.json",
+  "paths": [
+    {
+      "name": "TS local charger to resistor",
+      "net": "BAT_NTC_TBD",
+      "width": 0.15,
+      "through": [
+        "U2.6",
+        "R19.1"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "bounds": [
+        168,
+        101,
+        178,
+        113
+      ],
+      "join_existing_copper": true
+    }
+  ]
+}

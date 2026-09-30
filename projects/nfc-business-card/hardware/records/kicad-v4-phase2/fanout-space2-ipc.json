@@ -1,0 +1,13 @@
+{
+  "plan": "projects/nfc-business-card/hardware/kicad/v4-phase2/fanout-space2.json",
+  "board": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "before": {
+    "tracks": 97,
+    "vias": 10
+  },
+  "after": {
+    "tracks": 97,
+    "vias": 10
+  },
+  "created_ids": []
+}

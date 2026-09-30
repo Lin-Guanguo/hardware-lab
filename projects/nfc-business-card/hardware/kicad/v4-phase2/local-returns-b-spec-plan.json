@@ -1,0 +1,54 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "description": "Restore R14 local ground and connect CC pulldown grounds with explicit conductors",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase2/local-returns-ipc.json",
+  "routes": [
+    {
+      "name": "Gate pulldown return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          170.0,
+          103.7465
+        ],
+        [
+          171,
+          103.3
+        ]
+      ],
+      "length_mm": 1.095
+    },
+    {
+      "name": "CC common ground",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          182.2465,
+          107.8
+        ],
+        [
+          182.2465,
+          109.4
+        ]
+      ],
+      "length_mm": 1.6
+    }
+  ],
+  "vias": [
+    {
+      "net": "GND",
+      "at": [
+        171,
+        103.3
+      ]
+    }
+  ],
+  "failures": [],
+  "remove_trial_ids": [
+    "06b35247-8917-4ef1-b7a3-82e6d6798b96"
+  ]
+}

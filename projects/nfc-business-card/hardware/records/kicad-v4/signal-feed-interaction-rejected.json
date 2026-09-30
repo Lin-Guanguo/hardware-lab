@@ -1,0 +1,406 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4/NFC-Card-V4.kicad_pcb",
+  "description": "Shared display and SWD corridors with fixed endpoint layer transitions",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4/signal-routing-ipc.json",
+  "routes": [
+    {
+      "name": "MOSI MCU escape",
+      "net": "EPD_MOSI_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          168.351,
+          116.534
+        ],
+        [
+          167.5,
+          116.3
+        ]
+      ],
+      "length_mm": 0.883
+    },
+    {
+      "name": "MOSI J2 escape",
+      "net": "EPD_MOSI_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          166.325,
+          94.99
+        ],
+        [
+          167.4,
+          94.9
+        ],
+        [
+          168.7,
+          94
+        ]
+      ],
+      "length_mm": 2.66
+    },
+    {
+      "name": "MOSI shared corridor",
+      "net": "EPD_MOSI_TBD",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          167.5,
+          116.3
+        ],
+        [
+          168.5,
+          110.1
+        ],
+        [
+          167.2,
+          100.3
+        ],
+        [
+          168.1,
+          94.8
+        ],
+        [
+          168.7,
+          94
+        ]
+      ],
+      "length_mm": 22.739
+    },
+    {
+      "name": "SCK MCU escape",
+      "net": "EPD_SCK_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          169.251,
+          116.134
+        ],
+        [
+          170.4,
+          116.134
+        ]
+      ],
+      "length_mm": 1.149
+    },
+    {
+      "name": "SCK J2 escape",
+      "net": "EPD_SCK_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          166.325,
+          95.49
+        ],
+        [
+          168.1,
+          95.3
+        ],
+        [
+          168.7,
+          95
+        ]
+      ],
+      "length_mm": 2.456
+    },
+    {
+      "name": "CS MCU escape",
+      "net": "EPD_CS_N_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          169.251,
+          116.934
+        ],
+        [
+          170.4,
+          117.034
+        ]
+      ],
+      "length_mm": 1.153
+    },
+    {
+      "name": "CS J2 escape",
+      "net": "EPD_CS_N_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          166.325,
+          95.99
+        ],
+        [
+          168.7,
+          96
+        ]
+      ],
+      "length_mm": 2.375
+    },
+    {
+      "name": "DC MCU escape",
+      "net": "EPD_DC_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          168.351,
+          117.334
+        ],
+        [
+          167.0,
+          117.334
+        ]
+      ],
+      "length_mm": 1.351
+    },
+    {
+      "name": "DC J2 escape",
+      "net": "EPD_DC_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          166.325,
+          96.49
+        ],
+        [
+          167.9,
+          96.6
+        ],
+        [
+          168.7,
+          97
+        ]
+      ],
+      "length_mm": 2.473
+    },
+    {
+      "name": "SWDCLK MCU escape",
+      "net": "SWDCLK",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          168.351,
+          123.734
+        ],
+        [
+          167.8,
+          123.3
+        ],
+        [
+          167.5,
+          122.5
+        ]
+      ],
+      "length_mm": 1.556
+    },
+    {
+      "name": "SWDCLK shared corridor",
+      "net": "SWDCLK",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          167.5,
+          122.5
+        ],
+        [
+          171.1,
+          110
+        ],
+        [
+          175.5,
+          105.9
+        ],
+        [
+          175.6,
+          105.5
+        ],
+        [
+          175.9,
+          92.4
+        ],
+        [
+          180.3,
+          83
+        ],
+        [
+          181.0005,
+          81.501
+        ]
+      ],
+      "length_mm": 44.571
+    },
+    {
+      "name": "SWDIO MCU escape",
+      "net": "SWDIO",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          168.351,
+          122.934
+        ],
+        [
+          168.3,
+          122.1
+        ]
+      ],
+      "length_mm": 0.836
+    },
+    {
+      "name": "SWDIO shared corridor",
+      "net": "SWDIO",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          168.3,
+          122.1
+        ],
+        [
+          171.0,
+          117.2
+        ],
+        [
+          171.8,
+          110
+        ],
+        [
+          175.8,
+          106.2
+        ],
+        [
+          177.8,
+          103.1
+        ],
+        [
+          181.0,
+          83
+        ],
+        [
+          183.5405,
+          81.501
+        ]
+      ],
+      "length_mm": 45.348
+    }
+  ],
+  "vias": [
+    {
+      "net": "EPD_MOSI_TBD",
+      "at": [
+        167.5,
+        116.3
+      ]
+    },
+    {
+      "net": "EPD_MOSI_TBD",
+      "at": [
+        168.7,
+        94
+      ]
+    },
+    {
+      "net": "EPD_SCK_TBD",
+      "at": [
+        170.4,
+        116.134
+      ]
+    },
+    {
+      "net": "EPD_SCK_TBD",
+      "at": [
+        168.7,
+        95
+      ]
+    },
+    {
+      "net": "EPD_CS_N_TBD",
+      "at": [
+        170.4,
+        117.034
+      ]
+    },
+    {
+      "net": "EPD_CS_N_TBD",
+      "at": [
+        168.7,
+        96
+      ]
+    },
+    {
+      "net": "EPD_DC_TBD",
+      "at": [
+        167.0,
+        117.334
+      ]
+    },
+    {
+      "net": "EPD_DC_TBD",
+      "at": [
+        168.7,
+        97
+      ]
+    },
+    {
+      "net": "SWDCLK",
+      "at": [
+        167.5,
+        122.5
+      ]
+    },
+    {
+      "net": "SWDIO",
+      "at": [
+        168.3,
+        122.1
+      ]
+    }
+  ],
+  "failures": [
+    {
+      "path": "SCK shared corridor",
+      "reason": "No path in assigned corridor",
+      "start": [
+        170.4,
+        116.134
+      ],
+      "end": [
+        168.7,
+        95
+      ]
+    },
+    {
+      "path": "CS shared corridor",
+      "reason": "No path in assigned corridor",
+      "start": [
+        170.4,
+        117.034
+      ],
+      "end": [
+        168.7,
+        96
+      ]
+    },
+    {
+      "path": "DC shared corridor",
+      "reason": "No path in assigned corridor",
+      "start": [
+        167.0,
+        117.334
+      ],
+      "end": [
+        168.7,
+        97
+      ]
+    }
+  ]
+}

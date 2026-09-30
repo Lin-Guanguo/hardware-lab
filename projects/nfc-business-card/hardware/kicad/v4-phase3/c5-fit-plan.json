@@ -1,0 +1,12 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase3/NFC-Card-V4.kicad_pcb",
+  "description": "Keep C5 below U3 courtyard with its supply pad facing the output pin",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase3/c5-fit-apply.json",
+  "placements": {
+    "C5": [
+      164.1,
+      112.2,
+      270
+    ]
+  }
+}

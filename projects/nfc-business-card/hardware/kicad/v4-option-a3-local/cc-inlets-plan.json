@@ -1,0 +1,145 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-option-a3-local/NFC-Card-V4.kicad_pcb",
+  "description": "A3 bounded local connection check: cc-inlets",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-option-a3/cc-inlets-ipc.json",
+  "routes": [],
+  "vias": [],
+  "failures": [
+    {
+      "name": "CC1 connector to protector",
+      "reason": "No path in assigned corridor",
+      "start": [
+        186.149,
+        105.2505
+      ],
+      "end": [
+        184.5,
+        108.75
+      ],
+      "visited": 23,
+      "closest_reached": {
+        "layer": "F.Cu",
+        "point": [
+          185.29999999999998,
+          105.85
+        ],
+        "distance": 3.0083217912982656
+      },
+      "direct_blockers": [
+        {
+          "name": "U6.2",
+          "net": "USB_CC2",
+          "kind": "pad"
+        },
+        {
+          "name": "06eedeaa-4509-4f8d-96c8-c01c4e7e2917",
+          "net": "USB_VBUS",
+          "kind": "track"
+        },
+        {
+          "name": "0f801243-f02b-428e-b85c-b226bd9f13ab",
+          "net": "USB_VBUS",
+          "kind": "track"
+        },
+        {
+          "name": "1db39ff3-a404-4fdd-b51f-6768eabbee11",
+          "net": "USB_CC2",
+          "kind": "track"
+        },
+        {
+          "name": "6220e98b-aee3-4cd1-905c-59fd6bbf33ec",
+          "net": "USB_CC2",
+          "kind": "track"
+        }
+      ]
+    },
+    {
+      "name": "CC2 connector to protector",
+      "reason": "No path in assigned corridor",
+      "start": [
+        186.149,
+        102.2505
+      ],
+      "end": [
+        184.5,
+        108.05000000000001
+      ],
+      "visited": 8,
+      "closest_reached": {
+        "layer": "F.Cu",
+        "point": [
+          185.6,
+          102.25000000000001
+        ],
+        "distance": 5.9033888572581725
+      },
+      "direct_blockers": [
+        {
+          "name": "J1.A7",
+          "net": "USB_DM_CONN",
+          "kind": "pad"
+        },
+        {
+          "name": "J1.A8",
+          "net": "unconnected-(J1-SBU1-PadA8)",
+          "kind": "pad"
+        },
+        {
+          "name": "J1.B6",
+          "net": "USB_DP_CONN",
+          "kind": "pad"
+        },
+        {
+          "name": "0f801243-f02b-428e-b85c-b226bd9f13ab",
+          "net": "USB_VBUS",
+          "kind": "track"
+        },
+        {
+          "name": "5ead6714-227c-4c40-b5d6-5534524e7b91",
+          "net": "USB_DP_CONN",
+          "kind": "track"
+        },
+        {
+          "name": "6d15ddfd-61a2-4799-98be-c340548e87b1",
+          "net": "USB_DP_CONN",
+          "kind": "track"
+        },
+        {
+          "name": "e5bb470c-c644-4f05-a176-2866858d0412",
+          "net": "USB_DP_CONN",
+          "kind": "track"
+        },
+        {
+          "name": "17af0db4-15fb-4f15-967c-888fca1da0a5",
+          "net": "USB_DM_CONN",
+          "kind": "track"
+        },
+        {
+          "name": "382aa388-c5eb-4cf9-beca-fa9554701774",
+          "net": "USB_DM_CONN",
+          "kind": "track"
+        },
+        {
+          "name": "8190abbf-e884-4b20-b472-ddea1ef4c787",
+          "net": "USB_DM_CONN",
+          "kind": "track"
+        },
+        {
+          "name": "9af5ad0f-e8e1-4f34-90e9-49ec69c28e56",
+          "net": "USB_DM_CONN",
+          "kind": "track"
+        },
+        {
+          "name": "08c4ce61-b3b5-4448-95f9-cf57826ffa24",
+          "net": "USB_DM_CONN",
+          "kind": "via"
+        },
+        {
+          "name": "5bf05dcf-7bde-402c-a160-d8ee8da198ad",
+          "net": "USB_DM_CONN",
+          "kind": "via"
+        }
+      ]
+    }
+  ]
+}

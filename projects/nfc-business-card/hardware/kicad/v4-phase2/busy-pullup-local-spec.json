@@ -1,0 +1,53 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "description": "Connect the local BUSY pullup without crossing the western service corridor",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase2/busy-pullup-local-ipc.json",
+  "paths": [
+    {
+      "name": "Local BUSY pullup supply",
+      "net": "EPD_VDD",
+      "layer": "F.Cu",
+      "width": 0.2,
+      "through": [
+        "R18.1",
+        [
+          168.2,
+          93.3
+        ]
+      ],
+      "bounds": [
+        167,
+        90,
+        171,
+        95
+      ]
+    },
+    {
+      "name": "Local BUSY pullup signal",
+      "net": "EPD_BUSY_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "through": [
+        "R18.2",
+        [
+          170.4,
+          93
+        ],
+        [
+          170.4,
+          96.5
+        ],
+        [
+          169.2,
+          98.3
+        ]
+      ],
+      "bounds": [
+        167,
+        90,
+        172,
+        100
+      ]
+    }
+  ]
+}

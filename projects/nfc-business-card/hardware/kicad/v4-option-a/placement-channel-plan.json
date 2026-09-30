@@ -1,0 +1,67 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-option-a/NFC-Card-V4.kicad_pcb",
+  "description": "Replace blocking MCU-north pullup row with east control branches; translate intact ADC group for a real via corridor",
+  "placements": {
+    "Q2": [
+      188.4,
+      116.1,
+      90.0
+    ],
+    "Q3": [
+      190.4,
+      112.5,
+      90.0
+    ],
+    "R20": [
+      184.5,
+      115.9,
+      -90.0
+    ],
+    "R21": [
+      184.5,
+      112.9,
+      -90.0
+    ],
+    "R22": [
+      186.70000000000002,
+      119.8,
+      90.0
+    ],
+    "R23": [
+      186.70000000000002,
+      111.9,
+      90.0
+    ],
+    "C25": [
+      182.8,
+      116.8,
+      90.0
+    ],
+    "R5": [
+      180.4,
+      114.3,
+      180
+    ],
+    "R6": [
+      180.4,
+      116,
+      180
+    ],
+    "R8": [
+      180.4,
+      117.7,
+      180
+    ],
+    "R9": [
+      180.4,
+      119.4,
+      180
+    ],
+    "R7": [
+      173.6,
+      102.4,
+      0
+    ]
+  },
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-option-a/placement-channel-ipc.json"
+}

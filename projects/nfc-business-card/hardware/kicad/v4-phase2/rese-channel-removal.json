@@ -1,0 +1,15 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "description": "Reserve a short RESE crossing by reallocating the CS lane as a group",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase2/rese-channel-removal-ipc.json",
+  "remove_trial_ids": [
+    "002f9121-717c-471d-ac47-1170ae559a50",
+    "23a37f7e-2a6b-43a8-8a38-4918b742a320",
+    "263fcc17-a7ef-4c7b-ab66-6ac3fdc3dcdb",
+    "46c6f78e-5046-42a6-ae37-22a3f8fd0f89",
+    "ca85b1bd-cf04-4664-9c1e-d11e0db3a05f",
+    "dc070d37-cf3c-4f33-8f7d-1056fe6828c7",
+    "edb8710c-9a3f-4cfb-8dc6-b88c158b0d3f",
+    "f54456a9-3fe7-43e6-aaa3-c023c9510d70"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "path": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4-option-a3-local/NFC-Card-V4.kicad_pcb",
+  "before_sha256": "ab66cc15f4c938ee7a722bb5656f242f5f31c8664d6fb8d4bf1fa949a21c7259",
+  "before_counts": {
+    "tracks": 672,
+    "vias": 98,
+    "footprints": 76
+  },
+  "closed_pid": 37280,
+  "reopened_pid": 57678,
+  "reopened_counts": {
+    "tracks": 672,
+    "vias": 98,
+    "footprints": 76
+  },
+  "after_sha256": "ab66cc15f4c938ee7a722bb5656f242f5f31c8664d6fb8d4bf1fa949a21c7259",
+  "identical": true
+}

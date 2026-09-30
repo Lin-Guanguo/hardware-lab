@@ -1,0 +1,42 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "description": "Separate actual assembly courtyards while preserving the complete battery ADC and interface datums",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase2/assembly-clearance-ipc.json",
+  "placements": {
+    "C4": [
+      178.6,
+      109.35,
+      0
+    ],
+    "R22": [
+      186.3,
+      119.8,
+      90
+    ],
+    "Q3": [
+      190,
+      112.5,
+      90.0
+    ],
+    "R4": [
+      181,
+      113,
+      0
+    ],
+    "R3": [
+      181,
+      114.6,
+      0
+    ],
+    "R17": [
+      168.85,
+      100.1,
+      0
+    ],
+    "C11": [
+      175,
+      96.55,
+      90
+    ]
+  }
+}

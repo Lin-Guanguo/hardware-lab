@@ -1,0 +1,19 @@
+{
+  "plan": "projects/nfc-business-card/hardware/kicad/v4-option-a3-local/adc-repair-plan.json",
+  "board": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4-option-a3-local/NFC-Card-V4.kicad_pcb",
+  "before": {
+    "tracks": 666,
+    "vias": 96
+  },
+  "after": {
+    "tracks": 666,
+    "vias": 96
+  },
+  "created_ids": [
+    "476d7df5-bf63-46d7-86e3-ccb98794fef7",
+    "87191c0f-7872-467a-9551-15c63e34d938",
+    "6687a621-0978-486d-9f14-f538535db95a",
+    "327d3685-6626-4228-b1e3-c83de4e8fb95",
+    "417ebdb6-e0c7-4457-8296-8803d9dfb39f"
+  ]
+}

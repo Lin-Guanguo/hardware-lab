@@ -1,0 +1,16 @@
+{
+  "changed_conditions": [
+    "USB transverse F.Cu; display transverse B.Cu",
+    "FPC fanout expands from 0.5 to 0.8 mm via pitch",
+    "U3 C4 C5 returned as an intact group to A3 locations",
+    "3V3 display and RESE bridges change from B.Cu to F.Cu",
+    "C8 ground exits its GND side; not across its IN pad"
+  ],
+  "not_proven": [
+    "charging control bus/pullup closure",
+    "USB CC closure",
+    "sampling BAT tap",
+    "same-board ground integrity",
+    "physical infeasibility of two layers"
+  ]
+}

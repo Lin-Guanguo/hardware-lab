@@ -1,0 +1,9 @@
+{
+  "first_output_rejected": true,
+  "reason": "51 segments below native 0.15 mm minimum from automatic neckdown; SES excludes fixed NFC wires",
+  "automatic_neckdown": false,
+  "neck_width_um": 150,
+  "strict_drc": true,
+  "same_placement_same_order_settings": true,
+  "nfc_policy": "Always retain original native NFC objects, never accept RF wires from SES"
+}

@@ -1,0 +1,61 @@
+{
+  "source": "projects/nfc-business-card/hardware/records/kicad-v4/dfm-diagnostic-02/NFC-Card-V4.kicad_pcb",
+  "paths": [
+    {
+      "start": "U2.7",
+      "end": "U1.19",
+      "path": {
+        "length_mm": 86.157,
+        "serial_layer_changes": 6
+      }
+    },
+    {
+      "start": "U2.8",
+      "end": "U1.16",
+      "path": {
+        "length_mm": 89.646,
+        "serial_layer_changes": 4
+      }
+    },
+    {
+      "start": "U2.9",
+      "end": "U1.20",
+      "path": {
+        "length_mm": 33.421,
+        "serial_layer_changes": 4
+      }
+    },
+    {
+      "start": "U2.3",
+      "end": "U1.21",
+      "path": {
+        "length_mm": 43.887,
+        "serial_layer_changes": 4
+      }
+    },
+    {
+      "start": "U2.4",
+      "end": "U1.22",
+      "path": {
+        "length_mm": 30.961,
+        "serial_layer_changes": 6
+      }
+    },
+    {
+      "start": "BP.1",
+      "end": "C3.1",
+      "path": {
+        "length_mm": 38.241,
+        "serial_layer_changes": 8
+      }
+    },
+    {
+      "start": "C3.1",
+      "end": "U2.2",
+      "path": {
+        "length_mm": 2.161,
+        "serial_layer_changes": 0
+      }
+    }
+  ]
+}

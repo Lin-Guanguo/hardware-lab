@@ -1,0 +1,22 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "description": "Orient positive rectifier and its output bypass to keep charge pump and off-state return local",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase2/boost-orientation-ipc.json",
+  "placements": {
+    "D1": [
+      173.5,
+      96.5,
+      180
+    ],
+    "C12": [
+      173.9,
+      93.8,
+      0
+    ],
+    "C5": [
+      171.8,
+      109.65,
+      180
+    ]
+  }
+}

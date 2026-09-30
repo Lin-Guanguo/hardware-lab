@@ -1,0 +1,79 @@
+[
+  {
+    "file": "bq25186-current",
+    "source": "https://www.ti.com/lit/ds/symlink/bq25186.pdf",
+    "resolved": "https://www.ti.com/lit/ds/symlink/bq25186.pdf",
+    "sha256": "96834a4566939677cf084cef87d88f1534b9369ae80171ee004a7ac6572791c9",
+    "bytes": 2093032
+  },
+  {
+    "file": "tps7a02-current",
+    "source": "https://www.ti.com/lit/ds/symlink/tps7a02.pdf",
+    "resolved": "https://www.ti.com/lit/ds/symlink/tps7a02.pdf",
+    "sha256": "ed213c153f1db84762558fcac2ff9752e322151a1d44672cf554988b860cebc8",
+    "bytes": 3405603
+  },
+  {
+    "file": "tps22919-current",
+    "source": "https://www.ti.com/lit/ds/symlink/tps22919.pdf",
+    "resolved": "https://www.ti.com/lit/ds/symlink/tps22919.pdf",
+    "sha256": "743c59b01fb0891d2d0f1faba779161cd2d2b6c18edf68e6d5b3279016240c84",
+    "bytes": 1454791
+  },
+  {
+    "file": "bq25186-evm",
+    "source": "https://www.ti.com/lit/ug/sluuct6/sluuct6.pdf",
+    "resolved": "https://www.ti.com/lit/ug/sluuct6/sluuct6.pdf",
+    "sha256": "46a2bf8bd11f3431ce9c04d50967009ce9e9c598696f1a0317a885dbbcc6d67f",
+    "bytes": 2632874
+  },
+  {
+    "file": "gdeh0154e01",
+    "error": "567 Server Error: Unknown Status for url: https://v4.cecdn.yun300.cn/100001_1909185147/GDEH0154E01.pdf"
+  },
+  {
+    "file": "despi-e01-schematic",
+    "error": "567 Server Error: Unknown Status for url: https://v4.cecdn.yun300.cn/100001_1909185147/DESPI-E01%20%E7%94%B5%E8%B7%AF%E5%9B%BE.pdf"
+  },
+  {
+    "file": "downloads/bq25186-evm.pdf",
+    "sha256": "46a2bf8bd11f3431ce9c04d50967009ce9e9c598696f1a0317a885dbbcc6d67f",
+    "bytes": 2632874
+  },
+  {
+    "file": "downloads/tpd1s514.pdf",
+    "sha256": "5d1ffaa866ee1e4fa080d3ed44b529b1015ffb868d3df7bb0e64ed85d86100d5",
+    "bytes": 1523015
+  },
+  {
+    "file": "downloads/tps25947.pdf",
+    "sha256": "8f96de389903091650d4f462dcfad3210071c3ae7093623a7978f34baf8a65b4",
+    "bytes": 5316794
+  },
+  {
+    "file": "downloads/si1308edl.pdf",
+    "sha256": "a86d6f766f259d8b170a01081f577055f37b527257a0f9af497c8f2c33625c9a",
+    "bytes": 259741
+  },
+  {
+    "file": "downloads/gdeh0154e01.pdf",
+    "sha256": "a3aa45389653aff47ece0f5fce8edd99f07e2889d291b54547efef4c05ba2ebd",
+    "status": "existing original manufacturer PDF reused; refresh download returned 567; webpage checked; no fresh file equivalence asserted",
+    "checked": "2026-09-29",
+    "source": "https://v4.cecdn.yun300.cn/100001_1909185147/GDEH0154E01.pdf"
+  },
+  {
+    "file": "downloads/despi-e01-schematic.pdf",
+    "sha256": "ea74f3c87c608fc10f078ebd7748ae901dac5450912415dbdea1ba83ba3ce43a",
+    "status": "existing original manufacturer PDF reused; refresh download returned 567; webpage checked; no fresh file equivalence asserted",
+    "checked": "2026-09-29",
+    "source": "https://v4.cecdn.yun300.cn/100001_1909185147/DESPI-E01%20%E7%94%B5%E8%B7%AF%E5%9B%BE.pdf"
+  },
+  {
+    "file": "downloads/mbr0530.pdf",
+    "sha256": "ab8f4a7fd35b7f9935229b596fc19d68211ccf2f1f2616ede53de58a7d6936b6",
+    "bytes": 195242,
+    "source": "https://www.onsemi.com/download/data-sheet/pdf/mbr0530t1-d.pdf",
+    "checked": "2026-09-29"
+  }
+]

@@ -1,0 +1,162 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "description": "Joint west DC service corridor and VBUS charger crossing; release the direct GDR/RESE corridor",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase2/west-dc-ipc.json",
+  "vias": [
+    {
+      "net": "EPD_DC_TBD",
+      "at": [
+        164,
+        96.49
+      ]
+    },
+    {
+      "net": "EPD_DC_TBD",
+      "at": [
+        164,
+        115.5
+      ]
+    },
+    {
+      "net": "USB_VBUS",
+      "at": [
+        163.4,
+        105.8
+      ]
+    }
+  ],
+  "paths": [
+    {
+      "name": "DC FPC escape",
+      "net": "EPD_DC_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "through": [
+        "J2.11",
+        [
+          164,
+          96.49
+        ]
+      ],
+      "bounds": [
+        155,
+        93,
+        186,
+        119
+      ]
+    },
+    {
+      "name": "DC west service corridor",
+      "net": "EPD_DC_TBD",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "through": [
+        [
+          164,
+          96.49
+        ],
+        [
+          164,
+          115.5
+        ]
+      ],
+      "bounds": [
+        155,
+        93,
+        186,
+        119
+      ]
+    },
+    {
+      "name": "DC MCU escape",
+      "net": "EPD_DC_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "through": [
+        [
+          164,
+          115.5
+        ],
+        [
+          164,
+          117.3
+        ],
+        "U1.39"
+      ],
+      "bounds": [
+        155,
+        93,
+        186,
+        119
+      ]
+    },
+    {
+      "name": "VBUS shared supply",
+      "net": "USB_VBUS",
+      "layer": "F.Cu",
+      "width": 0.4,
+      "through": [
+        [
+          183.8,
+          106.2
+        ],
+        [
+          183.8,
+          106.7
+        ],
+        [
+          179,
+          106.7
+        ],
+        [
+          177,
+          105.7
+        ],
+        [
+          175,
+          105.7
+        ],
+        [
+          169,
+          106.8
+        ],
+        [
+          166,
+          107
+        ],
+        [
+          163.4,
+          105.8
+        ]
+      ],
+      "bounds": [
+        155,
+        93,
+        186,
+        119
+      ]
+    },
+    {
+      "name": "VBUS charger crossing",
+      "net": "USB_VBUS",
+      "layer": "B.Cu",
+      "width": 0.4,
+      "through": [
+        [
+          163.4,
+          105.8
+        ],
+        [
+          160.5,
+          110.5
+        ]
+      ],
+      "bounds": [
+        155,
+        93,
+        186,
+        119
+      ]
+    }
+  ]
+}

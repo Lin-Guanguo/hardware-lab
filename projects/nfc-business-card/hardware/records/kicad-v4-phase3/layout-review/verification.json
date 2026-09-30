@@ -1,0 +1,19 @@
+{
+  "board_sha256": "61d07570596485f2a6e394ac39bdf9f4962ea417b04b9987b5022c49ffb97c6f",
+  "board_unchanged": true,
+  "checkpoint_crc_and_all_file_hashes": "pass",
+  "checkpoint_files": 238,
+  "all_61_drc_unconnected_items_in_csv_and_map": true,
+  "named_nets": 52,
+  "unconnected_nets": 34,
+  "report_local_links": "pass",
+  "ungrouped_footprints": [],
+  "browser_ui": {
+    "network_filter": "pass",
+    "layout_A": "pass",
+    "layout_B": "pass",
+    "power_return_overlay": "pass",
+    "narrow_viewport_visual_inspection": "pass"
+  },
+  "scope": "Read-only diagnosis. Proposed placements are not implemented or validated. No new routing search."
+}

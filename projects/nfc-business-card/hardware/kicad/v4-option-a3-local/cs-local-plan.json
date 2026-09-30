@@ -1,0 +1,36 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-option-a3-local/NFC-Card-V4.kicad_pcb",
+  "description": "A3 bounded CS route only",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-option-a3/cs-local-ipc.json",
+  "routes": [],
+  "vias": [],
+  "failures": [
+    {
+      "reason": "No path in assigned corridor",
+      "start": [
+        169.251,
+        116.934
+      ],
+      "end": [
+        166.325,
+        95.99
+      ],
+      "visited": 3251,
+      "closest_reached": {
+        "layer": "B.Cu",
+        "point": [
+          164.42499999999998,
+          98.58999999999999
+        ],
+        "distance": 3.2202484376209224
+      },
+      "direct_blockers": [
+        {
+          "name": "30c6f010-0a0b-4dc3-becd-366ba1e625e1",
+          "net": "EPD_SCK_TBD",
+          "kind": "track"
+        }
+      ]
+    }
+  ]
+}

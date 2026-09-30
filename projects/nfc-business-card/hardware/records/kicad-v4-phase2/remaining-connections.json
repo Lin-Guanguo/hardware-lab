@@ -1,0 +1,27 @@
+{
+  "native_unconnected_items": 49,
+  "net_counts": {
+    "VDD_3V3": 9,
+    "BAT_ADC_SENSE": 3,
+    "BAT_DIV_SUPPLY": 1,
+    "CHG_SDA": 2,
+    "CHG_PG_N": 2,
+    "BAT_PACK_TBD": 2,
+    "CHG_CE_N": 2,
+    "BAT_NTC_TBD": 2,
+    "CHG_SCL": 2,
+    "CHG_INT_N": 2,
+    "EPD_EN_TBD": 2,
+    "USB_CC1": 2,
+    "BAT_SWITCH_GATE": 2,
+    "KEY_OK_N": 3,
+    "USB_CC2": 2,
+    "KEY_PREV_N": 3,
+    "KEY_NEXT_N": 3,
+    "BAT_MEAS_EN": 2,
+    "NRESET": 1,
+    "SWDIO": 1,
+    "SWDCLK": 1
+  },
+  "note": "Counts are KiCad airwire items, not independent failed nets. All are unimplemented; no exclusions added."
+}

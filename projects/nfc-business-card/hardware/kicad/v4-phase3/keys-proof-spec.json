@@ -1,0 +1,658 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase3/NFC-Card-V4.kicad_pcb",
+  "description": "Joint planned ports and coherent whole-board octilinear routing",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase3/joint-apply.json",
+  "paths": [
+    {
+      "name": "U1.3 service escape",
+      "net": "KEY_PREV_N",
+      "through": [
+        "U1.3",
+        [
+          171.4,
+          123.1
+        ]
+      ],
+      "width": 0.15,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "U1.4 service escape",
+      "net": "KEY_NEXT_N",
+      "through": [
+        "U1.4",
+        [
+          171.4,
+          122.0
+        ]
+      ],
+      "width": 0.15,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "U1.5 service escape",
+      "net": "KEY_OK_N",
+      "through": [
+        "U1.5",
+        [
+          170.3,
+          121.1
+        ]
+      ],
+      "width": 0.15,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "U1.5 to SW3.2 module traverse",
+      "net": "KEY_OK_N",
+      "through": [
+        [
+          170.3,
+          121.1
+        ],
+        [
+          167.5,
+          119.6
+        ],
+        [
+          164.5,
+          119.6
+        ],
+        [
+          164.5,
+          117.7
+        ]
+      ],
+      "width": 0.15,
+      "layers": [
+        "B.Cu"
+      ],
+      "start_layer": "B.Cu",
+      "end_layer": "B.Cu",
+      "bounds": [
+        160,
+        117,
+        183,
+        124.8
+      ],
+      "via_cost": 6
+    },
+    {
+      "name": "U1.4 to SW2.2 module traverse",
+      "net": "KEY_NEXT_N",
+      "through": [
+        [
+          171.4,
+          122.0
+        ],
+        [
+          167.5,
+          119.96
+        ],
+        [
+          163.5,
+          119.96
+        ],
+        [
+          163.5,
+          117.7
+        ]
+      ],
+      "width": 0.15,
+      "layers": [
+        "B.Cu"
+      ],
+      "start_layer": "B.Cu",
+      "end_layer": "B.Cu",
+      "bounds": [
+        160,
+        117,
+        183,
+        124.8
+      ],
+      "via_cost": 6
+    },
+    {
+      "name": "U1.3 to SW1.2 module traverse",
+      "net": "KEY_PREV_N",
+      "through": [
+        [
+          171.4,
+          123.1
+        ],
+        [
+          166.8,
+          120.32
+        ],
+        [
+          162.5,
+          120.32
+        ],
+        [
+          162.5,
+          117.7
+        ]
+      ],
+      "width": 0.15,
+      "layers": [
+        "B.Cu"
+      ],
+      "start_layer": "B.Cu",
+      "end_layer": "B.Cu",
+      "bounds": [
+        160,
+        117,
+        183,
+        124.8
+      ],
+      "via_cost": 6
+    }
+  ],
+  "vias": [
+    {
+      "name": "U1.36 escape",
+      "net": "EPD_SCK_TBD",
+      "at": [
+        170.4,
+        116.134
+      ]
+    },
+    {
+      "name": "U1.37 escape",
+      "net": "EPD_MOSI_TBD",
+      "at": [
+        166.9,
+        116.534
+      ]
+    },
+    {
+      "name": "U1.38 escape",
+      "net": "EPD_CS_N_TBD",
+      "at": [
+        170.4,
+        117.0
+      ]
+    },
+    {
+      "name": "U1.39 escape",
+      "net": "EPD_DC_TBD",
+      "at": [
+        166.9,
+        117.334
+      ]
+    },
+    {
+      "name": "U1.41 escape",
+      "net": "EPD_RESET_N_TBD",
+      "at": [
+        166.9,
+        118.134
+      ]
+    },
+    {
+      "name": "U1.24 escape",
+      "net": "EPD_BUSY_TBD",
+      "at": [
+        173,
+        113.0
+      ]
+    },
+    {
+      "name": "U1.51 escape",
+      "net": "SWDIO",
+      "at": [
+        167.2,
+        118.95
+      ]
+    },
+    {
+      "name": "U1.53 escape",
+      "net": "SWDCLK",
+      "at": [
+        165.9,
+        118.7
+      ]
+    },
+    {
+      "name": "U1.40 escape",
+      "net": "NRESET",
+      "at": [
+        170.4,
+        117.85
+      ]
+    },
+    {
+      "name": "J1.A7 escape",
+      "net": "USB_DM_CONN",
+      "at": [
+        184.3,
+        103.6005
+      ]
+    },
+    {
+      "name": "J1.B7 escape",
+      "net": "USB_DM_CONN",
+      "at": [
+        184.3,
+        104.9005
+      ]
+    },
+    {
+      "name": "J1.A6 escape",
+      "at": [
+        183.3,
+        104.2505
+      ],
+      "net": "USB_DP_CONN"
+    },
+    {
+      "name": "J1.B6 escape",
+      "at": [
+        183.3,
+        103.0005
+      ],
+      "net": "USB_DP_CONN"
+    },
+    {
+      "name": "J1.A5 escape",
+      "at": [
+        185,
+        105.4505
+      ],
+      "net": "USB_CC1"
+    },
+    {
+      "name": "J1.B5 escape",
+      "at": [
+        185,
+        102.2505
+      ],
+      "net": "USB_CC2"
+    },
+    {
+      "name": "J2.13 escape",
+      "net": "EPD_SCK_TBD",
+      "at": [
+        169.2,
+        95.1
+      ]
+    },
+    {
+      "name": "J2.14 escape",
+      "net": "EPD_MOSI_TBD",
+      "at": [
+        168.1,
+        94.3
+      ]
+    },
+    {
+      "name": "J2.12 escape",
+      "net": "EPD_CS_N_TBD",
+      "at": [
+        168.1,
+        95.9
+      ]
+    },
+    {
+      "name": "J2.11 escape",
+      "net": "EPD_DC_TBD",
+      "at": [
+        167.7,
+        96.7
+      ]
+    },
+    {
+      "name": "J2.10 escape",
+      "net": "EPD_RESET_N_TBD",
+      "at": [
+        168.1,
+        97.5
+      ]
+    },
+    {
+      "name": "J2.9 escape",
+      "net": "EPD_BUSY_TBD",
+      "at": [
+        169.2,
+        98.3
+      ]
+    },
+    {
+      "name": "U1.16 control escape",
+      "net": "CHG_SCL",
+      "at": [
+        177,
+        112.95
+      ]
+    },
+    {
+      "name": "U1.19 control escape",
+      "net": "CHG_SDA",
+      "at": [
+        175.0,
+        115.8
+      ]
+    },
+    {
+      "name": "U1.20 control escape",
+      "net": "CHG_INT_N",
+      "at": [
+        175.4,
+        112.7
+      ]
+    },
+    {
+      "name": "U1.21 control escape",
+      "net": "CHG_PG_N",
+      "at": [
+        173.8,
+        116.8
+      ]
+    },
+    {
+      "name": "U1.22 control escape",
+      "net": "CHG_CE_N",
+      "at": [
+        174.1,
+        112.9
+      ]
+    },
+    {
+      "name": "U1.27 control escape",
+      "net": "EPD_EN_TBD",
+      "at": [
+        171.8,
+        115.8
+      ]
+    },
+    {
+      "name": "U2.3 service escape",
+      "net": "CHG_PG_N",
+      "at": [
+        158.5,
+        106.2
+      ]
+    },
+    {
+      "name": "U2.4 service escape",
+      "net": "CHG_CE_N",
+      "at": [
+        157.5,
+        106.9
+      ]
+    },
+    {
+      "name": "U2.6 service escape",
+      "net": "BAT_NTC_TBD",
+      "at": [
+        157.5,
+        111.3
+      ]
+    },
+    {
+      "name": "U2.7 service escape",
+      "net": "CHG_SDA",
+      "at": [
+        158.4,
+        111.2
+      ]
+    },
+    {
+      "name": "U2.8 service escape",
+      "net": "CHG_SCL",
+      "at": [
+        159.4,
+        111.3
+      ]
+    },
+    {
+      "name": "U2.9 service escape",
+      "net": "CHG_INT_N",
+      "at": [
+        160.3,
+        110.8
+      ]
+    },
+    {
+      "name": "U1.3 service escape",
+      "net": "KEY_PREV_N",
+      "at": [
+        171.4,
+        123.1
+      ]
+    },
+    {
+      "name": "U1.4 service escape",
+      "net": "KEY_NEXT_N",
+      "at": [
+        171.4,
+        122.0
+      ]
+    },
+    {
+      "name": "U1.5 service escape",
+      "net": "KEY_OK_N",
+      "at": [
+        170.3,
+        121.1
+      ]
+    },
+    {
+      "name": "U4.3 enable escape",
+      "net": "EPD_EN_TBD",
+      "at": [
+        179.7,
+        98.5
+      ]
+    },
+    {
+      "name": "U5.1 trunk access",
+      "net": "USB_DP_CONN",
+      "at": [
+        178.9,
+        103.0
+      ]
+    },
+    {
+      "name": "U5.2 trunk access",
+      "net": "USB_DM_CONN",
+      "at": [
+        178.9,
+        104.6
+      ]
+    },
+    {
+      "name": "R5.2 to U1.19 bus east transition",
+      "net": "CHG_SDA",
+      "at": [
+        178.2,
+        107.65
+      ]
+    },
+    {
+      "name": "R8.2 to U1.20 bus east transition",
+      "net": "CHG_INT_N",
+      "at": [
+        177.2,
+        107.65
+      ]
+    },
+    {
+      "name": "R6.2 to U1.16 bus east transition",
+      "net": "CHG_SCL",
+      "at": [
+        176.2,
+        107.65
+      ]
+    },
+    {
+      "name": "R9.2 to U1.21 bus east transition",
+      "net": "CHG_PG_N",
+      "at": [
+        175.2,
+        107.65
+      ]
+    },
+    {
+      "name": "R7.2 to U1.22 bus east transition",
+      "net": "CHG_CE_N",
+      "at": [
+        174.2,
+        107.65
+      ]
+    },
+    {
+      "name": "U1.11 planned supply/sense access",
+      "net": "BAT_ADC_SENSE",
+      "at": [
+        175.8,
+        118.534
+      ]
+    },
+    {
+      "name": "C1.1 planned supply/sense access",
+      "net": "USB_VBUS",
+      "at": [
+        167.7,
+        112.2
+      ]
+    },
+    {
+      "name": "C8.1 planned supply/sense access",
+      "net": "USB_VBUS",
+      "at": [
+        162.8,
+        110.3
+      ]
+    },
+    {
+      "name": "C3.1 planned supply/sense access",
+      "net": "BAT_PACK_TBD",
+      "at": [
+        161.3,
+        104.4
+      ]
+    },
+    {
+      "name": "U3.2 ground return",
+      "net": "GND",
+      "at": [
+        176.1,
+        110.1
+      ]
+    },
+    {
+      "name": "C4.2 ground return",
+      "net": "GND",
+      "at": [
+        179.5,
+        112.3
+      ]
+    },
+    {
+      "name": "U1.3 to SW1.2 southwest transition",
+      "net": "KEY_PREV_N",
+      "at": [
+        162.5,
+        117.7
+      ]
+    },
+    {
+      "name": "U1.4 to SW2.2 southwest transition",
+      "net": "KEY_NEXT_N",
+      "at": [
+        163.5,
+        117.7
+      ]
+    },
+    {
+      "name": "U1.5 to SW3.2 southwest transition",
+      "net": "KEY_OK_N",
+      "at": [
+        164.5,
+        117.7
+      ]
+    },
+    {
+      "name": "R3.1 guaranteed port",
+      "net": "USB_DP_CONN",
+      "at": [
+        163.0465,
+        116.2
+      ]
+    },
+    {
+      "name": "R4.1 guaranteed port",
+      "net": "USB_DM_CONN",
+      "at": [
+        163.0465,
+        114.6
+      ]
+    },
+    {
+      "name": "U6.1 guaranteed port",
+      "net": "USB_CC1",
+      "at": [
+        181,
+        109.25
+      ]
+    },
+    {
+      "name": "U6.2 guaranteed port",
+      "net": "USB_CC2",
+      "at": [
+        181,
+        106.35
+      ]
+    },
+    {
+      "name": "NTC.1 guaranteed port",
+      "net": "BAT_NTC_TBD",
+      "at": [
+        156,
+        103.3
+      ]
+    },
+    {
+      "name": "CHG_SDA west port",
+      "net": "CHG_SDA",
+      "at": [
+        165,
+        105.5
+      ]
+    },
+    {
+      "name": "CHG_INT_N west port",
+      "net": "CHG_INT_N",
+      "at": [
+        164.15,
+        105.86
+      ]
+    },
+    {
+      "name": "CHG_SCL west port",
+      "net": "CHG_SCL",
+      "at": [
+        163.3,
+        106.22
+      ]
+    },
+    {
+      "name": "CHG_PG_N west port",
+      "net": "CHG_PG_N",
+      "at": [
+        163.3,
+        107.3
+      ]
+    },
+    {
+      "name": "CHG_CE_N west port",
+      "net": "CHG_CE_N",
+      "at": [
+        163.3,
+        108.3
+      ]
+    }
+  ],
+  "model_board": "projects/nfc-business-card/artifacts/kicad-v4-phase3/layout-only.kicad_pcb"
+}

@@ -1,0 +1,42 @@
+{
+  "native_board_rules_changed": false,
+  "changes": [
+    {
+      "bounds_um": [
+        180250.0,
+        103100.0,
+        180820.0,
+        104500.0
+      ],
+      "action": "Remove DSN track blocker; native rule prohibits pour only (U5/J1)"
+    },
+    {
+      "bounds_um": [
+        185049.0,
+        101001.0,
+        192901.0,
+        107099.0
+      ],
+      "action": "Remove DSN track blocker; native rule prohibits pour only (U5/J1)"
+    },
+    {
+      "bounds_um": [
+        110000.0,
+        78000.0,
+        149620.0,
+        113000.0
+      ],
+      "action": "Keep RF track exclusion, except F.Cu battery lead exit strip y=109.6..113.0 mm; only BAT/GND may use this strip"
+    },
+    {
+      "bounds_um": [
+        113000.0,
+        85000.0,
+        145000.0,
+        111000.0
+      ],
+      "action": "Remove duplicate RF inner DSN blocker; protected by outer RF region; no native rule changed"
+    }
+  ],
+  "postcheck": "Reject any non-BAT/non-GND new copper in RF lead strip. B.Cu RF region and both BLE blockers remain."
+}

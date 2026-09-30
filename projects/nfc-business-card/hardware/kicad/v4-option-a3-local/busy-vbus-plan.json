@@ -1,0 +1,267 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-option-a3-local/NFC-Card-V4.kicad_pcb",
+  "description": "A3 jointly repair only BUSY and the eleven-segment VBUS branch proven to enclose its MCU exit",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-option-a3/busy-vbus-ipc.json",
+  "remove_trial_ids": [
+    "ec398dae-ecb7-482b-9c95-5cb8e5211d97",
+    "059fb7f2-4477-487a-bd1f-49e60c67c176",
+    "cea3fdc0-1b6e-466d-b27a-24674dd5b1fe",
+    "2157204c-46fd-4d79-91da-adb24ac3e41a",
+    "6dd3623e-b21c-49cf-9d9a-de59d2019c99",
+    "6f8a60a5-1dbb-4ede-8d12-f16ce84da29f",
+    "4da455e2-9c1f-4e44-b503-ca002d05b061",
+    "6e17724c-c205-4408-ab59-c8a0792bfe70",
+    "161e4f19-015d-4ae0-943f-d5aa6802a5ec",
+    "b8e725fd-b7e5-4d55-8463-bfcd2fb3d582",
+    "2070dbba-9937-452e-b369-e163d6d9cf7e",
+    "01d06eec-ac7d-4a57-bf15-1b39c315ef7f",
+    "b6c149b5-6972-4eb8-9e38-f5771ab05971",
+    "1a8eab21-d27b-4835-80ce-d570387a78f6",
+    "7d96157b-a2de-4ad3-aebc-932ccb00df54"
+  ],
+  "routes": [
+    {
+      "name": "BUSY escape after removing enclosing VBUS branch",
+      "net": "EPD_BUSY_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          173.001,
+          113.934
+        ],
+        [
+          173.001,
+          113.666
+        ],
+        [
+          172.025,
+          112.69
+        ]
+      ],
+      "length_mm": 1.648
+    },
+    {
+      "name": "BUSY escape after removing enclosing VBUS branch",
+      "net": "EPD_BUSY_TBD",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          172.025,
+          112.69
+        ],
+        [
+          167.825,
+          108.49
+        ],
+        [
+          167.825,
+          106.79
+        ],
+        [
+          167.125,
+          106.09
+        ]
+      ],
+      "length_mm": 8.63
+    },
+    {
+      "name": "BUSY escape after removing enclosing VBUS branch",
+      "net": "EPD_BUSY_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          167.125,
+          106.09
+        ],
+        [
+          165.425,
+          104.39
+        ]
+      ],
+      "length_mm": 2.404
+    },
+    {
+      "name": "BUSY escape after removing enclosing VBUS branch",
+      "net": "EPD_BUSY_TBD",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          165.425,
+          104.39
+        ],
+        [
+          165.225,
+          104.19
+        ],
+        [
+          165.225,
+          100.79
+        ],
+        [
+          167.525,
+          98.49
+        ]
+      ],
+      "length_mm": 6.936
+    },
+    {
+      "name": "BUSY escape after removing enclosing VBUS branch",
+      "net": "EPD_BUSY_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          167.525,
+          98.49
+        ],
+        [
+          167.525,
+          97.99
+        ],
+        [
+          167.025,
+          97.49
+        ],
+        [
+          166.325,
+          97.49
+        ]
+      ],
+      "length_mm": 1.907
+    },
+    {
+      "name": "BUSY pullup local connection",
+      "net": "EPD_BUSY_TBD",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          167.525,
+          98.49
+        ],
+        [
+          170.6535,
+          95.3615
+        ],
+        [
+          170.6535,
+          91.4
+        ]
+      ],
+      "length_mm": 8.386
+    },
+    {
+      "name": "BUSY pullup local connection",
+      "net": "EPD_BUSY_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          170.6535,
+          91.4
+        ],
+        [
+          170.6535,
+          87.9
+        ]
+      ],
+      "length_mm": 3.5
+    }
+  ],
+  "vias": [
+    {
+      "net": "EPD_BUSY_TBD",
+      "at": [
+        172.02499999999998,
+        112.69
+      ]
+    },
+    {
+      "net": "EPD_BUSY_TBD",
+      "at": [
+        167.12499999999997,
+        106.08999999999999
+      ]
+    },
+    {
+      "net": "EPD_BUSY_TBD",
+      "at": [
+        165.42499999999998,
+        104.38999999999999
+      ]
+    },
+    {
+      "net": "EPD_BUSY_TBD",
+      "at": [
+        167.52499999999998,
+        98.49
+      ]
+    },
+    {
+      "net": "EPD_BUSY_TBD",
+      "at": [
+        170.6535,
+        91.4
+      ]
+    }
+  ],
+  "failures": [
+    {
+      "name": "VBUS MCU branch rebuilt with BUSY present",
+      "reason": "No path in assigned corridor",
+      "start": [
+        180.2,
+        108.7
+      ],
+      "end": [
+        168.8,
+        112.2
+      ],
+      "visited": 8196,
+      "closest_reached": {
+        "layer": "F.Cu",
+        "point": [
+          171.3,
+          109.5
+        ],
+        "distance": 3.679673898594822
+      },
+      "direct_blockers": [
+        {
+          "name": "C7.1",
+          "net": "VDD_3V3",
+          "kind": "pad"
+        },
+        {
+          "name": "C7.2",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "name": "3cfddc6b-f0e2-4535-b02d-48456bbe8795",
+          "net": "VDD_3V3",
+          "kind": "track"
+        },
+        {
+          "name": "5da49527-95da-417d-92ca-4f9a2e2426b2",
+          "net": "VDD_3V3",
+          "kind": "track"
+        },
+        {
+          "name": "34e93d35-7cb3-4ba8-94f2-494043b2f505",
+          "net": "GND",
+          "kind": "track"
+        },
+        {
+          "name": "ed2129ce-79e4-45e3-adfc-ee9817171fb2",
+          "net": "GND",
+          "kind": "track"
+        }
+      ]
+    }
+  ]
+}

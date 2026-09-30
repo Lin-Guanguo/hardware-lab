@@ -1,0 +1,105 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-option-a/NFC-Card-V4.kicad_pcb",
+  "description": "Fit complete charger group and local decoupling using native courtyards; retain battery sensing",
+  "placements": {
+    "U2": [
+      177,
+      108,
+      180
+    ],
+    "C2": [
+      179.3,
+      105,
+      0
+    ],
+    "C3": [
+      176.2,
+      104.8,
+      90
+    ],
+    "C8": [
+      180.2,
+      108,
+      90
+    ],
+    "R5": [
+      176,
+      111.4,
+      90
+    ],
+    "R6": [
+      177.5,
+      111.4,
+      90
+    ],
+    "R8": [
+      174.5,
+      111.4,
+      90
+    ],
+    "R9": [
+      179,
+      111.4,
+      90
+    ],
+    "R7": [
+      180.5,
+      111.4,
+      90
+    ],
+    "U3": [
+      171.5,
+      107.8,
+      90
+    ],
+    "C4": [
+      174.2,
+      107.4,
+      90
+    ],
+    "C5": [
+      168.1,
+      108.7,
+      180
+    ],
+    "C6": [
+      172.1,
+      111.5,
+      90
+    ],
+    "R19": [
+      173.6,
+      104.6,
+      0
+    ],
+    "NTC": [
+      170.8,
+      103.5,
+      0
+    ],
+    "R1": [
+      182.3,
+      106.4,
+      90
+    ],
+    "R2": [
+      182.3,
+      110,
+      90
+    ],
+    "R10": [
+      156.7,
+      114.3,
+      90
+    ],
+    "R17": [
+      154.2,
+      100.8,
+      0
+    ]
+  },
+  "remove_trial_ids": [],
+  "routes": [],
+  "vias": [],
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-option-a/placement-fit-ipc.json"
+}

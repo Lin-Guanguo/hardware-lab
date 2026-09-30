@@ -1,0 +1,282 @@
+{
+  "status": "REJECTED JOINT CANDIDATE; NOT A RELEASE",
+  "fixed_datums": [
+    "U1",
+    "J1",
+    "J2",
+    "C23",
+    "C24",
+    "BP",
+    "BN",
+    "TP1",
+    "TP2",
+    "TP3",
+    "TP4",
+    "TP5",
+    "SW1",
+    "SW2",
+    "SW3"
+  ],
+  "preserved_comparison_files": 1298,
+  "parts": 66,
+  "footprints": 76,
+  "pads": 266,
+  "part_pins_checked": 256,
+  "gpio_changes": {
+    "CHG_SCL": {
+      "old_module_pin": 16,
+      "new_module_pin": 36,
+      "old_gpio": "P0.27",
+      "new_gpio": "P0.14"
+    },
+    "CHG_SDA": {
+      "old_module_pin": 19,
+      "new_module_pin": 37,
+      "old_gpio": "P0.26",
+      "new_gpio": "P0.13"
+    },
+    "CHG_INT_N": {
+      "old_module_pin": 20,
+      "new_module_pin": 39,
+      "old_gpio": "P0.04",
+      "new_gpio": "P0.15"
+    },
+    "CHG_PG_N": {
+      "old_module_pin": 21,
+      "new_module_pin": 38,
+      "old_gpio": "P0.05",
+      "new_gpio": "P0.16"
+    },
+    "CHG_CE_N": {
+      "old_module_pin": 22,
+      "new_module_pin": 41,
+      "old_gpio": "P0.06",
+      "new_gpio": "P0.17"
+    },
+    "EPD_SCK_TBD": {
+      "old_module_pin": 36,
+      "new_module_pin": 24,
+      "old_gpio": "P0.14",
+      "new_gpio": "P0.08"
+    },
+    "EPD_MOSI_TBD": {
+      "old_module_pin": 37,
+      "new_module_pin": 26,
+      "old_gpio": "P0.13",
+      "new_gpio": "P1.09"
+    },
+    "EPD_CS_N_TBD": {
+      "old_module_pin": 38,
+      "new_module_pin": 22,
+      "old_gpio": "P0.16",
+      "new_gpio": "P0.06"
+    },
+    "EPD_DC_TBD": {
+      "old_module_pin": 39,
+      "new_module_pin": 20,
+      "old_gpio": "P0.15",
+      "new_gpio": "P0.04"
+    },
+    "EPD_RESET_N_TBD": {
+      "old_module_pin": 41,
+      "new_module_pin": 19,
+      "old_gpio": "P0.17",
+      "new_gpio": "P0.26"
+    },
+    "EPD_BUSY_TBD": {
+      "old_module_pin": 24,
+      "new_module_pin": 16,
+      "old_gpio": "P0.08",
+      "new_gpio": "P0.27"
+    }
+  },
+  "schema_board_parity": 0,
+  "unconnected": 10,
+  "drc_mode": "--all-track-errors --refill-zones --schematic-parity",
+  "drc": {
+    "annular_width": 2,
+    "clearance": 63,
+    "hole_clearance": 52,
+    "tracks_crossing": 61,
+    "shorting_items": 61,
+    "copper_edge_clearance": 14,
+    "starved_thermal": 3,
+    "via_diameter": 2,
+    "solder_mask_bridge": 11,
+    "via_dangling": 2,
+    "track_dangling": 1,
+    "hole_to_hole": 1,
+    "lib_footprint_mismatch": 7,
+    "text_height": 7,
+    "silk_overlap": 20,
+    "silk_over_copper": 4
+  },
+  "severity": {
+    "error": 269,
+    "warning": 42
+  },
+  "independent_conflicting_pairs": 184,
+  "new_non_octilinear_segments": [],
+  "placements_actual": {
+    "R5": {
+      "A3": [
+        180.4,
+        114.3,
+        180.0
+      ],
+      "A4": [
+        151.7,
+        103.5,
+        0
+      ]
+    },
+    "R9": {
+      "A3": [
+        180.4,
+        119.4,
+        180.0
+      ],
+      "A4": [
+        151.7,
+        109.2,
+        0
+      ]
+    },
+    "C2": {
+      "A3": [
+        180.5,
+        105.6,
+        0
+      ],
+      "A4": [
+        161.5,
+        105.3,
+        180.0
+      ]
+    },
+    "U2": {
+      "A3": [
+        177.0,
+        108.0,
+        180.0
+      ],
+      "A4": [
+        158.0,
+        107.3,
+        180.0
+      ]
+    },
+    "R7": {
+      "A3": [
+        173.6,
+        102.4,
+        0
+      ],
+      "A4": [
+        155.0,
+        104.9,
+        0
+      ]
+    },
+    "C8": {
+      "A3": [
+        180.2,
+        108.0,
+        90.0
+      ],
+      "A4": [
+        161.5,
+        107.4,
+        0
+      ]
+    },
+    "R8": {
+      "A3": [
+        180.4,
+        117.7,
+        180.0
+      ],
+      "A4": [
+        151.7,
+        107.3,
+        0
+      ]
+    },
+    "C3": {
+      "A3": [
+        176.2,
+        103.6,
+        90.0
+      ],
+      "A4": [
+        157.2,
+        103.5,
+        90.0
+      ]
+    },
+    "R19": {
+      "A3": [
+        170.5,
+        104.3,
+        0
+      ],
+      "A4": [
+        155.4,
+        109.6,
+        180.0
+      ]
+    },
+    "R3": {
+      "A3": [
+        164.9,
+        116.2,
+        0
+      ],
+      "A4": [
+        164.7,
+        112.5,
+        -90.0
+      ]
+    },
+    "R6": {
+      "A3": [
+        180.4,
+        116.0,
+        180.0
+      ],
+      "A4": [
+        151.7,
+        105.4,
+        0
+      ]
+    },
+    "R4": {
+      "A3": [
+        164.9,
+        114.6,
+        0
+      ],
+      "A4": [
+        166.5,
+        112.5,
+        -90.0
+      ]
+    },
+    "NTC": {
+      "A3": [
+        169.0,
+        101.6,
+        0
+      ],
+      "A4": [
+        154.0,
+        107.5,
+        0
+      ]
+    }
+  },
+  "rules_bom_footprint_geometry_keepouts_nfc_datums_preserved": true,
+  "functional_parts_and_schematic_retained": true,
+  "tracks": 618,
+  "vias": 101
+}

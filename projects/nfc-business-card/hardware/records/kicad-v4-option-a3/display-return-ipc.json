@@ -1,0 +1,15 @@
+{
+  "plan": "projects/nfc-business-card/hardware/kicad/v4-option-a3-local/display-return-plan.json",
+  "board": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4-option-a3-local/NFC-Card-V4.kicad_pcb",
+  "before": {
+    "tracks": 672,
+    "vias": 97
+  },
+  "after": {
+    "tracks": 672,
+    "vias": 98
+  },
+  "created_ids": [
+    "526ab89a-61ec-4e49-9e9d-b3cb6b1c682a"
+  ]
+}

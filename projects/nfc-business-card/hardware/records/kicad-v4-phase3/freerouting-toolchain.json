@@ -1,0 +1,27 @@
+{
+  "tool": "Freerouting 2.4.1",
+  "release": "https://github.com/freerouting/freerouting/releases/tag/v2.4.1",
+  "binary": "https://github.com/freerouting/freerouting/releases/download/v2.4.1/freerouting-2.4.1-macos-arm64.dmg",
+  "runtime": "Bundled portable macOS app runtime in ignored .cache; no system installation or KiCad update",
+  "network": "Denied for the solver process with sandbox-exec; analytics disabled",
+  "native_export": "KiCad 10.0.6 ExportSpecctraDSN from bundled pcbnew Python binding; original GUI board not changed",
+  "constraints": {
+    "signal_width_mm": 0.15,
+    "power_width_mm": 0.35,
+    "logic_power_width_mm": 0.3,
+    "display_power_width_mm": 0.2,
+    "clearance_mm": 0.205,
+    "smd_to_via_copper_mm": 0.25,
+    "new_via_diameter_drill_mm": [
+      0.6,
+      0.3
+    ]
+  },
+  "not_a_release": "Specctra omits some native DRC/zone semantics; native DRC, geometry, refill, NFC hash and path/return inspection still required",
+  "sha256": {
+    ".cache/freerouting-2.4.1/freerouting.dmg": "61056f20913776f71494d86d2a076ebb7ced83ce3366dc966927a86b3de4cc8a",
+    ".cache/freerouting-2.4.1/freerouting.app/Contents/app/freerouting-executable.jar": "19f4419167b89d1a24788f2a07f7c52be959681dbf02606feb2374480bf45064",
+    "projects/nfc-business-card/artifacts/kicad-v4-phase3/freerouting-local.dsn": "6a78bca32286701a60bcad7a05e0daa792bbc6643181746d60e8573cffdc677d",
+    "projects/nfc-business-card/artifacts/kicad-v4-phase3/freerouting-constrained.dsn": "d8e1acca5ff45f026a8ad0cbf98a5de654603af467e9a133329b80b49198d69b"
+  }
+}

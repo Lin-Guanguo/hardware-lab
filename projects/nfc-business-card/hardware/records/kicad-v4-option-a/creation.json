@@ -1,0 +1,9 @@
+{
+  "source": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4-phase3/NFC-Card-V4.kicad_pcb",
+  "source_sha256": "61d07570596485f2a6e394ac39bdf9f4962ea417b04b9987b5022c49ffb97c6f",
+  "candidate_sha256": "61d07570596485f2a6e394ac39bdf9f4962ea417b04b9987b5022c49ffb97c6f",
+  "source_unchanged": true,
+  "live_tracks": 361,
+  "live_vias": 65,
+  "action": "SaveCopyOfDocument to new candidate; original document not saved or modified"
+}

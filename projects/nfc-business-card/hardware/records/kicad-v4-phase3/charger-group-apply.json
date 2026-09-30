@@ -1,0 +1,13 @@
+{
+  "plan": "projects/nfc-business-card/hardware/kicad/v4-phase3/charger-group-plan.json",
+  "board": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4-phase3/NFC-Card-V4.kicad_pcb",
+  "before": {
+    "tracks": 74,
+    "vias": 6
+  },
+  "after": {
+    "tracks": 74,
+    "vias": 6
+  },
+  "created_ids": []
+}

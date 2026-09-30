@@ -1,0 +1,568 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "description": "LDO decoupling, supply crossings and complete display boost loops after six-signal coexistence",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase2/power-display-ipc.json",
+  "routes": [
+    {
+      "name": "LDO input bypass",
+      "net": "SYS",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          177.9,
+          109.65
+        ],
+        [
+          176.1,
+          109.65
+        ]
+      ],
+      "length_mm": 1.8
+    },
+    {
+      "name": "LDO enable strap",
+      "net": "SYS",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          176.1,
+          109.65
+        ],
+        [
+          175.3,
+          109.3
+        ],
+        [
+          175.2,
+          108.9
+        ],
+        [
+          175.2,
+          108.3
+        ],
+        [
+          175.3,
+          108.1
+        ],
+        [
+          176.1,
+          107.75
+        ]
+      ],
+      "length_mm": 2.982
+    },
+    {
+      "name": "LDO output bypass",
+      "net": "VDD_3V3",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          173.9,
+          109.65
+        ],
+        [
+          172.5,
+          109.65
+        ]
+      ],
+      "length_mm": 1.4
+    },
+    {
+      "name": "MCU reservoir",
+      "net": "VDD_3V3",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          172.5,
+          109.65
+        ],
+        [
+          173.1,
+          110.2
+        ],
+        [
+          173.2,
+          111.2
+        ],
+        [
+          172.9,
+          111.6
+        ],
+        [
+          172.3,
+          112.2
+        ]
+      ],
+      "length_mm": 3.167
+    },
+    {
+      "name": "MCU high frequency bypass",
+      "net": "VDD_3V3",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          172.3,
+          112.2
+        ],
+        [
+          170.6,
+          112.2
+        ]
+      ],
+      "length_mm": 1.7
+    },
+    {
+      "name": "MCU VDDH",
+      "net": "VDD_3V3",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          170.6,
+          112.2
+        ],
+        [
+          170.601,
+          113.934
+        ]
+      ],
+      "length_mm": 1.734
+    },
+    {
+      "name": "MCU VDD",
+      "net": "VDD_3V3",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          172.3,
+          112.2
+        ],
+        [
+          171.401,
+          113.934
+        ]
+      ],
+      "length_mm": 1.953
+    },
+    {
+      "name": "USB VBUS bypass",
+      "net": "USB_VBUS",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          168.8,
+          112.2
+        ],
+        [
+          169.001,
+          113.934
+        ]
+      ],
+      "length_mm": 1.746
+    },
+    {
+      "name": "boost input",
+      "net": "EPD_VDD",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          176.8,
+          100.0
+        ],
+        [
+          174.128,
+          100.5
+        ]
+      ],
+      "length_mm": 2.718
+    },
+    {
+      "name": "boost switch",
+      "net": "EPD_SW",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          171.472,
+          100.5
+        ],
+        [
+          172.0,
+          104.0
+        ]
+      ],
+      "length_mm": 3.54
+    },
+    {
+      "name": "switch sense",
+      "net": "EPD_RESE",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          173.6,
+          103.35
+        ],
+        [
+          175.0465,
+          104.2
+        ]
+      ],
+      "length_mm": 1.678
+    },
+    {
+      "name": "sense return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          176.5535,
+          104.2
+        ],
+        [
+          176.8,
+          102.0
+        ]
+      ],
+      "length_mm": 2.214
+    },
+    {
+      "name": "off-state diode",
+      "net": "EPD_SW",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          171.472,
+          100.5
+        ],
+        [
+          172.0,
+          98.2
+        ]
+      ],
+      "length_mm": 2.36
+    },
+    {
+      "name": "off-state output",
+      "net": "EPD_VPH",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          172.0,
+          94.8
+        ],
+        [
+          172.0,
+          94.5
+        ]
+      ],
+      "length_mm": 0.3
+    },
+    {
+      "name": "off-state return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          172.0,
+          92.5
+        ],
+        [
+          176.9,
+          95.4
+        ],
+        [
+          177.1,
+          95.6
+        ],
+        [
+          179.1,
+          99.6
+        ],
+        [
+          179.0,
+          101.5
+        ],
+        [
+          178.6,
+          101.7
+        ],
+        [
+          176.8,
+          102.0
+        ]
+      ],
+      "length_mm": 14.624
+    },
+    {
+      "name": "pump coupling",
+      "net": "EPD_SW",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          172.0,
+          98.2
+        ],
+        [
+          176.0,
+          98.4
+        ]
+      ],
+      "length_mm": 4.005
+    },
+    {
+      "name": "pump negative diode",
+      "net": "EPD_PUMP",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          177.9,
+          94.5
+        ],
+        [
+          178.3,
+          91.0
+        ]
+      ],
+      "length_mm": 3.523
+    },
+    {
+      "name": "pump clamp return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          181.3,
+          94.5
+        ],
+        [
+          178.4,
+          95.4
+        ],
+        [
+          177.2,
+          95.4
+        ],
+        [
+          172.0,
+          92.5
+        ]
+      ],
+      "length_mm": 10.19
+    },
+    {
+      "name": "negative output",
+      "net": "EPD_VGL",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          181.7,
+          91.0
+        ],
+        [
+          183.0,
+          92.9
+        ],
+        [
+          184.0,
+          94.0
+        ]
+      ],
+      "length_mm": 3.789
+    },
+    {
+      "name": "negative return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          184.0,
+          92.0
+        ],
+        [
+          185.1,
+          93.2
+        ],
+        [
+          185.1,
+          94.8
+        ],
+        [
+          184.8,
+          95.1
+        ],
+        [
+          182.6,
+          95.1
+        ],
+        [
+          181.3,
+          94.5
+        ]
+      ],
+      "length_mm": 7.284
+    },
+    {
+      "name": "EPD load switch bridge",
+      "net": "EPD_VDD",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          178.35,
+          101.05
+        ],
+        [
+          178.35,
+          100.4
+        ]
+      ],
+      "length_mm": 0.65
+    },
+    {
+      "name": "EPD switch output bypass",
+      "net": "EPD_VDD",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          178.35,
+          101.05
+        ],
+        [
+          176.8,
+          100.0
+        ]
+      ],
+      "length_mm": 1.872
+    },
+    {
+      "name": "EPD input bypass",
+      "net": "VDD_3V3",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          182.0,
+          101.4
+        ],
+        [
+          180.25,
+          101.05
+        ]
+      ],
+      "length_mm": 1.785
+    },
+    {
+      "name": "LDO input return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          179.3,
+          109.65
+        ],
+        [
+          178.4,
+          108.8
+        ],
+        [
+          176.1,
+          108.7
+        ]
+      ],
+      "length_mm": 3.54
+    },
+    {
+      "name": "LDO output return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          171.1,
+          109.65
+        ],
+        [
+          173.2,
+          107.1
+        ],
+        [
+          176.6,
+          107.0
+        ],
+        [
+          177.0,
+          107.3
+        ],
+        [
+          177.0,
+          108.2
+        ],
+        [
+          176.6,
+          108.5
+        ],
+        [
+          176.1,
+          108.7
+        ]
+      ],
+      "length_mm": 9.143
+    },
+    {
+      "name": "U4 input return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          182.0,
+          99.4
+        ],
+        [
+          180.6,
+          100.4
+        ],
+        [
+          180.25,
+          100.4
+        ]
+      ],
+      "length_mm": 2.07
+    }
+  ],
+  "vias": [],
+  "failures": [
+    {
+      "path": "pump rectifier",
+      "reason": "No path in assigned corridor",
+      "start": [
+        176.0,
+        96.4
+      ],
+      "end": [
+        177.9,
+        94.5
+      ]
+    }
+  ]
+}

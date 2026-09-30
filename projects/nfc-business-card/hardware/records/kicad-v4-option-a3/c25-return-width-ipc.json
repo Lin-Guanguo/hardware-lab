@@ -1,0 +1,20 @@
+{
+  "plan": "projects/nfc-business-card/hardware/kicad/v4-option-a3-local/c25-return-width-plan.json",
+  "board": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4-option-a3-local/NFC-Card-V4.kicad_pcb",
+  "before": {
+    "tracks": 671,
+    "vias": 97
+  },
+  "after": {
+    "tracks": 672,
+    "vias": 97
+  },
+  "created_ids": [
+    "89f0fb5e-284b-451f-a0fe-2a2de24c5a07",
+    "ba480695-b39e-4f6d-af38-4ca881c6d64c",
+    "34aace65-eccd-476d-ac5e-8963bad534bf",
+    "b8503d2f-ff64-49db-8d19-1d25ba3ab14d",
+    "f0bbe521-562b-4a17-b505-05dbdf239a50",
+    "549c210d-b9ee-4e6a-8f19-a2e0df54b63a"
+  ]
+}

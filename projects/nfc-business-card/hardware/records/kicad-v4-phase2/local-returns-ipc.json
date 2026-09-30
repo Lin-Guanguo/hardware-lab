@@ -1,0 +1,17 @@
+{
+  "plan": "projects/nfc-business-card/hardware/kicad/v4-phase2/local-returns-b-spec-plan.json",
+  "board": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "before": {
+    "tracks": 314,
+    "vias": 59
+  },
+  "after": {
+    "tracks": 315,
+    "vias": 60
+  },
+  "created_ids": [
+    "05e4879c-1687-431c-bf2d-ff9e91292117",
+    "8c442cfe-9ffd-42b1-ae4f-a1b521b03891",
+    "035a73de-2f36-4195-99df-294bc97c376f"
+  ]
+}

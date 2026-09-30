@@ -1,0 +1,318 @@
+- generic: 嘉立创DFM
+- list:
+  - listitem "撤销(Ctrl+Z)"
+  - listitem "重做(Ctrl+Y)"
+  - listitem "放大(A)"
+  - listitem "缩小(Z)"
+  - listitem "适应选中"
+  - listitem "自适应窗口(K)"
+  - listitem "板子翻转(Shift+F)"
+  - listitem "测量(Ctrl+M)"
+  - listitem "导出分析报告"
+  - listitem "配置自定义规则"
+  - listitem "设置"
+- group "单位":
+  - button "mm"
+  - button "inch"
+- button "切换到浅色主题":
+  - img "切换到浅色主题"
+- button "PCB DFM"
+- button "SMT DFM"
+- button "执行DFM检查"
+- generic: 概述
+- generic: 全部
+- generic: 分析项目
+- generic: 统计
+- generic: 操作
+- generic: 线路层分析
+- generic: 锐角拐线
+- generic: "0"
+- text: ","
+- generic: "1"
+- text: ","
+- generic: "0"
+- button "详情"
+- generic: BGA焊盘
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 孔落在焊盘上
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 走线距板边
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 走线间距
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "20"
+- button "详情"
+- generic: 同网络走线间距
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "36"
+- button "详情"
+- generic: 线距铜皮
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "100"
+- button "详情"
+- generic: 裸线头
+- generic: "0"
+- text: ","
+- generic: "3"
+- text: ","
+- generic: "0"
+- button "详情"
+- generic: 线宽
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "100"
+- button "详情"
+- generic: mark点
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 焊盘距外型线
+- generic: "12"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情"
+- generic: 盘到线
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "100"
+- button "详情"
+- generic: 焊盘距焊盘
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "73"
+- button "详情"
+- generic: 盘到铜皮
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "100"
+- button "详情"
+- generic: PTH孔到线
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "43"
+- button "详情"
+- generic: 焊盘孔环
+- generic: "0"
+- text: ","
+- generic: "100"
+- text: ","
+- generic: "0"
+- button "详情"
+- generic: 插件焊盘距贴片焊盘
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: VIA孔到焊盘
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 阻焊层分析
+- generic: 阻焊桥
+- generic: "42"
+- text: ","
+- generic: "4"
+- text: ","
+- generic: "4"
+- button "详情"
+- generic: 开窗露线
+- generic: "0"
+- text: ","
+- generic: "50"
+- text: ","
+- generic: "0"
+- button "详情"
+- generic: 碎线填充
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 焊盘负开窗
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 丝印层分析
+- generic: 丝印距焊盘
+- generic: "50"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情"
+- generic: 丝印距孔
+- generic: "52"
+- text: ","
+- generic: "13"
+- text: ","
+- generic: "2"
+- button "详情"
+- generic: 丝印线条宽度
+- generic: "5"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "45"
+- button "详情"
+- generic: 钻孔层分析
+- generic: 不同网络盲埋孔间距
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 丢失PTH孔
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 不同层盲埋孔近孔
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: PTH孔间距
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: Pth无Pad
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 短槽检测
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 测量槽宽
+- generic: "4"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情"
+- generic: 过孔与插件孔的间距
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: Via无Pad
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 无连接过孔
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic "关闭左侧栏"
+- generic "Gerber(5)": Gerber图
+- generic "Gerber(6)": 骨架线框
+- generic "2D(2)": 2D仿真图
+- generic "3D(3)": 3D仿真图
+- generic "关闭右侧栏"
+- banner:
+  - generic: 显示层控制
+  - generic: 10 层
+- button:
+- generic: 选中全部
+- generic "NFC-Card-V4-Top Silkscreen Layer.gto":
+  - button:
+  - generic: 顶层丝印
+- generic "NFC-Card-V4-Top Paste Mask Layer.gtp":
+  - button:
+  - generic: 顶层锡膏
+- generic "NFC-Card-V4-Top Solder Mask Layer.gts":
+  - button:
+  - generic: 顶层阻焊
+- generic "NFC-Card-V4-Top Layer.gtl":
+  - button:
+  - generic: 顶层线路
+- generic "NFC-Card-V4-Bottom Layer.gbl":
+  - button:
+  - generic: 底层线路
+- generic "NFC-Card-V4-Bottom Solder Mask Layer.gbs":
+  - button:
+  - generic: 底层阻焊
+- generic "NFC-Card-V4-Bottom Paste Mask Layer.gbp":
+  - button:
+  - generic: 底层锡膏
+- generic "NFC-Card-V4-Bottom Silkscreen Layer.gbo":
+  - button:
+  - generic: 底层丝印
+- generic "NFC-Card-V4-PTH.drl":
+  - button:
+  - generic: 通孔层
+- generic "NFC-Card-V4-Multi-Layer.gm1":
+  - button:
+  - generic: 外型层
+- generic: "X: -7.27 Y: 120.54 mm"
+- alert

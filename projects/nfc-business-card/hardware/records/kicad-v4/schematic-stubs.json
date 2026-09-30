@@ -1,0 +1,405 @@
+{
+  "removed": [
+    {
+      "sheet": "1_01 USB and power.kicad_sch",
+      "wire_uuid": "029b7763-cc4e-42f6-a745-15a042547de8",
+      "before": [
+        "pts",
+        [
+          "xy",
+          "45.72",
+          "57.15"
+        ],
+        [
+          "xy",
+          "53.34",
+          "57.15"
+        ]
+      ],
+      "trim_to_label": [
+        49.53,
+        57.15
+      ]
+    },
+    {
+      "sheet": "1_01 USB and power.kicad_sch",
+      "wire_uuid": "076f8a3c-15e8-4aba-9704-c375de172f18",
+      "before": [
+        "pts",
+        [
+          "xy",
+          "45.72",
+          "69.85"
+        ],
+        [
+          "xy",
+          "53.34",
+          "69.85"
+        ]
+      ],
+      "trim_to_label": [
+        49.53,
+        69.85
+      ]
+    },
+    {
+      "sheet": "1_01 USB and power.kicad_sch",
+      "wire_uuid": "2c3b78b8-43fd-4124-b52e-7a4303861b2a",
+      "before": [
+        "pts",
+        [
+          "xy",
+          "45.72",
+          "64.77"
+        ],
+        [
+          "xy",
+          "53.34",
+          "64.77"
+        ]
+      ],
+      "trim_to_label": [
+        49.53,
+        64.77
+      ]
+    },
+    {
+      "sheet": "1_01 USB and power.kicad_sch",
+      "wire_uuid": "496eb7a7-6541-49f2-ad4f-e1c48814df4d",
+      "before": [
+        "pts",
+        [
+          "xy",
+          "45.72",
+          "49.53"
+        ],
+        [
+          "xy",
+          "53.34",
+          "49.53"
+        ]
+      ],
+      "trim_to_label": [
+        49.53,
+        49.53
+      ]
+    },
+    {
+      "sheet": "1_01 USB and power.kicad_sch",
+      "wire_uuid": "5458c3c7-3e11-44ff-b409-ecd753d21b2d",
+      "before": [
+        "pts",
+        [
+          "xy",
+          "45.72",
+          "52.07"
+        ],
+        [
+          "xy",
+          "53.34",
+          "52.07"
+        ]
+      ],
+      "trim_to_label": [
+        49.53,
+        52.07
+      ]
+    },
+    {
+      "sheet": "1_01 USB and power.kicad_sch",
+      "wire_uuid": "70084a5e-6275-4ff1-8e7a-7ddea07caf49",
+      "before": [
+        "pts",
+        [
+          "xy",
+          "45.72",
+          "72.39"
+        ],
+        [
+          "xy",
+          "53.34",
+          "72.39"
+        ]
+      ],
+      "trim_to_label": [
+        49.53,
+        72.39
+      ]
+    },
+    {
+      "sheet": "1_01 USB and power.kicad_sch",
+      "wire_uuid": "7821391f-b7e8-4acc-a50c-7e954eadf0ab",
+      "before": [
+        "pts",
+        [
+          "xy",
+          "45.72",
+          "62.23"
+        ],
+        [
+          "xy",
+          "53.34",
+          "62.23"
+        ]
+      ],
+      "trim_to_label": [
+        49.53,
+        62.23
+      ]
+    },
+    {
+      "sheet": "1_01 USB and power.kicad_sch",
+      "wire_uuid": "9e261543-7c4f-4b69-8a8c-0f9d33e6d470",
+      "before": [
+        "pts",
+        [
+          "xy",
+          "45.72",
+          "82.55"
+        ],
+        [
+          "xy",
+          "53.34",
+          "82.55"
+        ]
+      ],
+      "trim_to_label": [
+        49.53,
+        82.55
+      ]
+    },
+    {
+      "sheet": "1_01 USB and power.kicad_sch",
+      "wire_uuid": "aa0393f6-e266-4c51-bdce-bc3acc20d277",
+      "before": [
+        "pts",
+        [
+          "xy",
+          "45.72",
+          "67.31"
+        ],
+        [
+          "xy",
+          "53.34",
+          "67.31"
+        ]
+      ],
+      "trim_to_label": [
+        49.53,
+        67.31
+      ]
+    },
+    {
+      "sheet": "1_01 USB and power.kicad_sch",
+      "wire_uuid": "c212ebea-b5ac-44dc-9c3c-c997b24a22d5",
+      "before": [
+        "pts",
+        [
+          "xy",
+          "45.72",
+          "80.01"
+        ],
+        [
+          "xy",
+          "53.34",
+          "80.01"
+        ]
+      ],
+      "trim_to_label": [
+        49.53,
+        80.01
+      ]
+    },
+    {
+      "sheet": "1_01 USB and power.kicad_sch",
+      "wire_uuid": "cd11c9e2-d360-4ab9-bf86-51fc82189332",
+      "before": [
+        "pts",
+        [
+          "xy",
+          "269.24",
+          "69.85"
+        ],
+        [
+          "xy",
+          "269.24",
+          "67.31"
+        ]
+      ],
+      "trim_to_label": [
+        269.24,
+        67.31
+      ]
+    },
+    {
+      "sheet": "1_01 USB and power.kicad_sch",
+      "wire_uuid": "cecc9e9e-8868-497c-93d5-4b6ecbf34d5d",
+      "before": [
+        "pts",
+        [
+          "xy",
+          "45.72",
+          "85.09"
+        ],
+        [
+          "xy",
+          "53.34",
+          "85.09"
+        ]
+      ],
+      "trim_to_label": [
+        49.53,
+        85.09
+      ]
+    },
+    {
+      "sheet": "1_01 USB and power.kicad_sch",
+      "wire_uuid": "d7f77ba2-9ea1-49db-b952-4cc1d02825d6",
+      "before": [
+        "pts",
+        [
+          "xy",
+          "45.72",
+          "77.47"
+        ],
+        [
+          "xy",
+          "53.34",
+          "77.47"
+        ]
+      ],
+      "trim_to_label": [
+        49.53,
+        77.47
+      ]
+    },
+    {
+      "sheet": "1_01 USB and power.kicad_sch",
+      "wire_uuid": "eaf409e4-462b-4bc4-8f14-0761e6e1b41b",
+      "before": [
+        "pts",
+        [
+          "xy",
+          "45.72",
+          "87.63"
+        ],
+        [
+          "xy",
+          "53.34",
+          "87.63"
+        ]
+      ],
+      "trim_to_label": [
+        49.53,
+        87.63
+      ]
+    },
+    {
+      "sheet": "1_01 USB and power.kicad_sch",
+      "wire_uuid": "ee1b694c-7e7f-414d-a40b-a6657b9887fc",
+      "before": [
+        "pts",
+        [
+          "xy",
+          "45.72",
+          "54.61"
+        ],
+        [
+          "xy",
+          "53.34",
+          "54.61"
+        ]
+      ],
+      "trim_to_label": [
+        49.53,
+        54.61
+      ]
+    },
+    {
+      "sheet": "2_02 MCU and controls.kicad_sch",
+      "wire_uuid": "8675a79b-fc0a-4e5b-943a-042574bdf796",
+      "before": [
+        "pts",
+        [
+          "xy",
+          "184.15",
+          "22.86"
+        ],
+        [
+          "xy",
+          "176.53",
+          "22.86"
+        ]
+      ],
+      "trim_to_label": [
+        180.34,
+        22.86
+      ]
+    },
+    {
+      "sheet": "2_02 MCU and controls.kicad_sch",
+      "wire_uuid": "a664d860-7608-4cde-b937-e782b7cd0816",
+      "before": [
+        "pts",
+        [
+          "xy",
+          "184.15",
+          "2.54"
+        ],
+        [
+          "xy",
+          "176.53",
+          "2.54"
+        ]
+      ],
+      "trim_to_label": [
+        180.34,
+        2.54
+      ]
+    },
+    {
+      "sheet": "2_02 MCU and controls.kicad_sch",
+      "wire_uuid": "df7383fe-7759-423c-af4d-1e7d0925cf82",
+      "before": [
+        "pts",
+        [
+          "xy",
+          "161.29",
+          "2.54"
+        ],
+        [
+          "xy",
+          "168.91",
+          "2.54"
+        ]
+      ],
+      "trim_to_label": [
+        165.1,
+        2.54
+      ]
+    },
+    {
+      "sheet": "2_02 MCU and controls.kicad_sch",
+      "wire_uuid": "fc5b9ac2-84af-469e-98c3-3199ac6f6bd2",
+      "before": [
+        "pts",
+        [
+          "xy",
+          "161.29",
+          "22.86"
+        ],
+        [
+          "xy",
+          "168.91",
+          "22.86"
+        ]
+      ],
+      "trim_to_label": [
+        165.1,
+        22.86
+      ]
+    }
+  ],
+  "identical_pin_netlist": true,
+  "pins_in_netlist": 256
+}

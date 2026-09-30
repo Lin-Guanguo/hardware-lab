@@ -1,0 +1,144 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "description": "Joint west DC service corridor and VBUS charger crossing; release the direct GDR/RESE corridor",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase2/west-dc-ipc.json",
+  "routes": [
+    {
+      "name": "DC FPC escape",
+      "net": "EPD_DC_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          166.325,
+          96.49
+        ],
+        [
+          164,
+          96.49
+        ]
+      ],
+      "length_mm": 2.325
+    },
+    {
+      "name": "DC west service corridor",
+      "net": "EPD_DC_TBD",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          164,
+          96.49
+        ],
+        [
+          164,
+          115.5
+        ]
+      ],
+      "length_mm": 19.01
+    },
+    {
+      "name": "DC MCU escape",
+      "net": "EPD_DC_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          164,
+          115.5
+        ],
+        [
+          164,
+          117.3
+        ],
+        [
+          168.351,
+          117.334
+        ]
+      ],
+      "length_mm": 6.151
+    },
+    {
+      "name": "VBUS shared supply",
+      "net": "USB_VBUS",
+      "layer": "F.Cu",
+      "width": 0.4,
+      "points": [
+        [
+          183.8,
+          106.2
+        ],
+        [
+          183.8,
+          106.7
+        ],
+        [
+          179,
+          106.7
+        ],
+        [
+          177,
+          105.7
+        ],
+        [
+          175,
+          105.7
+        ],
+        [
+          169,
+          106.8
+        ],
+        [
+          166,
+          107
+        ],
+        [
+          163.4,
+          105.8
+        ]
+      ],
+      "length_mm": 21.506
+    },
+    {
+      "name": "VBUS charger crossing",
+      "net": "USB_VBUS",
+      "layer": "B.Cu",
+      "width": 0.4,
+      "points": [
+        [
+          163.4,
+          105.8
+        ],
+        [
+          160.5,
+          110.5
+        ]
+      ],
+      "length_mm": 5.523
+    }
+  ],
+  "vias": [
+    {
+      "net": "EPD_DC_TBD",
+      "at": [
+        164,
+        96.49
+      ]
+    },
+    {
+      "net": "EPD_DC_TBD",
+      "at": [
+        164,
+        115.5
+      ]
+    },
+    {
+      "net": "USB_VBUS",
+      "at": [
+        163.4,
+        105.8
+      ]
+    }
+  ],
+  "failures": []
+}

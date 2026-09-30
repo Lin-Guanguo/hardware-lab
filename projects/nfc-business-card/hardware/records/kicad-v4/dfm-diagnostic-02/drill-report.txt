@@ -1,0 +1,26 @@
+Drill report for NFC-Card-V4.kicad_pcb
+Created on 2026-09-29T01:20:00
+
+Copper Layer Stackup:
+    =============================================================
+    L1 :  Top Layer                 front
+    L2 :  Bottom Layer              back
+
+
+Drill file 'NFC-Card-V4-PTH.drl' contains
+    plated through holes:
+    =============================================================
+    T1  0.299mm  0.0118"  (46 holes))
+    T2  0.300mm  0.0118"  (150 holes))
+    T3  0.302mm  0.0119"  (1 hole)
+    T4  0.305mm  0.0120"  (1 hole)
+    T5  0.600mm  0.0236"  (4 holes)  (with 4 slots)
+
+    Total plated holes count 202
+
+
+Drill file 'NFC-Card-V4-NPTH.drl' contains
+    unplated through holes:
+    =============================================================
+
+    Total unplated holes count 0

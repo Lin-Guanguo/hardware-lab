@@ -1,0 +1,11 @@
+{
+  "local_report_links_resolve": true,
+  "archive_files": 116,
+  "archive_sha256": "c39d75216e252fd74f76436fd6006bcaf166864a6233950f3b9b8e99721e48c1",
+  "archive_contents_verified": true,
+  "source_documents": [
+    "projects/nfc-business-card/hardware/v4-option-a-review.md",
+    "projects/nfc-business-card/hardware/kicad/v4-option-a/README.md",
+    "projects/nfc-business-card/hardware/kicad/v4-option-a-integration-rejected/README.md"
+  ]
+}

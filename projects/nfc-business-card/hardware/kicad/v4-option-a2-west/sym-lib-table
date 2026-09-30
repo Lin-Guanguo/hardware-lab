@@ -1,0 +1,10 @@
+(sym_lib_table
+	(version 7)
+	(lib
+		(name "NFC_V4")
+		(type "KiCad")
+		(uri "${KIPRJMOD}/NFC_V4.kicad_sym")
+		(options "")
+		(descr "Frozen D import reconciled for V4")
+	)
+)

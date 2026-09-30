@@ -1,0 +1,688 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "scope": "Saved copper centerlines plus pad-center contacts. Zones excluded from path lengths; ground connectivity includes actual filled zones. Reference gaps are projected geometry, not an EMC pass.",
+  "tracks": 314,
+  "vias": 59,
+  "paths": [
+    {
+      "start": "C8.1",
+      "end": "U2.10",
+      "net": "USB_VBUS",
+      "path": {
+        "length_mm": 1.965,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "C8.2",
+      "end": "U2.11",
+      "net": "GND",
+      "path": {
+        "length_mm": 2.617,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "C2.1",
+      "end": "U2.1",
+      "net": "SYS",
+      "path": {
+        "length_mm": 2.219,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "C3.1",
+      "end": "U2.2",
+      "net": "BAT_PACK_TBD",
+      "path": {
+        "length_mm": 2.35,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "C3.1",
+      "end": "BP.1",
+      "net": "BAT_PACK_TBD",
+      "path": {
+        "length_mm": 17.917,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "J1.A4B9",
+      "end": "C8.1",
+      "net": "USB_VBUS",
+      "path": {
+        "length_mm": 30.505,
+        "serial_layer_changes": 2
+      }
+    },
+    {
+      "start": "C4.1",
+      "end": "U3.1",
+      "net": "SYS",
+      "path": {
+        "length_mm": 1.803,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "C4.2",
+      "end": "U3.2",
+      "net": "GND",
+      "path": {
+        "length_mm": 3.547,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "C5.1",
+      "end": "U3.5",
+      "net": "VDD_3V3",
+      "path": {
+        "length_mm": 3.494,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "C5.2",
+      "end": "U3.2",
+      "net": "GND",
+      "path": {
+        "length_mm": 3.131,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "C1.1",
+      "end": "U1.32",
+      "net": "USB_VBUS",
+      "path": {
+        "length_mm": 1.746,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "C7.1",
+      "end": "U1.30",
+      "net": "VDD_3V3",
+      "path": {
+        "length_mm": 1.734,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "C6.1",
+      "end": "U1.28",
+      "net": "VDD_3V3",
+      "path": {
+        "length_mm": 1.953,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "C10.1",
+      "end": "L1.1",
+      "net": "EPD_VDD",
+      "path": {
+        "length_mm": 2.718,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "L1.2",
+      "end": "Q1.3",
+      "net": "EPD_SW",
+      "path": {
+        "length_mm": 3.54,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "Q1.2",
+      "end": "R15.1",
+      "net": "EPD_RESE",
+      "path": {
+        "length_mm": 1.678,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "R15.2",
+      "end": "C10.2",
+      "net": "GND",
+      "path": {
+        "length_mm": 2.214,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "L1.2",
+      "end": "D1.2",
+      "net": "EPD_SW",
+      "path": {
+        "length_mm": 3.046,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "D1.1",
+      "end": "C12.1",
+      "net": "EPD_VPH",
+      "path": {
+        "length_mm": 2.147,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "C12.2",
+      "end": "C10.2",
+      "net": "GND",
+      "path": null
+    },
+    {
+      "start": "D1.2",
+      "end": "C11.1",
+      "net": "EPD_SW",
+      "path": {
+        "length_mm": 3.0,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "C11.2",
+      "end": "D2.2",
+      "net": "EPD_PUMP",
+      "path": {
+        "length_mm": 3.084,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "D2.2",
+      "end": "D3.1",
+      "net": "EPD_PUMP",
+      "path": {
+        "length_mm": 3.523,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "D3.2",
+      "end": "C13.1",
+      "net": "EPD_VGL",
+      "path": {
+        "length_mm": 3.789,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "J2.2",
+      "end": "Q1.1",
+      "net": "EPD_GDR",
+      "path": {
+        "length_mm": 9.575,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "J2.3",
+      "end": "Q1.2",
+      "net": "EPD_RESE",
+      "path": {
+        "length_mm": 8.094,
+        "serial_layer_changes": 2
+      }
+    },
+    {
+      "start": "U1.36",
+      "end": "J2.13",
+      "net": "EPD_SCK_TBD",
+      "path": {
+        "length_mm": 25.212,
+        "serial_layer_changes": 2
+      }
+    },
+    {
+      "start": "U1.37",
+      "end": "J2.14",
+      "net": "EPD_MOSI_TBD",
+      "path": {
+        "length_mm": 25.386,
+        "serial_layer_changes": 2
+      }
+    },
+    {
+      "start": "U1.38",
+      "end": "J2.12",
+      "net": "EPD_CS_N_TBD",
+      "path": {
+        "length_mm": 31.38,
+        "serial_layer_changes": 2
+      }
+    },
+    {
+      "start": "U1.39",
+      "end": "J2.11",
+      "net": "EPD_DC_TBD",
+      "path": {
+        "length_mm": 27.486,
+        "serial_layer_changes": 2
+      }
+    },
+    {
+      "start": "U1.41",
+      "end": "J2.10",
+      "net": "EPD_RESET_N_TBD",
+      "path": {
+        "length_mm": 24.265,
+        "serial_layer_changes": 2
+      }
+    },
+    {
+      "start": "U1.24",
+      "end": "J2.9",
+      "net": "EPD_BUSY_TBD",
+      "path": {
+        "length_mm": 21.758,
+        "serial_layer_changes": 2
+      }
+    },
+    {
+      "start": "U1.51",
+      "end": "TP4.1",
+      "net": "SWDIO",
+      "path": null
+    },
+    {
+      "start": "U1.53",
+      "end": "TP3.1",
+      "net": "SWDCLK",
+      "path": null
+    },
+    {
+      "start": "U1.34",
+      "end": "R4.2",
+      "net": "USB_DM_MCU",
+      "path": {
+        "length_mm": 15.583,
+        "serial_layer_changes": 2
+      }
+    },
+    {
+      "start": "U1.35",
+      "end": "R3.2",
+      "net": "USB_DP_MCU",
+      "path": {
+        "length_mm": 13.225,
+        "serial_layer_changes": 2
+      }
+    },
+    {
+      "start": "U5.1",
+      "end": "R3.1",
+      "net": "USB_DP_CONN",
+      "path": {
+        "length_mm": 13.113,
+        "serial_layer_changes": 2
+      }
+    },
+    {
+      "start": "U5.2",
+      "end": "R4.1",
+      "net": "USB_DM_CONN",
+      "path": {
+        "length_mm": 13.113,
+        "serial_layer_changes": 2
+      }
+    },
+    {
+      "start": "J1.A6",
+      "end": "U5.1",
+      "net": "USB_DP_CONN",
+      "path": {
+        "length_mm": 7.772,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "J1.A7",
+      "end": "U5.2",
+      "net": "USB_DM_CONN",
+      "path": {
+        "length_mm": 9.486,
+        "serial_layer_changes": 2
+      }
+    },
+    {
+      "start": "U4.6",
+      "end": "J2.15",
+      "net": "EPD_VDD",
+      "path": {
+        "length_mm": 17.574,
+        "serial_layer_changes": 2
+      }
+    },
+    {
+      "start": "C12.1",
+      "end": "R16.1",
+      "net": "EPD_VPH",
+      "path": {
+        "length_mm": 2.888,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "R16.2",
+      "end": "J2.21",
+      "net": "EPD_VGH",
+      "path": {
+        "length_mm": 10.585,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "C13.1",
+      "end": "J2.23",
+      "net": "EPD_VGL",
+      "path": {
+        "length_mm": 19.653,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "C14.1",
+      "end": "J2.4",
+      "net": "EPD_VDDL",
+      "path": {
+        "length_mm": 6.875,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "C15.1",
+      "end": "J2.5",
+      "net": "EPD_VSPL1",
+      "path": {
+        "length_mm": 6.886,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "C16.1",
+      "end": "J2.16",
+      "net": "EPD_VSPL2",
+      "path": {
+        "length_mm": 7.273,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "C17.1",
+      "end": "J2.18",
+      "net": "EPD_VSNL1",
+      "path": {
+        "length_mm": 6.938,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "C18.1",
+      "end": "J2.19",
+      "net": "EPD_VSNL2",
+      "path": {
+        "length_mm": 6.843,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "C19.1",
+      "end": "J2.20",
+      "net": "EPD_VSPH",
+      "path": {
+        "length_mm": 7.21,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "C20.1",
+      "end": "J2.22",
+      "net": "EPD_VSNH",
+      "path": {
+        "length_mm": 8.045,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "C21.1",
+      "end": "J2.23",
+      "net": "EPD_VGL",
+      "path": {
+        "length_mm": 9.553,
+        "serial_layer_changes": 0
+      }
+    },
+    {
+      "start": "C22.1",
+      "end": "J2.24",
+      "net": "EPD_VCOM",
+      "path": {
+        "length_mm": 9.681,
+        "serial_layer_changes": 0
+      }
+    }
+  ],
+  "ground_pad_to_U2_EP": {
+    "C5.2": true,
+    "C2.2": true,
+    "U2.5": true,
+    "U2.11": true,
+    "R21.1": true,
+    "C4.2": true,
+    "U4.2": true,
+    "R1.2": true,
+    "C13.2": true,
+    "C10.2": true,
+    "C15.2": true,
+    "C22.2": true,
+    "C19.2": true,
+    "C9.2": true,
+    "C24.2": true,
+    "C6.2": true,
+    "SW3.3": true,
+    "SW3.4": true,
+    "C20.2": true,
+    "C18.2": true,
+    "C25.1": true,
+    "R2.2": true,
+    "R17.2": true,
+    "C8.2": true,
+    "C16.2": true,
+    "C1.2": true,
+    "C7.2": true,
+    "R14.2": false,
+    "SW2.3": true,
+    "SW2.4": true,
+    "C3.2": true,
+    "Q3.2": true,
+    "R19.2": true,
+    "D2.1": true,
+    "C12.2": true,
+    "R13.2": true,
+    "C21.2": true,
+    "U3.2": true,
+    "BN.1": true,
+    "C14.2": true,
+    "R23.2": true,
+    "U6.3": true,
+    "J2.17": true,
+    "C17.2": true,
+    "U1.1": true,
+    "U1.2": true,
+    "U1.15": true,
+    "U1.33": true,
+    "U1.55": true,
+    "C23.2": true,
+    "U5.3": true,
+    "J1.17": true,
+    "J1.18": true,
+    "J1.19": true,
+    "J1.20": true,
+    "J1.A1B12": true,
+    "J1.B1A12": true,
+    "SW1.3": true,
+    "SW1.4": true,
+    "R15.2": true,
+    "TP1.1": true
+  },
+  "ground_components_not_reaching_U2_EP": [
+    {
+      "layer": "F.Cu",
+      "area_mm2": 2.48784
+    }
+  ],
+  "reference_gaps": [
+    {
+      "net": "EPD_BUSY_TBD",
+      "layer": "F.Cu",
+      "length_mm": 18.658,
+      "outside_opposite_ground_mm": 3.233,
+      "largest_gap_mm": 1.315
+    },
+    {
+      "net": "EPD_BUSY_TBD",
+      "layer": "B.Cu",
+      "length_mm": 16.459,
+      "outside_opposite_ground_mm": 13.462,
+      "largest_gap_mm": 3.032
+    },
+    {
+      "net": "EPD_CS_N_TBD",
+      "layer": "F.Cu",
+      "length_mm": 2.928,
+      "outside_opposite_ground_mm": 2.029,
+      "largest_gap_mm": 1.151
+    },
+    {
+      "net": "EPD_CS_N_TBD",
+      "layer": "B.Cu",
+      "length_mm": 28.452,
+      "outside_opposite_ground_mm": 16.673,
+      "largest_gap_mm": 3.054
+    },
+    {
+      "net": "EPD_DC_TBD",
+      "layer": "F.Cu",
+      "length_mm": 8.476,
+      "outside_opposite_ground_mm": 1.602,
+      "largest_gap_mm": 0.601
+    },
+    {
+      "net": "EPD_DC_TBD",
+      "layer": "B.Cu",
+      "length_mm": 19.01,
+      "outside_opposite_ground_mm": 9.716,
+      "largest_gap_mm": 4.05
+    },
+    {
+      "net": "EPD_MOSI_TBD",
+      "layer": "F.Cu",
+      "length_mm": 2.954,
+      "outside_opposite_ground_mm": 1.54,
+      "largest_gap_mm": 0.878
+    },
+    {
+      "net": "EPD_MOSI_TBD",
+      "layer": "B.Cu",
+      "length_mm": 22.432,
+      "outside_opposite_ground_mm": 7.459,
+      "largest_gap_mm": 1.898
+    },
+    {
+      "net": "EPD_RESET_N_TBD",
+      "layer": "F.Cu",
+      "length_mm": 3.095,
+      "outside_opposite_ground_mm": 1.491,
+      "largest_gap_mm": 0.806
+    },
+    {
+      "net": "EPD_RESET_N_TBD",
+      "layer": "B.Cu",
+      "length_mm": 21.17,
+      "outside_opposite_ground_mm": 9.947,
+      "largest_gap_mm": 2.466
+    },
+    {
+      "net": "EPD_SCK_TBD",
+      "layer": "F.Cu",
+      "length_mm": 4.064,
+      "outside_opposite_ground_mm": 3.087,
+      "largest_gap_mm": 1.714
+    },
+    {
+      "net": "EPD_SCK_TBD",
+      "layer": "B.Cu",
+      "length_mm": 21.148,
+      "outside_opposite_ground_mm": 12.609,
+      "largest_gap_mm": 5.12
+    },
+    {
+      "net": "SWDCLK",
+      "layer": "F.Cu",
+      "length_mm": 0.0,
+      "outside_opposite_ground_mm": 0.0,
+      "largest_gap_mm": 0
+    },
+    {
+      "net": "SWDCLK",
+      "layer": "B.Cu",
+      "length_mm": 0.0,
+      "outside_opposite_ground_mm": 0.0,
+      "largest_gap_mm": 0
+    },
+    {
+      "net": "SWDIO",
+      "layer": "F.Cu",
+      "length_mm": 0.0,
+      "outside_opposite_ground_mm": 0.0,
+      "largest_gap_mm": 0
+    },
+    {
+      "net": "SWDIO",
+      "layer": "B.Cu",
+      "length_mm": 0.0,
+      "outside_opposite_ground_mm": 0.0,
+      "largest_gap_mm": 0
+    },
+    {
+      "net": "USB_DM_MCU",
+      "layer": "F.Cu",
+      "length_mm": 2.204,
+      "outside_opposite_ground_mm": 1.005,
+      "largest_gap_mm": 0.505
+    },
+    {
+      "net": "USB_DM_MCU",
+      "layer": "B.Cu",
+      "length_mm": 13.379,
+      "outside_opposite_ground_mm": 3.967,
+      "largest_gap_mm": 3.1
+    },
+    {
+      "net": "USB_DP_MCU",
+      "layer": "F.Cu",
+      "length_mm": 5.175,
+      "outside_opposite_ground_mm": 3.008,
+      "largest_gap_mm": 1.117
+    },
+    {
+      "net": "USB_DP_MCU",
+      "layer": "B.Cu",
+      "length_mm": 8.05,
+      "outside_opposite_ground_mm": 4.065,
+      "largest_gap_mm": 1.532
+    }
+  ],
+  "external_copper_clearance_failures": []
+}

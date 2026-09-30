@@ -1,0 +1,150 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4/NFC-Card-V4.kicad_pcb",
+  "description": "Provisional existing VBUS feed and paired battery return; protection not frozen",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4/feed-routing-ipc.json",
+  "vias": [
+    {
+      "net": "USB_VBUS",
+      "at": [
+        184.4,
+        101.6
+      ]
+    },
+    {
+      "net": "USB_VBUS",
+      "at": [
+        184.4,
+        106.4
+      ]
+    },
+    {
+      "net": "USB_VBUS",
+      "at": [
+        167.2,
+        110.7
+      ]
+    },
+    {
+      "net": "USB_VBUS",
+      "at": [
+        160.5,
+        110.5
+      ]
+    },
+    {
+      "net": "GND",
+      "at": [
+        167.9,
+        110.1
+      ]
+    }
+  ],
+  "paths": [
+    {
+      "name": "VBUS lower contact",
+      "net": "USB_VBUS",
+      "through": [
+        "J1.A4B9",
+        [
+          184.4,
+          106.4
+        ]
+      ],
+      "width": 0.45,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "VBUS upper contact",
+      "net": "USB_VBUS",
+      "through": [
+        "J1.B4A9",
+        [
+          184.4,
+          101.6
+        ]
+      ],
+      "width": 0.45,
+      "layer": "F.Cu"
+    },
+    {
+      "name": "VBUS contacts join",
+      "net": "USB_VBUS",
+      "through": [
+        [
+          184.4,
+          101.6
+        ],
+        [
+          184.4,
+          106.4
+        ]
+      ],
+      "width": 0.6,
+      "layer": "B.Cu"
+    },
+    {
+      "name": "VBUS feed to charger bypass",
+      "net": "USB_VBUS",
+      "through": [
+        "J1.A4B9",
+        [
+          167.2,
+          110.7
+        ]
+      ],
+      "width": 0.45,
+      "layer": "F.Cu",
+      "bounds": [
+        159,
+        104,
+        187,
+        113
+      ]
+    },
+    {
+      "name": "Battery paired ground branch",
+      "net": "GND",
+      "through": [
+        "BN.1",
+        "U2.11"
+      ],
+      "width": 0.5,
+      "layer": "F.Cu",
+      "bounds": [
+        143,
+        104,
+        161,
+        113
+      ]
+    },
+    {
+      "name": "VBUS short LDO crossing",
+      "net": "USB_VBUS",
+      "through": [
+        [
+          167.2,
+          110.7
+        ],
+        [
+          160.5,
+          110.5
+        ]
+      ],
+      "width": 0.5,
+      "layer": "B.Cu"
+    },
+    {
+      "name": "VBUS cap escape",
+      "net": "USB_VBUS",
+      "through": [
+        [
+          160.5,
+          110.5
+        ],
+        "C8.1"
+      ],
+      "width": 0.45,
+      "layer": "F.Cu"
+    }
+  ]
+}

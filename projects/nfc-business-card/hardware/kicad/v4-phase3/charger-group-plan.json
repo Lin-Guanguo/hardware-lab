@@ -1,0 +1,12 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase3/NFC-Card-V4.kicad_pcb",
+  "description": "Phase3 charger group: move C3 above BAT escape and reserve all six control exits before power branches",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase3/charger-group-apply.json",
+  "placements": {
+    "C3": [
+      159.8,
+      104.4,
+      180
+    ]
+  }
+}

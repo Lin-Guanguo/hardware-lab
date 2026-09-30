@@ -1,0 +1,22 @@
+{
+  "plan": "projects/nfc-business-card/hardware/kicad/v4-option-a2-west/inner-exits-plan.json",
+  "board": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4-option-a2-west/NFC-Card-V4.kicad_pcb",
+  "before": {
+    "tracks": 233,
+    "vias": 34
+  },
+  "after": {
+    "tracks": 237,
+    "vias": 38
+  },
+  "created_ids": [
+    "0d776b50-2627-4bc0-be89-cc07ae1c7226",
+    "e65569eb-398f-423a-b6e0-b74c94a02125",
+    "74956622-e25c-40cd-8f08-c4c97905aafc",
+    "0566e028-7082-4c2a-b551-24cd6c46ad8b",
+    "451a5a9a-70c1-438c-bf53-4e2b619fff02",
+    "eda22b2c-e63a-4c5a-97ec-ecfdd28fcb71",
+    "b7914356-d612-4093-b55a-7d2611dea3d5",
+    "255bc783-1e01-4579-90c9-5739303115b7"
+  ]
+}

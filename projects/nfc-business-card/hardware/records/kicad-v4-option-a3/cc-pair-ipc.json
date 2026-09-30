@@ -1,0 +1,25 @@
+{
+  "plan": "projects/nfc-business-card/hardware/kicad/v4-option-a3-local/cc-pair-plan.json",
+  "board": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4-option-a3-local/NFC-Card-V4.kicad_pcb",
+  "before": {
+    "tracks": 664,
+    "vias": 97
+  },
+  "after": {
+    "tracks": 668,
+    "vias": 97
+  },
+  "created_ids": [
+    "6220e98b-aee3-4cd1-905c-59fd6bbf33ec",
+    "1db39ff3-a404-4fdd-b51f-6768eabbee11",
+    "128957c2-5cf4-4442-82b6-f24dcb7bced0",
+    "a21d4c43-d224-4c65-8729-f468b4ed02c8",
+    "a7a261ff-3d7c-41fc-b3f1-018d95652f69",
+    "ff282d96-962e-4270-82f6-aa50148c31b8",
+    "54ef100e-6108-4d61-956d-c1edc1f39e60",
+    "4890d2b0-8a3c-4868-8a59-4eed242ceb99",
+    "7d9959cd-4e4c-4334-8db3-df5562640567",
+    "f4d33a9c-69b1-4495-9744-ec86a813f1df",
+    "8647b550-394e-478a-8b80-f20c8d575872"
+  ]
+}

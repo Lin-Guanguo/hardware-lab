@@ -1,0 +1,17 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "description": "USB series links move together to east MCU boundary for underside paired escape; release front display corridor",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase2/usb-corridor-placement-ipc.json",
+  "placements": {
+    "R3": [
+      181,
+      115,
+      0
+    ],
+    "R4": [
+      181,
+      113.3,
+      0
+    ]
+  }
+}

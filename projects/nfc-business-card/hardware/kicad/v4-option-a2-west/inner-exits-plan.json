@@ -1,0 +1,102 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-option-a2-west/NFC-Card-V4.kicad_pcb",
+  "description": "Joint four inner-row exits, movable in subsequent integration",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-option-a2/west-inner-ipc.json",
+  "routes": [
+    {
+      "name": "U1.36 inner pad exit",
+      "net": "EPD_SCK_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          169.251,
+          116.134
+        ],
+        [
+          170.9,
+          116.134
+        ]
+      ]
+    },
+    {
+      "name": "U1.38 inner pad exit",
+      "net": "EPD_CS_N_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          169.251,
+          116.934
+        ],
+        [
+          170.7,
+          116.934
+        ]
+      ]
+    },
+    {
+      "name": "U1.40 inner pad exit",
+      "net": "NRESET",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          169.251,
+          117.734
+        ],
+        [
+          171.5,
+          117.734
+        ]
+      ]
+    },
+    {
+      "name": "U1.27 inner pad exit",
+      "net": "EPD_EN_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          171.80100000000002,
+          114.834
+        ],
+        [
+          171.801,
+          116.2
+        ]
+      ]
+    }
+  ],
+  "vias": [
+    {
+      "net": "EPD_SCK_TBD",
+      "at": [
+        170.9,
+        116.134
+      ]
+    },
+    {
+      "net": "EPD_CS_N_TBD",
+      "at": [
+        170.7,
+        116.934
+      ]
+    },
+    {
+      "net": "NRESET",
+      "at": [
+        171.5,
+        117.734
+      ]
+    },
+    {
+      "net": "EPD_EN_TBD",
+      "at": [
+        171.801,
+        116.2
+      ]
+    }
+  ],
+  "failures": []
+}

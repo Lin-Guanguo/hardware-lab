@@ -1,0 +1,17 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "description": "Order USB series pair to preserve planar escape ordering at MCU and connector",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase2/usb-series-pair-ipc.json",
+  "placements": {
+    "R3": [
+      181,
+      113,
+      180
+    ],
+    "R4": [
+      181,
+      114.6,
+      180
+    ]
+  }
+}

@@ -1,0 +1,591 @@
+[
+  {
+    "trial": "batch1-spec-plan.json",
+    "sha256": "25111638db7342f8ec0492ba41bca2af4f6ff4d39e401bb3519c9217f2ffb344",
+    "route_pieces": 122,
+    "vias": 59,
+    "failure_count": 0,
+    "failed_requests": []
+  },
+  {
+    "trial": "critical-assigned-spec-plan.json",
+    "sha256": "7a723cbd454cdb0d22cd8e908c7ee2a8c68c3a4810d37cec7f220c2d4bdfae66",
+    "route_pieces": 103,
+    "vias": 35,
+    "failure_count": 11,
+    "failed_requests": [
+      "U1.24 escape",
+      "U1.51 escape",
+      "U1.53 escape",
+      "U1.51 to TP4.1",
+      "U1.53 to TP3.1",
+      "U1.24 escape",
+      "R4.1 to U5.2",
+      "J1.A6 to J1.B6",
+      "J1.A6 to U5.1",
+      "J1.A5 to U6.1",
+      "J1.B5 to U6.2"
+    ]
+  },
+  {
+    "trial": "critical-channel-spec-plan.json",
+    "sha256": "aef8bc61ac8ea16966e11a36b5db63b7a10e46c86d005909111aa861badc02c2",
+    "route_pieces": 128,
+    "vias": 55,
+    "failure_count": 2,
+    "failed_requests": [
+      "J1.A5 escape",
+      "J1.A5 to U6.1"
+    ]
+  },
+  {
+    "trial": "critical-grouped-spec-plan.json",
+    "sha256": "17b28954ab9dacc68994bae2e86ebb229b72f2377f5ccba46e3df19039447b31",
+    "route_pieces": 109,
+    "vias": 43,
+    "failure_count": 7,
+    "failed_requests": [
+      "J1.A7 escape",
+      "J1.B7 escape",
+      "R15.2 to C10.2",
+      "J2.2 to Q1.1",
+      "Q1.1 to R14.1",
+      "U1.39 to J2.11",
+      "U1.41 to J2.10"
+    ]
+  },
+  {
+    "trial": "critical-spec-plan.json",
+    "sha256": "785382ae09254135b02f51da045cd7d21872b2d6dc8a821ad40c0985ae68a849",
+    "route_pieces": 80,
+    "vias": 21,
+    "failure_count": 14,
+    "failed_requests": [
+      "C8.1 to U2.10",
+      "U2.5 to U2.11",
+      "C2.1 to U2.1",
+      "C3.1 to U2.2",
+      "U1.37 to J2.14",
+      "U1.39 to J2.11",
+      "U1.41 to J2.10",
+      "U1.34 to R4.2",
+      "U1.35 to R3.2",
+      "J1.A7 to J1.B7",
+      "J1.A7 to U5.2",
+      "J1.A4B9 to C8.1",
+      "C8.1 to C1.1",
+      "C2.1 to C4.1"
+    ]
+  },
+  {
+    "trial": "keys-proof-spec-plan.json",
+    "sha256": "e42e0a36a8b5933fab6a587f1ae197c39d170c6a303348ed86cad8ac9ae990e9",
+    "route_pieces": 6,
+    "vias": 63,
+    "failure_count": 0,
+    "failed_requests": []
+  },
+  {
+    "trial": "wholeboard-access-spec-plan.json",
+    "sha256": "81a6afcdedfbf7616a2f4233655bceddaa6fae7b31192cc2bb5f1fc79db20b98",
+    "route_pieces": 226,
+    "vias": 114,
+    "failure_count": 7,
+    "failed_requests": [
+      "U4.5 to U4.6",
+      "U1.27 to R13.1",
+      "R13.1 to U4.3",
+      "U1.38 to J2.12",
+      "U1.40 to TP5.1",
+      "J1.A4B9 to C8.1",
+      "C8.1 to C1.1"
+    ]
+  },
+  {
+    "trial": "wholeboard-bus-spec-plan.json",
+    "sha256": "59476b098eaa3b940d51c4701fcc70ff2212d853346ec43d3ac2b6a1a478fae9",
+    "route_pieces": 203,
+    "vias": 97,
+    "failure_count": 14,
+    "failed_requests": [
+      "R8.2 to U1.20 transverse bus",
+      "R6.2 to U1.16 transverse bus",
+      "R15.2 to C10.2",
+      "R8.2 to U1.20 west lead",
+      "R7.2 to U1.22 west lead",
+      "C6.1 to C5.1",
+      "C8.1 to C1.1",
+      "C5.1 to R12.1",
+      "C3.1 to Q2.2",
+      "U1.4 to SW2.2",
+      "U1.5 to SW3.2",
+      "U1.3 to SW1.2",
+      "U1.27 to R13.1",
+      "R13.1 to U4.3"
+    ]
+  },
+  {
+    "trial": "wholeboard-bus2-spec-plan.json",
+    "sha256": "acab57eeaf434ce865ff554ab5da26a2e1f62fd40e8790c0cc90dbfba08b3c9e",
+    "route_pieces": 222,
+    "vias": 111,
+    "failure_count": 11,
+    "failed_requests": [
+      "R8.2 to U1.20 transverse bus",
+      "R6.2 to U1.16 transverse bus",
+      "R8.2 to U1.20 west lead",
+      "U2.7 to R5.2",
+      "U2.9 to R8.2",
+      "C3.1 to Q2.2",
+      "U1.4 to SW2.2",
+      "U1.5 to SW3.2",
+      "U1.3 to SW1.2",
+      "U1.27 to R13.1",
+      "R13.1 to U4.3"
+    ]
+  },
+  {
+    "trial": "wholeboard-bus3-spec-plan.json",
+    "sha256": "a513fa031a0b9967ee6895cfee8493a7d1b404dd478e53b3859d4c658cf1d29b",
+    "route_pieces": 216,
+    "vias": 103,
+    "failure_count": 7,
+    "failed_requests": [
+      "C8.1 to C1.1",
+      "C5.1 to R12.1",
+      "J1.A4B9 to C8.1",
+      "C3.1 to Q2.2",
+      "U1.5 to SW3.2",
+      "U1.3 to SW1.2",
+      "R13.1 to U4.3"
+    ]
+  },
+  {
+    "trial": "wholeboard-coexist-spec-plan.json",
+    "sha256": "6648910c258d9e8dcd5f76798a028fb2f3d61f5768ae7f9d8df502e9b6abcef4",
+    "route_pieces": 208,
+    "vias": 111,
+    "failure_count": 16,
+    "failed_requests": [
+      "R8.2 to U1.20 transverse bus",
+      "R9.2 to U1.21 transverse bus",
+      "U1.37 to J2.14",
+      "R5.2 to U1.19 east lead",
+      "R8.2 to U1.20 east lead",
+      "R6.2 to U1.16 east lead",
+      "R9.2 to U1.21 east lead",
+      "R7.2 to U1.22 west lead",
+      "U1.40 to TP5.1",
+      "U1.51 to TP4.1",
+      "J1.A6 to U5.1",
+      "J1.A7 to U5.2",
+      "J1.A5 to U6.1",
+      "R19.1 to NTC.1",
+      "SW2.1 to SW2.2",
+      "J1.B5 to U6.2"
+    ]
+  },
+  {
+    "trial": "wholeboard-components-spec-plan.json",
+    "sha256": "708dbf866791769eaa1ff8ee43d6f53057e4264b3c727ff02c78b6375fbb84c4",
+    "route_pieces": 206,
+    "vias": 99,
+    "failure_count": 11,
+    "failed_requests": [
+      "U1.4 to SW2.2 module traverse",
+      "U1.3 to SW1.2 module traverse",
+      "R9.2 to U1.21 west lead",
+      "R9.2 to U1.21 east lead",
+      "R7.2 to U1.22 west lead",
+      "R7.2 to U1.22 east lead",
+      "R20.2 to Q2.3",
+      "J1.A5 to U6.1",
+      "R19.1 to NTC.1",
+      "J1.B5 to U6.2",
+      "J2.3 to Q1.2"
+    ]
+  },
+  {
+    "trial": "wholeboard-control-bank-spec-plan.json",
+    "sha256": "5960024c04d44215af94ac3030bf5a9ba66adf83d27abb3f13743373a41bcd3f",
+    "route_pieces": 205,
+    "vias": 95,
+    "failure_count": 4,
+    "failed_requests": [
+      "U1.38 to J2.12",
+      "R4.1 to U5.2",
+      "U1.40 to TP5.1",
+      "U1.51 to TP4.1"
+    ]
+  },
+  {
+    "trial": "wholeboard-crossing-spec-plan.json",
+    "sha256": "912eae5a8e373aabd7c5c413fa51473ee0c55971bc4ada7d84a0f5db1c8f28bd",
+    "route_pieces": 224,
+    "vias": 113,
+    "failure_count": 6,
+    "failed_requests": [
+      "U1.5 to SW3.2",
+      "U1.3 to SW1.2",
+      "R13.1 to U4.3",
+      "U1.24 to J2.9",
+      "U1.36 to J2.13",
+      "U1.38 to J2.12"
+    ]
+  },
+  {
+    "trial": "wholeboard-debug-bridge-spec-plan.json",
+    "sha256": "caafc17774af003dbdeaa4c19dba787ea0e5c042fce3c6da31db6968d6cc93b3",
+    "route_pieces": 213,
+    "vias": 104,
+    "failure_count": 5,
+    "failed_requests": [
+      "U1.27 to R13.1",
+      "U1.38 to J2.12",
+      "U1.37 to J2.14",
+      "R3.1 to U5.1",
+      "SW2.1 to SW2.2"
+    ]
+  },
+  {
+    "trial": "wholeboard-east-power-spec-plan.json",
+    "sha256": "83aee82b879786bcdf51bc03af46a72c0e85df95df2ae28ee05ab3bf812f2c96",
+    "route_pieces": 227,
+    "vias": 116,
+    "failure_count": 7,
+    "failed_requests": [
+      "U1.4 to SW2.2 module traverse",
+      "U1.5 to SW3.2 module traverse",
+      "R9.2 to U1.21 west lead",
+      "R9.2 to U1.21 east lead",
+      "R19.1 to NTC.1",
+      "J1.B5 to U6.2",
+      "J2.3 to Q1.2"
+    ]
+  },
+  {
+    "trial": "wholeboard-east-spec-plan.json",
+    "sha256": "2aaf3d47dbb944b98ea679fb22b80da8bed968c19b0b1ac7d0273ecc310913ab",
+    "route_pieces": 202,
+    "vias": 94,
+    "failure_count": 10,
+    "failed_requests": [
+      "U1.4 to SW2.2 module traverse",
+      "U1.5 to SW3.2 module traverse",
+      "C2.1 to C4.1",
+      "C5.1 to R7.1",
+      "C5.1 to C9.1",
+      "C5.1 to R12.1",
+      "J1.A4B9 to C8.1",
+      "C3.1 to Q2.2",
+      "C5.1 to TP2.1",
+      "C8.1 to C1.1"
+    ]
+  },
+  {
+    "trial": "wholeboard-joint-spec-plan.json",
+    "sha256": "b93bda92a29c8522ddfaa577460bfe86805fd1cd4df4b2cfc44d45d6c748907b",
+    "route_pieces": 225,
+    "vias": 121,
+    "failure_count": 14,
+    "failed_requests": [
+      "R8.2 to U1.20 transverse bus",
+      "R9.2 to U1.21 transverse bus",
+      "U2.9 to R8.2",
+      "U1.3 to SW1.2 module traverse",
+      "R8.2 to U1.20 west lead",
+      "R8.2 to U1.20 east lead",
+      "R9.2 to U1.21 east lead",
+      "R3.1 to U5.1",
+      "U1.40 to TP5.1",
+      "U1.51 to TP4.1",
+      "J1.A6 to U5.1",
+      "J1.A5 to U6.1",
+      "R19.1 to NTC.1",
+      "J1.B5 to U6.2"
+    ]
+  },
+  {
+    "trial": "wholeboard-junctions-spec-plan.json",
+    "sha256": "09d4f680929d080d7abc086a6808227fd1a16a8b25d25736ffa1bc6f03ea6c5d",
+    "route_pieces": 215,
+    "vias": 104,
+    "failure_count": 8,
+    "failed_requests": [
+      "C2.1 to C4.1",
+      "U1.11 to C25.2",
+      "C3.1 to BP.1",
+      "J1.A4B9 to C8.1",
+      "C3.1 to Q2.2",
+      "U1.27 to R13.1",
+      "R13.1 to U4.3",
+      "C8.1 to C1.1"
+    ]
+  },
+  {
+    "trial": "wholeboard-key-corridor-spec-plan.json",
+    "sha256": "f0deb9a0ddd8ffebdf312abec0bb41ad4981a30f87bea86ebf56a0e96738da6d",
+    "route_pieces": 209,
+    "vias": 103,
+    "failure_count": 12,
+    "failed_requests": [
+      "U1.3 to SW1.2 module traverse",
+      "R9.2 to U1.21 west lead",
+      "R9.2 to U1.21 east lead",
+      "R7.2 to U1.22 west lead",
+      "R7.2 to U1.22 east lead",
+      "R4.1 to U5.2",
+      "R3.1 to U5.1",
+      "U6.1 to R1.1",
+      "U6.2 to R2.1",
+      "J1.A5 to U6.1",
+      "R19.1 to NTC.1",
+      "J1.B5 to U6.2"
+    ]
+  },
+  {
+    "trial": "wholeboard-key-fanout-spec-plan.json",
+    "sha256": "db1ede769ff84da2bb1f94dea0c95c4d38427be255517fec46f3e690b3555c75",
+    "route_pieces": 209,
+    "vias": 103,
+    "failure_count": 12,
+    "failed_requests": [
+      "U1.3 to SW1.2 module traverse",
+      "R9.2 to U1.21 west lead",
+      "R9.2 to U1.21 east lead",
+      "R7.2 to U1.22 west lead",
+      "R7.2 to U1.22 east lead",
+      "R4.1 to U5.2",
+      "R3.1 to U5.1",
+      "U6.1 to R1.1",
+      "U6.2 to R2.1",
+      "J1.A5 to U6.1",
+      "R19.1 to NTC.1",
+      "J1.B5 to U6.2"
+    ]
+  },
+  {
+    "trial": "wholeboard-mcu-ports-spec-plan.json",
+    "sha256": "70094fede067e92938979a2f6ce6013d17e34fee7197a21c3ca98b8279574b6d",
+    "route_pieces": 194,
+    "vias": 87,
+    "failure_count": 6,
+    "failed_requests": [
+      "R3.1 to U5.1",
+      "CHG_SCL cross-zone trunk",
+      "CHG_INT_N cross-zone trunk",
+      "CHG_PG_N cross-zone trunk",
+      "U1.40 to TP5.1",
+      "U1.51 to TP4.1"
+    ]
+  },
+  {
+    "trial": "wholeboard-open-crossing-spec-plan.json",
+    "sha256": "9f79c86f3fa8de701fc9bb49daf1207f117697812891ac0165a5c7c560babcc1",
+    "route_pieces": 209,
+    "vias": 100,
+    "failure_count": 4,
+    "failed_requests": [
+      "CHG_SCL cross-zone trunk",
+      "CHG_INT_N cross-zone trunk",
+      "U1.40 to TP5.1",
+      "U1.51 to TP4.1"
+    ]
+  },
+  {
+    "trial": "wholeboard-orthogonal-lanes-spec-plan.json",
+    "sha256": "6372fd33353d218992b7238a7566ee925da62f8e23f823b17c176574c4fd91e9",
+    "route_pieces": 225,
+    "vias": 109,
+    "failure_count": 10,
+    "failed_requests": [
+      "U1.41 to J2.10 south",
+      "U1.41 to J2.10 north",
+      "U1.24 to J2.9 south",
+      "U1.24 to J2.9 north",
+      "C2.1 to C4.1",
+      "C8.1 to C1.1",
+      "R3.1 to U5.1",
+      "R18.1 to J2.15",
+      "R17.1 to J2.8",
+      "U4.6 to J2.15"
+    ]
+  },
+  {
+    "trial": "wholeboard-orthogonal-spec-plan.json",
+    "sha256": "775eb24dabf23d412ee3494f2c922e75b77deb7dbb0b56ed7f4423c20c31baec",
+    "route_pieces": 211,
+    "vias": 101,
+    "failure_count": 15,
+    "failed_requests": [
+      "U1.38 to J2.12 south",
+      "U1.38 to J2.12 channel",
+      "U1.38 to J2.12 north",
+      "U1.39 to J2.11 south",
+      "U1.39 to J2.11 channel",
+      "U1.39 to J2.11 north",
+      "U1.41 to J2.10 south",
+      "U1.41 to J2.10 channel",
+      "U1.41 to J2.10 north",
+      "U1.24 to J2.9 south",
+      "U1.24 to J2.9 channel",
+      "C2.1 to C4.1",
+      "C3.1 to Q2.2",
+      "C8.1 to C1.1",
+      "U1.27 to R13.1"
+    ]
+  },
+  {
+    "trial": "wholeboard-reserved-spec-plan.json",
+    "sha256": "c4328dad7e440a532c8c3dcca1310c383f239c51668e34c7b161ed10999f96b5",
+    "route_pieces": 203,
+    "vias": 97,
+    "failure_count": 10,
+    "failed_requests": [
+      "C6.1 to C5.1",
+      "R8.2 to U1.20",
+      "R6.2 to U1.16",
+      "U1.5 to SW3.2",
+      "R5.2 to U1.19",
+      "R9.2 to U1.21",
+      "U1.3 to SW1.2",
+      "R13.1 to U4.3",
+      "R4.1 to U5.2",
+      "R3.1 to U5.1"
+    ]
+  },
+  {
+    "trial": "wholeboard-resolved-port-spec-plan.json",
+    "sha256": "5d8b5ffde3295caca551d995b32755962ae5e11869f2ecdf99d4918aa1c45336",
+    "route_pieces": 195,
+    "vias": 87,
+    "failure_count": 6,
+    "failed_requests": [
+      "U1.27 to R13.1",
+      "U1.41 to J2.10",
+      "U1.36 to J2.13",
+      "U1.38 to J2.12",
+      "U1.37 to J2.14",
+      "SW2.1 to SW2.2"
+    ]
+  },
+  {
+    "trial": "wholeboard-service-spec-plan.json",
+    "sha256": "de3fe999984f7858676c38e72d8490c28556677346df293bddc95091f0638d77",
+    "route_pieces": 194,
+    "vias": 91,
+    "failure_count": 13,
+    "failed_requests": [
+      "U2.6 service escape",
+      "C6.1 to C5.1",
+      "U2.6 to R19.1",
+      "R8.2 to U1.20",
+      "R9.2 to U1.21",
+      "R7.2 to U1.22",
+      "R13.1 to U4.3",
+      "U1.3 to SW1.2",
+      "U1.4 to SW2.2",
+      "U1.5 to SW3.2",
+      "C3.1 to Q2.2",
+      "C5.1 to R7.1",
+      "R7.1 to R6.1"
+    ]
+  },
+  {
+    "trial": "wholeboard-spec-plan.json",
+    "sha256": "1ba5050048905e4f0be0f6d7d5fb5017b3b4d56b78581780136c302852f65fbc",
+    "route_pieces": 176,
+    "vias": 76,
+    "failure_count": 17,
+    "failed_requests": [
+      "U1.20 control escape",
+      "U1.41 to J2.10",
+      "U1.24 to J2.9",
+      "U2.7 to R5.2",
+      "U2.9 to R8.2",
+      "U2.3 to R9.2",
+      "R5.2 to U1.19",
+      "R6.2 to U1.16",
+      "R8.2 to U1.20",
+      "R9.2 to U1.21",
+      "R7.2 to U1.22",
+      "R13.1 to U4.3",
+      "U1.3 to SW1.2",
+      "U1.4 to SW2.2",
+      "U1.5 to SW3.2",
+      "C3.1 to Q2.2",
+      "C5.1 to R7.1"
+    ]
+  },
+  {
+    "trial": "wholeboard-supply-topology-spec-plan.json",
+    "sha256": "a2b4e3bdd620005ff6cc6823cac347d7d96b84b7a2e6489a4a009dba1e177a7a",
+    "route_pieces": 207,
+    "vias": 101,
+    "failure_count": 7,
+    "failed_requests": [
+      "U2.3 to R9.2",
+      "R3.1 to U5.1",
+      "CHG_INT_N cross-zone trunk",
+      "CHG_PG_N cross-zone trunk",
+      "CHG_CE_N cross-zone trunk",
+      "U1.40 to TP5.1",
+      "U1.51 to TP4.1"
+    ]
+  },
+  {
+    "trial": "wholeboard-two-bridges-spec-plan.json",
+    "sha256": "71db17e09a991087c4d829586390d2b7936d0d2e262fd41fd0c6c9b013659a12",
+    "route_pieces": 195,
+    "vias": 86,
+    "failure_count": 4,
+    "failed_requests": [
+      "CHG_PG_N cross-zone trunk",
+      "CHG_CE_N cross-zone trunk",
+      "U1.40 to TP5.1",
+      "U1.51 to TP4.1"
+    ]
+  },
+  {
+    "trial": "wholeboard-via-aware-spec-plan.json",
+    "sha256": "29ca8ea2f80ef50ff79020e966d41978c0edb529da9038f6f722bd12d89ec9ac",
+    "route_pieces": 192,
+    "vias": 85,
+    "failure_count": 9,
+    "failed_requests": [
+      "U1.24 to J2.9",
+      "R4.1 to U5.2",
+      "R3.1 to U5.1",
+      "U1.36 to J2.13",
+      "U1.38 to J2.12",
+      "U1.37 to J2.14",
+      "U1.40 to TP5.1",
+      "U1.53 to TP3.1",
+      "U1.51 to TP4.1"
+    ]
+  },
+  {
+    "trial": "wholeboard-west-spec-plan.json",
+    "sha256": "f198edbcc6966a57c302c2986d14130935467ee257ede5b866ae9bad7a8d5d37",
+    "route_pieces": 207,
+    "vias": 98,
+    "failure_count": 15,
+    "failed_requests": [
+      "C4.1 to U3.1",
+      "U3.1 to U3.3",
+      "C5.2 to U3.2",
+      "C2.1 to C4.1",
+      "C3.1 to BP.1",
+      "U1.51 to TP4.1",
+      "U1.53 to TP3.1",
+      "U2.7 to R5.2",
+      "U2.9 to R8.2",
+      "U2.3 to R9.2",
+      "U2.6 to R19.1",
+      "U1.4 to R11.2",
+      "U1.5 to R12.2",
+      "U1.4 to SW2.2",
+      "U1.5 to SW3.2"
+    ]
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "plan": "projects/nfc-business-card/hardware/kicad/v4-option-a2-full/mcu-return-plan.json",
+  "board": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4-option-a2-full/NFC-Card-V4.kicad_pcb",
+  "before": {
+    "tracks": 594,
+    "vias": 72
+  },
+  "after": {
+    "tracks": 568,
+    "vias": 69
+  },
+  "created_ids": [
+    "5da49527-95da-417d-92ca-4f9a2e2426b2",
+    "3cfddc6b-f0e2-4535-b02d-48456bbe8795",
+    "d812ef10-5e94-458a-9507-89c76cddc242",
+    "c5507053-3044-4f6a-b68f-061431ec1717",
+    "ef4f1e97-2768-4deb-91c4-e38e7e155fc2",
+    "a108be5a-e100-4e64-878e-a7d4db1dab6f",
+    "34e93d35-7cb3-4ba8-94f2-494043b2f505",
+    "ed2129ce-79e4-45e3-adfc-ee9817171fb2",
+    "cad052ae-2d46-43ba-877d-fc6f57c69d4e",
+    "463859f1-cd71-4bb2-a3ac-bcf4b30bc7ad",
+    "7630e523-5150-4eae-8af7-f85c5514e5d5"
+  ]
+}

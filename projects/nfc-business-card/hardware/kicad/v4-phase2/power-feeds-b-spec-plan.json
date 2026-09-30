@@ -1,0 +1,370 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "description": "Joint VBUS and SYS crossing through the intentional DC window, plus display supply",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase2/power-feeds-ipc.json",
+  "routes": [
+    {
+      "name": "VBUS A face",
+      "net": "USB_VBUS",
+      "layer": "F.Cu",
+      "width": 0.4,
+      "points": [
+        [
+          186.149,
+          106.4005
+        ],
+        [
+          183.8,
+          106.2
+        ]
+      ],
+      "length_mm": 2.358
+    },
+    {
+      "name": "VBUS B face",
+      "net": "USB_VBUS",
+      "layer": "F.Cu",
+      "width": 0.4,
+      "points": [
+        [
+          186.149,
+          101.6005
+        ],
+        [
+          184.7,
+          101.6
+        ]
+      ],
+      "length_mm": 1.449
+    },
+    {
+      "name": "VBUS USB common entry",
+      "net": "USB_VBUS",
+      "layer": "B.Cu",
+      "width": 0.4,
+      "points": [
+        [
+          183.8,
+          106.2
+        ],
+        [
+          185.6,
+          105.75
+        ],
+        [
+          185.6,
+          101.6
+        ],
+        [
+          184.7,
+          101.6
+        ]
+      ],
+      "length_mm": 6.905
+    },
+    {
+      "name": "VBUS shared supply",
+      "net": "USB_VBUS",
+      "layer": "F.Cu",
+      "width": 0.4,
+      "points": [
+        [
+          183.8,
+          106.2
+        ],
+        [
+          183.8,
+          106.7
+        ],
+        [
+          179,
+          106.7
+        ],
+        [
+          177,
+          105.7
+        ],
+        [
+          175,
+          105.7
+        ],
+        [
+          169,
+          106.8
+        ],
+        [
+          166,
+          107
+        ],
+        [
+          163.5,
+          110.0
+        ],
+        [
+          163.3,
+          110.2
+        ],
+        [
+          162.5,
+          110.3
+        ],
+        [
+          161.6,
+          110.3
+        ]
+      ],
+      "length_mm": 24.537
+    },
+    {
+      "name": "VBUS branch start",
+      "net": "USB_VBUS",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          169,
+          106.8
+        ],
+        [
+          168.7,
+          107
+        ]
+      ],
+      "length_mm": 0.361
+    },
+    {
+      "name": "VBUS branch crossing",
+      "net": "USB_VBUS",
+      "layer": "B.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          168.7,
+          107
+        ],
+        [
+          169.4,
+          113.1
+        ]
+      ],
+      "length_mm": 6.14
+    },
+    {
+      "name": "VBUS branch bypass",
+      "net": "USB_VBUS",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          169.4,
+          113.1
+        ],
+        [
+          168.8,
+          112.2
+        ]
+      ],
+      "length_mm": 1.082
+    },
+    {
+      "name": "SYS input crossing start",
+      "net": "SYS",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          176.1,
+          107.35
+        ],
+        [
+          176.5,
+          106.5
+        ]
+      ],
+      "length_mm": 0.939
+    },
+    {
+      "name": "SYS input crossing",
+      "net": "SYS",
+      "layer": "B.Cu",
+      "width": 0.4,
+      "points": [
+        [
+          176.5,
+          106.5
+        ],
+        [
+          177.3,
+          110.3
+        ],
+        [
+          177.5,
+          110.7
+        ]
+      ],
+      "length_mm": 4.331
+    },
+    {
+      "name": "SYS input bypass feed",
+      "net": "SYS",
+      "layer": "F.Cu",
+      "width": 0.4,
+      "points": [
+        [
+          177.5,
+          110.7
+        ],
+        [
+          177.9,
+          109.35
+        ]
+      ],
+      "length_mm": 1.408
+    },
+    {
+      "name": "3V3 display supply start",
+      "net": "VDD_3V3",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          175.7,
+          112.2
+        ],
+        [
+          177.5,
+          112.3
+        ]
+      ],
+      "length_mm": 1.803
+    },
+    {
+      "name": "3V3 display supply crossing",
+      "net": "VDD_3V3",
+      "layer": "B.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          177.5,
+          112.3
+        ],
+        [
+          178.2,
+          110.8
+        ],
+        [
+          178.2,
+          106.7
+        ],
+        [
+          176.6,
+          103.2
+        ],
+        [
+          177.6,
+          102.5
+        ],
+        [
+          178.4,
+          102.2
+        ]
+      ],
+      "length_mm": 11.679
+    },
+    {
+      "name": "3V3 display bypass feed",
+      "net": "VDD_3V3",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "points": [
+        [
+          178.4,
+          102.2
+        ],
+        [
+          182.0,
+          101.4
+        ]
+      ],
+      "length_mm": 3.688
+    }
+  ],
+  "vias": [
+    {
+      "net": "USB_VBUS",
+      "at": [
+        184.7,
+        101.6
+      ]
+    },
+    {
+      "net": "USB_VBUS",
+      "at": [
+        183.8,
+        106.2
+      ]
+    },
+    {
+      "net": "USB_VBUS",
+      "at": [
+        168.7,
+        107
+      ]
+    },
+    {
+      "net": "SYS",
+      "at": [
+        176.5,
+        106.5
+      ]
+    },
+    {
+      "net": "SYS",
+      "at": [
+        177.5,
+        110.7
+      ]
+    },
+    {
+      "net": "VDD_3V3",
+      "at": [
+        177.5,
+        112.3
+      ]
+    },
+    {
+      "net": "VDD_3V3",
+      "at": [
+        178.4,
+        102.2
+      ]
+    }
+  ],
+  "failures": [
+    {
+      "via": {
+        "net": "USB_VBUS",
+        "at": [
+          169.4,
+          113.1
+        ]
+      },
+      "copper": [],
+      "smt_drill_gap": [
+        "C1.1"
+      ]
+    },
+    {
+      "path": "SYS LDO supply",
+      "reason": "Endpoint blocked",
+      "start": [
+        162.0,
+        107.3
+      ],
+      "end": [
+        165,
+        108
+      ]
+    }
+  ]
+}

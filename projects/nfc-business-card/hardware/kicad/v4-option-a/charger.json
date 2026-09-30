@@ -1,0 +1,227 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-option-a/NFC-Card-V4.kicad_pcb",
+  "description": "Option A five charger controls jointly reconstructed without preassigned vias or old escapes",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-option-a/charger-ipc.json",
+  "paths": [
+    {
+      "name": "U2.7 to U1.19",
+      "net": "CHG_SDA",
+      "width": 0.15,
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "through": [
+        "U2.7",
+        "U1.19"
+      ],
+      "bounds": [
+        172.7,
+        103.6,
+        181.8,
+        117.8
+      ],
+      "join_existing_copper": true
+    },
+    {
+      "name": "U2.7 to R5.2",
+      "net": "CHG_SDA",
+      "width": 0.15,
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "through": [
+        "U2.7",
+        "R5.2"
+      ],
+      "bounds": [
+        172.7,
+        103.6,
+        181.8,
+        117.8
+      ],
+      "join_existing_copper": true
+    },
+    {
+      "name": "U2.8 to U1.16",
+      "net": "CHG_SCL",
+      "width": 0.15,
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "through": [
+        "U2.8",
+        "U1.16"
+      ],
+      "bounds": [
+        172.7,
+        103.6,
+        181.8,
+        117.8
+      ],
+      "join_existing_copper": true
+    },
+    {
+      "name": "U2.8 to R6.2",
+      "net": "CHG_SCL",
+      "width": 0.15,
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "through": [
+        "U2.8",
+        "R6.2"
+      ],
+      "bounds": [
+        172.7,
+        103.6,
+        181.8,
+        117.8
+      ],
+      "join_existing_copper": true
+    },
+    {
+      "name": "U2.9 to U1.20",
+      "net": "CHG_INT_N",
+      "width": 0.15,
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "through": [
+        "U2.9",
+        "U1.20"
+      ],
+      "bounds": [
+        172.7,
+        103.6,
+        181.8,
+        117.8
+      ],
+      "join_existing_copper": true
+    },
+    {
+      "name": "U2.9 to R8.2",
+      "net": "CHG_INT_N",
+      "width": 0.15,
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "through": [
+        "U2.9",
+        "R8.2"
+      ],
+      "bounds": [
+        172.7,
+        103.6,
+        181.8,
+        117.8
+      ],
+      "join_existing_copper": true
+    },
+    {
+      "name": "U2.3 to U1.21",
+      "net": "CHG_PG_N",
+      "width": 0.15,
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "through": [
+        "U2.3",
+        "U1.21"
+      ],
+      "bounds": [
+        172.7,
+        103.6,
+        181.8,
+        117.8
+      ],
+      "join_existing_copper": true
+    },
+    {
+      "name": "U2.3 to R9.2",
+      "net": "CHG_PG_N",
+      "width": 0.15,
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "through": [
+        "U2.3",
+        "R9.2"
+      ],
+      "bounds": [
+        172.7,
+        103.6,
+        181.8,
+        117.8
+      ],
+      "join_existing_copper": true
+    },
+    {
+      "name": "U2.4 to U1.22",
+      "net": "CHG_CE_N",
+      "width": 0.15,
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "through": [
+        "U2.4",
+        "U1.22"
+      ],
+      "bounds": [
+        172.7,
+        103.6,
+        181.8,
+        117.8
+      ],
+      "join_existing_copper": true
+    },
+    {
+      "name": "U2.4 to R7.2",
+      "net": "CHG_CE_N",
+      "width": 0.15,
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "through": [
+        "U2.4",
+        "R7.2"
+      ],
+      "bounds": [
+        172.7,
+        103.6,
+        181.8,
+        117.8
+      ],
+      "join_existing_copper": true
+    }
+  ]
+}

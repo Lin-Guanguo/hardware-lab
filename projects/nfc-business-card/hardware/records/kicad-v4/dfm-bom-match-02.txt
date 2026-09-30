@@ -1,0 +1,816 @@
+- generic: 嘉立创DFM
+- list:
+  - listitem "撤销(Ctrl+Z)"
+  - listitem "重做(Ctrl+Y)"
+  - listitem "放大(A)"
+  - listitem "缩小(Z)"
+  - listitem "适应选中"
+  - listitem "自适应窗口(K)"
+  - listitem "板子翻转(Shift+F)"
+  - listitem "整体逆时针旋转"
+  - listitem "整体顺时针旋转"
+  - listitem "逆时针旋转(Space)"
+  - listitem "独立顺时针旋转"
+  - listitem "上下镜像"
+  - listitem "左右镜像"
+  - listitem "自动对齐"
+  - listitem "测量(Ctrl+M)"
+  - listitem "导出分析报告"
+  - listitem "设置"
+  - listitem "导出装配图"
+- group "单位":
+  - button "mm"
+  - button "inch"
+- button "切换到浅色主题":
+  - img "切换到浅色主题"
+- button "PCB DFM"
+- button "SMT DFM"
+- button "执行DFM检查"
+- button "BOM匹配"
+- generic: 分析项目
+- generic: 统计
+- generic: 操作
+- generic: 元件插件尺寸过大预警
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 元件碰撞预警
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 元件距元件
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 元件距板边的距离
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 元件焊脚到孔的距离
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 元件本体文字预警
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 元件焊盘间距
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 元件与板框相交
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: PIN脚内边界
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: PIN脚左边界
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: PIN脚无焊盘
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: PIN脚外边界
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: PIN脚右边界
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 元件插件尺寸过小预警
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 元件插件孔
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 元件插件重叠预警
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 元件插脚无孔
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic: 焊脚和焊盘相交区域
+- generic: "0"
+- text: ","
+- generic: "0"
+- text: ","
+- generic: "0"
+- button "详情" [disabled]
+- generic "关闭左侧栏"
+- checkbox "选中顶层器件"
+- text: 选中顶层器件
+- checkbox "选中底层器件"
+- text: 选中底层器件
+- radio [checked]
+- text: mm
+- radio
+- text: mil
+- button "导出图片"
+- generic "Gerber(5)": Gerber图
+- generic "Gerber(6)": 骨架线框
+- generic "2D(2)": 2D仿真图
+- generic "3D(3)": 3D仿真图
+- generic: 顶层
+- generic: 底层
+- generic "关闭右侧栏"
+- banner:
+  - generic: 显示层控制
+  - generic: 3 层
+- table:
+  - rowgroup:
+    - row "编辑 内容":
+      - columnheader
+      - columnheader "编辑"
+      - columnheader "内容"
+- table:
+  - rowgroup:
+    - row "引脚标识":
+      - cell
+      - cell
+      - cell "引脚标识"
+- table:
+  - rowgroup:
+    - row "方向标识":
+      - cell
+      - cell
+      - cell "方向标识"
+- table:
+  - rowgroup:
+    - row "模型位号":
+      - cell
+      - cell
+      - cell "模型位号"
+- generic: SMT匹配
+- button "保存并关闭"
+- button "变更BOM坐标"
+- generic: 全部(29)
+- generic: 已匹配元件(29)
+- generic: 搜全部
+- generic: 搜位号
+- textbox "可搜索位号、封装、器件编号等"
+- table:
+  - rowgroup:
+    - row "顶层位号 底层位号 器件型号 器件封装 器件编号 操作":
+      - columnheader "顶层位号":
+        - text: 顶层位号
+      - columnheader "底层位号":
+        - text: 底层位号
+      - columnheader "器件型号":
+        - text: 器件型号
+      - columnheader "器件封装":
+        - text: 器件封装
+      - columnheader "器件编号":
+        - text: 器件编号
+      - columnheader "操作"
+- paragraph: 已匹配的器件(29)
+- table:
+  - rowgroup:
+    - row "C2、C6 2个器件 — 10UF±10%10V 0603 C0603 10uF10V C19702 C19702 替换元件 删除不贴":
+      - cell "C2、C6 2个器件":
+        - paragraph:
+          - generic: C2
+          - generic: 、C6
+        - paragraph:
+          - generic: 2个器件
+      - cell "—"
+      - cell "10UF±10%10V 0603":
+        - paragraph: 10UF±10%10V
+        - paragraph: "0603"
+      - cell "C0603 10uF10V":
+        - paragraph: C0603
+        - paragraph: 10uF10V
+      - cell "C19702 C19702":
+        - paragraph: C19702
+        - paragraph: C19702
+      - cell "替换元件 删除不贴":
+        - button "替换元件"
+        - button "删除不贴"
+    - row "R1、R2 2个器件 — 厚膜电阻5.1KΩ±1%100mW 0603 R0603 5.1k1% C23186 C23186 替换元件 删除不贴":
+      - cell "R1、R2 2个器件":
+        - paragraph:
+          - generic: R1
+          - generic: 、R2
+        - paragraph:
+          - generic: 2个器件
+      - cell "—"
+      - cell "厚膜电阻5.1KΩ±1%100mW 0603":
+        - paragraph: 厚膜电阻5.1KΩ±1%100mW
+        - paragraph: "0603"
+      - cell "R0603 5.1k1%":
+        - paragraph: R0603
+        - paragraph: 5.1k1%
+      - cell "C23186 C23186":
+        - paragraph: C23186
+        - paragraph: C23186
+      - cell "替换元件 删除不贴":
+        - button "替换元件"
+        - button "删除不贴"
+    - row "R14、R18 2个器件 — 厚膜电阻10KΩ±1%100mW 0603 R0603 10kΩ C25804 C25804 替换元件 删除不贴":
+      - cell "R14、R18 2个器件":
+        - paragraph:
+          - generic: R14
+          - generic: 、R18
+        - paragraph:
+          - generic: 2个器件
+      - cell "—"
+      - cell "厚膜电阻10KΩ±1%100mW 0603":
+        - paragraph: 厚膜电阻10KΩ±1%100mW
+        - paragraph: "0603"
+      - cell "R0603 10kΩ":
+        - paragraph: R0603
+        - paragraph: 10kΩ
+      - cell "C25804 C25804":
+        - paragraph: C25804
+        - paragraph: C25804
+      - cell "替换元件 删除不贴":
+        - button "替换元件"
+        - button "删除不贴"
+    - row "R17 1个器件 — 厚膜电阻3Ω±1%100mW 0603 R0603 3Ω C23157 C23157 替换元件 删除不贴":
+      - cell "R17 1个器件":
+        - paragraph:
+          - generic: R17
+        - paragraph:
+          - generic: 1个器件
+      - cell "—"
+      - cell "厚膜电阻3Ω±1%100mW 0603":
+        - paragraph: 厚膜电阻3Ω±1%100mW
+        - paragraph: "0603"
+      - cell "R0603 3Ω":
+        - paragraph: R0603
+        - paragraph: 3Ω
+      - cell "C23157 C23157":
+        - paragraph: C23157
+        - paragraph: C23157
+      - cell "替换元件 删除不贴":
+        - button "替换元件"
+        - button "删除不贴"
+    - row "U3 1个器件 — 3.3V200mA6V SOT-23-5 SOT-23-5_L2.9-W1.6-P0.95-LS2.8-BL TPS7A0233DBVR C5142805 C5142805 替换元件 删除不贴":
+      - cell "U3 1个器件":
+        - paragraph:
+          - generic: U3
+        - paragraph:
+          - generic: 1个器件
+      - cell "—"
+      - cell "3.3V200mA6V SOT-23-5":
+        - paragraph: 3.3V200mA6V
+        - paragraph: SOT-23-5
+      - cell "SOT-23-5_L2.9-W1.6-P0.95-LS2.8-BL TPS7A0233DBVR":
+        - paragraph: SOT-23-5_L2.9-W1.6-P0.95-LS2.8-BL
+        - paragraph: TPS7A0233DBVR
+      - cell "C5142805 C5142805":
+        - paragraph: C5142805
+        - paragraph: C5142805
+      - cell "替换元件 删除不贴":
+        - button "替换元件"
+        - button "删除不贴"
+    - row "Q1 1个器件 — SI1308EDL-T1-GE3 SOT-323 SOT-323-3_L2.0-W1.3-P1.30-LS2.1-BR SI1308EDL-T1-GE3 C469327 C469327 替换元件 删除不贴":
+      - cell "Q1 1个器件":
+        - paragraph:
+          - generic: Q1
+        - paragraph:
+          - generic: 1个器件
+      - cell "—"
+      - cell "SI1308EDL-T1-GE3 SOT-323":
+        - paragraph: SI1308EDL-T1-GE3
+        - paragraph: SOT-323
+      - cell "SOT-323-3_L2.0-W1.3-P1.30-LS2.1-BR SI1308EDL-T1-GE3":
+        - paragraph: SOT-323-3_L2.0-W1.3-P1.30-LS2.1-BR
+        - paragraph: SI1308EDL-T1-GE3
+      - cell "C469327 C469327":
+        - paragraph: C469327
+        - paragraph: C469327
+      - cell "替换元件 删除不贴":
+        - button "替换元件"
+        - button "删除不贴"
+    - row "U1 1个器件 — 蓝牙低功耗模块 SMD-61P COMM-SMD_MDBT50Q-P512K MDBT50Q-P1MV2 C5119772 C5119772 替换元件 删除不贴":
+      - cell "U1 1个器件":
+        - paragraph:
+          - generic: U1
+        - paragraph:
+          - generic: 1个器件
+      - cell "—"
+      - cell "蓝牙低功耗模块 SMD-61P":
+        - paragraph: 蓝牙低功耗模块
+        - paragraph: SMD-61P
+      - cell "COMM-SMD_MDBT50Q-P512K MDBT50Q-P1MV2":
+        - paragraph: COMM-SMD_MDBT50Q-P512K
+        - paragraph: MDBT50Q-P1MV2
+      - cell "C5119772 C5119772":
+        - paragraph: C5119772
+        - paragraph: C5119772
+      - cell "替换元件 删除不贴":
+        - button "替换元件"
+        - button "删除不贴"
+    - row "C1、C3、C4、C5 4个器件 — 2.2UF±10%16V 0603 C0603 2.2uF16V C23630 C23630 替换元件 删除不贴":
+      - cell "C1、C3、C4、C5 4个器件":
+        - paragraph:
+          - generic: C1
+          - generic: 、C3
+          - generic: 、C4
+          - generic: 、C5
+        - paragraph:
+          - generic: 4个器件
+      - cell "—"
+      - cell "2.2UF±10%16V 0603":
+        - paragraph: 2.2UF±10%16V
+        - paragraph: "0603"
+      - cell "C0603 2.2uF16V":
+        - paragraph: C0603
+        - paragraph: 2.2uF16V
+      - cell "C23630 C23630":
+        - paragraph: C23630
+        - paragraph: C23630
+      - cell "替换元件 删除不贴":
+        - button "替换元件"
+        - button "删除不贴"
+    - row "R13 1个器件 — 厚膜电阻100KΩ±1%100mW 0603 R0603 100kΩ C25803 C25803 替换元件 删除不贴":
+      - cell "R13 1个器件":
+        - paragraph:
+          - generic: R13
+        - paragraph:
+          - generic: 1个器件
+      - cell "—"
+      - cell "厚膜电阻100KΩ±1%100mW 0603":
+        - paragraph: 厚膜电阻100KΩ±1%100mW
+        - paragraph: "0603"
+      - cell "R0603 100kΩ":
+        - paragraph: R0603
+        - paragraph: 100kΩ
+      - cell "C25803 C25803":
+        - paragraph: C25803
+        - paragraph: C25803
+      - cell "替换元件 删除不贴":
+        - button "替换元件"
+        - button "删除不贴"
+    - row "U5、U6 2个器件 — 单向ESD5.5V截止峰值脉冲电流：5A@8/20US SOT(9x3) SOT-9X3-3_L1.0-W0.8-P0.35-LS1.0-BR TPD2EUSB30DRTR C97502 C97502 替换元件 删除不贴":
+      - cell "U5、U6 2个器件":
+        - paragraph:
+          - generic: U5
+          - generic: 、U6
+        - paragraph:
+          - generic: 2个器件
+      - cell "—"
+      - cell "单向ESD5.5V截止峰值脉冲电流：5A@8/20US SOT(9x3)":
+        - paragraph: 单向ESD5.5V截止峰值脉冲电流：5A@8/20US
+        - paragraph: SOT(9x3)
+      - cell "SOT-9X3-3_L1.0-W0.8-P0.35-LS1.0-BR TPD2EUSB30DRTR":
+        - paragraph: SOT-9X3-3_L1.0-W0.8-P0.35-LS1.0-BR
+        - paragraph: TPD2EUSB30DRTR
+      - cell "C97502 C97502":
+        - paragraph: C97502
+        - paragraph: C97502
+      - cell "替换元件 删除不贴":
+        - button "替换元件"
+        - button "删除不贴"
+    - row "D1、D2、D3 3个器件 — MBR0530T1G SOD-123 SOD-123_L2.7-W1.6-LS3.7-RD-1 MBR0530T1G C82046 C82046 替换元件 删除不贴":
+      - cell "D1、D2、D3 3个器件":
+        - paragraph:
+          - generic: D1
+          - generic: 、D2
+          - generic: 、D3
+        - paragraph:
+          - generic: 3个器件
+      - cell "—"
+      - cell "MBR0530T1G SOD-123":
+        - paragraph: MBR0530T1G
+        - paragraph: SOD-123
+      - cell "SOD-123_L2.7-W1.6-LS3.7-RD-1 MBR0530T1G":
+        - paragraph: SOD-123_L2.7-W1.6-LS3.7-RD-1
+        - paragraph: MBR0530T1G
+      - cell "C82046 C82046":
+        - paragraph: C82046
+        - paragraph: C82046
+      - cell "替换元件 删除不贴":
+        - button "替换元件"
+        - button "删除不贴"
+    - row "C14、C15、C19 3个器件 — 4.7UF±10%25V 0805 C0805 4.7uF C98195 C98195 替换元件 删除不贴":
+      - cell "C14、C15、C19 3个器件":
+        - paragraph:
+          - generic: C14
+          - generic: 、C15
+          - generic: 、C19
+        - paragraph:
+          - generic: 3个器件
+      - cell "—"
+      - cell "4.7UF±10%25V 0805":
+        - paragraph: 4.7UF±10%25V
+        - paragraph: "0805"
+      - cell "C0805 4.7uF":
+        - paragraph: C0805
+        - paragraph: 4.7uF
+      - cell "C98195 C98195":
+        - paragraph: C98195
+        - paragraph: C98195
+      - cell "替换元件 删除不贴":
+        - button "替换元件"
+        - button "删除不贴"
+    - row "L1 1个器件 — 47UH±20%250mA SMD,3x3mm IND-SMD_L3.0-W3.0 47uH C223116 C223116 替换元件 删除不贴":
+      - cell "L1 1个器件":
+        - paragraph:
+          - generic: L1
+        - paragraph:
+          - generic: 1个器件
+      - cell "—"
+      - cell "47UH±20%250mA SMD,3x3mm":
+        - paragraph: 47UH±20%250mA
+        - paragraph: SMD,3x3mm
+      - cell "IND-SMD_L3.0-W3.0 47uH":
+        - paragraph: IND-SMD_L3.0-W3.0
+        - paragraph: 47uH
+      - cell "C223116 C223116":
+        - paragraph: C223116
+        - paragraph: C223116
+      - cell "替换元件 删除不贴":
+        - button "替换元件"
+        - button "删除不贴"
+    - row "C25 1个器件 — 100NF±10%50V C0603 100nF C14663 C14663 替换元件 删除不贴":
+      - cell "C25 1个器件":
+        - paragraph:
+          - generic: C25
+        - paragraph:
+          - generic: 1个器件
+      - cell "—"
+      - cell "100NF±10%50V":
+        - paragraph: 100NF±10%50V
+        - paragraph
+      - cell "C0603 100nF":
+        - paragraph: C0603
+        - paragraph: 100nF
+      - cell "C14663 C14663":
+        - paragraph: C14663
+        - paragraph: C14663
+      - cell "替换元件 删除不贴":
+        - button "替换元件"
+        - button "删除不贴"
+    - row "C9、C10、C11、C12、C13、C16、C17、C18、C20、C21、C22 11个器件 — 1UF±10%50V 0805 C0805 1uF C28323 C28323 替换元件 删除不贴":
+      - cell "C9、C10、C11、C12、C13、C16、C17、C18、C20、C21、C22 11个器件":
+        - paragraph:
+          - generic: C9
+          - generic: 、C10
+          - generic: 、C11
+          - generic: 、C12
+          - generic: 、C13
+          - generic: 、C16
+          - generic: 、C17
+          - generic: 、C18
+          - generic: 、C20
+          - generic: 、C21
+          - generic: 、C22
+        - paragraph:
+          - generic: 11个器件
+      - cell "—"
+      - cell "1UF±10%50V 0805":
+        - paragraph: 1UF±10%50V
+        - paragraph: "0805"
+      - cell "C0805 1uF":
+        - paragraph: C0805
+        - paragraph: 1uF
+      - cell "C28323 C28323":
+        - paragraph: C28323
+        - paragraph: C28323
+      - cell "替换元件 删除不贴":
+        - button "替换元件"
+        - button "删除不贴"
+    - row "J1 1个器件 — TYPE-C母 USB-SMD_USB4500-03-0-A USB4500-03-0-A C5354966 C5354966 替换元件 删除不贴":
+      - cell "J1 1个器件":
+        - paragraph:
+          - generic: J1
+        - paragraph:
+          - generic: 1个器件
+      - cell "—"
+      - cell "TYPE-C母":
+        - paragraph: TYPE-C母
+        - paragraph
+      - cell "USB-SMD_USB4500-03-0-A USB4500-03-0-A":
+        - paragraph: USB-SMD_USB4500-03-0-A
+        - paragraph: USB4500-03-0-A
+      - cell "C5354966 C5354966":
+        - paragraph: C5354966
+        - paragraph: C5354966
+      - cell "替换元件 删除不贴":
+        - button "替换元件"
+        - button "删除不贴"
+    - row "C8 1个器件 — 4.7UF±10%16V 0603 C0603 4.7uF16V C19666 C19666 替换元件 删除不贴":
+      - cell "C8 1个器件":
+        - paragraph:
+          - generic: C8
+        - paragraph:
+          - generic: 1个器件
+      - cell "—"
+      - cell "4.7UF±10%16V 0603":
+        - paragraph: 4.7UF±10%16V
+        - paragraph: "0603"
+      - cell "C0603 4.7uF16V":
+        - paragraph: C0603
+        - paragraph: 4.7uF16V
+      - cell "C19666 C19666":
+        - paragraph: C19666
+        - paragraph: C19666
+      - cell "替换元件 删除不贴":
+        - button "替换元件"
+        - button "删除不贴"
+    - row "Q3 1个器件 — SI1308EDL-T1-GE3 SOT-323-3_L2.0-W1.3-P1.30-LS2.1-BR SI1308EDL C469327 C469327 替换元件 删除不贴":
+      - cell "Q3 1个器件":
+        - paragraph:
+          - generic: Q3
+        - paragraph:
+          - generic: 1个器件
+      - cell "—"
+      - cell "SI1308EDL-T1-GE3":
+        - paragraph: SI1308EDL-T1-GE3
+        - paragraph
+      - cell "SOT-323-3_L2.0-W1.3-P1.30-LS2.1-BR SI1308EDL":
+        - paragraph: SOT-323-3_L2.0-W1.3-P1.30-LS2.1-BR
+        - paragraph: SI1308EDL
+      - cell "C469327 C469327":
+        - paragraph: C469327
+        - paragraph: C469327
+      - cell "替换元件 删除不贴":
+        - button "替换元件"
+        - button "删除不贴"
+    - row "U4 1个器件 — 具有受控上升时间的5.5V、1.5A、90mΩ自保护负载开关 SC-70-6 SC-70-6_L2.0-W1.3-P0.65-LS2.1-BR TPS22919DCKT C2860814 C2860814 替换元件 删除不贴":
+      - cell "U4 1个器件":
+        - paragraph:
+          - generic: U4
+        - paragraph:
+          - generic: 1个器件
+      - cell "—"
+      - cell "具有受控上升时间的5.5V、1.5A、90mΩ自保护负载开关 SC-70-6":
+        - paragraph: 具有受控上升时间的5.5V、1.5A、90mΩ自保护负载开关
+        - paragraph: SC-70-6
+      - cell "SC-70-6_L2.0-W1.3-P0.65-LS2.1-BR TPS22919DCKT":
+        - paragraph: SC-70-6_L2.0-W1.3-P0.65-LS2.1-BR
+        - paragraph: TPS22919DCKT
+      - cell "C2860814 C2860814":
+        - paragraph: C2860814
+        - paragraph: C2860814
+      - cell "替换元件 删除不贴":
+        - button "替换元件"
+        - button "删除不贴"
+    - row "C7 1个器件 — 100NF±10%50V 0603 C0603 100nF50V C14663 C14663 替换元件 删除不贴":
+      - cell "C7 1个器件":
+        - paragraph:
+          - generic: C7
+        - paragraph:
+          - generic: 1个器件
+      - cell "—"
+      - cell "100NF±10%50V 0603":
+        - paragraph: 100NF±10%50V
+        - paragraph: "0603"
+      - cell "C0603 100nF50V":
+        - paragraph: C0603
+        - paragraph: 100nF50V
+      - cell "C14663 C14663":
+        - paragraph: C14663
+        - paragraph: C14663
+      - cell "替换元件 删除不贴":
+        - button "替换元件"
+        - button "删除不贴"
+    - row "R3、R4、R16 3个器件 — 厚膜电阻0Ω±1%100mW 0603 R0603 0Ω C21189 C21189 替换元件 删除不贴":
+      - cell "R3、R4、R16 3个器件":
+        - paragraph:
+          - generic: R3
+          - generic: 、R4
+          - generic: 、R16
+        - paragraph:
+          - generic: 3个器件
+      - cell "—"
+      - cell "厚膜电阻0Ω±1%100mW 0603":
+        - paragraph: 厚膜电阻0Ω±1%100mW
+        - paragraph: "0603"
+      - cell "R0603 0Ω":
+        - paragraph: R0603
+        - paragraph: 0Ω
+      - cell "C21189 C21189":
+        - paragraph: C21189
+        - paragraph: C21189
+      - cell "替换元件 删除不贴":
+        - button "替换元件"
+        - button "删除不贴"
+    - row "R20、R21、R22、R23 4个器件 — 厚膜电阻1MΩ±1%100mW R0603 1MΩ C22935 C22935 替换元件 删除不贴":
+      - cell "R20、R21、R22、R23 4个器件":
+        - paragraph:
+          - generic: R20
+          - generic: 、R21
+          - generic: 、R22
+          - generic: 、R23
+        - paragraph:
+          - generic: 4个器件
+      - cell "—"
+      - cell "厚膜电阻1MΩ±1%100mW":
+        - paragraph: 厚膜电阻1MΩ±1%100mW
+        - paragraph
+      - cell "R0603 1MΩ":
+        - paragraph: R0603
+        - paragraph: 1MΩ
+      - cell "C22935 C22935":
+        - paragraph: C22935
+        - paragraph: C22935
+      - cell "替换元件 删除不贴":
+        - button "替换元件"
+        - button "删除不贴"
+    - row "R15 1个器件 — 厚膜电阻2.2Ω±1%100mW 0603 R0603 2.2Ω C22939 C22939 替换元件 删除不贴":
+      - cell "R15 1个器件":
+        - paragraph:
+          - generic: R15
+        - paragraph:
+          - generic: 1个器件
+      - cell "—"
+      - cell "厚膜电阻2.2Ω±1%100mW 0603":
+        - paragraph: 厚膜电阻2.2Ω±1%100mW
+        - paragraph: "0603"
+      - cell "R0603 2.2Ω":
+        - paragraph: R0603
+        - paragraph: 2.2Ω
+      - cell "C22939 C22939":
+        - paragraph: C22939
+        - paragraph: C22939
+      - cell "替换元件 删除不贴":
+        - button "替换元件"
+        - button "删除不贴"
+    - row "SW1、SW2、SW3 3个器件 — 5.2*5.2*1.5mm立贴轻触开关 SMD-4P,5.2x5.2mm KEY-SMD_4P-L5.2-W5.2-P3.70-LS6.4 SKQGABE010 C115351 C115351 替换元件 删除不贴":
+      - cell "SW1、SW2、SW3 3个器件":
+        - paragraph:
+          - generic: SW1
+          - generic: 、SW2
+          - generic: 、SW3
+        - paragraph:
+          - generic: 3个器件
+      - cell "—"
+      - cell "5.2*5.2*1.5mm立贴轻触开关 SMD-4P,5.2x5.2mm":
+        - paragraph: 5.2*5.2*1.5mm立贴轻触开关
+        - paragraph: SMD-4P,5.2x5.2mm
+      - cell "KEY-SMD_4P-L5.2-W5.2-P3.70-LS6.4 SKQGABE010":
+        - paragraph: KEY-SMD_4P-L5.2-W5.2-P3.70-LS6.4
+        - paragraph: SKQGABE010
+      - cell "C115351 C115351":
+        - paragraph: C115351
+        - paragraph: C115351
+      - cell "替换元件 删除不贴":
+        - button "替换元件"
+        - button "删除不贴"
+    - row "U2 1个器件 — 单节电池1AIC线性电池充电器，具有电源路径、运输模式、关断模式和电池跟踪VINDPM WSON-10 WSON-10_L2.2-W2.0-P0.40-BL-EP_TI_DLH0010A BQ25186DLHR C44639442 C44639442 替换元件 删除不贴":
+      - cell "U2 1个器件":
+        - paragraph:
+          - generic: U2
+        - paragraph:
+          - generic: 1个器件
+      - cell "—"
+      - cell "单节电池1AIC线性电池充电器，具有电源路径、运输模式、关断模式和电池跟踪VINDPM WSON-10":
+        - paragraph: 单节电池1AIC线性电池充电器，具有电源路径、运输模式、关断模式和电池跟踪VINDPM
+        - paragraph: WSON-10
+      - cell "WSON-10_L2.2-W2.0-P0.40-BL-EP_TI_DLH0010A BQ25186DLHR":
+        - paragraph: WSON-10_L2.2-W2.0-P0.40-BL-EP_TI_DLH0010A
+        - paragraph: BQ25186DLHR
+      - cell "C44639442 C44639442":
+        - paragraph: C44639442
+        - paragraph: C44639442
+      - cell "替换元件 删除不贴":
+        - button "替换元件"
+        - button "删除不贴"
+    - row "R5、R6、R7、R8、R9、R10、R11、R12、R19 9个器件 — 厚膜电阻10KΩ±1%100mW 0603 R0603 10k1% C25804 C25804 替换元件 删除不贴":
+      - cell "R5、R6、R7、R8、R9、R10、R11、R12、R19 9个器件":
+        - paragraph:
+          - generic: R5
+          - generic: 、R6
+          - generic: 、R7
+          - generic: 、R8
+          - generic: 、R9
+          - generic: 、R10
+          - generic: 、R11
+          - generic: 、R12
+          - generic: 、R19
+        - paragraph:
+          - generic: 9个器件
+      - cell "—"
+      - cell "厚膜电阻10KΩ±1%100mW 0603":
+        - paragraph: 厚膜电阻10KΩ±1%100mW
+        - paragraph: "0603"
+      - cell "R0603 10k1%":
+        - paragraph: R0603
+        - paragraph: 10k1%
+      - cell "C25804 C25804":
+        - paragraph: C25804
+        - paragraph: C25804
+      - cell "替换元件 删除不贴":
+        - button "替换元件"
+        - button "删除不贴"
+    - row "Q2 1个器件 — AO3401A SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR AO3401A C15127 C15127 替换元件 删除不贴":
+      - cell "Q2 1个器件":
+        - paragraph:
+          - generic: Q2
+        - paragraph:
+          - generic: 1个器件
+      - cell "—"
+      - cell "AO3401A":
+        - paragraph: AO3401A
+        - paragraph
+      - cell "SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR AO3401A":
+        - paragraph: SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR
+        - paragraph: AO3401A
+      - cell "C15127 C15127":
+        - paragraph: C15127
+        - paragraph: C15127
+      - cell "替换元件 删除不贴":
+        - button "替换元件"
+        - button "删除不贴"
+    - row "C23、C24 2个器件 — 220PF±5%50V 0603 C0603 220pFC0G(tune) C77032 C77032 替换元件 删除不贴":
+      - cell "C23、C24 2个器件":
+        - paragraph:
+          - generic: C23
+          - generic: 、C24
+        - paragraph:
+          - generic: 2个器件
+      - cell "—"
+      - cell "220PF±5%50V 0603":
+        - paragraph: 220PF±5%50V
+        - paragraph: "0603"
+      - cell "C0603 220pFC0G(tune)":
+        - paragraph: C0603
+        - paragraph: 220pFC0G(tune)
+      - cell "C77032 C77032":
+        - paragraph: C77032
+        - paragraph: C77032
+      - cell "替换元件 删除不贴":
+        - button "替换元件"
+        - button "删除不贴"
+    - row "J2 1个器件 — 翻盖式双侧触点/上下接P数:24P间距:0.5mm SMD,P=0.5mm,卧贴 FPC-SMD_24P-P0.50_FPC-05FB-24PH20 FPC-05FB-24PH20 C2856831 C2856831 替换元件 删除不贴":
+      - cell "J2 1个器件":
+        - paragraph:
+          - generic: J2
+        - paragraph:
+          - generic: 1个器件
+      - cell "—"
+      - cell "翻盖式双侧触点/上下接P数:24P间距:0.5mm SMD,P=0.5mm,卧贴":
+        - paragraph: 翻盖式双侧触点/上下接P数:24P间距:0.5mm
+        - paragraph: SMD,P=0.5mm,卧贴
+      - cell "FPC-SMD_24P-P0.50_FPC-05FB-24PH20 FPC-05FB-24PH20":
+        - paragraph: FPC-SMD_24P-P0.50_FPC-05FB-24PH20
+        - paragraph: FPC-05FB-24PH20
+      - cell "C2856831 C2856831":
+        - paragraph: C2856831
+        - paragraph: C2856831
+      - cell "替换元件 删除不贴":
+        - button "替换元件"
+        - button "删除不贴"
+- alert

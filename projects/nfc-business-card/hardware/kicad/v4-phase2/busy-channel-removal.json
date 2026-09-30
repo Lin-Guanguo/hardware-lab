@@ -1,0 +1,8 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "description": "Complete the joint CS/BUSY lane allocation outside the short RESE crossing",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase2/busy-channel-removal-ipc.json",
+  "remove_trial_ids": [
+    "9a444b85-53ae-464b-bbac-5ea1f8b7da56"
+  ]
+}

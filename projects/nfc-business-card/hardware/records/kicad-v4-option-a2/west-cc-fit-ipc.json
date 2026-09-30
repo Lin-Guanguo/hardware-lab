@@ -1,0 +1,13 @@
+{
+  "plan": "projects/nfc-business-card/hardware/kicad/v4-option-a2-west/cc-fit-plan.json",
+  "board": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4-option-a2-west/NFC-Card-V4.kicad_pcb",
+  "before": {
+    "tracks": 237,
+    "vias": 38
+  },
+  "after": {
+    "tracks": 237,
+    "vias": 38
+  },
+  "created_ids": []
+}

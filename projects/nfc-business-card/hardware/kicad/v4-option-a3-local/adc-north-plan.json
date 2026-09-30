@@ -1,0 +1,65 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-option-a3-local/NFC-Card-V4.kicad_pcb",
+  "description": "A3 explicit ADC north exit replacing south U-turn around C25 ground",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-option-a3/adc-north-ipc.json",
+  "remove_trial_ids": [
+    "476d7df5-bf63-46d7-86e3-ccb98794fef7",
+    "87191c0f-7872-467a-9551-15c63e34d938",
+    "6687a621-0978-486d-9f14-f538535db95a",
+    "327d3685-6626-4228-b1e3-c83de4e8fb95",
+    "417ebdb6-e0c7-4457-8296-8803d9dfb39f"
+  ],
+  "routes": [
+    {
+      "name": "ADC north exit releases C25 ground",
+      "net": "BAT_ADC_SENSE",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          182.8,
+          116.1
+        ],
+        [
+          182.8,
+          115.9
+        ],
+        [
+          183.5,
+          115.2
+        ]
+      ]
+    },
+    {
+      "name": "ADC north exit to existing branch",
+      "net": "BAT_ADC_SENSE",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          183.5,
+          115.2
+        ],
+        [
+          183.3,
+          115.4
+        ],
+        [
+          183.3,
+          119.4
+        ]
+      ]
+    }
+  ],
+  "vias": [
+    {
+      "name": "ADC north transfer",
+      "net": "BAT_ADC_SENSE",
+      "at": [
+        183.5,
+        115.2
+      ]
+    }
+  ],
+  "failures": []
+}

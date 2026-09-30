@@ -1,0 +1,4704 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase3/NFC-Card-V4.kicad_pcb",
+  "sha256": "61d07570596485f2a6e394ac39bdf9f4962ea417b04b9987b5022c49ffb97c6f",
+  "counts": {
+    "segments": 361,
+    "vias": 65,
+    "drc": 114,
+    "unconnected": 61,
+    "parity": 0
+  },
+  "drc_categories": {
+    "annular_width": 2,
+    "copper_edge_clearance": 14,
+    "starved_thermal": 6,
+    "via_diameter": 2,
+    "via_dangling": 41,
+    "track_dangling": 5,
+    "lib_footprint_mismatch": 7,
+    "text_height": 7,
+    "silk_overlap": 27,
+    "silk_over_copper": 3
+  },
+  "groups": [
+    {
+      "id": "MCU",
+      "title": "U1 / module",
+      "refs": [
+        "U1"
+      ],
+      "color": "#3959a0"
+    },
+    {
+      "id": "DEC",
+      "title": "C1/C6/C7 / MCU decoupling",
+      "refs": [
+        "C1",
+        "C6",
+        "C7"
+      ],
+      "color": "#267c93"
+    },
+    {
+      "id": "CHG",
+      "title": "U2 / charge + controls",
+      "refs": [
+        "U2",
+        "C2",
+        "C3",
+        "C8",
+        "R5",
+        "R6",
+        "R7",
+        "R8",
+        "R9",
+        "R19",
+        "NTC"
+      ],
+      "color": "#c17324"
+    },
+    {
+      "id": "LDO",
+      "title": "U3 / regulator",
+      "refs": [
+        "U3",
+        "C4",
+        "C5"
+      ],
+      "color": "#a06223"
+    },
+    {
+      "id": "USB",
+      "title": "J1 + ESD / USB + CC",
+      "refs": [
+        "J1",
+        "U5",
+        "U6",
+        "R1",
+        "R2"
+      ],
+      "color": "#ab4471"
+    },
+    {
+      "id": "SER",
+      "title": "R3/R4 / USB series",
+      "refs": [
+        "R3",
+        "R4"
+      ],
+      "color": "#933264"
+    },
+    {
+      "id": "EPD",
+      "title": "Display switch + full boost/pump",
+      "refs": [
+        "U4",
+        "C9",
+        "C10",
+        "Q1",
+        "L1",
+        "R13",
+        "R14",
+        "R15",
+        "D1",
+        "D2",
+        "D3",
+        "C11",
+        "C12",
+        "C13",
+        "R16",
+        "R18"
+      ],
+      "color": "#1d8d87"
+    },
+    {
+      "id": "FPC",
+      "title": "J2 / display interface",
+      "refs": [
+        "J2",
+        "R17"
+      ],
+      "color": "#216c74"
+    },
+    {
+      "id": "OUT",
+      "title": "C14-C22 / panel rails",
+      "refs": [
+        "C14",
+        "C15",
+        "C16",
+        "C17",
+        "C18",
+        "C19",
+        "C20",
+        "C21",
+        "C22"
+      ],
+      "color": "#387d6e"
+    },
+    {
+      "id": "ADC",
+      "title": "Q2/Q3 / battery sensing",
+      "refs": [
+        "Q2",
+        "Q3",
+        "R20",
+        "R21",
+        "R22",
+        "R23",
+        "C25"
+      ],
+      "color": "#8b58a1"
+    },
+    {
+      "id": "KEY",
+      "title": "Keys + pullups",
+      "refs": [
+        "SW1",
+        "SW2",
+        "SW3",
+        "R10",
+        "R11",
+        "R12"
+      ],
+      "color": "#5b7633"
+    },
+    {
+      "id": "RF",
+      "title": "NFC / matching + contacts",
+      "refs": [
+        "C23",
+        "C24",
+        "NFC1",
+        "NFC2"
+      ],
+      "color": "#7945a0"
+    },
+    {
+      "id": "BAT",
+      "title": "BP/BN / fixed battery lands",
+      "refs": [
+        "BP",
+        "BN"
+      ],
+      "color": "#985131"
+    },
+    {
+      "id": "DBG",
+      "title": "TP1-TP5 / fixed SWD lands",
+      "refs": [
+        "TP1",
+        "TP2",
+        "TP3",
+        "TP4",
+        "TP5"
+      ],
+      "color": "#436287"
+    }
+  ],
+  "nets": {
+    "BAT_ADC_SENSE": [
+      {
+        "pin": "R20.1",
+        "at": [
+          184.1,
+          115.1465
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "ADC"
+      },
+      {
+        "pin": "R21.2",
+        "at": [
+          184.1,
+          113.65350000000001
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "ADC"
+      },
+      {
+        "pin": "C25.2",
+        "at": [
+          182.4,
+          116.1
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "ADC"
+      },
+      {
+        "pin": "U1.11",
+        "at": [
+          176.751,
+          118.534
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "MCU"
+      }
+    ],
+    "BAT_DIV_SUPPLY": [
+      {
+        "pin": "R20.2",
+        "at": [
+          184.1,
+          116.65350000000001
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "ADC"
+      },
+      {
+        "pin": "Q2.3",
+        "at": [
+          188.0,
+          117.25
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "ADC"
+      }
+    ],
+    "BAT_MEAS_EN": [
+      {
+        "pin": "Q3.1",
+        "at": [
+          190.65,
+          111.7
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "ADC"
+      },
+      {
+        "pin": "R23.1",
+        "at": [
+          186.3,
+          112.65350000000001
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "ADC"
+      },
+      {
+        "pin": "U1.10",
+        "at": [
+          177.651,
+          118.934
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "MCU"
+      }
+    ],
+    "BAT_NTC_TBD": [
+      {
+        "pin": "U2.6",
+        "at": [
+          158.2,
+          109.64999999999999
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "CHG"
+      },
+      {
+        "pin": "R19.1",
+        "at": [
+          156.9535,
+          109.8
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "CHG"
+      },
+      {
+        "pin": "NTC.1",
+        "at": [
+          155.0,
+          104.0
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "CHG"
+      }
+    ],
+    "BAT_PACK_TBD": [
+      {
+        "pin": "U2.2",
+        "at": [
+          159.4,
+          107.55
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "CHG"
+      },
+      {
+        "pin": "R22.1",
+        "at": [
+          186.3,
+          120.5535
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "ADC"
+      },
+      {
+        "pin": "BP.1",
+        "at": [
+          142.5,
+          111.3005
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "BAT"
+      },
+      {
+        "pin": "C3.1",
+        "at": [
+          160.1,
+          104.4
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "CHG"
+      },
+      {
+        "pin": "Q2.2",
+        "at": [
+          187.05,
+          114.94999999999999
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "ADC"
+      }
+    ],
+    "BAT_SWITCH_GATE": [
+      {
+        "pin": "R22.2",
+        "at": [
+          186.3,
+          119.0465
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "ADC"
+      },
+      {
+        "pin": "Q3.3",
+        "at": [
+          190.0,
+          113.3
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "ADC"
+      },
+      {
+        "pin": "Q2.1",
+        "at": [
+          188.95,
+          114.94999999999999
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "ADC"
+      }
+    ],
+    "CHG_CE_N": [
+      {
+        "pin": "U2.4",
+        "at": [
+          158.6,
+          107.55
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "CHG"
+      },
+      {
+        "pin": "R7.2",
+        "at": [
+          159.7535,
+          113.5
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "CHG"
+      },
+      {
+        "pin": "U1.22",
+        "at": [
+          173.80100000000002,
+          113.934
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "MCU"
+      }
+    ],
+    "CHG_INT_N": [
+      {
+        "pin": "U2.9",
+        "at": [
+          159.4,
+          109.64999999999999
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "CHG"
+      },
+      {
+        "pin": "R8.2",
+        "at": [
+          154.5535,
+          106.4
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "CHG"
+      },
+      {
+        "pin": "U1.20",
+        "at": [
+          174.601,
+          113.934
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "MCU"
+      }
+    ],
+    "CHG_PG_N": [
+      {
+        "pin": "R9.2",
+        "at": [
+          152.5535,
+          103.8
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "CHG"
+      },
+      {
+        "pin": "U2.3",
+        "at": [
+          159.0,
+          107.55
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "CHG"
+      },
+      {
+        "pin": "U1.21",
+        "at": [
+          174.201,
+          114.834
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "MCU"
+      }
+    ],
+    "CHG_SCL": [
+      {
+        "pin": "U2.8",
+        "at": [
+          159.0,
+          109.64999999999999
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "CHG"
+      },
+      {
+        "pin": "R6.2",
+        "at": [
+          155.7535,
+          111.4
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "CHG"
+      },
+      {
+        "pin": "U1.16",
+        "at": [
+          177.001,
+          113.934
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "MCU"
+      }
+    ],
+    "CHG_SDA": [
+      {
+        "pin": "R5.2",
+        "at": [
+          152.5535,
+          108.8
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "CHG"
+      },
+      {
+        "pin": "U2.7",
+        "at": [
+          158.6,
+          109.64999999999999
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "CHG"
+      },
+      {
+        "pin": "U1.19",
+        "at": [
+          175.001,
+          114.834
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "MCU"
+      }
+    ],
+    "EPD_BS0": [
+      {
+        "pin": "R17.1",
+        "at": [
+          153.4465,
+          100.8
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "FPC"
+      },
+      {
+        "pin": "J2.8",
+        "at": [
+          166.325,
+          97.99
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "FPC"
+      }
+    ],
+    "EPD_BUSY_TBD": [
+      {
+        "pin": "R18.2",
+        "at": [
+          170.6535,
+          91.9
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      },
+      {
+        "pin": "J2.9",
+        "at": [
+          166.325,
+          97.49
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "FPC"
+      },
+      {
+        "pin": "U1.24",
+        "at": [
+          173.001,
+          113.934
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "MCU"
+      }
+    ],
+    "EPD_CS_N_TBD": [
+      {
+        "pin": "J2.12",
+        "at": [
+          166.325,
+          95.99
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "FPC"
+      },
+      {
+        "pin": "U1.38",
+        "at": [
+          169.251,
+          116.934
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "MCU"
+      }
+    ],
+    "EPD_DC_TBD": [
+      {
+        "pin": "J2.11",
+        "at": [
+          166.325,
+          96.49
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "FPC"
+      },
+      {
+        "pin": "U1.39",
+        "at": [
+          168.351,
+          117.334
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "MCU"
+      }
+    ],
+    "EPD_EN_TBD": [
+      {
+        "pin": "U4.3",
+        "at": [
+          180.25,
+          99.75
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      },
+      {
+        "pin": "R13.1",
+        "at": [
+          179.2465,
+          97.0
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      },
+      {
+        "pin": "U1.27",
+        "at": [
+          171.80100000000002,
+          114.834
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "MCU"
+      }
+    ],
+    "EPD_GDR": [
+      {
+        "pin": "R14.1",
+        "at": [
+          170.5035,
+          103.4
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      },
+      {
+        "pin": "Q1.1",
+        "at": [
+          173.60000000000002,
+          104.65
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      },
+      {
+        "pin": "J2.2",
+        "at": [
+          166.325,
+          100.99
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "FPC"
+      }
+    ],
+    "EPD_MOSI_TBD": [
+      {
+        "pin": "J2.14",
+        "at": [
+          166.325,
+          94.99
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "FPC"
+      },
+      {
+        "pin": "U1.37",
+        "at": [
+          168.351,
+          116.534
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "MCU"
+      }
+    ],
+    "EPD_PUMP": [
+      {
+        "pin": "D3.1",
+        "at": [
+          178.3,
+          91.0
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      },
+      {
+        "pin": "D2.2",
+        "at": [
+          177.9,
+          94.5
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      },
+      {
+        "pin": "C11.2",
+        "at": [
+          175.0,
+          95.55
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      }
+    ],
+    "EPD_RESE": [
+      {
+        "pin": "Q1.2",
+        "at": [
+          173.60000000000002,
+          103.35
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      },
+      {
+        "pin": "J2.3",
+        "at": [
+          166.325,
+          100.49
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "FPC"
+      },
+      {
+        "pin": "R15.1",
+        "at": [
+          175.0465,
+          104.2
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      }
+    ],
+    "EPD_RESET_N_TBD": [
+      {
+        "pin": "J2.10",
+        "at": [
+          166.325,
+          96.99
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "FPC"
+      },
+      {
+        "pin": "U1.41",
+        "at": [
+          168.351,
+          118.134
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "MCU"
+      }
+    ],
+    "EPD_SCK_TBD": [
+      {
+        "pin": "J2.13",
+        "at": [
+          166.325,
+          95.49
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "FPC"
+      },
+      {
+        "pin": "U1.36",
+        "at": [
+          169.251,
+          116.134
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "MCU"
+      }
+    ],
+    "EPD_SW": [
+      {
+        "pin": "Q1.3",
+        "at": [
+          172.0,
+          104.0
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      },
+      {
+        "pin": "L1.2",
+        "at": [
+          171.472,
+          100.5
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      },
+      {
+        "pin": "D1.2",
+        "at": [
+          172.0,
+          97.5
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      },
+      {
+        "pin": "C11.1",
+        "at": [
+          175.0,
+          97.55
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      }
+    ],
+    "EPD_VCOM": [
+      {
+        "pin": "C22.1",
+        "at": [
+          159.5,
+          83.2
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "OUT"
+      },
+      {
+        "pin": "J2.24",
+        "at": [
+          166.325,
+          89.99
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "FPC"
+      }
+    ],
+    "EPD_VDD": [
+      {
+        "pin": "U4.5",
+        "at": [
+          178.35000000000002,
+          100.4
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      },
+      {
+        "pin": "U4.6",
+        "at": [
+          178.35000000000002,
+          101.05000000000001
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      },
+      {
+        "pin": "C10.1",
+        "at": [
+          176.8,
+          100.0
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      },
+      {
+        "pin": "R18.1",
+        "at": [
+          169.1465,
+          91.9
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      },
+      {
+        "pin": "L1.1",
+        "at": [
+          174.12800000000001,
+          100.5
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      },
+      {
+        "pin": "J2.15",
+        "at": [
+          166.325,
+          94.49
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "FPC"
+      }
+    ],
+    "EPD_VDDL": [
+      {
+        "pin": "C14.1",
+        "at": [
+          159.5,
+          100.8
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "OUT"
+      },
+      {
+        "pin": "J2.4",
+        "at": [
+          166.325,
+          99.99
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "FPC"
+      }
+    ],
+    "EPD_VGH": [
+      {
+        "pin": "R16.2",
+        "at": [
+          176.2535,
+          89.9
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      },
+      {
+        "pin": "J2.21",
+        "at": [
+          166.325,
+          91.49
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "FPC"
+      }
+    ],
+    "EPD_VGL": [
+      {
+        "pin": "C13.1",
+        "at": [
+          184.0,
+          94.0
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      },
+      {
+        "pin": "D3.2",
+        "at": [
+          181.7,
+          91.0
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      },
+      {
+        "pin": "C21.1",
+        "at": [
+          159.5,
+          85.4
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "OUT"
+      },
+      {
+        "pin": "J2.23",
+        "at": [
+          166.325,
+          90.49
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "FPC"
+      }
+    ],
+    "EPD_VPH": [
+      {
+        "pin": "R16.1",
+        "at": [
+          174.7465,
+          89.9
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      },
+      {
+        "pin": "C12.1",
+        "at": [
+          173.0,
+          92.2
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      },
+      {
+        "pin": "D1.1",
+        "at": [
+          172.0,
+          94.1
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      }
+    ],
+    "EPD_VSNH": [
+      {
+        "pin": "C20.1",
+        "at": [
+          159.5,
+          87.6
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "OUT"
+      },
+      {
+        "pin": "J2.22",
+        "at": [
+          166.325,
+          90.99
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "FPC"
+      }
+    ],
+    "EPD_VSNL1": [
+      {
+        "pin": "J2.18",
+        "at": [
+          166.325,
+          92.99
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "FPC"
+      },
+      {
+        "pin": "C17.1",
+        "at": [
+          159.5,
+          94.2
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "OUT"
+      }
+    ],
+    "EPD_VSNL2": [
+      {
+        "pin": "C18.1",
+        "at": [
+          159.5,
+          92.0
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "OUT"
+      },
+      {
+        "pin": "J2.19",
+        "at": [
+          166.325,
+          92.49
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "FPC"
+      }
+    ],
+    "EPD_VSPH": [
+      {
+        "pin": "C19.1",
+        "at": [
+          159.5,
+          89.8
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "OUT"
+      },
+      {
+        "pin": "J2.20",
+        "at": [
+          166.325,
+          91.99
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "FPC"
+      }
+    ],
+    "EPD_VSPL1": [
+      {
+        "pin": "C15.1",
+        "at": [
+          159.5,
+          98.6
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "OUT"
+      },
+      {
+        "pin": "J2.5",
+        "at": [
+          166.325,
+          99.49
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "FPC"
+      }
+    ],
+    "EPD_VSPL2": [
+      {
+        "pin": "C16.1",
+        "at": [
+          159.5,
+          96.4
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "OUT"
+      },
+      {
+        "pin": "J2.16",
+        "at": [
+          166.325,
+          93.99
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "FPC"
+      }
+    ],
+    "GND": [
+      {
+        "pin": "C5.2",
+        "at": [
+          173.5,
+          110.5
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "LDO"
+      },
+      {
+        "pin": "C2.2",
+        "at": [
+          162.0,
+          105.89999999999999
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "CHG"
+      },
+      {
+        "pin": "U2.5",
+        "at": [
+          158.2,
+          107.55
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "CHG"
+      },
+      {
+        "pin": "U2.11",
+        "at": [
+          159.0,
+          108.6
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "CHG"
+      },
+      {
+        "pin": "R21.1",
+        "at": [
+          184.1,
+          112.1465
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "ADC"
+      },
+      {
+        "pin": "C4.2",
+        "at": [
+          180.2,
+          111.1
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "LDO"
+      },
+      {
+        "pin": "U4.2",
+        "at": [
+          180.25,
+          100.4
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      },
+      {
+        "pin": "R1.2",
+        "at": [
+          182.2465,
+          107.8
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "USB"
+      },
+      {
+        "pin": "C13.2",
+        "at": [
+          184.0,
+          92.0
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      },
+      {
+        "pin": "C10.2",
+        "at": [
+          176.8,
+          102.0
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      },
+      {
+        "pin": "C15.2",
+        "at": [
+          157.5,
+          98.6
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "OUT"
+      },
+      {
+        "pin": "C22.2",
+        "at": [
+          157.5,
+          83.2
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "OUT"
+      },
+      {
+        "pin": "C19.2",
+        "at": [
+          157.5,
+          89.8
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "OUT"
+      },
+      {
+        "pin": "C9.2",
+        "at": [
+          182.0,
+          99.4
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      },
+      {
+        "pin": "C24.2",
+        "at": [
+          164.5,
+          124.0
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "RF"
+      },
+      {
+        "pin": "C6.2",
+        "at": [
+          172.0,
+          110.8
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "DEC"
+      },
+      {
+        "pin": "SW3.3",
+        "at": [
+          148.0,
+          117.44999999999999
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "KEY"
+      },
+      {
+        "pin": "SW3.4",
+        "at": [
+          154.2,
+          117.44999999999999
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "KEY"
+      },
+      {
+        "pin": "C20.2",
+        "at": [
+          157.5,
+          87.6
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "OUT"
+      },
+      {
+        "pin": "C18.2",
+        "at": [
+          157.5,
+          92.0
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "OUT"
+      },
+      {
+        "pin": "C25.1",
+        "at": [
+          182.4,
+          117.5
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "ADC"
+      },
+      {
+        "pin": "R2.2",
+        "at": [
+          182.2465,
+          109.4
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "USB"
+      },
+      {
+        "pin": "R17.2",
+        "at": [
+          154.9535,
+          100.8
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "FPC"
+      },
+      {
+        "pin": "C8.2",
+        "at": [
+          161.6,
+          108.89999999999999
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "CHG"
+      },
+      {
+        "pin": "C16.2",
+        "at": [
+          157.5,
+          96.4
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "OUT"
+      },
+      {
+        "pin": "C1.2",
+        "at": [
+          168.8,
+          110.8
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "DEC"
+      },
+      {
+        "pin": "C7.2",
+        "at": [
+          170.6,
+          110.8
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "DEC"
+      },
+      {
+        "pin": "R14.2",
+        "at": [
+          168.9965,
+          103.4
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      },
+      {
+        "pin": "SW2.3",
+        "at": [
+          156.5,
+          123.05
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "KEY"
+      },
+      {
+        "pin": "SW2.4",
+        "at": [
+          162.7,
+          123.05
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "KEY"
+      },
+      {
+        "pin": "C3.2",
+        "at": [
+          158.70000000000002,
+          104.4
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "CHG"
+      },
+      {
+        "pin": "Q3.2",
+        "at": [
+          189.35,
+          111.7
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "ADC"
+      },
+      {
+        "pin": "R19.2",
+        "at": [
+          155.4465,
+          109.8
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "CHG"
+      },
+      {
+        "pin": "D2.1",
+        "at": [
+          181.29999999999998,
+          94.5
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      },
+      {
+        "pin": "C12.2",
+        "at": [
+          175.0,
+          92.2
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      },
+      {
+        "pin": "R13.2",
+        "at": [
+          180.7535,
+          97.0
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      },
+      {
+        "pin": "C21.2",
+        "at": [
+          157.5,
+          85.4
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "OUT"
+      },
+      {
+        "pin": "U3.2",
+        "at": [
+          177.29999999999998,
+          110.1
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "LDO"
+      },
+      {
+        "pin": "BN.1",
+        "at": [
+          145.5,
+          111.3005
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "BAT"
+      },
+      {
+        "pin": "C14.2",
+        "at": [
+          157.5,
+          100.8
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "OUT"
+      },
+      {
+        "pin": "R23.2",
+        "at": [
+          186.3,
+          111.1465
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "ADC"
+      },
+      {
+        "pin": "U6.3",
+        "at": [
+          180.0,
+          107.8
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "USB"
+      },
+      {
+        "pin": "J2.17",
+        "at": [
+          166.325,
+          93.49
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "FPC"
+      },
+      {
+        "pin": "C17.2",
+        "at": [
+          157.5,
+          94.2
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "OUT"
+      },
+      {
+        "pin": "U1.1",
+        "at": [
+          177.651,
+          124.834
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "MCU"
+      },
+      {
+        "pin": "U1.2",
+        "at": [
+          177.651,
+          123.734
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "MCU"
+      },
+      {
+        "pin": "U1.15",
+        "at": [
+          177.80100000000002,
+          113.934
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "MCU"
+      },
+      {
+        "pin": "U1.33",
+        "at": [
+          168.201,
+          113.934
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "MCU"
+      },
+      {
+        "pin": "U1.55",
+        "at": [
+          168.351,
+          124.834
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "MCU"
+      },
+      {
+        "pin": "C23.2",
+        "at": [
+          164.5,
+          122.0
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "RF"
+      },
+      {
+        "pin": "U5.3",
+        "at": [
+          181.0,
+          103.8
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "USB"
+      },
+      {
+        "pin": "J1.17",
+        "at": [
+          187.29899999999998,
+          109.6205
+        ],
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "group": "USB"
+      },
+      {
+        "pin": "J1.18",
+        "at": [
+          187.29899999999998,
+          98.3805
+        ],
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "group": "USB"
+      },
+      {
+        "pin": "J1.19",
+        "at": [
+          191.29899999999998,
+          109.6205
+        ],
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "group": "USB"
+      },
+      {
+        "pin": "J1.20",
+        "at": [
+          191.29899999999998,
+          98.3805
+        ],
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "group": "USB"
+      },
+      {
+        "pin": "J1.A1B12",
+        "at": [
+          186.149,
+          107.2005
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "USB"
+      },
+      {
+        "pin": "J1.B1A12",
+        "at": [
+          186.149,
+          100.8005
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "USB"
+      },
+      {
+        "pin": "SW1.3",
+        "at": [
+          148.0,
+          127.35
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "KEY"
+      },
+      {
+        "pin": "SW1.4",
+        "at": [
+          154.2,
+          127.35
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "KEY"
+      },
+      {
+        "pin": "R15.2",
+        "at": [
+          176.5535,
+          104.2
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      },
+      {
+        "pin": "TP1.1",
+        "at": [
+          175.9205,
+          81.501
+        ],
+        "layers": [
+          "B.Cu"
+        ],
+        "group": "DBG"
+      }
+    ],
+    "KEY_NEXT_N": [
+      {
+        "pin": "SW2.1",
+        "at": [
+          156.5,
+          119.35000000000001
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "KEY"
+      },
+      {
+        "pin": "SW2.2",
+        "at": [
+          162.7,
+          119.35000000000001
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "KEY"
+      },
+      {
+        "pin": "R11.2",
+        "at": [
+          181.7465,
+          121.4
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "KEY"
+      },
+      {
+        "pin": "U1.4",
+        "at": [
+          177.651,
+          121.334
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "MCU"
+      }
+    ],
+    "KEY_OK_N": [
+      {
+        "pin": "SW3.1",
+        "at": [
+          148.0,
+          113.75
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "KEY"
+      },
+      {
+        "pin": "SW3.2",
+        "at": [
+          154.2,
+          113.75
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "KEY"
+      },
+      {
+        "pin": "R12.2",
+        "at": [
+          181.7465,
+          119.6
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "KEY"
+      },
+      {
+        "pin": "U1.5",
+        "at": [
+          176.751,
+          120.934
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "MCU"
+      }
+    ],
+    "KEY_PREV_N": [
+      {
+        "pin": "R10.2",
+        "at": [
+          181.7465,
+          123.2
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "KEY"
+      },
+      {
+        "pin": "U1.3",
+        "at": [
+          177.651,
+          122.934
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "MCU"
+      },
+      {
+        "pin": "SW1.1",
+        "at": [
+          148.0,
+          123.65
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "KEY"
+      },
+      {
+        "pin": "SW1.2",
+        "at": [
+          154.2,
+          123.65
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "KEY"
+      }
+    ],
+    "NFC1_TBD": [
+      {
+        "pin": "C24.1",
+        "at": [
+          165.89999999999998,
+          124.0
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "RF"
+      },
+      {
+        "pin": "U1.52",
+        "at": [
+          169.251,
+          123.334
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "MCU"
+      },
+      {
+        "pin": "U1.54",
+        "at": [
+          169.251,
+          124.134
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "MCU"
+      },
+      {
+        "pin": "C23.1",
+        "at": [
+          165.89999999999998,
+          122.0
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "RF"
+      },
+      {
+        "pin": "NFC1.1",
+        "at": [
+          146.3,
+          103.0
+        ],
+        "layers": [
+          "B.Cu"
+        ],
+        "group": "RF"
+      },
+      {
+        "pin": "NFC2.1",
+        "at": [
+          146.3,
+          100.0
+        ],
+        "layers": [
+          "B.Cu"
+        ],
+        "group": "RF"
+      }
+    ],
+    "NRESET": [
+      {
+        "pin": "U1.40",
+        "at": [
+          169.251,
+          117.734
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "MCU"
+      },
+      {
+        "pin": "TP5.1",
+        "at": [
+          186.0805,
+          81.501
+        ],
+        "layers": [
+          "B.Cu"
+        ],
+        "group": "DBG"
+      }
+    ],
+    "SWDCLK": [
+      {
+        "pin": "U1.53",
+        "at": [
+          168.351,
+          123.734
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "MCU"
+      },
+      {
+        "pin": "TP3.1",
+        "at": [
+          181.0005,
+          81.501
+        ],
+        "layers": [
+          "B.Cu"
+        ],
+        "group": "DBG"
+      }
+    ],
+    "SWDIO": [
+      {
+        "pin": "U1.51",
+        "at": [
+          168.351,
+          122.934
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "MCU"
+      },
+      {
+        "pin": "TP4.1",
+        "at": [
+          183.5405,
+          81.501
+        ],
+        "layers": [
+          "B.Cu"
+        ],
+        "group": "DBG"
+      }
+    ],
+    "SYS": [
+      {
+        "pin": "C2.1",
+        "at": [
+          162.0,
+          107.3
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "CHG"
+      },
+      {
+        "pin": "U2.1",
+        "at": [
+          159.8,
+          107.55
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "CHG"
+      },
+      {
+        "pin": "C4.1",
+        "at": [
+          178.8,
+          111.1
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "LDO"
+      },
+      {
+        "pin": "U3.1",
+        "at": [
+          177.29999999999998,
+          111.05
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "LDO"
+      },
+      {
+        "pin": "U3.3",
+        "at": [
+          177.29999999999998,
+          109.14999999999999
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "LDO"
+      }
+    ],
+    "USB_CC1": [
+      {
+        "pin": "R1.1",
+        "at": [
+          183.7535,
+          107.8
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "USB"
+      },
+      {
+        "pin": "U6.1",
+        "at": [
+          181.0,
+          108.14999999999999
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "USB"
+      },
+      {
+        "pin": "J1.A5",
+        "at": [
+          186.149,
+          105.2505
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "USB"
+      }
+    ],
+    "USB_CC2": [
+      {
+        "pin": "R2.1",
+        "at": [
+          183.7535,
+          109.4
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "USB"
+      },
+      {
+        "pin": "U6.2",
+        "at": [
+          181.0,
+          107.45
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "USB"
+      },
+      {
+        "pin": "J1.B5",
+        "at": [
+          186.149,
+          102.2505
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "USB"
+      }
+    ],
+    "USB_DM_CONN": [
+      {
+        "pin": "U5.2",
+        "at": [
+          180.0,
+          104.14999999999999
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "USB"
+      },
+      {
+        "pin": "J1.A7",
+        "at": [
+          186.149,
+          103.7505
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "USB"
+      },
+      {
+        "pin": "J1.B7",
+        "at": [
+          186.149,
+          104.7505
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "USB"
+      },
+      {
+        "pin": "R4.1",
+        "at": [
+          164.1465,
+          114.6
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "SER"
+      }
+    ],
+    "USB_DM_MCU": [
+      {
+        "pin": "U1.34",
+        "at": [
+          168.351,
+          114.934
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "MCU"
+      },
+      {
+        "pin": "R4.2",
+        "at": [
+          165.6535,
+          114.6
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "SER"
+      }
+    ],
+    "USB_DP_CONN": [
+      {
+        "pin": "R3.1",
+        "at": [
+          164.1465,
+          116.2
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "SER"
+      },
+      {
+        "pin": "U5.1",
+        "at": [
+          180.0,
+          103.45
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "USB"
+      },
+      {
+        "pin": "J1.A6",
+        "at": [
+          186.149,
+          104.2505
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "USB"
+      },
+      {
+        "pin": "J1.B6",
+        "at": [
+          186.149,
+          103.2505
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "USB"
+      }
+    ],
+    "USB_DP_MCU": [
+      {
+        "pin": "R3.2",
+        "at": [
+          165.6535,
+          116.2
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "SER"
+      },
+      {
+        "pin": "U1.35",
+        "at": [
+          168.351,
+          115.734
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "MCU"
+      }
+    ],
+    "USB_VBUS": [
+      {
+        "pin": "U2.10",
+        "at": [
+          159.8,
+          109.64999999999999
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "CHG"
+      },
+      {
+        "pin": "C8.1",
+        "at": [
+          161.6,
+          110.3
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "CHG"
+      },
+      {
+        "pin": "C1.1",
+        "at": [
+          168.8,
+          112.2
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "DEC"
+      },
+      {
+        "pin": "U1.32",
+        "at": [
+          169.001,
+          113.934
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "MCU"
+      },
+      {
+        "pin": "J1.A4B9",
+        "at": [
+          186.149,
+          106.40050000000001
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "USB"
+      },
+      {
+        "pin": "J1.B4A9",
+        "at": [
+          186.149,
+          101.6005
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "USB"
+      }
+    ],
+    "VDD_3V3": [
+      {
+        "pin": "C5.1",
+        "at": [
+          173.5,
+          111.9
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "LDO"
+      },
+      {
+        "pin": "R5.1",
+        "at": [
+          151.0465,
+          108.8
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "CHG"
+      },
+      {
+        "pin": "R9.1",
+        "at": [
+          151.0465,
+          103.8
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "CHG"
+      },
+      {
+        "pin": "U4.1",
+        "at": [
+          180.25,
+          101.05000000000001
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      },
+      {
+        "pin": "R7.1",
+        "at": [
+          158.2465,
+          113.5
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "CHG"
+      },
+      {
+        "pin": "C9.1",
+        "at": [
+          182.0,
+          101.4
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "EPD"
+      },
+      {
+        "pin": "C6.1",
+        "at": [
+          172.0,
+          112.2
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "DEC"
+      },
+      {
+        "pin": "C7.1",
+        "at": [
+          170.6,
+          112.2
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "DEC"
+      },
+      {
+        "pin": "R8.1",
+        "at": [
+          153.0465,
+          106.4
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "CHG"
+      },
+      {
+        "pin": "R10.1",
+        "at": [
+          183.2535,
+          123.2
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "KEY"
+      },
+      {
+        "pin": "R12.1",
+        "at": [
+          183.2535,
+          119.6
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "KEY"
+      },
+      {
+        "pin": "U3.5",
+        "at": [
+          175.1,
+          111.05
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "LDO"
+      },
+      {
+        "pin": "R6.1",
+        "at": [
+          154.2465,
+          111.4
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "CHG"
+      },
+      {
+        "pin": "R11.1",
+        "at": [
+          183.2535,
+          121.4
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "KEY"
+      },
+      {
+        "pin": "U1.28",
+        "at": [
+          171.401,
+          113.934
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "MCU"
+      },
+      {
+        "pin": "U1.30",
+        "at": [
+          170.601,
+          113.934
+        ],
+        "layers": [
+          "F.Cu"
+        ],
+        "group": "MCU"
+      },
+      {
+        "pin": "TP2.1",
+        "at": [
+          178.4605,
+          81.501
+        ],
+        "layers": [
+          "B.Cu"
+        ],
+        "group": "DBG"
+      }
+    ]
+  },
+  "unconnected": [
+    {
+      "id": "A01",
+      "net": "GND",
+      "ends": [
+        {
+          "description": "Pad 1 [GND] of BN on Top Layer",
+          "pos": {
+            "x": 145.5,
+            "y": 111.3005
+          },
+          "uuid": "81610735-aacd-4c76-995d-4c3629de1bf7"
+        },
+        {
+          "description": "Zone [GND] on Top Layer, priority 499",
+          "pos": {
+            "x": 147.0075,
+            "y": 128.59
+          },
+          "uuid": "95bc0dc0-91c3-4eff-96c3-85420b2c6a03"
+        }
+      ]
+    },
+    {
+      "id": "A02",
+      "net": "GND",
+      "ends": [
+        {
+          "description": "Pad 5 [GND] of U2 on Top Layer",
+          "pos": {
+            "x": 158.2,
+            "y": 107.55
+          },
+          "uuid": "844ad891-d60a-48ef-a124-ea2a0dcd4271"
+        },
+        {
+          "description": "Zone [GND] on Top Layer, priority 499",
+          "pos": {
+            "x": 147.0075,
+            "y": 128.59
+          },
+          "uuid": "95bc0dc0-91c3-4eff-96c3-85420b2c6a03"
+        }
+      ]
+    },
+    {
+      "id": "A03",
+      "net": "GND",
+      "ends": [
+        {
+          "description": "Zone [GND] on Top Layer, priority 499",
+          "pos": {
+            "x": 147.0075,
+            "y": 128.59
+          },
+          "uuid": "95bc0dc0-91c3-4eff-96c3-85420b2c6a03"
+        },
+        {
+          "description": "Zone [GND] on Top Layer, priority 499",
+          "pos": {
+            "x": 147.0075,
+            "y": 128.59
+          },
+          "uuid": "95bc0dc0-91c3-4eff-96c3-85420b2c6a03"
+        }
+      ]
+    },
+    {
+      "id": "A04",
+      "net": "GND",
+      "ends": [
+        {
+          "description": "Zone [GND] on Top Layer, priority 499",
+          "pos": {
+            "x": 147.0075,
+            "y": 128.59
+          },
+          "uuid": "95bc0dc0-91c3-4eff-96c3-85420b2c6a03"
+        },
+        {
+          "description": "Pad 2 [GND] of U4 on Top Layer",
+          "pos": {
+            "x": 180.25,
+            "y": 100.4
+          },
+          "uuid": "2a3da7b1-3920-4c9b-bdf7-a108b62ece50"
+        }
+      ]
+    },
+    {
+      "id": "A05",
+      "net": "GND",
+      "ends": [
+        {
+          "description": "Zone [GND] on Top Layer, priority 499",
+          "pos": {
+            "x": 147.0075,
+            "y": 128.59
+          },
+          "uuid": "95bc0dc0-91c3-4eff-96c3-85420b2c6a03"
+        },
+        {
+          "description": "Zone [GND] on Top Layer, priority 499",
+          "pos": {
+            "x": 147.0075,
+            "y": 128.59
+          },
+          "uuid": "95bc0dc0-91c3-4eff-96c3-85420b2c6a03"
+        }
+      ]
+    },
+    {
+      "id": "A06",
+      "net": "BAT_ADC_SENSE",
+      "ends": [
+        {
+          "description": "Track [BAT_ADC_SENSE] on Top Layer, length 0.9510 mm",
+          "pos": {
+            "x": 176.751,
+            "y": 118.534
+          },
+          "uuid": "817fd618-4629-40f1-a4d9-a4be4f709c2f"
+        },
+        {
+          "description": "Pad 2 [BAT_ADC_SENSE] of C25 on Top Layer",
+          "pos": {
+            "x": 182.4,
+            "y": 116.1
+          },
+          "uuid": "0b7e34b0-eb96-47d7-873d-e4c0752560f5"
+        }
+      ]
+    },
+    {
+      "id": "A07",
+      "net": "BAT_ADC_SENSE",
+      "ends": [
+        {
+          "description": "Pad 2 [BAT_ADC_SENSE] of C25 on Top Layer",
+          "pos": {
+            "x": 182.4,
+            "y": 116.1
+          },
+          "uuid": "0b7e34b0-eb96-47d7-873d-e4c0752560f5"
+        },
+        {
+          "description": "Pad 1 [BAT_ADC_SENSE] of R20 on Top Layer",
+          "pos": {
+            "x": 184.1,
+            "y": 115.1465
+          },
+          "uuid": "b578474e-288f-4322-8a83-72f4a662b34d"
+        }
+      ]
+    },
+    {
+      "id": "A08",
+      "net": "BAT_ADC_SENSE",
+      "ends": [
+        {
+          "description": "Pad 1 [BAT_ADC_SENSE] of R20 on Top Layer",
+          "pos": {
+            "x": 184.1,
+            "y": 115.1465
+          },
+          "uuid": "b578474e-288f-4322-8a83-72f4a662b34d"
+        },
+        {
+          "description": "Pad 2 [BAT_ADC_SENSE] of R21 on Top Layer",
+          "pos": {
+            "x": 184.1,
+            "y": 113.6535
+          },
+          "uuid": "e0d2a0bc-4662-4047-8e6e-2ddf0d4a338f"
+        }
+      ]
+    },
+    {
+      "id": "A09",
+      "net": "BAT_DIV_SUPPLY",
+      "ends": [
+        {
+          "description": "Pad 2 [BAT_DIV_SUPPLY] of R20 on Top Layer",
+          "pos": {
+            "x": 184.1,
+            "y": 116.6535
+          },
+          "uuid": "ca3301e1-794d-4c64-b7fb-d9408db9a475"
+        },
+        {
+          "description": "Pad 3 [BAT_DIV_SUPPLY] of Q2 on Top Layer",
+          "pos": {
+            "x": 188.0,
+            "y": 117.25
+          },
+          "uuid": "cfaf866f-eedf-4a05-89d0-fc9887b51e43"
+        }
+      ]
+    },
+    {
+      "id": "A10",
+      "net": "CHG_SDA",
+      "ends": [
+        {
+          "description": "Track [CHG_SDA] on Top Layer, length 11.0500 mm",
+          "pos": {
+            "x": 165.0,
+            "y": 105.5
+          },
+          "uuid": "8f368de3-2d6d-4ecd-b958-0eeae9dbb4ca"
+        },
+        {
+          "description": "Pad 7 [CHG_SDA] of U2 on Top Layer",
+          "pos": {
+            "x": 158.6,
+            "y": 109.65
+          },
+          "uuid": "4d59d7c4-daf1-44bf-a1dd-04634a70f591"
+        }
+      ]
+    },
+    {
+      "id": "A11",
+      "net": "CHG_SDA",
+      "ends": [
+        {
+          "description": "Pad 19 [CHG_SDA] of U1 on Top Layer",
+          "pos": {
+            "x": 175.001,
+            "y": 114.834
+          },
+          "uuid": "7f2ec018-4d5a-4007-902b-6690a21c953c"
+        },
+        {
+          "description": "Via [CHG_SDA] on Top Layer - Bottom Layer",
+          "pos": {
+            "x": 178.2,
+            "y": 107.65
+          },
+          "uuid": "c024288e-0c8a-4d39-9c2f-4043a6e80e53"
+        }
+      ]
+    },
+    {
+      "id": "A12",
+      "net": "CHG_PG_N",
+      "ends": [
+        {
+          "description": "Track [CHG_PG_N] on Top Layer, length 9.1300 mm",
+          "pos": {
+            "x": 165.0,
+            "y": 106.58
+          },
+          "uuid": "617b044e-8370-419f-96a1-32c32a97a684"
+        },
+        {
+          "description": "Track [CHG_PG_N] on Top Layer, length 0.8500 mm",
+          "pos": {
+            "x": 159.0,
+            "y": 107.55
+          },
+          "uuid": "22f7518b-464d-4759-be3c-a8aea19848bc"
+        }
+      ]
+    },
+    {
+      "id": "A13",
+      "net": "CHG_PG_N",
+      "ends": [
+        {
+          "description": "Track [CHG_PG_N] on Top Layer, length 1.5650 mm",
+          "pos": {
+            "x": 174.201,
+            "y": 114.834
+          },
+          "uuid": "b593af87-8be4-4fc6-9811-4cb1a3f9472a"
+        },
+        {
+          "description": "Via [CHG_PG_N] on Top Layer - Bottom Layer",
+          "pos": {
+            "x": 175.2,
+            "y": 107.65
+          },
+          "uuid": "c641ca14-0605-4e5f-b538-6c2c938d3243"
+        }
+      ]
+    },
+    {
+      "id": "A14",
+      "net": "CHG_CE_N",
+      "ends": [
+        {
+          "description": "Track [CHG_CE_N] on Top Layer, length 8.0000 mm",
+          "pos": {
+            "x": 165.0,
+            "y": 106.94
+          },
+          "uuid": "ecbd3e47-b321-445f-b5f6-444c5de61f7a"
+        },
+        {
+          "description": "Track [CHG_CE_N] on Bottom Layer, length 2.8465 mm",
+          "pos": {
+            "x": 160.9535,
+            "y": 110.3535
+          },
+          "uuid": "3278dd0e-1e2a-4963-a18f-030f83bd1b17"
+        }
+      ]
+    },
+    {
+      "id": "A15",
+      "net": "CHG_CE_N",
+      "ends": [
+        {
+          "description": "Track [CHG_CE_N] on Top Layer, length 0.4900 mm",
+          "pos": {
+            "x": 173.71,
+            "y": 107.65
+          },
+          "uuid": "569140a5-3299-4d2f-bfde-277fd9d095a1"
+        },
+        {
+          "description": "Track [CHG_CE_N] on Top Layer, length 0.7350 mm",
+          "pos": {
+            "x": 174.1,
+            "y": 113.635
+          },
+          "uuid": "b8e3e1b6-00c0-4e7d-9b67-4656244e52ed"
+        }
+      ]
+    },
+    {
+      "id": "A16",
+      "net": "BAT_NTC_TBD",
+      "ends": [
+        {
+          "description": "Pad 1 [BAT_NTC_TBD] of NTC on Top Layer",
+          "pos": {
+            "x": 155.0,
+            "y": 104.0
+          },
+          "uuid": "c276592e-5fa4-42c1-ad36-8938f4865750"
+        },
+        {
+          "description": "Pad 1 [BAT_NTC_TBD] of R19 on Top Layer",
+          "pos": {
+            "x": 156.9535,
+            "y": 109.8
+          },
+          "uuid": "ccdc8f82-902f-40be-9527-8fb80d993f7c"
+        }
+      ]
+    },
+    {
+      "id": "A17",
+      "net": "BAT_NTC_TBD",
+      "ends": [
+        {
+          "description": "Pad 1 [BAT_NTC_TBD] of R19 on Top Layer",
+          "pos": {
+            "x": 156.9535,
+            "y": 109.8
+          },
+          "uuid": "ccdc8f82-902f-40be-9527-8fb80d993f7c"
+        },
+        {
+          "description": "Track [BAT_NTC_TBD] on Top Layer, length 0.9899 mm",
+          "pos": {
+            "x": 158.2,
+            "y": 109.65
+          },
+          "uuid": "a65a0ccb-4bd4-40dd-843d-9688b024240f"
+        }
+      ]
+    },
+    {
+      "id": "A18",
+      "net": "CHG_SCL",
+      "ends": [
+        {
+          "description": "Track [CHG_SCL] on Top Layer, length 9.7700 mm",
+          "pos": {
+            "x": 165.0,
+            "y": 106.22
+          },
+          "uuid": "5ef634a7-2ca2-43c4-905c-7ab4eba0ccbf"
+        },
+        {
+          "description": "Track [CHG_SCL] on Top Layer, length 1.2500 mm",
+          "pos": {
+            "x": 159.0,
+            "y": 109.65
+          },
+          "uuid": "65ff97f0-ac14-448a-9af8-e308130b0156"
+        }
+      ]
+    },
+    {
+      "id": "A19",
+      "net": "CHG_SCL",
+      "ends": [
+        {
+          "description": "Track [CHG_SCL] on Top Layer, length 0.9830 mm",
+          "pos": {
+            "x": 177.0,
+            "y": 113.933
+          },
+          "uuid": "a74297d1-b8fa-4b6b-8a49-12e5fe9a9389"
+        },
+        {
+          "description": "Track [CHG_SCL] on Top Layer, length 2.0223 mm",
+          "pos": {
+            "x": 174.77,
+            "y": 106.22
+          },
+          "uuid": "8b10cf09-2701-4671-bf1c-a8aa5becfcaf"
+        }
+      ]
+    },
+    {
+      "id": "A20",
+      "net": "CHG_INT_N",
+      "ends": [
+        {
+          "description": "Track [CHG_INT_N] on Top Layer, length 10.4100 mm",
+          "pos": {
+            "x": 165.0,
+            "y": 105.86
+          },
+          "uuid": "0a6324d6-f45f-47ee-a17e-fb6671456b22"
+        },
+        {
+          "description": "Track [CHG_INT_N] on Top Layer, length 0.3500 mm",
+          "pos": {
+            "x": 159.4,
+            "y": 109.65
+          },
+          "uuid": "b147ca85-1144-425b-9a51-0cd3834067fb"
+        }
+      ]
+    },
+    {
+      "id": "A21",
+      "net": "CHG_INT_N",
+      "ends": [
+        {
+          "description": "Track [CHG_INT_N] on Top Layer, length 1.1300 mm",
+          "pos": {
+            "x": 174.601,
+            "y": 113.499
+          },
+          "uuid": "4da1f62e-19d2-41f9-83a2-fc0ca6726a3a"
+        },
+        {
+          "description": "Track [CHG_INT_N] on Top Layer, length 2.5314 mm",
+          "pos": {
+            "x": 175.41,
+            "y": 105.86
+          },
+          "uuid": "02ec7307-78bc-4dc4-b83b-984fa95bd8f1"
+        }
+      ]
+    },
+    {
+      "id": "A22",
+      "net": "EPD_EN_TBD",
+      "ends": [
+        {
+          "description": "Track [EPD_EN_TBD] on Top Layer, length 0.0014 mm",
+          "pos": {
+            "x": 171.801,
+            "y": 114.834
+          },
+          "uuid": "52b03220-b82b-497d-bce1-5461c446489f"
+        },
+        {
+          "description": "Track [EPD_EN_TBD] on Top Layer, length 0.7778 mm",
+          "pos": {
+            "x": 180.25,
+            "y": 99.75
+          },
+          "uuid": "b6740fdf-9200-457c-8fc9-5982ebcca7bf"
+        }
+      ]
+    },
+    {
+      "id": "A23",
+      "net": "EPD_EN_TBD",
+      "ends": [
+        {
+          "description": "Pad 1 [EPD_EN_TBD] of R13 on Top Layer",
+          "pos": {
+            "x": 179.2465,
+            "y": 97.0
+          },
+          "uuid": "4dbb6d1e-0c6b-4110-9d9a-0b1f8e23e7b7"
+        },
+        {
+          "description": "Track [EPD_EN_TBD] on Top Layer, length 0.7000 mm",
+          "pos": {
+            "x": 179.7,
+            "y": 99.2
+          },
+          "uuid": "31ad14c8-7273-45c0-9248-16785662a108"
+        }
+      ]
+    },
+    {
+      "id": "A24",
+      "net": "EPD_VDD",
+      "ends": [
+        {
+          "description": "Pad 15 [EPD_VDD] of J2 on Top Layer",
+          "pos": {
+            "x": 166.325,
+            "y": 94.49
+          },
+          "uuid": "67503289-3e75-4c0b-a860-4ed654976e03"
+        },
+        {
+          "description": "Track [EPD_VDD] on Top Layer, length 2.1720 mm",
+          "pos": {
+            "x": 176.3,
+            "y": 100.5
+          },
+          "uuid": "2b668437-2bc1-42a9-8a3e-0587c9c11137"
+        }
+      ]
+    },
+    {
+      "id": "A25",
+      "net": "EPD_VDD",
+      "ends": [
+        {
+          "description": "Pad 1 [EPD_VDD] of R18 on Top Layer",
+          "pos": {
+            "x": 169.1465,
+            "y": 91.9
+          },
+          "uuid": "08177f5f-c468-4bf7-9a2f-fda1158b3c6b"
+        },
+        {
+          "description": "Pad 15 [EPD_VDD] of J2 on Top Layer",
+          "pos": {
+            "x": 166.325,
+            "y": 94.49
+          },
+          "uuid": "67503289-3e75-4c0b-a860-4ed654976e03"
+        }
+      ]
+    },
+    {
+      "id": "A26",
+      "net": "USB_CC1",
+      "ends": [
+        {
+          "description": "Pad 1 [USB_CC1] of U6 on Top Layer",
+          "pos": {
+            "x": 181.0,
+            "y": 108.15
+          },
+          "uuid": "0784be24-5610-4014-bed0-748cbeef60ff"
+        },
+        {
+          "description": "Pad 1 [USB_CC1] of R1 on Top Layer",
+          "pos": {
+            "x": 183.7535,
+            "y": 107.8
+          },
+          "uuid": "09cf4efc-7987-44e8-aff9-f6512500e309"
+        }
+      ]
+    },
+    {
+      "id": "A27",
+      "net": "USB_CC1",
+      "ends": [
+        {
+          "description": "Track [USB_CC1] on Top Layer, length 0.2828 mm",
+          "pos": {
+            "x": 185.2,
+            "y": 105.2505
+          },
+          "uuid": "7025a054-a1c6-4ac4-9852-1480de5b11bf"
+        },
+        {
+          "description": "Pad 1 [USB_CC1] of R1 on Top Layer",
+          "pos": {
+            "x": 183.7535,
+            "y": 107.8
+          },
+          "uuid": "09cf4efc-7987-44e8-aff9-f6512500e309"
+        }
+      ]
+    },
+    {
+      "id": "A28",
+      "net": "BAT_SWITCH_GATE",
+      "ends": [
+        {
+          "description": "Pad 2 [BAT_SWITCH_GATE] of R22 on Top Layer",
+          "pos": {
+            "x": 186.3,
+            "y": 119.0465
+          },
+          "uuid": "095d4633-555f-4756-9e76-730eda2a3ef5"
+        },
+        {
+          "description": "Pad 1 [BAT_SWITCH_GATE] of Q2 on Top Layer",
+          "pos": {
+            "x": 188.95,
+            "y": 114.95
+          },
+          "uuid": "8b66a3ae-050b-48e7-a049-0af0a25f216c"
+        }
+      ]
+    },
+    {
+      "id": "A29",
+      "net": "BAT_SWITCH_GATE",
+      "ends": [
+        {
+          "description": "Pad 1 [BAT_SWITCH_GATE] of Q2 on Top Layer",
+          "pos": {
+            "x": 188.95,
+            "y": 114.95
+          },
+          "uuid": "8b66a3ae-050b-48e7-a049-0af0a25f216c"
+        },
+        {
+          "description": "Pad 3 [BAT_SWITCH_GATE] of Q3 on Top Layer",
+          "pos": {
+            "x": 190.0,
+            "y": 113.3
+          },
+          "uuid": "9d8b3e08-a5db-4132-b759-306669af1b98"
+        }
+      ]
+    },
+    {
+      "id": "A30",
+      "net": "EPD_VGL",
+      "ends": [
+        {
+          "description": "Track [EPD_VGL] on Top Layer, length 0.7000 mm",
+          "pos": {
+            "x": 181.7,
+            "y": 91.0
+          },
+          "uuid": "b2444588-1c63-4d69-80af-96589e29d758"
+        },
+        {
+          "description": "Track [EPD_VGL] on Top Layer, length 0.7000 mm",
+          "pos": {
+            "x": 165.625,
+            "y": 90.49
+          },
+          "uuid": "98c547bc-da15-4770-99d9-76c4a46a3361"
+        }
+      ]
+    },
+    {
+      "id": "A31",
+      "net": "EPD_VPH",
+      "ends": [
+        {
+          "description": "Pad 1 [EPD_VPH] of R16 on Top Layer",
+          "pos": {
+            "x": 174.7465,
+            "y": 89.9
+          },
+          "uuid": "e062b0f5-f703-4c18-a9a2-f16d92cab0db"
+        },
+        {
+          "description": "Track [EPD_VPH] on Top Layer, length 0.9000 mm",
+          "pos": {
+            "x": 173.0,
+            "y": 93.1
+          },
+          "uuid": "9387d82a-09a3-4529-8c26-09c4ce0eec37"
+        }
+      ]
+    },
+    {
+      "id": "A32",
+      "net": "EPD_VGH",
+      "ends": [
+        {
+          "description": "Pad 21 [EPD_VGH] of J2 on Top Layer",
+          "pos": {
+            "x": 166.325,
+            "y": 91.49
+          },
+          "uuid": "e59edf6d-0e10-4ed0-9661-c09fd4316d52"
+        },
+        {
+          "description": "Pad 2 [EPD_VGH] of R16 on Top Layer",
+          "pos": {
+            "x": 176.2535,
+            "y": 89.9
+          },
+          "uuid": "eb0be0d3-52da-47b8-ada5-344db07a44a7"
+        }
+      ]
+    },
+    {
+      "id": "A33",
+      "net": "KEY_OK_N",
+      "ends": [
+        {
+          "description": "Track [KEY_OK_N] on Top Layer, length 0.7071 mm",
+          "pos": {
+            "x": 154.7,
+            "y": 114.25
+          },
+          "uuid": "443da266-fcbf-4d11-9f62-371d6fba2814"
+        },
+        {
+          "description": "Pad 1 [KEY_OK_N] of SW3 on Top Layer",
+          "pos": {
+            "x": 148.0,
+            "y": 113.75
+          },
+          "uuid": "3c6a6427-0b5c-4f27-9b40-6f4b87e81646"
+        }
+      ]
+    },
+    {
+      "id": "A34",
+      "net": "KEY_OK_N",
+      "ends": [
+        {
+          "description": "Track [KEY_OK_N] on Top Layer, length 0.4243 mm",
+          "pos": {
+            "x": 170.5,
+            "y": 121.4
+          },
+          "uuid": "cde814c5-ffba-403b-a914-3e6bb649f946"
+        },
+        {
+          "description": "Via [KEY_OK_N] on Top Layer - Bottom Layer",
+          "pos": {
+            "x": 164.5,
+            "y": 117.7
+          },
+          "uuid": "1083bb32-9bc0-4663-bf2e-4965eeaedbd3"
+        }
+      ]
+    },
+    {
+      "id": "A35",
+      "net": "KEY_OK_N",
+      "ends": [
+        {
+          "description": "Track [KEY_OK_N] on Top Layer, length 0.6590 mm",
+          "pos": {
+            "x": 176.751,
+            "y": 120.934
+          },
+          "uuid": "aeb0375a-3bf4-4f63-a494-904527a8fbe6"
+        },
+        {
+          "description": "Pad 2 [KEY_OK_N] of R12 on Top Layer",
+          "pos": {
+            "x": 181.7465,
+            "y": 119.6
+          },
+          "uuid": "818ec451-77be-41db-b159-a0909d50075b"
+        }
+      ]
+    },
+    {
+      "id": "A36",
+      "net": "USB_CC2",
+      "ends": [
+        {
+          "description": "Pad 2 [USB_CC2] of U6 on Top Layer",
+          "pos": {
+            "x": 181.0,
+            "y": 107.45
+          },
+          "uuid": "ec0e6ec3-e6a6-48d7-9cbd-d46b240cc830"
+        },
+        {
+          "description": "Pad 1 [USB_CC2] of R2 on Top Layer",
+          "pos": {
+            "x": 183.7535,
+            "y": 109.4
+          },
+          "uuid": "c3e69676-dd63-4642-ac47-fa6a00a02018"
+        }
+      ]
+    },
+    {
+      "id": "A37",
+      "net": "USB_CC2",
+      "ends": [
+        {
+          "description": "Track [USB_CC2] on Top Layer, length 1.1490 mm",
+          "pos": {
+            "x": 186.149,
+            "y": 102.2505
+          },
+          "uuid": "8b893d1b-6d66-4689-9c0d-96e6c53acf84"
+        },
+        {
+          "description": "Pad 2 [USB_CC2] of U6 on Top Layer",
+          "pos": {
+            "x": 181.0,
+            "y": 107.45
+          },
+          "uuid": "ec0e6ec3-e6a6-48d7-9cbd-d46b240cc830"
+        }
+      ]
+    },
+    {
+      "id": "A38",
+      "net": "EPD_BS0",
+      "ends": [
+        {
+          "description": "Pad 1 [EPD_BS0] of R17 on Top Layer",
+          "pos": {
+            "x": 153.4465,
+            "y": 100.8
+          },
+          "uuid": "444f6341-7255-46af-892f-b43001f11072"
+        },
+        {
+          "description": "Pad 8 [EPD_BS0] of J2 on Top Layer",
+          "pos": {
+            "x": 166.325,
+            "y": 97.99
+          },
+          "uuid": "852d8507-5f08-486a-a8bf-1032929189c2"
+        }
+      ]
+    },
+    {
+      "id": "A39",
+      "net": "EPD_BUSY_TBD",
+      "ends": [
+        {
+          "description": "Track [EPD_BUSY_TBD] on Top Layer, length 1.4000 mm",
+          "pos": {
+            "x": 167.8,
+            "y": 98.3
+          },
+          "uuid": "0341ef2c-cf55-4b05-bd15-0e7615ce83e3"
+        },
+        {
+          "description": "Pad 2 [EPD_BUSY_TBD] of R18 on Top Layer",
+          "pos": {
+            "x": 170.6535,
+            "y": 91.9
+          },
+          "uuid": "9f0c46e7-ed8d-4411-a2b3-97d131a60706"
+        }
+      ]
+    },
+    {
+      "id": "A40",
+      "net": "EPD_RESE",
+      "ends": [
+        {
+          "description": "Pad 3 [EPD_RESE] of J2 on Top Layer",
+          "pos": {
+            "x": 166.325,
+            "y": 100.49
+          },
+          "uuid": "25f3d91b-30e8-4474-bdbe-9a7fc21a0cdf"
+        },
+        {
+          "description": "Track [EPD_RESE] on Top Layer, length 0.5965 mm",
+          "pos": {
+            "x": 173.6,
+            "y": 103.35
+          },
+          "uuid": "26833134-4307-4057-a5a7-2e76249166d7"
+        }
+      ]
+    },
+    {
+      "id": "A41",
+      "net": "KEY_PREV_N",
+      "ends": [
+        {
+          "description": "Pad 1 [KEY_PREV_N] of SW1 on Top Layer",
+          "pos": {
+            "x": 148.0,
+            "y": 123.65
+          },
+          "uuid": "0a581f5e-f400-460e-966c-91669decfe34"
+        },
+        {
+          "description": "Track [KEY_PREV_N] on Top Layer, length 0.2000 mm",
+          "pos": {
+            "x": 154.2,
+            "y": 123.45
+          },
+          "uuid": "6ae0c247-273d-4d5f-b386-0537a139106f"
+        }
+      ]
+    },
+    {
+      "id": "A42",
+      "net": "KEY_PREV_N",
+      "ends": [
+        {
+          "description": "Track [KEY_PREV_N] on Top Layer, length 0.1500 mm",
+          "pos": {
+            "x": 162.5,
+            "y": 117.7
+          },
+          "uuid": "40c692ae-f687-463b-8f11-519cd72d645f"
+        },
+        {
+          "description": "Track [KEY_PREV_N] on Top Layer, length 6.0850 mm",
+          "pos": {
+            "x": 177.485,
+            "y": 123.1
+          },
+          "uuid": "73598fd6-33fe-4f1e-a61d-73cc628b8515"
+        }
+      ]
+    },
+    {
+      "id": "A43",
+      "net": "KEY_PREV_N",
+      "ends": [
+        {
+          "description": "Pad 2 [KEY_PREV_N] of R10 on Top Layer",
+          "pos": {
+            "x": 181.7465,
+            "y": 123.2
+          },
+          "uuid": "a2953788-3dec-45e8-9ee3-2a20302adb0b"
+        },
+        {
+          "description": "Track [KEY_PREV_N] on Top Layer, length 0.2348 mm",
+          "pos": {
+            "x": 177.651,
+            "y": 122.934
+          },
+          "uuid": "71d2e201-38f4-4c71-9a5e-83cea810dec6"
+        }
+      ]
+    },
+    {
+      "id": "A44",
+      "net": "KEY_NEXT_N",
+      "ends": [
+        {
+          "description": "Pad 1 [KEY_NEXT_N] of SW2 on Top Layer",
+          "pos": {
+            "x": 156.5,
+            "y": 119.35
+          },
+          "uuid": "eb15a0e2-e4d4-4d4c-bf08-438a2339cdd2"
+        },
+        {
+          "description": "Track [KEY_NEXT_N] on Top Layer, length 0.8500 mm",
+          "pos": {
+            "x": 162.7,
+            "y": 118.5
+          },
+          "uuid": "5afc257a-5382-4d8c-99ea-2cdd687b0b3a"
+        }
+      ]
+    },
+    {
+      "id": "A45",
+      "net": "KEY_NEXT_N",
+      "ends": [
+        {
+          "description": "Track [KEY_NEXT_N] on Top Layer, length 5.5850 mm",
+          "pos": {
+            "x": 176.985,
+            "y": 122.0
+          },
+          "uuid": "b1ef863a-bd05-441f-b380-f0782fda4e88"
+        },
+        {
+          "description": "Track [KEY_NEXT_N] on Top Layer, length 1.1314 mm",
+          "pos": {
+            "x": 163.5,
+            "y": 117.7
+          },
+          "uuid": "0d6a7af7-9226-4a3e-bfea-0c7eae652eb7"
+        }
+      ]
+    },
+    {
+      "id": "A46",
+      "net": "KEY_NEXT_N",
+      "ends": [
+        {
+          "description": "Track [KEY_NEXT_N] on Top Layer, length 0.9419 mm",
+          "pos": {
+            "x": 177.651,
+            "y": 121.334
+          },
+          "uuid": "4c2c78fa-0e72-41c3-b5df-757e549a587e"
+        },
+        {
+          "description": "Pad 2 [KEY_NEXT_N] of R11 on Top Layer",
+          "pos": {
+            "x": 181.7465,
+            "y": 121.4
+          },
+          "uuid": "f18f0bee-c07e-4d4a-b1c4-1ceb78d930d2"
+        }
+      ]
+    },
+    {
+      "id": "A47",
+      "net": "BAT_MEAS_EN",
+      "ends": [
+        {
+          "description": "Pad 1 [BAT_MEAS_EN] of R23 on Top Layer",
+          "pos": {
+            "x": 186.3,
+            "y": 112.6535
+          },
+          "uuid": "76cf6349-fa98-4014-9367-c1508af6090d"
+        },
+        {
+          "description": "Pad 10 [BAT_MEAS_EN] of U1 on Top Layer",
+          "pos": {
+            "x": 177.651,
+            "y": 118.934
+          },
+          "uuid": "b1c83d65-618d-4d1f-b998-8fcf2f26e7ac"
+        }
+      ]
+    },
+    {
+      "id": "A48",
+      "net": "BAT_MEAS_EN",
+      "ends": [
+        {
+          "description": "Pad 1 [BAT_MEAS_EN] of Q3 on Top Layer",
+          "pos": {
+            "x": 190.65,
+            "y": 111.7
+          },
+          "uuid": "b191e054-2058-464a-ae8f-0db5f017464c"
+        },
+        {
+          "description": "Pad 1 [BAT_MEAS_EN] of R23 on Top Layer",
+          "pos": {
+            "x": 186.3,
+            "y": 112.6535
+          },
+          "uuid": "76cf6349-fa98-4014-9367-c1508af6090d"
+        }
+      ]
+    },
+    {
+      "id": "A49",
+      "net": "USB_DP_CONN",
+      "ends": [
+        {
+          "description": "Track [USB_DP_CONN] on Top Layer, length 0.6500 mm",
+          "pos": {
+            "x": 179.55,
+            "y": 103.0
+          },
+          "uuid": "ee75da6d-19a1-4299-a796-ac5860921f7e"
+        },
+        {
+          "description": "Pad 1 [USB_DP_CONN] of R3 on Top Layer",
+          "pos": {
+            "x": 164.1465,
+            "y": 116.2
+          },
+          "uuid": "436ecdcd-eb4b-4685-b00a-d3f1f5d8dfc8"
+        }
+      ]
+    },
+    {
+      "id": "A50",
+      "net": "USB_DP_CONN",
+      "ends": [
+        {
+          "description": "Track [USB_DP_CONN] on Top Layer, length 1.3000 mm",
+          "pos": {
+            "x": 184.6,
+            "y": 103.0005
+          },
+          "uuid": "67f94d96-f26c-4b9b-a187-78f6ea112f31"
+        },
+        {
+          "description": "Track [USB_DP_CONN] on Top Layer, length 0.6364 mm",
+          "pos": {
+            "x": 180.0,
+            "y": 103.45
+          },
+          "uuid": "098d933f-3931-4d05-b688-8c1a3cfabc40"
+        }
+      ]
+    },
+    {
+      "id": "A51",
+      "net": "USB_DP_CONN",
+      "ends": [
+        {
+          "description": "Track [USB_DP_CONN] on Top Layer, length 2.8490 mm",
+          "pos": {
+            "x": 186.149,
+            "y": 104.2505
+          },
+          "uuid": "c207a979-fc31-4d66-a5c7-47ee660b79a6"
+        },
+        {
+          "description": "Track [USB_DP_CONN] on Top Layer, length 1.2990 mm",
+          "pos": {
+            "x": 186.149,
+            "y": 103.2505
+          },
+          "uuid": "39c5a3a5-844e-4238-8acd-78dcc9bf1194"
+        }
+      ]
+    },
+    {
+      "id": "A52",
+      "net": "EPD_RESET_N_TBD",
+      "ends": [
+        {
+          "description": "Track [EPD_RESET_N_TBD] on Top Layer, length 1.4510 mm",
+          "pos": {
+            "x": 168.351,
+            "y": 118.134
+          },
+          "uuid": "e8eb3843-b3bd-40be-baf4-76cd6d01ff5d"
+        },
+        {
+          "description": "Track [EPD_RESET_N_TBD] on Top Layer, length 0.5000 mm",
+          "pos": {
+            "x": 167.6,
+            "y": 97.5
+          },
+          "uuid": "0d46facf-9c2a-4a0b-8a45-8591afd20b96"
+        }
+      ]
+    },
+    {
+      "id": "A53",
+      "net": "EPD_DC_TBD",
+      "ends": [
+        {
+          "description": "Track [EPD_DC_TBD] on Top Layer, length 1.4510 mm",
+          "pos": {
+            "x": 168.351,
+            "y": 117.334
+          },
+          "uuid": "81bc552e-e81a-4999-8ce5-b8f5c02e8aca"
+        },
+        {
+          "description": "Track [EPD_DC_TBD] on Top Layer, length 0.2970 mm",
+          "pos": {
+            "x": 167.49,
+            "y": 96.49
+          },
+          "uuid": "e01ebf3a-f316-4b91-94e2-fb9801e1e54e"
+        }
+      ]
+    },
+    {
+      "id": "A54",
+      "net": "EPD_CS_N_TBD",
+      "ends": [
+        {
+          "description": "Track [EPD_CS_N_TBD] on Top Layer, length 0.0933 mm",
+          "pos": {
+            "x": 169.251,
+            "y": 116.934
+          },
+          "uuid": "39ca84ea-9e77-4454-86db-788d2084191b"
+        },
+        {
+          "description": "Track [EPD_CS_N_TBD] on Top Layer, length 0.1273 mm",
+          "pos": {
+            "x": 168.01,
+            "y": 95.99
+          },
+          "uuid": "c7392b9c-a701-4a8d-a238-88de2eb0e102"
+        }
+      ]
+    },
+    {
+      "id": "A55",
+      "net": "EPD_SCK_TBD",
+      "ends": [
+        {
+          "description": "Track [EPD_SCK_TBD] on Top Layer, length 1.2850 mm",
+          "pos": {
+            "x": 166.325,
+            "y": 95.49
+          },
+          "uuid": "8af095a3-1d27-46bc-8dfd-e953e3ccf950"
+        },
+        {
+          "description": "Track [EPD_SCK_TBD] on Top Layer, length 1.1490 mm",
+          "pos": {
+            "x": 169.251,
+            "y": 116.134
+          },
+          "uuid": "6d1e4fba-c9f4-4b02-bbdf-ce9f6960fbe7"
+        }
+      ]
+    },
+    {
+      "id": "A56",
+      "net": "EPD_MOSI_TBD",
+      "ends": [
+        {
+          "description": "Track [EPD_MOSI_TBD] on Top Layer, length 1.4510 mm",
+          "pos": {
+            "x": 168.351,
+            "y": 116.534
+          },
+          "uuid": "51aa7498-8ced-45ea-90ee-341b481bf5e2"
+        },
+        {
+          "description": "Track [EPD_MOSI_TBD] on Top Layer, length 1.0850 mm",
+          "pos": {
+            "x": 166.325,
+            "y": 94.99
+          },
+          "uuid": "bcc23b7e-541c-496a-827c-f82b7a5bdcc5"
+        }
+      ]
+    },
+    {
+      "id": "A57",
+      "net": "NRESET",
+      "ends": [
+        {
+          "description": "Pad 1 [NRESET] of TP5 on Bottom Layer",
+          "pos": {
+            "x": 186.0805,
+            "y": 81.501
+          },
+          "uuid": "7f6d487e-2ada-4bc5-8ca7-f9766e910953"
+        },
+        {
+          "description": "Track [NRESET] on Top Layer, length 0.1640 mm",
+          "pos": {
+            "x": 170.284,
+            "y": 117.734
+          },
+          "uuid": "48629644-a476-488b-a419-b48a8e770682"
+        }
+      ]
+    },
+    {
+      "id": "A58",
+      "net": "SWDIO",
+      "ends": [
+        {
+          "description": "Pad 1 [SWDIO] of TP4 on Bottom Layer",
+          "pos": {
+            "x": 183.5405,
+            "y": 81.501
+          },
+          "uuid": "b7817d07-c7d2-4f2e-abbd-4a33ba5c71c0"
+        },
+        {
+          "description": "Track [SWDIO] on Top Layer, length 2.8330 mm",
+          "pos": {
+            "x": 167.2,
+            "y": 121.783
+          },
+          "uuid": "97062963-d124-4b45-a989-e41596ed3f26"
+        }
+      ]
+    },
+    {
+      "id": "A59",
+      "net": "SWDCLK",
+      "ends": [
+        {
+          "description": "Pad 1 [SWDCLK] of TP3 on Bottom Layer",
+          "pos": {
+            "x": 181.0005,
+            "y": 81.501
+          },
+          "uuid": "27db070a-6975-45ed-9cbe-42be08179738"
+        },
+        {
+          "description": "Track [SWDCLK] on Top Layer, length 0.9899 mm",
+          "pos": {
+            "x": 166.6,
+            "y": 119.4
+          },
+          "uuid": "fe223bee-6277-4b44-9402-2eac53c4cd61"
+        }
+      ]
+    },
+    {
+      "id": "A60",
+      "net": "USB_DM_CONN",
+      "ends": [
+        {
+          "description": "Track [USB_DM_CONN] on Top Layer, length 0.6500 mm",
+          "pos": {
+            "x": 179.55,
+            "y": 104.6
+          },
+          "uuid": "81a81b63-7b4a-4749-a5ae-31b83a4e1610"
+        },
+        {
+          "description": "Pad 1 [USB_DM_CONN] of R4 on Top Layer",
+          "pos": {
+            "x": 164.1465,
+            "y": 114.6
+          },
+          "uuid": "031da2cc-bca8-4ac9-876e-0fc0c7ed0615"
+        }
+      ]
+    },
+    {
+      "id": "A61",
+      "net": "USB_DM_CONN",
+      "ends": [
+        {
+          "description": "Track [USB_DM_CONN] on Bottom Layer, length 1.3000 mm",
+          "pos": {
+            "x": 184.3,
+            "y": 103.6005
+          },
+          "uuid": "e94558f3-ae86-428a-abed-f5006748edfd"
+        },
+        {
+          "description": "Track [USB_DM_CONN] on Top Layer, length 0.6364 mm",
+          "pos": {
+            "x": 180.0,
+            "y": 104.15
+          },
+          "uuid": "4fa78244-2b46-41fd-bebc-0a4c77d50eb6"
+        }
+      ]
+    }
+  ],
+  "keepouts": [
+    {
+      "name": "D-3f291e373f46901a",
+      "layers": [
+        "F.Cu"
+      ],
+      "rules": {
+        "tracks": "allowed",
+        "vias": "allowed",
+        "pads": "allowed",
+        "copperpour": "not_allowed",
+        "footprints": "allowed"
+      },
+      "polygon": [
+        [
+          180.249999,
+          104.5
+        ],
+        [
+          180.249999,
+          103.1
+        ],
+        [
+          180.820001,
+          103.1
+        ],
+        [
+          180.820001,
+          104.5
+        ]
+      ]
+    },
+    {
+      "name": "D-06377bb1f0a68afa",
+      "layers": [
+        "F.Cu"
+      ],
+      "rules": {
+        "tracks": "not_allowed",
+        "vias": "not_allowed",
+        "pads": "not_allowed",
+        "copperpour": "not_allowed",
+        "footprints": "allowed"
+      },
+      "polygon": [
+        [
+          173.65,
+          125.04
+        ],
+        [
+          173.65,
+          123.75
+        ],
+        [
+          175.349999,
+          123.75
+        ],
+        [
+          175.349999,
+          125.04
+        ]
+      ]
+    },
+    {
+      "name": "D-1c2979245a7f5d36",
+      "layers": [
+        "F.Cu"
+      ],
+      "rules": {
+        "tracks": "allowed",
+        "vias": "allowed",
+        "pads": "allowed",
+        "copperpour": "not_allowed",
+        "footprints": "allowed"
+      },
+      "polygon": [
+        [
+          185.04938,
+          107.09936
+        ],
+        [
+          185.04938,
+          101.00082
+        ],
+        [
+          192.90052,
+          101.00082
+        ],
+        [
+          192.90052,
+          107.09936
+        ]
+      ]
+    },
+    {
+      "name": "D-d49ece88915402a1",
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "rules": {
+        "tracks": "not_allowed",
+        "vias": "not_allowed",
+        "pads": "not_allowed",
+        "copperpour": "not_allowed",
+        "footprints": "allowed"
+      },
+      "polygon": [
+        [
+          166.499999,
+          130.0
+        ],
+        [
+          166.499999,
+          125.04
+        ],
+        [
+          179.500001,
+          125.04
+        ],
+        [
+          179.500001,
+          130.0
+        ]
+      ]
+    },
+    {
+      "name": "D-b2c0e16ba8b63dcd",
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "rules": {
+        "tracks": "allowed",
+        "vias": "allowed",
+        "pads": "allowed",
+        "copperpour": "not_allowed",
+        "footprints": "allowed"
+      },
+      "polygon": [
+        [
+          110.0,
+          113.000001
+        ],
+        [
+          110.0,
+          78.0
+        ],
+        [
+          149.62,
+          78.0
+        ],
+        [
+          149.62,
+          113.000001
+        ]
+      ]
+    },
+    {
+      "name": "D-9d23f6bb076fa2f0",
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "rules": {
+        "tracks": "allowed",
+        "vias": "allowed",
+        "pads": "allowed",
+        "copperpour": "not_allowed",
+        "footprints": "not_allowed"
+      },
+      "polygon": [
+        [
+          112.999999,
+          111.0
+        ],
+        [
+          112.999999,
+          85.000001
+        ],
+        [
+          145.000001,
+          85.000001
+        ],
+        [
+          145.000001,
+          111.0
+        ]
+      ]
+    }
+  ],
+  "bottlenecks": [
+    [
+      "B1",
+      [
+        163,
+        110.5,
+        178.8,
+        120.2
+      ],
+      "MCU entry: screen / USB / SWD / decoupling / charger control"
+    ],
+    [
+      "B2",
+      [
+        157,
+        103.5,
+        181.5,
+        111.5
+      ],
+      "Crossing: charger control + SYS / VBUS / 3V3 / BAT"
+    ],
+    [
+      "B3",
+      [
+        165,
+        93.5,
+        170.1,
+        100.0
+      ],
+      "J2: six signals, high-voltage outputs and return"
+    ],
+    [
+      "B4",
+      [
+        178.5,
+        100.5,
+        187.5,
+        110.5
+      ],
+      "USB fanout + ESD ground + proposed debug passage"
+    ],
+    [
+      "B5",
+      [
+        163.5,
+        118.4,
+        171.7,
+        125.0
+      ],
+      "SWD / keys / fixed NFC matching"
+    ]
+  ],
+  "options": {
+    "A": {
+      "title": "A / east charger, short local controls",
+      "windows": [
+        [
+          "CHG east",
+          [
+            173.8,
+            104.7,
+            181.8,
+            111.9
+          ]
+        ],
+        [
+          "LDO west of CHG",
+          [
+            168,
+            105,
+            173.4,
+            110.4
+          ]
+        ],
+        [
+          "Full display group",
+          [
+            168,
+            85,
+            182,
+            103.8
+          ]
+        ],
+        [
+          "Key pullups west",
+          [
+            151,
+            109,
+            163,
+            116
+          ]
+        ],
+        [
+          "ADC retained east",
+          [
+            180,
+            112,
+            190.3,
+            124.5
+          ]
+        ]
+      ],
+      "corridors": [
+        [
+          "Screen B",
+          [
+            [
+              166.4,
+              118
+            ],
+            [
+              164.3,
+              109
+            ],
+            [
+              164.3,
+              98
+            ],
+            [
+              168.1,
+              96
+            ]
+          ]
+        ],
+        [
+          "SWD F west",
+          [
+            [
+              167,
+              119
+            ],
+            [
+              153,
+              118
+            ],
+            [
+              153,
+              83
+            ],
+            [
+              183,
+              81.5
+            ]
+          ]
+        ],
+        [
+          "USB B southeast",
+          [
+            [
+              165,
+              115
+            ],
+            [
+              170,
+              118
+            ],
+            [
+              180,
+              118
+            ],
+            [
+              183,
+              104
+            ]
+          ]
+        ],
+        [
+          "Charge local F",
+          [
+            [
+              177,
+              108
+            ],
+            [
+              177,
+              113.9
+            ]
+          ]
+        ],
+        [
+          "BAT + return",
+          [
+            [
+              144,
+              111.3
+            ],
+            [
+              155,
+              110
+            ],
+            [
+              163,
+              110
+            ],
+            [
+              175,
+              107
+            ]
+          ]
+        ]
+      ]
+    },
+    "B": {
+      "title": "B / west power island, east debug corridor",
+      "windows": [
+        [
+          "CHG rotate / west",
+          [
+            151.5,
+            102,
+            162.5,
+            111.5
+          ]
+        ],
+        [
+          "LDO beside CHG",
+          [
+            162.8,
+            105,
+            168,
+            110.5
+          ]
+        ],
+        [
+          "Full display group north",
+          [
+            168,
+            84,
+            180.5,
+            101
+          ]
+        ],
+        [
+          "ESD against J1",
+          [
+            182,
+            101,
+            185.3,
+            110
+          ]
+        ],
+        [
+          "ADC + key pullups east",
+          [
+            180,
+            112,
+            190.3,
+            124.5
+          ]
+        ]
+      ],
+      "corridors": [
+        [
+          "Screen B spine",
+          [
+            [
+              167,
+              118
+            ],
+            [
+              165.5,
+              110
+            ],
+            [
+              165.5,
+              99
+            ],
+            [
+              168.1,
+              96
+            ]
+          ]
+        ],
+        [
+          "Charge F crossing",
+          [
+            [
+              160,
+              107
+            ],
+            [
+              169,
+              108
+            ],
+            [
+              177,
+              113.9
+            ]
+          ]
+        ],
+        [
+          "SWD B east",
+          [
+            [
+              167,
+              119
+            ],
+            [
+              178.5,
+              116
+            ],
+            [
+              180.5,
+              100
+            ],
+            [
+              183,
+              81.5
+            ]
+          ]
+        ],
+        [
+          "USB B southeast",
+          [
+            [
+              165,
+              115
+            ],
+            [
+              169,
+              118
+            ],
+            [
+              179,
+              117
+            ],
+            [
+              184,
+              104
+            ]
+          ]
+        ],
+        [
+          "VBUS + return",
+          [
+            [
+              186,
+              106.4
+            ],
+            [
+              172,
+              104
+            ],
+            [
+              161,
+              104
+            ]
+          ]
+        ]
+      ]
+    }
+  }
+}

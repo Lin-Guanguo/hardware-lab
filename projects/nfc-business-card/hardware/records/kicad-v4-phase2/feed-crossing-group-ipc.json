@@ -1,0 +1,13 @@
+{
+  "plan": "projects/nfc-business-card/hardware/kicad/v4-phase2/feed-crossing-group.json",
+  "board": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "before": {
+    "tracks": 221,
+    "vias": 40
+  },
+  "after": {
+    "tracks": 213,
+    "vias": 40
+  },
+  "created_ids": []
+}

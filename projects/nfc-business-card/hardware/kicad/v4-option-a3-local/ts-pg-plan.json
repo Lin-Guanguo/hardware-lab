@@ -1,0 +1,168 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-option-a3-local/NFC-Card-V4.kicad_pcb",
+  "description": "A3 open one defined TS crossing by relocating three PG segments to a short local layer bridge",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-option-a3/ts-pg-ipc.json",
+  "remove_trial_ids": [
+    "50f98cc2-3177-403d-9dc9-3644567261f5",
+    "ffb749a1-3c11-42f2-abf9-51fed37ddee2",
+    "444a88b5-71b6-437d-b666-492a6af87411"
+  ],
+  "routes": [
+    {
+      "name": "PG north approach to local layer bridge",
+      "net": "CHG_PG_N",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          177,
+          105.5
+        ],
+        [
+          176.2,
+          104.7
+        ],
+        [
+          172.8,
+          104.7
+        ]
+      ]
+    },
+    {
+      "name": "PG local bridge opens TS on bottom",
+      "net": "CHG_PG_N",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          172.8,
+          104.7
+        ],
+        [
+          172.8,
+          106.1
+        ]
+      ]
+    },
+    {
+      "name": "PG original MCU corridor retained",
+      "net": "CHG_PG_N",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          172.8,
+          106.1
+        ],
+        [
+          172.8,
+          114.899
+        ]
+      ]
+    },
+    {
+      "name": "TS through opened PG crossing",
+      "net": "BAT_NTC_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          176.2,
+          109.05
+        ],
+        [
+          175.95,
+          109.3
+        ],
+        [
+          174.5465,
+          109.3
+        ]
+      ],
+      "length_mm": 1.757
+    },
+    {
+      "name": "TS through opened PG crossing",
+      "net": "BAT_NTC_TBD",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          174.5465,
+          109.3
+        ],
+        [
+          174.5465,
+          106.5
+        ],
+        [
+          173.3465,
+          105.3
+        ],
+        [
+          170.6465,
+          105.3
+        ],
+        [
+          170.5465,
+          105.2
+        ]
+      ],
+      "length_mm": 7.338
+    },
+    {
+      "name": "TS through opened PG crossing",
+      "net": "BAT_NTC_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          170.5465,
+          105.2
+        ],
+        [
+          169.7465,
+          104.4
+        ],
+        [
+          169.7465,
+          104.3
+        ]
+      ],
+      "length_mm": 1.231
+    }
+  ],
+  "vias": [
+    {
+      "name": "PG local crossover",
+      "net": "CHG_PG_N",
+      "at": [
+        172.8,
+        104.7
+      ]
+    },
+    {
+      "name": "PG local crossover",
+      "net": "CHG_PG_N",
+      "at": [
+        172.8,
+        106.1
+      ]
+    },
+    {
+      "net": "BAT_NTC_TBD",
+      "at": [
+        174.5465,
+        109.3
+      ]
+    },
+    {
+      "net": "BAT_NTC_TBD",
+      "at": [
+        170.5465,
+        105.19999999999999
+      ]
+    }
+  ],
+  "failures": []
+}

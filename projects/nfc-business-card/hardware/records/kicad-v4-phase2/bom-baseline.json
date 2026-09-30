@@ -1,0 +1,398 @@
+[
+  {
+    "Reference": "C5",
+    "Value": "2.2uF 16V",
+    "MPN": "CL10A225KO8NNNC",
+    "LCSC": "C23630"
+  },
+  {
+    "Reference": "R20",
+    "Value": "1M\u03a9",
+    "MPN": "0603WAF1004T5E",
+    "LCSC": "C22935"
+  },
+  {
+    "Reference": "R5",
+    "Value": "10k 1%",
+    "MPN": "0603WAF1002T5E",
+    "LCSC": "C25804"
+  },
+  {
+    "Reference": "R9",
+    "Value": "10k 1%",
+    "MPN": "0603WAF1002T5E",
+    "LCSC": "C25804"
+  },
+  {
+    "Reference": "C2",
+    "Value": "10uF 10V",
+    "MPN": "CL10A106KP8NNNC",
+    "LCSC": "C19702"
+  },
+  {
+    "Reference": "U2",
+    "Value": "BQ25186DLHR",
+    "MPN": "BQ25186DLHR",
+    "LCSC": "C44639442"
+  },
+  {
+    "Reference": "R21",
+    "Value": "1M\u03a9",
+    "MPN": "0603WAF1004T5E",
+    "LCSC": "C22935"
+  },
+  {
+    "Reference": "C4",
+    "Value": "2.2uF 16V",
+    "MPN": "CL10A225KO8NNNC",
+    "LCSC": "C23630"
+  },
+  {
+    "Reference": "U4",
+    "Value": "TPS22919DCKT",
+    "MPN": "TPS22919DCKT",
+    "LCSC": "C2860814"
+  },
+  {
+    "Reference": "R1",
+    "Value": "5.1k 1%",
+    "MPN": "0603WAF5101T5E",
+    "LCSC": "C23186"
+  },
+  {
+    "Reference": "R22",
+    "Value": "1M\u03a9",
+    "MPN": "0603WAF1004T5E",
+    "LCSC": "C22935"
+  },
+  {
+    "Reference": "C13",
+    "Value": "1uF",
+    "MPN": "CL21B105KBFNNNE",
+    "LCSC": "C28323"
+  },
+  {
+    "Reference": "C10",
+    "Value": "1uF",
+    "MPN": "CL21B105KBFNNNE",
+    "LCSC": "C28323"
+  },
+  {
+    "Reference": "C15",
+    "Value": "4.7uF",
+    "MPN": "CL21B475KAFNNNE",
+    "LCSC": "C98195"
+  },
+  {
+    "Reference": "R7",
+    "Value": "10k 1%",
+    "MPN": "0603WAF1002T5E",
+    "LCSC": "C25804"
+  },
+  {
+    "Reference": "C22",
+    "Value": "1uF",
+    "MPN": "CL21B105KBFNNNE",
+    "LCSC": "C28323"
+  },
+  {
+    "Reference": "R16",
+    "Value": "0\u03a9",
+    "MPN": "0603WAF0000T5E",
+    "LCSC": "C21189"
+  },
+  {
+    "Reference": "D3",
+    "Value": "MBR0530T1G",
+    "MPN": "MBR0530T1G",
+    "LCSC": "C82046"
+  },
+  {
+    "Reference": "C19",
+    "Value": "4.7uF",
+    "MPN": "CL21B475KAFNNNE",
+    "LCSC": "C98195"
+  },
+  {
+    "Reference": "C9",
+    "Value": "1uF",
+    "MPN": "CL21B105KBFNNNE",
+    "LCSC": "C28323"
+  },
+  {
+    "Reference": "C24",
+    "Value": "220pF C0G (tune)",
+    "MPN": "GRM1885C1H221JA01D",
+    "LCSC": "C77032"
+  },
+  {
+    "Reference": "C6",
+    "Value": "10uF 10V",
+    "MPN": "CL10A106KP8NNNC",
+    "LCSC": "C19702"
+  },
+  {
+    "Reference": "SW3",
+    "Value": "SKQGABE010",
+    "MPN": "SKQGABE010",
+    "LCSC": "C115351"
+  },
+  {
+    "Reference": "C20",
+    "Value": "1uF",
+    "MPN": "CL21B105KBFNNNE",
+    "LCSC": "C28323"
+  },
+  {
+    "Reference": "C18",
+    "Value": "1uF",
+    "MPN": "CL21B105KBFNNNE",
+    "LCSC": "C28323"
+  },
+  {
+    "Reference": "C25",
+    "Value": "100nF",
+    "MPN": "CC0603KRX7R9BB104",
+    "LCSC": "C14663"
+  },
+  {
+    "Reference": "R2",
+    "Value": "5.1k 1%",
+    "MPN": "0603WAF5101T5E",
+    "LCSC": "C23186"
+  },
+  {
+    "Reference": "R17",
+    "Value": "3\u03a9",
+    "MPN": "0603WAF300KT5E",
+    "LCSC": "C23157"
+  },
+  {
+    "Reference": "C8",
+    "Value": "4.7uF 16V",
+    "MPN": "CL10A475KO8NNNC",
+    "LCSC": "C19666"
+  },
+  {
+    "Reference": "C16",
+    "Value": "1uF",
+    "MPN": "CL21B105KBFNNNE",
+    "LCSC": "C28323"
+  },
+  {
+    "Reference": "C1",
+    "Value": "2.2uF 16V",
+    "MPN": "CL10A225KO8NNNC",
+    "LCSC": "C23630"
+  },
+  {
+    "Reference": "C7",
+    "Value": "100nF 50V",
+    "MPN": "CC0603KRX7R9BB104",
+    "LCSC": "C14663"
+  },
+  {
+    "Reference": "R14",
+    "Value": "10k\u03a9",
+    "MPN": "0603WAF1002T5E",
+    "LCSC": "C25804"
+  },
+  {
+    "Reference": "R18",
+    "Value": "10k\u03a9",
+    "MPN": "0603WAF1002T5E",
+    "LCSC": "C25804"
+  },
+  {
+    "Reference": "Q1",
+    "Value": "SI1308EDL-T1-GE3",
+    "MPN": "SI1308EDL-T1-GE3",
+    "LCSC": "C469327"
+  },
+  {
+    "Reference": "R8",
+    "Value": "10k 1%",
+    "MPN": "0603WAF1002T5E",
+    "LCSC": "C25804"
+  },
+  {
+    "Reference": "R10",
+    "Value": "10k 1%",
+    "MPN": "0603WAF1002T5E",
+    "LCSC": "C25804"
+  },
+  {
+    "Reference": "SW2",
+    "Value": "SKQGABE010",
+    "MPN": "SKQGABE010",
+    "LCSC": "C115351"
+  },
+  {
+    "Reference": "R12",
+    "Value": "10k 1%",
+    "MPN": "0603WAF1002T5E",
+    "LCSC": "C25804"
+  },
+  {
+    "Reference": "C3",
+    "Value": "2.2uF 16V",
+    "MPN": "CL10A225KO8NNNC",
+    "LCSC": "C23630"
+  },
+  {
+    "Reference": "Q3",
+    "Value": "SI1308EDL",
+    "MPN": "SI1308EDL-T1-GE3",
+    "LCSC": "C469327"
+  },
+  {
+    "Reference": "R19",
+    "Value": "10k 1%",
+    "MPN": "0603WAF1002T5E",
+    "LCSC": "C25804"
+  },
+  {
+    "Reference": "D2",
+    "Value": "MBR0530T1G",
+    "MPN": "MBR0530T1G",
+    "LCSC": "C82046"
+  },
+  {
+    "Reference": "C12",
+    "Value": "1uF",
+    "MPN": "CL21B105KBFNNNE",
+    "LCSC": "C28323"
+  },
+  {
+    "Reference": "R3",
+    "Value": "0\u03a9",
+    "MPN": "0603WAF0000T5E",
+    "LCSC": "C21189"
+  },
+  {
+    "Reference": "R13",
+    "Value": "100k\u03a9",
+    "MPN": "0603WAF1003T5E",
+    "LCSC": "C25803"
+  },
+  {
+    "Reference": "C21",
+    "Value": "1uF",
+    "MPN": "CL21B105KBFNNNE",
+    "LCSC": "C28323"
+  },
+  {
+    "Reference": "U3",
+    "Value": "TPS7A0233DBVR",
+    "MPN": "TPS7A0233DBVR",
+    "LCSC": "C5142805"
+  },
+  {
+    "Reference": "L1",
+    "Value": "47uH",
+    "MPN": "NRH3010T470MN",
+    "LCSC": "C223116"
+  },
+  {
+    "Reference": "D1",
+    "Value": "MBR0530T1G",
+    "MPN": "MBR0530T1G",
+    "LCSC": "C82046"
+  },
+  {
+    "Reference": "C14",
+    "Value": "4.7uF",
+    "MPN": "CL21B475KAFNNNE",
+    "LCSC": "C98195"
+  },
+  {
+    "Reference": "R23",
+    "Value": "1M\u03a9",
+    "MPN": "0603WAF1004T5E",
+    "LCSC": "C22935"
+  },
+  {
+    "Reference": "R6",
+    "Value": "10k 1%",
+    "MPN": "0603WAF1002T5E",
+    "LCSC": "C25804"
+  },
+  {
+    "Reference": "U6",
+    "Value": "TPD2EUSB30DRTR",
+    "MPN": "TPD2EUSB30DRTR",
+    "LCSC": "C97502"
+  },
+  {
+    "Reference": "R11",
+    "Value": "10k 1%",
+    "MPN": "0603WAF1002T5E",
+    "LCSC": "C25804"
+  },
+  {
+    "Reference": "J2",
+    "Value": "FPC-05FB-24PH20",
+    "MPN": "FPC-05FB-24PH20",
+    "LCSC": "C2856831"
+  },
+  {
+    "Reference": "C17",
+    "Value": "1uF",
+    "MPN": "CL21B105KBFNNNE",
+    "LCSC": "C28323"
+  },
+  {
+    "Reference": "U1",
+    "Value": "MDBT50Q-P1MV2",
+    "MPN": "MDBT50Q-P1MV2",
+    "LCSC": "C5119772"
+  },
+  {
+    "Reference": "C23",
+    "Value": "220pF C0G (tune)",
+    "MPN": "GRM1885C1H221JA01D",
+    "LCSC": "C77032"
+  },
+  {
+    "Reference": "Q2",
+    "Value": "AO3401A",
+    "MPN": "AO3401A",
+    "LCSC": "C15127"
+  },
+  {
+    "Reference": "U5",
+    "Value": "TPD2EUSB30DRTR",
+    "MPN": "TPD2EUSB30DRTR",
+    "LCSC": "C97502"
+  },
+  {
+    "Reference": "J1",
+    "Value": "USB4500-03-0-A",
+    "MPN": "USB4500-03-0-A",
+    "LCSC": "C5354966"
+  },
+  {
+    "Reference": "R4",
+    "Value": "0\u03a9",
+    "MPN": "0603WAF0000T5E",
+    "LCSC": "C21189"
+  },
+  {
+    "Reference": "C11",
+    "Value": "1uF",
+    "MPN": "CL21B105KBFNNNE",
+    "LCSC": "C28323"
+  },
+  {
+    "Reference": "SW1",
+    "Value": "SKQGABE010",
+    "MPN": "SKQGABE010",
+    "LCSC": "C115351"
+  },
+  {
+    "Reference": "R15",
+    "Value": "2.2\u03a9",
+    "MPN": "0603WAF220KT5E",
+    "LCSC": "C22939"
+  }
+]

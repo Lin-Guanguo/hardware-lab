@@ -1,0 +1,18 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-option-a2/NFC-Card-V4.kicad_pcb",
+  "description": "A2 correct actual courtyard fit for input and output capacitors",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-option-a2/placement-fit-ipc.json",
+  "remove_trial_ids": [],
+  "placements": {
+    "C4": [
+      179.6,
+      103.1,
+      0
+    ],
+    "C5": [
+      183.85,
+      99.4,
+      0
+    ]
+  }
+}

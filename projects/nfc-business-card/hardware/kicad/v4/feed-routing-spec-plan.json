@@ -1,0 +1,208 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4/NFC-Card-V4.kicad_pcb",
+  "description": "Provisional existing VBUS feed and paired battery return; protection not frozen",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4/feed-routing-ipc.json",
+  "routes": [
+    {
+      "name": "VBUS lower contact",
+      "net": "USB_VBUS",
+      "layer": "F.Cu",
+      "width": 0.45,
+      "points": [
+        [
+          186.149,
+          106.4005
+        ],
+        [
+          184.4,
+          106.4
+        ]
+      ],
+      "length_mm": 1.749
+    },
+    {
+      "name": "VBUS upper contact",
+      "net": "USB_VBUS",
+      "layer": "F.Cu",
+      "width": 0.45,
+      "points": [
+        [
+          186.149,
+          101.6005
+        ],
+        [
+          184.4,
+          101.6
+        ]
+      ],
+      "length_mm": 1.749
+    },
+    {
+      "name": "VBUS contacts join",
+      "net": "USB_VBUS",
+      "layer": "B.Cu",
+      "width": 0.6,
+      "points": [
+        [
+          184.4,
+          101.6
+        ],
+        [
+          184.4,
+          106.4
+        ]
+      ],
+      "length_mm": 4.8
+    },
+    {
+      "name": "VBUS feed to charger bypass",
+      "net": "USB_VBUS",
+      "layer": "F.Cu",
+      "width": 0.45,
+      "points": [
+        [
+          186.149,
+          106.4005
+        ],
+        [
+          178.9,
+          107.1
+        ],
+        [
+          178.7,
+          107.3
+        ],
+        [
+          170.2,
+          110.5
+        ],
+        [
+          169.8,
+          111.0
+        ],
+        [
+          169.8,
+          111.9
+        ],
+        [
+          169.4,
+          112.2
+        ],
+        [
+          168.3,
+          112.2
+        ],
+        [
+          167.6,
+          111.4
+        ],
+        [
+          167.5,
+          111.0
+        ],
+        [
+          167.2,
+          110.7
+        ]
+      ],
+      "length_mm": 21.688
+    },
+    {
+      "name": "Battery paired ground branch",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.5,
+      "points": [
+        [
+          145.5,
+          111.3005
+        ],
+        [
+          155.0,
+          110.2
+        ],
+        [
+          156.3,
+          108.9
+        ],
+        [
+          159.0,
+          108.6
+        ]
+      ],
+      "length_mm": 14.119
+    },
+    {
+      "name": "VBUS short LDO crossing",
+      "net": "USB_VBUS",
+      "layer": "B.Cu",
+      "width": 0.5,
+      "points": [
+        [
+          167.2,
+          110.7
+        ],
+        [
+          160.5,
+          110.5
+        ]
+      ],
+      "length_mm": 6.703
+    },
+    {
+      "name": "VBUS cap escape",
+      "net": "USB_VBUS",
+      "layer": "F.Cu",
+      "width": 0.45,
+      "points": [
+        [
+          160.5,
+          110.5
+        ],
+        [
+          161.6,
+          110.3
+        ]
+      ],
+      "length_mm": 1.118
+    }
+  ],
+  "vias": [
+    {
+      "net": "USB_VBUS",
+      "at": [
+        184.4,
+        101.6
+      ]
+    },
+    {
+      "net": "USB_VBUS",
+      "at": [
+        184.4,
+        106.4
+      ]
+    },
+    {
+      "net": "USB_VBUS",
+      "at": [
+        167.2,
+        110.7
+      ]
+    },
+    {
+      "net": "USB_VBUS",
+      "at": [
+        160.5,
+        110.5
+      ]
+    },
+    {
+      "net": "GND",
+      "at": [
+        167.9,
+        110.1
+      ]
+    }
+  ],
+  "failures": []
+}

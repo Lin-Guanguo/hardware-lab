@@ -1,0 +1,13 @@
+{
+  "plan": "projects/nfc-business-card/hardware/kicad/v4/feed-reset.json",
+  "board": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4/NFC-Card-V4.kicad_pcb",
+  "before": {
+    "tracks": 144,
+    "vias": 16
+  },
+  "after": {
+    "tracks": 136,
+    "vias": 13
+  },
+  "created_ids": []
+}

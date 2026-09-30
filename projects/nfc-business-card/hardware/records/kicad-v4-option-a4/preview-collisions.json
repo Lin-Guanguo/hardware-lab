@@ -1,0 +1,3983 @@
+[
+  {
+    "a": "C5.2",
+    "an": "GND",
+    "b": "C8 branch escape",
+    "bn": "USB_VBUS",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      162.0231161270101,
+      109.35658590465388
+    ]
+  },
+  {
+    "a": "C5.2",
+    "an": "GND",
+    "b": "C8 branch escape",
+    "bn": "USB_VBUS",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      162.03647726189232,
+      109.46326718556392
+    ]
+  },
+  {
+    "a": "R9.1",
+    "an": "VDD_3V3",
+    "b": "Battery positive to C3",
+    "bn": "BAT_PACK_TBD",
+    "distance": 0.0513,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      151.2940242427478,
+      109.53261469945372
+    ]
+  },
+  {
+    "a": "R9.1",
+    "an": "VDD_3V3",
+    "b": "Battery positive to C3",
+    "bn": "BAT_PACK_TBD",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      150.9465,
+      109.49125000000001
+    ]
+  },
+  {
+    "a": "R9.2",
+    "an": "CHG_PG_N",
+    "b": "Battery positive to C3",
+    "bn": "BAT_PACK_TBD",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      152.34041152576697,
+      109.40582305153396
+    ]
+  },
+  {
+    "a": "R9.2",
+    "an": "CHG_PG_N",
+    "b": "independent NTC pad",
+    "bn": "BAT_NTC_TBD",
+    "distance": 0.0683,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      152.79087500000003,
+      109.2
+    ]
+  },
+  {
+    "a": "U2.4",
+    "an": "CHG_CE_N",
+    "b": "U2 EP local return",
+    "bn": "GND",
+    "distance": 0.125,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      157.5375,
+      106.375
+    ]
+  },
+  {
+    "a": "R7.2",
+    "an": "CHG_CE_N",
+    "b": "Battery positive to C3",
+    "bn": "BAT_PACK_TBD",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      155.97546347423304,
+      104.96942694846604
+    ]
+  },
+  {
+    "a": "C8.1",
+    "an": "USB_VBUS",
+    "b": "U2 EP local return",
+    "bn": "GND",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      160.8,
+      107.4
+    ]
+  },
+  {
+    "a": "R10.2",
+    "an": "KEY_PREV_N",
+    "b": "key rail transition",
+    "bn": "VDD_3V3",
+    "distance": 0.0433,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      156.7,
+      113.22855435349771
+    ]
+  },
+  {
+    "a": "R10.2",
+    "an": "KEY_PREV_N",
+    "b": "key pullups",
+    "bn": "VDD_3V3",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      156.7,
+      113.5465
+    ]
+  },
+  {
+    "a": "L1.2",
+    "an": "EPD_SW",
+    "b": "FPC signal transition",
+    "bn": "EPD_DC_TBD",
+    "distance": 0.022,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      170.81087954562054,
+      96.49
+    ]
+  },
+  {
+    "a": "L1.2",
+    "an": "EPD_SW",
+    "b": "FPC signal transition",
+    "bn": "EPD_RESET_N_TBD",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      171.21087954562051,
+      96.99
+    ]
+  },
+  {
+    "a": "L1.2",
+    "an": "EPD_SW",
+    "b": "FPC signal entry",
+    "bn": "EPD_RESET_N_TBD",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      171.0983795456205,
+      96.99
+    ]
+  },
+  {
+    "a": "L1.2",
+    "an": "EPD_SW",
+    "b": "FPC signal entry",
+    "bn": "EPD_BUSY_TBD",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      171.472,
+      97.49
+    ]
+  },
+  {
+    "a": "L1.2",
+    "an": "EPD_SW",
+    "b": "FPC signal transition",
+    "bn": "EPD_BUSY_TBD",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      171.8611204543795,
+      97.49
+    ]
+  },
+  {
+    "a": "NTC.1",
+    "an": "BAT_NTC_TBD",
+    "b": "Battery positive to C3",
+    "bn": "BAT_PACK_TBD",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      153.97857123940693,
+      107.48039541201327
+    ]
+  },
+  {
+    "a": "53346f32-d577-4a12-b7a7-e1fe74cd3f81",
+    "an": "GND",
+    "b": "C8 branch escape",
+    "bn": "USB_VBUS",
+    "distance": 0.1755,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      162.0,
+      111.06355724205076
+    ]
+  },
+  {
+    "a": "53346f32-d577-4a12-b7a7-e1fe74cd3f81",
+    "an": "GND",
+    "b": "charger pin escape",
+    "bn": "CHG_SDA",
+    "distance": 0.0755,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      157.6,
+      111.11239164968583
+    ]
+  },
+  {
+    "a": "53346f32-d577-4a12-b7a7-e1fe74cd3f81",
+    "an": "GND",
+    "b": "independent NTC pad",
+    "bn": "BAT_NTC_TBD",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      153.9914638472551,
+      111.18302053902427
+    ]
+  },
+  {
+    "a": "53346f32-d577-4a12-b7a7-e1fe74cd3f81",
+    "an": "GND",
+    "b": "independent NTC pad",
+    "bn": "BAT_NTC_TBD",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      155.5085361527449,
+      111.18302053902427
+    ]
+  },
+  {
+    "a": "53346f32-d577-4a12-b7a7-e1fe74cd3f81",
+    "an": "GND",
+    "b": "charger control transition",
+    "bn": "CHG_SDA",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      157.6,
+      111.23553680077192
+    ]
+  },
+  {
+    "a": "53346f32-d577-4a12-b7a7-e1fe74cd3f81",
+    "an": "GND",
+    "b": "independent NTC pad",
+    "bn": "BAT_NTC_TBD",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      154.75,
+      111.18302053902427
+    ]
+  },
+  {
+    "a": "53346f32-d577-4a12-b7a7-e1fe74cd3f81",
+    "an": "GND",
+    "b": "LDO west supply branch",
+    "bn": "VDD_3V3",
+    "distance": 0.0505,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      162.37315645680354,
+      111.12532936673003
+    ]
+  },
+  {
+    "a": "53346f32-d577-4a12-b7a7-e1fe74cd3f81",
+    "an": "GND",
+    "b": "charger input transition",
+    "bn": "USB_VBUS",
+    "distance": 0.0505,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      162.0,
+      111.12855435349772
+    ]
+  },
+  {
+    "a": "53346f32-d577-4a12-b7a7-e1fe74cd3f81",
+    "an": "GND",
+    "b": "pullup supply transition",
+    "bn": "VDD_3V3",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      161.7,
+      111.17020781025334
+    ]
+  },
+  {
+    "a": "642f6427-eb96-49db-8aff-2258d0c74bd8",
+    "an": "GND",
+    "b": "LDO to display supply",
+    "bn": "VDD_3V3",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      165.0581697111067,
+      109.33038475110155
+    ]
+  },
+  {
+    "a": "642f6427-eb96-49db-8aff-2258d0c74bd8",
+    "an": "GND",
+    "b": "U3 output and C5",
+    "bn": "VDD_3V3",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      164.8475668017145,
+      109.55343319828549
+    ]
+  },
+  {
+    "a": "642f6427-eb96-49db-8aff-2258d0c74bd8",
+    "an": "GND",
+    "b": "LDO west supply branch",
+    "bn": "VDD_3V3",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      164.81541504294498,
+      109.72372330470336
+    ]
+  },
+  {
+    "a": "642f6427-eb96-49db-8aff-2258d0c74bd8",
+    "an": "GND",
+    "b": "U3 output and C5",
+    "bn": "VDD_3V3",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      164.72677669529665,
+      109.851
+    ]
+  },
+  {
+    "a": "642f6427-eb96-49db-8aff-2258d0c74bd8",
+    "an": "GND",
+    "b": "LDO output branch",
+    "bn": "VDD_3V3",
+    "distance": 0.0503,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      164.66643231570555,
+      109.99313440568449
+    ]
+  },
+  {
+    "a": "642f6427-eb96-49db-8aff-2258d0c74bd8",
+    "an": "GND",
+    "b": "LDO west supply branch",
+    "bn": "VDD_3V3",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      164.47727669529664,
+      110.11715728752537
+    ]
+  },
+  {
+    "a": "642f6427-eb96-49db-8aff-2258d0c74bd8",
+    "an": "GND",
+    "b": "USB resistor transition",
+    "bn": "USB_DP_CONN",
+    "distance": 0.0857,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      164.35833508376447,
+      110.32234872522552
+    ]
+  },
+  {
+    "a": "642f6427-eb96-49db-8aff-2258d0c74bd8",
+    "an": "GND",
+    "b": "LDO west supply branch",
+    "bn": "VDD_3V3",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      163.62782528581928,
+      110.77317471418073
+    ]
+  },
+  {
+    "a": "642f6427-eb96-49db-8aff-2258d0c74bd8",
+    "an": "GND",
+    "b": "C4 to U3 EN",
+    "bn": "SYS",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      167.10588410198642,
+      107.41868750816877
+    ]
+  },
+  {
+    "a": "0a4d8cff-8ecd-47b4-92cd-29888a7829ee",
+    "an": "EPD_EN_TBD",
+    "b": "USB VBUS two contacts",
+    "bn": "USB_VBUS",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      183.45,
+      101.45050000000002
+    ]
+  },
+  {
+    "a": "0a4d8cff-8ecd-47b4-92cd-29888a7829ee",
+    "an": "EPD_EN_TBD",
+    "b": "USB upper input transition",
+    "bn": "USB_VBUS",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      183.45,
+      101.1005
+    ]
+  },
+  {
+    "a": "32320a3a-9ca5-476f-a19a-c4b0671273f2",
+    "an": "EPD_EN_TBD",
+    "b": "USB VBUS two contacts",
+    "bn": "USB_VBUS",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      182.8,
+      103.89999999999998
+    ]
+  },
+  {
+    "a": "ab63e88a-f956-4db5-9476-b559ea321a71",
+    "an": "EPD_EN_TBD",
+    "b": "USB VBUS two contacts",
+    "bn": "USB_VBUS",
+    "distance": 0.125,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      182.3875,
+      104.52525
+    ]
+  },
+  {
+    "a": "ab63e88a-f956-4db5-9476-b559ea321a71",
+    "an": "EPD_EN_TBD",
+    "b": "USB VBUS two contacts",
+    "bn": "USB_VBUS",
+    "distance": 0.125,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      182.3876204543795,
+      104.7005
+    ]
+  },
+  {
+    "a": "43e1293b-c804-4f56-b35d-22072b62ae89",
+    "an": "KEY_OK_N",
+    "b": "key rail transition",
+    "bn": "VDD_3V3",
+    "distance": 0.0413,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      156.35610132618564,
+      112.56441519518984
+    ]
+  },
+  {
+    "a": "ee1d5da0-0fd2-4639-a66d-7a6b0dac9682",
+    "an": "KEY_OK_N",
+    "b": "USB resistor upper pad",
+    "bn": "USB_DP_CONN",
+    "distance": 0.1142,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      164.47035715575942,
+      111.78547433297024
+    ]
+  },
+  {
+    "a": "1bde1775-8580-4511-a362-7f32c5fb0176",
+    "an": "KEY_OK_N",
+    "b": "USB resistor bottom escape",
+    "bn": "USB_DP_CONN",
+    "distance": 0.1142,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      164.47508597149118,
+      111.82625835412371
+    ]
+  },
+  {
+    "a": "1bde1775-8580-4511-a362-7f32c5fb0176",
+    "an": "KEY_OK_N",
+    "b": "USB DP west trunk",
+    "bn": "USB_DP_CONN",
+    "distance": 0.1142,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      164.47508597149118,
+      111.82625835412371
+    ]
+  },
+  {
+    "a": "1bde1775-8580-4511-a362-7f32c5fb0176",
+    "an": "KEY_OK_N",
+    "b": "charger west channel",
+    "bn": "CHG_PG_N",
+    "distance": 0.1851,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      164.4381,
+      112.63261752988222
+    ]
+  },
+  {
+    "a": "95faf58a-da1b-4c5a-b076-8a35b0cd8b52",
+    "an": "KEY_OK_N",
+    "b": "charger west channel",
+    "bn": "CHG_PG_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      164.77320000000003,
+      112.9
+    ]
+  },
+  {
+    "a": "05a84233-0ee8-4ad1-a095-ea9ebe4a613f",
+    "an": "EPD_RESE",
+    "b": "LDO to display supply",
+    "bn": "VDD_3V3",
+    "distance": 0.1026,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      177.13587885114362,
+      100.95335537311729
+    ]
+  },
+  {
+    "a": "acf8d39d-aa0f-4d65-a46b-a591bbe152f1",
+    "an": "EPD_RESE",
+    "b": "LDO to display supply",
+    "bn": "VDD_3V3",
+    "distance": 0.1026,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      177.57755728752537,
+      100.52566067811865
+    ]
+  },
+  {
+    "a": "defc2ea5-f133-40aa-82d8-b85f4512ce80",
+    "an": "EPD_RESE",
+    "b": "LDO to display supply",
+    "bn": "VDD_3V3",
+    "distance": 0.1026,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      178.10873647718395,
+      99.97610085701648
+    ]
+  },
+  {
+    "a": "304c2b14-fd4d-4da1-85ff-2f2fb6395b48",
+    "an": "EPD_RESE",
+    "b": "screen channel",
+    "bn": "EPD_MOSI_TBD",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      170.87919999999997,
+      100.1782
+    ]
+  },
+  {
+    "a": "304c2b14-fd4d-4da1-85ff-2f2fb6395b48",
+    "an": "EPD_RESE",
+    "b": "screen channel",
+    "bn": "EPD_SCK_TBD",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      171.2792,
+      100.1782
+    ]
+  },
+  {
+    "a": "304c2b14-fd4d-4da1-85ff-2f2fb6395b48",
+    "an": "EPD_RESE",
+    "b": "screen channel",
+    "bn": "EPD_CS_N_TBD",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      171.67919999999998,
+      100.1782
+    ]
+  },
+  {
+    "a": "304c2b14-fd4d-4da1-85ff-2f2fb6395b48",
+    "an": "EPD_RESE",
+    "b": "screen channel",
+    "bn": "EPD_RESET_N_TBD",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      174.47820000000002,
+      100.1782
+    ]
+  },
+  {
+    "a": "304c2b14-fd4d-4da1-85ff-2f2fb6395b48",
+    "an": "EPD_RESE",
+    "b": "screen channel",
+    "bn": "EPD_DC_TBD",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      172.07920000000001,
+      100.1782
+    ]
+  },
+  {
+    "a": "304c2b14-fd4d-4da1-85ff-2f2fb6395b48",
+    "an": "EPD_RESE",
+    "b": "screen channel",
+    "bn": "EPD_BUSY_TBD",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      173.67919999999998,
+      100.1782
+    ]
+  },
+  {
+    "a": "622d745d-a410-49b8-96eb-5265426e0f2f",
+    "an": "EPD_SW",
+    "b": "FPC signal transition",
+    "bn": "EPD_RESET_N_TBD",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      171.472,
+      96.99
+    ]
+  },
+  {
+    "a": "622d745d-a410-49b8-96eb-5265426e0f2f",
+    "an": "EPD_SW",
+    "b": "FPC signal entry",
+    "bn": "EPD_RESET_N_TBD",
+    "distance": 0.022,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      171.38587954562053,
+      96.99
+    ]
+  },
+  {
+    "a": "622d745d-a410-49b8-96eb-5265426e0f2f",
+    "an": "EPD_SW",
+    "b": "FPC signal entry",
+    "bn": "EPD_BUSY_TBD",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      171.472,
+      97.49
+    ]
+  },
+  {
+    "a": "622d745d-a410-49b8-96eb-5265426e0f2f",
+    "an": "EPD_SW",
+    "b": "FPC signal transition",
+    "bn": "EPD_BUSY_TBD",
+    "distance": 0.053,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      171.5736204543795,
+      97.49
+    ]
+  },
+  {
+    "a": "fca59306-f095-4da5-9a63-348cf2a4ad29",
+    "an": "EPD_SW",
+    "b": "FPC signal transition",
+    "bn": "EPD_RESET_N_TBD",
+    "distance": 0.0857,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      171.41064723204045,
+      96.58985960986149
+    ]
+  },
+  {
+    "a": "4d87ba73-5d27-4811-aa22-85afa39bc638",
+    "an": "KEY_PREV_N",
+    "b": "key rail transition",
+    "bn": "VDD_3V3",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      156.7,
+      113.07774022184361
+    ]
+  },
+  {
+    "a": "4d87ba73-5d27-4811-aa22-85afa39bc638",
+    "an": "KEY_PREV_N",
+    "b": "key pullups",
+    "bn": "VDD_3V3",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      156.7,
+      113.20400000000001
+    ]
+  },
+  {
+    "a": "7b8fbb65-9687-4c32-81e7-d24432836b30",
+    "an": "KEY_PREV_N",
+    "b": "key rail transition",
+    "bn": "VDD_3V3",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      156.9103091610849,
+      112.86517564276237
+    ]
+  },
+  {
+    "a": "7b8fbb65-9687-4c32-81e7-d24432836b30",
+    "an": "KEY_PREV_N",
+    "b": "key pullups",
+    "bn": "VDD_3V3",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      156.81259028637487,
+      112.86517564276237
+    ]
+  },
+  {
+    "a": "99c35a13-d011-4aa2-a4cf-dde030e552eb",
+    "an": "KEY_PREV_N",
+    "b": "key pullups",
+    "bn": "VDD_3V3",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      156.5874097136251,
+      113.55017564276235
+    ]
+  },
+  {
+    "a": "411b2cb2-92ad-46dd-a65c-b05779b87ba6",
+    "an": "KEY_PREV_N",
+    "b": "charger west channel",
+    "bn": "CHG_CE_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      159.76440000000002,
+      114.5
+    ]
+  },
+  {
+    "a": "597b2f35-7aea-4f8c-9814-157eb97b5130",
+    "an": "KEY_PREV_N",
+    "b": "C1 separate branch",
+    "bn": "USB_VBUS",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      164.43895,
+      111.20237564276236
+    ]
+  },
+  {
+    "a": "597b2f35-7aea-4f8c-9814-157eb97b5130",
+    "an": "KEY_PREV_N",
+    "b": "USB resistor bottom escape",
+    "bn": "USB_DP_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      164.5902597136251,
+      111.20237564276236
+    ]
+  },
+  {
+    "a": "597b2f35-7aea-4f8c-9814-157eb97b5130",
+    "an": "KEY_PREV_N",
+    "b": "charger west channel",
+    "bn": "CHG_SCL",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      164.43895,
+      111.20237564276236
+    ]
+  },
+  {
+    "a": "597b2f35-7aea-4f8c-9814-157eb97b5130",
+    "an": "KEY_PREV_N",
+    "b": "VBUS west trunk",
+    "bn": "USB_VBUS",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      164.43895,
+      111.20237564276236
+    ]
+  },
+  {
+    "a": "709f053d-88f5-43c7-9a4a-20bb6a4f6d4f",
+    "an": "KEY_PREV_N",
+    "b": "charger west channel",
+    "bn": "CHG_INT_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      159.3219,
+      113.25198401660919
+    ]
+  },
+  {
+    "a": "709f053d-88f5-43c7-9a4a-20bb6a4f6d4f",
+    "an": "KEY_PREV_N",
+    "b": "charger west channel",
+    "bn": "CHG_PG_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      159.3219,
+      112.9
+    ]
+  },
+  {
+    "a": "709f053d-88f5-43c7-9a4a-20bb6a4f6d4f",
+    "an": "KEY_PREV_N",
+    "b": "charger west channel",
+    "bn": "CHG_INT_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      159.3219,
+      113.7
+    ]
+  },
+  {
+    "a": "8be63d14-c510-41f1-95db-ed806ae2eb93",
+    "an": "KEY_PREV_N",
+    "b": "charger west channel",
+    "bn": "CHG_SCL",
+    "distance": 0.0895,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      163.8564,
+      111.52129843752735
+    ]
+  },
+  {
+    "a": "91578819-5c9a-436b-a96a-cd47f666e81f",
+    "an": "KEY_PREV_N",
+    "b": "C1 separate branch",
+    "bn": "USB_VBUS",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      164.73113393666654,
+      111.24900625245064
+    ]
+  },
+  {
+    "a": "91578819-5c9a-436b-a96a-cd47f666e81f",
+    "an": "KEY_PREV_N",
+    "b": "USB resistor bottom escape",
+    "bn": "USB_DP_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      164.80133349570548,
+      111.3193334957055
+    ]
+  },
+  {
+    "a": "91578819-5c9a-436b-a96a-cd47f666e81f",
+    "an": "KEY_PREV_N",
+    "b": "USB DP west trunk",
+    "bn": "USB_DP_CONN",
+    "distance": 0.0571,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      165.00761452641729,
+      111.54307564276236
+    ]
+  },
+  {
+    "a": "91578819-5c9a-436b-a96a-cd47f666e81f",
+    "an": "KEY_PREV_N",
+    "b": "charger west channel",
+    "bn": "CHG_SCL",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      164.85105,
+      111.36905
+    ]
+  },
+  {
+    "a": "91578819-5c9a-436b-a96a-cd47f666e81f",
+    "an": "KEY_PREV_N",
+    "b": "VBUS west trunk",
+    "bn": "USB_VBUS",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      164.8328665042945,
+      111.3508665042945
+    ]
+  },
+  {
+    "a": "d42c10aa-f303-4479-8f32-6170b6ab8032",
+    "an": "KEY_PREV_N",
+    "b": "USB resistor bottom escape",
+    "bn": "USB_DP_CONN",
+    "distance": 0.1714,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      164.96069999999997,
+      111.64295
+    ]
+  },
+  {
+    "a": "d42c10aa-f303-4479-8f32-6170b6ab8032",
+    "an": "KEY_PREV_N",
+    "b": "USB DP west trunk",
+    "bn": "USB_DP_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      165.0214,
+      111.78045
+    ]
+  },
+  {
+    "a": "d42c10aa-f303-4479-8f32-6170b6ab8032",
+    "an": "KEY_PREV_N",
+    "b": "charger west channel",
+    "bn": "CHG_SCL",
+    "distance": 0.0894,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      165.0214,
+      111.52119843752735
+    ]
+  },
+  {
+    "a": "d9d8c164-1a1c-414e-ae82-baec1884b2d2",
+    "an": "KEY_PREV_N",
+    "b": "charger west channel",
+    "bn": "CHG_PG_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      164.26870000000002,
+      112.9
+    ]
+  },
+  {
+    "a": "e0c4b597-df40-49ab-ab22-a0736a8200c0",
+    "an": "KEY_PREV_N",
+    "b": "charger west channel",
+    "bn": "CHG_PG_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      165.45,
+      112.9
+    ]
+  },
+  {
+    "a": "e20d9096-5599-4366-a5e7-70b91e45414a",
+    "an": "KEY_PREV_N",
+    "b": "C1 separate branch",
+    "bn": "USB_VBUS",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      164.14676606333347,
+      111.24900625245064
+    ]
+  },
+  {
+    "a": "e20d9096-5599-4366-a5e7-70b91e45414a",
+    "an": "KEY_PREV_N",
+    "b": "charger west channel",
+    "bn": "CHG_SCL",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      164.0268,
+      111.3691
+    ]
+  },
+  {
+    "a": "e20d9096-5599-4366-a5e7-70b91e45414a",
+    "an": "KEY_PREV_N",
+    "b": "VBUS west trunk",
+    "bn": "USB_VBUS",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      164.04503349570552,
+      111.3508665042945
+    ]
+  },
+  {
+    "a": "190b5c29-b9fc-407b-933f-5708163266c6",
+    "an": "KEY_NEXT_N",
+    "b": "key pullups",
+    "bn": "VDD_3V3",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      156.7,
+      114.3201
+    ]
+  },
+  {
+    "a": "2bc51be6-7d32-4344-abf1-c852d39ece63",
+    "an": "SWDIO",
+    "b": "charger and LDO return backbone",
+    "bn": "GND",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      163.143,
+      108.233419417177
+    ]
+  },
+  {
+    "a": "2bc51be6-7d32-4344-abf1-c852d39ece63",
+    "an": "SWDIO",
+    "b": "charger and LDO return backbone",
+    "bn": "GND",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      163.143,
+      108.4
+    ]
+  },
+  {
+    "a": "2bc51be6-7d32-4344-abf1-c852d39ece63",
+    "an": "SWDIO",
+    "b": "C1 separate branch",
+    "bn": "USB_VBUS",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      163.143,
+      111.0
+    ]
+  },
+  {
+    "a": "2bc51be6-7d32-4344-abf1-c852d39ece63",
+    "an": "SWDIO",
+    "b": "charger west channel",
+    "bn": "CHG_SCL",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      163.143,
+      111.3
+    ]
+  },
+  {
+    "a": "2bc51be6-7d32-4344-abf1-c852d39ece63",
+    "an": "SWDIO",
+    "b": "charger west channel",
+    "bn": "CHG_PG_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      163.143,
+      112.9
+    ]
+  },
+  {
+    "a": "2bc51be6-7d32-4344-abf1-c852d39ece63",
+    "an": "SWDIO",
+    "b": "charger west channel",
+    "bn": "CHG_SDA",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      163.143,
+      112.96339999999998
+    ]
+  },
+  {
+    "a": "2bc51be6-7d32-4344-abf1-c852d39ece63",
+    "an": "SWDIO",
+    "b": "charger west channel",
+    "bn": "CHG_INT_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      163.143,
+      113.7
+    ]
+  },
+  {
+    "a": "2bc51be6-7d32-4344-abf1-c852d39ece63",
+    "an": "SWDIO",
+    "b": "charger west channel",
+    "bn": "CHG_CE_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      163.143,
+      114.5
+    ]
+  },
+  {
+    "a": "2bc51be6-7d32-4344-abf1-c852d39ece63",
+    "an": "SWDIO",
+    "b": "VBUS west trunk",
+    "bn": "USB_VBUS",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      163.143,
+      111.0
+    ]
+  },
+  {
+    "a": "465090ea-54e7-4147-a88f-086aeed039f4",
+    "an": "SWDCLK",
+    "b": "charger west channel",
+    "bn": "CHG_CE_N",
+    "distance": 0.051,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      158.31428547358271,
+      114.69732435723763
+    ]
+  },
+  {
+    "a": "706bb412-02ed-4be2-83e8-530eb25e4648",
+    "an": "SWDCLK",
+    "b": "charger control transition",
+    "bn": "CHG_PG_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      158.3005,
+      105.3
+    ]
+  },
+  {
+    "a": "706bb412-02ed-4be2-83e8-530eb25e4648",
+    "an": "SWDCLK",
+    "b": "charger and LDO return backbone",
+    "bn": "GND",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      158.3005,
+      107.3
+    ]
+  },
+  {
+    "a": "706bb412-02ed-4be2-83e8-530eb25e4648",
+    "an": "SWDCLK",
+    "b": "charger west channel",
+    "bn": "CHG_PG_N",
+    "distance": 0.1505,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      158.25025,
+      109.1
+    ]
+  },
+  {
+    "a": "706bb412-02ed-4be2-83e8-530eb25e4648",
+    "an": "SWDCLK",
+    "b": "charger control transition",
+    "bn": "CHG_SCL",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      158.3005,
+      110.0
+    ]
+  },
+  {
+    "a": "706bb412-02ed-4be2-83e8-530eb25e4648",
+    "an": "SWDCLK",
+    "b": "charger west channel",
+    "bn": "CHG_SCL",
+    "distance": 0.1505,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      158.25025,
+      110.65
+    ]
+  },
+  {
+    "a": "706bb412-02ed-4be2-83e8-530eb25e4648",
+    "an": "SWDCLK",
+    "b": "charger pullup supply",
+    "bn": "VDD_3V3",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      158.3005,
+      110.8
+    ]
+  },
+  {
+    "a": "706bb412-02ed-4be2-83e8-530eb25e4648",
+    "an": "SWDCLK",
+    "b": "key pullup supply",
+    "bn": "VDD_3V3",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      158.3005,
+      111.19949999999999
+    ]
+  },
+  {
+    "a": "706bb412-02ed-4be2-83e8-530eb25e4648",
+    "an": "SWDCLK",
+    "b": "key pullup supply",
+    "bn": "VDD_3V3",
+    "distance": 0.1495,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      158.35037045437946,
+      110.80000000000015
+    ]
+  },
+  {
+    "a": "706bb412-02ed-4be2-83e8-530eb25e4648",
+    "an": "SWDCLK",
+    "b": "charger west channel",
+    "bn": "CHG_SCL",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      158.3005,
+      111.3
+    ]
+  },
+  {
+    "a": "706bb412-02ed-4be2-83e8-530eb25e4648",
+    "an": "SWDCLK",
+    "b": "charger west channel",
+    "bn": "CHG_SDA",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      158.3005,
+      112.1
+    ]
+  },
+  {
+    "a": "706bb412-02ed-4be2-83e8-530eb25e4648",
+    "an": "SWDCLK",
+    "b": "charger west channel",
+    "bn": "CHG_PG_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      158.3005,
+      112.9
+    ]
+  },
+  {
+    "a": "706bb412-02ed-4be2-83e8-530eb25e4648",
+    "an": "SWDCLK",
+    "b": "charger west channel",
+    "bn": "CHG_CE_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      158.3005,
+      114.463
+    ]
+  },
+  {
+    "a": "50d7fab9-922c-48ae-a7b4-25820f3e2169",
+    "an": "USB_DM_CONN",
+    "b": "USB VBUS two contacts",
+    "bn": "USB_VBUS",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      183.69579948347234,
+      105.80367564276236
+    ]
+  },
+  {
+    "a": "c3a3b38a-bbdc-4e9c-ba68-82ded1134687",
+    "an": "USB_DM_CONN",
+    "b": "USB VBUS two contacts",
+    "bn": "USB_VBUS",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      184.171474025767,
+      105.67852597423303
+    ]
+  },
+  {
+    "a": "C2 to C4 input trunk",
+    "an": "SYS",
+    "b": "LDO to display supply",
+    "bn": "VDD_3V3",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      170.2,
+      106.6
+    ]
+  },
+  {
+    "a": "C4 to U3 IN",
+    "an": "SYS",
+    "b": "MCU supply entry",
+    "bn": "VDD_3V3",
+    "distance": 0.1579,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      170.05157099852732,
+      109.38983871624902
+    ]
+  },
+  {
+    "a": "C4 to U3 IN",
+    "an": "SYS",
+    "b": "MCU supply entry",
+    "bn": "VDD_3V3",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      169.6,
+      109.35875047560825
+    ]
+  },
+  {
+    "a": "C4 to U3 IN",
+    "an": "SYS",
+    "b": "C7 C6 shared local input",
+    "bn": "VDD_3V3",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      169.6,
+      109.35568426017852
+    ]
+  },
+  {
+    "a": "U2 BAT to C3",
+    "an": "BAT_PACK_TBD",
+    "b": "charger control transition",
+    "bn": "CHG_PG_N",
+    "distance": 0.025,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      158.4,
+      105.3
+    ]
+  },
+  {
+    "a": "Battery positive to C3",
+    "an": "BAT_PACK_TBD",
+    "b": "charger pullup transition",
+    "bn": "VDD_3V3",
+    "distance": 0.0505,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      150.2,
+      109.62855435349772
+    ]
+  },
+  {
+    "a": "Battery positive to C3",
+    "an": "BAT_PACK_TBD",
+    "b": "charger control transition",
+    "bn": "CHG_CE_N",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      156.06899577174784,
+      105.1136230440647
+    ]
+  },
+  {
+    "a": "Battery positive to C3",
+    "an": "BAT_PACK_TBD",
+    "b": "charger pin escape",
+    "bn": "CHG_CE_N",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      156.41335643022828,
+      104.98664356977173
+    ]
+  },
+  {
+    "a": "Battery positive to C3",
+    "an": "BAT_PACK_TBD",
+    "b": "charger pin escape",
+    "bn": "CHG_CE_N",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      156.6393971496761,
+      104.9
+    ]
+  },
+  {
+    "a": "Battery positive to C3",
+    "an": "BAT_PACK_TBD",
+    "b": "independent NTC pad",
+    "bn": "BAT_NTC_TBD",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      153.539806826836,
+      107.89251550363431
+    ]
+  },
+  {
+    "a": "Battery positive to C3",
+    "an": "BAT_PACK_TBD",
+    "b": "independent NTC pad",
+    "bn": "BAT_NTC_TBD",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      152.85713834764834,
+      108.76427669529663
+    ]
+  },
+  {
+    "a": "C8 to U2 IN",
+    "an": "USB_VBUS",
+    "b": "U2 EP local return",
+    "bn": "GND",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      160.8,
+      107.5875
+    ]
+  },
+  {
+    "a": "C8 branch escape",
+    "an": "USB_VBUS",
+    "b": "U2 EP local return",
+    "bn": "GND",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      160.8,
+      107.5875
+    ]
+  },
+  {
+    "a": "C8 branch escape",
+    "an": "USB_VBUS",
+    "b": "C5 C8 local return",
+    "bn": "GND",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      161.81812184335382,
+      109.16375631329234
+    ]
+  },
+  {
+    "a": "C8 branch escape",
+    "an": "USB_VBUS",
+    "b": "C5 C8 local return",
+    "bn": "GND",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      162.0,
+      109.55233628531707
+    ]
+  },
+  {
+    "a": "C8 branch escape",
+    "an": "USB_VBUS",
+    "b": "LDO west supply branch",
+    "bn": "VDD_3V3",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      162.0,
+      110.55
+    ]
+  },
+  {
+    "a": "C8 branch escape",
+    "an": "USB_VBUS",
+    "b": "pullup supply transition",
+    "bn": "VDD_3V3",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      161.9883339890768,
+      110.5863769559353
+    ]
+  },
+  {
+    "a": "VBUS west trunk",
+    "an": "USB_VBUS",
+    "b": "key pullup supply",
+    "bn": "VDD_3V3",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      161.91216887741243,
+      110.8183900346443
+    ]
+  },
+  {
+    "a": "VBUS west trunk",
+    "an": "USB_VBUS",
+    "b": "pullup supply transition",
+    "bn": "VDD_3V3",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      161.97367630730932,
+      110.84898495697718
+    ]
+  },
+  {
+    "a": "VBUS west trunk",
+    "an": "USB_VBUS",
+    "b": "charger west channel",
+    "bn": "CHG_SCL",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      162.0,
+      111.1283708712307
+    ]
+  },
+  {
+    "a": "VBUS west trunk",
+    "an": "USB_VBUS",
+    "b": "USB resistor transition",
+    "bn": "USB_DM_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      166.5,
+      110.93553680077191
+    ]
+  },
+  {
+    "a": "VBUS west trunk",
+    "an": "USB_VBUS",
+    "b": "7630e523-5150-4eae-8af7-f85c5514e5d5",
+    "bn": "GND",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      167.7,
+      110.99124952439175
+    ]
+  },
+  {
+    "a": "VBUS west trunk",
+    "an": "USB_VBUS",
+    "b": "USB resistor bottom escape",
+    "bn": "USB_DM_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      166.5,
+      111.0
+    ]
+  },
+  {
+    "a": "VBUS west trunk",
+    "an": "USB_VBUS",
+    "b": "USB resistor transition",
+    "bn": "USB_DP_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      164.7,
+      110.93553680077191
+    ]
+  },
+  {
+    "a": "VBUS west trunk",
+    "an": "USB_VBUS",
+    "b": "USB resistor bottom escape",
+    "bn": "USB_DP_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      164.7,
+      111.0
+    ]
+  },
+  {
+    "a": "VBUS west trunk",
+    "an": "USB_VBUS",
+    "b": "key pullup supply",
+    "bn": "VDD_3V3",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      161.896135884122,
+      110.96024303349023
+    ]
+  },
+  {
+    "a": "VBUS west trunk",
+    "an": "USB_VBUS",
+    "b": "pullup supply transition",
+    "bn": "VDD_3V3",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      161.9561101489408,
+      110.99109150019397
+    ]
+  },
+  {
+    "a": "VBUS west trunk",
+    "an": "USB_VBUS",
+    "b": "charger west channel",
+    "bn": "CHG_SCL",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      164.03857455048296,
+      111.13608660052188
+    ]
+  },
+  {
+    "a": "VBUS west trunk",
+    "an": "USB_VBUS",
+    "b": "screen channel",
+    "bn": "EPD_BUSY_TBD",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      177.001,
+      111.0
+    ]
+  },
+  {
+    "a": "VBUS west trunk",
+    "an": "USB_VBUS",
+    "b": "screen channel",
+    "bn": "EPD_RESET_N_TBD",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      176.2,
+      111.0
+    ]
+  },
+  {
+    "a": "VBUS west trunk",
+    "an": "USB_VBUS",
+    "b": "screen channel",
+    "bn": "EPD_MOSI_TBD",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      172.201,
+      111.0
+    ]
+  },
+  {
+    "a": "VBUS west trunk",
+    "an": "USB_VBUS",
+    "b": "screen channel",
+    "bn": "EPD_SCK_TBD",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      173.001,
+      111.0
+    ]
+  },
+  {
+    "a": "VBUS west trunk",
+    "an": "USB_VBUS",
+    "b": "screen channel",
+    "bn": "EPD_CS_N_TBD",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      173.801,
+      111.0
+    ]
+  },
+  {
+    "a": "VBUS west trunk",
+    "an": "USB_VBUS",
+    "b": "screen channel",
+    "bn": "EPD_DC_TBD",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      174.601,
+      111.0
+    ]
+  },
+  {
+    "a": "VBUS west trunk",
+    "an": "USB_VBUS",
+    "b": "USB DP west trunk",
+    "bn": "USB_DP_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      166.45,
+      111.0
+    ]
+  },
+  {
+    "a": "VBUS west trunk",
+    "an": "USB_VBUS",
+    "b": "USB DM west trunk",
+    "bn": "USB_DM_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      167.55,
+      111.0
+    ]
+  },
+  {
+    "a": "VBUS west trunk",
+    "an": "USB_VBUS",
+    "b": "charger west channel",
+    "bn": "CHG_SCL",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      166.06816786405054,
+      111.13623650720676
+    ]
+  },
+  {
+    "a": "USB VBUS two contacts",
+    "an": "USB_VBUS",
+    "b": "a417995d-a265-46f0-9ac2-97c1a342f80c",
+    "bn": "USB_DM_CONN",
+    "distance": 0.086,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      183.34191491623557,
+      105.52234872522553
+    ]
+  },
+  {
+    "a": "C1 separate branch",
+    "an": "USB_VBUS",
+    "b": "USB resistor transition",
+    "bn": "USB_DM_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      166.6862226667081,
+      110.96309072653705
+    ]
+  },
+  {
+    "a": "C1 separate branch",
+    "an": "USB_VBUS",
+    "b": "USB resistor bottom escape",
+    "bn": "USB_DM_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      166.65849621513738,
+      111.07473201480423
+    ]
+  },
+  {
+    "a": "C1 separate branch",
+    "an": "USB_VBUS",
+    "b": "USB DP west trunk",
+    "bn": "USB_DP_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      166.67787678314497,
+      111.00857649977884
+    ]
+  },
+  {
+    "a": "C1 separate branch",
+    "an": "USB_VBUS",
+    "b": "USB DM west trunk",
+    "bn": "USB_DM_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      167.125,
+      111.42500000000001
+    ]
+  },
+  {
+    "a": "C1 separate branch",
+    "an": "USB_VBUS",
+    "b": "USB resistor transition",
+    "bn": "USB_DM_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      166.5,
+      110.97020781025333
+    ]
+  },
+  {
+    "a": "C1 separate branch",
+    "an": "USB_VBUS",
+    "b": "USB resistor bottom escape",
+    "bn": "USB_DM_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      166.5,
+      111.0
+    ]
+  },
+  {
+    "a": "C1 separate branch",
+    "an": "USB_VBUS",
+    "b": "USB resistor transition",
+    "bn": "USB_DP_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      164.7,
+      110.97020781025333
+    ]
+  },
+  {
+    "a": "C1 separate branch",
+    "an": "USB_VBUS",
+    "b": "USB resistor bottom escape",
+    "bn": "USB_DP_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      164.7,
+      111.0
+    ]
+  },
+  {
+    "a": "C1 separate branch",
+    "an": "USB_VBUS",
+    "b": "key pullup supply",
+    "bn": "VDD_3V3",
+    "distance": 0.0106,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      161.92905551664407,
+      110.97542622403645
+    ]
+  },
+  {
+    "a": "C1 separate branch",
+    "an": "USB_VBUS",
+    "b": "pullup supply transition",
+    "bn": "VDD_3V3",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      161.9915174686875,
+      111.00015802419779
+    ]
+  },
+  {
+    "a": "C1 separate branch",
+    "an": "USB_VBUS",
+    "b": "charger west channel",
+    "bn": "CHG_SCL",
+    "distance": 0.05,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      164.05982466738425,
+      111.10489779553431
+    ]
+  },
+  {
+    "a": "C1 separate branch",
+    "an": "USB_VBUS",
+    "b": "USB DP west trunk",
+    "bn": "USB_DP_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      166.3789555517957,
+      111.07104444820428
+    ]
+  },
+  {
+    "a": "C1 separate branch",
+    "an": "USB_VBUS",
+    "b": "charger west channel",
+    "bn": "CHG_SCL",
+    "distance": 0.05,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      166.06608517410857,
+      111.10216120075684
+    ]
+  },
+  {
+    "a": "U3 output and C5",
+    "an": "VDD_3V3",
+    "b": "USB resistor transition",
+    "bn": "USB_DP_CONN",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      164.9305500304754,
+      110.30648082484981
+    ]
+  },
+  {
+    "a": "U3 output and C5",
+    "an": "VDD_3V3",
+    "b": "USB resistor upper pad",
+    "bn": "USB_DP_CONN",
+    "distance": 0.1362,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      164.85829516844638,
+      110.41538195658015
+    ]
+  },
+  {
+    "a": "MCU supply crossover under C1",
+    "an": "VDD_3V3",
+    "b": "USB resistor transition",
+    "bn": "USB_DM_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      166.5,
+      110.26446319922808
+    ]
+  },
+  {
+    "a": "MCU supply crossover under C1",
+    "an": "VDD_3V3",
+    "b": "7630e523-5150-4eae-8af7-f85c5514e5d5",
+    "bn": "GND",
+    "distance": 0.05,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      167.7,
+      110.37144564650228
+    ]
+  },
+  {
+    "a": "MCU supply crossover under C1",
+    "an": "VDD_3V3",
+    "b": "USB resistor bottom escape",
+    "bn": "USB_DM_CONN",
+    "distance": 0.075,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      166.5,
+      110.38760835031417
+    ]
+  },
+  {
+    "a": "MCU supply crossover under C1",
+    "an": "VDD_3V3",
+    "b": "USB resistor transition",
+    "bn": "USB_DP_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      164.9442621593552,
+      110.28219414409236
+    ]
+  },
+  {
+    "a": "MCU supply crossover under C1",
+    "an": "VDD_3V3",
+    "b": "USB resistor bottom escape",
+    "bn": "USB_DP_CONN",
+    "distance": 0.1861,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      164.87429268774721,
+      110.39630537863339
+    ]
+  },
+  {
+    "a": "MCU supply crossover under C1",
+    "an": "VDD_3V3",
+    "b": "USB DP west trunk",
+    "bn": "USB_DP_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      167.2,
+      110.25
+    ]
+  },
+  {
+    "a": "MCU supply crossover under C1",
+    "an": "VDD_3V3",
+    "b": "USB DM west trunk",
+    "bn": "USB_DM_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      168.3,
+      110.25
+    ]
+  },
+  {
+    "a": "MCU supply crossover under C1",
+    "an": "VDD_3V3",
+    "b": "USB DM west trunk",
+    "bn": "USB_DM_CONN",
+    "distance": 0.1493,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      169.14445436482632,
+      109.75857864376269
+    ]
+  },
+  {
+    "a": "LDO west supply branch",
+    "an": "VDD_3V3",
+    "b": "USB resistor transition",
+    "bn": "USB_DP_CONN",
+    "distance": 0.1713,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      164.90748779810772,
+      110.15925183038311
+    ]
+  },
+  {
+    "a": "LDO west supply branch",
+    "an": "VDD_3V3",
+    "b": "USB resistor transition",
+    "bn": "USB_DP_CONN",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      164.48096206183163,
+      110.52668778575709
+    ]
+  },
+  {
+    "a": "LDO west supply branch",
+    "an": "VDD_3V3",
+    "b": "USB resistor upper pad",
+    "bn": "USB_DP_CONN",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      164.5564349671433,
+      110.59509323256749
+    ]
+  },
+  {
+    "a": "LDO west supply branch",
+    "an": "VDD_3V3",
+    "b": "USB resistor transition",
+    "bn": "USB_DP_CONN",
+    "distance": 0.0388,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      164.3140058998083,
+      110.77068925376543
+    ]
+  },
+  {
+    "a": "LDO west supply branch",
+    "an": "VDD_3V3",
+    "b": "charger input transition",
+    "bn": "USB_VBUS",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      162.0,
+      110.7974981620407
+    ]
+  },
+  {
+    "a": "key pullup supply",
+    "an": "VDD_3V3",
+    "b": "charger control transition",
+    "bn": "CHG_INT_N",
+    "distance": 0.125,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      159.2,
+      110.66171719558403
+    ]
+  },
+  {
+    "a": "key pullup supply",
+    "an": "VDD_3V3",
+    "b": "charger input transition",
+    "bn": "USB_VBUS",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      161.69293737856253,
+      110.80356156629276
+    ]
+  },
+  {
+    "a": "key pullup supply",
+    "an": "VDD_3V3",
+    "b": "charger west channel",
+    "bn": "CHG_INT_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      159.2,
+      110.8
+    ]
+  },
+  {
+    "a": "key pullup supply",
+    "an": "VDD_3V3",
+    "b": "charger west channel",
+    "bn": "CHG_PG_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      158.0,
+      111.49999999999999
+    ]
+  },
+  {
+    "a": "key pullup supply",
+    "an": "VDD_3V3",
+    "b": "charger west channel",
+    "bn": "CHG_SCL",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      158.19437815664617,
+      111.13875631329236
+    ]
+  },
+  {
+    "a": "key pullup supply",
+    "an": "VDD_3V3",
+    "b": "charger west channel",
+    "bn": "CHG_SDA",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      157.75125631329234,
+      111.62500000000001
+    ]
+  },
+  {
+    "a": "key pullup supply",
+    "an": "VDD_3V3",
+    "b": "charger west channel",
+    "bn": "CHG_SCL",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      158.25292908092362,
+      111.24707091907638
+    ]
+  },
+  {
+    "a": "key pullup supply",
+    "an": "VDD_3V3",
+    "b": "charger west channel",
+    "bn": "CHG_SDA",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      157.5004912113503,
+      112.07306889959725
+    ]
+  },
+  {
+    "a": "charger pullup supply",
+    "an": "VDD_3V3",
+    "b": "charger west channel",
+    "bn": "CHG_PG_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      158.0,
+      110.8
+    ]
+  },
+  {
+    "a": "charger pullup supply",
+    "an": "VDD_3V3",
+    "b": "charger west channel",
+    "bn": "CHG_CE_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      155.7535,
+      110.8
+    ]
+  },
+  {
+    "a": "charger pullup supply",
+    "an": "VDD_3V3",
+    "b": "charger west channel",
+    "bn": "CHG_SCL",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      158.0,
+      110.8
+    ]
+  },
+  {
+    "a": "charger pullup supply",
+    "an": "VDD_3V3",
+    "b": "charger control transition",
+    "bn": "CHG_SDA",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      157.6,
+      110.80250183795931
+    ]
+  },
+  {
+    "a": "charger pullup supply",
+    "an": "VDD_3V3",
+    "b": "charger west channel",
+    "bn": "CHG_SDA",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      157.60000000000002,
+      110.79485424789024
+    ]
+  },
+  {
+    "a": "U2 EP local return",
+    "an": "GND",
+    "b": "charger pin escape",
+    "bn": "CHG_CE_N",
+    "distance": 0.15,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      157.3507819744413,
+      106.27693110040275
+    ]
+  },
+  {
+    "a": "charger and LDO return backbone",
+    "an": "GND",
+    "b": "charger west channel",
+    "bn": "CHG_CE_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      155.65211254980375,
+      107.19323997885111
+    ]
+  },
+  {
+    "a": "charger and LDO return backbone",
+    "an": "GND",
+    "b": "charger west channel",
+    "bn": "CHG_PG_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      158.0,
+      107.3
+    ]
+  },
+  {
+    "a": "charger and LDO return backbone",
+    "an": "GND",
+    "b": "charger west channel",
+    "bn": "CHG_CE_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      155.7535,
+      107.3
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_MOSI_TBD",
+    "b": "screen channel",
+    "bn": "EPD_SCK_TBD",
+    "distance": 0.1328,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      172.24211752741763,
+      101.49632435723764
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_MOSI_TBD",
+    "b": "USB DP west trunk",
+    "bn": "USB_DP_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      172.201,
+      105.24900000000001
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_MOSI_TBD",
+    "b": "USB DM west trunk",
+    "bn": "USB_DM_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      172.201,
+      106.34900000000002
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_MOSI_TBD",
+    "b": "screen channel",
+    "bn": "EPD_SCK_TBD",
+    "distance": 0.1328,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      166.40613007722612,
+      95.64264797234503
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_MOSI_TBD",
+    "b": "757c9c9b-b6d6-412c-a18c-086dd6660a7d",
+    "bn": "GND",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      168.99841624402802,
+      98.29741624402806
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_MOSI_TBD",
+    "b": "screen channel",
+    "bn": "EPD_SCK_TBD",
+    "distance": 0.1328,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      169.32528932188134,
+      98.56571067811865
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_SCK_TBD",
+    "b": "screen channel",
+    "bn": "EPD_CS_N_TBD",
+    "distance": 0.1328,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      173.04211752741762,
+      101.89632435723765
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_SCK_TBD",
+    "b": "USB DP west trunk",
+    "bn": "USB_DP_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      173.001,
+      104.449
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_SCK_TBD",
+    "b": "USB DM west trunk",
+    "bn": "USB_DM_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      173.001,
+      105.549
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_SCK_TBD",
+    "b": "screen channel",
+    "bn": "EPD_CS_N_TBD",
+    "distance": 0.1328,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      167.3061300772261,
+      96.14264797234503
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_SCK_TBD",
+    "b": "757c9c9b-b6d6-412c-a18c-086dd6660a7d",
+    "bn": "GND",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      169.16083914260867,
+      98.05983914260865
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_SCK_TBD",
+    "b": "screen channel",
+    "bn": "EPD_CS_N_TBD",
+    "distance": 0.1328,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      170.17528932188134,
+      99.01571067811867
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_SCK_TBD",
+    "b": "FPC signal transition",
+    "bn": "EPD_MOSI_TBD",
+    "distance": 0.125,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      168.0,
+      95.45171719558402
+    ]
+  },
+  {
+    "a": "FPC signal entry",
+    "an": "EPD_SCK_TBD",
+    "b": "FPC signal transition",
+    "bn": "EPD_MOSI_TBD",
+    "distance": 0.125,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      168.0,
+      95.45171719558402
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_CS_N_TBD",
+    "b": "screen channel",
+    "bn": "EPD_DC_TBD",
+    "distance": 0.1328,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      173.8421175274176,
+      102.29632435723764
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_CS_N_TBD",
+    "b": "USB DP west trunk",
+    "bn": "USB_DP_CONN",
+    "distance": 0.049,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      173.801,
+      103.45
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_CS_N_TBD",
+    "b": "USB DP west trunk",
+    "bn": "USB_DP_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      173.801,
+      103.64900000000002
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_CS_N_TBD",
+    "b": "USB DM west trunk",
+    "bn": "USB_DM_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      173.801,
+      104.74900000000002
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_CS_N_TBD",
+    "b": "screen channel",
+    "bn": "EPD_DC_TBD",
+    "distance": 0.1328,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      168.2061300772261,
+      96.64264797234503
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_CS_N_TBD",
+    "b": "757c9c9b-b6d6-412c-a18c-086dd6660a7d",
+    "bn": "GND",
+    "distance": 0.1939,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      169.34571699141102,
+      97.94661695762386
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_CS_N_TBD",
+    "b": "screen channel",
+    "bn": "EPD_DC_TBD",
+    "distance": 0.1328,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      171.02528932188133,
+      99.46571067811865
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_CS_N_TBD",
+    "b": "FPC signal transition",
+    "bn": "EPD_SCK_TBD",
+    "distance": 0.125,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      168.8,
+      95.95171719558402
+    ]
+  },
+  {
+    "a": "FPC signal entry",
+    "an": "EPD_CS_N_TBD",
+    "b": "FPC signal transition",
+    "bn": "EPD_SCK_TBD",
+    "distance": 0.125,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      168.8,
+      95.95171719558402
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_DC_TBD",
+    "b": "USB DP west trunk",
+    "bn": "USB_DP_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      174.601,
+      103.45
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_DC_TBD",
+    "b": "USB DM west trunk",
+    "bn": "USB_DM_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      174.601,
+      104.15
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_DC_TBD",
+    "b": "USB DM west trunk",
+    "bn": "USB_DM_CONN",
+    "distance": 0.051,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      174.6003795456205,
+      104.15
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_DC_TBD",
+    "b": "FPC signal transition",
+    "bn": "EPD_CS_N_TBD",
+    "distance": 0.125,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      169.6,
+      96.45171719558402
+    ]
+  },
+  {
+    "a": "FPC signal entry",
+    "an": "EPD_DC_TBD",
+    "b": "FPC signal transition",
+    "bn": "EPD_CS_N_TBD",
+    "distance": 0.125,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      169.6,
+      96.45171719558402
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_RESET_N_TBD",
+    "b": "USB DP west trunk",
+    "bn": "USB_DP_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      176.2,
+      103.45
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_RESET_N_TBD",
+    "b": "USB DM west trunk",
+    "bn": "USB_DM_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      176.2,
+      104.15
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_RESET_N_TBD",
+    "b": "screen channel",
+    "bn": "EPD_BUSY_TBD",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      176.2,
+      102.69899999999998
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_RESET_N_TBD",
+    "b": "screen channel",
+    "bn": "EPD_BUSY_TBD",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      171.7721146180379,
+      97.47211461803792
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_RESET_N_TBD",
+    "b": "FPC signal transition",
+    "bn": "EPD_BUSY_TBD",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      171.91168912095367,
+      97.6116891209537
+    ]
+  },
+  {
+    "a": "FPC signal entry",
+    "an": "EPD_RESET_N_TBD",
+    "b": "FPC signal transition",
+    "bn": "EPD_DC_TBD",
+    "distance": 0.125,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      170.4,
+      96.95171719558402
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_BUSY_TBD",
+    "b": "USB DP west trunk",
+    "bn": "USB_DP_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      177.001,
+      103.61250000000001
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_BUSY_TBD",
+    "b": "USB DM west trunk",
+    "bn": "USB_DM_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      177.001,
+      104.15
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_BUSY_TBD",
+    "b": "FPC signal transition",
+    "bn": "EPD_RESET_N_TBD",
+    "distance": 0.1669,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      171.01879556257802,
+      97.44246435489453
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_BUSY_TBD",
+    "b": "USB DP west trunk",
+    "bn": "USB_DP_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      176.8119834957055,
+      103.3109834957055
+    ]
+  },
+  {
+    "a": "screen channel",
+    "an": "EPD_BUSY_TBD",
+    "b": "FPC signal transition",
+    "bn": "EPD_RESET_N_TBD",
+    "distance": 0.125,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      171.2,
+      97.45171719558402
+    ]
+  },
+  {
+    "a": "FPC signal entry",
+    "an": "EPD_BUSY_TBD",
+    "b": "FPC signal transition",
+    "bn": "EPD_RESET_N_TBD",
+    "distance": 0.125,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      171.2,
+      97.45171719558402
+    ]
+  },
+  {
+    "a": "charger west channel",
+    "an": "CHG_SCL",
+    "b": "charger west channel",
+    "bn": "CHG_PG_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      158.0,
+      110.65
+    ]
+  },
+  {
+    "a": "charger west channel",
+    "an": "CHG_SCL",
+    "b": "charger control transition",
+    "bn": "CHG_SDA",
+    "distance": 0.025,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      158.0,
+      110.9
+    ]
+  },
+  {
+    "a": "charger west channel",
+    "an": "CHG_SCL",
+    "b": "charger west channel",
+    "bn": "CHG_PG_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      158.1000902863749,
+      111.30367564276236
+    ]
+  },
+  {
+    "a": "charger west channel",
+    "an": "CHG_SCL",
+    "b": "charger control transition",
+    "bn": "CHG_SDA",
+    "distance": 0.1907,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      157.94561085709213,
+      111.25537636810563
+    ]
+  },
+  {
+    "a": "charger west channel",
+    "an": "CHG_SCL",
+    "b": "USB resistor bottom escape",
+    "bn": "USB_DP_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      164.7,
+      111.3
+    ]
+  },
+  {
+    "a": "charger west channel",
+    "an": "CHG_SCL",
+    "b": "bbf39831-0683-4849-8aca-9c613bc585ea",
+    "bn": "KEY_OK_N",
+    "distance": 0.1054,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      164.4381,
+      111.32873202184638
+    ]
+  },
+  {
+    "a": "charger west channel",
+    "an": "CHG_SCL",
+    "b": "pullup supply transition",
+    "bn": "VDD_3V3",
+    "distance": 0.125,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      161.7,
+      111.26171719558403
+    ]
+  },
+  {
+    "a": "charger west channel",
+    "an": "CHG_SCL",
+    "b": "charger west channel",
+    "bn": "CHG_INT_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      159.2,
+      111.3
+    ]
+  },
+  {
+    "a": "charger west channel",
+    "an": "CHG_SCL",
+    "b": "USB DP west trunk",
+    "bn": "USB_DP_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      165.94911752741763,
+      111.30367564276236
+    ]
+  },
+  {
+    "a": "charger west channel",
+    "an": "CHG_SCL",
+    "b": "USB resistor bottom escape",
+    "bn": "USB_DM_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      166.48466298185286,
+      111.71866298185286
+    ]
+  },
+  {
+    "a": "charger west channel",
+    "an": "CHG_SCL",
+    "b": "USB DM west trunk",
+    "bn": "USB_DM_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      166.57322206059467,
+      111.80722206059465
+    ]
+  },
+  {
+    "a": "charger west channel",
+    "an": "CHG_SCL",
+    "b": "USB DP west trunk",
+    "bn": "USB_DP_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      166.18422718241317,
+      111.41822718241315
+    ]
+  },
+  {
+    "a": "charger west channel",
+    "an": "CHG_SCL",
+    "b": "USB DM west trunk",
+    "bn": "USB_DM_CONN",
+    "distance": 0.0558,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      166.6366837342594,
+      111.85164575210976
+    ]
+  },
+  {
+    "a": "charger pin escape",
+    "an": "CHG_SDA",
+    "b": "charger control transition",
+    "bn": "CHG_SCL",
+    "distance": 0.025,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      157.6,
+      110.0
+    ]
+  },
+  {
+    "a": "charger west channel",
+    "an": "CHG_SDA",
+    "b": "charger west channel",
+    "bn": "CHG_PG_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      158.0,
+      112.1
+    ]
+  },
+  {
+    "a": "charger west channel",
+    "an": "CHG_SDA",
+    "b": "charger west channel",
+    "bn": "CHG_INT_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      159.2,
+      112.1
+    ]
+  },
+  {
+    "a": "charger west channel",
+    "an": "CHG_SDA",
+    "b": "25194a5e-d046-4c38-a0da-2804eda17e2e",
+    "bn": "KEY_PREV_N",
+    "distance": 0.1373,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      159.3219,
+      112.14186820672687
+    ]
+  },
+  {
+    "a": "charger west channel",
+    "an": "CHG_SDA",
+    "b": "charger west channel",
+    "bn": "CHG_PG_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      163.07960000000003,
+      112.9
+    ]
+  },
+  {
+    "a": "charger west channel",
+    "an": "CHG_SDA",
+    "b": "charger west channel",
+    "bn": "CHG_INT_N",
+    "distance": 0.0129,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      165.146915945754,
+      114.96731594575397
+    ]
+  },
+  {
+    "a": "charger west channel",
+    "an": "CHG_SDA",
+    "b": "charger west channel",
+    "bn": "CHG_INT_N",
+    "distance": 0.0129,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      163.711366991411,
+      113.53176699141099
+    ]
+  },
+  {
+    "a": "charger west channel",
+    "an": "CHG_SDA",
+    "b": "MCU charge transition",
+    "bn": "CHG_INT_N",
+    "distance": 0.0177,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      166.68779856547724,
+      116.51579843752737
+    ]
+  },
+  {
+    "a": "MCU charge entry",
+    "an": "CHG_SDA",
+    "b": "MCU charge transition",
+    "bn": "CHG_INT_N",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      166.91598021352536,
+      116.53758887028656
+    ]
+  },
+  {
+    "a": "charger west channel",
+    "an": "CHG_PG_N",
+    "b": "charger control transition",
+    "bn": "CHG_SCL",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      158.0,
+      110.0
+    ]
+  },
+  {
+    "a": "charger west channel",
+    "an": "CHG_PG_N",
+    "b": "charger control transition",
+    "bn": "CHG_SDA",
+    "distance": 0.025,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      158.0,
+      110.9
+    ]
+  },
+  {
+    "a": "charger west channel",
+    "an": "CHG_PG_N",
+    "b": "charger west channel",
+    "bn": "CHG_INT_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      159.2,
+      112.9
+    ]
+  },
+  {
+    "a": "charger west channel",
+    "an": "CHG_PG_N",
+    "b": "25194a5e-d046-4c38-a0da-2804eda17e2e",
+    "bn": "KEY_PREV_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      159.3219,
+      112.909934388476
+    ]
+  },
+  {
+    "a": "charger pin escape",
+    "an": "CHG_INT_N",
+    "b": "charger control transition",
+    "bn": "CHG_SCL",
+    "distance": 0.025,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      158.4,
+      110.0
+    ]
+  },
+  {
+    "a": "charger pin escape",
+    "an": "CHG_INT_N",
+    "b": "charger control transition",
+    "bn": "CHG_SCL",
+    "distance": 0.0726,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      158.39151746868754,
+      110.20015802419778
+    ]
+  },
+  {
+    "a": "charger west channel",
+    "an": "CHG_INT_N",
+    "b": "25194a5e-d046-4c38-a0da-2804eda17e2e",
+    "bn": "KEY_PREV_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      159.2,
+      112.6123
+    ]
+  },
+  {
+    "a": "charger west channel",
+    "an": "CHG_INT_N",
+    "b": "charger west channel",
+    "bn": "CHG_CE_N",
+    "distance": 0.0926,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      165.53502294359302,
+      115.61595158735571
+    ]
+  },
+  {
+    "a": "charger west channel",
+    "an": "CHG_INT_N",
+    "b": "charger west channel",
+    "bn": "CHG_CE_N",
+    "distance": 0.0926,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      164.29010517314887,
+      114.38246097496895
+    ]
+  },
+  {
+    "a": "charger west channel",
+    "an": "CHG_INT_N",
+    "b": "MCU charge transition",
+    "bn": "CHG_SDA",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      166.56916280038223,
+      116.61996280038224
+    ]
+  },
+  {
+    "a": "MCU charge entry",
+    "an": "CHG_INT_N",
+    "b": "MCU charge transition",
+    "bn": "CHG_SDA",
+    "distance": 0.0177,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      166.91197476745154,
+      116.90517564276236
+    ]
+  },
+  {
+    "a": "charger west channel",
+    "an": "CHG_CE_N",
+    "b": "MCU charge transition",
+    "bn": "CHG_SDA",
+    "distance": 0.0305,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      166.37664559624358,
+      116.76873016136486
+    ]
+  },
+  {
+    "a": "charger west channel",
+    "an": "CHG_CE_N",
+    "b": "MCU charge transition",
+    "bn": "CHG_INT_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      166.7091425928772,
+      117.10304259287722
+    ]
+  },
+  {
+    "a": "USB DP west trunk",
+    "an": "USB_DP_CONN",
+    "b": "USB resistor transition",
+    "bn": "USB_DM_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      166.64420895107787,
+      110.80579104892212
+    ]
+  },
+  {
+    "a": "USB DP west trunk",
+    "an": "USB_DP_CONN",
+    "b": "USB resistor bottom escape",
+    "bn": "USB_DM_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      166.5,
+      110.94999999999999
+    ]
+  },
+  {
+    "a": "USB DP west trunk",
+    "an": "USB_DP_CONN",
+    "b": "bbf39831-0683-4849-8aca-9c613bc585ea",
+    "bn": "KEY_OK_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      164.78101847229323,
+      111.75017564276236
+    ]
+  },
+  {
+    "a": "USB DM west trunk",
+    "an": "USB_DM_CONN",
+    "b": "7630e523-5150-4eae-8af7-f85c5514e5d5",
+    "bn": "GND",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      167.7211673595184,
+      110.8288326404816
+    ]
+  },
+  {
+    "a": "USB DM west trunk",
+    "an": "USB_DM_CONN",
+    "b": "MCU supply entry",
+    "bn": "VDD_3V3",
+    "distance": 0.0493,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      169.26718862899793,
+      109.29313440568448
+    ]
+  },
+  {
+    "a": "USB resistor bottom escape",
+    "an": "USB_DP_CONN",
+    "b": "LDO output branch",
+    "bn": "VDD_3V3",
+    "distance": 0.0863,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      164.719731599614,
+      110.62020781025333
+    ]
+  },
+  {
+    "a": "USB resistor bottom escape",
+    "an": "USB_DP_CONN",
+    "b": "bbf39831-0683-4849-8aca-9c613bc585ea",
+    "bn": "KEY_OK_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu"
+    ],
+    "xy": [
+      164.7,
+      111.57896386075387
+    ]
+  },
+  {
+    "a": "USB resistor upper pad",
+    "an": "USB_DP_CONN",
+    "b": "LDO output branch",
+    "bn": "VDD_3V3",
+    "distance": 0.0863,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      164.719731599614,
+      110.62020781025333
+    ]
+  },
+  {
+    "a": "USB resistor upper pad",
+    "an": "USB_DP_CONN",
+    "b": "bbf39831-0683-4849-8aca-9c613bc585ea",
+    "bn": "KEY_OK_N",
+    "distance": 0.0,
+    "layer": [
+      "F.Cu"
+    ],
+    "xy": [
+      164.7,
+      111.57896386075387
+    ]
+  },
+  {
+    "a": "charger input transition",
+    "an": "USB_VBUS",
+    "b": "pullup supply transition",
+    "bn": "VDD_3V3",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu",
+      "F.Cu"
+    ],
+    "xy": [
+      161.94558133798478,
+      110.70606340425206
+    ]
+  },
+  {
+    "a": "LDO output branch",
+    "an": "VDD_3V3",
+    "b": "USB resistor transition",
+    "bn": "USB_DP_CONN",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu",
+      "F.Cu"
+    ],
+    "xy": [
+      164.912380525728,
+      110.32234872522552
+    ]
+  },
+  {
+    "a": "MCU charge transition",
+    "an": "CHG_SDA",
+    "b": "MCU charge transition",
+    "bn": "CHG_INT_N",
+    "distance": 0.0,
+    "layer": [
+      "B.Cu",
+      "F.Cu"
+    ],
+    "xy": [
+      166.7200863544179,
+      116.61838723618598
+    ]
+  },
+  {
+    "a": "MCU charge transition",
+    "an": "CHG_INT_N",
+    "b": "MCU charge transition",
+    "bn": "CHG_CE_N",
+    "distance": 0.0303,
+    "layer": [
+      "B.Cu",
+      "F.Cu"
+    ],
+    "xy": [
+      166.9251914303353,
+      117.09808099830762
+    ]
+  },
+  {
+    "a": "USB west transition",
+    "an": "USB_DP_CONN",
+    "b": "USB west transition",
+    "bn": "USB_DM_CONN",
+    "distance": 0.1,
+    "layer": [
+      "B.Cu",
+      "F.Cu"
+    ],
+    "xy": [
+      179.0,
+      103.70700863149764
+    ]
+  }
+]

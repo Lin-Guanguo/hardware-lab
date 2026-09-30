@@ -1,0 +1,730 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-option-a/NFC-Card-V4.kicad_pcb",
+  "description": "Option A jointly planned charger controls, local paths and all pullup branches",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-option-a/controls-ipc.json",
+  "routes": [
+    {
+      "name": "SDA charger exit",
+      "net": "CHG_SDA",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          176.6,
+          109.05
+        ],
+        [
+          176.6,
+          109.7
+        ],
+        [
+          176,
+          110.3
+        ]
+      ]
+    },
+    {
+      "name": "SDA local bridge",
+      "net": "CHG_SDA",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          176,
+          110.3
+        ],
+        [
+          175.4,
+          110.9
+        ],
+        [
+          175.4,
+          115.701
+        ],
+        [
+          175.001,
+          116.1
+        ]
+      ]
+    },
+    {
+      "name": "SDA MCU inner pad",
+      "net": "CHG_SDA",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          175.001,
+          116.1
+        ],
+        [
+          175.001,
+          114.834
+        ]
+      ]
+    },
+    {
+      "name": "SDA pullup branch",
+      "net": "CHG_SDA",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          175.001,
+          114.834
+        ],
+        [
+          179.1125,
+          114.834
+        ],
+        [
+          179.6465,
+          114.3
+        ]
+      ]
+    },
+    {
+      "name": "SCL direct local link",
+      "net": "CHG_SCL",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          177.001,
+          109.05
+        ],
+        [
+          177.001,
+          113.934
+        ]
+      ]
+    },
+    {
+      "name": "SCL pullup bridge",
+      "net": "CHG_SCL",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          177.001,
+          112.2
+        ],
+        [
+          178.6,
+          113.799
+        ],
+        [
+          178.6,
+          116
+        ]
+      ]
+    },
+    {
+      "name": "SCL pullup contact",
+      "net": "CHG_SCL",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          178.6,
+          116
+        ],
+        [
+          179.6465,
+          116.0
+        ]
+      ]
+    },
+    {
+      "name": "INT charger exit",
+      "net": "CHG_INT_N",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          177.4,
+          109.05
+        ],
+        [
+          177.4,
+          109.7
+        ],
+        [
+          178.1,
+          110.4
+        ]
+      ]
+    },
+    {
+      "name": "INT crossing over SCL",
+      "net": "CHG_INT_N",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          178.1,
+          110.4
+        ],
+        [
+          177.4,
+          110.4
+        ],
+        [
+          176.2,
+          111.6
+        ]
+      ]
+    },
+    {
+      "name": "INT MCU outer pad",
+      "net": "CHG_INT_N",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          176.2,
+          111.6
+        ],
+        [
+          175.401,
+          112.399
+        ],
+        [
+          174.601,
+          112.399
+        ],
+        [
+          174.601,
+          113.934
+        ]
+      ]
+    },
+    {
+      "name": "INT pullup branch",
+      "net": "CHG_INT_N",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          178.1,
+          110.4
+        ],
+        [
+          179.7,
+          112
+        ],
+        [
+          179.7,
+          116.6
+        ],
+        [
+          178.6,
+          117.7
+        ]
+      ]
+    },
+    {
+      "name": "INT pullup contact",
+      "net": "CHG_INT_N",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          178.6,
+          117.7
+        ],
+        [
+          179.6465,
+          117.7
+        ]
+      ]
+    },
+    {
+      "name": "PG north exit",
+      "net": "CHG_PG_N",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          177.0,
+          106.95
+        ],
+        [
+          177,
+          105.5
+        ]
+      ]
+    },
+    {
+      "name": "PG local west bridge",
+      "net": "CHG_PG_N",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          177,
+          105.5
+        ],
+        [
+          176.7,
+          105.8
+        ],
+        [
+          172.8,
+          105.8
+        ],
+        [
+          172.8,
+          114.899
+        ],
+        [
+          174.201,
+          116.3
+        ]
+      ]
+    },
+    {
+      "name": "PG MCU inner pad",
+      "net": "CHG_PG_N",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          174.201,
+          116.3
+        ],
+        [
+          174.201,
+          114.834
+        ]
+      ]
+    },
+    {
+      "name": "PG pullup branch",
+      "net": "CHG_PG_N",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          174.201,
+          116.3
+        ],
+        [
+          174.201,
+          118.8
+        ],
+        [
+          178,
+          118.8
+        ],
+        [
+          178.6,
+          119.4
+        ]
+      ]
+    },
+    {
+      "name": "PG pullup contact",
+      "net": "CHG_PG_N",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          178.6,
+          119.4
+        ],
+        [
+          179.6465,
+          119.4
+        ]
+      ]
+    },
+    {
+      "name": "CE north exit",
+      "net": "CHG_CE_N",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          176.6,
+          106.95
+        ],
+        [
+          176.6,
+          106.3
+        ],
+        [
+          175.5,
+          106.3
+        ],
+        [
+          175.25,
+          106.55
+        ]
+      ]
+    },
+    {
+      "name": "CE local bridge",
+      "net": "CHG_CE_N",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          175.25,
+          106.55
+        ],
+        [
+          175.25,
+          109.5
+        ],
+        [
+          173.801,
+          110.949
+        ],
+        [
+          173.801,
+          112.5
+        ]
+      ]
+    },
+    {
+      "name": "CE MCU outer pad",
+      "net": "CHG_CE_N",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          173.801,
+          112.5
+        ],
+        [
+          173.80100000000002,
+          113.934
+        ]
+      ]
+    },
+    {
+      "name": "CE north pullup",
+      "net": "CHG_CE_N",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          175.25,
+          106.55
+        ],
+        [
+          175.25,
+          103.2965
+        ],
+        [
+          174.3535,
+          102.4
+        ]
+      ]
+    },
+    {
+      "name": "BAT pin pitch neck",
+      "net": "BAT_PACK_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          177.4,
+          106.95
+        ],
+        [
+          177.4,
+          106.3
+        ],
+        [
+          177.8,
+          105.9
+        ]
+      ]
+    },
+    {
+      "name": "BAT local capacitor",
+      "net": "BAT_PACK_TBD",
+      "layer": "F.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          177.8,
+          105.9
+        ],
+        [
+          177.8,
+          104.8
+        ],
+        [
+          177.3,
+          104.3
+        ],
+        [
+          176.2,
+          104.3
+        ]
+      ]
+    },
+    {
+      "name": "BAT paired lead exit",
+      "net": "BAT_PACK_TBD",
+      "layer": "F.Cu",
+      "width": 0.5,
+      "points": [
+        [
+          142.5,
+          111.3005
+        ],
+        [
+          142.5,
+          110.05
+        ],
+        [
+          161.85,
+          110.05
+        ],
+        [
+          165.9,
+          106
+        ]
+      ]
+    },
+    {
+      "name": "BAT upper bridge",
+      "net": "BAT_PACK_TBD",
+      "layer": "B.Cu",
+      "width": 0.5,
+      "points": [
+        [
+          165.9,
+          106
+        ],
+        [
+          169.2,
+          102.7
+        ],
+        [
+          175.7,
+          102.7
+        ],
+        [
+          177.3,
+          104.3
+        ]
+      ]
+    },
+    {
+      "name": "SYS pin pitch neck",
+      "net": "SYS",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          177.8,
+          106.95
+        ],
+        [
+          178.5,
+          106.25
+        ]
+      ]
+    },
+    {
+      "name": "SYS local capacitor",
+      "net": "SYS",
+      "layer": "F.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          178.5,
+          106.25
+        ],
+        [
+          179.2,
+          106.25
+        ],
+        [
+          179.20000000000002,
+          105.0
+        ]
+      ]
+    },
+    {
+      "name": "BN paired lead exit",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.5,
+      "points": [
+        [
+          145.5,
+          111.3005
+        ],
+        [
+          163.1005,
+          111.3005
+        ],
+        [
+          167.15,
+          107.251
+        ]
+      ]
+    },
+    {
+      "name": "U2 EP local ground",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          177.0,
+          108.0
+        ],
+        [
+          178.6,
+          108
+        ]
+      ]
+    },
+    {
+      "name": "U2 pin 5 ground",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          176.2,
+          106.95
+        ],
+        [
+          176.2,
+          107.5
+        ],
+        [
+          176.7,
+          108
+        ],
+        [
+          177.0,
+          108.0
+        ]
+      ]
+    }
+  ],
+  "vias": [
+    {
+      "net": "CHG_SDA",
+      "at": [
+        176,
+        110.3
+      ]
+    },
+    {
+      "net": "CHG_SDA",
+      "at": [
+        175.001,
+        116.1
+      ]
+    },
+    {
+      "net": "CHG_SCL",
+      "at": [
+        177.001,
+        112.2
+      ]
+    },
+    {
+      "net": "CHG_SCL",
+      "at": [
+        178.6,
+        116
+      ]
+    },
+    {
+      "net": "CHG_INT_N",
+      "at": [
+        178.1,
+        110.4
+      ]
+    },
+    {
+      "net": "CHG_INT_N",
+      "at": [
+        176.2,
+        111.6
+      ]
+    },
+    {
+      "net": "CHG_INT_N",
+      "at": [
+        178.6,
+        117.7
+      ]
+    },
+    {
+      "net": "CHG_PG_N",
+      "at": [
+        177,
+        105.5
+      ]
+    },
+    {
+      "net": "CHG_PG_N",
+      "at": [
+        174.201,
+        116.3
+      ]
+    },
+    {
+      "net": "CHG_PG_N",
+      "at": [
+        178.6,
+        119.4
+      ]
+    },
+    {
+      "net": "CHG_CE_N",
+      "at": [
+        175.25,
+        106.55
+      ]
+    },
+    {
+      "net": "CHG_CE_N",
+      "at": [
+        173.801,
+        112.5
+      ]
+    },
+    {
+      "net": "BAT_PACK_TBD",
+      "at": [
+        165.9,
+        106
+      ]
+    },
+    {
+      "net": "BAT_PACK_TBD",
+      "at": [
+        177.3,
+        104.3
+      ]
+    },
+    {
+      "net": "GND",
+      "at": [
+        167.15,
+        107.251
+      ]
+    },
+    {
+      "net": "GND",
+      "at": [
+        178.6,
+        108
+      ]
+    }
+  ],
+  "failures": []
+}

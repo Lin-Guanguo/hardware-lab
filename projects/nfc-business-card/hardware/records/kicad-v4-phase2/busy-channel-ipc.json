@@ -1,0 +1,17 @@
+{
+  "plan": "projects/nfc-business-card/hardware/kicad/v4-phase2/busy-channel-spec-plan.json",
+  "board": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "before": {
+    "tracks": 241,
+    "vias": 49
+  },
+  "after": {
+    "tracks": 244,
+    "vias": 49
+  },
+  "created_ids": [
+    "e904ad46-18e4-4f76-8381-60995d9664ea",
+    "89d33b4b-cfa2-49a7-813e-2d59708c0835",
+    "650d5199-4a68-41ee-8e12-f50862e5f3b4"
+  ]
+}

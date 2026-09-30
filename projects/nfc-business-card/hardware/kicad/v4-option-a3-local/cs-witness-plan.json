@@ -1,0 +1,94 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-option-a3-local/NFC-Card-V4.kicad_pcb",
+  "description": "A3 independently derived continuous access witnesses for CS, no route-order scan",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-option-a3/cs-witness-ipc.json",
+  "routes": [],
+  "vias": [
+    {
+      "name": "CS continuous access witness 0",
+      "net": "EPD_CS_N_TBD",
+      "at": [
+        157.7055,
+        102.04499999999999
+      ]
+    },
+    {
+      "name": "CS continuous access witness 1",
+      "net": "EPD_CS_N_TBD",
+      "at": [
+        161.27845931341923,
+        118.52041638303122
+      ]
+    },
+    {
+      "name": "CS continuous access witness 2",
+      "net": "EPD_CS_N_TBD",
+      "at": [
+        168.40703672963923,
+        118.904
+      ]
+    },
+    {
+      "name": "CS continuous access witness 3",
+      "net": "EPD_CS_N_TBD",
+      "at": [
+        170.8443,
+        119.13575706961198
+      ]
+    }
+  ],
+  "failures": [
+    {
+      "reason": "No path in assigned corridor",
+      "start": [
+        166.325,
+        95.99
+      ],
+      "end": [
+        157.7055,
+        102.04499999999999
+      ],
+      "visited": 1970,
+      "closest_reached": {
+        "layer": "F.Cu",
+        "point": [
+          167.2055,
+          99.64499999999998
+        ],
+        "distance": 9.798469268207153
+      },
+      "direct_blockers": [
+        {
+          "name": "C14.1",
+          "net": "EPD_VDDL",
+          "kind": "pad"
+        },
+        {
+          "name": "J2.4",
+          "net": "EPD_VDDL",
+          "kind": "pad"
+        },
+        {
+          "name": "J2.5",
+          "net": "EPD_VSPL1",
+          "kind": "pad"
+        },
+        {
+          "name": "17cd3ff6-907a-4724-8470-daf157ed5744",
+          "net": "EPD_VDDL",
+          "kind": "track"
+        },
+        {
+          "name": "a664fef0-79e2-46fd-9cdd-77312bb0cccc",
+          "net": "EPD_VDDL",
+          "kind": "track"
+        },
+        {
+          "name": "d16318cb-3833-4737-815e-ae017aab3ee4",
+          "net": "EPD_VDDL",
+          "kind": "track"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+ M .agents/skills/kicad-workflow/SKILL.md
+ M README.md
+ M projects/ai-passport/README.md
+ M projects/nfc-business-card/README.md
+ M projects/nfc-business-card/artifacts/README.md
+ M projects/nfc-business-card/docs/download_manifest.json
+ M projects/nfc-business-card/docs/kicad-next-session-handoff.md
+ M projects/nfc-business-card/docs/progress.md
+ M projects/nfc-business-card/hardware/README.md
+ M tools/kicad/README.md
+?? projects/ai-passport/docs/
+?? projects/nfc-business-card/hardware/kicad-v4-phase1.md
+?? projects/nfc-business-card/hardware/kicad-v4-phase2.md
+?? projects/nfc-business-card/hardware/kicad/
+?? projects/nfc-business-card/hardware/records/kicad-v4-option-a/
+?? projects/nfc-business-card/hardware/records/kicad-v4-option-a2/
+?? projects/nfc-business-card/hardware/records/kicad-v4-option-a3/
+?? projects/nfc-business-card/hardware/records/kicad-v4-option-a4/
+?? projects/nfc-business-card/hardware/records/kicad-v4-phase2/
+?? projects/nfc-business-card/hardware/records/kicad-v4-phase3/
+?? projects/nfc-business-card/hardware/records/kicad-v4/
+?? projects/nfc-business-card/hardware/v4-a4-firmware-interface.md
+?? projects/nfc-business-card/hardware/v4-design-inputs.md
+?? projects/nfc-business-card/hardware/v4-layout-routability-review.md
+?? projects/nfc-business-card/hardware/v4-option-a-review.md
+?? projects/nfc-business-card/hardware/v4-option-a2-review.md
+?? projects/nfc-business-card/hardware/v4-option-a3-review.md
+?? projects/nfc-business-card/hardware/v4-option-a4-review.md
+?? projects/nfc-business-card/hardware/v4-phase3-decisions.md
+?? projects/nfc-business-card/scripts/apply-v4-ipc.py
+?? projects/nfc-business-card/scripts/audit-v4-a4-joint.py
+?? projects/nfc-business-card/scripts/audit-v4-ground-components.py
+?? projects/nfc-business-card/scripts/audit-v4-option-a2-returns.py
+?? projects/nfc-business-card/scripts/audit-v4-phase2.py
+?? projects/nfc-business-card/scripts/audit-v4-trial.py
+?? projects/nfc-business-card/scripts/check-v4-j2-fanout-witness.py
+?? projects/nfc-business-card/scripts/check-v4-local-access.py
+?? projects/nfc-business-card/scripts/check-v4-option-a2-busy-window.py
+?? projects/nfc-business-card/scripts/clean-v4-schematic-stubs.py
+?? projects/nfc-business-card/scripts/compare-v4-option-a-sampling.py
+?? projects/nfc-business-card/scripts/correct-v4-dsn-keepouts.py
+?? projects/nfc-business-card/scripts/export-kicad-dfm.py
+?? projects/nfc-business-card/scripts/extract-samsung-bias.py
+?? projects/nfc-business-card/scripts/finalize-v4-native.py
+?? projects/nfc-business-card/scripts/finish-v4-phase3-silkscreen.py
+?? projects/nfc-business-card/scripts/import-v4-route-session.py
+?? projects/nfc-business-card/scripts/kicad_sexpr.py
+?? projects/nfc-business-card/scripts/migrate-v4-kicad.py
+?? projects/nfc-business-card/scripts/model-v4-external-sources.py
+?? projects/nfc-business-card/scripts/plan-v4-ground-returns.py
+?? projects/nfc-business-card/scripts/plan-v4-option-a-controls.py
+?? projects/nfc-business-card/scripts/plan-v4-option-a2-critical.py
+?? projects/nfc-business-card/scripts/plan-v4-option-a2-power.py
+?? projects/nfc-business-card/scripts/plan-v4-option-a2-west.py
+?? projects/nfc-business-card/scripts/prepare-v4-a4-joint.py
+?? projects/nfc-business-card/scripts/prepare-v4-freerouting.py
+?? projects/nfc-business-card/scripts/prepare-v4-protection-option.py
+?? projects/nfc-business-card/scripts/prepare-v4-trial.py
+?? projects/nfc-business-card/scripts/render-v4-a4-conflicts.py
+?? projects/nfc-business-card/scripts/render-v4-candidate.py
+?? projects/nfc-business-card/scripts/render-v4-option-a-comparison.py
+?? projects/nfc-business-card/scripts/replay-v4-a3-local.py
+?? projects/nfc-business-card/scripts/resolve-v4-route-conflicts.py
+?? projects/nfc-business-card/scripts/restore-v4-candidate-graphics.py
+?? projects/nfc-business-card/scripts/review-v4-layout.py
+?? projects/nfc-business-card/scripts/route-v4-octilinear.py
+?? projects/nfc-business-card/scripts/route-v4-trial.py
+?? projects/nfc-business-card/scripts/summarize-v4-j2-witness.py
+?? projects/nfc-business-card/scripts/v4_geometry.py
+?? projects/nfc-business-card/scripts/v4_paste.py
+?? projects/nfc-business-card/scripts/verify-v4-option-a.py
+?? projects/nfc-business-card/scripts/verify-v4-option-a2.py
+?? projects/nfc-business-card/scripts/verify-v4-phase1.py
+?? projects/nfc-business-card/scripts/verify-v4-phase2.py

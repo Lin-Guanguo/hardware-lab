@@ -1,0 +1,124 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4/NFC-Card-V4.kicad_pcb",
+  "description": "Reserve copper gaps for the complete boost loop and capacitor rows",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4/placement-05-ipc.json",
+  "placements": {
+    "C10": [
+      176,
+      101,
+      -90
+    ],
+    "U4": [
+      179.3,
+      100.4,
+      0
+    ],
+    "C9": [
+      182,
+      100.4,
+      90
+    ],
+    "R13": [
+      182.7,
+      107.8,
+      0
+    ],
+    "R18": [
+      184,
+      87,
+      0
+    ],
+    "C14": [
+      170.5,
+      89.5,
+      0
+    ],
+    "C19": [
+      173,
+      87.2,
+      0
+    ],
+    "C21": [
+      173,
+      85,
+      0
+    ],
+    "C22": [
+      177,
+      85,
+      0
+    ]
+  },
+  "remove_trial_ids": [
+    "8c2a9e00-c9db-41a5-b76a-9fedb067598c",
+    "1dcd0b56-f9f9-4d16-a58e-5e957508d764",
+    "84858cd4-929e-4e12-994b-c6b54be26d26",
+    "9288aedf-5ba3-48b4-b2dc-2c6c16828fcf",
+    "4d00aa65-bd18-476f-85f7-876abf3d9740",
+    "e91c48c9-fe2a-485c-bb92-039da67b22f0",
+    "a50471d0-f9d8-4802-acf7-7d4aefcc2287",
+    "9ada6882-b0ad-46eb-aed6-1197fc9b382a",
+    "2df6979c-84f4-4f27-bb79-b2de23c277c4",
+    "c6c7254f-68bb-4706-a08e-f975b77991a9",
+    "6ad61616-c0fa-4168-b6de-7408268133b2",
+    "b1919214-f146-4dd3-a678-324905390a9c",
+    "9e3f224a-b424-4de0-8d7a-6209908d50ce",
+    "5031dafb-da3b-4d9d-a060-5bda5aa2a077",
+    "1db80bb1-fea0-4db4-b1d8-c06eb9926f6f",
+    "fd089559-8d6a-4dc2-bbe8-ad424774687c",
+    "56852a9f-87e9-48a1-a745-a0fc209ff6e4",
+    "714aeed5-770d-44cb-95fc-5b4519a5c519",
+    "2ec3a908-745b-468d-b24f-3ed2ef74b5e6",
+    "be075e60-deb0-498a-bfd3-78c1789cc272",
+    "f6137204-76ba-42b3-b6e9-3de81963ff0d",
+    "8ac5ca92-b123-4e4a-ad84-f869ede4be23",
+    "221a3024-aaea-4afa-84e9-3e5353d171d8",
+    "59310a86-0abd-4e0c-983d-6f10836c0715",
+    "39fa09b6-9bc5-424b-911e-438eac3095a5",
+    "75b2edeb-6edc-477d-9353-bda56d2714e1",
+    "f8246feb-f3bb-49c4-9d10-e3752235d710",
+    "2bfb505b-4856-4b4a-98a4-fd44cc15f1c1",
+    "4453f844-adca-4000-b111-85753bb771de",
+    "f2e450c1-b168-4386-9906-38aa60ef538e",
+    "54c604ce-ac3f-4824-a676-a7ea85031433",
+    "3b3f71ec-ab8b-49dd-908f-53ecb84d6eea",
+    "fffde3f1-35d7-40ac-991d-831cda721979",
+    "e382ab02-1c2d-4b9e-98e5-96d5b583126d",
+    "09c94985-025c-44f6-b27a-1ebba024c211",
+    "48aecbaf-2f32-4b26-bd73-0356155c6768",
+    "d6d86307-433e-45cb-a6af-d6501d980952",
+    "db4321f1-7d79-436d-abc0-402ce9a3a207",
+    "0e91ce15-87d9-4306-80f8-71c41ead0f9e",
+    "d2984391-954d-4833-8d78-8cc050efb937",
+    "504a37fd-ea69-4b32-8ea0-59aacf02465f",
+    "6dd7c8dc-b700-4297-b6e7-e5c981fc77e0",
+    "34b06490-8b7e-4322-a4c6-52f3fa67691c",
+    "1cf950c0-8ae4-491e-9a32-0f35e99b66f7",
+    "f725f59a-7262-4a9e-8fa8-380d69b828e1",
+    "caa1d2e1-329e-472d-a54f-b53a939ac5e7",
+    "ac30ac86-caa3-4e19-bda6-4002bb1936ae",
+    "89ed1da8-e969-4752-9c21-0757a677cf9d",
+    "8b9ec861-ecc6-4a7c-b07b-9a6473059aa6",
+    "5377d6fa-c0b6-48d0-b3f4-2296a0e22ded",
+    "4685c327-1305-4ded-a5c7-222c6eb09635",
+    "46a375ad-7a87-48e7-ac5e-e0b3cf1251f6",
+    "31f0c8c8-3548-4694-b43b-1831a3c7c0d8",
+    "5f5f924f-fcb8-4644-b0c5-147eafcd8032",
+    "b89164af-a418-4690-bd72-9f1493be5e15",
+    "667c2708-0a2b-42cf-8a36-40e0d2d5d83a",
+    "604eb15e-4abd-4fa0-8069-6233bbcd591d",
+    "9c11b58a-8dd9-4ae6-8790-97952a5a8684",
+    "b64a1435-b299-4c8c-9a57-ec9b2553fcc2",
+    "4a374d3a-7e0e-4fab-8d20-aefa6db924d0",
+    "f4069bbc-3a4f-4b32-8101-1618c0f5262f",
+    "9db9a5f3-8129-4965-b58f-ca011f5dde84",
+    "35af6c2b-937a-4b23-a9f4-5f7f3f2f85b9",
+    "5989566a-de8a-4b76-af15-2b0ef5970264",
+    "a8c75d04-228f-4fae-9643-348d3959c8fd",
+    "67966c3b-aca0-4262-b048-6259cc7186eb",
+    "bbcea274-60f2-4e90-8c12-f61cbad9f5bc",
+    "899dc9e7-e32c-429b-8b2a-5c404d3f586a",
+    "8560a0f9-3443-4b1b-8797-32968c82579a",
+    "20d452f8-79c3-41bc-8071-77607870fc88"
+  ]
+}

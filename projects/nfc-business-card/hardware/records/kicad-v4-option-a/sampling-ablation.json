@@ -1,0 +1,217 @@
+{
+  "scope": "Geometry-only ablation; schematic intentionally unchanged, never an electrical or manufacturing candidate.",
+  "source": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4-option-a-integration-rejected",
+  "output": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/artifacts/kicad-v4-option-a/sampling-ablation",
+  "removed_refs": [
+    "C25",
+    "Q2",
+    "Q3",
+    "R20",
+    "R21",
+    "R22",
+    "R23"
+  ],
+  "dedicated_nets": [
+    "BAT_ADC_SENSE",
+    "BAT_DIV_SUPPLY",
+    "BAT_MEAS_EN",
+    "BAT_SWITCH_GATE"
+  ],
+  "removed_copper": [
+    {
+      "uuid": "01973291-c027-4b45-87de-f8a7bf0ae7ad",
+      "net": "BAT_ADC_SENSE"
+    },
+    {
+      "uuid": "0be47ad8-ae79-40de-8e61-7f1b18f367b2",
+      "net": "BAT_ADC_SENSE"
+    },
+    {
+      "uuid": "0f3114e9-3c81-4a54-88af-44183a22931b",
+      "net": "BAT_ADC_SENSE"
+    },
+    {
+      "uuid": "c648aa22-5f22-4ba7-8281-461579831881",
+      "net": "BAT_ADC_SENSE"
+    },
+    {
+      "uuid": "d8b3ddec-b341-457d-8fb6-830688520f34",
+      "net": "BAT_ADC_SENSE"
+    },
+    {
+      "uuid": "e5a4cfa5-d9c2-451e-bde1-0a01a7dfce58",
+      "net": "BAT_ADC_SENSE"
+    },
+    {
+      "uuid": "ec3fe4de-98d2-4671-a58b-eed412a485c9",
+      "net": "BAT_ADC_SENSE"
+    },
+    {
+      "uuid": "eefb27be-acec-4c0a-aeea-3aaea4f2512a",
+      "net": "BAT_ADC_SENSE"
+    },
+    {
+      "uuid": "1c3dd341-9b4a-4842-ad73-dfd21ebea685",
+      "net": "BAT_DIV_SUPPLY"
+    },
+    {
+      "uuid": "2e292920-52e6-40f6-88c8-15b84f9ae8b5",
+      "net": "BAT_DIV_SUPPLY"
+    },
+    {
+      "uuid": "b484402f-e890-4390-bfb5-0909bd5d8b95",
+      "net": "BAT_DIV_SUPPLY"
+    },
+    {
+      "uuid": "d9438436-7dd6-49e7-bfaa-4bbdce67d60f",
+      "net": "BAT_DIV_SUPPLY"
+    },
+    {
+      "uuid": "ad3ac0af-de5e-4bea-bb42-3586529c7532",
+      "net": "BAT_DIV_SUPPLY"
+    },
+    {
+      "uuid": "bd25e6db-96ef-47d0-a058-e61935c8510f",
+      "net": "BAT_DIV_SUPPLY"
+    },
+    {
+      "uuid": "9e63eb94-9ea0-42fc-8679-58a9b2016d95",
+      "net": "BAT_DIV_SUPPLY"
+    },
+    {
+      "uuid": "e7e9a707-5d0d-4494-82ce-f10e7c500b0d",
+      "net": "BAT_DIV_SUPPLY"
+    },
+    {
+      "uuid": "37a6dbba-a724-4cef-a018-7c50e8bf2b65",
+      "net": "BAT_PACK_TBD"
+    },
+    {
+      "uuid": "67794b8f-7449-4d60-bbe8-ad90d3fb6319",
+      "net": "BAT_PACK_TBD"
+    },
+    {
+      "uuid": "908dc521-3b4c-4b21-807a-367c509978d3",
+      "net": "BAT_PACK_TBD"
+    },
+    {
+      "uuid": "952b5850-c30f-4053-b954-5bd252bab1e1",
+      "net": "BAT_PACK_TBD"
+    },
+    {
+      "uuid": "d9b8007b-1594-40f9-8736-224ab3bb051a",
+      "net": "BAT_PACK_TBD"
+    },
+    {
+      "uuid": "db3de9c2-de3f-47be-ac2b-bb2f14a7fa74",
+      "net": "BAT_PACK_TBD"
+    },
+    {
+      "uuid": "ff4e050c-2652-4922-8db3-fd56e36bc5c9",
+      "net": "BAT_PACK_TBD"
+    },
+    {
+      "uuid": "f58e936e-032d-43a3-9462-0fac4ca0bb36",
+      "net": "BAT_PACK_TBD"
+    },
+    {
+      "uuid": "28d10f37-2320-4df5-97a2-3bc8963a464b",
+      "net": "BAT_PACK_TBD"
+    },
+    {
+      "uuid": "c7e1aad8-682b-4370-938b-431950227fe2",
+      "net": "BAT_PACK_TBD"
+    },
+    {
+      "uuid": "019253fb-daa8-44c1-8103-b5de919417cf",
+      "net": "BAT_SWITCH_GATE"
+    },
+    {
+      "uuid": "0546a596-855a-4b46-adf0-88a119860587",
+      "net": "BAT_SWITCH_GATE"
+    },
+    {
+      "uuid": "ad33b670-f6d1-422f-a55f-64add0f2d2b5",
+      "net": "BAT_SWITCH_GATE"
+    },
+    {
+      "uuid": "d65502a9-05de-4759-a7ce-3694ac241f91",
+      "net": "BAT_SWITCH_GATE"
+    },
+    {
+      "uuid": "28838ffa-bf52-47a0-9eec-0dd58bede76e",
+      "net": "BAT_MEAS_EN"
+    },
+    {
+      "uuid": "645ac68e-1374-4878-bd04-a1fd300045fc",
+      "net": "BAT_MEAS_EN"
+    },
+    {
+      "uuid": "b41fb4d1-f664-499c-8490-da92236d9759",
+      "net": "BAT_MEAS_EN"
+    },
+    {
+      "uuid": "ebb14eaf-6d81-4c4e-beea-4791653d5619",
+      "net": "BAT_MEAS_EN"
+    },
+    {
+      "uuid": "f02cbb1f-f8c3-4c05-ad25-20c49b61492b",
+      "net": "BAT_MEAS_EN"
+    }
+  ],
+  "shared_GND_copper_untouched": true,
+  "main_BAT_and_charger_copper_preserved": true,
+  "freed_courtyard_area_mm2": 41.64749217999999,
+  "freed_courtyard_bounds_mm": [
+    182.10000000000002,
+    110.405,
+    191.705433,
+    121.295
+  ],
+  "freed_by_ref_mm": {
+    "R20": [
+      183.794567,
+      114.405,
+      185.2,
+      117.39500000000001
+    ],
+    "R21": [
+      183.794567,
+      111.405,
+      185.2,
+      114.39500000000001
+    ],
+    "R22": [
+      186.0,
+      118.30499999999999,
+      187.405433,
+      121.295
+    ],
+    "C25": [
+      182.10000000000002,
+      115.45,
+      183.505433,
+      118.14999999999999
+    ],
+    "Q3": [
+      189.1,
+      111.0,
+      191.705433,
+      114.0
+    ],
+    "R23": [
+      186.0,
+      110.405,
+      187.405433,
+      113.39500000000001
+    ],
+    "Q2": [
+      186.6745,
+      114.19999999999999,
+      190.15543300000002,
+      118.0
+    ]
+  },
+  "space_reassigned_to": [],
+  "reason": "Test whether removal alone restores the failed charger/LDO return components before proposing a functional sacrifice."
+}

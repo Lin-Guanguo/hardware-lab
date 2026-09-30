@@ -1,0 +1,156 @@
+{
+  "source": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4-option-a3-local",
+  "source_pcb_sha256": "ab66cc15f4c938ee7a722bb5656f242f5f31c8664d6fb8d4bf1fa949a21c7259",
+  "gpio": {
+    "CHG_SCL": {
+      "old_module_pin": 16,
+      "new_module_pin": 36,
+      "old_gpio": "P0.27",
+      "new_gpio": "P0.14"
+    },
+    "CHG_SDA": {
+      "old_module_pin": 19,
+      "new_module_pin": 37,
+      "old_gpio": "P0.26",
+      "new_gpio": "P0.13"
+    },
+    "CHG_INT_N": {
+      "old_module_pin": 20,
+      "new_module_pin": 39,
+      "old_gpio": "P0.04",
+      "new_gpio": "P0.15"
+    },
+    "CHG_PG_N": {
+      "old_module_pin": 21,
+      "new_module_pin": 38,
+      "old_gpio": "P0.05",
+      "new_gpio": "P0.16"
+    },
+    "CHG_CE_N": {
+      "old_module_pin": 22,
+      "new_module_pin": 41,
+      "old_gpio": "P0.06",
+      "new_gpio": "P0.17"
+    },
+    "EPD_SCK_TBD": {
+      "old_module_pin": 36,
+      "new_module_pin": 24,
+      "old_gpio": "P0.14",
+      "new_gpio": "P0.08"
+    },
+    "EPD_MOSI_TBD": {
+      "old_module_pin": 37,
+      "new_module_pin": 26,
+      "old_gpio": "P0.13",
+      "new_gpio": "P1.09"
+    },
+    "EPD_CS_N_TBD": {
+      "old_module_pin": 38,
+      "new_module_pin": 22,
+      "old_gpio": "P0.16",
+      "new_gpio": "P0.06"
+    },
+    "EPD_DC_TBD": {
+      "old_module_pin": 39,
+      "new_module_pin": 20,
+      "old_gpio": "P0.15",
+      "new_gpio": "P0.04"
+    },
+    "EPD_RESET_N_TBD": {
+      "old_module_pin": 41,
+      "new_module_pin": 19,
+      "old_gpio": "P0.17",
+      "new_gpio": "P0.26"
+    },
+    "EPD_BUSY_TBD": {
+      "old_module_pin": 24,
+      "new_module_pin": 16,
+      "old_gpio": "P0.08",
+      "new_gpio": "P0.27"
+    }
+  },
+  "new_no_connect_module_pin": 21,
+  "new_used_module_pin": 26,
+  "placements": {
+    "U2": [
+      158,
+      107.3,
+      180
+    ],
+    "C3": [
+      157.2,
+      103.5,
+      90
+    ],
+    "C2": [
+      161.5,
+      105.3,
+      180
+    ],
+    "C8": [
+      161.5,
+      107.4,
+      0
+    ],
+    "R19": [
+      155.4,
+      109.6,
+      180
+    ],
+    "NTC": [
+      154,
+      107.5,
+      0
+    ],
+    "R7": [
+      155,
+      104.9,
+      0
+    ],
+    "U3": [
+      166.1,
+      108.4,
+      90
+    ],
+    "C4": [
+      169.5,
+      108.4,
+      180
+    ],
+    "C5": [
+      162.8,
+      109.35,
+      180
+    ],
+    "R3": [
+      164.7,
+      112.5,
+      270
+    ],
+    "R4": [
+      166.5,
+      112.5,
+      270
+    ],
+    "R5": [
+      151.7,
+      103.5,
+      0
+    ],
+    "R6": [
+      151.7,
+      105.4,
+      0
+    ],
+    "R8": [
+      151.7,
+      107.3,
+      0
+    ],
+    "R9": [
+      151.7,
+      109.2,
+      0
+    ]
+  }
+}

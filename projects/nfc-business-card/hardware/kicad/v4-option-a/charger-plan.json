@@ -1,0 +1,382 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-option-a/NFC-Card-V4.kicad_pcb",
+  "description": "Option A five charger controls jointly reconstructed without preassigned vias or old escapes",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-option-a/charger-ipc.json",
+  "routes": [
+    {
+      "name": "U2.7 to U1.19",
+      "net": "CHG_SDA",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          176.6,
+          109.05
+        ],
+        [
+          176.6,
+          109.835
+        ],
+        [
+          175.001,
+          111.434
+        ],
+        [
+          173.901,
+          111.434
+        ],
+        [
+          173.701,
+          111.634
+        ],
+        [
+          173.701,
+          112.634
+        ],
+        [
+          174.401,
+          113.334
+        ],
+        [
+          178.101,
+          113.334
+        ],
+        [
+          178.301,
+          113.534
+        ],
+        [
+          178.301,
+          114.334
+        ],
+        [
+          177.801,
+          114.834
+        ],
+        [
+          175.001,
+          114.834
+        ]
+      ],
+      "length_mm": 14.709
+    },
+    {
+      "name": "U2.8 to R6.2",
+      "net": "CHG_SCL",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          177.0,
+          109.05
+        ],
+        [
+          177.0,
+          110.1465
+        ],
+        [
+          177.5,
+          110.6465
+        ]
+      ],
+      "length_mm": 1.804
+    },
+    {
+      "name": "U2.9 to R8.2",
+      "net": "CHG_INT_N",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          177.4,
+          109.05
+        ],
+        [
+          177.4,
+          109.4465
+        ],
+        [
+          177.6,
+          109.6465
+        ],
+        [
+          178.0,
+          109.6465
+        ],
+        [
+          178.2,
+          109.4465
+        ],
+        [
+          178.2,
+          106.5465
+        ],
+        [
+          178.0,
+          106.3465
+        ],
+        [
+          176.0,
+          106.3465
+        ],
+        [
+          175.0,
+          107.3465
+        ],
+        [
+          175.0,
+          110.1465
+        ],
+        [
+          174.5,
+          110.6465
+        ]
+      ],
+      "length_mm": 11.466
+    }
+  ],
+  "vias": [],
+  "failures": [
+    {
+      "name": "U2.8 to U1.16",
+      "reason": "No path in assigned corridor",
+      "start": [
+        177.0,
+        109.05
+      ],
+      "end": [
+        177.001,
+        113.934
+      ],
+      "visited": 19594,
+      "closest_reached": {
+        "layer": "B.Cu",
+        "point": [
+          177.001,
+          113.934
+        ],
+        "distance": 0.0
+      },
+      "direct_blockers": []
+    },
+    {
+      "name": "U2.9 to U1.20",
+      "reason": "No path in assigned corridor",
+      "start": [
+        177.4,
+        109.05
+      ],
+      "end": [
+        174.601,
+        113.934
+      ],
+      "visited": 19542,
+      "closest_reached": {
+        "layer": "B.Cu",
+        "point": [
+          174.601,
+          113.934
+        ],
+        "distance": 0.0
+      },
+      "direct_blockers": []
+    },
+    {
+      "name": "U2.3 to U1.21",
+      "reason": "No path in assigned corridor",
+      "start": [
+        177.0,
+        106.95
+      ],
+      "end": [
+        174.201,
+        114.834
+      ],
+      "visited": 6,
+      "closest_reached": {
+        "layer": "F.Cu",
+        "point": [
+          177.001,
+          107.234
+        ],
+        "distance": 8.099382692526646
+      },
+      "direct_blockers": [
+        {
+          "name": "R5.1",
+          "net": "VDD_3V3",
+          "kind": "pad"
+        },
+        {
+          "name": "R5.2",
+          "net": "CHG_SDA",
+          "kind": "pad"
+        },
+        {
+          "name": "U2.6",
+          "net": "BAT_NTC_TBD",
+          "kind": "pad"
+        },
+        {
+          "name": "U2.7",
+          "net": "CHG_SDA",
+          "kind": "pad"
+        },
+        {
+          "name": "U2.11",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "name": "R8.1",
+          "net": "VDD_3V3",
+          "kind": "pad"
+        },
+        {
+          "name": "U1.20",
+          "net": "CHG_INT_N",
+          "kind": "pad"
+        },
+        {
+          "name": "U2.7 to U1.19",
+          "net": "CHG_SDA",
+          "kind": "track"
+        }
+      ]
+    },
+    {
+      "name": "U2.3 to R9.2",
+      "reason": "No path in assigned corridor",
+      "start": [
+        177.0,
+        106.95
+      ],
+      "end": [
+        179.0,
+        110.6465
+      ],
+      "visited": 6,
+      "closest_reached": {
+        "layer": "F.Cu",
+        "point": [
+          177.0,
+          107.2465
+        ],
+        "distance": 3.944616584663209
+      },
+      "direct_blockers": [
+        {
+          "name": "U2.10",
+          "net": "USB_VBUS",
+          "kind": "pad"
+        },
+        {
+          "name": "U2.11",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "name": "U2.9 to R8.2",
+          "net": "CHG_INT_N",
+          "kind": "track"
+        }
+      ]
+    },
+    {
+      "name": "U2.4 to U1.22",
+      "reason": "No path in assigned corridor",
+      "start": [
+        176.6,
+        106.95
+      ],
+      "end": [
+        173.80100000000002,
+        113.934
+      ],
+      "visited": 6,
+      "closest_reached": {
+        "layer": "F.Cu",
+        "point": [
+          176.60100000000003,
+          107.234
+        ],
+        "distance": 7.261542535852841
+      },
+      "direct_blockers": [
+        {
+          "name": "R5.2",
+          "net": "CHG_SDA",
+          "kind": "pad"
+        },
+        {
+          "name": "U2.6",
+          "net": "BAT_NTC_TBD",
+          "kind": "pad"
+        },
+        {
+          "name": "U2.11",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "name": "R8.1",
+          "net": "VDD_3V3",
+          "kind": "pad"
+        },
+        {
+          "name": "R8.2",
+          "net": "CHG_INT_N",
+          "kind": "pad"
+        },
+        {
+          "name": "U2.7 to U1.19",
+          "net": "CHG_SDA",
+          "kind": "track"
+        },
+        {
+          "name": "U2.9 to R8.2",
+          "net": "CHG_INT_N",
+          "kind": "track"
+        }
+      ]
+    },
+    {
+      "name": "U2.4 to R7.2",
+      "reason": "No path in assigned corridor",
+      "start": [
+        176.6,
+        106.95
+      ],
+      "end": [
+        180.5,
+        110.6465
+      ],
+      "visited": 6,
+      "closest_reached": {
+        "layer": "F.Cu",
+        "point": [
+          176.6,
+          107.2465
+        ],
+        "distance": 5.17397332811062
+      },
+      "direct_blockers": [
+        {
+          "name": "U2.3",
+          "net": "CHG_PG_N",
+          "kind": "pad"
+        },
+        {
+          "name": "U2.11",
+          "net": "GND",
+          "kind": "pad"
+        },
+        {
+          "name": "U2.9 to R8.2",
+          "net": "CHG_INT_N",
+          "kind": "track"
+        }
+      ]
+    }
+  ]
+}

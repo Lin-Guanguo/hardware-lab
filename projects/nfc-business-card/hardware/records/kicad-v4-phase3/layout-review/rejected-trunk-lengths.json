@@ -1,0 +1,7 @@
+{
+  "scope": "Sum of emitted route pieces for named trunk only; excludes preceding pad escapes and other joined branches",
+  "length_mm": {
+    "CHG_PG_N cross-zone trunk": 62.666,
+    "U1.53 to TP3.1": 65.442
+  }
+}

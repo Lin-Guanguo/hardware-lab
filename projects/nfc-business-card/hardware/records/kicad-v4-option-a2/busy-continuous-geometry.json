@@ -1,0 +1,168 @@
+{
+  "board": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4-option-a2-full/NFC-Card-V4.kicad_pcb",
+  "board_sha256": "c2e70a964cc8b4850bd4bb8f1027148edceec1493e024230bf05a1192b410715",
+  "scope": "Independent continuous buffered geometry, not A* or a grid. Other tracks treated as present for each explicit counterfactual. No counterfactual is electrically complete; no conclusion of global board area insufficiency.",
+  "trace_width_mm": 0.15,
+  "clearance_mm": 0.2,
+  "via_mm": [
+    0.6,
+    0.3
+  ],
+  "smd_to_drill_mm": 0.4,
+  "results": [
+    {
+      "variant": "current",
+      "removed_objects": [],
+      "source_F_component_area_mm2": 1.4866,
+      "source_F_component_bounds_mm": [
+        171.776,
+        112.30535579670985,
+        173.451,
+        114.34537039794992
+      ],
+      "destination_in_same_F_component": false,
+      "possible_via_center_area_mm2": 0.0,
+      "continuous_via_witness_mm": null
+    },
+    {
+      "variant": "remove_new_VBUS_MCU_branch",
+      "removed_objects": [
+        {
+          "id": "059fb7f2-4477-487a-bd1f-49e60c67c176",
+          "net": "USB_VBUS"
+        },
+        {
+          "id": "2070dbba-9937-452e-b369-e163d6d9cf7e",
+          "net": "USB_VBUS"
+        },
+        {
+          "id": "4da455e2-9c1f-4e44-b503-ca002d05b061",
+          "net": "USB_VBUS"
+        },
+        {
+          "id": "6e17724c-c205-4408-ab59-c8a0792bfe70",
+          "net": "USB_VBUS"
+        },
+        {
+          "id": "6f8a60a5-1dbb-4ede-8d12-f16ce84da29f",
+          "net": "USB_VBUS"
+        },
+        {
+          "id": "b8e725fd-b7e5-4d55-8463-bfcd2fb3d582",
+          "net": "USB_VBUS"
+        },
+        {
+          "id": "ec398dae-ecb7-482b-9c95-5cb8e5211d97",
+          "net": "USB_VBUS"
+        },
+        {
+          "id": "161e4f19-015d-4ae0-943f-d5aa6802a5ec",
+          "net": "USB_VBUS"
+        },
+        {
+          "id": "2157204c-46fd-4d79-91da-adb24ac3e41a",
+          "net": "USB_VBUS"
+        },
+        {
+          "id": "6dd3623e-b21c-49cf-9d9a-de59d2019c99",
+          "net": "USB_VBUS"
+        },
+        {
+          "id": "cea3fdc0-1b6e-466d-b27a-24674dd5b1fe",
+          "net": "USB_VBUS"
+        }
+      ],
+      "source_F_component_area_mm2": 11.757567,
+      "source_F_component_bounds_mm": [
+        170.51139610306788,
+        106.65,
+        176.651,
+        114.34537039794992
+      ],
+      "destination_in_same_F_component": false,
+      "possible_via_center_area_mm2": 0.783241702,
+      "continuous_via_witness_mm": [
+        173.6890602006133,
+        109.93370680040886
+      ]
+    },
+    {
+      "variant": "remove_MCU_rail_copper_only",
+      "removed_objects": [
+        {
+          "id": "0d6ed480-16e4-4f38-b5fc-79d37e0e508e",
+          "net": "VDD_3V3"
+        },
+        {
+          "id": "221a8299-7b9f-4ba5-b299-866692b2d49c",
+          "net": "VDD_3V3"
+        },
+        {
+          "id": "3cfddc6b-f0e2-4535-b02d-48456bbe8795",
+          "net": "VDD_3V3"
+        },
+        {
+          "id": "5da49527-95da-417d-92ca-4f9a2e2426b2",
+          "net": "VDD_3V3"
+        },
+        {
+          "id": "6eb8110f-fccf-4628-b37e-febfbc637442",
+          "net": "VDD_3V3"
+        },
+        {
+          "id": "a108be5a-e100-4e64-878e-a7d4db1dab6f",
+          "net": "VDD_3V3"
+        },
+        {
+          "id": "c5507053-3044-4f6a-b68f-061431ec1717",
+          "net": "VDD_3V3"
+        },
+        {
+          "id": "d812ef10-5e94-458a-9507-89c76cddc242",
+          "net": "VDD_3V3"
+        },
+        {
+          "id": "ef4f1e97-2768-4deb-91c4-e38e7e155fc2",
+          "net": "VDD_3V3"
+        },
+        {
+          "id": "fb49cb4c-73b3-4446-9d18-2322fc5bf32c",
+          "net": "VDD_3V3"
+        },
+        {
+          "id": "fc5ced8d-bdbc-484d-9724-fd4657a5eaf5",
+          "net": "VDD_3V3"
+        },
+        {
+          "id": "a51d9c89-cfc7-4b6e-84db-e3fa609c50a7",
+          "net": "VDD_3V3"
+        },
+        {
+          "id": "b488f3fc-87ff-4565-a4da-49e01e949243",
+          "net": "VDD_3V3"
+        },
+        {
+          "id": "d6fc7455-ae72-4d0e-97ee-b562e0c59f9b",
+          "net": "VDD_3V3"
+        },
+        {
+          "id": "6f96ea10-ded1-4152-96f4-4a94770d479d",
+          "net": "VDD_3V3"
+        }
+      ],
+      "source_F_component_area_mm2": 20.634369,
+      "source_F_component_bounds_mm": [
+        165.1965,
+        106.65,
+        176.651,
+        114.53307120013018
+      ],
+      "destination_in_same_F_component": false,
+      "possible_via_center_area_mm2": 1.953768501,
+      "continuous_via_witness_mm": [
+        168.9671191806582,
+        109.71422850507855
+      ]
+    }
+  ]
+}

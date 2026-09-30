@@ -1,0 +1,43 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-option-a3-local/NFC-Card-V4.kicad_pcb",
+  "description": "A3 rotate R1 within its existing envelope so CC1 no longer wraps around its ground pad",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-option-a3/cc-ground-ipc.json",
+  "placements": {
+    "R1": [
+      182.5,
+      110.2,
+      180
+    ]
+  },
+  "remove_trial_ids": [
+    "30a50e0f-2bdc-47b4-8fba-c677d16f5b39",
+    "324d50e8-5c3c-4c7b-afad-0721a224682d",
+    "8b84dd44-e776-4dc6-857a-bc9f824be0a6",
+    "9d6ed99d-da73-4308-8a9f-581f71d281ab",
+    "9df0e17d-ef47-4939-b6e8-f4a4c6493a85",
+    "e4196740-0da7-4407-b940-8d9a788fcbb4"
+  ],
+  "routes": [
+    {
+      "name": "CC1 direct approach to rotated R1",
+      "net": "USB_CC1",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          183.2535,
+          110.2
+        ],
+        [
+          184.5,
+          108.9535
+        ],
+        [
+          184.5,
+          108.75
+        ]
+      ]
+    }
+  ],
+  "failures": []
+}

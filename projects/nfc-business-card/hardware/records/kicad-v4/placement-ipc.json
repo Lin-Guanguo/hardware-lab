@@ -1,0 +1,13 @@
+{
+  "plan": "projects/nfc-business-card/hardware/kicad/v4/placement-trial.json",
+  "board": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4/NFC-Card-V4.kicad_pcb",
+  "before": {
+    "tracks": 912,
+    "vias": 198
+  },
+  "after": {
+    "tracks": 74,
+    "vias": 6
+  },
+  "created_ids": []
+}

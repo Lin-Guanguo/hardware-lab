@@ -1,0 +1,50 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-option-a3-local/NFC-Card-V4.kicad_pcb",
+  "description": "A3 explicit R1 ground escape after rotating CC termination",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-option-a3/r1-ground-ipc.json",
+  "routes": [],
+  "vias": [
+    {
+      "name": "R1 ground to B plane",
+      "net": "GND",
+      "at": [
+        183.52175000000003,
+        111.5087
+      ]
+    }
+  ],
+  "failures": [
+    {
+      "reason": "No path in assigned corridor",
+      "start": [
+        181.7465,
+        110.2
+      ],
+      "end": [
+        183.52175000000003,
+        111.5087
+      ],
+      "visited": 278,
+      "closest_reached": {
+        "layer": "F.Cu",
+        "point": [
+          182.42175000000003,
+          110.40870000000001
+        ],
+        "distance": 1.5556349186103966
+      },
+      "direct_blockers": [
+        {
+          "name": "R1.1",
+          "net": "USB_CC1",
+          "kind": "pad"
+        },
+        {
+          "name": "416ec01f-5d86-4dd2-a97d-0d9ec21eee42",
+          "net": "USB_CC2",
+          "kind": "track"
+        }
+      ]
+    }
+  ]
+}

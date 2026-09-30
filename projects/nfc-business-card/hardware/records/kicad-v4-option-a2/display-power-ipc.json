@@ -1,0 +1,44 @@
+{
+  "plan": "projects/nfc-business-card/hardware/kicad/v4-option-a2/display-power-plan.json",
+  "board": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4-option-a2/NFC-Card-V4.kicad_pcb",
+  "before": {
+    "tracks": 158,
+    "vias": 23
+  },
+  "after": {
+    "tracks": 188,
+    "vias": 23
+  },
+  "created_ids": [
+    "9db646e9-90c8-415b-83f2-cce294097146",
+    "41ff26df-afc4-4043-9aab-282db93e98e1",
+    "ec703a5a-743d-42f3-95f8-ff11e4faabcf",
+    "5c5fcd3c-b818-4021-856b-376b4c4b1e83",
+    "45a3e206-0b85-4ce6-9655-bb397f9ada04",
+    "a23819c7-f2b5-424f-a109-5be26bf39e1e",
+    "6c462a93-42e2-401f-ad7c-b8c81cf6a05b",
+    "1fafd5ef-08d1-4bee-8f78-5e4abcff264d",
+    "98417d2b-7917-4555-9580-dfd3b60cbec5",
+    "cff45eda-0115-4791-88b8-20d168fc4159",
+    "efe1693c-98af-4a82-92ae-31454cac143c",
+    "7714974f-97d0-43ed-9dc5-6da7aa2c0b7a",
+    "5d181ef3-3e84-4a46-91fd-900fab55fd61",
+    "741467b0-ea3a-4408-966d-121432d4d51f",
+    "5a5d1a5f-f2d7-46af-b819-2031016a857b",
+    "433b8ff7-7638-4010-bd9d-5f6c41a9b2b3",
+    "90119271-a681-430f-81d2-16f1e6be7bf9",
+    "61be51e5-fef8-441c-a05a-b29fc7abe19f",
+    "29e8144b-3d08-4037-a9a6-d15a4ca6bef3",
+    "ecc3a0f7-4c91-4adc-9893-8ab5a45a2205",
+    "9d153035-710d-4ba2-9d5a-96caf5468141",
+    "290283f2-2a26-4497-9e16-e8b58fda7f54",
+    "120ac165-d69f-4838-be4e-1a554ebc877e",
+    "fec877bc-3254-4f36-b0f5-496a2c61b9e8",
+    "4c0841a8-7b9c-425c-9bf6-faab7781b80d",
+    "f49a7592-cc55-44db-a256-879ce541a219",
+    "6be7d2b6-f7ba-483d-abc6-80b236d459e2",
+    "5b5b4f52-cfc5-4f2e-b48d-2cd997f6af0f",
+    "5e336976-5bb9-4bf6-83e8-40f9e557f1ba",
+    "fbdb9562-e3bf-439f-b23b-af2a3c0aff32"
+  ]
+}

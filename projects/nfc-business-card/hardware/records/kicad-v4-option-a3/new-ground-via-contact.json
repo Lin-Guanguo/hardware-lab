@@ -1,0 +1,116 @@
+{
+  "board_sha256": "ab66cc15f4c938ee7a722bb5656f242f5f31c8664d6fb8d4bf1fa949a21c7259",
+  "scope": "All ten added ground via centers touch native saved filled ground on both faces after final refill; global connectivity does not certify local return impedance.",
+  "vias": [
+    {
+      "id": "29e77d57-13df-49c6-9f22-7c7c8f5b0807",
+      "at": [
+        167.49,
+        93.35
+      ],
+      "plane_distance_mm": {
+        "F.Cu": 0.0,
+        "B.Cu": 0.0
+      }
+    },
+    {
+      "id": "526ab89a-61ec-4e49-9e9d-b3cb6b1c682a",
+      "at": [
+        167.11,
+        103.11
+      ],
+      "plane_distance_mm": {
+        "F.Cu": 0.0,
+        "B.Cu": 0.0
+      }
+    },
+    {
+      "id": "8fdcca88-2d1a-436b-9c71-b7dc026d3313",
+      "at": [
+        184.12,
+        119.44
+      ],
+      "plane_distance_mm": {
+        "F.Cu": 0.0,
+        "B.Cu": 0.0
+      }
+    },
+    {
+      "id": "aa28b5ec-bf98-4e85-b9bb-1d054d260ba5",
+      "at": [
+        153.82,
+        114.91
+      ],
+      "plane_distance_mm": {
+        "F.Cu": 0.0,
+        "B.Cu": 0.0
+      }
+    },
+    {
+      "id": "c26a14dd-0557-4a38-9b27-dc1415f21332",
+      "at": [
+        178.69,
+        113.04
+      ],
+      "plane_distance_mm": {
+        "F.Cu": 0.0,
+        "B.Cu": 0.0
+      }
+    },
+    {
+      "id": "c71820b5-2125-449e-905a-bd8970b2222e",
+      "at": [
+        185.5,
+        113.48
+      ],
+      "plane_distance_mm": {
+        "F.Cu": 0.0,
+        "B.Cu": 0.0
+      }
+    },
+    {
+      "id": "d0a98b56-b11e-4e0a-997c-ebc407d70506",
+      "at": [
+        182.55,
+        112.8
+      ],
+      "plane_distance_mm": {
+        "F.Cu": 0.0,
+        "B.Cu": 0.0
+      }
+    },
+    {
+      "id": "e2edfb45-6d76-4668-a6e9-e8922b95cbab",
+      "at": [
+        181.2,
+        106.65
+      ],
+      "plane_distance_mm": {
+        "F.Cu": 0.0,
+        "B.Cu": 0.0
+      }
+    },
+    {
+      "id": "eea935d8-a28d-4e14-bd26-bca3b190f428",
+      "at": [
+        182.2,
+        118.65
+      ],
+      "plane_distance_mm": {
+        "F.Cu": 0.0,
+        "B.Cu": 0.0
+      }
+    },
+    {
+      "id": "fca2c25d-f739-496b-91d5-0d38357a7d96",
+      "at": [
+        161.41,
+        120.36
+      ],
+      "plane_distance_mm": {
+        "F.Cu": 0.0,
+        "B.Cu": 0.0
+      }
+    }
+  ]
+}

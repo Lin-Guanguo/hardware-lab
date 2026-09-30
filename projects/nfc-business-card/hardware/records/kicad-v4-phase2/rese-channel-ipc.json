@@ -1,0 +1,23 @@
+{
+  "plan": "projects/nfc-business-card/hardware/kicad/v4-phase2/rese-channel-spec-plan.json",
+  "board": "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "before": {
+    "tracks": 233,
+    "vias": 49
+  },
+  "after": {
+    "tracks": 242,
+    "vias": 49
+  },
+  "created_ids": [
+    "de64a58d-2a61-48ea-bebb-71649fcefbb4",
+    "57db1251-24cc-479a-9e29-d22d1a13e4ee",
+    "a99f3453-c5e1-4c6f-9d04-7491cf570ae9",
+    "2c425688-829d-4ccc-ab67-36635ead5b27",
+    "d2ac5791-f735-4996-bcf5-4adce98e26ed",
+    "485cc219-850d-4301-be05-b8051414983b",
+    "455ce09b-2c70-41e6-b9c0-d105c742ad2c",
+    "a0a1fe4d-9420-41fe-9297-ddcdee1fa9a1",
+    "0e730632-6064-417a-86c4-35d86050da67"
+  ]
+}

@@ -1,0 +1,375 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-option-a2-full/NFC-Card-V4.kicad_pcb",
+  "description": "A2 jointly reconnect remaining critical nets after rebuilding MCU power return",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-option-a2/full-remaining-ipc.json",
+  "paths": [
+    {
+      "name": "USB DP",
+      "net": "USB_DP_CONN",
+      "through": [
+        "U5.1",
+        "R3.1"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "bounds": [
+        162,
+        101,
+        185.5,
+        118
+      ],
+      "width": 0.15,
+      "join_existing_copper": true,
+      "via_cost": 6
+    },
+    {
+      "name": "USB DM",
+      "net": "USB_DM_CONN",
+      "through": [
+        "U5.2",
+        "R4.1"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "bounds": [
+        162,
+        101,
+        185.5,
+        118
+      ],
+      "width": 0.15,
+      "join_existing_copper": true,
+      "via_cost": 6
+    },
+    {
+      "name": "VBUS connector pair",
+      "net": "USB_VBUS",
+      "through": [
+        "J1.A4B9",
+        "J1.B4A9"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "bounds": [
+        178,
+        98,
+        186.6,
+        112
+      ],
+      "width": 0.25,
+      "join_existing_copper": true,
+      "via_cost": 6
+    },
+    {
+      "name": "VBUS charger branch",
+      "net": "USB_VBUS",
+      "through": [
+        "J1.A4B9",
+        "C8.1"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "bounds": [
+        176,
+        100,
+        186.6,
+        114
+      ],
+      "width": 0.25,
+      "join_existing_copper": true,
+      "via_cost": 6
+    },
+    {
+      "name": "VBUS MCU branch",
+      "net": "USB_VBUS",
+      "through": [
+        "C8.1",
+        "C1.1"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "bounds": [
+        164,
+        98,
+        186,
+        116
+      ],
+      "width": 0.25,
+      "join_existing_copper": true,
+      "via_cost": 6
+    },
+    {
+      "name": "MCU rail to pullups",
+      "net": "VDD_3V3",
+      "through": [
+        "C6.1",
+        "R5.1"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "bounds": [
+        166,
+        103,
+        184,
+        121
+      ],
+      "width": 0.25,
+      "join_existing_copper": true,
+      "via_cost": 6
+    },
+    {
+      "name": "CC1",
+      "net": "USB_CC1",
+      "through": [
+        "J1.A5",
+        "U6.1"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "bounds": [
+        179,
+        100,
+        186.6,
+        114
+      ],
+      "width": 0.15,
+      "join_existing_copper": true,
+      "via_cost": 6
+    },
+    {
+      "name": "CC2",
+      "net": "USB_CC2",
+      "through": [
+        "J1.B5",
+        "U6.2"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "bounds": [
+        179,
+        99,
+        186.6,
+        114
+      ],
+      "width": 0.15,
+      "join_existing_copper": true,
+      "via_cost": 6
+    },
+    {
+      "name": "CS",
+      "net": "EPD_CS_N_TBD",
+      "through": [
+        "U1.38",
+        "J2.12"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "bounds": [
+        156,
+        90,
+        176,
+        121
+      ],
+      "width": 0.15,
+      "join_existing_copper": true,
+      "via_cost": 6
+    },
+    {
+      "name": "BUSY",
+      "net": "EPD_BUSY_TBD",
+      "through": [
+        "U1.24",
+        "J2.9"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "bounds": [
+        158,
+        92,
+        181,
+        118
+      ],
+      "width": 0.15,
+      "join_existing_copper": true,
+      "via_cost": 6
+    },
+    {
+      "name": "EPD EN",
+      "net": "EPD_EN_TBD",
+      "through": [
+        "U1.27",
+        "U4.3"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "bounds": [
+        160,
+        92,
+        185,
+        120
+      ],
+      "width": 0.15,
+      "join_existing_copper": true,
+      "via_cost": 6
+    },
+    {
+      "name": "SWD CLK",
+      "net": "SWDCLK",
+      "through": [
+        "U1.53",
+        "TP3.1"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "B.Cu",
+      "bounds": [
+        150,
+        80,
+        190,
+        125
+      ],
+      "width": 0.15,
+      "join_existing_copper": true,
+      "via_cost": 6
+    },
+    {
+      "name": "ADC enable",
+      "net": "BAT_MEAS_EN",
+      "through": [
+        "U1.10",
+        "R23.1"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "bounds": [
+        171,
+        110,
+        191,
+        123
+      ],
+      "width": 0.15,
+      "join_existing_copper": true,
+      "via_cost": 6
+    },
+    {
+      "name": "ADC sense",
+      "net": "BAT_ADC_SENSE",
+      "through": [
+        "U1.11",
+        "C25.2"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "bounds": [
+        172,
+        110,
+        188,
+        122
+      ],
+      "width": 0.15,
+      "join_existing_copper": true,
+      "via_cost": 6
+    },
+    {
+      "name": "TS resistor",
+      "net": "BAT_NTC_TBD",
+      "through": [
+        "U2.6",
+        "R19.1"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "bounds": [
+        166,
+        100,
+        180,
+        113
+      ],
+      "width": 0.15,
+      "join_existing_copper": true,
+      "via_cost": 6
+    },
+    {
+      "name": "TS pad",
+      "net": "BAT_NTC_TBD",
+      "through": [
+        "R19.1",
+        "NTC.1"
+      ],
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "start_layer": "F.Cu",
+      "end_layer": "F.Cu",
+      "bounds": [
+        166,
+        99,
+        174,
+        109
+      ],
+      "width": 0.15,
+      "join_existing_copper": true,
+      "via_cost": 6
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "status": "proposal only; not applied",
+  "reference": "C3",
+  "before": {
+    "Reference": "C3",
+    "Value": "2.2uF 16V",
+    "MPN": "CL10A225KO8NNNC",
+    "LCSC": "C23630"
+  },
+  "after": {
+    "Reference": "C3",
+    "Value": "4.7uF 16V",
+    "MPN": "CL10A475KO8NNNC",
+    "LCSC": "C19666"
+  },
+  "footprint_change": false,
+  "quantity_change": 0,
+  "height_mm": "0.80 \u00b1 0.10",
+  "bias_typical_at_4p2V_uF": {
+    "before": 1.134,
+    "after": 2.762
+  },
+  "minus_10_percent_only_uF": {
+    "before": 1.0206,
+    "after": 2.4858
+  },
+  "caveat": "Typical DC-bias curves are not guaranteed minima; temperature, aging and lot variation remain to verify.",
+  "price_delta": "one unit C19666 minus one unit C23630, same assembly count; no current matched-quantity quote obtained"
+}

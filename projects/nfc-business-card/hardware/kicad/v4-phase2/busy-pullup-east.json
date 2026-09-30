@@ -1,0 +1,19 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "description": "Move BUSY bias beside J2 to release the shared SWD west corridor and remove the long supply branch",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase2/busy-pullup-east-ipc.json",
+  "remove_trial_ids": [
+    "36230a22-89b8-4261-a81c-07be69154238",
+    "bc2cc0e6-c438-41d9-abd7-ec3e8030af5c",
+    "f5d547c9-e4f9-4bde-b2a9-0bdca66d5067",
+    "2709335f-7a89-4a6f-bb55-843851bbbaba",
+    "8833d04d-c692-4d2c-9adb-32b63e2fa851"
+  ],
+  "placements": {
+    "R18": [
+      169.9,
+      91.9,
+      0
+    ]
+  }
+}

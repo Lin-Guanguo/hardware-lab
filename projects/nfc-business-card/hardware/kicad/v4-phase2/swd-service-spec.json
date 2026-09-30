@@ -1,0 +1,140 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "description": "Prove simultaneous SWD service lanes after removing the transverse display-bias branch",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase2/swd-service-ipc.json",
+  "vias": [
+    {
+      "net": "SWDIO",
+      "at": [
+        165,
+        122.9
+      ]
+    },
+    {
+      "net": "SWDCLK",
+      "at": [
+        165.8,
+        123.8
+      ]
+    },
+    {
+      "net": "GND",
+      "at": [
+        166.2,
+        121.6
+      ]
+    },
+    {
+      "net": "GND",
+      "at": [
+        182.7,
+        82.8
+      ]
+    },
+    {
+      "net": "GND",
+      "at": [
+        179.73,
+        81.5
+      ]
+    }
+  ],
+  "paths": [
+    {
+      "name": "SWDIO MCU escape",
+      "net": "SWDIO",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "through": [
+        "U1.51",
+        [
+          165,
+          122.9
+        ]
+      ],
+      "bounds": [
+        163.5,
+        79,
+        185,
+        124.5
+      ]
+    },
+    {
+      "name": "SWDCLK MCU escape",
+      "net": "SWDCLK",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "through": [
+        "U1.53",
+        [
+          165.8,
+          123.8
+        ]
+      ],
+      "bounds": [
+        163.5,
+        79,
+        185,
+        124.5
+      ]
+    },
+    {
+      "name": "SWDIO service lane",
+      "net": "SWDIO",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "through": [
+        [
+          165,
+          122.9
+        ],
+        [
+          165,
+          88
+        ],
+        [
+          175.5,
+          80
+        ],
+        [
+          183.5405,
+          80
+        ],
+        "TP4.1"
+      ],
+      "bounds": [
+        163.5,
+        79,
+        185,
+        124.5
+      ]
+    },
+    {
+      "name": "SWDCLK service lane",
+      "net": "SWDCLK",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "through": [
+        [
+          165.8,
+          123.8
+        ],
+        [
+          165.8,
+          89
+        ],
+        [
+          180,
+          82.8
+        ],
+        "TP3.1"
+      ],
+      "bounds": [
+        163.5,
+        79,
+        185,
+        124.5
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase3/NFC-Card-V4.kicad_pcb",
+  "description": "Compare northeast U3/C4/C5 group: remove the long 3V3 crossing from the MCU west entrance, retaining connector and antenna datums",
+  "placements": {
+    "U3": [
+      176,
+      110.1,
+      90
+    ],
+    "C4": [
+      180,
+      109.4,
+      0
+    ],
+    "C5": [
+      173.5,
+      111.2,
+      270
+    ],
+    "C6": [
+      172.0,
+      111.5,
+      90
+    ]
+  },
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase3/east-group-placement.json"
+}

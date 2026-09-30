@@ -1,0 +1,249 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-option-a3-local/NFC-Card-V4.kicad_pcb",
+  "description": "A3 jointly move USB VBUS fanout off the CC outlets while retaining local charger return",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-option-a3/usb-inlet-ipc.json",
+  "remove_trial_ids": [
+    "06eedeaa-4509-4f8d-96c8-c01c4e7e2917",
+    "0f801243-f02b-428e-b85c-b226bd9f13ab",
+    "6536692a-456b-46bf-b1d1-477b810087ff",
+    "6e195cb3-ec94-4c79-9c91-eab8bb338307",
+    "c4e8f2cf-968f-469a-825a-b9c6c6bfb7da",
+    "cb752a73-9159-40cb-8a9d-36b50b47f40a",
+    "da66ddd6-4e78-4475-b9a2-1c150790e983",
+    "0312f928-85f3-433e-907e-389d7dd3287b",
+    "b1ad6fc5-fccf-49f4-ab3e-38d1478aef5f",
+    "10c6337f-1eb8-44de-a60b-6561f5e2d107",
+    "8b6012ba-77e9-4f84-877b-aa5557015dc6",
+    "e2edfb45-6d76-4668-a6e9-e8922b95cbab"
+  ],
+  "routes": [
+    {
+      "name": "Upper VBUS contact escape",
+      "net": "USB_VBUS",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          186.149,
+          101.6005
+        ],
+        [
+          185.2,
+          101.6005
+        ],
+        [
+          185.2,
+          100.6
+        ]
+      ]
+    },
+    {
+      "name": "Lower VBUS contact escape",
+      "net": "USB_VBUS",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          186.149,
+          106.40050000000001
+        ],
+        [
+          185,
+          106.4005
+        ]
+      ]
+    },
+    {
+      "name": "VBUS outside USB pair on back",
+      "net": "USB_VBUS",
+      "layer": "B.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          185.2,
+          100.6
+        ],
+        [
+          185.7,
+          101.1
+        ],
+        [
+          185.7,
+          105.7
+        ],
+        [
+          184.7,
+          106.7
+        ],
+        [
+          183,
+          106.7
+        ]
+      ]
+    },
+    {
+      "name": "Lower VBUS into rear spine",
+      "net": "USB_VBUS",
+      "layer": "B.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          185,
+          106.4005
+        ],
+        [
+          184.7005,
+          106.7
+        ],
+        [
+          183,
+          106.7
+        ]
+      ]
+    },
+    {
+      "name": "VBUS charger local arrival",
+      "net": "USB_VBUS",
+      "layer": "F.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          183,
+          106.7
+        ],
+        [
+          182,
+          106.7
+        ],
+        [
+          181,
+          107.7
+        ],
+        [
+          181,
+          108.7
+        ],
+        [
+          180.2,
+          108.7
+        ]
+      ]
+    },
+    {
+      "name": "Charger and USB local return bridge",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          181.2,
+          105.6
+        ],
+        [
+          182.2,
+          105.6
+        ],
+        [
+          182.5,
+          105.9
+        ]
+      ]
+    }
+  ],
+  "vias": [
+    {
+      "name": "VBUS upper",
+      "net": "USB_VBUS",
+      "at": [
+        185.2,
+        100.6
+      ]
+    },
+    {
+      "name": "VBUS lower",
+      "net": "USB_VBUS",
+      "at": [
+        185,
+        106.4005
+      ]
+    },
+    {
+      "name": "VBUS charger",
+      "net": "USB_VBUS",
+      "at": [
+        183,
+        106.7
+      ]
+    },
+    {
+      "name": "C3 USB ground bridge",
+      "net": "GND",
+      "at": [
+        182.5,
+        105.9
+      ]
+    }
+  ],
+  "failures": [
+    [
+      "VBUS outside USB pair on back",
+      "4c0259b1-f37c-4032-a7db-79d10567dce3",
+      "NRESET"
+    ],
+    [
+      "VBUS charger local arrival",
+      "C8.2",
+      "GND"
+    ],
+    [
+      "Charger and USB local return bridge",
+      "84f52a7b-37ae-4525-ab37-39118cb84e77",
+      "USB_DM_CONN"
+    ],
+    [
+      "Charger and USB local return bridge",
+      "f53f594f-bcb2-44ab-968b-57cc6e8c65f1",
+      "USB_DM_CONN"
+    ],
+    [
+      "Charger and USB local return bridge",
+      "a417995d-a265-46f0-9ac2-97c1a342f80c",
+      "USB_DM_CONN"
+    ],
+    [
+      "VBUS upper",
+      "J1.B1A12",
+      "GND"
+    ],
+    [
+      "C3 USB ground bridge",
+      "ab63e88a-f956-4db5-9476-b559ea321a71",
+      "EPD_EN_TBD"
+    ],
+    [
+      "C3 USB ground bridge",
+      "84f52a7b-37ae-4525-ab37-39118cb84e77",
+      "USB_DM_CONN"
+    ],
+    [
+      "C3 USB ground bridge",
+      "f53f594f-bcb2-44ab-968b-57cc6e8c65f1",
+      "USB_DM_CONN"
+    ],
+    [
+      "C3 USB ground bridge",
+      "50d7fab9-922c-48ae-a7b4-25820f3e2169",
+      "USB_DM_CONN"
+    ],
+    [
+      "C3 USB ground bridge",
+      "a417995d-a265-46f0-9ac2-97c1a342f80c",
+      "USB_DM_CONN"
+    ],
+    [
+      "VBUS upper",
+      "drill",
+      "J1.B1A12"
+    ]
+  ]
+}

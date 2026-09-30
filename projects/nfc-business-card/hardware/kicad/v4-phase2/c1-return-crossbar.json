@@ -1,0 +1,8 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "description": "Keep C1 return local to U1 ground; open the unrelated common cap-ground crossbar for the VBUS bypass entry",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase2/c1-return-crossbar-ipc.json",
+  "remove_trial_ids": [
+    "24d55300-43f7-42cd-9f20-cda1e43cb99a"
+  ]
+}

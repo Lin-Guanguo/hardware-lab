@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "cli": "/opt/homebrew/bin/kicad-cli",
+  "python": "3.12.12",
+  "version": "10.0.6",
+  "kicad_python": "0.8.0",
+  "upstream_revision": "a6bba1add1e18b89e3aa0824b9769ed1d9d79174",
+  "ipc_version": "10.0.6 (10.0.6)",
+  "boards": [
+    "/Users/linguanguo/dev/hardware-lab/projects/nfc-business-card/hardware/kicad/v4/NFC-Card-V4.kicad_pcb"
+  ]
+}

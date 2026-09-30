@@ -1,0 +1,2516 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-option-a2/NFC-Card-V4.kicad_pcb",
+  "description": "A2 jointly constructed power, ground returns, charger controls, USB fanout and MCU inner exits",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-option-a2/critical-ipc.json",
+  "routes": [
+    {
+      "name": "BAT pin neck",
+      "net": "BAT_PACK_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          177.4,
+          106.95
+        ],
+        [
+          177.4,
+          106.2
+        ]
+      ]
+    },
+    {
+      "name": "BAT direct local capacitor",
+      "net": "BAT_PACK_TBD",
+      "layer": "F.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          177.4,
+          106.2
+        ],
+        [
+          177.4,
+          105.3
+        ]
+      ]
+    },
+    {
+      "name": "BAT lead",
+      "net": "BAT_PACK_TBD",
+      "layer": "F.Cu",
+      "width": 0.5,
+      "points": [
+        [
+          142.5,
+          111.3005
+        ],
+        [
+          142.5,
+          110.05
+        ],
+        [
+          161.85,
+          110.05
+        ],
+        [
+          165.9,
+          106
+        ]
+      ]
+    },
+    {
+      "name": "BAT paired supply bridge",
+      "net": "BAT_PACK_TBD",
+      "layer": "B.Cu",
+      "width": 0.5,
+      "points": [
+        [
+          165.9,
+          106
+        ],
+        [
+          169.2,
+          102.7
+        ],
+        [
+          173.8,
+          102.7
+        ],
+        [
+          176.4,
+          105.3
+        ]
+      ]
+    },
+    {
+      "name": "BAT capacitor entrance",
+      "net": "BAT_PACK_TBD",
+      "layer": "F.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          176.4,
+          105.3
+        ],
+        [
+          177.4,
+          105.3
+        ]
+      ]
+    },
+    {
+      "name": "SYS pin neck",
+      "net": "SYS",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          177.8,
+          106.95
+        ],
+        [
+          178.5,
+          106.25
+        ]
+      ]
+    },
+    {
+      "name": "SYS capacitor",
+      "net": "SYS",
+      "layer": "F.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          178.5,
+          106.25
+        ],
+        [
+          179.2,
+          106.25
+        ],
+        [
+          179.20000000000002,
+          105.0
+        ]
+      ]
+    },
+    {
+      "name": "SYS input spine",
+      "net": "SYS",
+      "layer": "F.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          181.7,
+          103.5
+        ],
+        [
+          181.7,
+          103.4
+        ],
+        [
+          182.55,
+          102.55
+        ],
+        [
+          182.55,
+          101.5
+        ]
+      ]
+    },
+    {
+      "name": "SYS source transition",
+      "net": "SYS",
+      "layer": "F.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          179.20000000000002,
+          105.0
+        ],
+        [
+          179.2,
+          104.5
+        ],
+        [
+          178.7,
+          104
+        ]
+      ]
+    },
+    {
+      "name": "SYS input bridge",
+      "net": "SYS",
+      "layer": "B.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          178.7,
+          104
+        ],
+        [
+          182.2,
+          104
+        ],
+        [
+          182.7,
+          104.5
+        ]
+      ]
+    },
+    {
+      "name": "SYS bridge capacitor contact",
+      "net": "SYS",
+      "layer": "F.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          182.7,
+          104.5
+        ],
+        [
+          181.7,
+          103.5
+        ]
+      ]
+    },
+    {
+      "name": "SYS enable strap",
+      "net": "SYS",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          184.45,
+          101.5
+        ],
+        [
+          184.45,
+          102.6
+        ]
+      ]
+    },
+    {
+      "name": "SYS enable local bridge",
+      "net": "SYS",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          184.45,
+          102.6
+        ],
+        [
+          183.8,
+          103.25
+        ],
+        [
+          182.7,
+          104.35
+        ],
+        [
+          182.7,
+          104.5
+        ]
+      ]
+    },
+    {
+      "name": "LDO output to local display decoupling",
+      "net": "VDD_3V3",
+      "layer": "F.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          181.0,
+          100.9
+        ],
+        [
+          180.1,
+          100.9
+        ],
+        [
+          179.2,
+          100
+        ],
+        [
+          179.2,
+          98.4
+        ],
+        [
+          181,
+          98.4
+        ],
+        [
+          182.0,
+          97.4
+        ]
+      ]
+    },
+    {
+      "name": "LDO output capacitor",
+      "net": "VDD_3V3",
+      "layer": "F.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          182.55,
+          99.30000000000001
+        ],
+        [
+          182.55,
+          100
+        ],
+        [
+          181.65,
+          100.9
+        ],
+        [
+          181.0,
+          100.9
+        ]
+      ]
+    },
+    {
+      "name": "Display load switch supply",
+      "net": "VDD_3V3",
+      "layer": "F.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          182.0,
+          97.4
+        ],
+        [
+          181.65,
+          97.05
+        ],
+        [
+          180.25,
+          97.05000000000001
+        ]
+      ]
+    },
+    {
+      "name": "MCU rail departure",
+      "net": "VDD_3V3",
+      "layer": "F.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          179.2,
+          100
+        ],
+        [
+          177.8,
+          101.4
+        ],
+        [
+          177.8,
+          101.9
+        ]
+      ]
+    },
+    {
+      "name": "MCU rail backbone",
+      "net": "VDD_3V3",
+      "layer": "B.Cu",
+      "width": 0.5,
+      "points": [
+        [
+          177.8,
+          101.9
+        ],
+        [
+          177.8,
+          106.2
+        ],
+        [
+          174.3,
+          109.7
+        ],
+        [
+          172.5,
+          109.7
+        ]
+      ]
+    },
+    {
+      "name": "MCU C6 feed",
+      "net": "VDD_3V3",
+      "layer": "F.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          172.5,
+          109.7
+        ],
+        [
+          172.5,
+          111.3
+        ]
+      ]
+    },
+    {
+      "name": "MCU C7 feed",
+      "net": "VDD_3V3",
+      "layer": "F.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          172.5,
+          109.7
+        ],
+        [
+          168.8,
+          109.7
+        ]
+      ]
+    },
+    {
+      "name": "MCU VDD pad 30",
+      "net": "VDD_3V3",
+      "layer": "F.Cu",
+      "width": 0.2,
+      "points": [
+        [
+          168.8,
+          109.7
+        ],
+        [
+          168.8,
+          111.399
+        ],
+        [
+          170.601,
+          113.2
+        ],
+        [
+          170.601,
+          113.934
+        ]
+      ]
+    },
+    {
+      "name": "MCU VDD pad 28",
+      "net": "VDD_3V3",
+      "layer": "F.Cu",
+      "width": 0.2,
+      "points": [
+        [
+          172.5,
+          111.3
+        ],
+        [
+          172.5,
+          112.101
+        ],
+        [
+          171.401,
+          113.2
+        ],
+        [
+          171.401,
+          113.934
+        ]
+      ]
+    },
+    {
+      "name": "BN paired lead",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.5,
+      "points": [
+        [
+          145.5,
+          111.3005
+        ],
+        [
+          163.1005,
+          111.3005
+        ],
+        [
+          167.15,
+          107.251
+        ]
+      ]
+    },
+    {
+      "name": "BN return backbone",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.5,
+      "points": [
+        [
+          167.15,
+          107.251
+        ],
+        [
+          175.551,
+          107.251
+        ],
+        [
+          176.3,
+          108
+        ],
+        [
+          177.0,
+          108.0
+        ]
+      ]
+    },
+    {
+      "name": "U2 exposed pad to return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          177.0,
+          108.0
+        ],
+        [
+          178.6,
+          108
+        ]
+      ]
+    },
+    {
+      "name": "U2 pad 5 to EP",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          176.2,
+          106.95
+        ],
+        [
+          176.2,
+          107.5
+        ],
+        [
+          176.7,
+          108
+        ],
+        [
+          177.0,
+          108.0
+        ]
+      ]
+    },
+    {
+      "name": "BAT capacitor local return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          177.4,
+          103.89999999999999
+        ],
+        [
+          176.4,
+          103.9
+        ]
+      ]
+    },
+    {
+      "name": "SYS capacitor local return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          180.6,
+          105.0
+        ],
+        [
+          180.6,
+          106.9
+        ],
+        [
+          180.2,
+          107.3
+        ]
+      ]
+    },
+    {
+      "name": "IN capacitor local return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          180.2,
+          107.3
+        ],
+        [
+          179.5,
+          108
+        ],
+        [
+          177.0,
+          108.0
+        ]
+      ]
+    },
+    {
+      "name": "LDO local input return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          183.5,
+          101.5
+        ],
+        [
+          183.5,
+          102.6
+        ]
+      ]
+    },
+    {
+      "name": "LDO return via exit",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          180.3,
+          103.5
+        ],
+        [
+          180.3,
+          102.4
+        ]
+      ]
+    },
+    {
+      "name": "LDO input capacitor return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          180.3,
+          103.5
+        ],
+        [
+          180.3,
+          104.7
+        ],
+        [
+          180.6,
+          105.0
+        ]
+      ]
+    },
+    {
+      "name": "LDO output return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          181.0,
+          99.5
+        ],
+        [
+          180,
+          99.5
+        ]
+      ]
+    },
+    {
+      "name": "LDO capacitor return bridge",
+      "net": "GND",
+      "layer": "B.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          180,
+          99.5
+        ],
+        [
+          181.7,
+          101.2
+        ],
+        [
+          183.5,
+          101.2
+        ],
+        [
+          183.5,
+          102.6
+        ]
+      ]
+    },
+    {
+      "name": "LDO ground reference bridge",
+      "net": "GND",
+      "layer": "B.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          180.3,
+          102.4
+        ],
+        [
+          181.5,
+          101.2
+        ],
+        [
+          181.7,
+          101.2
+        ]
+      ]
+    },
+    {
+      "name": "C1.2 local return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          166.20000000000002,
+          112.2
+        ],
+        [
+          165.2,
+          112.2
+        ]
+      ]
+    },
+    {
+      "name": "C6.2 local return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          171.10000000000002,
+          111.3
+        ],
+        [
+          171.1,
+          112.3
+        ]
+      ]
+    },
+    {
+      "name": "R14.2 local return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          168.9965,
+          99.4
+        ],
+        [
+          168.9965,
+          98.3
+        ]
+      ]
+    },
+    {
+      "name": "C7 ground into return spine",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          168.8,
+          108.3
+        ],
+        [
+          168.8,
+          107.251
+        ]
+      ]
+    },
+    {
+      "name": "TS resistor local return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          173.2535,
+          105.8
+        ],
+        [
+          173.2535,
+          107.251
+        ]
+      ]
+    },
+    {
+      "name": "MCU decoupling return spine",
+      "net": "GND",
+      "layer": "B.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          165.2,
+          112.2
+        ],
+        [
+          171,
+          112.2
+        ],
+        [
+          171.1,
+          112.3
+        ],
+        [
+          171.1,
+          108.3
+        ]
+      ]
+    },
+    {
+      "name": "MCU return into charger ground",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          171.1,
+          108.3
+        ],
+        [
+          171.1,
+          107.251
+        ]
+      ]
+    },
+    {
+      "name": "VBUS at U1",
+      "net": "USB_VBUS",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          167.6,
+          112.2
+        ],
+        [
+          169.001,
+          113.601
+        ],
+        [
+          169.001,
+          113.934
+        ]
+      ]
+    },
+    {
+      "name": "IN neck",
+      "net": "USB_VBUS",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "points": [
+        [
+          177.8,
+          109.05
+        ],
+        [
+          178.45,
+          109.7
+        ]
+      ]
+    },
+    {
+      "name": "IN capacitor",
+      "net": "USB_VBUS",
+      "layer": "F.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          178.45,
+          109.7
+        ],
+        [
+          179.2,
+          109.7
+        ],
+        [
+          180.2,
+          108.7
+        ]
+      ]
+    },
+    {
+      "name": "Boost source",
+      "net": "EPD_VDD",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          178.35000000000002,
+          96.4
+        ],
+        [
+          178.35000000000002,
+          97.05000000000001
+        ],
+        [
+          177.85,
+          96.55
+        ],
+        [
+          176.8,
+          96.55
+        ],
+        [
+          176.8,
+          96.0
+        ]
+      ]
+    },
+    {
+      "name": "Boost input",
+      "net": "EPD_VDD",
+      "layer": "F.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          176.8,
+          96.0
+        ],
+        [
+          174.628,
+          96
+        ],
+        [
+          174.12800000000001,
+          96.5
+        ]
+      ]
+    },
+    {
+      "name": "Boost switch ON",
+      "net": "EPD_SW",
+      "layer": "F.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          171.472,
+          96.5
+        ],
+        [
+          171.472,
+          99.472
+        ],
+        [
+          172.0,
+          100.0
+        ]
+      ]
+    },
+    {
+      "name": "Boost switch OFF",
+      "net": "EPD_SW",
+      "layer": "F.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          171.472,
+          96.5
+        ],
+        [
+          171.472,
+          94.028
+        ],
+        [
+          172.0,
+          93.5
+        ]
+      ]
+    },
+    {
+      "name": "Boost sense",
+      "net": "EPD_RESE",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          173.60000000000002,
+          99.35
+        ],
+        [
+          174.1965,
+          99.35
+        ],
+        [
+          175.0465,
+          100.2
+        ]
+      ]
+    },
+    {
+      "name": "Boost return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "width": 0.35,
+      "points": [
+        [
+          176.5535,
+          100.2
+        ],
+        [
+          176.8,
+          99.9535
+        ],
+        [
+          176.8,
+          98.0
+        ]
+      ]
+    },
+    {
+      "name": "Positive output",
+      "net": "EPD_VPH",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          172.0,
+          90.1
+        ],
+        [
+          172,
+          89.2
+        ],
+        [
+          173.0,
+          88.2
+        ]
+      ]
+    },
+    {
+      "name": "Pump input",
+      "net": "EPD_SW",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          172.0,
+          93.5
+        ],
+        [
+          174.95,
+          93.5
+        ],
+        [
+          175.0,
+          93.55
+        ]
+      ]
+    },
+    {
+      "name": "Pump return",
+      "net": "EPD_PUMP",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          175.0,
+          91.55
+        ],
+        [
+          176.85,
+          91.55
+        ],
+        [
+          177.9,
+          90.5
+        ],
+        [
+          177.9,
+          87.4
+        ],
+        [
+          178.3,
+          87.0
+        ]
+      ]
+    },
+    {
+      "name": "Negative output",
+      "net": "EPD_VGL",
+      "layer": "F.Cu",
+      "width": 0.25,
+      "points": [
+        [
+          181.7,
+          87
+        ],
+        [
+          182.7,
+          88
+        ],
+        [
+          182.7,
+          88.7
+        ],
+        [
+          184,
+          90
+        ]
+      ]
+    },
+    {
+      "name": "USB DP paired connector contacts",
+      "net": "USB_DP_CONN",
+      "layer": "F.Cu",
+      "points": [
+        [
+          186.149,
+          103.2505
+        ],
+        [
+          185.4,
+          103.2505
+        ],
+        [
+          184.8495,
+          102.7
+        ],
+        [
+          183.8,
+          102.7
+        ],
+        [
+          183.8,
+          104.2505
+        ],
+        [
+          186.149,
+          104.2505
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "USB DP through protector",
+      "net": "USB_DP_CONN",
+      "layer": "F.Cu",
+      "points": [
+        [
+          183.8,
+          102.7
+        ],
+        [
+          183.2,
+          103.3
+        ],
+        [
+          183.2,
+          104.85
+        ],
+        [
+          182.5,
+          105.55000000000001
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "USB DM first contact",
+      "net": "USB_DM_CONN",
+      "layer": "F.Cu",
+      "points": [
+        [
+          186.149,
+          103.7505
+        ],
+        [
+          185.0005,
+          103.7505
+        ],
+        [
+          184.8,
+          103.55
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "USB DM second contact",
+      "net": "USB_DM_CONN",
+      "layer": "F.Cu",
+      "points": [
+        [
+          186.149,
+          104.7505
+        ],
+        [
+          185.0995,
+          104.7505
+        ],
+        [
+          184.8,
+          105.05
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "USB DM local layer bridge",
+      "net": "USB_DM_CONN",
+      "layer": "B.Cu",
+      "points": [
+        [
+          184.8,
+          103.55
+        ],
+        [
+          184.8,
+          105.05
+        ],
+        [
+          184.05,
+          105.8
+        ],
+        [
+          183,
+          105.8
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "USB DM through protector",
+      "net": "USB_DM_CONN",
+      "layer": "F.Cu",
+      "points": [
+        [
+          183,
+          105.8
+        ],
+        [
+          182.55,
+          106.25
+        ],
+        [
+          182.5,
+          106.25
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "USB VBUS upper contact",
+      "net": "USB_VBUS",
+      "layer": "F.Cu",
+      "points": [
+        [
+          186.149,
+          101.6005
+        ],
+        [
+          185.2,
+          101.6005
+        ],
+        [
+          185.2,
+          100.6
+        ]
+      ],
+      "width": 0.35
+    },
+    {
+      "name": "USB VBUS lower contact",
+      "net": "USB_VBUS",
+      "layer": "F.Cu",
+      "points": [
+        [
+          186.149,
+          106.40050000000001
+        ],
+        [
+          185,
+          106.4005
+        ],
+        [
+          185,
+          106.4
+        ]
+      ],
+      "width": 0.35
+    },
+    {
+      "name": "USB VBUS connector bridge",
+      "net": "USB_VBUS",
+      "layer": "B.Cu",
+      "points": [
+        [
+          185.2,
+          100.6
+        ],
+        [
+          185.6,
+          101
+        ],
+        [
+          185.6,
+          105.8
+        ],
+        [
+          185,
+          106.4
+        ],
+        [
+          182.7,
+          108.7
+        ],
+        [
+          181.2,
+          108.7
+        ]
+      ],
+      "width": 0.35
+    },
+    {
+      "name": "USB VBUS charger inlet",
+      "net": "USB_VBUS",
+      "layer": "F.Cu",
+      "points": [
+        [
+          181.2,
+          108.7
+        ],
+        [
+          180.2,
+          108.7
+        ]
+      ],
+      "width": 0.35
+    },
+    {
+      "name": "USB VBUS MCU bridge",
+      "net": "USB_VBUS",
+      "layer": "B.Cu",
+      "points": [
+        [
+          181.2,
+          108.7
+        ],
+        [
+          179,
+          110.9
+        ],
+        [
+          176.2,
+          110.9
+        ],
+        [
+          175.9,
+          111.2
+        ],
+        [
+          168.2,
+          111.2
+        ],
+        [
+          168.1,
+          111.1
+        ]
+      ],
+      "width": 0.35
+    },
+    {
+      "name": "USB VBUS MCU bypass inlet",
+      "net": "USB_VBUS",
+      "layer": "F.Cu",
+      "points": [
+        [
+          168.1,
+          111.1
+        ],
+        [
+          167.6,
+          111.6
+        ],
+        [
+          167.6,
+          112.2
+        ]
+      ],
+      "width": 0.35
+    },
+    {
+      "name": "USB protector local return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "points": [
+        [
+          183.5,
+          105.9
+        ],
+        [
+          183.5,
+          104.9
+        ]
+      ],
+      "width": 0.25
+    },
+    {
+      "name": "CC protector local return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "points": [
+        [
+          183.5,
+          108.4
+        ],
+        [
+          182.8,
+          108.4
+        ],
+        [
+          182.5,
+          108.1
+        ],
+        [
+          182.5,
+          107.7
+        ]
+      ],
+      "width": 0.25
+    },
+    {
+      "name": "Load switch local return",
+      "net": "GND",
+      "layer": "F.Cu",
+      "points": [
+        [
+          180.25,
+          96.4
+        ],
+        [
+          179.2,
+          96.4
+        ]
+      ],
+      "width": 0.25
+    },
+    {
+      "name": "SCL local main",
+      "net": "CHG_SCL",
+      "layer": "F.Cu",
+      "points": [
+        [
+          177.001,
+          109.05
+        ],
+        [
+          177.001,
+          113.934
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "SCL pullup bridge",
+      "net": "CHG_SCL",
+      "layer": "B.Cu",
+      "points": [
+        [
+          177.001,
+          112.2
+        ],
+        [
+          178.6,
+          113.799
+        ],
+        [
+          178.6,
+          116
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "SCL pullup contact",
+      "net": "CHG_SCL",
+      "layer": "F.Cu",
+      "points": [
+        [
+          178.6,
+          116
+        ],
+        [
+          179.6465,
+          116.0
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "SDA main escape",
+      "net": "CHG_SDA",
+      "layer": "F.Cu",
+      "points": [
+        [
+          176.6,
+          109.05
+        ],
+        [
+          176.6,
+          112.2
+        ],
+        [
+          175.7,
+          113.1
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "SDA inner row bridge",
+      "net": "CHG_SDA",
+      "layer": "B.Cu",
+      "points": [
+        [
+          175.7,
+          113.1
+        ],
+        [
+          175.7,
+          115.401
+        ],
+        [
+          175.001,
+          116.1
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "SDA inner pad",
+      "net": "CHG_SDA",
+      "layer": "F.Cu",
+      "points": [
+        [
+          175.001,
+          116.1
+        ],
+        [
+          175.001,
+          114.834
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "SDA pullup contact",
+      "net": "CHG_SDA",
+      "layer": "F.Cu",
+      "points": [
+        [
+          175.001,
+          114.834
+        ],
+        [
+          179.1125,
+          114.834
+        ],
+        [
+          179.6465,
+          114.3
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "INT charger escape",
+      "net": "CHG_INT_N",
+      "layer": "F.Cu",
+      "points": [
+        [
+          177.4,
+          109.05
+        ],
+        [
+          177.4,
+          109.7
+        ],
+        [
+          178.1,
+          110.4
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "INT over SCL SDA",
+      "net": "CHG_INT_N",
+      "layer": "B.Cu",
+      "points": [
+        [
+          178.1,
+          110.4
+        ],
+        [
+          174.8,
+          110.4
+        ],
+        [
+          174.6,
+          110.6
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "INT MCU contact",
+      "net": "CHG_INT_N",
+      "layer": "F.Cu",
+      "points": [
+        [
+          174.601,
+          110.6
+        ],
+        [
+          174.601,
+          113.934
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "INT pullup branch",
+      "net": "CHG_INT_N",
+      "layer": "B.Cu",
+      "points": [
+        [
+          178.1,
+          110.4
+        ],
+        [
+          179.7,
+          112
+        ],
+        [
+          179.7,
+          116.6
+        ],
+        [
+          178.6,
+          117.7
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "INT pullup contact",
+      "net": "CHG_INT_N",
+      "layer": "F.Cu",
+      "points": [
+        [
+          178.6,
+          117.7
+        ],
+        [
+          179.6465,
+          117.7
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "PG north escape",
+      "net": "CHG_PG_N",
+      "layer": "F.Cu",
+      "points": [
+        [
+          177.0,
+          106.95
+        ],
+        [
+          177,
+          106.15
+        ],
+        [
+          176.05,
+          106.15
+        ],
+        [
+          175.4,
+          105.5
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "PG over ground spine",
+      "net": "CHG_PG_N",
+      "layer": "B.Cu",
+      "points": [
+        [
+          175.4,
+          105.5
+        ],
+        [
+          175.4,
+          108.1
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "PG MCU approach",
+      "net": "CHG_PG_N",
+      "layer": "F.Cu",
+      "points": [
+        [
+          175.4,
+          108.1
+        ],
+        [
+          175.4,
+          112.2
+        ],
+        [
+          175.3,
+          112.3
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "PG inner row bridge",
+      "net": "CHG_PG_N",
+      "layer": "B.Cu",
+      "points": [
+        [
+          175.3,
+          112.3
+        ],
+        [
+          175.3,
+          115.201
+        ],
+        [
+          174.201,
+          116.3
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "PG inner pad",
+      "net": "CHG_PG_N",
+      "layer": "F.Cu",
+      "points": [
+        [
+          174.201,
+          116.3
+        ],
+        [
+          174.201,
+          114.834
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "PG pullup branch",
+      "net": "CHG_PG_N",
+      "layer": "B.Cu",
+      "points": [
+        [
+          174.201,
+          116.3
+        ],
+        [
+          174.201,
+          118.8
+        ],
+        [
+          178,
+          118.8
+        ],
+        [
+          178.6,
+          119.4
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "PG pullup contact",
+      "net": "CHG_PG_N",
+      "layer": "F.Cu",
+      "points": [
+        [
+          178.6,
+          119.4
+        ],
+        [
+          179.6465,
+          119.4
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "CE north escape",
+      "net": "CHG_CE_N",
+      "layer": "F.Cu",
+      "points": [
+        [
+          176.6,
+          106.95
+        ],
+        [
+          176.6,
+          106.6
+        ],
+        [
+          175.05,
+          106.6
+        ],
+        [
+          174.9,
+          106.45
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "CE over ground spine",
+      "net": "CHG_CE_N",
+      "layer": "B.Cu",
+      "points": [
+        [
+          174.9,
+          106.45
+        ],
+        [
+          174.9,
+          108.1
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "CE MCU approach",
+      "net": "CHG_CE_N",
+      "layer": "F.Cu",
+      "points": [
+        [
+          174.9,
+          108.1
+        ],
+        [
+          173.801,
+          109.199
+        ],
+        [
+          173.80100000000002,
+          113.934
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "CE pullup bridge",
+      "net": "CHG_CE_N",
+      "layer": "B.Cu",
+      "points": [
+        [
+          174.9,
+          108.1
+        ],
+        [
+          176.1,
+          109.3
+        ],
+        [
+          178.7,
+          109.3
+        ],
+        [
+          180.2,
+          110.8
+        ],
+        [
+          180.2,
+          111.4
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "CE pullup contact",
+      "net": "CHG_CE_N",
+      "layer": "F.Cu",
+      "points": [
+        [
+          180.2,
+          111.4
+        ],
+        [
+          179.6465,
+          111.9535
+        ],
+        [
+          179.6465,
+          112.4
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "U1.36 inward escape",
+      "net": "EPD_SCK_TBD",
+      "layer": "F.Cu",
+      "points": [
+        [
+          169.251,
+          116.134
+        ],
+        [
+          170.9,
+          116.134
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "U1.38 inward escape",
+      "net": "EPD_CS_N_TBD",
+      "layer": "F.Cu",
+      "points": [
+        [
+          169.251,
+          116.934
+        ],
+        [
+          170.7,
+          116.934
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "U1.40 inward escape",
+      "net": "NRESET",
+      "layer": "F.Cu",
+      "points": [
+        [
+          169.251,
+          117.734
+        ],
+        [
+          171.5,
+          117.734
+        ]
+      ],
+      "width": 0.15
+    },
+    {
+      "name": "U1.27 inward escape",
+      "net": "EPD_EN_TBD",
+      "layer": "F.Cu",
+      "points": [
+        [
+          171.80100000000002,
+          114.834
+        ],
+        [
+          171.801,
+          116.2
+        ]
+      ],
+      "width": 0.15
+    }
+  ],
+  "vias": [
+    {
+      "net": "BAT_PACK_TBD",
+      "at": [
+        165.9,
+        106
+      ]
+    },
+    {
+      "net": "BAT_PACK_TBD",
+      "at": [
+        176.4,
+        105.3
+      ]
+    },
+    {
+      "net": "SYS",
+      "at": [
+        178.7,
+        104
+      ]
+    },
+    {
+      "net": "SYS",
+      "at": [
+        182.7,
+        104.5
+      ]
+    },
+    {
+      "net": "SYS",
+      "at": [
+        184.45,
+        102.6
+      ]
+    },
+    {
+      "net": "VDD_3V3",
+      "at": [
+        177.8,
+        101.9
+      ]
+    },
+    {
+      "net": "VDD_3V3",
+      "at": [
+        172.5,
+        109.7
+      ]
+    },
+    {
+      "net": "GND",
+      "at": [
+        167.15,
+        107.251
+      ]
+    },
+    {
+      "net": "GND",
+      "at": [
+        178.6,
+        108
+      ]
+    },
+    {
+      "net": "GND",
+      "at": [
+        176.4,
+        103.9
+      ]
+    },
+    {
+      "net": "GND",
+      "at": [
+        180.3,
+        102.4
+      ]
+    },
+    {
+      "net": "GND",
+      "at": [
+        180,
+        99.5
+      ]
+    },
+    {
+      "net": "GND",
+      "at": [
+        183.5,
+        102.6
+      ]
+    },
+    {
+      "net": "GND",
+      "at": [
+        165.2,
+        112.2
+      ]
+    },
+    {
+      "net": "GND",
+      "at": [
+        171.1,
+        112.3
+      ]
+    },
+    {
+      "net": "GND",
+      "at": [
+        168.9965,
+        98.3
+      ]
+    },
+    {
+      "net": "GND",
+      "at": [
+        171.1,
+        108.3
+      ]
+    },
+    {
+      "net": "USB_DM_CONN",
+      "at": [
+        184.8,
+        103.55
+      ]
+    },
+    {
+      "net": "USB_DM_CONN",
+      "at": [
+        184.8,
+        105.05
+      ]
+    },
+    {
+      "net": "USB_DM_CONN",
+      "at": [
+        183,
+        105.8
+      ]
+    },
+    {
+      "net": "USB_VBUS",
+      "at": [
+        185.2,
+        100.6
+      ]
+    },
+    {
+      "net": "USB_VBUS",
+      "at": [
+        185,
+        106.4
+      ]
+    },
+    {
+      "net": "USB_VBUS",
+      "at": [
+        181.2,
+        108.7
+      ]
+    },
+    {
+      "net": "USB_VBUS",
+      "at": [
+        168.1,
+        111.1
+      ]
+    },
+    {
+      "net": "GND",
+      "at": [
+        183.5,
+        104.9
+      ]
+    },
+    {
+      "net": "GND",
+      "at": [
+        182.5,
+        107.7
+      ]
+    },
+    {
+      "net": "GND",
+      "at": [
+        179.2,
+        96.4
+      ]
+    },
+    {
+      "net": "CHG_SCL",
+      "at": [
+        177.001,
+        112.2
+      ]
+    },
+    {
+      "net": "CHG_SCL",
+      "at": [
+        178.6,
+        116
+      ]
+    },
+    {
+      "net": "CHG_SDA",
+      "at": [
+        175.7,
+        113.1
+      ]
+    },
+    {
+      "net": "CHG_SDA",
+      "at": [
+        175.001,
+        116.1
+      ]
+    },
+    {
+      "net": "CHG_INT_N",
+      "at": [
+        178.1,
+        110.4
+      ]
+    },
+    {
+      "net": "CHG_INT_N",
+      "at": [
+        174.6,
+        110.6
+      ]
+    },
+    {
+      "net": "CHG_INT_N",
+      "at": [
+        178.6,
+        117.7
+      ]
+    },
+    {
+      "net": "CHG_PG_N",
+      "at": [
+        175.4,
+        105.5
+      ]
+    },
+    {
+      "net": "CHG_PG_N",
+      "at": [
+        175.4,
+        108.1
+      ]
+    },
+    {
+      "net": "CHG_PG_N",
+      "at": [
+        175.3,
+        112.3
+      ]
+    },
+    {
+      "net": "CHG_PG_N",
+      "at": [
+        174.201,
+        116.3
+      ]
+    },
+    {
+      "net": "CHG_PG_N",
+      "at": [
+        178.6,
+        119.4
+      ]
+    },
+    {
+      "net": "CHG_CE_N",
+      "at": [
+        174.9,
+        106.45
+      ]
+    },
+    {
+      "net": "CHG_CE_N",
+      "at": [
+        174.9,
+        108.1
+      ]
+    },
+    {
+      "net": "CHG_CE_N",
+      "at": [
+        180.2,
+        111.4
+      ]
+    },
+    {
+      "net": "EPD_SCK_TBD",
+      "at": [
+        170.9,
+        116.134
+      ]
+    },
+    {
+      "net": "EPD_CS_N_TBD",
+      "at": [
+        170.7,
+        116.934
+      ]
+    },
+    {
+      "net": "NRESET",
+      "at": [
+        171.5,
+        117.734
+      ]
+    },
+    {
+      "net": "EPD_EN_TBD",
+      "at": [
+        171.801,
+        116.2
+      ]
+    }
+  ],
+  "failures": [
+    {
+      "a": "USB DP paired connector contacts",
+      "b": "SYS enable strap",
+      "gap_mm": 0.0
+    },
+    {
+      "a": "USB DP paired connector contacts",
+      "b": "LDO local input return",
+      "gap_mm": 0.116393
+    },
+    {
+      "a": "USB DP through protector",
+      "b": "LDO local input return",
+      "gap_mm": 0.082843
+    },
+    {
+      "a": "USB VBUS MCU bridge",
+      "b": "MCU decoupling return spine",
+      "gap_mm": 0.0
+    },
+    {
+      "a": "USB protector local return",
+      "b": "USB DP through protector",
+      "gap_mm": 0.10433
+    },
+    {
+      "a": "INT pullup branch",
+      "b": "USB VBUS MCU bridge",
+      "gap_mm": 0.0
+    },
+    {
+      "a": "PG north escape",
+      "b": "BAT direct local capacitor",
+      "gap_mm": 0.15
+    },
+    {
+      "a": "PG over ground spine",
+      "b": "MCU rail backbone",
+      "gap_mm": 0.028553
+    },
+    {
+      "a": "CE north escape",
+      "b": "U2.5",
+      "gap_mm": 0.025
+    },
+    {
+      "a": "CE pullup bridge",
+      "b": "MCU rail backbone",
+      "gap_mm": 0.0
+    },
+    {
+      "a": "CE pullup bridge",
+      "b": "USB VBUS MCU bridge",
+      "gap_mm": 0.0
+    },
+    {
+      "a": "SYS via [182.7, 104.5]",
+      "b": "USB DP through protector",
+      "gap_mm": 0.125
+    },
+    {
+      "a": "SYS via [184.45, 102.6]",
+      "b": "USB DP paired connector contacts",
+      "gap_mm": 0.0
+    },
+    {
+      "a": "GND via [183.5, 102.6]",
+      "b": "USB DP paired connector contacts",
+      "gap_mm": 0.0
+    },
+    {
+      "a": "GND via [183.5, 102.6]",
+      "b": "USB DP through protector",
+      "gap_mm": 0.0
+    },
+    {
+      "a": "USB_DM_CONN via (183, 105.8)",
+      "b": "U5.1",
+      "gap_mm": 0.080891
+    },
+    {
+      "a": "USB_DM_CONN via (183, 105.8)",
+      "b": "U5.3",
+      "gap_mm": 0.05
+    },
+    {
+      "a": "USB_DM_CONN via (183, 105.8)",
+      "b": "USB DP through protector",
+      "gap_mm": 0.15533
+    },
+    {
+      "a": "USB_DM_CONN via (183, 105.8)",
+      "b": "USB protector local return",
+      "gap_mm": 0.075
+    },
+    {
+      "a": "USB_DM_CONN via (183, 105.8)",
+      "b": "U5.1",
+      "smd_to_drill_gap_mm": 0.230789
+    },
+    {
+      "a": "USB_DM_CONN via (183, 105.8)",
+      "b": "U5.2",
+      "smd_to_drill_gap_mm": 0.344975
+    },
+    {
+      "a": "USB_DM_CONN via (183, 105.8)",
+      "b": "U5.3",
+      "smd_to_drill_gap_mm": 0.2
+    },
+    {
+      "a": "USB_VBUS via (185.2, 100.6)",
+      "b": "J1.B1A12",
+      "gap_mm": 0.099
+    },
+    {
+      "a": "USB_VBUS via (185.2, 100.6)",
+      "b": "J1.B1A12",
+      "smd_to_drill_gap_mm": 0.249
+    },
+    {
+      "a": "GND via (183.5, 104.9)",
+      "b": "USB DP through protector",
+      "gap_mm": 0.0
+    },
+    {
+      "a": "CHG_SCL via (177.001, 112.2)",
+      "b": "SDA main escape",
+      "gap_mm": 0.026
+    },
+    {
+      "a": "CHG_SDA via (175.7, 113.1)",
+      "b": "PG inner row bridge",
+      "gap_mm": 0.025
+    },
+    {
+      "a": "CHG_SDA via (175.7, 113.1)",
+      "b": "U1.18",
+      "smd_to_drill_gap_mm": 0.393099
+    },
+    {
+      "a": "CHG_SDA via (175.001, 116.1)",
+      "b": "PG inner row bridge",
+      "gap_mm": 0.049264
+    },
+    {
+      "a": "CHG_INT_N via (178.1, 110.4)",
+      "b": "USB VBUS MCU bridge",
+      "gap_mm": 0.025
+    },
+    {
+      "a": "CHG_INT_N via (174.6, 110.6)",
+      "b": "USB VBUS MCU bridge",
+      "gap_mm": 0.125
+    },
+    {
+      "a": "CHG_PG_N via (175.4, 108.1)",
+      "b": "MCU rail backbone",
+      "gap_mm": 0.0
+    },
+    {
+      "a": "CHG_PG_N via (175.4, 108.1)",
+      "b": "BN return backbone",
+      "gap_mm": 0.157107
+    },
+    {
+      "a": "CHG_PG_N via (175.4, 108.1)",
+      "b": "CE over ground spine",
+      "gap_mm": 0.125
+    },
+    {
+      "a": "CHG_PG_N via (175.4, 108.1)",
+      "b": "CE MCU approach",
+      "gap_mm": 0.125
+    },
+    {
+      "a": "CHG_PG_N via (175.4, 108.1)",
+      "b": "CE pullup bridge",
+      "gap_mm": 0.0
+    },
+    {
+      "a": "CHG_CE_N via (174.9, 106.45)",
+      "b": "PG over ground spine",
+      "gap_mm": 0.125
+    },
+    {
+      "a": "CHG_CE_N via (174.9, 108.1)",
+      "b": "MCU rail backbone",
+      "gap_mm": 0.157107
+    },
+    {
+      "a": "CHG_CE_N via (174.9, 108.1)",
+      "b": "PG over ground spine",
+      "gap_mm": 0.125
+    },
+    {
+      "a": "CHG_CE_N via (174.9, 108.1)",
+      "b": "PG MCU approach",
+      "gap_mm": 0.125
+    },
+    {
+      "a": "CHG_CE_N via (174.9, 108.1)",
+      "b": "CHG_PG_N via (175.4, 108.1)",
+      "gap_mm": 0.0
+    },
+    {
+      "a": "CHG_CE_N via (180.2, 111.4)",
+      "b": "R2.2",
+      "gap_mm": 0.007477
+    },
+    {
+      "a": "CHG_CE_N via (180.2, 111.4)",
+      "b": "R2.2",
+      "smd_to_drill_gap_mm": 0.157244
+    }
+  ]
+}

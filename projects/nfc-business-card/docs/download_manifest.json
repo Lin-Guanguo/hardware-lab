@@ -90,8 +90,12 @@
     "sha256": "a3aa45389653aff47ece0f5fce8edd99f07e2889d291b54547efef4c05ba2ebd",
     "status": "downloaded",
     "reverified": "2026-09-21",
-    "alternate_source_urls": ["https://www.good-display.com/companyfile/2038.html"],
-    "alternate_resolved_urls": ["https://v4.cecdn.yun300.cn/100001_1909185148/GDEH0154E01.pdf"],
+    "alternate_source_urls": [
+      "https://www.good-display.com/companyfile/2038.html"
+    ],
+    "alternate_resolved_urls": [
+      "https://v4.cecdn.yun300.cn/100001_1909185148/GDEH0154E01.pdf"
+    ],
     "note": "商家指定英文产品页的下载文件与中文站缓存 SHA-256 相同。"
   },
   {
@@ -201,5 +205,50 @@
     "sha256": "db01539d03ee7a08cfff89e8733fbe0f49576a368d38f4b623f8749410ce3c48",
     "status": "downloaded",
     "note": "GCT 原厂图，Rev B2，2021-12；顶部贴装备选，已有缓存补登记。"
+  },
+  {
+    "file": "downloads/bq25186-evm.pdf",
+    "source_url": "https://www.ti.com/lit/ug/sluuct6/sluuct6.pdf",
+    "resolved_url": "https://www.ti.com/lit/ug/sluuct6/sluuct6.pdf",
+    "accessed": "2026-09-29",
+    "bytes": 2632874,
+    "sha256": "46a2bf8bd11f3431ce9c04d50967009ce9e9c598696f1a0317a885dbbcc6d67f",
+    "status": "downloaded"
+  },
+  {
+    "file": "downloads/tpd1s514.pdf",
+    "source_url": "https://www.ti.com/lit/ds/symlink/tpd1s514.pdf",
+    "resolved_url": "https://www.ti.com/lit/ds/symlink/tpd1s514.pdf",
+    "accessed": "2026-09-29",
+    "bytes": 1523015,
+    "sha256": "5d1ffaa866ee1e4fa080d3ed44b529b1015ffb868d3df7bb0e64ed85d86100d5",
+    "status": "downloaded"
+  },
+  {
+    "file": "downloads/tps25947.pdf",
+    "source_url": "https://www.ti.com/lit/ds/symlink/tps25947.pdf",
+    "resolved_url": "https://www.ti.com/lit/ds/symlink/tps25947.pdf",
+    "accessed": "2026-09-29",
+    "bytes": 5316794,
+    "sha256": "8f96de389903091650d4f462dcfad3210071c3ae7093623a7978f34baf8a65b4",
+    "status": "downloaded"
+  },
+  {
+    "file": "downloads/si1308edl.pdf",
+    "source_url": "https://www.vishay.com/docs/63399/si1308edl.pdf",
+    "resolved_url": "https://www.vishay.com/docs/63399/si1308edl.pdf",
+    "accessed": "2026-09-29",
+    "bytes": 259741,
+    "sha256": "a86d6f766f259d8b170a01081f577055f37b527257a0f9af497c8f2c33625c9a",
+    "status": "downloaded"
+  },
+  {
+    "file": "downloads/mbr0530.pdf",
+    "source_url": "https://www.onsemi.com/download/data-sheet/pdf/mbr0530t1-d.pdf",
+    "resolved_url": "https://www.onsemi.com/download/data-sheet/pdf/mbr0530t1-d.pdf",
+    "accessed": "2026-09-29",
+    "bytes": 195242,
+    "sha256": "ab8f4a7fd35b7f9935229b596fc19d68211ccf2f1f2616ede53de58a7d6936b6",
+    "status": "downloaded"
   }
 ]

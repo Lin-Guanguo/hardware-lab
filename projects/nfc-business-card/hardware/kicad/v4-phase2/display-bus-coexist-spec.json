@@ -1,0 +1,453 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase2/NFC-Card-V4.kicad_pcb",
+  "description": "Reserve BUSY top-pin exit before the five side-pin display signals",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase2/display-bus-coexist-ipc.json",
+  "vias": [
+    {
+      "net": "EPD_MOSI_TBD",
+      "at": [
+        167.4,
+        116.6
+      ]
+    },
+    {
+      "net": "EPD_MOSI_TBD",
+      "at": [
+        168.1,
+        94.3
+      ]
+    },
+    {
+      "net": "EPD_SCK_TBD",
+      "at": [
+        170.4,
+        116.1
+      ]
+    },
+    {
+      "net": "EPD_SCK_TBD",
+      "at": [
+        169.2,
+        95.1
+      ]
+    },
+    {
+      "net": "EPD_CS_N_TBD",
+      "at": [
+        170.4,
+        117.0
+      ]
+    },
+    {
+      "net": "EPD_CS_N_TBD",
+      "at": [
+        168.1,
+        95.9
+      ]
+    },
+    {
+      "net": "EPD_DC_TBD",
+      "at": [
+        167.2,
+        117.4
+      ]
+    },
+    {
+      "net": "EPD_DC_TBD",
+      "at": [
+        169.2,
+        96.7
+      ]
+    },
+    {
+      "net": "EPD_RESET_N_TBD",
+      "at": [
+        167.2,
+        118.5
+      ]
+    },
+    {
+      "net": "EPD_RESET_N_TBD",
+      "at": [
+        168.1,
+        97.5
+      ]
+    },
+    {
+      "net": "EPD_BUSY_TBD",
+      "at": [
+        174.5,
+        112.3
+      ]
+    },
+    {
+      "net": "EPD_BUSY_TBD",
+      "at": [
+        169.2,
+        98.3
+      ]
+    }
+  ],
+  "paths": [
+    {
+      "name": "BUSY U1 escape",
+      "net": "EPD_BUSY_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "through": [
+        "U1.24",
+        [
+          174.5,
+          112.3
+        ]
+      ],
+      "bounds": [
+        166,
+        111,
+        175.3,
+        119
+      ]
+    },
+    {
+      "name": "BUSY J2 escape",
+      "net": "EPD_BUSY_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "through": [
+        "J2.9",
+        [
+          169.2,
+          98.3
+        ]
+      ],
+      "bounds": [
+        166,
+        93.5,
+        170,
+        99
+      ]
+    },
+    {
+      "name": "BUSY shared bus",
+      "net": "EPD_BUSY_TBD",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "through": [
+        [
+          174.5,
+          112.3
+        ],
+        [
+          169.2,
+          98.3
+        ]
+      ],
+      "bounds": [
+        161,
+        93,
+        180,
+        124
+      ]
+    },
+    {
+      "name": "MOSI U1 escape",
+      "net": "EPD_MOSI_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "through": [
+        "U1.37",
+        [
+          167.4,
+          116.6
+        ]
+      ],
+      "bounds": [
+        166,
+        111,
+        175.3,
+        119
+      ]
+    },
+    {
+      "name": "MOSI J2 escape",
+      "net": "EPD_MOSI_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "through": [
+        "J2.14",
+        [
+          168.1,
+          94.3
+        ]
+      ],
+      "bounds": [
+        166,
+        93.5,
+        170,
+        99
+      ]
+    },
+    {
+      "name": "MOSI shared bus",
+      "net": "EPD_MOSI_TBD",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "through": [
+        [
+          167.4,
+          116.6
+        ],
+        [
+          168.1,
+          94.3
+        ]
+      ],
+      "bounds": [
+        161,
+        93,
+        180,
+        124
+      ]
+    },
+    {
+      "name": "SCK U1 escape",
+      "net": "EPD_SCK_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "through": [
+        "U1.36",
+        [
+          170.4,
+          116.1
+        ]
+      ],
+      "bounds": [
+        166,
+        111,
+        175.3,
+        119
+      ]
+    },
+    {
+      "name": "SCK J2 escape",
+      "net": "EPD_SCK_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "through": [
+        "J2.13",
+        [
+          169.2,
+          95.1
+        ]
+      ],
+      "bounds": [
+        166,
+        93.5,
+        170,
+        99
+      ]
+    },
+    {
+      "name": "SCK shared bus",
+      "net": "EPD_SCK_TBD",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "through": [
+        [
+          170.4,
+          116.1
+        ],
+        [
+          169.2,
+          95.1
+        ]
+      ],
+      "bounds": [
+        161,
+        93,
+        180,
+        124
+      ]
+    },
+    {
+      "name": "CS_N U1 escape",
+      "net": "EPD_CS_N_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "through": [
+        "U1.38",
+        [
+          170.4,
+          117.0
+        ]
+      ],
+      "bounds": [
+        166,
+        111,
+        175.3,
+        119
+      ]
+    },
+    {
+      "name": "CS_N J2 escape",
+      "net": "EPD_CS_N_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "through": [
+        "J2.12",
+        [
+          168.1,
+          95.9
+        ]
+      ],
+      "bounds": [
+        166,
+        93.5,
+        170,
+        99
+      ]
+    },
+    {
+      "name": "CS_N shared bus",
+      "net": "EPD_CS_N_TBD",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "through": [
+        [
+          170.4,
+          117.0
+        ],
+        [
+          168.1,
+          95.9
+        ]
+      ],
+      "bounds": [
+        161,
+        93,
+        180,
+        124
+      ]
+    },
+    {
+      "name": "DC U1 escape",
+      "net": "EPD_DC_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "through": [
+        "U1.39",
+        [
+          167.2,
+          117.4
+        ]
+      ],
+      "bounds": [
+        166,
+        111,
+        175.3,
+        119
+      ]
+    },
+    {
+      "name": "DC J2 escape",
+      "net": "EPD_DC_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "through": [
+        "J2.11",
+        [
+          169.2,
+          96.7
+        ]
+      ],
+      "bounds": [
+        166,
+        93.5,
+        170,
+        99
+      ]
+    },
+    {
+      "name": "DC shared bus",
+      "net": "EPD_DC_TBD",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "through": [
+        [
+          167.2,
+          117.4
+        ],
+        [
+          169.2,
+          96.7
+        ]
+      ],
+      "bounds": [
+        161,
+        93,
+        180,
+        124
+      ]
+    },
+    {
+      "name": "RESET_N U1 escape",
+      "net": "EPD_RESET_N_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "through": [
+        "U1.41",
+        [
+          167.2,
+          118.5
+        ]
+      ],
+      "bounds": [
+        166,
+        111,
+        175.3,
+        119
+      ]
+    },
+    {
+      "name": "RESET_N J2 escape",
+      "net": "EPD_RESET_N_TBD",
+      "layer": "F.Cu",
+      "width": 0.15,
+      "through": [
+        "J2.10",
+        [
+          168.1,
+          97.5
+        ]
+      ],
+      "bounds": [
+        166,
+        93.5,
+        170,
+        99
+      ]
+    },
+    {
+      "name": "RESET_N shared bus",
+      "net": "EPD_RESET_N_TBD",
+      "layer": "B.Cu",
+      "width": 0.15,
+      "through": [
+        [
+          167.2,
+          118.5
+        ],
+        [
+          168.1,
+          97.5
+        ]
+      ],
+      "bounds": [
+        161,
+        93,
+        180,
+        124
+      ]
+    }
+  ]
+}

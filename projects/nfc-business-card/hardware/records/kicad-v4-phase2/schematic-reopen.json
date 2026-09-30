@@ -1,0 +1,28 @@
+{
+  "normalization_on_first_native_save": [
+    "NFC-Card-V4.kicad_sch"
+  ],
+  "saved_then_reopened_saved_equal": true,
+  "before_first_native_save": {
+    "NFC-Card-V4.kicad_sch": "53fc06029dd23a48a46b2382b715bc5140e64b0594efc71b610b278e7bee2247",
+    "4_04 USB ESD and interfaces.kicad_sch": "8742e7270bfff0949067f3e720b191d29355bd8eb101ecb8d505847dda6642ce",
+    "3_03 Display power and connector.kicad_sch": "3edb038d37e696d6e573c7c62c4ef60b7f8b0a52d372a083a538402d7efad4c1",
+    "1_01 USB and power.kicad_sch": "db6af44d2861ce5ceae5da4a931afef5525d01705444af675022a815e367f3ec",
+    "2_02 MCU and controls.kicad_sch": "d6f398da19b072c9a28ccb96fad4d84467745b3e6b169dde9b8610749cea173c"
+  },
+  "after_first_native_save": {
+    "NFC-Card-V4.kicad_sch": "b47801e62a053baf00c3d619bd6f050c5f75f3ed856d46c5e8ca7c4327ea2576",
+    "4_04 USB ESD and interfaces.kicad_sch": "8742e7270bfff0949067f3e720b191d29355bd8eb101ecb8d505847dda6642ce",
+    "3_03 Display power and connector.kicad_sch": "3edb038d37e696d6e573c7c62c4ef60b7f8b0a52d372a083a538402d7efad4c1",
+    "1_01 USB and power.kicad_sch": "db6af44d2861ce5ceae5da4a931afef5525d01705444af675022a815e367f3ec",
+    "2_02 MCU and controls.kicad_sch": "d6f398da19b072c9a28ccb96fad4d84467745b3e6b169dde9b8610749cea173c"
+  },
+  "after_reopen_save": {
+    "NFC-Card-V4.kicad_sch": "b47801e62a053baf00c3d619bd6f050c5f75f3ed856d46c5e8ca7c4327ea2576",
+    "4_04 USB ESD and interfaces.kicad_sch": "8742e7270bfff0949067f3e720b191d29355bd8eb101ecb8d505847dda6642ce",
+    "3_03 Display power and connector.kicad_sch": "3edb038d37e696d6e573c7c62c4ef60b7f8b0a52d372a083a538402d7efad4c1",
+    "1_01 USB and power.kicad_sch": "db6af44d2861ce5ceae5da4a931afef5525d01705444af675022a815e367f3ec",
+    "2_02 MCU and controls.kicad_sch": "d6f398da19b072c9a28ccb96fad4d84467745b3e6b169dde9b8610749cea173c"
+  },
+  "note": "Only root sheet normalized. ERC and 256 product pins checked after normalization; PCB manufacturing hash unchanged."
+}

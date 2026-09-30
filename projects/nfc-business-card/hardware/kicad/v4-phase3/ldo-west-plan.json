@@ -1,0 +1,22 @@
+{
+  "board": "projects/nfc-business-card/hardware/kicad/v4-phase3/NFC-Card-V4.kicad_pcb",
+  "description": "Phase3 alternative B: move the complete LDO group west, freeing the northeast MCU approach for charge/control buses",
+  "record": "projects/nfc-business-card/hardware/records/kicad-v4-phase3/ldo-west-apply.json",
+  "placements": {
+    "U3": [
+      165.2,
+      108.8,
+      90
+    ],
+    "C4": [
+      168.6,
+      107.7,
+      0
+    ],
+    "C5": [
+      166.4,
+      111.0,
+      90
+    ]
+  }
+}
